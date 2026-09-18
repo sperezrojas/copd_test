@@ -124,10 +124,41 @@
         // Dictionary containing content for each page
         const pages = {
             home: `
-                <h1>Welcome to the Study Results Browser</h1>
-                <p>This portal hosts the output data for our latest genomic/locus mapping study. Use the left navigation panel to browse through individual locus output datasets, statistics, and visualizations.</p>
-                <p>Select any locus from the sidebar to begin analyzing the localized data records.</p>
-            `,
+                <h1>COPD GWAS Locus Prioritization Browser</h1>
+                
+                <p>
+                This portal provides interactive access to agent-assisted gene
+                prioritization results generated for COPD GWAS loci.
+                </p>
+                
+                <img
+                    src="assets/agentic-gene-prioritization.png"
+                    alt="Agentic Review Workflow"
+                    style="width:100%; max-width:eline.
+                Candidate genes are identified from fine-mapping and prioritization
+                methods, evaluated through literature review, independently verified,
+                stress-tested through adversarial critique, and then synthesized into
+                final gene prioritization decisions.
+                </p>
+                
+                <ul>
+                <li><strong>Researcher</strong> searches PubMed, bioRxiv, medRxiv and web sources.</li>
+                <li><strong>Citation Verifier</strong> confirms publication existence and claim validity.</li>
+                <li><strong>Red-Team Skeptic</strong> evaluates contradictory evidence and bias.</li>
+                <li><strong>Synthesis Lead</strong> generates final evidence-based prioritization.</li>
+                <li><strong>Open Targets</strong> contributes L2G, colocalization and constraint evidence.</li>
+                </ul>
+                
+                <h2>Available Outputs</h2>
+                
+                <ul>
+                <li>Evidence Tables</li>
+                <li>Locus Summaries</li>
+                <li>Audit Reports</li>
+                <li>Locus Plots</li>
+                <li>Pipeline Documentation</li>
+                </ul>
+                `,
             locusA: `
                 <h1>Locus A Output Data</h1>
                 <p><strong>Chromosome Position:</strong> Chr1:104,230-105,890</p>
