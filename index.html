@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;title&gt;COPD Locus Review Browser&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">:root {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--sidebar-width: 280px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--primary: #1e293b;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--accent: #2563eb;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--bg: #f8fafc;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--text: #334155;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">*{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-sizing:border-box;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">body{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height:100vh;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow:hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:var(--bg);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--text);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">#sidebar{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width:var(--sidebar-width);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:var(--primary);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction:column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow-y:auto;<span class="Apple-converted-space">        </span>/* FIX #6: sidebar scrolls if many loci are added */</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.sidebar-header{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align:center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight:700;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom:1px solid #334155;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-shrink:0;<span class="Apple-converted-space">          </span>/* keeps header pinned while nav scrolls */</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.sidebar-section{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:15px 0;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.sidebar-title{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:8px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:#94a3b8;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform:uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing:.1em;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.nav-link{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:12px 24px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:#cbd5e1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-decoration:none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition:.2s;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.nav-link:hover,</p>
+<p class="p1">.nav-link.active{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:white;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">#main-content{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex:1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow-y:auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:40px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.content-card{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:40px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-shadow:0 4px 10px rgba(0,0,0,.08);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:1200px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:auto;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">h1{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--primary);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">h2{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:30px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:15px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--primary);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* FIX #4: h3 style for info-cards */</p>
+<p class="p1">h3{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--primary);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:1rem;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">p{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height:1.7;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:12px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">ul, ol{ <span class="Apple-converted-space">        </span>/* FIX #3: ol now gets same indent treatment as ul */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-left:20px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">li{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:8px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.workflow-image{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width:100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:1000px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:25px auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border:1px solid #dbeafe;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.info-grid{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns:repeat(auto-fit,minmax(250px,1fr));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap:15px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:20px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.info-card{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:#f8fafc;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-left:4px solid var(--accent);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.download-link{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:5px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:#2563eb;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-decoration:none;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.download-link:hover{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-decoration:underline;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.plot-image{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width:100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border:1px solid #e2e8f0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:20px;</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div id="sidebar"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sidebar-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>🧬 COPD Review Browser</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sidebar-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sidebar-title"&gt;Overview&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- FIX #1 &amp; #2: use href="#" and pass 'this' instead of 'event' --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="nav-link active"</p>
+<p class="p1"><span class="Apple-converted-space">           </span>href="#home"</p>
+<p class="p1"><span class="Apple-converted-space">           </span>onclick="loadPage('home', this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">           </span>Home</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="nav-link"</p>
+<p class="p1"><span class="Apple-converted-space">           </span>href="#methods"</p>
+<p class="p1"><span class="Apple-converted-space">           </span>onclick="loadPage('methods', this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">           </span>Methods</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="nav-link"</p>
+<p class="p1"><span class="Apple-converted-space">           </span>href="#repository"</p>
+<p class="p1"><span class="Apple-converted-space">           </span>onclick="loadPage('repository', this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">           </span>Repository Contents</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sidebar-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sidebar-title"&gt;Loci&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="nav-link"</p>
+<p class="p1"><span class="Apple-converted-space">           </span>href="#locusA"</p>
+<p class="p1"><span class="Apple-converted-space">           </span>onclick="loadPage('locusA', this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">           </span>Locus A</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="nav-link"</p>
+<p class="p1"><span class="Apple-converted-space">           </span>href="#locusB"</p>
+<p class="p1"><span class="Apple-converted-space">           </span>onclick="loadPage('locusB', this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">           </span>Locus B</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="nav-link"</p>
+<p class="p1"><span class="Apple-converted-space">           </span>href="#locusC"</p>
+<p class="p1"><span class="Apple-converted-space">           </span>onclick="loadPage('locusC', this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">           </span>Locus C</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div id="main-content"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="display-area" class="content-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Loading...</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">const pages = {</p>
+<p class="p2"><br></p>
+<p class="p1">home: `</p>
+<p class="p1">&lt;h1&gt;COPD GWAS Locus Prioritization Browser&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">This website hosts the outputs generated from the agentic COPD locus</p>
+<p class="p1">review workflow. Each locus undergoes literature review, citation</p>
+<p class="p1">verification, adversarial review, and final evidence synthesis.</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;img class="workflow-image"</p>
+<p class="p1"><span class="Apple-converted-space">     </span>src="assets/agentic-gene-prioritization.png"</p>
+<p class="p1"><span class="Apple-converted-space">     </span>alt="Agentic Review Workflow"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;Workflow Overview&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">Candidate genes are collected from locus definitions and prioritization</p>
+<p class="p1">methods. Literature evidence is gathered, verified, stress-tested, and</p>
+<p class="p1">combined with Open Targets evidence before creating final rankings.</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="info-grid"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Researcher&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Searches PubMed, bioRxiv, medRxiv, and web resources.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Citation Verifier&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Confirms publication existence and validates claims.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Red-Team Skeptic&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Evaluates contradictory findings and possible biases.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Synthesis Lead&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Produces final evidence tables and gene prioritization.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;Available Outputs&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;ul&gt;</p>
+<p class="p1">&lt;li&gt;Evidence Tables&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;Audit Reports&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;Locus Definitions&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;Locus Plots&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;Pipeline Logs&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;Methods Documentation&lt;/li&gt;</p>
+<p class="p1">&lt;/ul&gt;</p>
+<p class="p1">`,</p>
+<p class="p2"><br></p>
+<p class="p1">methods: `</p>
+<p class="p1">&lt;h1&gt;Methods&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">A multi-agent literature review framework was used to prioritize</p>
+<p class="p1">candidate genes at COPD GWAS loci.</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;Review Stages&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;ol&gt;</p>
+<p class="p1">&lt;li&gt;Literature collection&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;Citation verification&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;Red-team challenge process&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;Final synthesis and prioritization&lt;/li&gt;</p>
+<p class="p1">&lt;/ol&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;Data Sources&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;ul&gt;</p>
+<p class="p1">&lt;li&gt;PubMed&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;bioRxiv&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;medRxiv&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;Open Targets&lt;/li&gt;</p>
+<p class="p1">&lt;/ul&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">All accepted citations undergo verification prior to inclusion</p>
+<p class="p1">in evidence tables.</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">See README_METHODS.md for complete methodological details.</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p1">`,</p>
+<p class="p2"><br></p>
+<p class="p1">repository: `</p>
+<p class="p1">&lt;h1&gt;Repository Structure&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;copd-locus-review&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;ul&gt;</p>
+<p class="p1">&lt;li&gt;&lt;strong&gt;loci/&lt;/strong&gt; – locus definitions&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;&lt;strong&gt;evidence_tables/&lt;/strong&gt; – final evidence summaries&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;&lt;strong&gt;audits/&lt;/strong&gt; – rejected and contested citations&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;&lt;strong&gt;logs/&lt;/strong&gt; – pipeline provenance&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;&lt;strong&gt;scripts/&lt;/strong&gt; – review utilities&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;&lt;strong&gt;README.md&lt;/strong&gt; – project documentation&lt;/li&gt;</p>
+<p class="p1">&lt;li&gt;&lt;strong&gt;README_METHODS.md&lt;/strong&gt; – manuscript methods&lt;/li&gt;</p>
+<p class="p1">&lt;/ul&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;locus-plots&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">Regional association plots and locus visualizations used during review.</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;Downloads&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;Replace these links with your actual files.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;a class="download-link" href="data/README.md"&gt;README.md&lt;/a&gt;&lt;br&gt;</p>
+<p class="p1">&lt;a class="download-link" href="data/README_METHODS.md"&gt;README_METHODS.md&lt;/a&gt;</p>
+<p class="p1">`,</p>
+<p class="p2"><br></p>
+<p class="p1">locusA: `</p>
+<p class="p1">&lt;h1&gt;Locus A&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;Lead Variant: rsXXXXXX&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;Prioritized Gene: GENE1&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- FIX #5: added descriptive alt attribute --&gt;</p>
+<p class="p1">&lt;img class="plot-image"</p>
+<p class="p1"><span class="Apple-converted-space">     </span>src="plots/locusA.png"</p>
+<p class="p1"><span class="Apple-converted-space">     </span>alt="Regional association plot for Locus A"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;Files&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;a class="download-link" href="data/evidence_tables/locusA.md"&gt;</p>
+<p class="p1">Evidence Table</p>
+<p class="p1">&lt;/a&gt;&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;a class="download-link" href="data/audits/locusA_audit.md"&gt;</p>
+<p class="p1">Audit Report</p>
+<p class="p1">&lt;/a&gt;</p>
+<p class="p1">`,</p>
+<p class="p2"><br></p>
+<p class="p1">locusB: `</p>
+<p class="p1">&lt;h1&gt;Locus B&lt;/h1&gt;</p>
+<p class="p1">&lt;p&gt;Placeholder for locus review results.&lt;/p&gt;</p>
+<p class="p1">`,</p>
+<p class="p2"><br></p>
+<p class="p1">locusC: `</p>
+<p class="p1">&lt;h1&gt;Locus C&lt;/h1&gt;</p>
+<p class="p1">&lt;p&gt;Placeholder for locus review results.&lt;/p&gt;</p>
+<p class="p1">`</p>
+<p class="p2"><br></p>
+<p class="p1">};</p>
+<p class="p2"><br></p>
+<p class="p1">/* FIX #1: parameter is now 'el' (the clicked &lt;a&gt; element via 'this'),</p>
+<p class="p1"><span class="Apple-converted-space">   </span>no longer relying on event.target */</p>
+<p class="p1">function loadPage(pageKey, el) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll('.nav-link')</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.forEach(link =&gt; link.classList.remove('active'));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>el.classList.add('active');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('display-area').innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>pages[pageKey] || "&lt;h1&gt;Error&lt;/h1&gt;&lt;p&gt;Page not found.&lt;/p&gt;";</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// Render home page on initial load</p>
+<p class="p1">document.getElementById('display-area').innerHTML = pages.home;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
