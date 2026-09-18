@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chromosome 1</title>
+    <!-- Connecting the same external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization Dashboard
+        </div>
+        
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+
+            <!-- FIX #1 & #2: use href="#" and pass 'this' instead of 'event' -->
+            <a class="nav-link"
+            href="index.html">
+            Home
+            </a>
+
+            <a class="nav-link"
+            href="#methods"
+            onclick="loadPage('methods', this)">
+            Methods
+            </a>
+
+            <a class="nav-link"
+            href="#repository"
+            onclick="loadPage('repository', this)">
+            Repository Contents
+            </a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+
+            <a class="nav-link"
+            href="CHR1.html">
+            CHR1
+            </a>
+
+            <a class="nav-link"
+            href="#CHR2"
+            onclick="loadPage('CHR2', this)">
+            CHR2
+            </a>
+
+            <a class="nav-link"
+            href="#CHR3"
+            onclick="loadPage('CHR3', this)">
+            CHR3
+            </a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div id="display-area" class="content-card">
+            <h1>Chromosome 1</h1>
+            
+            <p>Lead Variant: rsXXXXXX</p>
+
+            <p>Prioritized Gene: GENE1</p>
+
+            <img class="plot-image"
+                src="plots/locusA.png"
+                alt="Regional association plot for Locus A">
+
+            <div class="image-container">
+                <img id="plotImage" src="" alt="Regional association plot for Chromosome 1" style="display: none;" onerror="handleImageError()">
+                <div id="placeholder" class="placeholder-text">
+                    Select a plot to view.
+                </div>
+            </div>
+
+            <div class="controls">
+                <!-- Item Selection (if you have multiple items) -->
+                <div class="control-group">
+                    <label for="itemSelect">Item:</label>
+                    <select id="itemSelect" onchange="updatePlotOptions()">
+                        <option value="Item1">Item 1</option>
+                    </select>
+                </div>
+
+                <!-- Plot Selection Dropdown -->
+                <div class="control-group">
+                    <label for="plotSelect">Select Plot:</label>
+                    <select id="plotSelect" onchange="displayPlot()">
+                        <!-- Populated dynamically via JS -->
+                    </select>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="control-group">
+                    <button id="prevBtn" onclick="navigatePlot(-1)">◄ Prev</button>
+                    <button id="nextBtn" onclick="navigatePlot(1)">Next ►</button>
+                </div>
+            </div>
+
+            <div class="file-hint">
+                Expecting PNG files named like: <code>item1_plot1.png</code>, <code>item1_plot2.png</code>, etc., located in the same folder as this HTML file.
+            </div>
+
+            <h2>Files</h2>
+
+            <a class="download-link" href="data/evidence_tables/locusA.md">
+            Evidence Table
+            </a><br>
+
+            <a class="download-link" href="data/audits/locusA_audit.md">
+            Audit Report
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

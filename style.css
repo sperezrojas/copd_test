@@ -1,0 +1,249 @@
+:root {
+    --sidebar-width: 280px;
+    --primary: #1e293b;
+    --accent: #2563eb;
+    --bg: #f8fafc;
+    --text: #334155;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+
+body{
+    display:flex;
+    height:100vh;
+    overflow:hidden;
+    background:var(--bg);
+    color:var(--text);
+}
+
+#sidebar{
+    width:var(--sidebar-width);
+    background:var(--primary);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    overflow-y:auto;        /* FIX #6: sidebar scrolls if many loci are added */
+}
+
+.sidebar-header{
+    padding:20px;
+    text-align:center;
+    font-size:1.2rem;
+    font-weight:700;
+    border-bottom:1px solid #334155;
+    flex-shrink:0;          /* keeps header pinned while nav scrolls */
+}
+
+.sidebar-section{
+    padding:15px 0;
+}
+
+.sidebar-title{
+    padding:8px 20px;
+    font-size:.8rem;
+    color:#94a3b8;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+}
+
+.nav-link{
+    display:block;
+    padding:12px 24px;
+    color:#cbd5e1;
+    text-decoration:none;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.nav-link:hover,
+.nav-link.active{
+    background:var(--accent);
+    color:white;
+}
+
+#main-content{
+    flex:1;
+    overflow-y:auto;
+    padding:40px;
+}
+
+.content-card{
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+    max-width:1200px;
+    margin:auto;
+}
+
+h1{
+    margin-bottom:20px;
+    color:var(--primary);
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f1f3f5;
+    border-radius: 6px;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+h2{
+    margin-top:30px;
+    margin-bottom:15px;
+    color:var(--primary);
+}
+
+/* FIX #4: h3 style for info-cards */
+h3{
+    margin-bottom:8px;
+    color:var(--primary);
+    font-size:1rem;
+}
+
+p{
+    line-height:1.7;
+    margin-bottom:12px;
+}
+
+ul, ol{         /* FIX #3: ol now gets same indent treatment as ul */
+    margin-left:20px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+.workflow-image{
+    width:100%;
+    max-width:1000px;
+    display:block;
+    margin:25px auto;
+    border-radius:8px;
+    border:1px solid #dbeafe;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.info-card{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:8px;
+    border-left:4px solid var(--accent);
+}
+
+.download-link{
+    display:inline-block;
+    margin:5px 0;
+    color:#2563eb;
+    text-decoration:none;
+}
+
+.download-link:hover{
+    text-decoration:underline;
+}
+
+.plot-image{
+    width:100%;
+    border:1px solid #e2e8f0;
+    border-radius:8px;
+    margin-top:20px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+select, button {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+select:focus, button:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+button:disabled {
+    background-color: #ced4da;
+    cursor: not-allowed;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+    border: 1px dashed var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    display: block;
+}
+
+.placeholder-text {
+    color: #868e96;
+    text-align: center;
+    padding: 20px;
+}
+
+.file-hint {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #6c757d;
+    text-align: center;
+}
+
+code {
+    background-color: #e9ecef;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+}
