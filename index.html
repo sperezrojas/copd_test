@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Results Browser</title>
+    <style>
+        :root {
+            --sidebar-width: 260px;
+            --primary-color: #1e293b;
+            --accent-color: #2563eb;
+            --text-color: #334155;
+            --bg-color: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            display: flex;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Left Navigation Bar */
+        #sidebar {
+            width: var(--sidebar-width);
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            flex-shrink: 0;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-bottom: 1px solid #334155;
+            text-align: center;
+        }
+
+        #sidebar nav {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px 0;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 12px 24px;
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: white;
+            background-color: var(--accent-color);
+        }
+
+        /* Main Content Area */
+        #main-content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+            height: 100%;
+        }
+
+        .content-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Left Navigation Bar -->
+    <div id="sidebar">
+        <div class="sidebar-header">🧬 Study Browser</div>
+        <nav>
+            <a class="nav-link active" onclick="loadPage('home')">Home / Info</a>
+            <!-- Add your locus pages below -->
+            <a class="nav-link" onclick="loadPage('locusA')">Locus A</a>
+            <a class="nav-link" onclick="loadPage('locusB')">Locus B</a>
+            <a class="nav-link" onclick="loadPage('locusC')">Locus C</a>
+        </nav>
+    </div>
+
+    <!-- Main Content Display -->
+    <div id="main-content">
+        <div class="content-card" id="display-area">
+            <!-- Home page content is shown by default -->
+            <h1>Welcome to the Study Results Browser</h1>
+            <p>This portal hosts the output data for our latest genomic/locus mapping study. Use the left navigation panel to browse through individual locus output datasets, statistics, and visualizations.</p>
+            <p>Select any locus from the sidebar to begin analyzing the localized data records.</p>
+        </div>
+    </div>
+
+    <script>
+        // Dictionary containing content for each page
+        const pages = {
+            home: `
+                <h1>Welcome to the Study Results Browser</h1>
+                <p>This portal hosts the output data for our latest genomic/locus mapping study. Use the left navigation panel to browse through individual locus output datasets, statistics, and visualizations.</p>
+                <p>Select any locus from the sidebar to begin analyzing the localized data records.</p>
+            `,
+            locusA: `
+                <h1>Locus A Output Data</h1>
+                <p><strong>Chromosome Position:</strong> Chr1:104,230-105,890</p>
+                <p>Detailed outputs, variant counts, and statistical significance values for Locus A would be rendered here.</p>
+            `,
+            locusB: `
+                <h1>Locus B Output Data</h1>
+                <p><strong>Chromosome Position:</strong> Chr4:89,120-91,450</p>
+                <p>Detailed outputs, variant counts, and statistical significance values for Locus B would be rendered here.</p>
+            `,
+            locusC: `
+                <h1>Locus C Output Data</h1>
+                <p><strong>Chromosome Position:</strong> Chr12:44,500-46,110</p>
+                <p>Detailed outputs, variant counts, and statistical significance values for Locus C would be rendered here.</p>
+            `
+        };
+
+        function loadPage(pageKey) {
+            // Update active link styling
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Inject the selected content
+            const displayArea = document.getElementById('display-area');
+            if (pages[pageKey]) {
+                displayArea.innerHTML = pages[pageKey];
+            } else {
+                displayArea.innerHTML = "<h1>Error</h1><p>Page not found.</p>";
+            }
+        }
+    </script>
+</body>
+</html>
