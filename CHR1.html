@@ -70,18 +70,6 @@
     <!-- populated by renderLocusData() -->
   </div>
 
-  <!-- ── Files card ─────────────────────────────────────────────────── -->
-  <div class="content-card files-card" id="files-card" style="display:none">
-    <h3 class="files-title">Files</h3>
-    <div class="file-links-row">
-      <a class="file-btn" id="btn-evidence" href="#" target="_blank">
-        📄 Evidence Table
-      </a>
-      <a class="file-btn" id="btn-audit" href="#" target="_blank">
-        🔍 Audit Report
-      </a>
-    </div>
-  </div>
 
 </div><!-- #main-content -->
 
@@ -97,21 +85,20 @@
 const CHR1_LOCI = [
   {
     index: 0,
-    id:    'chr1_28200001_28950000',
-    label: '1:28,200,001–28,950,000 · PHACTR4',
-    plot:  'plots/chr1_locus_01.png',
-    evidenceHref: 'locus_chr1_28200001-28950000.html',
-    auditHref:    'audits/1_28200001-28950000_audit.md'
+    id:    'chr1-28200001-28950000',
+    label: 'Locus 1:28200001–28950000',
+    plot:  'plots/chr1-28200001-28950000.png',
+    /*evidenceHref: 'locus_chr1_28200001-28950000.html',*/
+    /*auditHref:    'audits/1_28200001-28950000_audit.md' */
   },
-  /* ── Loci 2-16: fill plot paths and labels as data becomes available ── */
-  ...Array.from({ length: 15 }, (_, i) => ({
-    index:        i + 1,
-    id:           `chr1_locus_${String(i + 2).padStart(2, '0')}`,
-    label:        `Locus ${i + 2} — data pending`,
-    plot:         `plots/chr1_locus_${String(i + 2).padStart(2, '0')}.png`,
-    evidenceHref: '#',
-    auditHref:    '#'
-  }))
+  {
+    index: 1,
+    id:    'chr1-113700001-113900000',
+    label: 'Locus 1:113700001-113900000',
+    plot:  'plots/chr1-113700001-113900000.png',
+    /*evidenceHref: 'locus_chr1_28200001-28950000.html',*/
+    /*auditHref:    'audits/1_28200001-28950000_audit.md' */
+  },
 ];
 
 
@@ -120,18 +107,18 @@ const CHR1_LOCI = [
    ════════════════════════════════════════════════════════════════════════ */
 const LOCUS_META = {};
 
-LOCUS_META['chr1_28200001_28950000'] = {
+LOCUS_META['chr1-28200001-28950000'] = {
   chr:             '1',
   start:           28200001,
   end:             28950000,
   nearestGene:     'PHACTR4',
   leadVariant:     'rs61783851',
-  leadVariantPos:  '1:28,441,880 (GRCh38)',
+  leadVariantPos:  '1:28441880 (GRCh38)',
   leadVariantType: 'intron_variant in PHACTR4',
   leadVariantPIP:  '0.0423',
   credibleSetSize: 159,
   missenseVariant: 'rs61785974',
-  missensePos:     '1:28,473,868, PHACTR4, MODERATE impact',
+  missensePos:     '1:28473868, PHACTR4, MODERATE impact',
   missensePIP:     '0.028',
   prioritizedGenes: {
     Nearest: 'PHACTR4', MAGMA: 'RCC1', PoPS: 'RCC1',
@@ -155,7 +142,7 @@ LOCUS_META['chr1_28200001_28950000'] = {
    ════════════════════════════════════════════════════════════════════════ */
 const EVIDENCE_ROWS = {};
 
-EVIDENCE_ROWS['chr1_28200001_28950000'] = [
+EVIDENCE_ROWS['chr1-28200001-28950000'] = [
   {
     gene: 'PHACTR4', geneNote: '',
     type: 'Genetics (statgen, pleiotropy)',
@@ -551,7 +538,7 @@ EVIDENCE_ROWS['chr1_28200001_28950000'] = [
    ════════════════════════════════════════════════════════════════════════ */
 const OT_DATA = {};
 
-OT_DATA['chr1_28200001_28950000'] = [
+OT_DATA['chr1-28200001-28950000'] = [
   {
     gene: 'PHACTR4', copdScore: null, copd_ga: null,
     coloc: 'Not resolved', constraint: '2',
@@ -611,7 +598,7 @@ OT_DATA['chr1_28200001_28950000'] = [
 ];
 
 const OT_FOOTER = {};
-OT_FOOTER['chr1_28200001_28950000'] =
+OT_FOOTER['chr1-28200001-28950000'] =
   'No gene at this locus has any Open Targets FEV1, FEV1/FVC, \u201clung function,\u201d or ' +
   'emphysema evidence. Locus-specific L2G/colocalization scores could not be resolved within ' +
   'tool budget (schema introspection exceeded output-size limits; no per-disease filter on ' +
@@ -624,7 +611,7 @@ OT_FOOTER['chr1_28200001_28950000'] =
    ════════════════════════════════════════════════════════════════════════ */
 const SYNTHESIS = {};
 
-SYNTHESIS['chr1_28200001_28950000'] = {
+SYNTHESIS['chr1-28200001-28950000'] = {
   topGene:    'PHACTR4',
   confidence: 'LOW',
   summary:
@@ -742,17 +729,6 @@ function switchLocus(index) {
   img.alt                   = `Regional association plot — ${locus.label}`;
   document.getElementById('plot-error-path').textContent = locus.plot;
 
-  /* update files links */
-  const filesCard = document.getElementById('files-card');
-  if (locus.evidenceHref !== '#' || locus.auditHref !== '#') {
-    filesCard.style.display = '';
-    document.getElementById('btn-evidence').href = locus.evidenceHref;
-    document.getElementById('btn-audit').href    = locus.auditHref;
-  } else {
-    filesCard.style.display = '';          /* still show card */
-    document.getElementById('btn-evidence').href = '#';
-    document.getElementById('btn-audit').href    = '#';
-  }
 
   /* reset filter/sort state then render evidence */
   evSortCol = -1; evSortAsc = true;
