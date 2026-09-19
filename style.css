@@ -248,471 +248,94 @@ code {
     font-family: monospace;
 }
 
-/* ═══════════════════════════════════════════════════════════════════════
-   ADD TO style.css
-   All new classes for the CHR1 locus-evidence section are prefixed "ev-"
-   ═══════════════════════════════════════════════════════════════════════ */
+/* ── Files Section ─────────────────────────────────────────────────── */
 
-/* ── Chromosome header card ─────────────────────────────────────────── */
-.chr-header-card { padding: 20px 28px; }
-.chr-title { font-size: 1.3rem; color: #0d1117; margin-bottom: 16px; }
-
-/* ── Locus selector bar ─────────────────────────────────────────────── */
-.locus-selector-bar {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-.locus-select-wrap {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.locus-select-label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #24292f;
-  white-space: nowrap;
-}
-.locus-select {
-  padding: 7px 12px;
-  border: 1px solid #d0d7de;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  background: #fff;
-  color: #24292f;
-  min-width: 260px;
-  cursor: pointer;
-  outline: none;
-  transition: border-color .15s, box-shadow .15s;
-}
-.locus-select:focus {
-  border-color: #0969da;
-  box-shadow: 0 0 0 3px rgba(9,105,218,.12);
-}
-.locus-nav-btns { display: flex; gap: 8px; }
-.locus-nav-btn {
-  padding: 7px 16px;
-  border: 1px solid #d0d7de;
-  border-radius: 6px;
-  background: #f6f8fa;
-  color: #24292f;
-  font-size: 0.84rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background .15s, border-color .15s;
-}
-.locus-nav-btn:hover:not(:disabled) { background: #e1e4e8; border-color: #8b949e; }
-.locus-nav-btn:disabled { opacity: .4; cursor: not-allowed; }
-
-/* ── Plot card ──────────────────────────────────────────────────────── */
-.plot-card { padding: 20px; text-align: center; }
-.plot-placeholder {
-  color: #8b949e;
-  font-style: italic;
-  padding: 40px 0;
-  font-size: 0.9rem;
-}
-.locus-plot-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-  border: 1px solid #e1e4e8;
-}
-.plot-error {
-  color: #cf222e;
-  background: #ffebe9;
-  border: 1px solid #ffc1bb;
-  border-radius: 6px;
-  padding: 12px 16px;
-  font-size: 0.84rem;
-  margin: 0 auto;
-  max-width: 480px;
+.files-section {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  background-color: #f8f9fb;
+  border: 1px solid #e2e6ea;
+  border-radius: 8px;
 }
 
-/* ── Files card ─────────────────────────────────────────────────────── */
-.files-card { padding: 18px 28px; }
-.files-title { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: #0d1117; }
-.file-links-row { display: flex; gap: 12px; flex-wrap: wrap; }
-.file-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 7px 14px;
-  border: 1px solid #d0d7de;
-  border-radius: 6px;
-  background: #f6f8fa;
-  color: #0969da;
-  text-decoration: none;
-  font-size: 0.84rem;
-  font-weight: 600;
-  transition: background .15s, border-color .15s;
-}
-.file-btn:hover { background: #ddf4ff; border-color: #0969da; }
-
-/* ── Pending placeholder ────────────────────────────────────────────── */
-.ev-pending-card { text-align: center; padding: 48px 28px; }
-.ev-pending-icon  { font-size: 2.5rem; margin-bottom: 12px; }
-.ev-pending-title { font-size: 1rem; font-weight: 700; color: #0d1117; margin-bottom: 8px; }
-.ev-pending-note  { font-size: 0.84rem; color: #57606a; }
-
-/* ── Shared section title ───────────────────────────────────────────── */
-.ev-section-title {
+.files-heading {
   font-size: 1rem;
-  font-weight: 700;
-  color: #0d1117;
-  margin-bottom: 14px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #e1e4e8;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-/* ── Notices ────────────────────────────────────────────────────────── */
-.ev-notice {
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-  padding: 10px 14px;
-  border-radius: 0 4px 4px 0;
-  font-size: 0.83rem;
-  margin-bottom: 14px;
-}
-.ev-notice--info {
-  background: #ddf4ff;
-  border-left: 4px solid #0969da;
-  color: #0550ae;
-}
-.ev-notice--ot {
-  background: #f3eeff;
-  border-left: 4px solid #8250df;
-  color: #4e3178;
-}
-
-/* ── Meta card ──────────────────────────────────────────────────────── */
-.ev-meta-card { padding: 22px 28px; }
-.ev-meta-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 14px;
-}
-.ev-meta-block--full { grid-column: 1 / -1; }
-.ev-meta-label {
-  font-size: 0.69rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  color: #8b949e;
-  margin-bottom: 4px;
-}
-.ev-meta-value { font-size: 0.83rem; color: #24292f; }
-
-/* Confidence badge */
-.ev-confidence-badge {
-  display: inline-block;
-  padding: 2px 9px;
-  border-radius: 10px;
-  font-size: 0.74rem;
-  font-weight: 700;
-}
-.ev-conf-low    { background: #ffebe9; color: #82221b; border: 1px solid #ffc1bb; }
-.ev-conf-medium { background: #fff3cd; color: #7d4e00; border: 1px solid #ffe08a; }
-.ev-conf-high   { background: #dcffe4; color: #0a3622; border: 1px solid #a5d6b7; }
-
-/* Gene pill */
-.ev-gene-pill {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 10px;
-  font-size: 0.77rem;
   font-weight: 600;
-  background: #ddf4ff;
-  color: #0550ae;
-  border: 1px solid #b6d4f8;
-  margin: 2px 2px;
-}
-.ev-gene-pill--highlight {
-  background: #fbefff;
-  color: #6f42c1;
-  border-color: #d2b4fb;
+  color: #343a40;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-/* ── Evidence table card ────────────────────────────────────────────── */
-.ev-table-card { padding: 22px 28px; }
-
-/* Filter bar */
-.ev-filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-  margin-bottom: 14px;
-}
-.ev-filter-bar select,
-.ev-filter-bar input[type="text"] {
-  padding: 6px 10px;
-  border: 1px solid #d0d7de;
-  border-radius: 6px;
-  font-size: 0.82rem;
-  background: #fff;
-  color: #24292f;
-  outline: none;
-  transition: border-color .15s;
-}
-.ev-filter-bar select:focus,
-.ev-filter-bar input[type="text"]:focus {
-  border-color: #0969da;
-  box-shadow: 0 0 0 3px rgba(9,105,218,.10);
-}
-.ev-filter-bar input[type="text"] { min-width: 200px; }
-.ev-btn-reset {
-  padding: 6px 12px;
-  border: 1px solid #d0d7de;
-  border-radius: 6px;
-  background: #f6f8fa;
-  font-size: 0.81rem;
-  cursor: pointer;
-  transition: background .15s;
-}
-.ev-btn-reset:hover { background: #e1e4e8; }
-.ev-row-count {
-  margin-left: auto;
-  font-size: 0.79rem;
-  color: #57606a;
-  white-space: nowrap;
-}
-
-/* Table */
-.ev-table-scroll { overflow-x: auto; }
-.ev-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.82rem;
-}
-.ev-table thead th {
-  background: #f6f8fa;
-  border: 1px solid #d0d7de;
-  padding: 8px 10px;
-  text-align: left;
-  font-weight: 700;
-  color: #0d1117;
-  white-space: nowrap;
-  cursor: pointer;
-  user-select: none;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-.ev-table thead th:hover { background: #e9ecef; }
-.ev-sort-icon { display: inline-block; margin-left: 4px; color: #8b949e; font-size: .75em; }
-.ev-sort-icon::after { content: ' ⇅'; }
-.ev-sorted-asc  .ev-sort-icon::after { content: ' ▲'; color: #0969da; }
-.ev-sorted-desc .ev-sort-icon::after { content: ' ▼'; color: #0969da; }
-
-.ev-table tbody tr { border-bottom: 1px solid #e1e4e8; }
-.ev-table tbody tr:hover { background: #f6f8fa; }
-.ev-table tbody td {
-  padding: 8px 10px;
-  vertical-align: top;
-  border-left: 1px solid #e1e4e8;
-}
-.ev-table tbody td:first-child { border-left: none; }
-.ev-col-claim  { min-width: 300px; }
-.ev-col-source { min-width: 190px; }
-.ev-type-cell  { font-size: 0.79rem; color: #57606a; }
-.ev-date-cell  { white-space: nowrap; color: #57606a; font-size: 0.79rem; }
-
-/* Gene cell */
-.ev-gene-name {
-  font-weight: 700;
-  color: #0550ae;
-  font-size: 0.87rem;
-  white-space: nowrap;
-}
-.ev-gene-note {
-  font-size: 0.72rem;
-  color: #8b949e;
-  font-style: italic;
-  margin-top: 2px;
-  max-width: 160px;
-}
-
-/* Claim cell */
-.ev-claim-text {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.ev-claim-text.ev-claim-expanded {
-  display: block;
-  overflow: visible;
-}
-.ev-expand-btn {
-  background: none;
-  border: none;
-  color: #0969da;
-  cursor: pointer;
-  font-size: 0.74rem;
-  padding: 2px 0;
-  margin-top: 2px;
-  display: block;
-}
-.ev-expand-btn:hover { text-decoration: underline; }
-
-/* Source cell */
-.ev-cit-text  { font-size: 0.79rem; color: #24292f; margin-bottom: 3px; }
-.ev-cit-links { display: flex; gap: 5px; flex-wrap: wrap; }
-.ev-cit-link {
-  font-size: 0.73rem;
-  padding: 1px 6px;
-  border-radius: 4px;
-  text-decoration: none;
-  border: 1px solid;
-  transition: background .12s;
-}
-.ev-pmid { color: #0550ae; border-color: #b6d4f8; background: #ddf4ff; }
-.ev-pmid:hover { background: #b6d4f8; }
-.ev-doi  { color: #1a7f37; border-color: #a5d6b7; background: #dcffe4; }
-.ev-doi:hover  { background: #a5d6b7; }
-
-/* Verdict cell */
-.ev-verdict {
-  display: inline-block;
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
-.ev-v-weakened  { background: #fff3cd; color: #7d4e00;  border: 1px solid #ffe08a; }
-.ev-v-contested { background: #ffebe9; color: #82221b;  border: 1px solid #ffc1bb; }
-.ev-v-holds     { background: #e2e3e5; color: #2b2d32;  border: 1px solid #c6c8ca; }
-.ev-v-na        { background: #cfe2ff; color: #084298;  border: 1px solid #9ec5fe; }
-.ev-verdict-qual {
-  font-size: 0.69rem;
-  color: #57606a;
-  font-style: italic;
-  margin-top: 3px;
-  max-width: 155px;
-}
-
-/* No-results / no-lit rows */
-.ev-no-results {
-  text-align: center;
-  padding: 36px;
-  color: #57606a;
+/* Placeholder message shown when no locus is selected */
+.files-placeholder-msg {
+  font-size: 0.875rem;
+  color: #868e96;
   font-style: italic;
 }
-.ev-no-lit-box {
-  background: #f6f8fa;
-  border: 1px solid #d0d7de;
-  border-radius: 6px;
-  padding: 10px 14px;
-  font-size: 0.81rem;
-  color: #57606a;
-  margin-top: 14px;
-}
 
-/* ── Open Targets card ──────────────────────────────────────────────── */
-.ev-ot-card { padding: 22px 28px; }
-.ev-ot-table thead th { background: #f3eeff; color: #4e3178; }
-.ev-ot-present { font-weight: 700; color: #1a7f37; font-size: 0.81rem; }
-.ev-ot-absent  { color: #8b949e; font-size: 0.81rem; }
-.ev-coloc-cell { color: #57606a; font-size: 0.81rem; }
-.ev-ot-notes   { font-size: 0.79rem; color: #24292f; }
-.ev-ot-footer-note {
-  font-size: 0.77rem;
-  color: #57606a;
-  margin-top: 10px;
-  line-height: 1.6;
-}
-.ev-constraint {
-  display: inline-block;
-  padding: 1px 7px;
-  border-radius: 10px;
-  font-size: 0.75rem;
-  font-weight: 700;
-}
-.ev-constraint-desc { font-size: 0.73rem; color: #57606a; margin-left: 4px; }
-.ev-constraint.c0  { background: #ffebe9; color: #82221b; }
-.ev-constraint.c1  { background: #fff3cd; color: #7d4e00; }
-.ev-constraint.c2  { background: #fff8c5; color: #856404; }
-.ev-constraint.c3  { background: #e1f5ea; color: #145c2e; }
-.ev-constraint.c4  { background: #dcffe4; color: #0a3622; }
-.ev-constraint.c5  { background: #e2e3e5; color: #2b2d32; }
-.ev-constraint.cnc { background: #f6f8fa; color: #8b949e; }
-
-/* ── Synthesis card ─────────────────────────────────────────────────── */
-.ev-synthesis-card { padding: 22px 28px; }
-.ev-synthesis-verdict {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #fff8c5;
-  border: 1px solid #e3b341;
-  border-radius: 6px;
-  padding: 8px 16px;
-  margin-bottom: 16px;
-  font-size: 0.88rem;
-  color: #7d4e00;
-}
-.ev-synthesis-sep   { color: #c09900; }
-.ev-synthesis-summary {
-  font-size: 0.84rem;
-  color: #24292f;
-  margin-bottom: 16px;
-}
-.ev-candidates-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 18px; }
-.ev-candidate-block {
-  padding: 12px 16px;
-  border-left: 3px solid #d0d7de;
-  border-radius: 0 4px 4px 0;
-  background: #f6f8fa;
-}
-.ev-gene-primary     { border-left-color: #0969da; background: #f0f6ff; }
-.ev-gene-runner      { border-left-color: #8250df; background: #faf0ff; }
-.ev-gene-second      { border-left-color: #1a7f37; background: #f0faf3; }
-.ev-candidate-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 6px;
-}
-.ev-candidate-label  { font-size: 0.8rem; color: #57606a; font-style: italic; }
-.ev-candidate-desc   { font-size: 0.83rem; color: #24292f; line-height: 1.65; }
-
-.ev-resolve-box {
-  background: #f6f8fa;
-  border: 1px solid #d0d7de;
-  border-radius: 6px;
-  padding: 14px 18px;
-  margin-bottom: 14px;
-}
-.ev-resolve-title {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: #0d1117;
-  margin-bottom: 10px;
-}
-.ev-resolve-list {
-  padding-left: 20px;
+/* Container for the actual links */
+.files-links-container {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.5rem;
 }
-.ev-resolve-list li { font-size: 0.82rem; color: #24292f; }
 
-.ev-caveat-box {
-  background: #fff8c5;
-  border: 1px solid #e3b341;
+.files-locus-label {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.files-locus-label strong {
+  color: #343a40;
+}
+
+.files-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Base file link button style */
+.file-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
   border-radius: 6px;
-  padding: 12px 16px;
-  font-size: 0.82rem;
-  color: #7d4e00;
-  line-height: 1.65;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid transparent;
+}
+
+/* Evidence Table variant */
+.file-link--evidence {
+  background-color: #e7f3ff;
+  color: #0969da;
+  border-color: #b6d4fe;
+}
+
+.file-link--evidence:hover {
+  background-color: #cfe2ff;
+  box-shadow: 0 1px 4px rgba(9, 105, 218, 0.2);
+}
+
+/* Audit Report variant */
+.file-link--audit {
+  background-color: #fff3e0;
+  color: #b45309;
+  border-color: #fcd34d;
+}
+
+.file-link--audit:hover {
+  background-color: #ffe8b2;
+  box-shadow: 0 1px 4px rgba(180, 83, 9, 0.2);
+}
+
+/* Utility: hidden */
+.hidden {
+  display: none !important;
 }

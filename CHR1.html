@@ -4,58 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chromosome 1</title>
-    <!-- Connecting the same external stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <div id="sidebar">
-        <div class="sidebar-header">
-            🧬 Agentic Gene Prioritization Dashboard
-        </div>
-        
-        <div class="sidebar-section">
-            <div class="sidebar-title">Overview</div>
+  <div class="sidebar-header">
+    🧬 Agentic Gene Prioritization<br>Dashboard
+  </div>
 
-            <a class="nav-link"
-            href="index.html">
-            Home
-            </a>
+  <div class="sidebar-section">
+    <div class="sidebar-title">Overview</div>
+    <a class="nav-link" href="index.html">🏠 Home</a>
+    <a class="nav-link" href="methods.html">🔬 Methods</a>
+  </div>
 
-            <a class="nav-link"
-            href="#methods"
-            onclick="loadPage('methods', this)">
-            Methods
-            </a>
-
-            <a class="nav-link"
-            href="#repository"
-            onclick="loadPage('repository', this)">
-            Repository Contents
-            </a>
-        </div>
-
-        <div class="sidebar-section">
-            <div class="sidebar-title">Chromosomes</div>
-
-            <a class="nav-link"
-            href="CHR1.html">
-            CHR1
-            </a>
-
-            <a class="nav-link"
-            href="#CHR2"
-            onclick="loadPage('CHR2', this)">
-            CHR2
-            </a>
-
-            <a class="nav-link"
-            href="#CHR3"
-            onclick="loadPage('CHR3', this)">
-            CHR3
-            </a>
-        </div>
-    </div>
+  <div class="sidebar-section">
+    <div class="sidebar-title">Chromosomes</div>
+    <a class="nav-link active" href="CHR1.html">CHR1</a>
+    <a class="nav-link" href="CHR2.html">CHR2</a>
+    <a class="nav-link" href="CHR3.html">CHR3</a>
+    <a class="nav-link" href="CHR4.html">CHR4</a>
+    <a class="nav-link" href="CHR5.html">CHR5</a>
+    <a class="nav-link" href="CHR6.html">CHR6</a>
+    <a class="nav-link" href="CHR7.html">CHR7</a>
+    <a class="nav-link" href="CHR8.html">CHR8</a>
+    <a class="nav-link" href="CHR9.html">CHR9</a>
+    <a class="nav-link" href="CHR10.html">CHR10</a>
+    <a class="nav-link" href="CHR11.html">CHR11</a>
+    <a class="nav-link" href="CHR12.html">CHR12</a>
+    <a class="nav-link" href="CHR13.html">CHR13</a>
+    <a class="nav-link" href="CHR14.html">CHR14</a>
+    <a class="nav-link" href="CHR15.html">CHR15</a>
+    <a class="nav-link" href="CHR16.html">CHR16</a>
+    <a class="nav-link" href="CHR17.html">CHR17</a>
+    <a class="nav-link" href="CHR18.html">CHR18</a>
+    <a class="nav-link" href="CHR19.html">CHR19</a>
+    <a class="nav-link" href="CHR20.html">CHR20</a>
+    <a class="nav-link" href="CHR21.html">CHR21</a>
+    <a class="nav-link" href="CHR22.html">CHR22</a>
+  </div>
+</div>
 
     <div id="main-content">
         <div id="display-area" class="content-card">
@@ -85,15 +74,38 @@
                 </div>
             </div>
 
-            <h2>Files</h2>
+            <!-- FILES SECTION -->
+            <div class="files-section">
+            <h3 class="files-heading">Files</h3>
 
-            <a class="download-link" href="data/evidence_tables/locusA.md">
-            Evidence Table
-            </a><br>
+            <div id="files-placeholder-msg" class="files-placeholder-msg">
+                Select a locus to view available files.
+            </div>
 
-            <a class="download-link" href="data/audits/locusA_audit.md">
-            Audit Report
-            </a>
+            <div id="files-links-container" class="files-links-container hidden">
+                <span class="files-locus-label">
+                Locus: <strong id="files-locus-display"></strong>
+                </span>
+
+                <div class="files-links">
+                <a id="link-evidence-table"
+                    href="#"
+                    class="file-link file-link--evidence"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    📄 Evidence Table
+                </a>
+
+                <a id="link-audit-report"
+                    href="#"
+                    class="file-link file-link--audit"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    🔍 Audit Report
+                </a>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
 
@@ -101,22 +113,22 @@
     // Configuration of plots available for each item
     const dataset = {
         "chr1": [
-            { id: 1, name: "Locus 1: 106900001-107150000", filename: "plots/chr1-106900001-107150000.png" },
-            { id: 2, name: "Locus 2: 113700001-113900000", filename: "plots/chr1-113700001-113900000.png" },
-            { id: 3, name: "Locus 3: 117250001-117650000", filename: "plots/chr1-117250001-117650000.png" },
-            { id: 4, name: "Locus 4: 149850001-150150000", filename: "plots/chr1-149850001-150150000.png" },
-            { id: 5, name: "Locus 5: 154500001-154750000", filename: "plots/chr1-154500001-154750000.png" },
-            { id: 6, name: "Locus 6: 161350001-161650000", filename: "plots/chr1-161350001-161650000.png" },
-            { id: 7, name: "Locus 7: 197300001-197950000", filename: "plots/chr1-197300001-197950000.png" },
-            { id: 8, name: "Locus 8: 209950001-210400000", filename: "plots/chr1-209950001-210400000.png" },
-            { id: 9, name: "Locus 9: 218200001-218700000", filename: "plots/chr1-218200001-218700000.png" },
-            { id: 10, name: "Locus 10: 28200001-28950000", filename: "plots/chr1-28200001-28950000.png" },
-            { id: 11, name: "Locus 11: 31650001-31900000", filename: "plots/chr1-31650001-31900000.png" },
-            { id: 12, name: "Locus 12: 43300001-43850000", filename: "plots/chr1-43300001-43850000.png" },
-            { id: 13, name: "Locus 13: 65800001-66100000", filename: "plots/chr1-65800001-66100000.png" },
-            { id: 14, name: "Locus 14: 72350001-73700000", filename: "plots/chr1-72350001-73700000.png" },
-            { id: 15, name: "Locus 15: 77900001-78050000", filename: "plots/chr1-77900001-78050000.png" },
-            { id: 16, name: "Locus 16: 97750001-98250000", filename: "plots/chr1-97750001-98250000.png" }
+            { id: 1, name: "1:106900001-107150000", filename: "plots/chr1-106900001-107150000.png" },
+            { id: 2, name: "1:113700001-113900000", filename: "plots/chr1-113700001-113900000.png" },
+            { id: 3, name: "1:117250001-117650000", filename: "plots/chr1-117250001-117650000.png" },
+            { id: 4, name: "1:149850001-150150000", filename: "plots/chr1-149850001-150150000.png" },
+            { id: 5, name: "1:154500001-154750000", filename: "plots/chr1-154500001-154750000.png" },
+            { id: 6, name: "1:161350001-161650000", filename: "plots/chr1-161350001-161650000.png" },
+            { id: 7, name: "1:197300001-197950000", filename: "plots/chr1-197300001-197950000.png" },
+            { id: 8, name: "1:209950001-210400000", filename: "plots/chr1-209950001-210400000.png" },
+            { id: 9, name: "1:218200001-218700000", filename: "plots/chr1-218200001-218700000.png" },
+            { id: 10, name: "1:28200001-28950000", filename: "plots/chr1-28200001-28950000.png" },
+            { id: 11, name: "1:30350001-30950000", filename: "plots/chr1-30350001-30950000.png" },
+            { id: 12, name: "1:32800001-33400000", filename: "plots/chr1-32800001-33400000.png" },
+            { id: 13, name: "1:65800001-66100000", filename: "plots/chr1-65800001-66100000.png" },
+            { id: 14, name: "1:72350001-73700000", filename: "plots/chr1-72350001-73700000.png" },
+            { id: 15, name: "1:77900001-78050000", filename: "plots/chr1-77900001-78050000.png" },
+            { id: 16, name: "1:97750001-98250000", filename: "plots/chr1-97750001-98250000.png" }
         ]
     };
 
@@ -159,13 +171,18 @@
 
         if (plots && plots[plotIndex]) {
             const currentPlot = plots[plotIndex];
+            const plotFileKey = currentPlot.filename
+                .replace(/^plots\//, '')
+                .replace(/\.png$/, '');
             plotImage.src = currentPlot.filename;
             plotImage.style.display = 'block';
             placeholder.style.display = 'none';
+            updateFileLinks(plotFileKey, currentPlot.name);
         } else {
             plotImage.style.display = 'none';
             placeholder.style.display = 'block';
             placeholder.textContent = 'No plot selected or available.';
+            updateFileLinks(null);
         }
 
         updateButtonStates();
@@ -197,6 +214,52 @@
         placeholder.style.display = 'block';
         const filename = plotImage.src.split('/').pop();
         placeholder.innerHTML = `⚠️ Could not load <code>${filename}</code>.<br><br><small>Make sure the image file is placed in the same folder as this HTML page.</small>`;
+    }
+
+    // ─── Dynamic File Links ─────────────────────────────────────────────────────
+
+    /**
+     * Adjust these two functions to match your actual file naming convention.
+     * Examples assume files are named like: CHR1_LOC001_evidence_table.html
+     */
+    function getEvidenceTablePath(plotFileKey) {
+    // e.g. "LOC001" → "files/LOC001_evidence_table.html"
+    return `files/${plotFileKey}.html`;
+    }
+
+    function getAuditReportPath(plotFileKey) {
+    // e.g. "LOC001" → "files/LOC001_audit_report.html"
+    return `files/${plotFileKey}_audit_report.html`;
+    }
+
+    /**
+     * Call this function whenever the selected locus changes.
+    * @param {string|null} plotFileKey - The selected plot filename without its folder or extension.
+    * @param {string|null} displayName - The selected locus name to display.
+     */
+    function updateFileLinks(plotFileKey, displayName = plotFileKey) {
+    const placeholder   = document.getElementById('files-placeholder-msg');
+    const linksContainer = document.getElementById('files-links-container');
+    const locusDisplay  = document.getElementById('files-locus-display');
+    const evidenceLink  = document.getElementById('link-evidence-table');
+    const auditLink     = document.getElementById('link-audit-report');
+
+    if (plotFileKey === null || plotFileKey === undefined || plotFileKey === '') {
+        // No locus selected — show placeholder, hide links
+        placeholder.classList.remove('hidden');
+        linksContainer.classList.add('hidden');
+        evidenceLink.href = '#';
+        auditLink.href    = '#';
+        return;
+    }
+
+    // Locus selected — update links and show them
+    locusDisplay.textContent = displayName;
+    evidenceLink.href = getEvidenceTablePath(plotFileKey);
+    auditLink.href    = getAuditReportPath(plotFileKey);
+
+    placeholder.classList.add('hidden');
+    linksContainer.classList.remove('hidden');
     }
 
     // Run initialization
