@@ -60,16 +60,12 @@
     <div id="main-content">
         <div id="display-area" class="content-card">
             <h1>Chromosome 1</h1>
-            
-            <p>Lead Variant: rsXXXXXX</p>
-
-            <p>Prioritized Gene: GENE1</p>
 
             <div class="controls">
 
                 <!-- Plot Selection Dropdown -->
                 <div class="control-group">
-                    <label for="plotSelect">Select Plot:</label>
+                    <label for="plotSelect">Select Locus:</label>
                     <select id="plotSelect" onchange="displayPlot()">
                         <!-- Populated dynamically via JS -->
                     </select>
@@ -85,12 +81,8 @@
             <div class="image-container">
                 <img id="plotImage" src="" alt="Regional Association plot for Chromosome 1" style="display: none;" onerror="handleImageError()">
                 <div id="placeholder" class="placeholder-text">
-                    Select a plot to view.
+                    Select a locus to view.
                 </div>
-            </div>
-
-            <div class="file-hint">
-                Expecting PNG files named like: <code>item1_plot1.png</code>, <code>item1_plot2.png</code>, etc., located in the same folder as this HTML file.
             </div>
 
             <h2>Files</h2>
