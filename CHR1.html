@@ -1,1177 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chromosome 1 — COPD Locus Review</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chromosome 1</title>
+    <!-- Connecting the same external stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization Dashboard
+        </div>
+        
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
 
-<!-- ═══════════════════════════════════════════════════════ SIDEBAR ══ -->
-<div id="sidebar">
-  <div class="sidebar-header">
-    🧬 Agentic Gene Prioritization<br>Dashboard
-  </div>
+            <a class="nav-link"
+            href="index.html">
+            Home
+            </a>
 
-  <div class="sidebar-section">
-    <div class="sidebar-title">Overview</div>
-    <a class="nav-link" href="index.html">🏠 Home</a>
-    <a class="nav-link" href="methods.html">🔬 Methods</a>
-    <a class="nav-link" href="index.html#repository">📁 Repository Contents</a>
-  </div>
+            <a class="nav-link"
+            href="#methods"
+            onclick="loadPage('methods', this)">
+            Methods
+            </a>
 
-  <div class="sidebar-section">
-    <div class="sidebar-title">Chromosomes</div>
-    <a class="nav-link active" href="CHR1.html">CHR1</a>
-    <a class="nav-link" href="CHR2.html">CHR2</a>
-    <a class="nav-link" href="CHR3.html">CHR3</a>
-  </div>
-</div>
+            <a class="nav-link"
+            href="#repository"
+            onclick="loadPage('repository', this)">
+            Repository Contents
+            </a>
+        </div>
 
-<!-- ════════════════════════════════════════════════════ MAIN CONTENT ══ -->
-<div id="main-content">
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
 
-  <!-- ── Chromosome header + selector ───────────────────────────────── -->
-  <div class="content-card chr-header-card">
-    <h2 class="chr-title">Chromosome 1</h2>
+            <a class="nav-link"
+            href="CHR1.html">
+            CHR1
+            </a>
 
-    <div class="locus-selector-bar">
-      <div class="locus-select-wrap">
-        <label class="locus-select-label" for="locus-select">Select Locus:</label>
-        <select id="locus-select" class="locus-select"
-                onchange="switchLocus(parseInt(this.value))">
-          <!-- populated by JS -->
-        </select>
-      </div>
-      <div class="locus-nav-btns">
-        <button class="locus-nav-btn" id="btn-prev" onclick="prevLocus()">◄ Prev</button>
-        <button class="locus-nav-btn" id="btn-next" onclick="nextLocus()">Next ►</button>
-      </div>
+            <a class="nav-link"
+            href="#CHR2"
+            onclick="loadPage('CHR2', this)">
+            CHR2
+            </a>
+
+            <a class="nav-link"
+            href="#CHR3"
+            onclick="loadPage('CHR3', this)">
+            CHR3
+            </a>
+        </div>
     </div>
-  </div>
 
-  <!-- ── Regional association plot ──────────────────────────────────── -->
-  <div class="content-card plot-card" id="plot-card">
-    <div id="plot-container">
-      <p class="plot-placeholder" id="plot-placeholder">Select a locus to view.</p>
-      <img id="locus-plot-img" class="locus-plot-img" src="" alt="Regional association plot"
-           style="display:none" onerror="handlePlotError(this)">
-      <p class="plot-error" id="plot-error" style="display:none">
-        ⚠ Plot image not found — check that
-        <code id="plot-error-path"></code> exists.
-      </p>
+    <div id="main-content">
+        <div id="display-area" class="content-card">
+            <h1>Chromosome 1</h1>
+
+            <div class="controls">
+
+                <!-- Plot Selection Dropdown -->
+                <div class="control-group">
+                    <label for="plotSelect">Select Locus:</label>
+                    <select id="plotSelect" onchange="displayPlot()">
+                        <!-- Populated dynamically via JS -->
+                    </select>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="control-group">
+                    <button id="prevBtn" onclick="navigatePlot(-1)">◄ Prev</button>
+                    <button id="nextBtn" onclick="navigatePlot(1)">Next ►</button>
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img id="plotImage" src="" alt="Regional Association plot for Chromosome 1" style="display: none;" onerror="handleImageError()">
+                <div id="placeholder" class="placeholder-text">
+                    Select a locus to view.
+                </div>
+            </div>
+
+            <h2>Files</h2>
+
+            <a class="download-link" href="data/evidence_tables/locusA.md">
+            Evidence Table
+            </a><br>
+
+            <a class="download-link" href="data/audits/locusA_audit.md">
+            Audit Report
+            </a>
+        </div>
     </div>
-  </div>
 
-  <!-- ── Locus evidence section (dynamic) ───────────────────────────── -->
-  <div id="locus-evidence-section">
-    <!-- populated by renderLocusData() -->
-  </div>
-
-
-</div><!-- #main-content -->
-
-
-<!-- ══════════════════════════════════════════════════════════ SCRIPT ══ -->
 <script>
+    // Configuration of plots available for each item
+    const dataset = {
+        "chr1": [
+            { id: 1, name: "Locus 1: 106900001-107150000", filename: "plots/chr1-106900001-107150000.png" },
+            { id: 2, name: "Locus 2: 113700001-113900000", filename: "plots/chr1-113700001-113900000.png" },
+            { id: 3, name: "Locus 3: 117250001-117650000", filename: "plots/chr1-117250001-117650000.png" },
+            { id: 4, name: "Locus 4: 149850001-150150000", filename: "plots/chr1-149850001-150150000.png" },
+            { id: 5, name: "Locus 5: 154500001-154750000", filename: "plots/chr1-154500001-154750000.png" },
+            { id: 6, name: "Locus 6: 161350001-161650000", filename: "plots/chr1-161350001-161650000.png" },
+            { id: 7, name: "Locus 7: 197300001-197950000", filename: "plots/chr1-197300001-197950000.png" },
+            { id: 8, name: "Locus 8: 209950001-210400000", filename: "plots/chr1-209950001-210400000.png" },
+            { id: 9, name: "Locus 9: 218200001-218700000", filename: "plots/chr1-218200001-218700000.png" },
+            { id: 10, name: "Locus 10: 28200001-28950000", filename: "plots/chr1-28200001-28950000.png" },
+            { id: 11, name: "Locus 11: 31650001-31900000", filename: "plots/chr1-31650001-31900000.png" },
+            { id: 12, name: "Locus 12: 43300001-43850000", filename: "plots/chr1-43300001-43850000.png" },
+            { id: 13, name: "Locus 13: 65800001-66100000", filename: "plots/chr1-65800001-66100000.png" },
+            { id: 14, name: "Locus 14: 72350001-73700000", filename: "plots/chr1-72350001-73700000.png" },
+            { id: 15, name: "Locus 15: 77900001-78050000", filename: "plots/chr1-77900001-78050000.png" },
+            { id: 16, name: "Locus 16: 97750001-98250000", filename: "plots/chr1-97750001-98250000.png" }
+        ]
+    };
 
-/* ════════════════════════════════════════════════════════════════════════
-   ①  LOCUS DEFINITIONS
-   Update 'label', 'plot', 'evidenceHref', 'auditHref' for each locus.
-   Add new loci to this array and matching entries to the data objects below.
-   ════════════════════════════════════════════════════════════════════════ */
-const CHR1_LOCI = [
-  {
-    index: 0,
-    id:    'chr1-28200001-28950000',
-    label: 'Locus 1:28200001–28950000',
-    plot:  'plots/chr1-28200001-28950000.png',
-    /*evidenceHref: 'locus_chr1_28200001-28950000.html',*/
-    /*auditHref:    'audits/1_28200001-28950000_audit.md' */
-  },
-  {
-    index: 1,
-    id:    'chr1-113700001-113900000',
-    label: 'Locus 1:113700001-113900000',
-    plot:  'plots/chr1-113700001-113900000.png',
-    /*evidenceHref: 'locus_chr1_28200001-28950000.html',*/
-    /*auditHref:    'audits/1_28200001-28950000_audit.md' */
-  },
-];
+    const plotSelect = document.getElementById('plotSelect');
+    const plotImage = document.getElementById('plotImage');
+    const placeholder = document.getElementById('placeholder');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
 
-
-/* ════════════════════════════════════════════════════════════════════════
-   ②  LOCUS METADATA
-   ════════════════════════════════════════════════════════════════════════ */
-const LOCUS_META = {};
-
-LOCUS_META['chr1-28200001-28950000'] = {
-  chr:             '1',
-  start:           28200001,
-  end:             28950000,
-  nearestGene:     'PHACTR4',
-  leadVariant:     'rs61783851',
-  leadVariantPos:  '1:28441880 (GRCh38)',
-  leadVariantType: 'intron_variant in PHACTR4',
-  leadVariantPIP:  '0.0423',
-  credibleSetSize: 159,
-  missenseVariant: 'rs61785974',
-  missensePos:     '1:28473868, PHACTR4, MODERATE impact',
-  missensePIP:     '0.028',
-  prioritizedGenes: {
-    Nearest: 'PHACTR4', MAGMA: 'RCC1', PoPS: 'RCC1',
-    ABC:     'SNHG3',   FLAMES: 'NA'
-  },
-  credibleSetGenes: [
-    'PHACTR4','RCC1','RAB42','TAF12',
-    'OPRD1','TRNAU1AP','GMEB1','TAF12-DT'
-  ],
-  topGene:     'PHACTR4',
-  confidence:  'LOW',
-  noLitGenes:  'MED18, DNAJC8, ATP5IF1, TAF12-DT — no lung/COPD/immune-relevant ' +
-               'literature identified. TAF12-DT has zero PubMed-indexed literature at all. ' +
-               'Noted here for completeness; these genes have no evidence-table rows.',
-  auditFile:   'audits/1_28200001-28950000_audit.md'
-};
-
-
-/* ════════════════════════════════════════════════════════════════════════
-   ③  EVIDENCE ROWS
-   ════════════════════════════════════════════════════════════════════════ */
-const EVIDENCE_ROWS = {};
-
-EVIDENCE_ROWS['chr1-28200001-28950000'] = [
-  {
-    gene: 'PHACTR4', geneNote: '',
-    type: 'Genetics (statgen, pleiotropy)',
-    claim: 'TWAS found elevated RCC1 expression associated with shorter time to ' +
-           'biochemical recurrence and higher PHACTR4 expression associated with higher ' +
-           'Gleason grade in prostate cancer \u2014 this chr1 locus is pleiotropic for ' +
-           'an unrelated (prostate cancer) phenotype',
-    citation: 'Fu et al. 2026, Eur J Hum Genet',
-    pmid: '42323493', doi: '10.1038/s41431-026-02147-1',
-    verdict: 'WEAKENED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'PHACTR4', geneNote: '',
-    type: 'Genetics (statgen, pleiotropy)',
-    claim: 'Immune-cell-eQTL MR/colocalization prioritized PHACTR4 (of 21 genes) as a ' +
-           'candidate causal gene for type 1 diabetes risk',
-    citation: 'Sklar et al. 2025, BMC Med',
-    pmid: '41299435', doi: '10.1186/s12916-025-04527-8',
-    verdict: 'WEAKENED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'PHACTR4', geneNote: '',
-    type: 'Structural/developmental (non-pulmonary)',
-    claim: 'Mouse \u201chumdy\u201d Phactr4 PP1-binding missense mutant fails neural tube ' +
-           'and optic fissure closure via PP1-Rb-E2F1 dysregulation',
-    citation: 'Kim et al. 2007, Dev Cell',
-    pmid: '17609112', doi: '10.1016/j.devcel.2007.04.018',
-    verdict: 'WEAKENED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'PHACTR4', geneNote: '',
-    type: 'Structural/developmental (non-pulmonary)',
-    claim: 'De novo damaging missense variants in the RPEL3 domain of PHACTR4 (same ' +
-           'domain region as, but distinct from, credible-set variant rs61785974) cause ' +
-           'a multi-system congenital-anomaly syndrome (craniofacial, ophthalmologic, ' +
-           'renal, neurodevelopmental); no pulmonary phenotype reported',
-    citation: 'Torti et al. 2025, HGG Adv',
-    pmid: '40012205', doi: '10.1016/j.xhgg.2025.100421',
-    verdict: 'WEAKENED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'PHACTR4', geneNote: '',
-    type: 'Structural/mechanistic (non-pulmonary)',
-    claim: 'PHACTR4 attenuates IL-6-induced STAT3 phosphorylation, acting as a tumor ' +
-           'suppressor in hepatocellular carcinoma',
-    citation: 'Cao et al. 2016, Eur Rev Med Pharmacol Sci',
-    pmid: '27608898', doi: '',
-    verdict: 'WEAKENED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'PHACTR4', geneNote: '',
-    type: 'Structural/mechanistic (editorial, non-pulmonary)',
-    claim: 'Editorial commentary on the PHACTR4-STAT3 hepatocellular carcinoma mechanism; ' +
-           'no new data',
-    citation: 'Li Volti et al. 2016, Eur Rev Med Pharmacol Sci',
-    pmid: '27775809', doi: '',
-    verdict: 'WEAKENED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'PHACTR4', geneNote: '',
-    type: 'Immune (biomarker, non-pulmonary)',
-    claim: 'PHACTR4-containing circulating immune complexes distinguished lupus nephritis ' +
-           'patients from healthy controls (AUC 0.99)',
-    citation: 'Tang et al. 2022, Front Immunol',
-    pmid: '35419005', doi: '10.3389/fimmu.2022.850015',
-    verdict: 'WEAKENED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'RCC1', geneNote: '',
-    type: 'Genetics (statgen, pleiotropy)',
-    claim: 'Same prostate-cancer TWAS as above \u2014 elevated RCC1 expression associated ' +
-           'with shorter time to biochemical recurrence in prostate cancer',
-    citation: 'Fu et al. 2026, Eur J Hum Genet',
-    pmid: '42323493', doi: '10.1038/s41431-026-02147-1',
-    verdict: 'CONTESTED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'RCC1', geneNote: '',
-    type: 'Structural (housekeeping, non-pulmonary)',
-    claim: 'Structural characterization of RCC1 bound to nucleosomes and Ran; RCC1 ' +
-           'concentrates at chromatin to catalyze RanGDP-to-RanGTP exchange',
-    citation: 'Huang et al. 2024, Biochemistry',
-    pmid: '38501608', doi: '10.1021/acs.biochem.3c00724',
-    verdict: 'CONTESTED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'RCC1', geneNote: '',
-    type: 'Structural (housekeeping, non-pulmonary)',
-    claim: 'Nup50-stimulated RCC1 activity is required for nuclear pore complex ' +
-           'reassembly after mitosis',
-    citation: 'Holzer et al. 2021, EMBO J',
-    pmid: '34725842', doi: '10.15252/embj.2021108788',
-    verdict: 'CONTESTED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'RCC1', geneNote: '',
-    type: 'Structural (housekeeping, non-pulmonary)',
-    claim: 'RanBP1 regulates RCC1 dynamics during mitosis to control spindle assembly ' +
-           'factor localization',
-    citation: 'Yau et al. 2020, Cell Cycle',
-    pmid: '32594833', doi: '10.1080/15384101.2020.1782036',
-    verdict: 'CONTESTED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'RCC1', geneNote: '',
-    type: 'Structural (housekeeping, non-pulmonary)',
-    claim: 'Heterochromatin loss disrupts the RCC1-dependent Ran gradient, impairing ' +
-           'nuclear import of large proteins (e.g., ATM) and DNA-damage signaling',
-    citation: 'Dworak et al. 2018, Aging Cell',
-    pmid: '30565836', doi: '10.1111/acel.12851',
-    verdict: 'CONTESTED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'RCC1', geneNote: '',
-    type: 'Structural/mechanistic (cancer, non-pulmonary)',
-    claim: 'RCC1 overexpression is an independent prognostic marker for worse survival ' +
-           'in colorectal liver metastases',
-    citation: 'Deng et al. 2021, Pathol Oncol Res',
-    pmid: '34924821', doi: '10.3389/pore.2021.1610077',
-    verdict: 'CONTESTED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'OPRD1', geneNote: '',
-    type: 'Genetics (statgen, smoking-mediation hypothesis)',
-    claim: 'Candidate-gene study of three OPRD1 intron-1 variants found NO significant ' +
-           'association with nicotine dependence in an Iranian cohort ' +
-           '(224 smokers vs 202 controls)',
-    citation: 'Sharafshah et al. 2021, J Mol Neurosci',
-    pmid: '33506435', doi: '10.1007/s12031-020-01757-8',
-    verdict: 'CONTESTED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'OPRD1', geneNote: '',
-    type: 'Genetics (statgen, smoking-mediation hypothesis)',
-    claim: 'In a ~40,000-person study, OPRD1 (unlike OPRM1) showed NO significant ' +
-           'genetic signal for persistent opioid use after surgery',
-    citation: 'Annis et al. 2024, Genet Epidemiol',
-    pmid: '39385445', doi: '10.1002/gepi.22588',
-    verdict: 'CONTESTED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'OPRD1', geneNote: '',
-    type: 'Immune (general pharmacology, not lung- or OPRD1-specific)',
-    claim: 'Neutrophils, macrophages, and CD4/CD8 T lymphocytes express mu-, delta-, ' +
-           'and kappa-opioid receptors, and opioid-receptor activation modulates ' +
-           'proinflammatory cytokine and ROS production by these cells',
-    citation: 'Gusakova et al. 2026, J Biomed Res',
-    pmid: '41194441', doi: '10.7555/JBR.39.20250328',
-    verdict: 'CONTESTED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'SNHG3', geneNote: '',
-    type: 'Structural/immune (acute, not chronic, lung injury)',
-    claim: 'SNHG3 is upregulated in LPS-induced acute lung injury (mouse/endothelial ' +
-           'models) and septic patients\u2019 serum; knockdown reduced lung inflammation ' +
-           '(IL-1\u03b2, IL-6), improved tight-junction proteins, and reduced apoptosis ' +
-           'via a SNHG3-miR-186-5p-Wnt/\u03b2-catenin axis',
-    citation: 'Wu et al. 2026, Biochem Pharmacol',
-    pmid: '41571208', doi: '10.1016/j.bcp.2026.117723',
-    verdict: 'CONTESTED', verdiQual: '', date: '2026-09-11'
-  },
-  {
-    gene: 'RAB42', geneNote: '',
-    type: 'Structural (oncology, non-pulmonary)',
-    claim: 'RAB42 overexpression is an independent adverse prognostic factor in glioma, ' +
-           'linked to VEGF signaling activation',
-    citation: 'Liu et al. 2021, Front Oncol',
-    pmid: '34912698', doi: '10.3389/fonc.2021.657029',
-    verdict: 'HOLDS', verdiQual: 'non-candidate', date: '2026-09-11'
-  },
-  {
-    gene: 'RAB42', geneNote: '',
-    type: 'Immune (glioma tumor-microenvironment context, non-pulmonary)',
-    claim: 'RAB42 identified as one of several CAF-risk-model genes in glioma associated ' +
-           'with M2 macrophage infiltration in the tumor microenvironment',
-    citation: 'Zhang et al. 2023, Am J Physiol Cell Physiol',
-    pmid: '37982173', doi: '10.1152/ajpcell.00234.2023',
-    verdict: 'HOLDS', verdiQual: 'non-candidate', date: '2026-09-11'
-  },
-  {
-    gene: 'RAB42', geneNote: '',
-    type: 'Structural (neurodegeneration, off-target)',
-    claim: 'Rab42 downregulation observed in a brain transcriptional signature in a ' +
-           'Parkinson\u2019s-disease mouse model',
-    citation: 'Gispert et al. 2014, Hum Mol Genet',
-    pmid: '25296918', doi: '10.1093/hmg/ddu520',
-    verdict: 'HOLDS', verdiQual: 'non-candidate', date: '2026-09-11'
-  },
-  {
-    gene: 'TAF12', geneNote: '',
-    type: 'Structural (basic transcription-complex biology, non-human, non-pulmonary)',
-    claim: 'TAF12 assembles co-translationally with TAF4 via its histone-fold domain to ' +
-           'form TFIID, distinct from the paralogous TAF12L-Ada1 SAGA assembly ' +
-           '(studied in Candida albicans)',
-    citation: 'Bhardwaj et al. 2026, J Biol Chem',
-    pmid: '41651412', doi: '10.1016/j.jbc.2026.111239',
-    verdict: 'HOLDS', verdiQual: 'non-candidate', date: '2026-09-11'
-  },
-  {
-    gene: 'TRNAU1AP', geneNote: '',
-    type: 'Structural/developmental (general cell biology, non-pulmonary)',
-    claim: 'Trnau1ap knockdown reduces selenoprotein expression and inhibits ' +
-           'proliferation/migration of embryonic, trophoblast, and placental cell ' +
-           'lines via PI3K/Akt',
-    citation: 'Hu et al. 2018, Biochem Biophys Res Commun',
-    pmid: '29758194', doi: '10.1016/j.bbrc.2018.05.065',
-    verdict: 'HOLDS', verdiQual: 'non-candidate', date: '2026-09-11'
-  },
-  {
-    gene: 'TRNAU1AP', geneNote: '',
-    type: 'Structural (cardiac, non-pulmonary)',
-    claim: 'Trnau1ap regulates selenoprotein expression and proliferation/apoptosis ' +
-           'in cardiomyocyte-like H9c2 cells',
-    citation: 'Li et al. 2016, Mol Med Rep',
-    pmid: '28101579', doi: '10.3892/mmr.2016.6099',
-    verdict: 'HOLDS', verdiQual: 'non-candidate', date: '2026-09-11'
-  },
-  {
-    gene: 'TRNAU1AP', geneNote: '',
-    type: 'Structural (mouse model, non-pulmonary)',
-    claim: 'Conditional hepatocyte-/neuron-specific Trnau1ap domain deletions in mice ' +
-           'showed largely preserved selenoprotein expression; whole-body deletion of a ' +
-           'different exon pair was embryonic lethal; no lung phenotype assessed',
-    citation: 'Mahdi et al. 2015, PLoS One',
-    pmid: '26043259', doi: '10.1371/journal.pone.0127349',
-    verdict: 'HOLDS', verdiQual: 'non-candidate', date: '2026-09-11'
-  },
-  {
-    gene: 'GMEB1', geneNote: '',
-    type: 'Structural/mechanistic (cancer, non-pulmonary)',
-    claim: 'GMEB1 transcriptionally activates YAP1 to promote hepatocellular carcinoma ' +
-           'proliferation/invasion',
-    citation: 'Chen et al. 2023, World J Gastrointest Oncol',
-    pmid: '37389116', doi: '10.4251/wjgo.v15.i6.988',
-    verdict: 'HOLDS', verdiQual: 'non-candidate', date: '2026-09-11'
-  },
-  {
-    gene: 'GMEB1', geneNote: '',
-    type: 'Immune (mechanistic, general, non-pulmonary)',
-    claim: 'TRAF3 (a TNF-receptor-family immune-signaling adaptor) interacts with and ' +
-           'enhances the anti-apoptotic activity of GMEB1 in HeLa/B-cell-derived systems',
-    citation: 'Kotsaris et al. 2020, J Biol Res (Thessalon)',
-    pmid: '32514408', doi: '10.1186/s40709-020-00117-2',
-    verdict: 'HOLDS', verdiQual: 'non-candidate', date: '2026-09-11'
-  },
-  {
-    gene: 'GMEB1', geneNote: '',
-    type: 'Structural (metabolic, off-target)',
-    claim: 'circGlis3 promotes GMEB1 degradation via MIB2 in a type 2 diabetes ' +
-           'beta-cell/islet-endothelial model',
-    citation: 'Xiong et al. 2022, Diabetologia',
-    pmid: '34751796', doi: '10.1007/s00125-021-05591-4',
-    verdict: 'HOLDS', verdiQual: 'non-candidate', date: '2026-09-11'
-  },
-  {
-    gene: 'SESN2',
-    geneNote: 'not credible-set/MAGMA/PoPS/ABC-flagged; ~160kb outside fine-mapped span',
-    type: 'Structural (causal mouse model + human tissue)',
-    claim: 'Sesn2 represses PDGFR\u03b2 signaling; Sesn2-inactivating mutation in mice ' +
-           'PREVENTED cigarette-smoke-induced emphysema (superoxide/PDGFR\u03b2 ' +
-           'derepression); SESN2 overexpressed (PDGFR\u03b2 downregulated) in ' +
-           'emphysematous human COPD lungs',
-    citation: 'Heidler et al. 2013, Dis Model Mech',
-    pmid: '24046361', doi: '10.1242/dmm.013482',
-    verdict: 'CONTESTED',
-    verdiQual: 'for this locus\u2019s causal-gene assignment; biology itself not in question',
-    date: '2026-09-11'
-  },
-  {
-    gene: 'SESN2', geneNote: '',
-    type: 'Structural (human tissue)',
-    claim: 'In a 124-subject study, airway-tissue and serum sestrin2 (and MMP9) were ' +
-           'significantly elevated in COPD versus controls and correlated with CT ' +
-           'airway-remodeling parameters',
-    citation: 'Zhang et al. 2020, BMC Pulm Med',
-    pmid: '33198738', doi: '10.1186/s12890-020-01329-x',
-    verdict: 'CONTESTED', verdiQual: 'locus linkage', date: '2026-09-11'
-  },
-  {
-    gene: 'SESN2', geneNote: '',
-    type: 'Structural (mouse comorbidity model)',
-    claim: 'In a cigarette-smoke-induced COPD mouse model, hippocampal sestrin2 protects ' +
-           'against ferroptosis and cognitive impairment (a COPD comorbidity, not primary ' +
-           'airway pathology)',
-    citation: 'Zhang et al. 2025, Redox Biol',
-    pmid: '40466570', doi: '10.1016/j.redox.2025.103673',
-    verdict: 'CONTESTED', verdiQual: 'locus linkage', date: '2026-09-11'
-  },
-  {
-    gene: 'SESN2', geneNote: '',
-    type: 'Structural (review)',
-    claim: 'Review describing sestrin2\u2019s protective, ROS-limiting role ' +
-           '(AMPK/mTOR, Nrf2) across hypoxia-related diseases, explicitly including COPD',
-    citation: 'Che et al. 2021, Redox Rep',
-    pmid: '34225572', doi: '10.1080/13510002.2021.1948774',
-    verdict: 'CONTESTED', verdiQual: 'locus linkage', date: '2026-09-11'
-  },
-  {
-    gene: 'SESN2', geneNote: '',
-    type: 'Structural/immune (review)',
-    claim: 'Broad review listing SESN2 among organelle-quality-control/autophagy ' +
-           'regulators relevant to inflammatory diseases including COPD',
-    citation: 'Yao et al. 2020, Autophagy',
-    pmid: '32048886', doi: '10.1080/15548627.2020.1725377',
-    verdict: 'CONTESTED', verdiQual: 'locus linkage', date: '2026-09-11'
-  },
-  {
-    gene: 'YTHDF2', geneNote: 'not credible-set/MAGMA/PoPS/ABC-flagged',
-    type: 'Structural (human tissue + cigarette-smoke model)',
-    claim: 'METTL3-mediated m6A methylation of FSP1 mRNA, read by YTHDF2, reduces FSP1 ' +
-           'expression, promoting ferroptosis and emphysema in human COPD lung tissue and ' +
-           'a cigarette-smoke-exposure model; FSP1 overexpression alleviated emphysema',
-    citation: 'Yang et al. 2025, Am J Respir Cell Mol Biol',
-    pmid: '39453438', doi: '10.1165/rcmb.2023-0467OC',
-    verdict: 'CONTESTED',
-    verdiQual: 'for this locus\u2019s causal-gene assignment; biology itself not in question',
-    date: '2026-09-11'
-  },
-  {
-    gene: 'YTHDF2', geneNote: '',
-    type: 'Immune/structural (bronchial epithelial cell model)',
-    claim: 'Cigarette-smoke-extract exposure suppresses the anti-inflammatory ' +
-           'deubiquitinase OTUD1 via METTL3-mediated m6A methylation read by YTHDF2, ' +
-           'increasing IL-1\u03b2/IL-18 and pyroptosis',
-    citation: 'Gao et al. 2025, Mol Med Rep',
-    pmid: '40417884', doi: '10.3892/mmr.2025.13571',
-    verdict: 'CONTESTED', verdiQual: 'locus linkage', date: '2026-09-11'
-  },
-  {
-    gene: 'YTHDF2', geneNote: '',
-    type: 'Structural (review, indirect)',
-    claim: 'Review noting YTHDF2 SUMOylation is relevant in cancer contexts, and ' +
-           'separately (a different protein, HDAC2) SUMOylation is relevant to COPD',
-    citation: 'Zheng et al. 2023, Mol Med (Cambridge)',
-    pmid: '37670258', doi: '10.1186/s10020-023-00719-1',
-    verdict: 'CONTESTED',
-    verdiQual: 'locus linkage; also not a direct YTHDF2-COPD claim',
-    date: '2026-09-11'
-  },
-  {
-    gene: 'EPB41', geneNote: 'region edge; not prioritized',
-    type: 'Structural (lung cancer, not COPD)',
-    claim: 'EPB41 inhibits Wnt/\u03b2-catenin signaling and NSCLC proliferation/invasion ' +
-           'by sequestering ALDOC; low tumor EPB41 associated with worse NSCLC prognosis',
-    citation: 'Yuan et al. 2020, Cancer Lett',
-    pmid: '33242559', doi: '10.1016/j.canlet.2020.11.024',
-    verdict: 'HOLDS', verdiQual: 'non-candidate', date: '2026-09-11'
-  },
-  {
-    gene: 'EPB41', geneNote: '',
-    type: 'Structural (lung cancer, not COPD)',
-    claim: 'A circular-RNA isoform of EPB41 promotes NSCLC stemness/invasion via ' +
-           'miR-486-3p/eIF5A',
-    citation: 'Jin et al. 2022, Cancer Cell Int',
-    pmid: '35725615', doi: '10.1186/s12935-022-02618-7',
-    verdict: 'HOLDS', verdiQual: 'non-candidate', date: '2026-09-11'
-  },
-  {
-    gene: 'EPB41', geneNote: '',
-    type: 'Structural (cardiac, off-target)',
-    claim: '4.1R-knockout mice show altered cardiac repolarization and calcium handling',
-    citation: 'Stagg et al. 2008, Circ Res',
-    pmid: '18787192', doi: '10.1161/CIRCRESAHA.108.176461',
-    verdict: 'HOLDS', verdiQual: 'non-candidate', date: '2026-09-11'
-  },
-  {
-    gene: 'EPB41', geneNote: '',
-    type: 'Structural/immune (lung adenocarcinoma, not COPD)',
-    claim: 'EPB41 identified as one of five prognostic genes in a lung adenocarcinoma ' +
-           'RNA-seq risk model associated with differential immune-cell (including M2 ' +
-           'macrophage) infiltration',
-    citation: 'Li et al. 2026, Discov Oncol',
-    pmid: '41787185', doi: '10.1007/s12672-026-04742-6',
-    verdict: 'HOLDS', verdiQual: 'non-candidate', date: '2026-09-11'
-  },
-  {
-    gene: '(background)', geneNote: 'not locus-specific',
-    type: 'Genetics (background reference; relevance to this specific locus unconfirmed)',
-    claim: 'Major lung-function GWAS meta-analysis reporting genome-wide-significant ' +
-           'signals for FEV1/FEV1-FVC; whether this specific chr1:28.2\u201328.95Mb ' +
-           'locus is among its reported signals could not be confirmed by abstract-level search',
-    citation: 'Shrine et al. 2019, Nat Genet',
-    pmid: '30804560', doi: '10.1038/s41588-018-0321-7',
-    verdict: 'N/A',
-    verdiQual: 'background only, unresolved locus-overlap question flagged for follow-up',
-    date: '2026-09-11'
-  }
-];
-
-
-/* ════════════════════════════════════════════════════════════════════════
-   ④  OPEN TARGETS DATA
-   ════════════════════════════════════════════════════════════════════════ */
-const OT_DATA = {};
-
-OT_DATA['chr1-28200001-28950000'] = [
-  {
-    gene: 'PHACTR4', copdScore: null, copd_ga: null,
-    coloc: 'Not resolved', constraint: '2',
-    notes: 'Smoking initiation (EFO_0005670) present, weak: score 0.037, ' +
-           'genetic_association 0.062. 188 associated diseases total; COPD absent.'
-  },
-  {
-    gene: 'RCC1', copdScore: null, copd_ga: null,
-    coloc: 'Not resolved', constraint: '0',
-    notes: 'No smoking or lung-function evidence at all; top hits are myasthenia gravis ' +
-           'and literature-mined cancer associations. 274 diseases total; COPD absent.'
-  },
-  {
-    gene: 'SNHG3', copdScore: null, copd_ga: null,
-    coloc: 'Not resolved', constraint: 'NC',
-    notes: 'No smoking or COPD evidence. 119 diseases; almost entirely literature-mined ' +
-           'cancer associations. Non-coding \u2014 no constraint data.'
-  },
-  {
-    gene: 'RAB42', copdScore: null, copd_ga: null,
-    coloc: 'Not resolved', constraint: '5',
-    notes: 'Smoking initiation present, weak: score 0.070, genetic_association 0.116. ' +
-           '52 diseases; COPD absent.'
-  },
-  {
-    gene: 'TAF12', copdScore: null, copd_ga: null,
-    coloc: 'Not resolved', constraint: '0',
-    notes: 'Smoking initiation present, weak: score 0.058, genetic_association 0.095. ' +
-           '43 diseases; COPD absent.'
-  },
-  {
-    gene: 'OPRD1', copdScore: 0.277, copd_ga: 0.453,
-    coloc: 'Not resolved', constraint: '4',
-    notes: 'Only gene at locus with a direct COPD score. Extensive nicotine-dependence/' +
-           'substance-use/pain profile: nicotine dependence genetic_association 0.450; ' +
-           'substance-related disorder 0.624.'
-  },
-  {
-    gene: 'TRNAU1AP', copdScore: null, copd_ga: null,
-    coloc: 'Not resolved', constraint: '3',
-    notes: 'Smoking initiation present, very weak: score 0.020, genetic_association 0.033. ' +
-           '25 diseases; COPD absent.'
-  },
-  {
-    gene: 'GMEB1', copdScore: null, copd_ga: null,
-    coloc: 'Not resolved', constraint: '0',
-    notes: 'Smoking initiation present, weak: score 0.025, genetic_association 0.041; ' +
-           'nonspecific \u201cRespiratory insufficiency\u201d HPO term present ' +
-           '(genetic_association 0.267). 35 diseases; COPD absent.'
-  },
-  {
-    gene: 'TAF12-DT', copdScore: null, copd_ga: null,
-    coloc: 'Not resolved', constraint: 'NC',
-    notes: 'Only 2 diseases total, both rna_expression-only, no genetic evidence. ' +
-           'Non-coding \u2014 no constraint data.'
-  }
-];
-
-const OT_FOOTER = {};
-OT_FOOTER['chr1-28200001-28950000'] =
-  'No gene at this locus has any Open Targets FEV1, FEV1/FVC, \u201clung function,\u201d or ' +
-  'emphysema evidence. Locus-specific L2G/colocalization scores could not be resolved within ' +
-  'tool budget (schema introspection exceeded output-size limits; no per-disease filter on ' +
-  'associatedDiseases). SESN2, YTHDF2, EPB41, MED18, DNAJC8, and ATP5IF1 were not part of the ' +
-  'pipeline candidate-gene list and were not queried in Open Targets.';
-
-
-/* ════════════════════════════════════════════════════════════════════════
-   ⑤  SYNTHESIS DATA
-   ════════════════════════════════════════════════════════════════════════ */
-const SYNTHESIS = {};
-
-SYNTHESIS['chr1-28200001-28950000'] = {
-  topGene:    'PHACTR4',
-  confidence: 'LOW',
-  summary:
-    'This locus\u2019s causal gene assignment is genuinely unresolved, and this pick ' +
-    'should be read as the least-bad default rather than a confident call. Three genes ' +
-    'have some claim to priority, and none is well supported:',
-  candidates: [
-    {
-      gene:  'PHACTR4',
-      role:  'primary',
-      label: 'Nearest gene — default positional candidate',
-      desc:
-        'Contains by far the largest share of credible-set variants (the vast majority ' +
-        'of the 159 credible-set variants, including lead variant rs61783851 and the ' +
-        'sole missense variant rs61785974, fall within PHACTR4\u2019s introns/UTR). ' +
-        'However, every VERIFIED literature finding is non-pulmonary and broadly ' +
-        'pleiotropic (prostate cancer TWAS, type 1 diabetes immune-cell MR, neural ' +
-        'tube/eye developmental biology, a multi-system congenital syndrome explicitly ' +
-        'without a pulmonary phenotype, hepatocellular carcinoma, lupus nephritis ' +
-        'biomarker) \u2014 the skeptic verdict for every PHACTR4 row is ' +
-        '<strong>WEAKENED</strong>. Open Targets shows only a weak smoking-initiation ' +
-        'signal and no COPD or lung-function evidence.'
-    },
-    {
-      gene:  'RCC1',
-      role:  'runner-up',
-      label: 'Runner-up — MAGMA + PoPS joint priority; most LOF-constrained at locus',
-      desc:
-        'Jointly prioritized by two independent statistical methods but has zero ' +
-        'disease-relevant, lung-relevant, or immune-relevant literature ' +
-        '(skeptic verdict: <strong>CONTESTED</strong>). RCC1\u2019s essential ' +
-        'nucleocytoplasmic-transport housekeeping role is exactly the profile MAGMA/PoPS ' +
-        'can falsely prioritize at gene-dense loci (eight genes packed into ~750kb). ' +
-        'The same prostate-cancer TWAS flagging PHACTR4 also flags RCC1 \u2014 ' +
-        'supporting a pleiotropic regulatory-hub alternative over a COPD-specific mechanism.'
-    },
-    {
-      gene:  'OPRD1',
-      role:  'second-runner',
-      label: 'Second runner-up — smoking-mediation hypothesis; only direct Open Targets COPD score',
-      desc:
-        'OPRD1 is the only gene with a direct Open Targets COPD genetic-association ' +
-        'score (0.277), consistent with a smoking-mediated hypothesis. However, the two ' +
-        'PubMed-indexed genetic studies directly testing the relevant hypothesis (OPRD1 ' +
-        'variants and nicotine dependence / persistent opioid use) are both ' +
-        '<strong>null</strong> (skeptic verdict: <strong>CONTESTED</strong>), so this ' +
-        'mediation hypothesis rests on an unverified database aggregate score rather ' +
-        'than replicated genetics.'
+    // Initialize dropdowns on load
+    function init() {
+        updatePlotOptions();
+        
+        // Add keyboard arrow key navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') navigatePlot(-1);
+            if (e.key === 'ArrowRight') navigatePlot(1);
+        });
     }
-  ],
-  resolvers: [
-    'A lung-tissue or airway-epithelium eQTL colocalization analysis specifically for ' +
-    'PHACTR4, RCC1, and OPRD1 at this locus (Open Targets locus-specific L2G/coloc data ' +
-    'could not be resolved \u2014 see method note).',
-    'Functional characterization of the credible-set missense variant rs61785974 itself ' +
-    '(existing RPEL3-domain literature concerns different variants and a non-pulmonary phenotype).',
-    'Confirmation of whether this locus is among the reported signals in Shrine et al. 2019 ' +
-    '(PMID 30804560) \u2014 concordance/discordance with spirometric traits is directly ' +
-    'load-bearing for distinguishing pulmonary-biology from smoking-behavior-mediated mechanisms.',
-    'A larger or independently fine-mapped credible set \u2014 the current 159-variant set has ' +
-    'a maximum PIP of 0.042, meaning fine-mapping has not meaningfully narrowed the causal gene, ' +
-    'capping confidence regardless of downstream literature.'
-  ],
-  caveat:
-    'SESN2 and YTHDF2 have the most compelling COPD-specific mechanistic literature found ' +
-    'anywhere in this locus review (causal mouse emphysema data for SESN2; direct mediation of ' +
-    'two independent cigarette-smoke-induced COPD pathways for YTHDF2), but neither has any ' +
-    'credible-set variant, MAGMA/PoPS/ABC flag, or other statistical connection to this GWAS ' +
-    'signal (SESN2 sits ~160kb outside the fine-mapped span). These should <strong>NOT</strong> ' +
-    'be read as supported causal-gene candidates for this locus\u2019s GWAS signal, despite ' +
-    'their strong general COPD biology \u2014 see audit file for full reasoning.'
-};
 
+    // Populate plot dropdown based on selected item
+    function updatePlotOptions() {
+        const plots = dataset["chr1"] || [];
+        
+        plotSelect.innerHTML = '';
+        plots.forEach((plot, index) => {
+            const option = document.createElement('option');
+            option.value = index;
+            option.textContent = plot.name;
+            plotSelect.appendChild(option);
+        });
 
-/* ════════════════════════════════════════════════════════════════════════
-   ⑥  STATE
-   ════════════════════════════════════════════════════════════════════════ */
-let currentLocusIndex = 0;
-let evSortCol = -1, evSortAsc = true;
-let evFiltered  = [];
-
-
-/* ════════════════════════════════════════════════════════════════════════
-   ⑦  NAVIGATION
-   ════════════════════════════════════════════════════════════════════════ */
-function buildDropdown() {
-  const sel = document.getElementById('locus-select');
-  CHR1_LOCI.forEach(l => {
-    const opt = document.createElement('option');
-    opt.value       = l.index;
-    opt.textContent = l.label;
-    sel.appendChild(opt);
-  });
-}
-
-function switchLocus(index) {
-  currentLocusIndex = index;
-  const locus = CHR1_LOCI[index];
-
-  /* sync dropdown */
-  document.getElementById('locus-select').value = index;
-
-  /* update prev/next button states */
-  document.getElementById('btn-prev').disabled = (index === 0);
-  document.getElementById('btn-next').disabled = (index === CHR1_LOCI.length - 1);
-
-  /* update plot */
-  const img         = document.getElementById('locus-plot-img');
-  const placeholder = document.getElementById('plot-placeholder');
-  const plotErr     = document.getElementById('plot-error');
-  placeholder.style.display = 'none';
-  plotErr.style.display     = 'none';
-  img.style.display         = 'block';
-  img.src                   = locus.plot;
-  img.alt                   = `Regional association plot — ${locus.label}`;
-  document.getElementById('plot-error-path').textContent = locus.plot;
-
-
-  /* reset filter/sort state then render evidence */
-  evSortCol = -1; evSortAsc = true;
-  renderLocusData(locus.id);
-}
-
-function prevLocus() {
-  if (currentLocusIndex > 0) switchLocus(currentLocusIndex - 1);
-}
-function nextLocus() {
-  if (currentLocusIndex < CHR1_LOCI.length - 1) switchLocus(currentLocusIndex + 1);
-}
-
-function handlePlotError(img) {
-  img.style.display = 'none';
-  document.getElementById('plot-error').style.display = 'block';
-}
-
-
-/* ════════════════════════════════════════════════════════════════════════
-   ⑧  LOCUS DATA RENDERER
-   ════════════════════════════════════════════════════════════════════════ */
-function renderLocusData(locusId) {
-  const section = document.getElementById('locus-evidence-section');
-  const meta    = LOCUS_META[locusId];
-
-  if (!meta) {
-    section.innerHTML = `
-      <div class="content-card ev-pending-card">
-        <div class="ev-pending-icon">🔬</div>
-        <div class="ev-pending-title">Evidence data not yet loaded for this locus</div>
-        <p class="ev-pending-note">
-          Populate <code>LOCUS_META</code>, <code>EVIDENCE_ROWS</code>,
-          <code>OT_DATA</code>, and <code>SYNTHESIS</code> objects in
-          <code>CHR1.html</code> with the data for locus
-          <strong>${locusId}</strong> to display the evidence table here.
-        </p>
-      </div>`;
-    return;
-  }
-
-  section.innerHTML =
-    buildMetaCard(locusId, meta) +
-    buildEvidenceCard(locusId) +
-    buildOTCard(locusId) +
-    buildSynthesisCard(locusId);
-
-  /* initialise filters for newly rendered table */
-  buildGeneFilter(locusId);
-  evFiltered = [...(EVIDENCE_ROWS[locusId] || [])];
-  renderEvidenceRows(locusId);
-}
-
-
-/* ── Metadata card ──────────────────────────────────────────────────── */
-function buildMetaCard(locusId, m) {
-  const prioHtml = Object.entries(m.prioritizedGenes)
-    .map(([k,v]) => `<strong>${k}:</strong> ${v}`).join(' &nbsp;·&nbsp; ');
-
-  const geneHtml = m.credibleSetGenes
-    .map(g => `<span class="ev-gene-pill">${esc(g)}</span>`).join('');
-
-  return `
-  <div class="content-card ev-meta-card">
-    <h3 class="ev-section-title">
-      🧬 ${esc(m.chr)}:${m.start.toLocaleString()}–${m.end.toLocaleString()}
-      &nbsp;&nbsp;
-      <span class="ev-confidence-badge ev-conf-${m.confidence.toLowerCase()}">
-        ${esc(m.confidence)} confidence
-      </span>
-    </h3>
-
-    <div class="ev-meta-grid">
-      <div class="ev-meta-block">
-        <div class="ev-meta-label">Lead variant</div>
-        <div class="ev-meta-value">
-          ${esc(m.leadVariant)} &nbsp;|&nbsp; ${esc(m.leadVariantPos)}
-          &nbsp;|&nbsp; <em>${esc(m.leadVariantType)}</em>
-          &nbsp;|&nbsp; PIP = ${esc(m.leadVariantPIP)}
-        </div>
-      </div>
-      <div class="ev-meta-block">
-        <div class="ev-meta-label">Credible set</div>
-        <div class="ev-meta-value">
-          ${esc(String(m.credibleSetSize))}-variant ABF set &nbsp;|&nbsp;
-          max PIP ${esc(m.leadVariantPIP)} (no variant &ge;5% PIP)
-        </div>
-      </div>
-      <div class="ev-meta-block">
-        <div class="ev-meta-label">Missense variant</div>
-        <div class="ev-meta-value">
-          ${esc(m.missenseVariant)} &nbsp;|&nbsp; ${esc(m.missensePos)}
-          &nbsp;|&nbsp; PIP = ${esc(m.missensePIP)}
-        </div>
-      </div>
-      <div class="ev-meta-block">
-        <div class="ev-meta-label">Pipeline prioritization</div>
-        <div class="ev-meta-value">${prioHtml}</div>
-      </div>
-      <div class="ev-meta-block ev-meta-block--full">
-        <div class="ev-meta-label">Credible-set genes</div>
-        <div class="ev-meta-value">${geneHtml}</div>
-      </div>
-    </div>
-
-    <div class="ev-notice ev-notice--info" style="margin-top:12px">
-      ✅ Only <strong>VERIFIED</strong> citations are included in the evidence table.
-      Rejected and contested citations are preserved in:
-      <code>${esc(m.auditFile)}</code>
-    </div>
-  </div>`;
-}
-
-
-/* ── Evidence table card ────────────────────────────────────────────── */
-function buildEvidenceCard(locusId) {
-  return `
-  <div class="content-card ev-table-card">
-    <h3 class="ev-section-title">Evidence Table — Verified Citations Only</h3>
-
-    <div class="ev-filter-bar">
-      <select id="ev-filter-gene" onchange="applyEvFilters('${locusId}')">
-        <option value="">All genes</option>
-      </select>
-      <select id="ev-filter-verdict" onchange="applyEvFilters('${locusId}')">
-        <option value="">All verdicts</option>
-        <option value="WEAKENED">WEAKENED</option>
-        <option value="CONTESTED">CONTESTED</option>
-        <option value="HOLDS">HOLDS</option>
-        <option value="N/A">N/A</option>
-      </select>
-      <input type="text" id="ev-filter-search"
-             placeholder="Search gene, claim, or source…"
-             oninput="applyEvFilters('${locusId}')">
-      <button class="ev-btn-reset" onclick="resetEvFilters('${locusId}')">✕ Reset</button>
-      <span class="ev-row-count" id="ev-row-count"></span>
-    </div>
-
-    <div class="ev-table-scroll">
-      <table class="ev-table" id="ev-table">
-        <thead>
-          <tr>
-            <th onclick="sortEv(0,'${locusId}')" data-col="0">
-              Candidate gene<span class="ev-sort-icon"></span></th>
-            <th onclick="sortEv(1,'${locusId}')" data-col="1">
-              Evidence type<span class="ev-sort-icon"></span></th>
-            <th onclick="sortEv(2,'${locusId}')" data-col="2" class="ev-col-claim">
-              Claim<span class="ev-sort-icon"></span></th>
-            <th onclick="sortEv(3,'${locusId}')" data-col="3" class="ev-col-source">
-              Source<span class="ev-sort-icon"></span></th>
-            <th onclick="sortEv(4,'${locusId}')" data-col="4">
-              Skeptic verdict<span class="ev-sort-icon"></span></th>
-            <th onclick="sortEv(5,'${locusId}')" data-col="5">
-              Verified date<span class="ev-sort-icon"></span></th>
-          </tr>
-        </thead>
-        <tbody id="ev-tbody"></tbody>
-      </table>
-    </div>
-
-    <div class="ev-no-lit-box" id="ev-no-lit-box"></div>
-  </div>`;
-}
-
-
-/* ── Open Targets card ──────────────────────────────────────────────── */
-function buildOTCard(locusId) {
-  const rows   = OT_DATA[locusId] || [];
-  const footer = OT_FOOTER[locusId] || '';
-
-  const rowsHtml = rows.map(r => {
-    const scoreCell = r.copdScore !== null
-      ? `<span class="ev-ot-present">Score ${r.copdScore} &nbsp;|&nbsp; GA ${r.copd_ga}</span>`
-      : `<span class="ev-ot-absent">Not present / COPD absent</span>`;
-
-    const cMap = {'0':'c0','1':'c1','2':'c2','3':'c3','4':'c4','5':'c5','NC':'cnc'};
-    const cCls  = cMap[r.constraint] || 'cnc';
-    const cDesc = {'0':'most constrained','5':'most tolerant','NC':''}[r.constraint] || 'intermediate';
-    const cCell = r.constraint === 'NC'
-      ? '<span class="ev-constraint cnc">No data (non-coding)</span>'
-      : `<span class="ev-constraint ${cCls}">${esc(r.constraint)}</span>
-         <span class="ev-constraint-desc">(${cDesc})</span>`;
-
-    return `
-      <tr>
-        <td><span class="ev-gene-name">${esc(r.gene)}</span></td>
-        <td>${scoreCell}</td>
-        <td class="ev-coloc-cell">${esc(r.coloc)}</td>
-        <td>${cCell}</td>
-        <td class="ev-ot-notes">${esc(r.notes)}</td>
-      </tr>`;
-  }).join('');
-
-  return `
-  <div class="content-card ev-ot-card">
-    <h3 class="ev-section-title">Open Targets Summary</h3>
-    <div class="ev-notice ev-notice--ot">
-      ⚠ <strong>Structured database lookup only.</strong>
-      This section is NOT a verified literature citation and did not go through
-      the citation-verifier or red-team-skeptic pipeline steps.
-    </div>
-    <div class="ev-table-scroll">
-      <table class="ev-table ev-ot-table">
-        <thead>
-          <tr>
-            <th>Gene</th>
-            <th>L2G / COPD score (MONDO_0005002)</th>
-            <th>Colocalization</th>
-            <th>Constraint (gnomAD LOF upperBin6)</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
-        <tbody>${rowsHtml}</tbody>
-      </table>
-    </div>
-    <p class="ev-ot-footer-note">${esc(footer)}</p>
-  </div>`;
-}
-
-
-/* ── Synthesis card ─────────────────────────────────────────────────── */
-function buildSynthesisCard(locusId) {
-  const s = SYNTHESIS[locusId];
-  if (!s) return '';
-
-  const roleClass = { primary:'ev-gene-primary', 'runner-up':'ev-gene-runner',
-                      'second-runner':'ev-gene-second' };
-
-  const candidatesHtml = s.candidates.map(c => `
-    <div class="ev-candidate-block ${roleClass[c.role] || ''}">
-      <div class="ev-candidate-header">
-        <span class="ev-gene-pill ev-gene-pill--highlight">${esc(c.gene)}</span>
-        <span class="ev-candidate-label">${esc(c.label)}</span>
-      </div>
-      <p class="ev-candidate-desc">${c.desc}</p>
-    </div>`).join('');
-
-  const resolversHtml = s.resolvers
-    .map((r,i) => `<li>${esc(r)}</li>`).join('');
-
-  return `
-  <div class="content-card ev-synthesis-card">
-    <h3 class="ev-section-title">Prioritized-Gene Synthesis</h3>
-
-    <div class="ev-synthesis-verdict">
-      <strong>Prioritized gene: ${esc(s.topGene)}</strong>
-      <span class="ev-synthesis-sep">—</span>
-      <span>Confidence: <strong>${esc(s.confidence)}</strong></span>
-    </div>
-
-    <p class="ev-synthesis-summary">${esc(s.summary)}</p>
-
-    <div class="ev-candidates-list">${candidatesHtml}</div>
-
-    <div class="ev-resolve-box">
-      <h4 class="ev-resolve-title">🔍 What would resolve the tie</h4>
-      <ol class="ev-resolve-list">${resolversHtml}</ol>
-    </div>
-
-    <div class="ev-caveat-box">
-      <strong>Note:</strong> ${s.caveat}
-    </div>
-  </div>`;
-}
-
-
-/* ════════════════════════════════════════════════════════════════════════
-   ⑨  EVIDENCE TABLE RUNTIME (filter / sort / render)
-   ════════════════════════════════════════════════════════════════════════ */
-function buildGeneFilter(locusId) {
-  const rows = EVIDENCE_ROWS[locusId] || [];
-  const genes = [...new Set(rows.map(r => r.gene))];
-  const sel = document.getElementById('ev-filter-gene');
-  if (!sel) return;
-  sel.innerHTML = '<option value="">All genes</option>';
-  genes.forEach(g => {
-    const opt = document.createElement('option');
-    opt.value = g; opt.textContent = g;
-    sel.appendChild(opt);
-  });
-}
-
-function renderEvidenceRows(locusId) {
-  const tbody   = document.getElementById('ev-tbody');
-  const countEl = document.getElementById('ev-row-count');
-  const allRows = EVIDENCE_ROWS[locusId] || [];
-  const noLitEl = document.getElementById('ev-no-lit-box');
-  const meta    = LOCUS_META[locusId];
-
-  if (noLitEl && meta && meta.noLitGenes) {
-    noLitEl.innerHTML =
-      `<strong>Genes with no citable literature (VERIFIED or otherwise):</strong> ${esc(meta.noLitGenes)}`;
-  }
-
-  if (!tbody) return;
-  tbody.innerHTML = '';
-
-  if (!evFiltered.length) {
-    tbody.innerHTML =
-      '<tr><td colspan="6" class="ev-no-results">No rows match the current filters.</td></tr>';
-    if (countEl) countEl.textContent = '0 rows';
-    return;
-  }
-
-  evFiltered.forEach((r, idx) => {
-    const vg   = verdictGroup(r.verdict);
-    const vcls = verdictClass(r.verdict);
-    const cid  = `ev-claim-${idx}`;
-
-    const pmidLink = r.pmid
-      ? `<a class="ev-cit-link ev-pmid"
-            href="https://pubmed.ncbi.nlm.nih.gov/${r.pmid}/"
-            target="_blank" rel="noopener">PMID ${esc(r.pmid)}</a>`
-      : '';
-    const doiLink = r.doi
-      ? `<a class="ev-cit-link ev-doi"
-            href="https://doi.org/${r.doi}"
-            target="_blank" rel="noopener">DOI</a>`
-      : '';
-
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td>
-        <div class="ev-gene-name">${esc(r.gene)}</div>
-        ${r.geneNote ? `<div class="ev-gene-note">${esc(r.geneNote)}</div>` : ''}
-      </td>
-      <td class="ev-type-cell">${esc(r.type)}</td>
-      <td>
-        <div class="ev-claim-text" id="${cid}">${esc(r.claim)}</div>
-        <button class="ev-expand-btn" onclick="toggleClaim('${cid}',this)">▼ Show more</button>
-      </td>
-      <td>
-        <div class="ev-cit-text">${esc(r.citation)}</div>
-        <div class="ev-cit-links">${pmidLink}${doiLink}</div>
-      </td>
-      <td>
-        <span class="ev-verdict ${vcls}">${vg}</span>
-        ${r.verdiQual
-          ? `<div class="ev-verdict-qual">${esc(r.verdiQual)}</div>`
-          : ''}
-      </td>
-      <td class="ev-date-cell">${esc(r.date)}</td>`;
-    tbody.appendChild(tr);
-  });
-
-  if (countEl)
-    countEl.textContent = `${evFiltered.length} of ${allRows.length} rows`;
-}
-
-function toggleClaim(id, btn) {
-  const el = document.getElementById(id);
-  const expanded = el.classList.toggle('ev-claim-expanded');
-  btn.textContent = expanded ? '▲ Show less' : '▼ Show more';
-}
-
-function applyEvFilters(locusId) {
-  const gene    = (document.getElementById('ev-filter-gene')?.value    || '');
-  const verdict = (document.getElementById('ev-filter-verdict')?.value || '');
-  const search  = (document.getElementById('ev-filter-search')?.value  || '').toLowerCase();
-  const allRows = EVIDENCE_ROWS[locusId] || [];
-
-  evFiltered = allRows.filter(r => {
-    if (gene    && r.gene !== gene)                      return false;
-    if (verdict && verdictGroup(r.verdict) !== verdict)  return false;
-    if (search) {
-      const hay = (r.gene+' '+r.claim+' '+r.citation+' '+r.type+' '+r.pmid).toLowerCase();
-      if (!hay.includes(search)) return false;
+        displayPlot();
     }
-    return true;
-  });
 
-  if (evSortCol >= 0) doEvSort();
-  renderEvidenceRows(locusId);
-  updateSortHeaders();
-}
+    // Load and display the current selected plot image
+    function displayPlot() {
+        const plotIndex = parseInt(plotSelect.value, 10);
+        const plots = dataset["chr1"] || [];
 
-function resetEvFilters(locusId) {
-  const gs = document.getElementById('ev-filter-gene');
-  const vs = document.getElementById('ev-filter-verdict');
-  const ss = document.getElementById('ev-filter-search');
-  if (gs) gs.value = '';
-  if (vs) vs.value = '';
-  if (ss) ss.value = '';
-  evSortCol = -1; evSortAsc = true;
-  evFiltered = [...(EVIDENCE_ROWS[locusId] || [])];
-  updateSortHeaders();
-  renderEvidenceRows(locusId);
-}
+        if (plots && plots[plotIndex]) {
+            const currentPlot = plots[plotIndex];
+            plotImage.src = currentPlot.filename;
+            plotImage.style.display = 'block';
+            placeholder.style.display = 'none';
+        } else {
+            plotImage.style.display = 'none';
+            placeholder.style.display = 'block';
+            placeholder.textContent = 'No plot selected or available.';
+        }
 
-const EV_SORT_KEYS = ['gene','type','claim','citation','verdict','date'];
-function sortEv(col, locusId) {
-  if (evSortCol === col) { evSortAsc = !evSortAsc; }
-  else { evSortCol = col; evSortAsc = true; }
-  doEvSort();
-  updateSortHeaders();
-  renderEvidenceRows(locusId);
-}
-function doEvSort() {
-  const key = EV_SORT_KEYS[evSortCol];
-  evFiltered.sort((a, b) => {
-    const av = (a[key] || '').toLowerCase();
-    const bv = (b[key] || '').toLowerCase();
-    return evSortAsc ? av.localeCompare(bv) : bv.localeCompare(av);
-  });
-}
-function updateSortHeaders() {
-  document.querySelectorAll('#ev-table thead th').forEach((th, i) => {
-    th.classList.remove('ev-sorted-asc','ev-sorted-desc');
-    if (i === evSortCol)
-      th.classList.add(evSortAsc ? 'ev-sorted-asc' : 'ev-sorted-desc');
-  });
-}
+        updateButtonStates();
+    }
 
+    // Navigate using Prev/Next buttons or arrow keys
+    function navigatePlot(direction) {
+        const currentIndex = parseInt(plotSelect.value, 10);
+        const newIndex = currentIndex + direction;
+        
+        if (newIndex >= 0 && newIndex < plotSelect.options.length) {
+            plotSelect.value = newIndex;
+            displayPlot();
+        }
+    }
 
-/* ════════════════════════════════════════════════════════════════════════
-   ⑩  UTILITIES
-   ════════════════════════════════════════════════════════════════════════ */
-function verdictGroup(v) {
-  if (!v) return 'N/A';
-  if (v.startsWith('WEAKENED'))  return 'WEAKENED';
-  if (v.startsWith('CONTESTED')) return 'CONTESTED';
-  if (v.startsWith('HOLDS'))     return 'HOLDS';
-  return 'N/A';
-}
-function verdictClass(v) {
-  return { WEAKENED:'ev-v-weakened', CONTESTED:'ev-v-contested',
-           HOLDS:'ev-v-holds', 'N/A':'ev-v-na' }[verdictGroup(v)] || 'ev-v-na';
-}
-function esc(s) {
-  return String(s ?? '')
-    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
+    // Enable/Disable navigation buttons at boundaries
+    function updateButtonStates() {
+        const currentIndex = parseInt(plotSelect.value, 10);
+        const totalPlots = plotSelect.options.length;
 
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === totalPlots - 1;
+    }
 
-/* ════════════════════════════════════════════════════════════════════════
-   ⑪  BOOT
-   ════════════════════════════════════════════════════════════════════════ */
-document.addEventListener('DOMContentLoaded', () => {
-  buildDropdown();
-  switchLocus(0);   /* load first locus automatically */
-});
+    // Fallback if image file is missing or not found
+    function handleImageError() {
+        plotImage.style.display = 'none';
+        placeholder.style.display = 'block';
+        const filename = plotImage.src.split('/').pop();
+        placeholder.innerHTML = `⚠️ Could not load <code>${filename}</code>.<br><br><small>Make sure the image file is placed in the same folder as this HTML page.</small>`;
+    }
 
+    // Run initialization
+    init();
 </script>
+
 </body>
 </html>
