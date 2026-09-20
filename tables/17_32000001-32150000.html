@@ -1,381 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>17_32000001-32150000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 17:32000001-32150000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="copd-locus-evidence-table-17_32000001-32150000-nearest-gene-lrrc37b">COPD locus evidence table: 17_32000001-32150000 (nearest gene LRRC37B)</h1>
-<p><strong>Region:</strong> 17:32,000,001-32,150,000 (GRCh38) <strong>Lead variant:</strong> rs41291021 (17:32,083,670,
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="copd-locus-evidence-table-17_32000001-32150000-nearest-gene-lrrc37b">Evidence Table — Locus 17:32000001-32150000</h1><div class="summary"><p><strong>Region:</strong> 17:32,000,001-32,150,000 (GRCh38) <strong>Lead variant:</strong> rs41291021 (17:32,083,670,
 PIP=0.595, intronic/non-coding at that position). <strong>Locus-file candidate genes:</strong>
 nearest = LRRC37B; MAGMA/PoPS = ASIC2; FLAMES/ABC = NA. SUZ12 is annotated on a very-low-PIP
 (0.00022) credible-set variant (rs112716417). All other credible-set members are low-PIP
 non-coding/intronic variants rolled into gene-level evidence per pipeline scope rules (no
-missense/splice variants present in this credible set besides the lead variant).</p>
-<p>All rows below carry a citation with verdict VERIFIED (26/26 citations checked; none
+missense/splice variants present in this credible set besides the lead variant).</p><p>All rows below carry a citation with verdict VERIFIED (26/26 citations checked; none
 RETRACTED/NOT_FOUND/CLAIM_MISMATCH — see <code>audits/17_32000001-32150000_audit.md</code> for the full
-verification and critique record, including the CONTESTED calls on ASIC2 and COPRS).</p>
-<table>
+verification and critique record, including the CONTESTED calls on ASIC2 and COPRS).</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -388,119 +72,119 @@ verification and critique record, including the CONTESTED calls on ASIC2 and COP
 </thead>
 <tbody>
 <tr>
-<td>LRRC37B</td>
+<td class="gene">LRRC37B</td>
 <td>Structural/developmental (neuro, not pulmonary)</td>
 <td>LRRC37B is a hominid-specific gene encoding a receptor in human cortical pyramidal neurons that binds FGF13A and the Nav β-subunit SCN1B, reducing axon initial segment excitability — a neuronal, not pulmonary, mechanism</td>
 <td>Libé-Philippot et al., Cell 2023, PMID 38134874, DOI 10.1016/j.cell.2023.11.028</td>
-<td>WEAKENED — best/most consistent spirometry colocalization (7/9 OT credible sets) but zero COPD/spirometry/smoking GWAS literature and only neurodevelopmental mechanism found; candidacy rests on OT L2G, not lung-relevant literature</td>
+<td><span class="tag-warning">WEAKENED</span> — best/most consistent spirometry colocalization (7/9 OT credible sets) but zero COPD/spirometry/smoking GWAS literature and only neurodevelopmental mechanism found; candidacy rests on OT L2G, not lung-relevant literature</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LRRC37B</td>
+<td class="gene">LRRC37B</td>
 <td>Structural (genomic architecture context)</td>
 <td>LRRC37B-containing low-copy repeats in 17q11.2 mediate nonallelic homologous recombination (NAHR) causing a recurrent NF1 microdeletion</td>
 <td>Bengesser et al., Human Mutation 2010, PMID 20506354, DOI 10.1002/humu.21254; Zickler et al., Human Mutation 2011, PMID 22045503, DOI 10.1002/humu.21644</td>
-<td>WEAKENED — genomic-architecture context only, not COPD-relevant biology; also underscores paralog/segmental-duplication ambiguity risk</td>
+<td><span class="tag-warning">WEAKENED</span> — genomic-architecture context only, not COPD-relevant biology; also underscores paralog/segmental-duplication ambiguity risk</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LRRC37B</td>
+<td class="gene">LRRC37B</td>
 <td>Statistical genetics (non-human, tangential)</td>
 <td>LRRC37B flagged as a body-weight-associated candidate gene in a yak GWAS</td>
 <td>Wang et al., Animals (Basel) 2022, PMID 35883402, DOI 10.3390/ani12141855</td>
-<td>WEAKENED — very low relevance, non-human, included for completeness only</td>
+<td><span class="tag-warning">WEAKENED</span> — very low relevance, non-human, included for completeness only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SUZ12</td>
+<td class="gene">SUZ12</td>
 <td>Structural (lung epithelium, but lung-cancer not COPD context)</td>
 <td>Cigarette-smoke-condensate exposure of respiratory epithelial cells induces lncRNA ZFAS1, which recruits DNA methyltransferases and polycomb proteins (including SUZ12) to epigenetically silence tumor-suppressor ZNFX1</td>
 <td>Xi et al., Cell Mol Biol Lett 2025, PMID 40211119, DOI 10.1186/s11658-025-00705-x</td>
-<td>WEAKENED — lung <em>carcinogenesis</em> mechanism, not COPD; SUZ12 is a co-recruited generic PRC2 component, not shown to be SUZ12-specific; citing as COPD-relevant would overclaim</td>
+<td><span class="tag-warning">WEAKENED</span> — lung carcinogenesis mechanism, not COPD; SUZ12 is a co-recruited generic PRC2 component, not shown to be SUZ12-specific; citing as COPD-relevant would overclaim</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SUZ12</td>
+<td class="gene">SUZ12</td>
 <td>Immune (broad/nonspecific chromatin biology)</td>
 <td>PRC2 (EZH2 + EED, SUZ12, RbAp46/48) regulates T-cell differentiation, autoimmune disease, and graft-versus-host disease</td>
 <td>Karantanos et al., Front Immunol 2016, PMID 27199994, DOI 10.3389/fimmu.2016.00172</td>
-<td>WEAKENED — broad/nonspecific PRC2 essentiality in immune cells, no airway/COPD specificity</td>
+<td><span class="tag-warning">WEAKENED</span> — broad/nonspecific PRC2 essentiality in immune cells, no airway/COPD specificity</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SUZ12</td>
+<td class="gene">SUZ12</td>
 <td>Immune (broad/nonspecific, tumor immunology)</td>
 <td>SUZ12/EED loss (PRC2 inactivation) reprograms chromatin to reduce IFN-γ signaling responsiveness and tumor immune infiltration</td>
 <td>Yan et al., J Clin Invest 2022, PMID 35852856, DOI 10.1172/JCI153437</td>
-<td>WEAKENED — oncology-context finding, general PRC2 gating of IFN-responsive genes, not COPD-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — oncology-context finding, general PRC2 gating of IFN-responsive genes, not COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SUZ12</td>
+<td class="gene">SUZ12</td>
 <td>Immune (broad/nonspecific)</td>
 <td>CRISPR screen identifies SUZ12 (with BAP1) as a regulator of CD2 costimulatory receptor expression on human T cells, affecting proliferation/IFN-γ production</td>
 <td>Demetriou et al., iScience 2025, PMID 41377664, DOI 10.1016/j.isci.2025.113977</td>
-<td>WEAKENED — general T-cell chromatin biology, not COPD-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — general T-cell chromatin biology, not COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SUZ12</td>
+<td class="gene">SUZ12</td>
 <td>Immune/hematopoiesis (broad/nonspecific)</td>
 <td>SUZ12 essential for hematopoietic stem cell maintenance (Polycomb repressive complexes in hematologic malignancy review)</td>
 <td>Yamagishi et al., Exp Hematol 2025, PMID 41443386, DOI 10.1016/j.exphem.2025.105339</td>
-<td>WEAKENED — general/nonspecific essentiality, not COPD-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — general/nonspecific essentiality, not COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>UTP6</td>
+<td class="gene">UTP6</td>
 <td>Structural (housekeeping, no lung relevance)</td>
 <td>UTP6 half-a-TPR domain interacts with Utp21 peptide, essential for pre-rRNA processing (SSU processome/UTP-B complex)</td>
 <td>Champion et al., Mol Cell Biol 2008, PMID 18725399, DOI 10.1128/MCB.00906-08; Boissier et al., Sci Rep 2017, PMID 28600509, DOI 10.1038/s41598-017-03034-y</td>
-<td>WEAKENED — general ribosome-biogenesis housekeeping function, no lung/COPD/immune relevance found; candidacy rests on inconsistent OT L2G signal (max 0.327)</td>
+<td><span class="tag-warning">WEAKENED</span> — general ribosome-biogenesis housekeeping function, no lung/COPD/immune relevance found; candidacy rests on inconsistent OT L2G signal (max 0.327)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ASIC2</td>
+<td class="gene">ASIC2</td>
 <td>Structural (pulmonary vascular, not airway/parenchymal)</td>
 <td>ASIC2 knockout mice show enhanced baseline pulmonary vascular resistance and exaggerated hypoxia-induced pulmonary hypertension via altered PASMC calcium handling and ASIC1 interaction</td>
 <td>Detweiler et al., J Appl Physiol 2019, PMID 31169471, DOI 10.1152/japplphysiol.00894.2018</td>
-<td>CONTESTED — wrong lung compartment (vascular vs. airway/parenchymal COPD biology); gene does not physically overlap the locus window (~0.9-1 Mb away); zero OT colocalization across 31 credible sets; likely a MAGMA/PoPS window-boundary artifact, not a genuine candidate at this credible set</td>
+<td><span class="tag-warning">CONTESTED</span> — wrong lung compartment (vascular vs. airway/parenchymal COPD biology); gene does not physically overlap the locus window (~0.9-1 Mb away); zero OT colocalization across 31 credible sets; likely a MAGMA/PoPS window-boundary artifact, not a genuine candidate at this credible set</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ASIC2</td>
+<td class="gene">ASIC2</td>
 <td>Structural (co-expression only, not functionally necessary)</td>
 <td>Airway vagal afferent neurons regulating the cough reflex co-express ASIC1, ASIC2, and ASIC3 mRNA (functional necessity shown for ASIC3, not ASIC2)</td>
 <td>Chou et al., J Physiol 2025, PMID 41387299, DOI 10.1113/JP289922</td>
-<td>CONTESTED — ASIC3, not ASIC2, was the causally implicated channel; crediting ASIC2 would overclaim</td>
+<td><span class="tag-warning">CONTESTED</span> — ASIC3, not ASIC2, was the causally implicated channel; crediting ASIC2 would overclaim</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ASIC2</td>
+<td class="gene">ASIC2</td>
 <td>Structural (general review, not lung-specific)</td>
 <td>DEG/ENaC/ASIC channel family (including ASIC2) reviewed as candidate mechanotransducers in vascular smooth muscle (renal/systemic focus)</td>
 <td>Drummond, Grifoni &amp; Jernigan, Physiology (Bethesda) 2008, PMID 18268362, DOI 10.1152/physiol.00034.2007</td>
-<td>CONTESTED — general review, not lung-specific, background plausibility only</td>
+<td><span class="tag-warning">CONTESTED</span> — general review, not lung-specific, background plausibility only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RHOT1</td>
+<td class="gene">RHOT1</td>
 <td>Structural (smoking-exposure-conditional lung epithelial mitochondrial biology)</td>
-<td>Cigarette smoke extract reduces Miro1 (RHOT1) protein abundance in primary/immortalized human lung epithelial cells (SAEC, NHBE, BEAS2B), with broader mitochondrial dysfunction (membrane potential, ROS, fragmentation, reduced OXPHOS); MeSH terms include &quot;Pulmonary Disease, Chronic Obstructive&quot;</td>
+<td>Cigarette smoke extract reduces Miro1 (RHOT1) protein abundance in primary/immortalized human lung epithelial cells (SAEC, NHBE, BEAS2B), with broader mitochondrial dysfunction (membrane potential, ROS, fragmentation, reduced OXPHOS); MeSH terms include "Pulmonary Disease, Chronic Obstructive"</td>
 <td>Sundar, Maremanda &amp; Rahman, Toxicol Lett 2019, PMID 31593750, DOI 10.1016/j.toxlet.2019.09.022</td>
-<td>SUPPORTED-for-mechanism (WEAKENED-for-genetics) — categorically stronger causal/cell-type-specific evidence than any other gene at this locus, but weakest statistical/positional support (tiny OT literature-only score, single low L2G appearance, sits mostly outside window); correctly characterized as smoking-exposure-conditional pulmonary toxicity (prior #1), not smoking-behavior/nicotine neurobiology</td>
+<td><span class="tag-warning">WEAKENED</span>SUPPORTED-for-mechanism (-for-genetics) — categorically stronger causal/cell-type-specific evidence than any other gene at this locus, but weakest statistical/positional support (tiny OT literature-only score, single low L2G appearance, sits mostly outside window); correctly characterized as smoking-exposure-conditional pulmonary toxicity (prior #1), not smoking-behavior/nicotine neurobiology</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RHOT1</td>
+<td class="gene">RHOT1</td>
 <td>Immune (smoking-exposure-conditional, causal in vivo)</td>
-<td>Lung-epithelium-specific Rhot1/Miro1 knockout mice show augmented total inflammatory cell, macrophage, and neutrophil infiltration after acute (3-day) and chronic (4-month) cigarette-smoke exposure vs. wild-type; paper's own keywords list &quot;COPD&quot;</td>
+<td>Lung-epithelium-specific Rhot1/Miro1 knockout mice show augmented total inflammatory cell, macrophage, and neutrophil infiltration after acute (3-day) and chronic (4-month) cigarette-smoke exposure vs. wild-type; paper's own keywords list "COPD"</td>
 <td>Sharma, Wang, Muthumalage &amp; Rahman, Pathophysiology 2021, PMID 35366248, DOI 10.3390/pathophysiology28040033</td>
 <td>SUPPORTED-for-mechanism — causal, in vivo, cell-type-specific loss-of-function evidence directly amplifying neutrophilic/macrophage lung inflammation upon smoke exposure; the most direct COPD-relevant mechanistic evidence at this locus per both researcher and skeptic, but statistical/positional support remains weak</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>VILMIR (lncRNA; not a locus-file candidate gene)</td>
+<td class="gene">VILMIR (lncRNA; not a locus-file candidate gene)</td>
 <td>Immune (antiviral/interferon response, lung epithelium; lead variant physically within its transcript body)</td>
 <td>VILMIR is upregulated in human lung epithelial cells (A549) after influenza A, SARS-CoV-2, and RSV infection and after IFN-β treatment; also upregulated in BAL-fluid single-cell RNA-seq from COVID-19 patients; knockdown blunts host transcriptional response to IFN-β/influenza</td>
 <td>John et al., J Virology 2025, PMID 40130878, DOI 10.1128/jvi.00141-25 (preprint: bioRxiv, PMID 38585942, DOI 10.1101/2024.03.25.586578)</td>
@@ -508,7 +192,7 @@ verification and critique record, including the CONTESTED calls on ASIC2 and COP
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>VILMIR (lncRNA; not a locus-file candidate gene)</td>
+<td class="gene">VILMIR (lncRNA; not a locus-file candidate gene)</td>
 <td>Immune (mechanistic, lung epithelium)</td>
 <td>VILMIR interacts with nuclear transcriptional regulators (FUBP1, PUF60) and cytoplasmic antiviral effectors (IFIT1, IFIT3) and aminoacyl-tRNA synthetases (QARS1, KARS1); overexpression enhances host interferon-stimulated gene responses in A549 cells</td>
 <td>John et al., J Virology 2025, PMID 41378895, DOI 10.1128/jvi.01380-25 (preprint: bioRxiv, PMID 40894660, DOI 10.1101/2025.08.18.670784)</td>
@@ -516,7 +200,7 @@ verification and critique record, including the CONTESTED calls on ASIC2 and COP
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Note: COPRS has no verifiable literature citation at all (search access blocked; see audit
 appendix) — it therefore does not appear as a row in this table despite having the single
 highest raw Open Targets L2G score at this locus (0.555 in one FEV1 credible set). This is an
@@ -587,9 +271,9 @@ occasionally outscore both in individual credible sets (COPRS reaching the singl
 raw L2G score at the locus, 0.555) but are even less consistent, and COPRS in particular has
 no verifiable literature at all in this review (a genuine search-access gap, not a finding of
 no biology — flagged for follow-up in the audit appendix). This four-way instability across
-near-identical spirometry traits is, per the red-team-skeptic, &quot;more consistent with
+near-identical spirometry traits is, per the red-team-skeptic, "more consistent with
 unresolved LD [in a segmentally-duplicated region] than with a biologically distinguishable
-winner&quot; — none of these four genes should be called &quot;prioritized&quot; on the current evidence.</p>
+winner" — none of these four genes should be called "prioritized" on the current evidence.</p>
 <p>Separately, ASIC2 — the locus file's own MAGMA/PoPS statistical prioritization pick — should
 be treated as effectively ruled out for this specific credible set: it does not physically
 overlap the stated locus window (sitting ~0.9-1 Mb away), has zero colocalization support
@@ -622,7 +306,7 @@ than being resolved by fiat here.</p>
 researcher's search was blocked by access failures, not a confirmed absence of biology, and
 COPRS holds the single highest raw L2G score at the locus); (2) fine-mapped
 colocalization/eQTL evidence specifically distinguishing LRRC37B from its segmental-duplication
-paralogs (LRRC37A/LRRC37A2), since current L2G assignment to &quot;LRRC37B&quot; may not cleanly resolve
+paralogs (LRRC37A/LRRC37A2), since current L2G assignment to "LRRC37B" may not cleanly resolve
 paralog identity; (3) any COPD-specific (not spirometry-only) fine-mapped credible set at this
 locus, which does not currently exist in Open Targets; (4) direct RHOT1 eQTL/pQTL
 colocalization with lung function or COPD case-control GWAS at this locus, which was not found
@@ -633,5 +317,7 @@ the mechanistically most compelling candidate worth follow-up despite its weak g
 colocalization, and LRRC37B/SUZ12 flagged as the statistically most consistent but
 mechanistically least lung-specific candidates.</p>
 
+        </div>
+    </div>
 </body>
 </html>

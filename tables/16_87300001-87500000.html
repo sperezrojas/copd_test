@@ -1,382 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>16_87300001-87500000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table: locus 16:87,300,001-87,500,000 (nearest gene ZCCHC14)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table-locus-1687300001-87500000-nearest-gene-zcchc14">Evidence table: locus 16:87,300,001-87,500,000 (nearest gene ZCCHC14)</h1>
-<p><strong>Lead variant:</strong> rs1050847 (16:87,410,128, ZCCHC14, 3' UTR variant, PIP=0.406)
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table-locus-1687300001-87500000-nearest-gene-zcchc14">Evidence table: locus 16:87,300,001-87,500,000 (nearest gene ZCCHC14)</h1><div class="summary"><p><strong>Lead variant:</strong> rs1050847 (16:87,410,128, ZCCHC14, 3' UTR variant, PIP=0.406)
 <strong>Candidate genes:</strong> ZCCHC14 (nearest gene; lead + 2nd-highest-PIP credible-set variant),
 FBXO31 (MAGMA + PoPS prioritized), MAP1LC3B (ABC prioritized). All three genes are
 clustered within ~150kb at 16q24.2; the credible set does not cleanly separate them —
 the two highest-PIP variants (rs1050847, PIP=0.41; rs1050846, PIP=0.26) sit in ZCCHC14
 (3' UTR and synonymous, respectively), while the remaining credible-set mass is
-intronic/upstream/downstream across all three genes.</p>
-<p>Only citations with verifier verdict VERIFIED are included below. See
+intronic/upstream/downstream across all three genes.</p><p>Only citations with verifier verdict VERIFIED are included below. See
 <code>audits/16_87300001-87500000_audit.md</code> for excluded citations (RETRACTED / CLAIM_MISMATCH)
-and full skeptic reasoning.</p>
-<table>
+and full skeptic reasoning.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -389,183 +73,183 @@ and full skeptic reasoning.</p>
 </thead>
 <tbody>
 <tr>
-<td>ZCCHC14</td>
+<td class="gene">ZCCHC14</td>
 <td>Statistical genetics (GWAS, pleiotropic trait)</td>
 <td>Genome-wide-significant locus for lacunar stroke in European/transethnic meta-analysis; phenotype-level (not gene-specific) Mendelian-randomization evidence that smoking history is causally associated with lacunar stroke risk</td>
 <td>Traylor M et al. Lancet Neurol. 2021;20(5):351-361. PMID 33773637. DOI 10.1016/S1474-4422(21)00031-4</td>
-<td>WEAKENED — real vascular/cerebrovascular association, but the smoking-MR finding is at the phenotype level, not gene-specific, and does not establish a pulmonary mechanism</td>
+<td><span class="tag-warning">WEAKENED</span> — real vascular/cerebrovascular association, but the smoking-MR finding is at the phenotype level, not gene-specific, and does not establish a pulmonary mechanism</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZCCHC14</td>
+<td class="gene">ZCCHC14</td>
 <td>Statistical genetics (TWAS/S-PrediXcan)</td>
 <td>S-PrediXcan/MTAG nominates ZCCHC14 at 16q24 as gene-based association for non-lobar intracerebral hemorrhage enhanced by small-vessel-stroke signal</td>
 <td>Chung J et al. Brain. 2019;142(10):3176-3189. PMID 31430377. DOI 10.1093/brain/awz233</td>
-<td>WEAKENED — cerebrovascular, not pulmonary, phenotype; raises alternative &quot;vascular pleiotropy&quot; hypothesis not previously foregrounded</td>
+<td><span class="tag-warning">WEAKENED</span> — cerebrovascular, not pulmonary, phenotype; raises alternative "vascular pleiotropy" hypothesis not previously foregrounded</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZCCHC14</td>
+<td class="gene">ZCCHC14</td>
 <td>Statistical genetics (nicotine/alcohol dependence GWAS)</td>
 <td>ZCCHC14 (top SNP rs13334632, p=1.28e-5; replication SNP rs2241617, p=1.06e-7) identified as an additional nicotine-dependence locus alongside KANK1; SNPs at this locus also associated with alcohol dependence in the same meta-analysis</td>
 <td>Wang KS et al. Drug Alcohol Depend. 2012;124(3):325-332. PMID 22377092. DOI 10.1016/j.drugalcdep.2012.02.003</td>
-<td>WEAKENED — different SNPs (rs13334632/rs2241617) than this locus's lead variant (rs1050847/rs1050846), no LD/proxy relationship established; paper's primary named loci are ANAPC1/SLCO3A1, not ZCCHC14</td>
+<td><span class="tag-warning">WEAKENED</span> — different SNPs (rs13334632/rs2241617) than this locus's lead variant (rs1050847/rs1050846), no LD/proxy relationship established; paper's primary named loci are ANAPC1/SLCO3A1, not ZCCHC14</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZCCHC14</td>
+<td class="gene">ZCCHC14</td>
 <td>Structural (oncology, tangential)</td>
 <td>ZCCHC14 promotes non-small-cell lung cancer cell proliferation/invasion via MAPK-p38 signaling</td>
 <td>Shi X et al. J Cell Mol Med. 2020;25(3):1406-1414. PMID 33345444. DOI 10.1111/jcmm.16223</td>
-<td>WEAKENED — lung-cancer cell biology, not COPD-relevant structural/airway biology</td>
+<td><span class="tag-warning">WEAKENED</span> — lung-cancer cell biology, not COPD-relevant structural/airway biology</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZCCHC14</td>
+<td class="gene">ZCCHC14</td>
 <td>Molecular function (non-pulmonary)</td>
-<td>ZCCHC14 is a cofactor (with TENT4A/B) required for hepatitis A/B viral RNA-tailing and stability (&quot;mixed tailing&quot;)</td>
+<td>ZCCHC14 is a cofactor (with TENT4A/B) required for hepatitis A/B viral RNA-tailing and stability ("mixed tailing")</td>
 <td>Kim D et al. Nat Struct Mol Biol. 2020;27(6):581-588. PMID 32451488. DOI 10.1038/s41594-020-0427-3</td>
-<td>WEAKENED — no plausible mechanistic bridge to airway/alveolar biology identified</td>
+<td><span class="tag-warning">WEAKENED</span> — no plausible mechanistic bridge to airway/alveolar biology identified</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZCCHC14</td>
+<td class="gene">ZCCHC14</td>
 <td>Molecular function (non-pulmonary)</td>
 <td>ZCCHC14/TENT4 complex required for hepatitis A virus RNA synthesis</td>
 <td>Li Y et al. Proc Natl Acad Sci U S A. 2022;119(28):e2204511119. PMID 35867748. DOI 10.1073/pnas.2204511119</td>
-<td>WEAKENED — same hepatotropic-virus RNA biology theme, no lung link</td>
+<td><span class="tag-warning">WEAKENED</span> — same hepatotropic-virus RNA biology theme, no lung link</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZCCHC14</td>
+<td class="gene">ZCCHC14</td>
 <td>Molecular function (non-pulmonary)</td>
 <td>ZCCHC14, with TENT4A/B, stabilizes HBsAg expression via HBV RNA tailing (CRISPR screen)</td>
 <td>Hyrina A et al. Cell Rep. 2019;29(10):2970-2978. PMID 31801065. DOI 10.1016/j.celrep.2019.10.113</td>
-<td>WEAKENED — same hepatotropic-virus RNA biology theme, no lung link</td>
+<td><span class="tag-warning">WEAKENED</span> — same hepatotropic-virus RNA biology theme, no lung link</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZCCHC14</td>
+<td class="gene">ZCCHC14</td>
 <td>Immune/inflammatory (non-pulmonary, correlative)</td>
 <td>Plasma ZCCHC14 levels altered in intracerebral hemorrhage patients vs controls; correlated with IL-6 (negative) and IL-10 (positive); proposed as ICH biomarker</td>
 <td>Li DL et al. Eur Rev Med Pharmacol Sci. 2019;23(19):8533-8539. PMID 31646585</td>
-<td>WEAKENED — small single-center biomarker/correlative study in a non-pulmonary disease, not a mechanistic immune-cell-type finding</td>
+<td><span class="tag-warning">WEAKENED</span> — small single-center biomarker/correlative study in a non-pulmonary disease, not a mechanistic immune-cell-type finding</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FBXO31</td>
+<td class="gene">FBXO31</td>
 <td>Structural (oncology, tangential)</td>
 <td>FBXO31 expression elevated in lung cancer tissue vs non-cancerous lung; promotes A549 lung adenocarcinoma cell proliferation/invasion</td>
 <td>Huang HL et al. Am J Cancer Res. 2015;5(5):1814-1822. PMID 26175949</td>
-<td>WEAKENED — lung-cancer cell biology, not COPD-relevant</td>
+<td><span class="tag-warning">WEAKENED</span> — lung-cancer cell biology, not COPD-relevant</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FBXO31</td>
+<td class="gene">FBXO31</td>
 <td>Molecular function (general cell biology)</td>
 <td>FBXO31 is an SCF-complex F-box substrate receptor that targets Cyclin D1 for degradation after DNA damage, mediating G1 cell-cycle arrest</td>
 <td>Santra MK, Wajapeyee N, Green MR. Nature. 2009;459(7247):722-725. PMID 19412162. DOI 10.1038/nature08011</td>
-<td>WEAKENED — generic cell-cycle mechanism found in essentially all tissue contexts; no COPD/lung link tested; researcher/skeptic both flag COPD-senescence connection as speculative-by-analogy only</td>
+<td><span class="tag-warning">WEAKENED</span> — generic cell-cycle mechanism found in essentially all tissue contexts; no COPD/lung link tested; researcher/skeptic both flag COPD-senescence connection as speculative-by-analogy only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FBXO31</td>
+<td class="gene">FBXO31</td>
 <td>Molecular function (general cell biology)</td>
-<td>FBXO31 identified as the chr16q24.3 &quot;senescence gene,&quot; candidate breast tumor suppressor, and SCF complex component</td>
+<td>FBXO31 identified as the chr16q24.3 "senescence gene," candidate breast tumor suppressor, and SCF complex component</td>
 <td>Kumar R et al. Cancer Res. 2005;65(24):11304-11313. PMID 16357137. DOI 10.1158/0008-5472.CAN-05-0936</td>
-<td>WEAKENED — same caveat as above; no COPD/lung link tested</td>
+<td><span class="tag-warning">WEAKENED</span> — same caveat as above; no COPD/lung link tested</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAP1LC3B</td>
+<td class="gene">MAP1LC3B</td>
 <td>Structural (cigarette-smoke/emphysema, mouse knockout)</td>
 <td>Lc3b-knockout mice show reduced apoptosis and resistance to cigarette-smoke-induced airspace enlargement (emphysema); LC3B associates with Fas/caveolin-1 in lipid rafts to mediate extrinsic apoptosis</td>
 <td>Chen ZH et al. Proc Natl Acad Sci U S A. 2010;107(44):18880-18885. PMID 20956295. DOI 10.1073/pnas.1005574107</td>
-<td>WEAKENED (gene-level mechanistic evidence is strong, but genetically unlinked to this locus's credible-set variants — see Prioritized gene section)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level mechanistic evidence is strong, but genetically unlinked to this locus's credible-set variants — see Prioritized gene section)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAP1LC3B</td>
+<td class="gene">MAP1LC3B</td>
 <td>Structural (commentary on above)</td>
 <td>LC3B-Fas-caveolin-1 axis drives smoke-induced apoptosis/airspace enlargement; proposes autophagy as COPD therapeutic target</td>
 <td>Ryter SW, Lam HC, Chen ZH, Choi AM. Autophagy. 2011;7(4):436-437. PMID 21200154. DOI 10.4161/auto.7.4.14501</td>
-<td>WEAKENED — same genetic-linkage caveat</td>
+<td><span class="tag-warning">WEAKENED</span> — same genetic-linkage caveat</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAP1LC3B</td>
+<td class="gene">MAP1LC3B</td>
 <td>Structural (ciliophagy, mouse knockout)</td>
-<td>Map1lc3b-knockout mice (with Becn1+/- and Hdac6-/Y mice) protected from cigarette-smoke-induced cilia shortening and mucociliary clearance disruption (&quot;ciliophagy&quot;)</td>
+<td>Map1lc3b-knockout mice (with Becn1+/- and Hdac6-/Y mice) protected from cigarette-smoke-induced cilia shortening and mucociliary clearance disruption ("ciliophagy")</td>
 <td>Lam HC et al. J Clin Invest. 2013;123(12):5212-5230. PMID 24200693. DOI 10.1172/JCI69636</td>
-<td>WEAKENED — same genetic-linkage caveat</td>
+<td><span class="tag-warning">WEAKENED</span> — same genetic-linkage caveat</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAP1LC3B</td>
+<td class="gene">MAP1LC3B</td>
 <td>Structural (commentary on above)</td>
 <td>Review of ciliophagy findings (LC3B-dependent consumption of cilia components)</td>
 <td>Cloonan SM, Lam HC, Ryter SW, Choi AM. Autophagy. 2014;10(3):532-534. PMID 24401596. DOI 10.4161/auto.27641</td>
-<td>WEAKENED — same genetic-linkage caveat</td>
+<td><span class="tag-warning">WEAKENED</span> — same genetic-linkage caveat</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAP1LC3B</td>
+<td class="gene">MAP1LC3B</td>
 <td>Structural + Immune (innate, TLR4-autophagy crosstalk)</td>
 <td>TLR4-deficient mice show increased LC3B induction and greater airspace enlargement after chronic cigarette-smoke exposure vs wild-type</td>
 <td>An CH et al. Am J Physiol Lung Cell Mol Physiol. 2012;303(9):L748-757. PMID 22983353. DOI 10.1152/ajplung.00102.2012</td>
-<td>WEAKENED — innate-immune/autophagy crosstalk only, not adaptive T-cell/neutrophil-specific; genetic-linkage caveat applies</td>
+<td><span class="tag-warning">WEAKENED</span> — innate-immune/autophagy crosstalk only, not adaptive T-cell/neutrophil-specific; genetic-linkage caveat applies</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAP1LC3B</td>
+<td class="gene">MAP1LC3B</td>
 <td>Structural (epithelial senescence, spirometric correlation)</td>
 <td>SIRT6 expression decreased in COPD lung and correlates with FEV1/FVC; LC3B/ATG5-dependent autophagy mediates SIRT6's anti-senescence effect in cigarette-smoke-exposed human bronchial epithelial cells</td>
 <td>Takasaka N et al. J Immunol. 2013;192(3):958-968. PMID 24367027</td>
-<td>WEAKENED — the only finding in this locus's entire evidence base directly correlating with a spirometric trait (FEV1/FVC), but it is a tissue-correlation/cell-culture study, not a genetic association</td>
+<td><span class="tag-warning">WEAKENED</span> — the only finding in this locus's entire evidence base directly correlating with a spirometric trait (FEV1/FVC), but it is a tissue-correlation/cell-culture study, not a genetic association</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAP1LC3B</td>
+<td class="gene">MAP1LC3B</td>
 <td>Structural (protease-antiprotease axis)</td>
 <td>Neutrophil-elastase-driven placental growth factor signaling upregulates MAP1LC3B and autophagosome formation, promoting lung epithelial apoptosis and emphysema</td>
 <td>Hou HH et al. Autophagy. 2014;10(9):1509-1521. PMID 24988221. DOI 10.4161/auto.29190</td>
-<td>WEAKENED — genetic-linkage caveat applies</td>
+<td><span class="tag-warning">WEAKENED</span> — genetic-linkage caveat applies</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAP1LC3B</td>
+<td class="gene">MAP1LC3B</td>
 <td>Structural (contested/nonspecific, explicitly noted by primary authors)</td>
 <td>LC3B and cleaved caspase-3 immunoreactivity increased in alveolar walls of COPD patients (especially severe COPD) vs control smokers/nonsmokers; authors themselves note the underlying ceramide upregulation is NOT COPD-specific (also seen in IPF)</td>
 <td>Scarpa MC et al. Respiration. 2012;85(4):342-349. PMID 23018286</td>
-<td>WEAKENED / partially nonspecific — primary authors' own caveat that the mechanism is not COPD-selective should not be softened in synthesis</td>
+<td><span class="tag-warning">WEAKENED</span> / partially nonspecific — primary authors' own caveat that the mechanism is not COPD-selective should not be softened in synthesis</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAP1LC3B</td>
+<td class="gene">MAP1LC3B</td>
 <td>Structural (smoke-dose-dependent)</td>
 <td>Cigarette-smoke-induced OSGIN1 upregulation drives MAP1LC3B-dependent autophagosome/autolysosome formation in primary human airway basal/progenitor cells, smoking-dose-dependent in vivo and in vitro</td>
 <td>Wang G et al. Autophagy. 2017;13(7):1205-1220. PMID 28548877. DOI 10.1080/15548627.2017.1301327</td>
-<td>WEAKENED — demonstrates MAP1LC3B is smoke-<em>responsive</em>, which is consistent with either a smoking-mediated GWAS signal or independent pulmonary biology, but does not itself distinguish the two; genetic-linkage caveat applies</td>
+<td><span class="tag-warning">WEAKENED</span> — demonstrates MAP1LC3B is smoke-responsive, which is consistent with either a smoking-mediated GWAS signal or independent pulmonary biology, but does not itself distinguish the two; genetic-linkage caveat applies</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAP1LC3B</td>
+<td class="gene">MAP1LC3B</td>
 <td>Structural (pharmacology, low direct relevance)</td>
 <td>In an elastase+LPS mouse COPD model, an herbal extract reduced LC3-II along with pro-inflammatory cytokines (TNF-alpha, IL-6, TGF-beta) and inflammatory cell infiltration, and reduced emphysema</td>
 <td>Kim KH et al. J Ethnopharmacol. 2016;188:21-30. PMID 27154406</td>
-<td>WEAKENED — pharmacology/natural-product study, low direct relevance to gene-level causality</td>
+<td><span class="tag-warning">WEAKENED</span> — pharmacology/natural-product study, low direct relevance to gene-level causality</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAP1LC3B</td>
+<td class="gene">MAP1LC3B</td>
 <td>Immune (macrophage-specific, innate)</td>
 <td>LC3-associated phagocytosis (LAP) is impaired in COPD alveolar macrophages and cigarette-smoke-exposed macrophages via loss of the LAP regulator Rubicon, contributing to defective efferocytosis and chronic airway inflammation</td>
 <td>Asare PF et al. Ther Adv Respir Dis. 2021;15:17534666211039769. PMID 34852704. DOI 10.1177/17534666211039769</td>
-<td>WEAKENED — macrophage/innate-specific; explicit gap in T-cell/Th1/Th17/Tc17/neutrophil-specific evidence, should not be generalized to broad immune involvement</td>
+<td><span class="tag-warning">WEAKENED</span> — macrophage/innate-specific; explicit gap in T-cell/Th1/Th17/Tc17/neutrophil-specific evidence, should not be generalized to broad immune involvement</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — NOT a verified literature citation)</h2>
 <p>The following is drawn directly from Open Targets Platform GraphQL queries performed by
 the orchestrator (not researched or verified by researcher/citation-verifier/red-team
@@ -655,5 +339,7 @@ completed for any of the three genes (search-budget exhaustion) — see the audi
 for this explicit limitation, which further supports treating this locus's
 prioritization as provisional pending additional targeted follow-up rather than final.</p>
 
+        </div>
+    </div>
 </body>
 </html>

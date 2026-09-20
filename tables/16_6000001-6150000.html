@@ -1,376 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>16_6000001-6150000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 16:6000001-6150000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-166000001-6150000-rbfox1">Evidence table — Locus 16:6000001-6150000 (RBFOX1)</h1>
-<p><strong>Lead variant:</strong> rs35459620 (PIP=0.373, 16:6061053, intron_variant, MODIFIER impact)
-<strong>Candidate genes:</strong> RBFOX1 only (nearest gene, FLAMES-prioritized, PoPS-prioritized; MAGMA and ABC did not prioritize any gene at this locus). All 11 credible-set variants are intronic within RBFOX1 (no missense/splice-donor/splice-acceptor variants in the credible set).</p>
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-166000001-6150000-rbfox1">Evidence Table — Locus 16:6000001-6150000</h1><div class="summary"><p><strong>Lead variant:</strong> rs35459620 (PIP=0.373, 16:6061053, intron_variant, MODIFIER impact)
+<strong>Candidate genes:</strong> RBFOX1 only (nearest gene, FLAMES-prioritized, PoPS-prioritized; MAGMA and ABC did not prioritize any gene at this locus). All 11 credible-set variants are intronic within RBFOX1 (no missense/splice-donor/splice-acceptor variants in the credible set).</p><p>Only citations with verifier verdict VERIFIED are included below. Citations with verdict CLAIM_MISMATCH are excluded here and listed in the audit appendix (<code>audits/16_6000001-6150000_audit.md</code>).</p></div>
+
 <h2 id="evidence-table">Evidence table</h2>
-<p>Only citations with verifier verdict VERIFIED are included below. Citations with verdict CLAIM_MISMATCH are excluded here and listed in the audit appendix (<code>audits/16_6000001-6150000_audit.md</code>).</p>
-<table>
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -383,23 +67,23 @@ code {
 </thead>
 <tbody>
 <tr>
-<td>RBFOX1</td>
+<td class="gene">RBFOX1</td>
 <td>Statistical genetics — nicotine dependence GWAS</td>
 <td>In a genome-wide meta-analysis of nicotine-dependence phenotypes (FTND N=19,431; TTFC N=18,567) in adult smokers of European ancestry, RBFOX1 was identified as one of four candidate genes (with CHRNA4, THSD7B, ZNF804A) supported by both FTND and TTFC association signals; these genes have also been associated with alcohol/cocaine/heroin addiction and autism/schizophrenia.</td>
 <td>Chen et al. 2020, Nicotine &amp; Tobacco Research; PMID 31294817; DOI 10.1093/ntr/ntz099</td>
-<td>WEAKENED (part of smoking-mediation hypothesis — see critique; concerns nicotine-dependence severity, not smoking initiation/heaviness, and not fine-mapped to this exact credible set)</td>
+<td><span class="tag-warning">WEAKENED</span> (part of smoking-mediation hypothesis — see critique; concerns nicotine-dependence severity, not smoking initiation/heaviness, and not fine-mapped to this exact credible set)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RBFOX1</td>
+<td class="gene">RBFOX1</td>
 <td>Statistical genetics — schizophrenia/nicotine-dependence shared genetics</td>
 <td>Using summary statistics from meta-analyses of plasma cotinine concentration, FTND, and schizophrenia, RBFOX1 is listed among genes shared between schizophrenia and nicotine-dependence-related phenotypes, with pathway enrichment in calcium signaling, long-term potentiation, and neuroactive ligand-receptor interaction.</td>
 <td>Chen et al. 2016, Scientific Reports; PMID 27164557; DOI 10.1038/srep25671</td>
-<td>WEAKENED (same caveats as above; neuronal/behavioral mechanism, not pulmonary)</td>
+<td><span class="tag-warning">WEAKENED</span> (same caveats as above; neuronal/behavioral mechanism, not pulmonary)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RBFOX1</td>
+<td class="gene">RBFOX1</td>
 <td>Statistical genetics — cardiovascular trait (different sub-region/variant)</td>
 <td>Using TOPMed WGS in the Cleveland Family Study and ten replication cohorts, RBFOX1 rare/low-frequency coding and non-coding variant burden was nominally associated with blood pressure and replicated (p=0.007), in a different chromosomal sub-region of RBFOX1 (16p13) than this locus's credible set.</td>
 <td>He et al. 2019, Human Genetics; PMID 30671673; DOI 10.1007/s00439-019-01975-0</td>
@@ -407,23 +91,23 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RBFOX1</td>
+<td class="gene">RBFOX1</td>
 <td>Statistical genetics — cross-trait pleiotropy</td>
 <td>A cross-trait pleiotropy/colocalization analysis across gastrointestinal and ocular disease GWAS lists RBFOX1 (with HLA-B) among 261 recurrent pleiotropic genes enriched in immune/inflammatory pathways across trait pairs, and among genes interacting with modifiable exposures including smoking.</td>
 <td>Gao et al. 2026, Human Genomics; PMID 41845536; DOI 10.1186/s40246-026-00947-6</td>
-<td>CONTESTED/WEAKENED — non-COPD, non-lung, enrichment-level only, not gene-specific mechanism</td>
+<td><span class="tag-warning">WEAKENED</span>CONTESTED/ — non-COPD, non-lung, enrichment-level only, not gene-specific mechanism</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RBFOX1</td>
+<td class="gene">RBFOX1</td>
 <td>Statistical genetics — childhood asthma (weak/exploratory)</td>
 <td>In a rank-based cross-ancestry (European/African/Hispanic) GWAS analysis of childhood asthma, RBFOX1 was among 11 genes whose top-ranked SNPs were shared across populations; the paper's primary finding/focus is a different gene, RYR2.</td>
 <td>Ding et al. 2013, Human Genomics; PMID 23829686; DOI 10.1186/1479-7364-7-16</td>
-<td>CONTESTED/WEAKENED — gene-rank-level, not genome-wide-significant, peripheral to the paper's main finding</td>
+<td><span class="tag-warning">WEAKENED</span>CONTESTED/ — gene-rank-level, not genome-wide-significant, peripheral to the paper's main finding</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RBFOX1</td>
+<td class="gene">RBFOX1</td>
 <td>Structural biology — tissue-specific splicing (non-lung)</td>
 <td>A2BP1/Fox-1 (RBFOX1) and paralog Fxh/Rbm9 (RBFOX2) undergo tissue-specific alternative splicing generating brain- and muscle-specific protein isoforms with distinct splicing-regulatory activity.</td>
 <td>Nakahata &amp; Kawamoto 2005, Nucleic Acids Research; PMID 15824060; DOI 10.1093/nar/gki338</td>
@@ -431,7 +115,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RBFOX1</td>
+<td class="gene">RBFOX1</td>
 <td>Structural biology — neuronal splicing (non-lung)</td>
 <td>Fox-3/PSF interact to activate neural cell-specific alternative splicing of a myosin heavy chain (NMHC II-B) cassette exon in mouse CNS.</td>
 <td>Kim et al. 2010, Nucleic Acids Research; PMID 21177649; DOI 10.1093/nar/gkq1221</td>
@@ -439,7 +123,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RBFOX1</td>
+<td class="gene">RBFOX1</td>
 <td>Structural biology — skeletal muscle development (non-lung)</td>
 <td>rbfox1l (RBFOX1 zebrafish ortholog) morphants show markedly impaired skeletal-muscle contractile force generation, supporting a muscle-autonomous developmental role for RBFOX1 paralogs.</td>
 <td>Martin et al. 2015, J Applied Physiology; PMID 26251513; DOI 10.1152/japplphysiol.00447.2015</td>
@@ -447,7 +131,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RBFOX1</td>
+<td class="gene">RBFOX1</td>
 <td>Structural biology — periodontal/metabolic pleiotropy (different variant, non-lung)</td>
 <td>A small case-control study (n=106) testing RBFOX1 SNP rs6500744 (distinct from this locus's credible set) found a modest association between the risk allele and periodontal disease severity in adults with obesity, motivated by RBFOX1's reported role in obesity-related phenotypes.</td>
 <td>Beresescu et al. 2026, Int J Mol Sci; PMID 42278395; DOI 10.3390/ijms27114867</td>
@@ -455,29 +139,29 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RBFOX1</td>
+<td class="gene">RBFOX1</td>
 <td>Immunology — general mechanistic review (organ system unspecified)</td>
-<td>A review states that overexpression of RNA-binding protein RBFOX1 &quot;protects against inflammation&quot; in the context of oxidative-stress/ischemia-reperfusion injury and alternative splicing of CEACAM1 and related genes.</td>
+<td>A review states that overexpression of RNA-binding protein RBFOX1 "protects against inflammation" in the context of oxidative-stress/ischemia-reperfusion injury and alternative splicing of CEACAM1 and related genes.</td>
 <td>Dery et al. 2023, Antioxidants &amp; Redox Signaling (review); PMID 37776178; DOI 10.1089/ars.2023.0437</td>
-<td>WEAKENED — secondary/review-derived claim, organ system not specified, not COPD- or lung-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — secondary/review-derived claim, organ system not specified, not COPD- or lung-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RBFOX1</td>
+<td class="gene">RBFOX1</td>
 <td>Immunology — non-lung obstructive-remodeling analogy</td>
 <td>Single-cell RNA-seq of dysfunctional bladder wall identified an accumulation of RBFOX1-high fibroblasts (alongside RIPOR2-high macrophages) mediating tissue remodeling via dysfunctional extracellular matrix organization and inflammation/immune reaction in obstruction-induced organ remodeling.</td>
 <td>Chen et al. 2024, MedComm; PMID 38414668; DOI 10.1002/mco2.490</td>
-<td>WEAKENED — bladder tissue, not lung; analogy only, should not be over-interpreted as COPD-relevant</td>
+<td><span class="tag-warning">WEAKENED</span> — bladder tissue, not lung; analogy only, should not be over-interpreted as COPD-relevant</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>No verified evidence was found directly linking RBFOX1 to COPD case-control status, lung function (FEV1/FVC), or lung/airway-specific structural, developmental, or immune biology.</strong> See Prioritized-gene synthesis and audit appendix below for full context, including two GWAS citations that were disqualified on verification (CLAIM_MISMATCH).</p>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation, not reviewed by citation-verifier or red-team-skeptic)</h2>
 <p><strong>RBFOX1 (ENSG00000078328):</strong></p>
 <ul>
 <li><strong>Lead variant lookup:</strong> rs35459620 and its coordinate form are NOT found in Open Targets at all — the underlying GWAS study behind this locus file does not appear to be ingested by Open Targets.</li>
-<li><strong>L2G score for COPD:</strong> Not resolvable. <code>disease(MONDO_0005002).associatedTargets(Bs:[&quot;ENSG00000078328&quot;])</code> returns an empty result — Open Targets' own evidence-integration pipeline records <strong>zero</strong> target-disease association evidence linking RBFOX1 to COPD.</li>
+<li><strong>L2G score for COPD:</strong> Not resolvable. <code>disease(MONDO_0005002).associatedTargets(Bs:["ENSG00000078328"])</code> returns an empty result — Open Targets' own evidence-integration pipeline records <strong>zero</strong> target-disease association evidence linking RBFOX1 to COPD.</li>
 <li><strong>Colocalization evidence:</strong> None. RBFOX1 has 6 credible sets on record in Open Targets, all from <strong>brain</strong> splicing-QTL (sQTL) studies (BrainSeq, ROSMAP DLPFC, CommonMind DLPFC) — none linked to any disease/trait, and none with populated L2G predictions. One (CommonMind DLPFC, variant rs17139303) falls within this exact locus's coordinate range (~16:6059253-6062934), overlapping several of this credible set's variants — suggestive of a brain-tissue-specific splicing-QTL mechanism at this sub-region, but not independently confirmed in peer-reviewed literature and not linked to any disease phenotype in Open Targets.</li>
 <li><strong>Genetic constraint (gnomAD):</strong> RBFOX1 is in the single most LoF-constrained bin of all coding genes (oe = 0.173, 90% CI 0.100–0.311, upperBin6 = 0) — strongly intolerant of loss-of-function variation. Not constrained against missense variation (oe = 1.168) or synonymous variation (oe = 1.462), as expected.</li>
 </ul>
@@ -490,5 +174,7 @@ code {
 <p>The red-team-skeptic additionally raised two alternative explanations that this evidence base cannot rule out: (1) RBFOX1 is one of the largest genes in the genome (~1.7 Mb) in a low-recombination region, and its broad, scattershot pleiotropy across unrelated traits (blood pressure, periodontal disease, bladder remodeling, asthma-rank, schizophrenia, addiction) is at least as consistent with a statistical/LD-magnet false-positive pattern as with genuine multi-organ biology; (2) RBFOX1 could have an entirely uncharacterized lung-relevant splicing function (its paralog RBFOX2 has described roles in epithelial splicing programs) that simply has not been studied — absence of lung literature is not evidence of absence of lung function.</p>
 <p>Given: no confirmed COPD/lung-function GWAS support (and two explicit disconfirmations), no lung-specific structural or immune biology, and a smoking-mediation hypothesis resting on narrower evidence than initially claimed, this locus should be reported to the study team as a single-gene locus (RBFOX1) with an <strong>unresolved mechanism</strong> — plausibly smoking-behavior-related, but not established, and a real possibility of a statistical/LD artifact given the gene's size and pleiotropic promiscuity. Confidence is LOW rather than INSUFFICIENT only because gene assignment itself (RBFOX1 as the physically implicated gene) is essentially unambiguous; it is the causal mechanism, not the gene identity, that remains unresolved. What would resolve this: (a) full-text confirmation of whether RBFOX1/this exact region reaches significance in a smoking-adjusted COPD or lung-function GWAS; (b) a smoking-initiation-specific (not just nicotine-dependence-severity) GWAS hit at this locus; (c) any lung/airway single-cell or functional dataset directly testing RBFOX1.</p>
 
+        </div>
+    </div>
 </body>
 </html>

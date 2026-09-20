@@ -1,376 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>20_63100001-64250000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 20:63,100,001-64,250,000 (GRCh38)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-2063100001-64250000-grch38">Evidence table — locus 20:63,100,001-64,250,000 (GRCh38)</h1>
-<p>Lead/sole credible-set variant: rs6011779 (20:63,352,965, PIP=0.99999999, intron_variant,
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-2063100001-64250000-grch38">Evidence table — locus 20:63,100,001-64,250,000 (GRCh38)</h1><div class="summary"><p>Lead/sole credible-set variant: rs6011779 (20:63,352,965, PIP=0.99999999, intron_variant,
 MODIFIER, annotated gene = CHRNA4). No FLAMES/MAGMA/PoPS/ABC prioritized genes were listed for
 this locus in the original candidate-gene input file. CHRNA4 is the sole candidate gene from the
-internal fine-mapping/prioritization pipeline as originally generated.</p>
-<p><strong>UPDATE (2026-09-11, targeted re-opening):</strong> the study team discovered a genome-build error in
+internal fine-mapping/prioritization pipeline as originally generated.</p><p><strong>UPDATE (2026-09-11, targeted re-opening):</strong> the study team discovered a genome-build error in
 the MAGMA/PoPS gene-location merge file used to generate <code>loci/copd-all-gene-prioritization.txt</code>.
 A corrected re-merge surfaced <strong>TCEA2</strong> as a new candidate gene for this locus, never evaluated in
 the original review. TCEA2 was independently confirmed (via Open Targets/Ensembl genomic
@@ -381,8 +63,10 @@ build-mismatch artifact. TCEA2's evidence and the resulting revised synthesis ar
 none of the original CHRNA4/RTEL1 evidence, verdicts, or the original critique were altered,
 discarded, or re-verified — this is an additive update. Only citations with verifier verdict
 VERIFIED are included below; see <code>audits/20_63100001-64250000_audit.md</code> for excluded citations and
-the full red-team critique (original and TCEA2 addendum).</p>
-<table>
+the full red-team critique (original and TCEA2 addendum).</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -395,7 +79,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 </thead>
 <tbody>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Monogenic/CNS channelopathy (founding report)</td>
 <td>S248F missense mutation in CHRNA4 (TM2 domain) identified as cause of autosomal dominant nocturnal frontal lobe epilepsy (ADNFLE) via linkage to chr20q13.2-q13.3</td>
 <td>Steinlein et al. 1995, PMID 7550350, DOI 10.1038/ng1095-201</td>
@@ -403,15 +87,15 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Statistical genetics (rare variant, cross-phenotype)</td>
-<td>Rare CHRNA4 missense variant R336C (Icelandic, AF 0.24%) associated with nicotine addiction severity (Fagerstrom score) and with COPD (OR 1.7-2.3, P=9.3e-4), early-onset COPD (OR=3.22), lung cancer, PAD, AAA — mirrors the classic CHRNA5 D398N &quot;smoking-disease&quot; signature; functional data show reduced agonist sensitivity in the mutant channel</td>
+<td>Rare CHRNA4 missense variant R336C (Icelandic, AF 0.24%) associated with nicotine addiction severity (Fagerstrom score) and with COPD (OR 1.7-2.3, P=9.3e-4), early-onset COPD (OR=3.22), lung cancer, PAD, AAA — mirrors the classic CHRNA5 D398N "smoking-disease" signature; functional data show reduced agonist sensitivity in the mutant channel</td>
 <td>Thorgeirsson et al. 2016, PMID 26952864, DOI 10.1038/mp.2016.13</td>
 <td>Strongest direct CHRNA4-COPD variant-level evidence; explicitly framed by original authors as smoking-consequence-mediated (nicotine reward/intake), not a lung-autonomous mechanism</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Statistical genetics (nicotine dependence)</td>
 <td>CHRNA4 SNPs show population-dependent (opposite direction of effect in African- vs European-Americans) association with nicotine dependence risk</td>
 <td>Saccone et al. 2010, PMID 20584212, DOI 10.1111/j.1601-183X.2010.00608.x</td>
@@ -419,7 +103,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Statistical genetics (large-scale smoking-behavior GWAS)</td>
 <td>Multi-cohort GWAS of smoking initiation/cessation/heaviness/alcohol use (406 loci) implicating nicotinic receptor gene family (CHRN genes) generally</td>
 <td>Liu et al. (GSCAN) 2019, PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
@@ -427,7 +111,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Statistical genetics (nicotine dependence GWAS)</td>
 <td>CHRNA4 among genes supported by both Fagerstrom Test for Nicotine Dependence (FTND) and time-to-first-cigarette (TTFC) phenotypes in a genome-wide meta-analysis</td>
 <td>Chen et al. 2020, PMID 31294817, DOI 10.1093/ntr/ntz099</td>
@@ -435,7 +119,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Pharmacogenetics (systematic review)</td>
 <td>CHRNA4 among genes with evidence of moderating smoking-cessation pharmacotherapy response</td>
 <td>Salloum et al. 2018, PMID 29914292, DOI 10.2217/pgs-2018-0023</td>
@@ -443,7 +127,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Pharmacogenetics (candidate gene, partly null)</td>
 <td>CHRNA4, CHRNA5, CHRNB2 genotyped in smoking-cessation pharmacotherapy trial; the significant hit in this study was CHRNA5, not CHRNA4</td>
 <td>Pintarelli et al. 2017, PMID 29196725, DOI 10.1038/s41598-017-16946-6</td>
@@ -451,7 +135,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Statistical genetics (candidate gene)</td>
 <td>CHRNA4 variants (rs1044396, rs2229959) associated with smoking-cessation success/failure after lung cancer diagnosis</td>
 <td>Gu et al. 2019, PMID 31402126, DOI 10.1016/j.cllc.2019.07.002</td>
@@ -459,7 +143,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Statistical genetics (candidate gene, interaction analysis)</td>
 <td>Significant statistical interaction involving CHRNA4/CHRNB2/CHRNA5 variants and nicotine-dependence severity (FTND) in a Chinese Han cohort; CHRNA4 not the top single-variant hit</td>
 <td>Liu Q et al. 2018, PMID 29666375, DOI 10.1038/s41398-018-0130-x</td>
@@ -467,7 +151,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Statistical genetics (candidate gene)</td>
 <td>CHRNA4 risk haplotype more frequent among smokers with high nicotine-withdrawal and depressive-symptom scores</td>
 <td>Csala et al. 2017, PMID 29411706</td>
@@ -475,7 +159,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Statistical genetics (cross-trait colocalization, negative result)</td>
 <td>Tested colocalization between schizophrenia and smoking-behavior GWAS signals at CHRNA2, CHRNA5/A3/B4, and CHRNA4; found colocalization at CHRNA2 but NOT at CHRNA4 (independent, non-colocalizing signals)</td>
 <td>Al-Soufi &amp; Costas 2021, PMID 33454625, DOI 10.1016/j.drugalcdep.2021.108517</td>
@@ -483,7 +167,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Structural/mechanistic (ion channel electrophysiology)</td>
 <td>CHRNA4 missense variant (p.Arg360Gln) found in insular epilepsy patient; homologous CHRNB2 mutant showed significantly higher (gain-of-function) whole-cell nicotinic current than wild-type</td>
 <td>Cadieux-Dion et al. 2020, PMID 32536355, DOI 10.1017/cjn.2020.126</td>
@@ -491,7 +175,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Structural/mechanistic (review)</td>
 <td>ADSHE/ADNFLE-causing CHRNA4 (and CHRNB2, CHRNA2) mutations alter alpha4beta2 nAChR channel kinetics/excitability in neocortical circuits and affect postnatal synaptogenesis</td>
 <td>Becchetti et al. 2020, PMID 33255633, DOI 10.3390/brainsci10120907</td>
@@ -499,7 +183,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Clinical case series (monogenic epilepsy)</td>
 <td>Novel CHRNA4 (and CHRNB2) pathogenic mutations identified in sleep-related hypermotor epilepsy patients</td>
 <td>Arenas-Cabrera et al. 2022, PMID 35177946, DOI 10.1177/11795735211060114</td>
@@ -507,15 +191,15 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Mechanistic (in vitro, airway epithelium)</td>
 <td>In cigarette-smoke-extract-exposed human bronchial epithelial cells, CHRNA4 is a direct target of miR-380; CHRNA4 mRNA lower in COPD patient samples and CSE model; miR-380 overexpression worsened CSE-induced epithelial injury/apoptosis/inflammation, reversed by CHRNA4 knockdown/rescue</td>
 <td>Wu 2019, PMID 31821848, DOI 10.1016/j.mcp.2019.101492</td>
-<td>CONTESTED/WEAKENED: single-author paper in a lower-tier journal, no independent replication found, and the model is entirely cigarette-smoke-exposure-conditional — does not establish a lung-autonomous mechanism independent of smoking; should not be used to counterbalance the Bazemore 2024 mediation result</td>
+<td><span class="tag-warning">WEAKENED</span>CONTESTED/: single-author paper in a lower-tier journal, no independent replication found, and the model is entirely cigarette-smoke-exposure-conditional — does not establish a lung-autonomous mechanism independent of smoking; should not be used to counterbalance the Bazemore 2024 mediation result</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Statistical genetics (formal mediation analysis)</td>
 <td>UK Biobank (n=337,138): CHRNA4 locus overlaps both ICD-defined and spirometry-defined COPD GWAS signals and heavy-smoking GWAS; formal mediation analysis found a significant smoking-mediated (indirect) effect of the CHRNA4 locus on COPD for both case definitions, with the smoking-mediated proportion for spirometry-defined COPD increasing further (+8.47 percentage points) after adjusting for mediator-outcome confounders</td>
 <td>Bazemore et al. 2024, PMID 38827081, PMC PMC11141825</td>
@@ -523,7 +207,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA4</td>
+<td class="gene">CHRNA4</td>
 <td>Statistical genetics (cross-ancestry GWAS replication)</td>
 <td>In a Taiwanese COPD GWAS (5,442 cases/17,681 controls), CHRNA4 (among 13 loci) replicated as a susceptibility locus previously reported in other (presumably European-ancestry) populations</td>
 <td>Lin et al. 2024, PMID 38886662, DOI 10.1186/s12864-024-10526-5</td>
@@ -531,7 +215,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RTEL1</td>
+<td class="gene">RTEL1</td>
 <td>Structural/developmental lung biology (review)</td>
 <td>Rare mutations and common SNPs in telomere-related genes including RTEL1, TERT, TERC, OBFC1 cause/are risk factors for pulmonary disease dominated by pulmonary fibrosis (idiopathic and familial), with emphysema/pulmonary vascular disease as less common phenotypes; telomere-related mutations account for up to ~1% of COPD cases</td>
 <td>Hoffman et al. 2018, PMID 29474209, DOI 10.1097/MCP.0000000000000475</td>
@@ -539,7 +223,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCEA2</td>
+<td class="gene">TCEA2</td>
 <td>Gene identity/developmental biology</td>
 <td>Human TCEA2 is a distinct, intron-containing TFIIS-family paralog of the ubiquitously-expressed TCEA1, expressed primarily in testis</td>
 <td>Weaver &amp; Kane 1997, PMID 9441762, DOI 10.1006/geno.1997.5073</td>
@@ -547,7 +231,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCEA2</td>
+<td class="gene">TCEA2</td>
 <td>Structural/developmental biology (mouse ortholog)</td>
 <td>Mouse ortholog SII-T1 (Tcea2) expressed exclusively in spermatocytes, with no appreciable expression in spermatogonia, spermatids, or Leydig cells</td>
 <td>Ito et al. 1996, PMID 8641458, DOI 10.1016/0014-5793(96)00340-7</td>
@@ -555,7 +239,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCEA2</td>
+<td class="gene">TCEA2</td>
 <td>Structural/developmental biology (mouse ortholog, temporal expression)</td>
 <td>Mouse S-II-T1 (Tcea2 ortholog) transcripts absent in premeiotic/early-meiotic germ cells, appear at meiotic pachytene, persist into postmeiotic haploid spermatids; expression abolished in W/Wv mice lacking germ cells entirely</td>
 <td>Umehara et al. 1997, PMID 9133631, DOI 10.1093/oxfordjournals.jbchem.a021627</td>
@@ -563,7 +247,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCEA2</td>
+<td class="gene">TCEA2</td>
 <td>Structural/developmental biology (gene structure, background)</td>
 <td>Confirms paralog/gene-structure relationship and testis-specificity contrast between ubiquitous Tcea1 and testis-specific Tcea2</td>
 <td>Ito et al. 2000, PMID 10689187, DOI 10.1016/s0378-1119(00)00007-x</td>
@@ -571,7 +255,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCEA2</td>
+<td class="gene">TCEA2</td>
 <td>Mechanistic (genome stability, disease-agnostic)</td>
 <td>CUL3-KCTD10 E3 ubiquitin ligase senses co-directional transcription-replication conflicts and ubiquitinates/removes TCEA2 to permit replisome bypass; loss of KCTD10 causes TCEA2/RNA Pol II retention, conflict accumulation, and increased DNA damage</td>
 <td>Kloeber et al. 2025, PMID 41062692, DOI 10.1038/s41586-025-09585-9</td>
@@ -579,7 +263,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCEA2</td>
+<td class="gene">TCEA2</td>
 <td>Mechanistic (review)</td>
 <td>Reviews the KCTD10-TCEA2 ubiquitination axis in transcription-replication conflict resolution</td>
 <td>Chen et al. 2026, PMID 42128708, DOI 10.1016/j.tcb.2026.04.010</td>
@@ -587,7 +271,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCEA2</td>
+<td class="gene">TCEA2</td>
 <td>Mechanistic (DNA damage/cancer biology)</td>
 <td>TCEA2 identified as a genetic/protein interactor of BRCA1 in the response to transcription-associated DNA damage</td>
 <td>Hill et al. 2014, PMID 25184681, DOI 10.1101/gad.241620.114</td>
@@ -595,7 +279,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCEA2</td>
+<td class="gene">TCEA2</td>
 <td>Statistical genetics (proteome-wide MR, non-pulmonary phenotype)</td>
 <td>Genetically predicted circulating TCEA2 protein levels (cis-pQTL, ARIC + Icelandic cohorts) inversely associated with chronic kidney disease (CKD) risk by two-sample MR, with colocalization support for CKD, eGFRcrea, and eGFR</td>
 <td>Zhao et al. 2024, PMID 39333727, DOI 10.1038/s41598-024-72970-3</td>
@@ -603,15 +287,15 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCEA2</td>
+<td class="gene">TCEA2</td>
 <td>Statistical genetics (proteome-wide MR, non-pulmonary phenotype)</td>
-<td>TCEA2 among a broader (non-top-5) tier of MR-supported CKD/kidney-function candidate targets; panel-level (not TCEA2-specific) GO enrichment for &quot;immunity-related pathways&quot; noted across a 32-protein panel collectively</td>
+<td>TCEA2 among a broader (non-top-5) tier of MR-supported CKD/kidney-function candidate targets; panel-level (not TCEA2-specific) GO enrichment for "immunity-related pathways" noted across a 32-protein panel collectively</td>
 <td>Si et al. 2024, PMID 38898508, DOI 10.1186/s13073-024-01356-x</td>
-<td>The &quot;immunity-related pathways&quot; note is explicitly panel-level, not demonstrated for TCEA2 individually — should not be cited as TCEA2-specific immune evidence; renal, not pulmonary, phenotype</td>
+<td>The "immunity-related pathways" note is explicitly panel-level, not demonstrated for TCEA2 individually — should not be cited as TCEA2-specific immune evidence; renal, not pulmonary, phenotype</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCEA2</td>
+<td class="gene">TCEA2</td>
 <td>Incidental cancer/other-tissue genomics (not COPD-relevant; retained for transparency only)</td>
 <td>TCEA2 appears as one of several genes in unrelated screens: a prostate-cancer CRISPR drug-resistance screen (not individually validated), a multiple-myeloma bortezomib-resistance transcriptome, an FXR-responsive hepatocyte chemoresistance gene set, a chromosome-20q overexpression list in cervical cancer, and a cord-blood DNA-methylation mediator of maternal-obesity effects on birth weight</td>
 <td>Haldrup et al. 2023 (PMID 37270558); Jiang et al. 2022 (PMID 35389552); Vaquero et al. 2013 (PMID 23680185); Scotto et al. 2008 (PMID 18506748); De Silva et al. 2025 (PMID 41163109)</td>
@@ -619,7 +303,7 @@ the full red-team critique (original and TCEA2 addendum).</p>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not">Open Targets summary (structured database lookup — NOT a verified literature citation; not</h2>
 <p>reviewed by citation-verifier or red-team-skeptic)</p>
 <p><strong>CHRNA4</strong> (Ensembl ENSG00000101204):</p>
@@ -641,8 +325,8 @@ exceed smoking-behavior-trait L2G at this locus.</li>
 <li>Colocalization: GWAS-GWAS colocalization (COLOC_PIP_ECAVIAR, H4&gt;0.95) links the COPD credible
 set to smoking initiation, tobacco use disorder, nicotine dependence, cigarettes/day, maternal
 smoking around birth, ever smoker, smoking cessation, lifetime smoking index, multiple COPD/
-bronchitis definitions, lung cancer, atherosclerosis, white blood cell count, and an &quot;unhealthy
-lifestyle&quot; frailty factor — one shared genetic signal underlies all of these traits jointly (does
+bronchitis definitions, lung cancer, atherosclerosis, white blood cell count, and an "unhealthy
+lifestyle" frailty factor — one shared genetic signal underlies all of these traits jointly (does
 not by itself establish causal direction). Only ONE molecular-QTL colocalization was found: a
 GTEx BRAIN CORTEX exon-usage QTL for CHRNA4 (H4=0.997) — no lung-tissue eQTL/sQTL/pQTL
 colocalization was found for any gene at this locus, including CHRNA4 itself.</li>
@@ -662,7 +346,7 @@ within this locus's declared window (20:63,100,001-64,250,000), but the most phy
 of the three genes discussed at this locus from the sole credible-set variant rs6011779
 (~697 kb away, versus RTEL1 ~305 kb and CHRNA4 0 kb/intronic).</li>
 <li>Genetic constraint (gnomAD): LoF oe=0.503 (90% CI 0.356–0.724) — modestly more LoF-constrained
-than CHRNA4 (oe=0.609) but not in the conventional &quot;strongly constrained&quot; (&lt;0.35) range.</li>
+than CHRNA4 (oe=0.609) but not in the conventional "strongly constrained" (&lt;0.35) range.</li>
 <li>Target-disease association scores (aggregated, all evidence types, full list of 55 diseases):
 dominated by cardiometabolic/endocrine traits — hypertensive disorder (top, 0.376),
 hypothyroidism (0.320), hypercholesterolemia (0.306), diabetes mellitus (0.305), skeletal
@@ -672,7 +356,7 @@ abnormality (0.303), ovarian cancer (0.281), neurodegenerative disease (0.276), 
 metabolic syndrome (0.104). <strong>No COPD, chronic bronchitis, chronic airway obstruction, pulmonary
 emphysema, chronic lung disease, nicotine dependence, smoking initiation, smoking cessation, or
 FEV1/FVC association appears anywhere in this list</strong> — the only respiratory-adjacent entry is
-&quot;non-small cell lung carcinoma&quot; at a near-zero score (0.0015).</li>
+"non-small cell lung carcinoma" at a near-zero score (0.0015).</li>
 <li>Locus-to-gene (L2G): independently re-queried across all 45 credible sets overlapping
 rs6011779 — TCEA2 never receives an L2G score in any of them (identical null result to every
 other non-CHRNA4 gene at this locus, including RTEL1).</li>
@@ -683,7 +367,7 @@ for this locus) was not available to this pipeline run — only the original, bu
 <code>loci/copd-all-gene-prioritization.txt</code> was accessible, and it does not list TCEA2 for this
 locus at all. TCEA2's actual MAGMA Z-score/p-value or PoPS score in the corrected file could
 therefore NOT be independently confirmed; only physical genomic-coordinate overlap was verified.
-The red-team-skeptic flagged this explicitly: treat &quot;TCEA2 surfaced from the corrected re-merge&quot;
+The red-team-skeptic flagged this explicitly: treat "TCEA2 surfaced from the corrected re-merge"
 as an unconfirmed prioritization strength, separate from the confirmed physical overlap.</li>
 </ul>
 <h2 id="prioritized-gene">Prioritized gene</h2>
@@ -700,7 +384,7 @@ signal. No competing gene in the ~1.15 Mb region — including the newly-added T
 a MAGMA/PoPS/ABC/FLAMES or L2G signal at this locus's credible set.</p>
 <p>However, two considerations (both unchanged from the original review) keep confidence at MODERATE
 rather than HIGH, per the red-team critique (verdict: WEAKENED on the mechanism question) — and
-consistent with &quot;never claim more certainty than the weakest link allows&quot;:</p>
+consistent with "never claim more certainty than the weakest link allows":</p>
 <ol>
 <li><strong>Mechanism, not just identity, matters for how this locus should be interpreted.</strong> The best
 direct test available (Bazemore et al. 2024's formal mediation analysis, PMID 38827081) found
@@ -723,7 +407,7 @@ on (a) the credible-set variant being intronic within CHRNA4 with PIP~1.0, and (
 receiving an L2G score at this locus — but the red-team-skeptic has now, on two separate
 occasions (the original review and this 2026-09-11 re-opening), disclosed that its own
 independent search budget was exhausted before it could run a targeted RTEL1-specific check
-(GTEx lung eQTL near rs6011779; &quot;RTEL1 COPD/emphysema&quot; literature search; a named Open Targets
+(GTEx lung eQTL near rs6011779; "RTEL1 COPD/emphysema" literature search; a named Open Targets
 L2G/coloc query for RTEL1 specifically). This remains an open gap, not a confirmed absence of
 RTEL1 evidence.</li>
 </ol>
@@ -753,7 +437,7 @@ excluded alternative given two independent unresolved search-budget gaps).</p>
 <p><strong>What would resolve the remaining uncertainty:</strong> (1) a dedicated Open Targets/GTEx lung-tissue
 eQTL or sQTL query for RTEL1 near rs6011779, to positively confirm or rule out any regulatory
 link — attempted and not completed in both the original review and this re-opening; (2) a targeted
-PubMed search for &quot;RTEL1 COPD&quot; / &quot;RTEL1 emphysema&quot; — likewise attempted and not completed twice;
+PubMed search for "RTEL1 COPD" / "RTEL1 emphysema" — likewise attempted and not completed twice;
 (3) additional mediation or stratified analyses (e.g., never-smoker COPD cohorts) to further
 quantify the smoking-independent residual effect, if any, of the CHRNA4 locus on COPD risk; (4)
 independent confirmation of TCEA2's actual MAGMA Z-score/p-value or PoPS score in the corrected
@@ -761,5 +445,7 @@ re-merge file (not available to this pipeline run), to establish whether TCEA2 w
 statistically-ranked candidate at this locus or merely a gene whose physical coordinates now
 correctly fall inside the window without a strong statistical signal of its own.</p>
 
+        </div>
+    </div>
 </body>
 </html>

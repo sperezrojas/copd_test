@@ -1,382 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>18_55400001-55650000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 18:55,400,001-55,650,000 (nearest gene: TCF4)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-1855400001-55650000-nearest-gene-tcf4">Evidence table — Locus 18:55,400,001-55,650,000 (nearest gene: TCF4)</h1>
-<p><strong>Lead variant:</strong> rs596668 (PIP=0.684, 18:55,597,112, non_coding_transcript_exon_variant, no
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-1855400001-55650000-nearest-gene-tcf4">Evidence table — Locus 18:55,400,001-55,650,000 (nearest gene: TCF4)</h1><div class="summary"><p><strong>Lead variant:</strong> rs596668 (PIP=0.684, 18:55,597,112, non_coding_transcript_exon_variant, no
 gene annotation). Six additional credible-set variants (rs618869, rs599550, rs1452788,
-rs613872, rs896686, rs2924329; PIP 0.0017-0.271) are all intronic and annotated to TCF4.</p>
-<p><strong>Gene identity note:</strong> &quot;TCF4&quot; throughout this table refers exclusively to the chr18 bHLH
+rs613872, rs896686, rs2924329; PIP 0.0017-0.271) are all intronic and annotated to TCF4.</p><p><strong>Gene identity note:</strong> "TCF4" throughout this table refers exclusively to the chr18 bHLH
 transcription factor E2-2/ITF2 (Ensembl ENSG00000196628, 18:55,222,185-55,664,787, GRCh38;
 the Pitt-Hopkins syndrome gene) — NOT TCF7L2 (chr10, Wnt/beta-catenin pathway transcription
-factor, sometimes informally also called &quot;TCF4&quot; in older literature and reviewed separately at
+factor, sometimes informally also called "TCF4" in older literature and reviewed separately at
 a chr10 locus earlier in this project). One candidate source (Guo et al., PMID 26322419) was
 excluded from this table because citation-verifier and the researcher agree it is very likely
-actually about TCF7L2 under old nomenclature, not this locus's gene — see audit appendix.</p>
-<table>
+actually about TCF7L2 under old nomenclature, not this locus's gene — see audit appendix.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -389,7 +73,7 @@ actually about TCF7L2 under old nomenclature, not this locus's gene — see audi
 </thead>
 <tbody>
 <tr>
-<td>TCF4</td>
+<td class="gene">TCF4</td>
 <td>Statistical genetics (COPD case-control GWAS)</td>
 <td>Reference COPD case-control GWAS (ICGC/UKB, 35,735 cases/222,076 controls) defining 82 genome-wide-significant COPD loci; whether chr18:~55.5Mb is among the 82 loci is unconfirmed from the abstract/available text</td>
 <td>PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
@@ -397,7 +81,7 @@ actually about TCF7L2 under old nomenclature, not this locus's gene — see audi
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCF4</td>
+<td class="gene">TCF4</td>
 <td>Statistical genetics (lung-function GWAS)</td>
 <td>Reference spirometry GWAS (SpiroMeta/UKB, 400,102 Europeans) defining 279 signals for FEV1/FVC/FEV1-FVC ratio/PEF (139 new), predictive of COPD and generalizing across smoking status; whether TCF4/18q21.2 is specifically named among the 279 signals is unconfirmed from the abstract/available text</td>
 <td>PMID 30804560 / DOI 10.1038/s41588-018-0321-7</td>
@@ -405,7 +89,7 @@ actually about TCF7L2 under old nomenclature, not this locus's gene — see audi
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCF4</td>
+<td class="gene">TCF4</td>
 <td>Statistical genetics (smoking-behavior GWAS)</td>
 <td>Reference GSCAN GWAS of smoking initiation/cessation/cigarettes-per-day/alcohol use (406 loci, up to 1.2M individuals); whether chr18:~55.5Mb is among the reported loci for any smoking trait is unconfirmed from the abstract/available text</td>
 <td>PMID 30643251 / DOI 10.1038/s41588-018-0307-5</td>
@@ -413,7 +97,7 @@ actually about TCF7L2 under old nomenclature, not this locus's gene — see audi
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCF4</td>
+<td class="gene">TCF4</td>
 <td>Statistical genetics / CNS-behavioral (smoking gene-environment interaction)</td>
 <td>Review documents a published gene x environment interaction between TCF4 risk alleles and smoking behaviour, specifically associated with disrupted early information processing (a schizophrenia-relevant endophenotype, not a COPD/lung phenotype); also establishes TCF4 as a repeatedly replicated schizophrenia-GWAS gene and the Pitt-Hopkins syndrome haploinsufficiency gene</td>
 <td>PMID 24413739 / DOI 10.1007/s00018-013-1553-4</td>
@@ -421,7 +105,7 @@ actually about TCF7L2 under old nomenclature, not this locus's gene — see audi
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCF4</td>
+<td class="gene">TCF4</td>
 <td>Immune / inflammatory biology</td>
 <td>E2-2/TCF4 is preferentially expressed in plasmacytoid dendritic cells (pDCs) and is required for pDC lineage specification and type-I interferon response to viral nucleic acids in mice and humans, including Pitt-Hopkins syndrome patients (aberrant pDC gene expression, impaired IFN response); general innate-immune/antiviral mechanism, not COPD-specific</td>
 <td>PMID 18854153 / DOI 10.1016/j.cell.2008.09.016</td>
@@ -429,7 +113,7 @@ actually about TCF7L2 under old nomenclature, not this locus's gene — see audi
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCF4</td>
+<td class="gene">TCF4</td>
 <td>Immune / inflammatory biology (non-lung context)</td>
 <td>STAT3/E2-2 signaling pathway regulates pDC differentiation in the context of recurrent spontaneous abortion (general pDC biology; not airway/lung-specific)</td>
 <td>PMID 34240166 / DOI 10.1093/molehr/gaab044</td>
@@ -437,7 +121,7 @@ actually about TCF7L2 under old nomenclature, not this locus's gene — see audi
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCF4</td>
+<td class="gene">TCF4</td>
 <td>Immune / inflammatory biology (non-lung context)</td>
 <td>Dendritic-cell E2-2 expression changes correlate with serum autoantibody/complement components in systemic lupus erythematosus (general pDC/mDC biology; not airway/lung-specific)</td>
 <td>PMID 32730703 / DOI 10.18388/abp.2020_5416</td>
@@ -445,7 +129,7 @@ actually about TCF7L2 under old nomenclature, not this locus's gene — see audi
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCF4</td>
+<td class="gene">TCF4</td>
 <td>Statistical genetics + immune (integrative single-cell regulon analysis)</td>
 <td>2026 integrative genomics paper modeling a shared genetic-liability factor across COPD/asthma/bronchiectasis/CRSsNP; single-cell regulon analysis (scMORE) identifies a TCF4 regulon among 36 significant regulon-cell-type pairs in pDCs/B cells, alongside BCL11A, SPIB, KLF4, RUNX1, STAT4 regulons, as part of a shared airway-immune-regulatory program</td>
 <td>PMID 42653451 / DOI 10.3390/ijms27167450</td>
@@ -453,7 +137,7 @@ actually about TCF7L2 under old nomenclature, not this locus's gene — see audi
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP8B1</td>
+<td class="gene">ATP8B1</td>
 <td>Molecular mechanism (biochemistry)</td>
 <td>ATP8B1 (with ATP8B2) requires a CDC50 subunit for ER export and catalytic phosphorylation as part of the P4-ATPase phospholipid-flippase machinery; general biochemistry, no lung/COPD relevance</td>
 <td>PMID 20961850 / DOI 10.1074/jbc.M110.139543</td>
@@ -461,7 +145,7 @@ actually about TCF7L2 under old nomenclature, not this locus's gene — see audi
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP8B1</td>
+<td class="gene">ATP8B1</td>
 <td>Structural / developmental lung biology (mouse model)</td>
 <td>Atp8b1 mutant mice (described as having a cardiolipin transporter in the apical membrane of lung epithelial cells) show exacerbated alveolar epithelial apoptosis and aberrant club-cell proliferation under hyperoxic stress, followed by patchy interstitial fibrosis resembling human idiopathic pulmonary fibrosis (IPF)</td>
 <td>PMID 30636723 / DOI 10.18632/aging.101742</td>
@@ -469,7 +153,7 @@ actually about TCF7L2 under old nomenclature, not this locus's gene — see audi
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP8B1</td>
+<td class="gene">ATP8B1</td>
 <td>Structural / developmental lung biology (mouse model)</td>
 <td>Same/related Atp8b1 mutant mouse model shows MMP7 upregulation (a recognized IPF biomarker regulating ciliogenesis) and abnormal ciliated/club-cell apical morphology in aged lung</td>
 <td>PMID 35204783 / DOI 10.3390/biom12020283</td>
@@ -477,11 +161,11 @@ actually about TCF7L2 under old nomenclature, not this locus's gene — see audi
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary">Open Targets summary</h2>
 <p><strong>Structured database lookup only — not a verified literature citation. Not reviewed by
 citation-verifier or red-team-skeptic. Queried live via Open Targets GraphQL API, 2026-09-11.</strong></p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -494,15 +178,15 @@ citation-verifier or red-team-skeptic. Queried live via Open Targets GraphQL API
 </thead>
 <tbody>
 <tr>
-<td>TCF4 (ENSG00000196628)</td>
+<td class="gene">TCF4 (ENSG00000196628)</td>
 <td>Yes — gene body 18:55,222,185-55,664,787 overlaps locus window</td>
 <td>LoF oe=0.037 (95% CI 0.016-0.096) — extremely intolerant; missense oe=0.578, z=4.58</td>
 <td>Overall score 0.0089, driven entirely by literature text-mining (europepmc 0.073); NO gwas_credible_sets (genetics/colocalization) evidence for COPD case/control status</td>
-<td>&quot;Pulmonary function measurement&quot; (EFO_0003892): score 0.447, gwas_credible_sets datasource score 0.735, TCF4 the sole gene with any evidence for this trait. FEV1 (EFO_0004314): score 0.413, gwas_credible_sets 0.680, again sole gene with evidence. FEV1/FVC ratio (EFO_0004713): no evidence for either gene.</td>
+<td>"Pulmonary function measurement" (EFO_0003892): score 0.447, gwas_credible_sets datasource score 0.735, TCF4 the sole gene with any evidence for this trait. FEV1 (EFO_0004314): score 0.413, gwas_credible_sets 0.680, again sole gene with evidence. FEV1/FVC ratio (EFO_0004713): no evidence for either gene.</td>
 <td>TCF4 is the L2G-assigned causal gene (score ~0.79) for a forced vital capacity (FVC) GWAS credible set at this exact variant, and is ALSO the L2G-assigned gene for ~147 other GWAS credible sets at this same variant across a very wide range of unrelated traits (lipids, blood counts, educational attainment, mood/loneliness/PTSD, blood pressure, renal function, Fuchs corneal dystrophy, hearing loss, grip strength, etc., scores ~0.65-0.91). No COPD-labeled credible set appears among these 147. This indicates extreme locus pleiotropy: TCF4 is essentially the default L2G/nearest-gene call for almost any trait fine-mapped at this variant.</td>
 </tr>
 <tr>
-<td>ATP8B1 (ENSG00000081923)</td>
+<td class="gene">ATP8B1 (ENSG00000081923)</td>
 <td>No — gene body 18:57,646,426-57,803,560 sits ~2.0-2.4 Mb telomeric of the locus window and of every credible-set variant; flagged only by PoPS (genome-wide, distance-agnostic method), not by FLAMES/MAGMA/ABC</td>
 <td>LoF oe=0.513 (95% CI 0.426-0.620) — much more tolerant than TCF4; missense oe=0.770, z=3.34</td>
 <td>Overall score 0.259, driven by gwas_credible_sets datasource score 0.426 (plus small europepmc contribution 0.012) — a real genetics-based COPD signal in Open Targets. However, the specific variant/study underlying this evidence could not be resolved via the API (Evidence query returned null variant/study fields, only a resourceScore of 0.70); given ATP8B1's ~2 Mb distance from this locus and the absence of any COPD-labeled credible set at rs596668 itself, this evidence more plausibly reflects an independent, more local COPD GWAS signal near ATP8B1's own gene body than a shared signal with this locus — unresolved.</td>
@@ -510,7 +194,7 @@ citation-verifier or red-team-skeptic. Queried live via Open Targets GraphQL API
 <td>Not linked to rs596668 in Open Targets credible-set data at all</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>Prioritized gene: TCF4. Confidence: LOW.</strong></p>
 <p>TCF4 is the only gene with a direct positional/mechanistic tie to this locus: it is the nearest
@@ -563,5 +247,7 @@ this locus given the distance and CONTESTED fibrosis-phenotype mismatch, but its
 evidence (independent of this locus) may warrant separate follow-up given it is real, just
 seemingly unconnected to this credible set.</p>
 
+        </div>
+    </div>
 </body>
 </html>

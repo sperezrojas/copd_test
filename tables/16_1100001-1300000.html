@@ -1,383 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>16_1100001-1300000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 16:1100001-1300000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-161100001-1300000-nearest-gene-cacna1h">Evidence table — Locus 16:1100001-1300000 (nearest gene CACNA1H)</h1>
-<p><strong>Lead variant:</strong> rs35395847 (16:1198890, GRCh38, intron_variant in CACNA1H, PIP=0.767)
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-161100001-1300000-nearest-gene-cacna1h">Evidence Table — Locus 16:1100001-1300000</h1><div class="summary"><p><strong>Lead variant:</strong> rs35395847 (16:1198890, GRCh38, intron_variant in CACNA1H, PIP=0.767)
 <strong>Credible set:</strong> 15 variants; 13/15 (cumulative PIP ~0.98) annotated to CACNA1H, including two
 missense variants (rs61734410 p.Pro640Leu PIP=0.044; rs4984636 PIP=0.001); one very-low-PIP variant
 (rs76707057, PIP=0.0016) annotated to TPSP2.
 <strong>PoPS-prioritized gene:</strong> TPSG1. No FLAMES/MAGMA/ABC gene given.
 <strong>Additional in-region genes</strong> (identified by the researcher via Ensembl enumeration of the locus
 boundaries, not flagged by any internal prioritization method or credible-set variant): TPSB2,
-TPSAB1, TPSD1, UBE2I.</p>
-<p>All citations below carry a VERIFIED verdict from citation-verifier (existence, non-retraction, and
+TPSAB1, TPSD1, UBE2I.</p><p>All citations below carry a VERIFIED verdict from citation-verifier (existence, non-retraction, and
 claim-accuracy all confirmed against source abstracts). See
-<code>evidence_tables/_status/16_1100001-1300000/verified_citations.md</code> for the full verification record.</p>
-<table>
+<code>evidence_tables/_status/16_1100001-1300000/verified_citations.md</code> for the full verification record.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -390,47 +74,47 @@ claim-accuracy all confirmed against source abstracts). See
 </thead>
 <tbody>
 <tr>
-<td>CACNA1H</td>
+<td class="gene">CACNA1H</td>
 <td>Statistical genetics (Mendelian, endocrine)</td>
 <td>Recurrent de novo/heterozygous CACNA1H p.Met1549Val gain-of-function mutation causes early-onset primary aldosteronism/hypertension (familial hyperaldosteronism type IV) — an adrenal/endocrine phenotype unrelated to this locus's credible-set variants</td>
 <td>Scholl et al. 2015, eLife, PMID 25907736 / DOI 10.7554/eLife.06315</td>
-<td>CONTESTED (gene-level; see below)</td>
+<td><span class="tag-warning">CONTESTED</span> (gene-level; see below)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CACNA1H</td>
+<td class="gene">CACNA1H</td>
 <td>Statistical genetics (review)</td>
 <td>Reviews CACNA1H germline mutations as the cause of familial hyperaldosteronism type IV</td>
 <td>Korah &amp; Scholl 2015, Horm Metab Res, PMID 26445452 / DOI 10.1055/s-0035-1564166</td>
-<td>CONTESTED (gene-level)</td>
+<td><span class="tag-warning">CONTESTED</span> (gene-level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CACNA1H</td>
+<td class="gene">CACNA1H</td>
 <td>Statistical genetics (consensus review)</td>
 <td>Confirms CACNA1H mutations cause FH-IV, distinct from CACNA1D-driven PASNA syndrome</td>
 <td>Zennaro &amp; Jeunemaitre 2016, Ann Endocrinol (Paris), PMID 27315758 / DOI 10.1016/j.ando.2016.02.006</td>
-<td>CONTESTED (gene-level)</td>
+<td><span class="tag-warning">CONTESTED</span> (gene-level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CACNA1H</td>
+<td class="gene">CACNA1H</td>
 <td>Structural/mechanistic (mouse, endocrine)</td>
 <td>CACNA1H gain-of-function knock-in mice recapitulate mild primary aldosteronism/hypertension; no pulmonary phenotype assessed</td>
 <td>Seidel et al. 2021, PNAS, PMID 33879608 / DOI 10.1073/pnas.2014876118</td>
-<td>CONTESTED (gene-level)</td>
+<td><span class="tag-warning">CONTESTED</span> (gene-level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CACNA1H</td>
+<td class="gene">CACNA1H</td>
 <td>Statistical genetics (variant-level, missense credible-set variant rs61734410)</td>
 <td>CACNA1H rs61734410 (P640L) significantly more common among childhood absence epilepsy patients who failed to become seizure-free on ethosuximide (OR 2.63, p=0.011); in vitro electrophysiology showed altered ethosuximide-induced channel decay kinetics</td>
 <td>Glauser et al. 2017, Ann Neurol, PMID 28165634 / DOI 10.1002/ana.24886</td>
-<td>CONTESTED — did not replicate (see next row)</td>
+<td><span class="tag-warning">CONTESTED</span> — did not replicate (see next row)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CACNA1H</td>
+<td class="gene">CACNA1H</td>
 <td>Statistical genetics (variant-level, non-replication)</td>
 <td>Independent cohort found NO significant difference in rs61734410 frequency between ethosuximide-responsive and non-responsive absence epilepsy patients — non-replication of Glauser 2017</td>
 <td>Myers et al. 2021, Epilepsy Res, PMID 33421703 / DOI 10.1016/j.eplepsyres.2020.106537</td>
@@ -438,123 +122,123 @@ claim-accuracy all confirmed against source abstracts). See
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CACNA1H</td>
+<td class="gene">CACNA1H</td>
 <td>Statistical genetics (variant-level)</td>
 <td>CACNA1H rs61734410 CT genotype associated with increased migraine risk (OR 1.56) in a single Chinese case-control study</td>
 <td>Wang et al. 2024, Mol Genet Genomic Med, PMID 39140707 / DOI 10.1002/mgg3.2503</td>
-<td>CONTESTED (gene-level; single-study, neurological not pulmonary)</td>
+<td><span class="tag-warning">CONTESTED</span> (gene-level; single-study, neurological not pulmonary)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TPSG1</td>
+<td class="gene">TPSG1</td>
 <td>Structural + immune (mouse functional genetics)</td>
 <td>Prss31 (murine TPSG1/PRSS31 ortholog) knockout mice show increased baseline airway hyperreactivity to methacholine but markedly reduced pathology (fewer pulmonary macrophages, lower histopathology, less small-airway fibrosis) in cigarette-smoke-induced experimental COPD, and reduced DSS colitis severity</td>
 <td>Hansbro et al. 2014, J Biol Chem, PMID 24821729 / DOI 10.1074/jbc.M114.548594</td>
-<td>WEAKENED — legitimately gene-specific but single mouse study with a double-edged (both protective and harmful) phenotype; no human genetics support</td>
+<td><span class="tag-warning">WEAKENED</span> — legitimately gene-specific but single mouse study with a double-edged (both protective and harmful) phenotype; no human genetics support</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TPSG1 (family-level, not gene-specific)</td>
+<td class="gene">TPSG1 (family-level, not gene-specific)</td>
 <td>Structural + immune (mouse, different tryptase)</td>
 <td>Mast cell protease-6-deficient mice + macrophage depletion show tryptase-expressing mast cells/macrophages required for cigarette-smoke-induced emphysema, mucus hypersecretion, airway remodeling, and reduced lung function</td>
 <td>Beckett et al. 2013, J Allergy Clin Immunol, PMID 23380220 / DOI 10.1016/j.jaci.2012.11.053</td>
-<td>WEAKENED — does not test TPSG1 itself; family-level pathway support only</td>
+<td><span class="tag-warning">WEAKENED</span> — does not test TPSG1 itself; family-level pathway support only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TPSG1 (family-level, not gene-specific)</td>
+<td class="gene">TPSG1 (family-level, not gene-specific)</td>
 <td>Immune (human COPD/IPF lung tissue)</td>
 <td>Human COPD/IPF lung shows anatomically widespread, disease-specific upregulation of mast cell CPA3 (different mast cell protease) correlating with tissue eosinophils, CD3+ T cells, and declining lung function</td>
 <td>Siddhuraj et al. 2022, Front Immunol, PMID 35983043 / DOI 10.3389/fimmu.2022.924244</td>
-<td>WEAKENED — does not test TPSG1; general mast-cell-activation-in-COPD context only</td>
+<td><span class="tag-warning">WEAKENED</span> — does not test TPSG1; general mast-cell-activation-in-COPD context only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TPSG1 (family-level, not gene-specific)</td>
+<td class="gene">TPSG1 (family-level, not gene-specific)</td>
 <td>Immune (review)</td>
 <td>Reviews mast-cell-derived proteases including tryptase disrupting epithelial junctions, driving airway remodeling/fibrosis/EMT in asthma, COPD, and viral infection</td>
 <td>Wang et al. 2025, Respir Res, PMID 41194143 / DOI 10.1186/s12931-025-03388-2</td>
-<td>WEAKENED — general review, not TPSG1-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — general review, not TPSG1-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TPSG1 (family-level, not gene-specific)</td>
+<td class="gene">TPSG1 (family-level, not gene-specific)</td>
 <td>Structural (human lung transplant tissue)</td>
 <td>Tryptase-positive mast cells colocalize with SERPINA3 and osteoprotegerin in fibrotically obstructed airways of lung-transplant bronchiolitis obliterans syndrome</td>
 <td>Liu et al. 2026, FASEB J, PMID 42007764 / DOI 10.1096/fj.202503694R</td>
-<td>WEAKENED — different obstructive lung condition, not TPSG1-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — different obstructive lung condition, not TPSG1-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TPSB2/TPSAB1 (not credible-set/prioritization genes; in-region paralogs)</td>
+<td class="gene">TPSB2/TPSAB1 (not credible-set/prioritization genes; in-region paralogs)</td>
 <td>Structural/immune (review)</td>
 <td>Beta-tryptase (TPSAB1/TPSB2 product) is the major mast-cell secretory-granule protease, elevated in BAL fluid of atopic asthmatics, implicated in airway hyperresponsiveness via cleavage of fibrinogen, fibronectin, PAR-2, complement C3</td>
 <td>Fukuoka &amp; Schwartz 2007, Int Immunopharmacol, PMID 18039527 / DOI 10.1016/j.intimp.2007.07.007</td>
-<td>HOLDS as background pathway context (correctly deprioritized, not a driver-gene claim)</td>
+<td><span class="tag-hold">HOLDS</span> as background pathway context (correctly deprioritized, not a driver-gene claim)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TPSB2/TPSAB1</td>
+<td class="gene">TPSB2/TPSAB1</td>
 <td>Immune (mouse asthma model)</td>
 <td>Pharmacological tryptase inhibition reduces eosinophilic airway inflammation, goblet cell hyperplasia, IL-4/IL-13 release in OVA mouse asthma model</td>
 <td>Oh et al. 2002, J Immunol, PMID 11823536 / DOI 10.4049/jimmunol.168.4.1992</td>
-<td>HOLDS as background (asthma model, not COPD)</td>
+<td><span class="tag-hold">HOLDS</span> as background (asthma model, not COPD)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TPSB2/TPSAB1</td>
+<td class="gene">TPSB2/TPSAB1</td>
 <td>Structural (review)</td>
 <td>Reviews mechanistic basis by which tetrameric beta-tryptase drives chronic airway inflammation and tissue remodeling</td>
 <td>Sommerhoff 2001, Am J Respir Crit Care Med, PMID 11734467 / DOI 10.1164/ajrccm.164.supplement_2.2106058</td>
-<td>HOLDS as background</td>
+<td><span class="tag-hold">HOLDS</span> as background</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TPSB2/TPSAB1</td>
+<td class="gene">TPSB2/TPSAB1</td>
 <td>Structural (human lung fibroblasts)</td>
 <td>Tryptase stimulates human lung (but not dermal) fibroblast proliferation via PAR-2</td>
 <td>Akers et al. 2000, Am J Physiol Lung Cell Mol Physiol, PMID 10645907 / DOI 10.1152/ajplung.2000.278.1.L193</td>
-<td>HOLDS as background</td>
+<td><span class="tag-hold">HOLDS</span> as background</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TPSB2/TPSAB1</td>
+<td class="gene">TPSB2/TPSAB1</td>
 <td>Immune (allergic sheep model)</td>
 <td>Tryptase inhibition via lactoferrin abolishes late-phase bronchoconstriction/airway hyperresponsiveness in allergic sheep asthma model</td>
 <td>Elrod et al. 1997, Am J Respir Crit Care Med, PMID 9279212 / DOI 10.1164/ajrccm.156.2.9607012</td>
-<td>HOLDS as background (asthma model, not COPD)</td>
+<td><span class="tag-hold">HOLDS</span> as background (asthma model, not COPD)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TPSAB1</td>
+<td class="gene">TPSAB1</td>
 <td>Immune (review)</td>
 <td>Describes hereditary alpha-tryptasemia (HAT), an autosomal-dominant TPSAB1 copy-number-variation trait causing elevated basal serum tryptase and mast-cell-mediator symptom burden; no COPD association discussed</td>
 <td>Beyens et al. 2022, Acta Clin Belg, PMID 36259506 / DOI 10.1080/17843286.2022.2137631</td>
-<td>HOLDS (correctly deprioritized; no COPD link)</td>
+<td><span class="tag-hold">HOLDS</span> (correctly deprioritized; no COPD link)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TPSAB1</td>
+<td class="gene">TPSAB1</td>
 <td>Immune (review)</td>
 <td>Reviews TPSAB1 allelic duplication (HAT); notes mast cells' importance in severe asthma and vascular remodeling, no COPD linkage stated</td>
 <td>Wilcock et al. 2018, Allergy, PMID 30390314 / DOI 10.1111/all.13657</td>
-<td>HOLDS</td>
+<td><span class="tag-hold">HOLDS</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>UBE2I (no credible-set variant; far edge of locus)</td>
+<td class="gene">UBE2I (no credible-set variant; far edge of locus)</td>
 <td>Immune (mouse asthma model)</td>
 <td>UBE2I depletion reduces BHLHE40 SUMOylation and M2 macrophage polarization, attenuating allergic airway inflammation in a mouse OVA-asthma model</td>
 <td>Lin et al. 2026, Int Immunopharmacol, PMID 42035545 / DOI 10.1016/j.intimp.2026.116673</td>
-<td>HOLDS as marginal/low-priority context (asthma, not COPD, model)</td>
+<td><span class="tag-hold">HOLDS</span> as marginal/low-priority context (asthma, not COPD, model)</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
 <p>Full detail in <code>evidence_tables/_status/16_1100001-1300000/opentargets.md</code>. Queried via Open Targets
 Platform GraphQL API, 2026-09-11.</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -566,35 +250,35 @@ Platform GraphQL API, 2026-09-11.</p>
 </thead>
 <tbody>
 <tr>
-<td>CACNA1H</td>
+<td class="gene">CACNA1H</td>
 <td>No GWAS credible set indexed at this exact variant (16:1198890) in Open Targets. Only molecular-QTL credible sets present (skin tuQTL, skin exon-usage eQTL). Their colocalizations are with eosinophil count, leukocyte/myeloid-leukocyte/neutrophil counts (h4 mostly 0.9-1.0), and notably <strong>smoking cessation (h4 = 0.92-0.95)</strong> — plus HDL, triglycerides, T2D, hypertension, migraine. No FEV1/FEV1-FVC or COPD coloc found.</td>
 <td>lof oe=0.925 (95% CI 0.809-1.059) — not LoF-constrained</td>
 <td>0.370 (rank ~23/411 of CACNA1H's associated diseases); driven by clinical (0.608) + literature (0.018) datatypes only</td>
 <td>No</td>
 </tr>
 <tr>
-<td>TPSG1</td>
+<td class="gene">TPSG1</td>
 <td>Skin eQTL credible set at the same variant; same non-lung colocalization pattern as CACNA1H (eosinophil/leukocyte counts, smoking cessation, lipids, T2D)</td>
 <td>lof oe=2.00 (95% CI 1.479-1.982) — not constrained, tolerant/dispensable-looking</td>
 <td>0.0588; driven by animal_model (0.437) + literature (0.185) datatypes only</td>
 <td>No</td>
 </tr>
 <tr>
-<td>TPSP2</td>
+<td class="gene">TPSP2</td>
 <td>No credible set found at this variant for TPSP2</td>
 <td>No constraint data available (pseudogene)</td>
 <td>Not present in TPSP2's associated-disease list at all (only 11 diseases, all metabolic/obesity-related)</td>
 <td>No</td>
 </tr>
 <tr>
-<td>TPSB2, TPSAB1, TPSD1, UBE2I</td>
+<td class="gene">TPSB2, TPSAB1, TPSD1, UBE2I</td>
 <td>Not separately queried in the Open Targets structured lookup (added to scope only after the researcher's Ensembl gene-enumeration step, subsequent to the Open Targets stage)</td>
 <td>Not queried</td>
 <td>Not queried</td>
 <td>Not queried</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>CACNA1H's top Open Targets disease associations overall (score &gt; 0.55) are neurological/psychiatric:
 epilepsy (0.61), neuropathic pain (0.60), fibromyalgia (0.60), seizure (0.60), familial hyperaldosteronism
 type IV/hyperaldosteronism-related terms (0.59), restless legs syndrome (0.59), postherpetic neuralgia
@@ -639,5 +323,7 @@ low-confidence by the study team, not as a settled call.</p>
 <h2 id="see-also">See also</h2>
 <p>Excluded/contested appendix: <code>audits/16_1100001-1300000_audit.md</code></p>
 
+        </div>
+    </div>
 </body>
 </html>

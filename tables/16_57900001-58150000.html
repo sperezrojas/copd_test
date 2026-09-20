@@ -1,374 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>16_57900001-58150000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 16:57,900,001-58,150,000 (nearest gene MMP15)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-1657900001-58150000-nearest-gene-mmp15">Evidence table — locus 16:57,900,001-58,150,000 (nearest gene MMP15)</h1>
-<p>Lead variant: rs11076213 (16:58,046,105, GRCh38; 3' UTR variant in MMP15; PIP = 0.533). Credible set is dominated by MMP15 variants (intronic/UTR/upstream/downstream, one splice-polypyrimidine-tract variant), with a long tail of very-low-PIP variants (each &lt;0.003) in SPMIP8 (including the credible set's only missense variant, rs9934227, PIP=0.0012), USB1, ZNF319, and a near-TIPINP2 variant. Internal pipeline prioritizes MMP15 (nearest gene, MAGMA, ABC) and CNGB1 (PoPS).</p>
-<p>Only VERIFIED citations are included below. See <code>audits/16_57900001-58150000_audit.md</code> for excluded/contested items and full skeptic reasoning.</p>
-<table>
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-1657900001-58150000-nearest-gene-mmp15">Evidence table — locus 16:57,900,001-58,150,000 (nearest gene MMP15)</h1><div class="summary"><p>Lead variant: rs11076213 (16:58,046,105, GRCh38; 3' UTR variant in MMP15; PIP = 0.533). Credible set is dominated by MMP15 variants (intronic/UTR/upstream/downstream, one splice-polypyrimidine-tract variant), with a long tail of very-low-PIP variants (each &lt;0.003) in SPMIP8 (including the credible set's only missense variant, rs9934227, PIP=0.0012), USB1, ZNF319, and a near-TIPINP2 variant. Internal pipeline prioritizes MMP15 (nearest gene, MAGMA, ABC) and CNGB1 (PoPS).</p><p>Only VERIFIED citations are included below. See <code>audits/16_57900001-58150000_audit.md</code> for excluded/contested items and full skeptic reasoning.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -381,39 +65,39 @@ code {
 </thead>
 <tbody>
 <tr>
-<td>MMP15</td>
+<td class="gene">MMP15</td>
 <td>Statistical genetics</td>
-<td>Independent 2011 lung-function GWAS/meta-analysis (~48,201 discovery + ~46,411 follow-up, European ancestry) named MMP15 among 16 new loci reaching genome-wide significance for FEV1/FEV1-FVC. Skeptic caveat: the abstract names no SNP and gives no LD/positional confirmation that this 2011 &quot;MMP15&quot; hit is the same signal/LD block as this project's rs11076213 — treat as an independent gene-level lung-function signal, not confirmed same-locus triangulation.</td>
+<td>Independent 2011 lung-function GWAS/meta-analysis (~48,201 discovery + ~46,411 follow-up, European ancestry) named MMP15 among 16 new loci reaching genome-wide significance for FEV1/FEV1-FVC. Skeptic caveat: the abstract names no SNP and gives no LD/positional confirmation that this 2011 "MMP15" hit is the same signal/LD block as this project's rs11076213 — treat as an independent gene-level lung-function signal, not confirmed same-locus triangulation.</td>
 <td>PMID 21946350 / DOI 10.1038/ng.941</td>
-<td>WEAKENED (overclaiming risk on triangulation strength; gene-name match without confirmed LD/positional identity)</td>
+<td><span class="tag-warning">WEAKENED</span> (overclaiming risk on triangulation strength; gene-name match without confirmed LD/positional identity)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MMP15</td>
+<td class="gene">MMP15</td>
 <td>Statistical genetics (MR/colocalization)</td>
 <td>Cis-eQTL Mendelian randomization + colocalization (using whole-blood eQTLGen and lung GTEx data) against doctor-diagnosed COPD, spirometry-defined COPD, and FEV1 GWAS identified MMP15 among 22 druggable genes with putatively causal/colocalized relationship to COPD/lung-function traits; noted Montelukast (targets MMP15) predicted to reduce spirometry-defined COPD risk. Skeptic caveat: the MMP15 evidence specifically used whole-blood eQTL, not lung eQTL — a weaker tissue-context match than implied.</td>
 <td>PMID 38660492 / DOI 10.3389/fcimb.2024.1386506</td>
-<td>WEAKENED (tissue-context caveat: blood eQTL, not lung, for the MMP15-specific result)</td>
+<td><span class="tag-warning">WEAKENED</span> (tissue-context caveat: blood eQTL, not lung, for the MMP15-specific result)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MMP15</td>
+<td class="gene">MMP15</td>
 <td>Statistical genetics (pleiotropy/eQTL)</td>
-<td>Pleiotropy analysis across sleep-associated and lung-function traits reports &quot;suggestive links between OSA, a measure of lung function (FEV1/FVC), and an eQTL of MMP15 in lung tissue&quot; — a lung-tissue eQTL for MMP15, explicitly characterized as suggestive (not genome-wide-significant/definitive), in the context of OSA/FEV1-FVC pleiotropy rather than COPD case-control status directly.</td>
+<td>Pleiotropy analysis across sleep-associated and lung-function traits reports "suggestive links between OSA, a measure of lung function (FEV1/FVC), and an eQTL of MMP15 in lung tissue" — a lung-tissue eQTL for MMP15, explicitly characterized as suggestive (not genome-wide-significant/definitive), in the context of OSA/FEV1-FVC pleiotropy rather than COPD case-control status directly.</td>
 <td>PMID 36574455 / DOI 10.1371/journal.pgen.1010557</td>
 <td>Not separately re-litigated by skeptic (identified by skeptic as new supporting evidence; verified post-critique)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MMP15</td>
+<td class="gene">MMP15</td>
 <td>Structural/mechanistic (human cohort)</td>
 <td>In a cohort of alpha-1 antitrypsin (AAT)-deficient PI<em>MZ (n=39) and PI</em>ZZ (n=27) individuals, alveolar (BAL) MMP15 protein/expression, together with MMP3, was uniquely associated with worse lung function, worse patient-reported outcomes, and greater CT emphysema specifically among PI*MZ heterozygotes. Skeptic caveat: small, exploratory (n=39); MMP15 is not singled out (shared finding with MMP3, an unrelated chr11 gene); population is a genetically distinct AAT-deficient subgroup, so generalizability to this GWAS locus's general-population signal is not established.</td>
 <td>PMID 41253406 / DOI 10.1136/bmjresp-2025-003585</td>
-<td>WEAKENED (small n, shared with MMP3, population-specificity limits generalization to this GWAS signal)</td>
+<td><span class="tag-warning">WEAKENED</span> (small n, shared with MMP3, population-specificity limits generalization to this GWAS signal)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MMP15</td>
+<td class="gene">MMP15</td>
 <td>Structural (general MMP biology, non-lung)</td>
 <td>MMP-15 (with MMP-14) participates in pro-MMP2 (gelatinase A) activation and ECM-remodeling pathways in laryngeal squamous cell carcinoma — general background on MT2-MMP biochemistry, not lung/COPD-specific.</td>
 <td>PMID 22998427 / DOI 10.1111/jop.12000</td>
@@ -421,7 +105,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MMP15</td>
+<td class="gene">MMP15</td>
 <td>Structural (general MMP-TIMP background, not MMP15-specific)</td>
 <td>MMP9/TIMP1 imbalance (not MMP15) is mechanistically important in cigarette-smoke-induced emphysema and human COPD, supporting the general plausibility that other MMP-family members could act through analogous protease-antiprotease-imbalance mechanisms.</td>
 <td>PMID 24039251 / DOI 10.1152/ajplung.00249.2012</td>
@@ -429,7 +113,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MMP15</td>
+<td class="gene">MMP15</td>
 <td>Structural/developmental (general MMP15 biology, non-lung)</td>
 <td>MMP15 has a general developmentally regulated ECM-remodeling role in salivary gland branching morphogenesis.</td>
 <td>PMID 21487116 / DOI 10.1177/0022034511405330</td>
@@ -437,7 +121,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MMP15</td>
+<td class="gene">MMP15</td>
 <td>Structural/developmental (general MMP15 biology, non-lung)</td>
 <td>MMP15 is the only LH-inducible protease among those involved in ovarian follicle rupture in a fish ovulation model.</td>
 <td>PMID 30394703 / DOI 10.1530/REP-18-0251</td>
@@ -445,15 +129,15 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CNGB1</td>
+<td class="gene">CNGB1</td>
 <td>Structural (non-pulmonary; canonical biology)</td>
 <td>Biallelic CNGB1 mutations cause an autosomal-recessive retinitis pigmentosa-olfactory dysfunction syndrome, confirming CNGB1's role in rod photoreceptor and olfactory sensory-neuron CNG channel function.</td>
 <td>PMID 29800053 / DOI 10.1001/jamaophthalmol.2018.1621</td>
-<td>WEAKENED — no credible-set variant is annotated to CNGB1 at all; canonical biology has no described lung connection; likely PoPS-only (functional-similarity) false-positive risk</td>
+<td><span class="tag-warning">WEAKENED</span> — no credible-set variant is annotated to CNGB1 at all; canonical biology has no described lung connection; likely PoPS-only (functional-similarity) false-positive risk</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CNGB1</td>
+<td class="gene">CNGB1</td>
 <td>Structural (non-pulmonary; molecular/structural)</td>
 <td>Cryo-EM structure of the native bovine rod CNGA1/CNGB1 channel.</td>
 <td>PMID 34969975 / DOI 10.1038/s41594-021-00700-8</td>
@@ -461,7 +145,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CNGB1</td>
+<td class="gene">CNGB1</td>
 <td>Structural (non-pulmonary; molecular/structural)</td>
 <td>Structural mechanisms of assembly, permeation, gating, and pharmacology of native human rod CNG channel (CNGA1/CNGB1).</td>
 <td>PMID 34699778 / DOI 10.1016/j.neuron.2021.10.006</td>
@@ -469,7 +153,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SPMIP8</td>
+<td class="gene">SPMIP8</td>
 <td>Structural/developmental (non-pulmonary; gene discovery)</td>
 <td>TEPP/SPMIP8 is a gene with highly tissue-restricted expression in testis, prostate, and placenta encoding a predicted secreted protein; no lung expression described.</td>
 <td>PMID 14652002 / DOI 10.1016/j.bbrc.2003.11.031</td>
@@ -477,7 +161,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SPMIP8</td>
+<td class="gene">SPMIP8</td>
 <td>Structural/developmental (comparative genomics, non-pulmonary)</td>
 <td>Evolutionary conservation and exon/intron structure of TEPP/SPMIP8 orthologs across metazoans.</td>
 <td>PMID 19548082 / DOI 10.1007/s10528-009-9261-3</td>
@@ -485,23 +169,23 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SPMIP8</td>
+<td class="gene">SPMIP8</td>
 <td>Structural/developmental (mouse knockout; non-pulmonary)</td>
 <td>Spmip8 (Tepp) knockout mice show normal fertility, sperm count, motility, and morphology; SPMIP8 protein localizes to elongating spermatid flagella — establishes SPMIP8's only known biological role is testicular/flagellar, dispensable even in its primary tissue.</td>
 <td>PMID 41550493 / DOI 10.1016/j.bbrep.2025.102406</td>
-<td>CONTESTED — skeptic flags this as evidence undercutting an &quot;immune candidate&quot; framing built on broad but low-specificity eQTL activity plus a near-zero-PIP (0.0012) missense credible-set variant</td>
+<td><span class="tag-warning">CONTESTED</span> — skeptic flags this as evidence undercutting an "immune candidate" framing built on broad but low-specificity eQTL activity plus a near-zero-PIP (0.0012) missense credible-set variant</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZNF319</td>
+<td class="gene">ZNF319</td>
 <td>Structural/developmental (non-pulmonary; CNS)</td>
 <td>Homozygous missense ZNF319 variant (p.Phe267Ser) causes a novel autosomal-recessive leukodystrophy via disrupted nuclear localization and impaired transcriptional activation of myelination genes; ZNF319 enriched in oligodendrocytes/white matter.</td>
 <td>PMID 40820230 / DOI 10.1038/s10038-025-01386-2</td>
-<td>WEAKENED (dismissal by researcher as &quot;weak&quot; was under-argued per skeptic — ZNF319 has the highest independent Open Targets L2G score and is the most LoF-constrained gene at this locus; only described human phenotypes are extrapulmonary, but that is a more specific argument than simple absence-of-lung-literature)</td>
+<td><span class="tag-warning">WEAKENED</span> (dismissal by researcher as "weak" was under-argued per skeptic — ZNF319 has the highest independent Open Targets L2G score and is the most LoF-constrained gene at this locus; only described human phenotypes are extrapulmonary, but that is a more specific argument than simple absence-of-lung-literature)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZNF319</td>
+<td class="gene">ZNF319</td>
 <td>Structural/developmental (craniofacial, non-pulmonary)</td>
 <td>De novo ZNF319 nonsense variant (p.Gln64Ter) identified in a patient with non-syndromic cleft lip/palate, proposing ZNF319 as a candidate craniofacial-development gene.</td>
 <td>PMID 41465536 / DOI 10.3390/ijms262412111</td>
@@ -509,7 +193,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZNF319</td>
+<td class="gene">ZNF319</td>
 <td>Structural (cell-cycle/tumor biology, non-pulmonary)</td>
 <td>ZNF319 functions as a tumor-suppressor gene regulating cell-cycle progression (E2F/G2-M checkpoint) in breast cancer.</td>
 <td>PMID 34902746 / DOI 10.1016/j.bbrc.2021.12.023</td>
@@ -517,23 +201,23 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZNF319</td>
+<td class="gene">ZNF319</td>
 <td>Immune (exploratory, descriptive)</td>
-<td>Single-cell RNA-sequencing of umbilical-cord-blood versus adult neutrophils identified ZNF319 among &quot;uncharacteristic transcription factors&quot; differentially represented across neutrophil subpopulations — descriptive/correlative, not mechanistic.</td>
+<td>Single-cell RNA-sequencing of umbilical-cord-blood versus adult neutrophils identified ZNF319 among "uncharacteristic transcription factors" differentially represented across neutrophil subpopulations — descriptive/correlative, not mechanistic.</td>
 <td>PMID 36105817 / DOI 10.3389/fimmu.2022.970909</td>
-<td>WEAKENED — exploratory, neonatal-vs-adult comparison, non-lung, non-COPD; suggestive at most</td>
+<td><span class="tag-warning">WEAKENED</span> — exploratory, neonatal-vs-adult comparison, non-lung, non-COPD; suggestive at most</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CFAP20</td>
+<td class="gene">CFAP20</td>
 <td>Structural (mucociliary biology; not in internal pipeline's candidate list; no credible-set variant annotated)</td>
 <td>CFAP20 is required for motile cilia function in zebrafish and for structural integrity of non-motile cilia inner junctions in C. elegans; human CFAP20 mutations cause retinal dystrophy (non-motile ciliopathy phenotype); no human airway/lung phenotype reported.</td>
 <td>PMID 36329026 / DOI 10.1038/s41467-022-33820-w</td>
-<td>WEAKENED — purely positional candidate (found via Ensembl region query only), no fine-mapping/MAGMA/PoPS/L2G support, no independent literature connecting it to lung/COPD found by either researcher or skeptic</td>
+<td><span class="tag-warning">WEAKENED</span> — purely positional candidate (found via Ensembl region query only), no fine-mapping/MAGMA/PoPS/L2G support, no independent literature connecting it to lung/COPD found by either researcher or skeptic</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CFAP20</td>
+<td class="gene">CFAP20</td>
 <td>Structural (general ciliary axoneme biology, non-lung)</td>
 <td>C. elegans CFAP-20 ortholog is restricted to the axonemal middle segment, required to connect A- and B-tubules of the axoneme.</td>
 <td>PMID 37463209 / DOI 10.1073/pnas.2303955120</td>
@@ -541,7 +225,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CFAP20</td>
+<td class="gene">CFAP20</td>
 <td>Structural (general ciliary intraflagellar-transport biology, non-lung)</td>
 <td>CFAP20 interacts with BROMI/TBC1D32 in the intraflagellar-transport turnaround machinery at the ciliary tip.</td>
 <td>PMID 35609210 / DOI 10.1091/mbc.E22-03-0089</td>
@@ -549,11 +233,11 @@ code {
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Note: no citation for USB1 is included in this table — the researcher's claim about USB1/poikiloderma-with-neutropenia lung complications was never backed by a specific PMID and was marked NOT_FOUND by citation-verifier. See audit appendix.</p>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
-<p>Open Targets does not have this project's own COPD GWAS meta-analysis indexed. A direct <code>credibleSets(regions:...)</code> query for this interval, and a lead-variant (rs11076213) credible-set lookup, returned only molecular-QTL credible sets (eQTL/sQTL/pQTL) plus one unrelated GWAS credible set for &quot;microscopic hematuria&quot; — not COPD. Gene-level COPD evidence with an L2G-style score was instead recovered via <code>target.evidences(efoIds:[&quot;MONDO_0005002&quot;])</code>, which draws on Open Targets' own <code>gwas_credible_sets</code> datasource run on an <strong>older, independent, likely less-powered</strong> 2019 COPD GWAS (PMID 30804561, Sakornsakolpat et al.) — not this project's own meta-analysis. No FEV1 (EFO_0004314) evidence was found for any gene at this locus in Open Targets.</p>
-<table>
+<p>Open Targets does not have this project's own COPD GWAS meta-analysis indexed. A direct <code>credibleSets(regions:...)</code> query for this interval, and a lead-variant (rs11076213) credible-set lookup, returned only molecular-QTL credible sets (eQTL/sQTL/pQTL) plus one unrelated GWAS credible set for "microscopic hematuria" — not COPD. Gene-level COPD evidence with an L2G-style score was instead recovered via <code>target.evidences(efoIds:["MONDO_0005002"])</code>, which draws on Open Targets' own <code>gwas_credible_sets</code> datasource run on an <strong>older, independent, likely less-powered</strong> 2019 COPD GWAS (PMID 30804561, Sakornsakolpat et al.) — not this project's own meta-analysis. No FEV1 (EFO_0004314) evidence was found for any gene at this locus in Open Targets.</p>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -566,15 +250,15 @@ code {
 </thead>
 <tbody>
 <tr>
-<td>MMP15</td>
+<td class="gene">MMP15</td>
 <td>0.054 (lowest of the six)</td>
 <td>none</td>
 <td>macrophage eQTL, plasma pQTL (UKB-PPP), skin/thyroid eQTL/sQTL</td>
 <td>0.578 (moderate)</td>
-<td>None found; only colocalizes with an unrelated &quot;microscopic hematuria&quot; GWAS credible set (score 0.732 in that disease context)</td>
+<td>None found; only colocalizes with an unrelated "microscopic hematuria" GWAS credible set (score 0.732 in that disease context)</td>
 </tr>
 <tr>
-<td>CNGB1</td>
+<td class="gene">CNGB1</td>
 <td>0.144</td>
 <td>none</td>
 <td>brain-only splicing QTL (hypothalamus, cortex, DLPFC, sensory neuron, testis, brainseq)</td>
@@ -582,7 +266,7 @@ code {
 <td>None found</td>
 </tr>
 <tr>
-<td>SPMIP8</td>
+<td class="gene">SPMIP8</td>
 <td>0.346 (second-highest)</td>
 <td>none</td>
 <td>broad eQTL across T-cell subsets (Treg, Th1/Th2/Th17), monocytes (naive/LPS/IFN-stimulated), NK cells, and other tissues</td>
@@ -590,7 +274,7 @@ code {
 <td>None found</td>
 </tr>
 <tr>
-<td>USB1</td>
+<td class="gene">USB1</td>
 <td>0.117</td>
 <td>none</td>
 <td>brain/cartilage eQTL and sQTL</td>
@@ -598,7 +282,7 @@ code {
 <td>None found</td>
 </tr>
 <tr>
-<td>ZNF319</td>
+<td class="gene">ZNF319</td>
 <td>0.518 (highest of the six)</td>
 <td>none</td>
 <td>blood eQTL, pancreas eQTL, monocyte (naive/IFN-stimulated) eQTL, NK-cell eQTL</td>
@@ -606,7 +290,7 @@ code {
 <td>None found</td>
 </tr>
 <tr>
-<td>TIPINP2</td>
+<td class="gene">TIPINP2</td>
 <td>no data (0 credible sets in Open Targets; also a processed pseudogene, not protein-coding, per Ensembl — see researcher findings)</td>
 <td>no data</td>
 <td>no data</td>
@@ -614,7 +298,7 @@ code {
 <td>no data</td>
 </tr>
 <tr>
-<td>CFAP20</td>
+<td class="gene">CFAP20</td>
 <td>not queried in step 1 (identified later by researcher via direct Ensembl region query; not in internal pipeline's candidate list)</td>
 <td>not queried</td>
 <td>not queried</td>
@@ -622,16 +306,18 @@ code {
 <td>not queried</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>This Open Targets L2G-style ranking (from a different, older, independent COPD GWAS) diverges notably from the internal pipeline's own MAGMA/ABC/nearest-gene prioritization of MMP15: ZNF319 and SPMIP8 score higher in Open Targets' own COPD L2G calculation, and MMP15 scores lowest of the six genes despite carrying the lead variant (PIP=0.533). No colocalization evidence anywhere in Open Targets' data links any of these genes' molecular QTLs to a COPD or FEV1 GWAS signal specifically — this divergence and this absence-of-colocalization are both flagged as unresolved tensions in the prioritized-gene synthesis below, not smoothed over.</p>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>MMP15 — Confidence: LOW-to-MODERATE (reported as LOW given the unresolved L2G contradiction; see below)</strong></p>
 <p>MMP15 is my best-supported single recommendation at this locus, but the case is closer than a first read suggests, and I am deliberately not overstating confidence.</p>
 <p><strong>In favor of MMP15:</strong> It carries the lead variant (rs11076213, PIP=0.533) and the great majority of the credible-set PIP mass, and it is the nearest, MAGMA-, and ABC-prioritized gene from the internal pipeline. Three independent verified sources support pulmonary-biology relevance: an older, independent lung-function GWAS naming MMP15 among 16 genome-wide-significant loci for FEV1/FEV1-FVC (PMID 21946350); an independent MR/colocalization druggable-genes study linking MMP15 expression to COPD/lung-function risk (PMID 38660492, though its MMP15-specific signal used whole-blood, not lung, eQTL); a lung-tissue MMP15 eQTL with suggestive pleiotropy to OSA/FEV1-FVC (PMID 36574455); and a human AAT-deficiency cohort study showing alveolar MMP15 protein tracks with worse lung function and emphysema in PI*MZ carriers (PMID 41253406, n=39, shared finding with MMP3). MMP15 (MT2-MMP) also fits the well-established protease-antiprotease-imbalance paradigm central to COPD/emphysema pathophysiology (biological prior #2), and no smoking-behavior-mediation literature was found (though this was only checked via PubMed/bioRxiv, not a direct smoking-GWAS lookup, so should not be read as ruling it out).</p>
-<p><strong>Against treating this as a settled call:</strong> The red-team-skeptic identified a genuine, unresolved tension that I am carrying forward rather than resolving by fiat: Open Targets' own independent L2G calculation (on a different, older, 2019 COPD GWAS) ranks MMP15 <strong>lowest</strong> of the six genes at this locus (0.054), while ZNF319 (0.518, also the most LoF-constrained gene here) and SPMIP8 (0.346) score substantially higher. No colocalization evidence anywhere in Open Targets links any gene's molecular QTLs to a COPD/FEV1 signal at this locus, meaning none of the &quot;supporting&quot; MMP15 literature above constitutes a resolved statistical fine-mapping/colocalization proof for this specific GWAS signal — the 2011 GWAS citation does not establish LD/positional identity with rs11076213, the MR study's MMP15 result rests on blood (not lung) eQTL, and the AAT-deficiency cohort finding is a small, subgroup-specific, protein-correlational result shared with an unrelated gene (MMP3). ZNF319's dismissal in the literature review rested mainly on the absence of a lung-specific PubMed hit, which the skeptic correctly notes is not itself strong evidence against a real gene — zinc-finger transcription factors are routinely understudied outside the tissue where someone happened to look, and ZNF319's status as a known disease gene (leukodystrophy, craniofacial development) demonstrates it is not a null/pseudogene locus.</p>
+<p><strong>Against treating this as a settled call:</strong> The red-team-skeptic identified a genuine, unresolved tension that I am carrying forward rather than resolving by fiat: Open Targets' own independent L2G calculation (on a different, older, 2019 COPD GWAS) ranks MMP15 <strong>lowest</strong> of the six genes at this locus (0.054), while ZNF319 (0.518, also the most LoF-constrained gene here) and SPMIP8 (0.346) score substantially higher. No colocalization evidence anywhere in Open Targets links any gene's molecular QTLs to a COPD/FEV1 signal at this locus, meaning none of the "supporting" MMP15 literature above constitutes a resolved statistical fine-mapping/colocalization proof for this specific GWAS signal — the 2011 GWAS citation does not establish LD/positional identity with rs11076213, the MR study's MMP15 result rests on blood (not lung) eQTL, and the AAT-deficiency cohort finding is a small, subgroup-specific, protein-correlational result shared with an unrelated gene (MMP3). ZNF319's dismissal in the literature review rested mainly on the absence of a lung-specific PubMed hit, which the skeptic correctly notes is not itself strong evidence against a real gene — zinc-finger transcription factors are routinely understudied outside the tissue where someone happened to look, and ZNF319's status as a known disease gene (leukodystrophy, craniofacial development) demonstrates it is not a null/pseudogene locus.</p>
 <p><strong>Runner-up:</strong> ZNF319 (highest independent L2G, most constrained gene at the locus, but only described human phenotypes — leukodystrophy, cleft lip/palate — are extrapulmonary, plus one exploratory, non-mechanistic neutrophil single-cell finding).</p>
-<p><strong>What would resolve the tie:</strong> (1) Direct colocalization analysis of this project's own COPD/FEV1 GWAS credible set against MMP15 and ZNF319 lung-tissue and immune-cell eQTL/sQTL/pQTL data (not available in Open Targets for this specific study); (2) confirmation of whether the 2011 Soler Artigas GWAS &quot;MMP15&quot; signal (PMID 21946350) is in LD with rs11076213 or is a distinct, more distal signal; (3) a lung-tissue (not blood) eQTL/MR result for ZNF319, which was not found in either the researcher's or skeptic's searches; (4) any functional lung or airway-immune phenotyping for ZNF319, which is currently absent from the literature.</p>
+<p><strong>What would resolve the tie:</strong> (1) Direct colocalization analysis of this project's own COPD/FEV1 GWAS credible set against MMP15 and ZNF319 lung-tissue and immune-cell eQTL/sQTL/pQTL data (not available in Open Targets for this specific study); (2) confirmation of whether the 2011 Soler Artigas GWAS "MMP15" signal (PMID 21946350) is in LD with rs11076213 or is a distinct, more distal signal; (3) a lung-tissue (not blood) eQTL/MR result for ZNF319, which was not found in either the researcher's or skeptic's searches; (4) any functional lung or airway-immune phenotyping for ZNF319, which is currently absent from the literature.</p>
 <p>Given this locus carries a strong statistical fine-mapping signal (PIP=0.53) squarely in MMP15 and a biologically coherent, if not definitively locus-matched, mechanistic story, MMP15 remains the recommendation — but confidence is marked LOW because the single most directly comparable structured-genetics data source available (Open Targets' independent L2G) actively points away from it, and this has not been explained away, only contextualized as coming from a different/older GWAS. The study team should weigh this explicitly rather than treat MMP15 as a closed case.</p>
 
+        </div>
+    </div>
 </body>
 </html>

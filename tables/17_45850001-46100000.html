@@ -1,386 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>17_45850001-46100000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 17:45850001-46100000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="copd-gwas-locus-evidence-table--17_45850001-46100000-nearest-gene-mapt">COPD GWAS locus evidence table — 17_45850001-46100000 (nearest gene: MAPT)</h1>
-<p><strong>Region:</strong> chr17:45,850,001-46,100,000 (GRCh38). <strong>Lead variant:</strong> rs242559 (17:45,948,522,
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="copd-gwas-locus-evidence-table--17_45850001-46100000-nearest-gene-mapt">Evidence Table — Locus 17:45850001-46100000</h1><div class="summary"><p><strong>Region:</strong> chr17:45,850,001-46,100,000 (GRCh38). <strong>Lead variant:</strong> rs242559 (17:45,948,522,
 PIP=0.533, intron_variant in MAPT). <strong>Locus context:</strong> this locus sits within the well-known
 17q21.31 MAPT/CRHR1/KANSL1/STH/SPPL2C inversion polymorphism region (H1/H2 haplotype), an
 ancient (~3 million year divergence), near-complete-LD structural block spanning ~900kb-1Mb.
 This is why the credible set here contains 956 variants — the largest in the dataset — spanning
 five genes (MAPT, MAPT-AS1, KANSL1, STH, SPPL2C). This is expected biology given the locus
 definition, not a fine-mapping failure, and gene-level statistical/nearest-gene assignment in
-this region is intrinsically difficult to resolve (see Prioritized-gene section below).</p>
-<p>Candidate genes evaluated: MAPT (nearest gene, ABC-prioritized), MAPT-AS1, KANSL1, STH, SPPL2C
+this region is intrinsically difficult to resolve (see Prioritized-gene section below).</p><p>Candidate genes evaluated: MAPT (nearest gene, ABC-prioritized), MAPT-AS1, KANSL1, STH, SPPL2C
 (all assigned credible-set variants within this window), PRR15L (MAGMA-prioritized), PNPO
 (PoPS-prioritized), and CRHR1 (not assigned a credible-set variant in this window but
 overlapping the window's start edge and repeatedly co-implicated across the primary literature
-and Open Targets L2G lookups — see below).</p>
+and Open Targets L2G lookups — see below).</p></div>
+
+
 <h2 id="evidence-table">Evidence table</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -393,159 +77,159 @@ and Open Targets L2G lookups — see below).</p>
 </thead>
 <tbody>
 <tr>
-<td>Locus-wide</td>
+<td class="gene">Locus-wide</td>
 <td>structural</td>
 <td>17q21.31 H1/H2 chromosomal inversion (~900kb) with two ancient, non-recombining haplotype lineages explains the near-complete LD and 956-variant credible set at this locus</td>
 <td>PMID 15654335 (DOI 10.1038/ng1508)</td>
-<td>HOLDS (background, uncontested)</td>
+<td><span class="tag-hold">HOLDS</span> (background, uncontested)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KANSL1 (locus-wide)</td>
+<td class="gene">KANSL1 (locus-wide)</td>
 <td>structural</td>
 <td>Both H1 and H2 inversion haplotypes carry independently-derived partial duplications of KANSL1, generating novel KANSL1 transcripts</td>
 <td>PMID 22751096 (DOI 10.1038/ng.2334)</td>
-<td>HOLDS (background)</td>
+<td><span class="tag-hold">HOLDS</span> (background)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>Locus-wide</td>
+<td class="gene">Locus-wide</td>
 <td>statgen (background)</td>
 <td>GSCAN mega-GWAS (attribution source for Open Targets' KANSL1/MAPT smoking-initiation scores): 566 variants/406 loci for smoking initiation/cessation/heaviness/alcohol use</td>
 <td>PMID 30643251 (DOI 10.1038/s41588-018-0307-5)</td>
-<td>HOLDS as general background; whether 17q21.31 itself reached genome-wide significance in this specific paper was not confirmed</td>
+<td><span class="tag-hold">HOLDS</span> as general background; whether 17q21.31 itself reached genome-wide significance in this specific paper was not confirmed</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAPT</td>
+<td class="gene">MAPT</td>
 <td>statgen/structural</td>
-<td>Integrative cis-eQTL + COPD-GWAS network analysis of human lung tissue (86 COPD cases, 31 controls) found MAPT was the TOP gene from ensemble analysis, &quot;recently identified in an independent GWAS of lung function&quot;</td>
+<td>Integrative cis-eQTL + COPD-GWAS network analysis of human lung tissue (86 COPD cases, 31 controls) found MAPT was the TOP gene from ensemble analysis, "recently identified in an independent GWAS of lung function"</td>
 <td>PMID 29335020 (DOI 10.1186/s40246-018-0132-z)</td>
-<td>WEAKENED — single, small (n=117), non-replicated study</td>
+<td><span class="tag-warning">WEAKENED</span> — single, small (n=117), non-replicated study</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAPT</td>
+<td class="gene">MAPT</td>
 <td>statgen</td>
-<td>Shrine et al. 2019 (279-signal lung-function GWAS, n=400,102) Table 1 names a locus tagged &quot;MAPT-AS1&quot; (sentinel rs79412431, chr17:43,940,021 GRCh37 / ~45.86Mb GRCh38, inside this window), classified as a &quot;Previous&quot; (non-novel) signal, with implicated genes LRRC37A4 and MAPT (MAPT flagged via deleterious/missense marker). KANSL1/CRHR1/STH/SPPL2C are NOT named at this specific signal.</td>
+<td>Shrine et al. 2019 (279-signal lung-function GWAS, n=400,102) Table 1 names a locus tagged "MAPT-AS1" (sentinel rs79412431, chr17:43,940,021 GRCh37 / ~45.86Mb GRCh38, inside this window), classified as a "Previous" (non-novel) signal, with implicated genes LRRC37A4 and MAPT (MAPT flagged via deleterious/missense marker). KANSL1/CRHR1/STH/SPPL2C are NOT named at this specific signal.</td>
 <td>PMID 30804560 (DOI 10.1038/s41588-018-0321-7), correction PMID 31110354 (DOI 10.1038/s41588-019-0438-3)</td>
-<td>CONTESTED — an independent, much larger GWAS's own gene-call favors MAPT, strengthening it relative to KANSL1, but this is a &quot;previous&quot;/non-novel signal (likely inherited from an earlier study), not fresh independent replication, and remains an LD-block annotation call rather than causal proof</td>
+<td><span class="tag-warning">CONTESTED</span> — an independent, much larger GWAS's own gene-call favors MAPT, strengthening it relative to KANSL1, but this is a "previous"/non-novel signal (likely inherited from an earlier study), not fresh independent replication, and remains an LD-block annotation call rather than causal proof</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAPT / CRHR1</td>
+<td class="gene">MAPT / CRHR1</td>
 <td>statgen</td>
-<td>Sakornsakolpat et al. 2019 (82-locus COPD case-control GWAS, 35,735 cases/222,076 controls) does not name MAPT/KANSL1 in its own discovery table, but its pulmonary-fibrosis cross-phenotype-overlap discussion states verbatim: &quot;three segments shared with pulmonary fibrosis identified in the previous study (FAM13A, DSP, and the 17q21 locus – here nearest CRHR1)&quot; — i.e. this dedicated COPD GWAS's own nearest-gene annotation for this region is CRHR1, not MAPT or KANSL1</td>
+<td>Sakornsakolpat et al. 2019 (82-locus COPD case-control GWAS, 35,735 cases/222,076 controls) does not name MAPT/KANSL1 in its own discovery table, but its pulmonary-fibrosis cross-phenotype-overlap discussion states verbatim: "three segments shared with pulmonary fibrosis identified in the previous study (FAM13A, DSP, and the 17q21 locus – here nearest CRHR1)" — i.e. this dedicated COPD GWAS's own nearest-gene annotation for this region is CRHR1, not MAPT or KANSL1</td>
 <td>PMID 30804561 (DOI 10.1038/s41588-018-0342-2)</td>
-<td>CONTESTED — introduces CRHR1 as a third distinct candidate and undercuts a clean MAPT- or KANSL1-specific reading of the major COPD GWAS literature at this locus</td>
+<td><span class="tag-warning">CONTESTED</span> — introduces CRHR1 as a third distinct candidate and undercuts a clean MAPT- or KANSL1-specific reading of the major COPD GWAS literature at this locus</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAPT</td>
+<td class="gene">MAPT</td>
 <td>structural (low relevance)</td>
 <td>MAPT is expressed in non-small-cell lung cancer (NSCLC) cell lines and modulates paclitaxel chemosensitivity via a microtubule-stabilization/p53-apoptosis mechanism (cancer pharmacology, not COPD/airway remodeling)</td>
 <td>PMID 27714074 (DOI 10.1039/c6mb00576d)</td>
-<td>HOLDS as correctly low-weighted, off-target evidence</td>
+<td><span class="tag-hold">HOLDS</span> as correctly low-weighted, off-target evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAPT (missense credible-set variants)</td>
+<td class="gene">MAPT (missense credible-set variants)</td>
 <td>structural (context)</td>
 <td>The locus's 5 missense credible-set variants in MAPT are common H1/H2-haplotype-tagging variants, not rare pathogenic FTDP-17 mutations (contrasted against a substantial literature on MAPT pathogenic mutations/tauopathy, none of which concerns these specific common variants)</td>
 <td>PMID 42420562, 40442318, 40100285, 39185206, 38599684, 35731895, 33550528, 33329348 (batch, background only)</td>
-<td>HOLDS — correctly used only to establish these credible-set variants are haplotype tags, not damaging alleles</td>
+<td><span class="tag-hold">HOLDS</span> — correctly used only to establish these credible-set variants are haplotype tags, not damaging alleles</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAPT-AS1</td>
+<td class="gene">MAPT-AS1</td>
 <td>structural</td>
 <td>Using human iPSC-derived neurons and neuroblastoma lines, modulating MAPT-AS1 expression produced NO change in MAPT mRNA or tau protein levels, contradicting earlier proposed cis-regulatory role of MAPT-AS1 over MAPT</td>
 <td>PMID 39761259 (DOI 10.1371/journal.pone.0314973)</td>
-<td>HOLDS — negative/well-controlled result, correctly reported</td>
+<td><span class="tag-hold">HOLDS</span> — negative/well-controlled result, correctly reported</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAPT-AS1</td>
+<td class="gene">MAPT-AS1</td>
 <td>immune (low relevance)</td>
 <td>MAPT-AS1 is one of several lncRNA inputs to TCGA-derived prognostic/immune-infiltration risk signatures in breast cancer (purely computational oncology bioinformatics)</td>
 <td>PMID 39906743, 35990656, 37110517, 38326441 (batch)</td>
-<td>HOLDS as correctly discounted, low-relevance evidence</td>
+<td><span class="tag-hold">HOLDS</span> as correctly discounted, low-relevance evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KANSL1</td>
+<td class="gene">KANSL1</td>
 <td>statgen/structural</td>
-<td>UK BiLEVE study (~50,008 UK Biobank participants selected from FEV1 extremes among heavy and never-smokers): KANSL1 identified as one of four genome-wide-significant novel loci for FEV1 extremes; KANSL1-region variants also associated with COPD &quot;including in individuals with no history of smoking&quot;; copy number of a ~150kb region containing KANSL1's 5' end was associated with FEV1 extremes; the same paper's 5 novel smoking-behavior signals mapped to NCAM1 (chr11) and an intergenic chr2 locus, NOT to 17q21.31</td>
+<td>UK BiLEVE study (~50,008 UK Biobank participants selected from FEV1 extremes among heavy and never-smokers): KANSL1 identified as one of four genome-wide-significant novel loci for FEV1 extremes; KANSL1-region variants also associated with COPD "including in individuals with no history of smoking"; copy number of a ~150kb region containing KANSL1's 5' end was associated with FEV1 extremes; the same paper's 5 novel smoking-behavior signals mapped to NCAM1 (chr11) and an intergenic chr2 locus, NOT to 17q21.31</td>
 <td>PMID 26423011 (DOI 10.1016/S2213-2600(15)00283-0)</td>
-<td>WEAKENED — best single trait-specific/smoking-independent finding at this locus, but from a single, non-replicated, pre-fine-mapping-era (2015) study, and in direct tension with contemporary Open Targets aggregate scoring (see summary below) which gives KANSL1 the lowest COPD score and highest smoking-initiation score of any gene in this window</td>
+<td><span class="tag-warning">WEAKENED</span> — best single trait-specific/smoking-independent finding at this locus, but from a single, non-replicated, pre-fine-mapping-era (2015) study, and in direct tension with contemporary Open Targets aggregate scoring (see summary below) which gives KANSL1 the lowest COPD score and highest smoking-initiation score of any gene in this window</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KANSL1</td>
+<td class="gene">KANSL1</td>
 <td>clinical/structural</td>
 <td>Koolen-de Vries syndrome (caused by KANSL1 haploinsufficiency): some affected individuals have recurrent respiratory infections (no immune deficiency identified) and tracheo-/laryngomalacia in a minority; no COPD, emphysema, fixed airflow obstruction, or parenchymal lung anomaly is reported in this syndrome's clinical phenotype spectrum</td>
 <td>GeneReviews NBK24676</td>
-<td>WEAKENED/MIXED — shows a real developmental airway-structure effect of KANSL1 dosage, but this phenotype (malacia) is mechanistically distinct from adult-onset, common-variant fixed airflow obstruction and does not transfer cleanly to COPD</td>
+<td><span class="tag-warning">WEAKENED</span>/MIXED — shows a real developmental airway-structure effect of KANSL1 dosage, but this phenotype (malacia) is mechanistically distinct from adult-onset, common-variant fixed airflow obstruction and does not transfer cleanly to COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KANSL1 (via MOF/KAT8 NSL-complex partner)</td>
+<td class="gene">KANSL1 (via MOF/KAT8 NSL-complex partner)</td>
 <td>structural (indirect)</td>
 <td>MOF/KAT8 (KANSL1's obligate catalytic partner in the NSL histone-acetyltransferase complex) governs ciliary gene programs and basal epithelial progenitor self-renewal — shown in skin, not lung</td>
 <td>PMID 37479688 (DOI 10.1038/s41467-023-40108-0)</td>
-<td>WEAKENED — indirect (concerns MOF, not KANSL1, directly), wrong tissue, mechanistically suggestive only</td>
+<td><span class="tag-warning">WEAKENED</span> — indirect (concerns MOF, not KANSL1, directly), wrong tissue, mechanistically suggestive only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>STH</td>
+<td class="gene">STH</td>
 <td>statgen/structural (background)</td>
 <td>STH (Saitohin) Q7R polymorphism literature is concentrated entirely on Alzheimer's disease/Parkinson's disease/frontotemporal lobar dementia risk-modifier associations; zero lung, COPD, or smoking-behavior literature exists for STH</td>
 <td>PMID 32615840, 28211174, 27030133, 25168738, 21934306, 20852909, 18850062, 18396294, 17320831, 16909000 (batch)</td>
-<td>HOLDS — no COPD relevance found in any of 10 checked papers; passenger-gene interpretation supported</td>
+<td><span class="tag-hold">HOLDS</span> — no COPD relevance found in any of 10 checked papers; passenger-gene interpretation supported</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SPPL2C</td>
+<td class="gene">SPPL2C</td>
 <td>immune (paralog-only)</td>
-<td>SPPL2 protease family (SPPL2A/B/C) review: knockout-mouse studies implicate the family broadly in immune cell differentiation/function, prevention of atherosclerotic plaque development, and spermatogenesis; the well-characterized CD74 cleavage/MHC-II antigen-presentation mechanism is attributed specifically to SPPL2A and SPPL2B, and SPPL2C is explicitly described as &quot;the least functionally characterized&quot; of the three paralogs</td>
+<td>SPPL2 protease family (SPPL2A/B/C) review: knockout-mouse studies implicate the family broadly in immune cell differentiation/function, prevention of atherosclerotic plaque development, and spermatogenesis; the well-characterized CD74 cleavage/MHC-II antigen-presentation mechanism is attributed specifically to SPPL2A and SPPL2B, and SPPL2C is explicitly described as "the least functionally characterized" of the three paralogs</td>
 <td>PMID 34673079 (DOI 10.1016/j.bbamcr.2021.119163)</td>
-<td>CONTESTED, bordering artifact — the only mechanistic citation available for SPPL2C's immune plausibility explicitly attributes the relevant mechanism to its paralogs instead, undercutting rather than supporting a SPPL2C-specific claim</td>
+<td><span class="tag-warning">CONTESTED</span>, bordering artifact — the only mechanistic citation available for SPPL2C's immune plausibility explicitly attributes the relevant mechanism to its paralogs instead, undercutting rather than supporting a SPPL2C-specific claim</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PRR15L</td>
+<td class="gene">PRR15L</td>
 <td>structural (off-target)</td>
 <td>A PRR15L-RSPO2 gene fusion has been identified in colorectal cancer (unrelated to COPD/lung biology)</td>
 <td>PMID 31209633</td>
-<td>HOLDS — correctly discounted as having no COPD relevance</td>
+<td><span class="tag-hold">HOLDS</span> — correctly discounted as having no COPD relevance</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PNPO</td>
+<td class="gene">PNPO</td>
 <td>structural (contradicting evidence)</td>
-<td>Tissue-expression profiling (Northern/Western blot, mRNA dot-blot) shows PNPO's major expression sites are liver, skeletal muscle, and kidney, with only &quot;a very weak signal&quot; detected in lung</td>
+<td>Tissue-expression profiling (Northern/Western blot, mRNA dot-blot) shows PNPO's major expression sites are liver, skeletal muscle, and kidney, with only "a very weak signal" detected in lung</td>
 <td>PMID 15182361 (DOI 10.1111/j.1432-1033.2004.04175.x)</td>
-<td>HOLDS — genuine evidence against a lung-specific PNPO role, correctly reported as such rather than spun positively</td>
+<td><span class="tag-hold">HOLDS</span> — genuine evidence against a lung-specific PNPO role, correctly reported as such rather than spun positively</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CRHR1</td>
+<td class="gene">CRHR1</td>
 <td>statgen (background, off-target)</td>
 <td>General review of CRH/CRHR1 signaling in HPA-axis stress-response regulation and neuropsychiatric disease; no mention of pulmonary or airway biology</td>
 <td>PMID 34901719 (DOI 10.18699/VJ21.025)</td>
-<td>HOLDS — correctly used only as general CRHR1 background, not asserted as pulmonary evidence</td>
+<td><span class="tag-hold">HOLDS</span> — correctly used only as general CRHR1 background, not asserted as pulmonary evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CRHR1</td>
+<td class="gene">CRHR1</td>
 <td>structural/behavioral (off-target)</td>
 <td>Rodent asthma-exposure models report altered brain (prefrontal/hippocampal) CRHR1 expression associated with anxiety-like behavior after asthma induction — a brain/behavioral readout, not airway-tissue inflammation biology</td>
 <td>PMID 30214402, PMID 28284954 (batch)</td>
-<td>HOLDS — correctly flagged by the researcher as an open/unconfirmed item rather than asserted as positive evidence of CRHR1 airway-inflammation biology</td>
+<td><span class="tag-hold">HOLDS</span> — correctly flagged by the researcher as an open/unconfirmed item rather than asserted as positive evidence of CRHR1 airway-inflammation biology</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-verified-literature-not-routed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT verified literature; not routed through citation-verifier or red-team-skeptic)</h2>
 <ul>
 <li><strong>MAPT</strong> (ENSG00000186868): overall association score vs. COPD (MONDO_0005002) = 0.142
@@ -614,10 +298,10 @@ nearest-gene annotation to call this region's pulmonary-fibrosis-overlap signal 
 candidate with no assigned credible-set variant in this window at all. Compounding the
 ambiguity, Open Targets' contemporary aggregate scoring gives KANSL1 the LOWEST COPD score and
 the HIGHEST smoking-initiation score of any gene in this window — the opposite pattern predicted
-by the &quot;KANSL1 = smoking-independent pulmonary gene&quot; reading of Wain et al. 2015 — while MAPT's
+by the "KANSL1 = smoking-independent pulmonary gene" reading of Wain et al. 2015 — while MAPT's
 own aggregate scores are also substantially weighted toward smoking-initiation and risk-taking
 behaviour rather than COPD specifically. In short: three major papers touching this exact locus
-give three different &quot;implicated gene&quot; answers (Wain 2015 -&gt; KANSL1, Shrine 2019 -&gt; MAPT,
+give three different "implicated gene" answers (Wain 2015 -&gt; KANSL1, Shrine 2019 -&gt; MAPT,
 Sakornsakolpat 2019 -&gt; CRHR1), which is the classic signature of nearest-gene/LD-block
 annotation instability in a near-complete-LD inversion block, not convergent evidence for any
 one gene.</p>
@@ -638,5 +322,7 @@ significance at 17q21.31, which would help adjudicate how much of the locus's ag
 signal is smoking-mediated versus directly pulmonary. The study team should weigh this
 three-way ambiguity explicitly rather than treat MAPT as a settled causal-gene call.</p>
 
+        </div>
+    </div>
 </body>
 </html>

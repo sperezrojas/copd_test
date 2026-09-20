@@ -1,380 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>18_37450001-37700000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPD locus evidence table — 18:37,450,001-37,700,000 (nearest/ABC-prioritized gene: CELF4)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="copd-locus-evidence-table--1837450001-37700000-nearestabc-prioritized-gene-celf4">COPD locus evidence table — 18:37,450,001-37,700,000 (nearest/ABC-prioritized gene: CELF4)</h1>
-<p>Lead variant: rs7504262 (18:37580180, PIP=0.196, intronic/non-coding, no gene called by VEP).
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="copd-locus-evidence-table--1837450001-37700000-nearestabc-prioritized-gene-celf4">COPD locus evidence table — 18:37,450,001-37,700,000 (nearest/ABC-prioritized gene: CELF4)</h1><div class="summary"><p>Lead variant: rs7504262 (18:37580180, PIP=0.196, intronic/non-coding, no gene called by VEP).
 Second-highest-PIP credible-set variant: rs1557341 (18:37547464, PIP=0.189, CELF4 intron).
 Candidate genes from internal pipeline: nearest gene = CELF4; FLAMES/MAGMA/PoPS = NA;
 ABC-prioritized = CELF4. Ensembl REST API confirms CELF4 is the only protein-coding gene in this
-region (see Open Targets/researcher notes) — no other candidate gene competes at this locus.</p>
-<p>Only citations with a citation-verifier verdict of VERIFIED are included below. See
+region (see Open Targets/researcher notes) — no other candidate gene competes at this locus.</p><p>Only citations with a citation-verifier verdict of VERIFIED are included below. See
 <code>audits/18_37450001-37700000_audit.md</code> for excluded (CLAIM_MISMATCH) citations and the full
-red-team CONTESTED reasoning.</p>
-<table>
+red-team CONTESTED reasoning.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -387,79 +71,79 @@ red-team CONTESTED reasoning.</p>
 </thead>
 <tbody>
 <tr>
-<td>CELF4</td>
+<td class="gene">CELF4</td>
 <td>Structural/developmental (non-pulmonary tissue)</td>
 <td>CELF/MBNL proteins undergo a postnatal expression switch that reprograms alternative splicing in the developing heart (CELF1/CUGBP1 is the primary CELF protein studied; CELF4 is a paralog, not itself directly assayed)</td>
 <td>Kalsotra A et al. 2008, PNAS. PMID 19075228, DOI 10.1073/pnas.0809045105</td>
-<td>Verified but flagged: overstretched as direct CELF4 evidence — treat as CELF-family background context only, near-zero weight toward a lung mechanism for CELF4 specifically</td>
+<td><span class="tag">Verified</span> but flagged: overstretched as direct CELF4 evidence — treat as CELF-family background context only, near-zero weight toward a lung mechanism for CELF4 specifically</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CELF4</td>
+<td class="gene">CELF4</td>
 <td>Structural (non-pulmonary tissue)</td>
 <td>CELF4 specifically (not CELF1) promotes inclusion of a myotonic-dystrophy-relevant exon in the skeletal muscle chloride channel CLCN1</td>
 <td>Kino Y et al. 2009, Nucleic Acids Research. PMID 19720736, DOI 10.1093/nar/gkp681</td>
-<td>Verified; establishes CELF4 as a bona fide splicing regulator, but in skeletal muscle, not lung</td>
+<td><span class="tag">Verified</span>; establishes CELF4 as a bona fide splicing regulator, but in skeletal muscle, not lung</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CELF4</td>
+<td class="gene">CELF4</td>
 <td>Structural/developmental (non-pulmonary tissue)</td>
 <td>CELF4 is developmentally expressed in differentiating mouse retinal neurons with a dynamic nuclear-to-cytoplasmic shift</td>
 <td>Karunakaran DKP et al. 2013, Gene Expression Patterns. PMID 23932931, DOI 10.1016/j.gep.2013.07.009</td>
-<td>Verified; retina/CNS-adjacent, not pulmonary</td>
+<td><span class="tag">Verified</span>; retina/CNS-adjacent, not pulmonary</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CELF4</td>
+<td class="gene">CELF4</td>
 <td>Immune/inflammatory (incidental, non-mechanistic)</td>
 <td>CELF4 is overexpressed alongside glutamatergic-signaling genes in glioma-related-seizure brain tissue; the same analysis separately found down-regulation of immune-trafficking genes (CXCL8, H19, VEGFA) in the same comparison</td>
 <td>Feyissa AM et al. 2021, Epilepsy Research. PMID 33765507, DOI 10.1016/j.eplepsyres.2021.106618</td>
-<td>Verified as reported, but explicitly non-mechanistic/incidental co-occurrence — not evidence of a direct CELF4 immune function</td>
+<td><span class="tag">Verified</span> as reported, but explicitly non-mechanistic/incidental co-occurrence — not evidence of a direct CELF4 immune function</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CELF4</td>
+<td class="gene">CELF4</td>
 <td>General biology (neuronal)</td>
 <td>Celf4-deficient mice have a complex seizure disorder driven by altered excitatory (not inhibitory) neurotransmission; CELF4 expressed predominantly in excitatory cortical/hippocampal neurons; deletion in adulthood sufficient to produce seizures</td>
 <td>Wagnon JL et al. 2011, Genes, Brain and Behavior. PMID 21745337, DOI 10.1111/j.1601-183X.2011.00717.x</td>
-<td>Verified; reinforces CELF4's core biology as neuronal, not pulmonary/immune</td>
+<td><span class="tag">Verified</span>; reinforces CELF4's core biology as neuronal, not pulmonary/immune</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CELF4</td>
+<td class="gene">CELF4</td>
 <td>General biology (neuronal)</td>
 <td>Original description of the Celf4/Brunol4 mouse mutant: complex, genetically-modeled idiopathic-epilepsy-like phenotype (tonic-clonic and absence-like seizures), gene enriched in hippocampus</td>
 <td>Yang Y et al. 2007, PLoS Genetics. PMID 17677002, DOI 10.1371/journal.pgen.0030124</td>
-<td>Verified; establishes CELF4 as a causal epilepsy/seizure-susceptibility gene in mice</td>
+<td><span class="tag">Verified</span>; establishes CELF4 as a causal epilepsy/seizure-susceptibility gene in mice</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CELF4</td>
+<td class="gene">CELF4</td>
 <td>General biology (neuropsychiatric)</td>
 <td>CELF3/CELF4 are protein-interaction partners of ZNF804A (a schizophrenia GWAS gene) in a neuronal splicing regulatory network</td>
 <td>Chapman RM et al. 2019, Schizophrenia Bulletin. PMID 30597088, DOI 10.1093/schbul/sby183</td>
-<td>Verified; situates CELF4 in neurodevelopmental/psychiatric gene networks, not pulmonary/immune</td>
+<td><span class="tag">Verified</span>; situates CELF4 in neurodevelopmental/psychiatric gene networks, not pulmonary/immune</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CELF4 (locus-level, obesity)</td>
+<td class="gene">CELF4 (locus-level, obesity)</td>
 <td>Statistical genetics / cross-trait GWAS</td>
-<td>A balanced-translocation breakpoint truncates a regulatory domain of CELF4 on chromosome 18q12.2 in a family segregating obesity/hypertension; the paper states this CELF4 domain &quot;harbours several GWAS signals for obesity&quot;</td>
+<td>A balanced-translocation breakpoint truncates a regulatory domain of CELF4 on chromosome 18q12.2 in a family segregating obesity/hypertension; the paper states this CELF4 domain "harbours several GWAS signals for obesity"</td>
 <td>Fjorder AS et al. 2019, European Journal of Human Genetics. PMID 30903111, DOI 10.1038/s41431-019-0382-9</td>
-<td>Verified; independent, non-COPD confirmation that this locus's other major common-variant GWAS architecture is anthropometric/metabolic (obesity), concordant with Open Targets BMI/waist-hip-ratio colocalization</td>
+<td><span class="tag">Verified</span>; independent, non-COPD confirmation that this locus's other major common-variant GWAS architecture is anthropometric/metabolic (obesity), concordant with Open Targets BMI/waist-hip-ratio colocalization</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CELF4 (locus-level, smoking interaction — negative finding)</td>
+<td class="gene">CELF4 (locus-level, smoking interaction — negative finding)</td>
 <td>Statistical genetics / gene-by-smoking interaction</td>
 <td>A genome-wide gene-by-smoking-interaction COPD GWAS (UK Biobank/COPDGene/SpiroMeta) found genome-wide-significant interaction/marginal signals only at 15q25.1 (CHRNB4), SERPINA1, 3q26.2 (MECOM), 16q22.1 (SMPD3), and 19q13.2 (EGLN2) — CELF4/18q12.2 is NOT among the significant loci</td>
 <td>Kim W et al. 2021, American Journal of Epidemiology. PMID 33106845, DOI 10.1093/aje/kwaa227</td>
-<td>Verified as a negative/non-supporting data point for a CELF4-smoking-interaction mechanism</td>
+<td><span class="tag">Verified</span> as a negative/non-supporting data point for a CELF4-smoking-interaction mechanism</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Notes on scope:</strong> No PubMed literature was found (targeted searches performed, all returned zero
 relevant results) directly linking CELF4 or this 18q12.2 locus to COPD, FEV1, FEV1/FVC, or any
 lung-function/lung-disease trait, nor to smoking initiation, cigarettes-per-day, or smoking
@@ -502,7 +186,7 @@ COPD relevance.</li>
 <p>CELF4 is the only candidate gene at this locus by every available prioritization method (nearest
 gene and ABC concordant; MAGMA/PoPS/FLAMES not informative; Ensembl confirms no other
 protein-coding gene in the interval), so there is no competing gene to weigh it against — the
-&quot;which gene&quot; question is essentially answered by elimination, not by gene-specific mechanistic
+"which gene" question is essentially answered by elimination, not by gene-specific mechanistic
 evidence. Confidence is nonetheless LOW, not HIGH, because the mechanistic case for <em>why</em> CELF4
 drives this COPD association is weak to actively contradicted: (1) Open Targets shows a real,
 fairly strong locus-level COPD genetic-association evidence score (~0.87, gwas_credible_sets
@@ -519,7 +203,7 @@ independently, an obesity-locus role (Fjorder 2019, verified) — not pulmonary 
 skeptic marked CELF4 CONTESTED on this basis (see audit file) — a real statistical signal with a
 mechanism that has been actively searched-for and repeatedly redirected toward obesity/metabolic
 and neurobehavioral pleiotropy rather than direct pulmonary or smoking-mediated biology. This
-locus is a case where &quot;gene identity&quot; is not in question but &quot;causal mechanism relevant to COPD&quot;
+locus is a case where "gene identity" is not in question but "causal mechanism relevant to COPD"
 is genuinely unresolved; the study team should weigh whether to treat this as a real but
 indirect/pleiotropic (obesity- or behavior-confounded) signal rather than a mechanistically
 validated pulmonary-disease gene. What would resolve this: a direct CELF4-lung/airway functional
@@ -530,5 +214,7 @@ be completed due to a session-wide web-search tool budget limit (see audit file)
 revisited with a fresh search budget before treating the CONTESTED call as fully adversarially
 tested.</p>
 
+        </div>
+    </div>
 </body>
 </html>

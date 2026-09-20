@@ -1,379 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>17_49200001-49450000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table: locus 17:49,200,001-49,450,000 (nearest gene ZNF652)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table-locus-1749200001-49450000-nearest-gene-znf652">Evidence table: locus 17:49,200,001-49,450,000 (nearest gene ZNF652)</h1>
-<p>Lead variant: rs16948048 (17:49,363,104, PIP=0.513, upstream_gene_variant, gene=ZNF652).
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table-locus-1749200001-49450000-nearest-gene-znf652">Evidence table: locus 17:49,200,001-49,450,000 (nearest gene ZNF652)</h1><div class="summary"><p>Lead variant: rs16948048 (17:49,363,104, PIP=0.513, upstream_gene_variant, gene=ZNF652).
 Internal pipeline candidate genes: nearest=ZNF652, MAGMA=UTP18, PoPS=UTP18, ABC=ZNF652,
 FLAMES=NA. Credible set overwhelmingly maps to ZNF652 (lead variant + most PIP mass),
-with smaller PIP tails in the lncRNAs FLJ40194 and ZNF652-AS1.</p>
-<p>Only citations with verifier verdict VERIFIED are included below. See
+with smaller PIP tails in the lncRNAs FLJ40194 and ZNF652-AS1.</p><p>Only citations with verifier verdict VERIFIED are included below. See
 <code>audits/17_49200001-49450000_audit.md</code> for excluded (CLAIM_MISMATCH) citations and the
-full red-team critique, including an important caveat about the critique's search coverage.</p>
-<table>
+full red-team critique, including an important caveat about the critique's search coverage.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -386,151 +70,151 @@ full red-team critique, including an important caveat about the critique's searc
 </thead>
 <tbody>
 <tr>
-<td>ZNF652</td>
+<td class="gene">ZNF652</td>
 <td>Statistical genetics</td>
 <td>rs16948048 (ZNF652 upstream) allele distribution differs between hypertensive cases and controls in a Han Chinese GWAS replication (P=0.037)</td>
 <td>PMID 20542020 / DOI 10.1016/j.cca.2010.06.004</td>
-<td>WEAKENED (gene: real BP association but non-pulmonary, non-smoking trait; does not establish lung relevance)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene: real BP association but non-pulmonary, non-smoking trait; does not establish lung relevance)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZNF652</td>
+<td class="gene">ZNF652</td>
 <td>Statistical genetics</td>
 <td>rs16948048 (ZNF652) tested as one of several blood-pressure SNPs for visceral/subcutaneous fat area in Japanese women (not the top hit)</td>
 <td>PMID 22071413 / DOI 10.1038/jhg.2011.127</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZNF652</td>
+<td class="gene">ZNF652</td>
 <td>Statistical genetics</td>
 <td>rs16948048 is one of eight established blood-pressure-associated SNPs; no pharmacogenetic interaction with antihypertensive drug response found</td>
 <td>PMID 22525200 / DOI 10.1097/HJH.0b013e3283536338</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZNF652</td>
+<td class="gene">ZNF652</td>
 <td>Statistical genetics</td>
 <td>rs16948048 (ZNF652 region) increases hypertension risk in younger African-American individuals (OR=1.31, P=0.011)</td>
 <td>PMID 34793544 / DOI 10.1371/journal.pone.0259962</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZNF652</td>
+<td class="gene">ZNF652</td>
 <td>Statistical genetics / regulatory</td>
 <td>A chr17 enhancer variant (rs2671655, ~2Mb from the lead SNP) modulates expression of PHB1, ZNF652, and SPOP jointly as co-target genes of the same regulatory enhancer, in a gastric-cancer GWAS/eQTL context</td>
 <td>PMID 35325318 / DOI 10.1007/s10120-022-01285-x</td>
-<td>WEAKENED (different disease, different variant than this locus's credible set; shows genes CAN share regulatory architecture, not that this COPD haplotype does so in lung)</td>
+<td><span class="tag-warning">WEAKENED</span> (different disease, different variant than this locus's credible set; shows genes CAN share regulatory architecture, not that this COPD haplotype does so in lung)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>UTP18</td>
+<td class="gene">UTP18</td>
 <td>Structural (molecular/cell biology)</td>
 <td>Utp18p is a core subunit of the yeast UTP-B complex required for proper SSU processome assembly during ribosome biogenesis (general housekeeping function, not lung-specific)</td>
 <td>PMID 28600509 / DOI 10.1038/s41598-017-03034-y</td>
-<td>HOLDS (as evidence of non-lung-specific housekeeping function; UTP18 itself likely a genome-build coordinate-mismatch artifact at this locus — see audit)</td>
+<td><span class="tag-hold">HOLDS</span> (as evidence of non-lung-specific housekeeping function; UTP18 itself likely a genome-build coordinate-mismatch artifact at this locus — see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>UTP18</td>
+<td class="gene">UTP18</td>
 <td>Structural (molecular biology)</td>
 <td>Utp18 recruits the nuclear exosome helicase Mtr4 to an early preribosomal particle via its AIM motif</td>
 <td>PMID 28883156 / DOI 10.1261/rna.062901.117</td>
-<td>HOLDS</td>
+<td><span class="tag-hold">HOLDS</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>UTP18</td>
+<td class="gene">UTP18</td>
 <td>Structural (cancer cell biology)</td>
 <td>UTP18 overexpression promotes colorectal cell-cycle progression and tumorigenesis via destabilization of p21 mRNA and altered ribosome biogenesis</td>
 <td>PMID 37086406 / DOI 10.1016/j.celrep.2023.112423</td>
-<td>HOLDS</td>
+<td><span class="tag-hold">HOLDS</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>UTP18</td>
+<td class="gene">UTP18</td>
 <td>Structural (cancer bioinformatics)</td>
 <td>UTP18 is one of ten hub genes co-expressed with an oncogenic lncRNA in hepatocellular carcinoma, enriched for ribosome-biogenesis GO terms</td>
 <td>PMID 38590422 / DOI 10.62347/JPHF4071</td>
-<td>HOLDS</td>
+<td><span class="tag-hold">HOLDS</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GNGT2</td>
+<td class="gene">GNGT2</td>
 <td>Immunology/inflammation</td>
 <td>In a mouse model, Gngt2 is selectively upregulated in lung dendritic cells in neutrophilic (T2-low) but not eosinophilic asthma; Gngt2 knockdown suppresses ATG5/NF-κB-dependent IL-6/IL-23/IL-17 production and Th17 differentiation</td>
 <td>PMID 42228185 / DOI 10.1007/s00011-026-02276-9</td>
-<td>WEAKENED (asthma model, not COPD; zero fine-mapping/statistical support at this locus; same-lab evidence series)</td>
+<td><span class="tag-warning">WEAKENED</span> (asthma model, not COPD; zero fine-mapping/statistical support at this locus; same-lab evidence series)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GNGT2</td>
+<td class="gene">GNGT2</td>
 <td>Immunology/inflammation</td>
 <td>Bioinformatic hub-gene analysis identifies Gngt2 as a CD11b+ dendritic-cell hub gene linked to autophagy defects and Th17-skewed, neutrophilic airway inflammation in mouse asthma models</td>
 <td>PMID 39417697 / DOI 10.1002/iid3.70038</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GNGT2</td>
+<td class="gene">GNGT2</td>
 <td>Immunology/inflammation</td>
 <td>Gngt2 is differentially expressed and enriched in the IL-17 signaling pathway in a murine ovalbumin asthma model</td>
 <td>PMID 34785105 / DOI 10.1016/j.phymed.2021.153803</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ABI3</td>
+<td class="gene">ABI3</td>
 <td>Immunology (CNS-specific)</td>
 <td>ABI3 rs616338-T is associated with increased Alzheimer's disease risk (OR=1.41); ABI3/PLCG2 sit within microglial-gene-enriched co-expression networks</td>
 <td>PMID 30326945 / DOI 10.1186/s13024-018-0289-x</td>
-<td>HOLDS (deprioritized: CNS-microglial context only, no lung/COPD relevance, no fine-mapping support)</td>
+<td><span class="tag-hold">HOLDS</span> (deprioritized: CNS-microglial context only, no lung/COPD relevance, no fine-mapping support)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PHB1</td>
+<td class="gene">PHB1</td>
 <td>Statistical genetics / regulatory</td>
 <td>A chr17 enhancer variant (rs2671655) modulates expression of PHB1, ZNF652, and SPOP jointly, identifying PHB1 as a co-regulated target gene sharing cis-regulatory architecture with ZNF652</td>
 <td>PMID 35325318 / DOI 10.1007/s10120-022-01285-x</td>
-<td>HOLDS (with caution: different disease context (gastric cancer), different variant than this locus's lead/credible-set variants)</td>
+<td><span class="tag-hold">HOLDS</span> (with caution: different disease context (gastric cancer), different variant than this locus's lead/credible-set variants)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PHB1</td>
+<td class="gene">PHB1</td>
 <td>Structural (smoking-mediated, COPD-specific)</td>
 <td>In human COPD/smoker lung tissue and cigarette-smoke-exposed cell/mouse models, prohibitins (PHB1 and PHB2) are altered alongside OPA1 isoform switching in a cigarette-smoke-induced mitochondrial dysfunction/mitophagy pathway implicated in COPD pathogenesis</td>
 <td>PMID 34214709 / DOI 10.1016/j.redox.2021.102055</td>
-<td>HOLDS (genuinely COPD- and smoking-relevant, but PHB1 has only thin/indirect positional support at this locus)</td>
+<td><span class="tag-hold">HOLDS</span> (genuinely COPD- and smoking-relevant, but PHB1 has only thin/indirect positional support at this locus)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PHB1</td>
+<td class="gene">PHB1</td>
 <td>Immunology (not COPD-specific)</td>
 <td>In a sepsis-induced acute lung injury mouse model, the SP1/PHB1 axis regulates macrophage M1 polarization and phagocytic function; PHB1 overexpression reverses inflammatory lung injury, fibrosis, and apoptosis</td>
 <td>PMID 40482976 / DOI 10.1016/j.freeradbiomed.2025.05.434</td>
-<td>HOLDS (not COPD-specific — sepsis-ALI model)</td>
+<td><span class="tag-hold">HOLDS</span> (not COPD-specific — sepsis-ALI model)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PHB1</td>
+<td class="gene">PHB1</td>
 <td>Structural/immune (not COPD-specific)</td>
 <td>PHB1 and PHB2 are upregulated alongside IL-6 and extracellular-matrix components (collagen-IV, fibronectin) in LPS-induced murine alveolar epithelial cell injury</td>
 <td>PMID 29620269 / DOI 10.3892/mmr.2018.8808</td>
-<td>HOLDS (not COPD-specific — LPS-ALI model)</td>
+<td><span class="tag-hold">HOLDS</span> (not COPD-specific — LPS-ALI model)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PHB1</td>
+<td class="gene">PHB1</td>
 <td>Structural (smoking-related)</td>
 <td>PHB1 D-aspartate isomerization and mitochondrial morphology changes are implicated in a proposed PCMT1-PHB1-mitochondrial dysfunction pathway relevant to COPD/IPF pathogenesis in a human lung epithelial (A549) cell model, including interaction with cigarette-smoke extract exposure</td>
 <td>PMID 27327778 / DOI 10.1080/01902148.2016.1197984</td>
-<td>HOLDS</td>
+<td><span class="tag-hold">HOLDS</span></td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
 <ul>
 <li><strong>ZNF652 (ENSG00000198740):</strong> COPD association score 0.0022 (literature-only, no genetic-
@@ -602,5 +286,7 @@ independent literature searches (WebSearch budget was exhausted before it began)
 absence of a CONTESTED verdict here should not be read as an exhaustively adversarial-checked
 result — see the audit file for the full disclosure.</p>
 
+        </div>
+    </div>
 </body>
 </html>
