@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>19_40700001-41050000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-gwas-locus-1940700001-41050000--evidence-table">COPD GWAS locus 19:40,700,001-41,050,000 — evidence table</h1>
+<p>Lead/only credible-set variant: rs7251570 (19:40,835,845, GRCh38; PIP = 0.815; intronic,
+non-coding-transcript, MODIFIER impact). Candidate genes evaluated: CYP2A6 (nearest gene),
+C19orf47 (MAGMA prioritized), AKT2 (PoPS prioritized), plus EGLN2 (added by the researcher
+— see Methods note below and <code>audits/19_40700001-41050000_audit.md</code>).</p>
+<p><strong>Methods note (genome-build flag):</strong> the researcher's own Ensembl GRCh38 coordinate check
+found that AKT2 and C19orf47 fall ~350-450 kb <em>outside</em> the stated GRCh38 window
+19:40,700,001-41,050,000, but fall inside the equivalent GRCh37 coordinates. This raises
+the possibility of a build mismatch in the upstream MAGMA/PoPS gene-assignment step for
+this locus. Both genes were nonetheless fully researched per pipeline instructions. See the
+audit file for the red-team-skeptic's view that this should be resolved before either gene
+is weighted in synthesis.</p>
+<p>This table includes only citations verified by citation-verifier (VERIFIED) for genes NOT
+marked CONTESTED by red-team-skeptic. EGLN2, AKT2, and C19orf47 were each marked CONTESTED
+by red-team-skeptic and are therefore excluded from this table; their full evidence and the
+skeptic's verbatim reasoning are preserved in <code>audits/19_40700001-41050000_audit.md</code>.
+CYP2A6 was marked WEAKENED (not CONTESTED) — its rows remain here, with that verdict noted
+per row and explained in the audit file.</p>
+<h2 id="evidence-table--cyp2a6">Evidence table — CYP2A6</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CYP2A6</td>
+<td>Statistical genetics — GWAS discovery</td>
+<td>Discovery GWAS identifying 19q13 (rs7937) as genome-wide significant for COPD, pre-bronchodilator FEV1, and severe (GOLD 3&amp;4) COPD in family-based replication; region previously tied to smoking behavior.</td>
+<td>PMID 22080838 / DOI 10.1093/hmg/ddr524</td>
+<td>WEAKENED (gene-level; see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CYP2A6</td>
+<td>Statistical genetics — smoking-behavior GWAS/CNV</td>
+<td>Common CYP2A6 copy-number + SNP haplotypes define classical functional CYP2A6 alleles, explaining ~2% of variance in cigarettes/day; also associated with lung cancer, COPD, arteriosclerosis obliterans.</td>
+<td>PMID 23049750 / DOI 10.1371/journal.pone.0044507</td>
+<td>WEAKENED (gene-level; see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CYP2A6</td>
+<td>Statistical genetics — smoking-behavior GWAS</td>
+<td>Genome-wide meta-analysis: 19q13 (CYP2A6/CYP2B6 region, rs4105144) genome-wide significant for cigarettes/day; nominal lung-cancer association.</td>
+<td>PMID 20418888 / DOI 10.1038/ng.573</td>
+<td>WEAKENED (gene-level; see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CYP2A6</td>
+<td>Statistical genetics — pleiotropy/LDSC</td>
+<td>CYP2A6 sentinel SNP rs56113850 associated with heavier smoking, increased lung-cancer risk, increased COPD risk, AND (paradoxically) increased smoking cessation.</td>
+<td>PMID 32803792 / DOI 10.1002/gepi.22331</td>
+<td>WEAKENED (gene-level; see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CYP2A6</td>
+<td>Statistical genetics — GWAS of pulmonary function</td>
+<td>GWAS of diffusing capacity (DLCO) in COPD-enriched cohorts lists CYP2A6 among 25 previously reported COPD loci associated with DLCO.</td>
+<td>PMID 30694715 / DOI 10.1165/rcmb.2018-0384OC</td>
+<td>WEAKENED (gene-level; see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CYP2A6</td>
+<td>Statistical genetics + structural — CT-emphysema GWAS/lung eQTL</td>
+<td>Korean COPD-cohort GWAS of quantitative CT emphysema: two SNPs near CYP2A6 (rs12459249, rs11667314) are lung-tissue eQTLs associated with emphysema severity (causal direction/smoking-mediation not tested).</td>
+<td>PMID 34404834 / DOI 10.1038/s41598-021-95887-7</td>
+<td>WEAKENED (gene-level; see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CYP2A6</td>
+<td>Statistical genetics — mediated Mendelian randomization</td>
+<td>Two-step, two-sample mediated MR in UK Biobank: CYP2A6-activity genetic score's effect on COPD/lung-cancer risk significantly mediated by smoking-quantity measures (pack-years, cigarettes/day, nicotine-metabolite sum); smoking quantity mediated a large proportion of the CYP2A6-to-COPD effect; reverse mediated MR (negative control) found no evidence CYP2A6 activity mediates smoking-quantity's effect on COPD. Single most directly on-point paper for Prior 1 at this locus.</td>
+<td>PMID 42219484 / DOI 10.1186/s12931-026-03747-7</td>
+<td>WEAKENED (gene-level, but this specific study is the strongest/best-designed evidence in the table — see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CYP2A6</td>
+<td>Statistical genetics — multivariable Mendelian randomization</td>
+<td>Multivariable MR: univariable analysis shows increased nicotine metabolism increases COPD/lung-cancer/lung-function risk, but after adjusting for smoking heaviness, the direct nicotine-metabolite-ratio effect on COPD/lung cancer is not clearly supported — effect attributed largely to smoking heaviness/non-nicotine tobacco constituents.</td>
+<td>PMID 38335242 / DOI 10.1371/journal.pgen.1011157</td>
+<td>WEAKENED (gene-level; reinforces smoking-mediation — see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CYP2A6</td>
+<td>Statistical genetics — candidate-gene case-control</td>
+<td>In COPD+lung-cancer vs. COPD-only cases, CYP2A6 rs56113850 (risk allele C) is an independent risk factor for lung cancer specifically among COPD patients, alongside BMI, pack-years, and emphysema.</td>
+<td>PMID 39696223 / DOI 10.1186/s12890-024-03444-5</td>
+<td>WEAKENED (gene-level; see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CYP2A6</td>
+<td>Statistical genetics — candidate-gene case-control</td>
+<td>Tatar case-control study: homozygous carriers of the normal (non-deleted) CYP2A6 allele had higher COPD risk; CYP2A6*4 deletion allele related to smoking pack-years.</td>
+<td>PMID 25845234 (no DOI available)</td>
+<td>WEAKENED (gene-level; see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CYP2A6</td>
+<td>Statistical genetics — review</td>
+<td>Review: CHRNA5 and CYP2A6 variation strongly and validly contribute to smoking heaviness, cessation, lung cancer, and COPD risk.</td>
+<td>PMID 36274783 / DOI 10.1007/s40471-019-00220-6</td>
+<td>WEAKENED (gene-level; see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CYP2A6</td>
+<td>Statistical genetics — review</td>
+<td>Review: 19q13 (CYP2A6) is a smoking-quantity risk locus shared across lung cancer/COPD GWAS, distinct from 15q25 (CHRNA3/5); raises unresolved question of direct nicotine/metabolite effects vs. purely smoking-behavior-mediated effects.</td>
+<td>PMID 24163739 / DOI 10.3978/j.issn.2072-1439.2013.08.06</td>
+<td>WEAKENED (gene-level; see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CYP2A6</td>
+<td>Structural/developmental lung biology + immune</td>
+<td>TWAS meta-analysis, nasal airway epithelium of youth with asthma: long-term ambient PM2.5 exposure associated with upregulated CYP2A6 expression (independent of active smoking, since participants are children/youth); CYP2A6 upregulation associated with allergen-specific IgE positivity and increased blood eosinophils/total IgE. Demonstrates genuine extrahepatic airway-epithelial CYP2A6 expression responsive to inhaled xenobiotics, but in a Th2/pediatric-asthma context distinct from COPD's typical neutrophilic/CD8/innate-immune profile — see audit for skeptic's nonspecificity critique.</td>
+<td>PMID 38986136 / DOI 10.1513/AnnalsATS.202403-309OC</td>
+<td>WEAKENED (gene-level; also flagged for disease/cell-type nonspecificity — see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CYP2A6</td>
+<td>Structural/developmental lung biology</td>
+<td>Title-level claim only (full abstract unavailable to researcher): proposes CYP2A6 activity/nicotine-metabolite ratio as an early predictive marker for COPD risk in smokers.</td>
+<td>PMID 33091566 / DOI 10.1016/j.bbadis.2020.165990</td>
+<td>WEAKENED (gene-level; claim strength limited by title-only retrieval — see audit)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not reviewed by citation-verifier or red-team-skeptic)</h2>
+<ul>
+<li><strong>CYP2A6 (ENSG00000255974):</strong> Across 30 independent GWAS credible sets anchored on the
+lead variant rs7251570, CYP2A6 is the ONLY gene with any non-null L2G score in every one
+of them (scores ~0.065-0.41, generally modest but completely one-sided vs. other genes),
+including 0.133 for the COPD PheCode-496 &quot;chronic airway obstruction&quot; study
+(GCST90480254) and 0.130-0.133 for chronic bronchitis, &quot;chronic lung diseases including
+COPD, emphysema and bronchitis,&quot; cigarettes-per-day, smoking status, nicotine dependence,
+and nicotine-metabolite-ratio studies. High-confidence colocalization (H4 = 0.984-0.996)
+ties the COPD/chronic-bronchitis/chronic-airway-obstruction and nicotine-metabolite-ratio
+GWAS signals to a shared GTEx LIVER transcript-usage QTL for a CYP2A6 transcript
+(ENST00000599960) — no lung-tissue colocalization was tested in Open Targets' catalog for
+this locus. Aggregate target-disease association score (COPD) = 0.168 (literature
+datatype 0.321, genetic_association datatype 0.261). Genetic constraint: gnomAD
+LoF-tolerant (oe ~0.64, moderate constraint bin) — consistent with CYP2A6's known common
+pharmacogenomic null alleles.</li>
+<li><strong>C19orf47 (ENSG00000160392):</strong> No non-null L2G score in any of the 30 credible sets; zero
+Open Targets disease-association evidence of any datatype linking C19orf47 to COPD.
+LoF-tolerant (oe ~0.59, moderate constraint bin).</li>
+<li><strong>AKT2 (ENSG00000105221):</strong> No non-null L2G score in any of the 30 credible sets;
+near-zero (0.0044) aggregate COPD association score (literature datatype only, no
+genetic_association contribution) — roughly 40-fold lower than CYP2A6's. Highly gnomAD
+LoF-CONSTRAINED (oe ~0.26, most constrained bin) — a dosage-sensitive gene in general
+(known monogenic severe-insulin-resistance/lipodystrophy gene via coding mutation), but
+with no genetic or colocalization evidence tying this locus's regulatory signal to it
+specifically.</li>
+<li><strong>EGLN2 (ENSG00000129521; not queried directly in the Open Targets step, since it was
+added as a candidate afterward by the researcher):</strong> by implication from the CYP2A6 scan
+above, EGLN2 did not appear with any non-null L2G score in any of the 30 credible sets
+tested (only CYP2A6 did), and no colocalization result for EGLN2 was surfaced. This is an
+absence of evidence in the structured data, not a formal null query result for EGLN2
+specifically — see audit file for full discussion of why EGLN2 is nonetheless a
+literature-nominated competing candidate at this locus.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>CYP2A6 — Confidence: LOW.</strong></p>
+<p>CYP2A6 has the largest, most consistent, and most rigorously tested body of evidence at
+this locus: it is the only gene with any L2G signal across all 30 Open-Targets credible
+sets anchored on the lead variant, it colocalizes at high confidence with a liver
+transcript-usage QTL shared by the COPD/chronic-bronchitis and nicotine-metabolite-ratio
+GWAS signals, and — most importantly — two independent, well-designed Mendelian
+randomization studies (PMID 42219484, mediated MR with a negative-control reverse-MR arm;
+PMID 38335242, multivariable MR) both support a model in which CYP2A6's effect on COPD risk
+is substantially mediated through smoking quantity/nicotine intake rather than direct
+lung-intrinsic biology — exactly the mechanism Prior 1 anticipates for this locus.</p>
+<p>However, this call is genuinely close, for two reasons the evidence table and audit make
+explicit rather than paper over. First, red-team-skeptic marked the whole CYP2A6 body of
+evidence WEAKENED (not simply accepted): the liver-based colocalization and the pediatric
+PM2.5/Th2 airway-epithelial finding (PMID 38986136) argue that CYP2A6's role here is best
+understood as smoking/xenobiotic-metabolism-mediated and disease-nonspecific, not as
+direct, COPD-specific lung-intrinsic biology — meaning the mechanism is well supported, but
+it is a mechanism of shared risk (smoking behavior), not gene-specific structural or immune
+pathology unique to COPD. Second, and more importantly for the &quot;which gene&quot; question:
+red-team-skeptic marked the runner-up candidate, <strong>EGLN2</strong>, CONTESTED but explicitly on the
+grounds that EGLN2's evidence (multiple independent lung- and blood-eQTL/methylation
+studies — see audit — nominating EGLN2 over CYP2A6 as the functionally causal COPD gene at
+this exact 19q13.2 locus) is &quot;same-tier eQTL/statistical evidence as CYP2A6... not more
+solidly established than CYP2A6,&quot; i.e. the skeptic's critique is that the tie has not been
+resolved, not that EGLN2 is clearly wrong. CYP2A6 wins on structured-data corroboration
+(L2G presence across all 30 credible sets; C19orf47 and AKT2 score essentially zero by
+comparison) and on having direct causal-mediation MR evidence that EGLN2 lacks, but no
+lung-tissue colocalization or EGLN2-specific functional/mechanistic study exists to
+formally adjudicate CYP2A6 vs. EGLN2 at the molecular level.</p>
+<p><strong>Runner-up: EGLN2</strong> (excluded from the main evidence table above because
+red-team-skeptic marked it CONTESTED; full evidence and reasoning in the audit file).
+<strong>What would resolve the tie:</strong> (1) a lung-tissue (not just liver) colocalization analysis
+of this locus's COPD/chronic-bronchitis credible sets against modern lung eQTL/sQTL
+datasets (e.g., current GTEx or a large lung-eQTL consortium) capable of distinguishing a
+CYP2A6 vs. an EGLN2 lung-expression signal; (2) an EGLN2-specific functional/mechanistic
+study in airway or alveolar tissue (none currently exists — the EGLN2 case rests entirely
+on eQTL/methylation association, not functional validation); (3) formal statistical
+fine-mapping/coloc directly comparing CYP2A6- and EGLN2-transcript causal probability at
+this locus, ideally in an Open-Targets-indexed lung dataset. AKT2 and C19orf47 are not
+viable competing candidates on current evidence (near-zero-to-zero Open Targets association
+scores, no locus-specific genetic evidence, and a suspected genome-build mismatch placing
+both physically outside the stated GRCh38 locus window — see audit) and should not be
+prioritized without first resolving that coordinate issue.</p>
+<p>Regardless of the CYP2A6-vs-EGLN2 resolution, the broader, better-supported conclusion for
+this locus is that its COPD association is substantially smoking/nicotine-behavior-mediated
+(Prior 1), which should inform how any follow-up functional work at this locus is framed.</p>
+
+</body>
+</html>

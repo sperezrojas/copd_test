@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>20_21050001-21650000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-2021050001-21650000-grch38">Evidence table — locus 20:21050001-21650000 (GRCh38)</h1>
+<p>Lead variant: rs2249048 (20:21477034, intergenic, PIP=0.338 — the largest single-variant
+PIP at this locus but well under 0.5, i.e. no single dominant causal variant). Nearest
+gene: NKX2-2. FLAMES/MAGMA/PoPS prioritized: XRN2. ABC prioritized: NA.</p>
+<p>All rows below carry verifier verdict VERIFIED (see <code>audits/20_21050001-21650000_audit.md</code>
+for excluded/contested items and full reasoning). Citation existence/retraction status was
+independently confirmed for every row; the &quot;Skeptic verdict&quot; column reflects the
+red-team-skeptic's per-gene critique, not the citation-verifier's existence check.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NKX2-2</td>
+<td>Statistical genetics (locus pleiotropy)</td>
+<td>This exact 20p11.22-20p11.23 region is an established Ewing sarcoma GWAS susceptibility locus; 20p11.22 signal is near NKX2-2 (overexpressed in Ewing sarcoma), 20p11.23 signal fine-mapped to KIZ via eQTL</td>
+<td>Machiela et al. 2018, Nat Commun. PMID 30093639 / DOI 10.1038/s41467-018-05537-2</td>
+<td>CONTESTED — legitimate pleiotropy caveat, but overstates to &quot;unrelated to airway biology&quot;; correct framing is &quot;best-characterized signal here is oncologic, not respiratory,&quot; which dilutes but does not exclude a lung-specific role</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NKX2-2</td>
+<td>Structural (tumor marker, neoplastic)</td>
+<td>NKX2-2 protein absent in bronchopulmonary typical carcinoid tumors (neuroendocrine), unlike GI/pancreatic NETs where it is a sensitive marker</td>
+<td>Wang et al. 2010, J Surg Res. PMID 20599218 / DOI 10.1016/j.jss.2010.04.018</td>
+<td>CONTESTED — diagnostic IHC study in a neoplastic context; weak proxy for non-neoplastic airway/PNEC or COPD-relevant biology; in tension with Lawson et al. below</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NKX2-2</td>
+<td>Structural (tumor marker, neoplastic)</td>
+<td>NKX2.2 completely negative (0/11) in primary lung well-differentiated neuroendocrine tumors</td>
+<td>Yang et al. 2018, Biomarker Research. PMID 29713473 / DOI 10.1186/s40364-018-0129-8</td>
+<td>CONTESTED — same limitation as Wang et al. above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NKX2-2</td>
+<td>Structural (tumor biology, neoplastic)</td>
+<td>NKX2.2 overexpression increases chemoresistance in SCLC cell lines; absent nuclear NKX2.2 staining in primary SCLC predicts improved chemotherapy outcomes — i.e. NKX2-2 IS expressed/functional in a subset of lung neuroendocrine cancer</td>
+<td>Lawson et al. 2011, Cancer Res. PMID 21642373 / DOI 10.1158/0008-5472.CAN-11-0080</td>
+<td>CONTESTED — in tension with Wang/Yang (carcinoid) findings; SCLC and carcinoid are biologically distinct neuroendocrine lung tumor classes, so not strictly contradictory, but the researcher did not fully reconcile this and it should not be read as settled evidence either way</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>XRN2</td>
+<td>Structural (lung cancer, epithelial plasticity)</td>
+<td>XRN2 overexpression drives epithelial-mesenchymal transition (EMT) and metastasis in NSCLC via accelerated maturation of miR-10a</td>
+<td>Zhang et al. 2017, Oncogene. PMID 28319071 / DOI 10.1038/onc.2017.39</td>
+<td>WEAKENED — general lung-cancer cell-biology finding, not COPD- or airway-remodeling-specific; should not be read as mechanistic COPD support</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>XRN2</td>
+<td>Structural (genome stability, lung cancer cell lines)</td>
+<td>XRN2 resolves R-loops and participates in DNA double-strand break repair; XRN2-deficient lung cancer cells show sensitivity to PARP1 inhibition</td>
+<td>Patidar et al. 2020, Sci Rep. PMID 32859985 / DOI 10.1038/s41598-020-71203-7</td>
+<td>WEAKENED — general genome-stability biology, no COPD relevance demonstrated</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>XRN2</td>
+<td>Structural/immune (gut epithelium, not lung)</td>
+<td>SIV/HIV infection increases XRN2 protein in gut mucosa, coincident with depletion of miRNAs maintaining epithelial homeostasis/regulating inflammation</td>
+<td>Gaulke et al. 2014, J Virol. PMID 24672033 / DOI 10.1128/JVI.00097-14</td>
+<td>WEAKENED — intestinal, not airway, epithelium; only immune-adjacent XRN2 literature found but not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>XRN2</td>
+<td>Statistical genetics (background GWAS context, locus-specificity unconfirmed)</td>
+<td>Largest multi-ancestry lung-function GWAS to date (580,869 participants, 1,020 signals, 559 prioritized genes); this locus/gene's presence in the reported gene list not confirmed from abstract</td>
+<td>Shrine et al. 2023, Nat Genet. PMID 36914875 / DOI 10.1038/s41588-023-01314-0</td>
+<td>WEAKENED — treat as non-locus-specific background only; do not read as confirmed evidence this locus/gene is in the paper's tables</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>XRN2</td>
+<td>Statistical genetics (background GWAS context, locus-specificity unconfirmed)</td>
+<td>GWAS of 400,102 individuals defined 279 lung-function signals (139 new); variants strongly predict COPD</td>
+<td>Shrine et al. 2019, Nat Genet. PMID 30804560 / DOI 10.1038/s41588-018-0321-7</td>
+<td>WEAKENED — same caveat as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>XRN2</td>
+<td>Statistical genetics (background GWAS context, locus-specificity unconfirmed)</td>
+<td>COPD GWAS of 35,735 cases/222,076 controls identified 82 COPD risk loci</td>
+<td>Sakornsakolpat et al. 2019, Nat Genet. PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
+<td>WEAKENED — same caveat as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KIZ</td>
+<td>Statistical genetics (locus pleiotropy)</td>
+<td>eQTL analysis nominates KIZ as candidate gene at the 20p11.23 Ewing sarcoma susceptibility signal (same broad locus as this COPD signal)</td>
+<td>Machiela et al. 2018, Nat Commun. PMID 30093639 / DOI 10.1038/s41467-018-05537-2</td>
+<td>SUPPORTED-AS-STATED — legitimate non-pulmonary pleiotropy note</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KIZ</td>
+<td>Core molecular function (general cell biology, not lung/immune-specific)</td>
+<td>KIZ (Kizuna) is a centrosomal substrate of Plk1 required for stabilizing mitotic centrosome structure/bipolar spindle formation; depletion causes centrosome fragmentation and multipolar spindles</td>
+<td>Oshimori, Ohsugi &amp; Yamamoto 2006, Nat Cell Biol. PMID 16980960 / DOI 10.1038/ncb1474</td>
+<td>SUPPORTED-AS-STATED — general mitotic-gene biology, no lung/immune link claimed or found</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KIZ</td>
+<td>Core molecular function (commentary, general cell biology)</td>
+<td>Commentary confirming KIZ's role as a Plk1 substrate maintaining spindle pole integrity during mitosis</td>
+<td>Fry &amp; Baxter 2006, Dev Cell. PMID 17011480 / DOI 10.1016/j.devcel.2006.09.012</td>
+<td>SUPPORTED-AS-STATED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>BETALINC1</td>
+<td>Structural/developmental (pancreatic, not lung)</td>
+<td>βlinc1 (BETALINC1) is a conserved lncRNA required for pancreatic islet β-cell specification/function; regulates islet-specific transcription factors in its genomic vicinity; knockout mice show defective islet development and disrupted glucose homeostasis</td>
+<td>Arnes et al. 2016, Genes Dev. PMID 26944677 / DOI 10.1101/gad.273821.115</td>
+<td>SUPPORTED-AS-STATED, with caveat: abstract does not explicitly name NKX2-2 as one of the regulated neighboring TFs — that link is a reasonable proximity-based inference by the researcher, not an explicit finding in the source</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GSTM3P1</td>
+<td>Structural (kidney, not lung)</td>
+<td>GSTM3P1 is transcribed as a functional lncRNA that promotes ischemic acute kidney injury by binding/degrading kidney-protective microRNA mir-668</td>
+<td>Wei et al. 2024, Kidney Int. PMID 39074555 / DOI 10.1016/j.kint.2024.06.027</td>
+<td>SUPPORTED-AS-STATED — no lung relevance claimed</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GSTM3P1</td>
+<td>Structural (kidney, not lung; recency caveat)</td>
+<td>GSTM3P1/Gstm2-ps1 lncRNAs suppress parent-gene (GSTM3/GSTM2) translation and worsen sepsis-associated acute kidney injury by sequestering HuR</td>
+<td>Huang, Dong &amp; Wei 2026, Am J Pathol. PMID 41633446 / DOI 10.1016/j.ajpath.2026.01.004</td>
+<td>SUPPORTED-AS-STATED, with an added flag: verifier noted a recency/temporal-authenticity caveat given the very high PMID and near-present publication date; content itself checks out but treat with extra scrutiny</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
+<p>Disease context: MONDO_0005002 (chronic obstructive pulmonary disease). See
+<code>evidence_tables/_status/20_21050001-21650000/opentargets.md</code> for full detail.</p>
+<ul>
+<li><strong>NKX2-2</strong> (nearest gene): Constraint — synonymous z=-1.58, missense z=-0.11, LoF
+z=0.68 (o/e 0.35, modest LoF constraint). <strong>Zero COPD genetic-association evidence</strong> in
+Open Targets (no score from any datasource). However, Open Targets' own fine-mapped
+credible sets at rs2249048 and other high-PIP variants at this locus (from other GWAS
+indexed in OT, not a COPD study) assign <strong>L2G score ~0.75-0.76 to NKX2-2</strong>, via strong
+colocalization (H4 0.92-0.996) with brain eQTL/exon-usage of NKX2-2 — but the
+colocalizing traits are brain white-matter DTI measures and refractive error, not COPD
+or lung function.</li>
+<li><strong>XRN2</strong> (FLAMES/MAGMA/PoPS-prioritized): Constraint — synonymous z=1.07, missense
+z=2.92, LoF z=1.00 (o/e 0.32, meaningfully constrained). COPD association score = 0.045
+overall (genetic_association datatype score 0.074, from gwas_credible_sets datasource
+only) — weak but nonzero. Not assigned L2G at this locus's own high-PIP variants (those
+all point to NKX2-2).</li>
+<li><strong>KIZ</strong>: Constraint — synonymous z=0.05, missense z=-0.18, LoF z~0 (o/e 0.90,
+unconstrained/LoF-tolerant). COPD association score = 0.060 overall (genetic_association
+0.099, gwas_credible_sets only) — the strongest of the three nonzero-signal genes,
+still weak in absolute terms. Not assigned L2G at this locus's high-PIP variants.</li>
+<li><strong>NKX2-4</strong>: Constraint — synonymous z=-5.45, missense z=-5.04 (both suggest excess
+variation / unconstrained, small-count caveats apply), LoF z~0 (obs=6 vs exp=2.4, small
+numbers). COPD association score = 0.031 overall (genetic_association 0.051,
+gwas_credible_sets only). Not assigned L2G at this locus's high-PIP variants.</li>
+<li><strong>ZNF877P, BETALINC1, GSTM3P1, RN7SKP140</strong>: no Open Targets data available (empty
+geneticConstraint, zero COPD association rows) — consistent with pseudogene/lncRNA
+status; these are not typically constraint-scored or disease-association-scored by Open
+Targets.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Prioritized gene: XRN2. Confidence: LOW.</strong></p>
+<p>This locus is one of the least clear-cut in the pipeline so far, and the call is close.
+The strongest quantitative signal — convergence of FLAMES, MAGMA, and PoPS on XRN2, plus
+the only nonzero (if weak) Open Targets COPD genetic-association scores among the
+protein-coding genes here (XRN2, KIZ, NKX2-4, in that rough order of statistical/PIP
+support) — favors XRN2 over the nearest gene, NKX2-2. Critically, none of the locus's own
+high-PIP credible-set variants (rs2249048, rs68173807, rs804389, rs11697152) are assigned
+to XRN2 by Open Targets' own L2G; they are all assigned to NKX2-2, but via colocalization
+with brain white-matter DTI and refractive-error traits, not COPD or lung function — i.e.
+the gene with the best fine-mapping-based regulatory support (NKX2-2) has no COPD-specific
+signal, while the gene with the best COPD-specific (if weak) signal (XRN2) has no
+fine-mapping/colocalization support at the locus's actual GWAS peak. The red-team-skeptic
+explicitly cautioned against &quot;crowning XRN2 as the likely causal gene merely because it
+has the best statistical-tool convergence,&quot; since none of XRN2's cited mechanistic
+literature (lung-cancer EMT, PARP1 synthetic lethality, gut-mucosal HIV/XRN2) is
+COPD-specific, airway-immune-specific, or even lung-tissue-specific in one case, and since
+the three &quot;background&quot; lung-function GWAS papers cited for it (Shrine 2019/2023,
+Sakornsakolpat 2019) have not been confirmed to actually list this locus/gene in their own
+tables.</p>
+<p>NKX2-2 is the runner-up and cannot be ruled out: it is the nearest gene, has by far the
+clearest regulatory/colocalization evidence at the locus's own lead variants (L2G
+~0.75-0.76, H4 up to 0.996), and its verified literature shows it is expressed and
+functionally relevant in at least one lung neuroendocrine cell context (SCLC, per Lawson
+et al.) even though it is absent from another (typical carcinoid, per Wang/Yang et al.) —
+a genuine, unresolved internal contradiction in the record (flagged CONTESTED above) that
+argues for caution rather than dismissal. Its principal weakness is that all of its
+colocalization support at this locus is with non-pulmonary traits (brain DTI, refractive
+error) and it has zero Open Targets COPD genetic-association evidence at all, plus an
+independent, well-documented pleiotropic association of this same sub-region with Ewing
+sarcoma — none of which excludes a lung role, but none of which supports one either.</p>
+<p>KIZ and NKX2-4 are both weaker than either lead candidate (KIZ: general mitotic gene,
+extremely low-PIP missense variant, no lung/immune literature; NKX2-4: negligible PIP,
+essentially no literature at all) and are not competitive picks.</p>
+<p><strong>What would resolve the tie:</strong> direct evidence that this exact locus/lead variant reaches
+genome-wide significance in the major lung-function GWAS (Shrine 2019/2023,
+Sakornsakolpat 2019) with a locus-specific gene assignment in their own fine-mapping;
+a COPD- or lung-function-specific eQTL/colocalization study for XRN2 or NKX2-2 in
+airway/lung tissue (as opposed to brain, gut, or cancer cell lines); and/or direct
+evidence on NKX2-2 expression in non-neoplastic pulmonary neuroendocrine cells or airway
+epithelium (as opposed to the neoplastic-marker literature currently available). Absent
+that, this locus should be reported to the study team as a low-confidence, essentially
+tied call between XRN2 (statistical/nominal-genetic-association favorite, mechanistically
+unsupported for COPD) and NKX2-2 (regulatory/fine-mapping favorite at the locus, but for
+non-pulmonary traits, with a real internal contradiction in its lung-neuroendocrine
+literature).</p>
+
+</body>
+</html>

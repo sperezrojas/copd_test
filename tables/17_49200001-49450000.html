@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>17_49200001-49450000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table-locus-1749200001-49450000-nearest-gene-znf652">Evidence table: locus 17:49,200,001-49,450,000 (nearest gene ZNF652)</h1>
+<p>Lead variant: rs16948048 (17:49,363,104, PIP=0.513, upstream_gene_variant, gene=ZNF652).
+Internal pipeline candidate genes: nearest=ZNF652, MAGMA=UTP18, PoPS=UTP18, ABC=ZNF652,
+FLAMES=NA. Credible set overwhelmingly maps to ZNF652 (lead variant + most PIP mass),
+with smaller PIP tails in the lncRNAs FLJ40194 and ZNF652-AS1.</p>
+<p>Only citations with verifier verdict VERIFIED are included below. See
+<code>audits/17_49200001-49450000_audit.md</code> for excluded (CLAIM_MISMATCH) citations and the
+full red-team critique, including an important caveat about the critique's search coverage.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ZNF652</td>
+<td>Statistical genetics</td>
+<td>rs16948048 (ZNF652 upstream) allele distribution differs between hypertensive cases and controls in a Han Chinese GWAS replication (P=0.037)</td>
+<td>PMID 20542020 / DOI 10.1016/j.cca.2010.06.004</td>
+<td>WEAKENED (gene: real BP association but non-pulmonary, non-smoking trait; does not establish lung relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZNF652</td>
+<td>Statistical genetics</td>
+<td>rs16948048 (ZNF652) tested as one of several blood-pressure SNPs for visceral/subcutaneous fat area in Japanese women (not the top hit)</td>
+<td>PMID 22071413 / DOI 10.1038/jhg.2011.127</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZNF652</td>
+<td>Statistical genetics</td>
+<td>rs16948048 is one of eight established blood-pressure-associated SNPs; no pharmacogenetic interaction with antihypertensive drug response found</td>
+<td>PMID 22525200 / DOI 10.1097/HJH.0b013e3283536338</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZNF652</td>
+<td>Statistical genetics</td>
+<td>rs16948048 (ZNF652 region) increases hypertension risk in younger African-American individuals (OR=1.31, P=0.011)</td>
+<td>PMID 34793544 / DOI 10.1371/journal.pone.0259962</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZNF652</td>
+<td>Statistical genetics / regulatory</td>
+<td>A chr17 enhancer variant (rs2671655, ~2Mb from the lead SNP) modulates expression of PHB1, ZNF652, and SPOP jointly as co-target genes of the same regulatory enhancer, in a gastric-cancer GWAS/eQTL context</td>
+<td>PMID 35325318 / DOI 10.1007/s10120-022-01285-x</td>
+<td>WEAKENED (different disease, different variant than this locus's credible set; shows genes CAN share regulatory architecture, not that this COPD haplotype does so in lung)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>UTP18</td>
+<td>Structural (molecular/cell biology)</td>
+<td>Utp18p is a core subunit of the yeast UTP-B complex required for proper SSU processome assembly during ribosome biogenesis (general housekeeping function, not lung-specific)</td>
+<td>PMID 28600509 / DOI 10.1038/s41598-017-03034-y</td>
+<td>HOLDS (as evidence of non-lung-specific housekeeping function; UTP18 itself likely a genome-build coordinate-mismatch artifact at this locus — see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>UTP18</td>
+<td>Structural (molecular biology)</td>
+<td>Utp18 recruits the nuclear exosome helicase Mtr4 to an early preribosomal particle via its AIM motif</td>
+<td>PMID 28883156 / DOI 10.1261/rna.062901.117</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>UTP18</td>
+<td>Structural (cancer cell biology)</td>
+<td>UTP18 overexpression promotes colorectal cell-cycle progression and tumorigenesis via destabilization of p21 mRNA and altered ribosome biogenesis</td>
+<td>PMID 37086406 / DOI 10.1016/j.celrep.2023.112423</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>UTP18</td>
+<td>Structural (cancer bioinformatics)</td>
+<td>UTP18 is one of ten hub genes co-expressed with an oncogenic lncRNA in hepatocellular carcinoma, enriched for ribosome-biogenesis GO terms</td>
+<td>PMID 38590422 / DOI 10.62347/JPHF4071</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GNGT2</td>
+<td>Immunology/inflammation</td>
+<td>In a mouse model, Gngt2 is selectively upregulated in lung dendritic cells in neutrophilic (T2-low) but not eosinophilic asthma; Gngt2 knockdown suppresses ATG5/NF-κB-dependent IL-6/IL-23/IL-17 production and Th17 differentiation</td>
+<td>PMID 42228185 / DOI 10.1007/s00011-026-02276-9</td>
+<td>WEAKENED (asthma model, not COPD; zero fine-mapping/statistical support at this locus; same-lab evidence series)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GNGT2</td>
+<td>Immunology/inflammation</td>
+<td>Bioinformatic hub-gene analysis identifies Gngt2 as a CD11b+ dendritic-cell hub gene linked to autophagy defects and Th17-skewed, neutrophilic airway inflammation in mouse asthma models</td>
+<td>PMID 39417697 / DOI 10.1002/iid3.70038</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GNGT2</td>
+<td>Immunology/inflammation</td>
+<td>Gngt2 is differentially expressed and enriched in the IL-17 signaling pathway in a murine ovalbumin asthma model</td>
+<td>PMID 34785105 / DOI 10.1016/j.phymed.2021.153803</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ABI3</td>
+<td>Immunology (CNS-specific)</td>
+<td>ABI3 rs616338-T is associated with increased Alzheimer's disease risk (OR=1.41); ABI3/PLCG2 sit within microglial-gene-enriched co-expression networks</td>
+<td>PMID 30326945 / DOI 10.1186/s13024-018-0289-x</td>
+<td>HOLDS (deprioritized: CNS-microglial context only, no lung/COPD relevance, no fine-mapping support)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PHB1</td>
+<td>Statistical genetics / regulatory</td>
+<td>A chr17 enhancer variant (rs2671655) modulates expression of PHB1, ZNF652, and SPOP jointly, identifying PHB1 as a co-regulated target gene sharing cis-regulatory architecture with ZNF652</td>
+<td>PMID 35325318 / DOI 10.1007/s10120-022-01285-x</td>
+<td>HOLDS (with caution: different disease context (gastric cancer), different variant than this locus's lead/credible-set variants)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PHB1</td>
+<td>Structural (smoking-mediated, COPD-specific)</td>
+<td>In human COPD/smoker lung tissue and cigarette-smoke-exposed cell/mouse models, prohibitins (PHB1 and PHB2) are altered alongside OPA1 isoform switching in a cigarette-smoke-induced mitochondrial dysfunction/mitophagy pathway implicated in COPD pathogenesis</td>
+<td>PMID 34214709 / DOI 10.1016/j.redox.2021.102055</td>
+<td>HOLDS (genuinely COPD- and smoking-relevant, but PHB1 has only thin/indirect positional support at this locus)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PHB1</td>
+<td>Immunology (not COPD-specific)</td>
+<td>In a sepsis-induced acute lung injury mouse model, the SP1/PHB1 axis regulates macrophage M1 polarization and phagocytic function; PHB1 overexpression reverses inflammatory lung injury, fibrosis, and apoptosis</td>
+<td>PMID 40482976 / DOI 10.1016/j.freeradbiomed.2025.05.434</td>
+<td>HOLDS (not COPD-specific — sepsis-ALI model)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PHB1</td>
+<td>Structural/immune (not COPD-specific)</td>
+<td>PHB1 and PHB2 are upregulated alongside IL-6 and extracellular-matrix components (collagen-IV, fibronectin) in LPS-induced murine alveolar epithelial cell injury</td>
+<td>PMID 29620269 / DOI 10.3892/mmr.2018.8808</td>
+<td>HOLDS (not COPD-specific — LPS-ALI model)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PHB1</td>
+<td>Structural (smoking-related)</td>
+<td>PHB1 D-aspartate isomerization and mitochondrial morphology changes are implicated in a proposed PCMT1-PHB1-mitochondrial dysfunction pathway relevant to COPD/IPF pathogenesis in a human lung epithelial (A549) cell model, including interaction with cigarette-smoke extract exposure</td>
+<td>PMID 27327778 / DOI 10.1080/01902148.2016.1197984</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
+<ul>
+<li><strong>ZNF652 (ENSG00000198740):</strong> COPD association score 0.0022 (literature-only, no genetic-
+association datasource evidence for COPD). FEV1 association score 0.357 (genetic_association
+datatype score 0.588; two gwas_credible_sets evidence rows, resourceScore ~0.77 each;
+underlying variant/study IDs not resolvable via the API). Genetic constraint: LoF oe ~0.302
+(LOEUF ~0.30, relatively intolerant of loss-of-function variation); missense oe ~0.768;
+synonymous oe ~0.911. No colocalization data separately resolvable via the fields exposed by
+this API.</li>
+<li><strong>UTP18 (ENSG00000011260):</strong> No COPD or FEV1 association evidence at all (zero evidence rows
+for both terms). Genetic constraint: LoF oe ~0.621 (LOEUF ~0.62, weaker LoF constraint), pLI-
+type score near zero. Note: UTP18's GRCh38 coordinates (17:51,260,477-51,297,936) lie ~1.9 Mb
+outside this locus and do not overlap it; only its GRCh37/hg19 coordinates overlap the locus
+(nearly exactly matching ZNF652's position), consistent with a likely genome-build mismatch
+in the internal MAGMA/PoPS pipeline rather than genuine positional overlap.</li>
+<li><strong>FLJ40194 (ENSG00000177369):</strong> No COPD or FEV1 evidence. No gnomAD constraint metrics
+available (non-coding gene).</li>
+<li><strong>ZNF652-AS1 (ENSG00000248714):</strong> No COPD or FEV1 evidence. No gnomAD constraint metrics
+available (non-coding gene).</li>
+</ul>
+<p>Full detail: <code>evidence_tables/_status/17_49200001-49450000/opentargets.md</code>.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>ZNF652 — confidence: MODERATE.</strong></p>
+<p>ZNF652 carries essentially all of the fine-mapped signal at this locus: the lead variant
+(rs16948048, PIP=0.513) sits upstream of ZNF652, and the great majority of remaining
+credible-set PIP mass falls within the ZNF652 gene body itself (see full credible set in
+<code>loci/17_49200001-49450000.md</code>). The only credible-set-weighted rival, ZNF652-AS1, is an
+antisense transcript whose genomic span overlaps ZNF652 almost entirely — the red-team
+critique and researcher both judged this the same underlying regulatory signal rather than
+an independent gene, not a genuine statistical tie. UTP18 (the MAGMA/PoPS-prioritized gene)
+is very likely a genome-build coordinate artifact: its true GRCh38 position lies ~1.9 Mb
+outside this locus, and it carries zero Open Targets COPD/FEV1 evidence and no lung/immune
+literature — the red-team-skeptic explicitly endorsed dismissing it (verdict HOLDS on that
+dismissal). On pure fine-mapping/positional grounds, ZNF652 is the clear pick.</p>
+<p>However, confidence is capped at MODERATE rather than HIGH because the <em>mechanistic</em> case for
+ZNF652 in COPD/pulmonary biology is weak by the verified evidence in the table above: its only
+VERIFIED disease-association literature concerns blood pressure/hypertension (rows 1-4), a
+non-pulmonary, non-smoking trait, and the three papers the researcher proposed as the likely
+source of ZNF652's Open Targets FEV1 signal (Shrine 2019 PMID 30804560, Wain 2017 PMID
+28166213, Shrine 2023 PMID 36914875) all came back CLAIM_MISMATCH — the citation-verifier
+could not confirm ZNF652 is actually named in these papers. The FEV1 evidence therefore rests
+only on the structured Open Targets score (genetic_association datatype 0.588, gwas_credible_
+sets resourceScore ~0.77), not on a verified primary-literature statement, and no structural or
+immune mechanistic literature for ZNF652 was found at all (a genuine gap, not a negative
+finding). Per the smoking-mediation prior, no smoking-behavior GWAS or literature link was
+found for ZNF652 either, so the blood-pressure association most plausibly reflects horizontal
+pleiotropy in a different tissue rather than smoking-mediated confounding of the COPD signal.</p>
+<p>The runner-up is <strong>PHB1</strong>, flagged by both the researcher and red-team-skeptic as a
+biologically plausible complementary candidate: it has substantial, genuinely COPD- and
+smoking-relevant mechanistic literature (cigarette-smoke-induced mitochondrial dysfunction in
+human COPD/smoker lung tissue, PMID 34214709; CSE-exposed A549 mitochondrial pathway proposed
+relevant to COPD/IPF, PMID 27327778) plus two lung-injury-model papers of lower specificity
+(sepsis-ALI, LPS-ALI). However, PHB1's positional/fine-mapping support at this locus is thin
+and indirect — no credible-set variant falls directly within PHB1's gene body; the only link is
+the lowest-PIP tail of ZNF652-AS1 variants lying near/within PHB1, plus an enhancer-sharing
+study (PMID 35325318) conducted in a different disease (gastric cancer) at a different variant
+(~2Mb offset from this locus's lead SNP). The red-team-skeptic explicitly cautioned against
+letting PHB1's richer, more legible mechanistic story promote it above ZNF652 purely on
+mechanism-richness grounds when its statistical/positional support is much weaker.</p>
+<p><strong>What would resolve this call:</strong> (1) confirmation from the supplementary per-locus gene
+tables of the Shrine/Wain lung-function GWAS papers (inaccessible to this pipeline's verifier)
+of whether ZNF652 — or PHB1, or another 17q21 gene — is the gene formally assigned to the FEV1
+signal Open Targets is reporting; (2) a lung-tissue-specific eQTL/colocalization analysis
+directly testing whether this locus's credible-set variants regulate ZNF652 vs. PHB1 expression
+in relevant lung cell types; (3) any direct functional study of ZNF652 in airway/alveolar
+epithelium or lung immune cells, which does not currently exist in the literature identified
+here. Also note: the red-team-skeptic's critique for this locus was conducted with zero
+independent literature searches (WebSearch budget was exhausted before it began), so the
+absence of a CONTESTED verdict here should not be read as an exhaustively adversarial-checked
+result — see the audit file for the full disclosure.</p>
+
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>19_54200001-54350000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1954200001-54350000-nearest-gene-lilrb2">Evidence table — Locus 19:54,200,001-54,350,000 (nearest gene LILRB2)</h1>
+<p><strong>Lead variant:</strong> rs383925 (PIP=0.4326, intronic, LILRB2)
+<strong>Credible set:</strong> rs383925 (PIP=0.4326, intron, LILRB2); rs383369 (PIP=0.3783, missense p.Arg20His, LILRB2); rs431420 (PIP=0.1260, intergenic); rs386056 (PIP=0.0465, missense, LILRB2); rs443874 (PIP=0.0053, intron, LILRB2)
+<strong>Candidate genes evaluated:</strong> LILRB2 (nearest gene + credible-set gene), NLRP12 (PoPS-prioritized)</p>
+<p>This table includes only citations with citation-verifier verdict VERIFIED. See
+<code>audits/19_54200001-54350000_audit.md</code> for excluded citations (RETRACTED / NOT_FOUND /
+CLAIM_MISMATCH) and full red-team-skeptic reasoning.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LILRB2</td>
+<td>Immune (mechanistic, acute lung injury model — not chronic COPD)</td>
+<td>ANGPTL2 upregulates LILRB2, which inhibits TREM2 to promote alveolar macrophage pyroptosis in an LPS-induced acute lung injury mouse/cell model; ANGPTL2/LILRB2 knockdown relieves pyroptosis via autophagy</td>
+<td>Yang F et al. 2024, J Cell Mol Med, PMID 38758159, DOI 10.1111/jcmm.18280</td>
+<td>Real mechanistic precedent for LILRB2 in lung myeloid biology, but acute-injury model, not chronic COPD — keep with caveat</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LILRB2</td>
+<td>Immune (generic receptor biology)</td>
+<td>LILRB2 (ILT4) is an inhibitory receptor broadly expressed on myeloid cells (macrophages, dendritic cells) that binds folded and free-heavy-chain forms of HLA class I</td>
+<td>Jones DC et al. 2011, J Immunol, PMID 21270408, DOI 10.4049/jimmunol.1003078</td>
+<td>Generic immunobiology, not disease-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LILRB2</td>
+<td>Immune (non-pulmonary disease precedent)</td>
+<td>LILRB2/LILRB3 (inhibitory) and LILRA2/LILRA5 (activating) are expressed in rheumatoid synovium and correlate with RA disease activity</td>
+<td>Tedla N et al. 2011, Tissue Antigens, PMID 21388353, DOI 10.1111/j.1399-0039.2011.01633.x</td>
+<td>Non-pulmonary autoimmune tissue context; supports generic chronic-inflammatory role, not COPD-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LILRB2</td>
+<td>Statistical genetics / exposure-MR</td>
+<td>Mendelian randomization found plasma LILRB2 protein levels causally associated with diesel-exhaust occupational exposure</td>
+<td>Li A et al. 2022, Front Public Health, PMID 35602164, DOI 10.3389/fpubh.2022.852572</td>
+<td>Inhaled-particulate exposure axis distinct from cigarette-smoking-behavior confound (prior #1); flagged as an open, unresolved smoking/exposure question, not a resolved mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LILRB2</td>
+<td>Statistical genetics (negative/discordant)</td>
+<td>The largest multi-ancestry lung-function GWAS (~400,102 individuals, 279 signals, 139 novel) does NOT report a signal at 19q13.42/LILRB2 among its FEV1/FEV1-FVC associations</td>
+<td>Shrine N et al. 2019, Nat Genet, PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
+<td>Weighted heavily as a real spirometry-discordance finding per pipeline prior #2 — direct strike against a baseline-airflow-limitation mechanism for this locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LILRB2</td>
+<td>Statistical genetics (negative/discordant)</td>
+<td>The largest COPD coding-variant exome-array meta-analysis to date does not flag LILRB2 among its top exonic association signals (GSDMB, CCDC38, SERPINA1 regions were flagged instead)</td>
+<td>Moll M et al. 2021, Am J Physiol Lung Cell Mol Physiol, PMID 33909500, DOI 10.1152/ajplung.00009.2021</td>
+<td>Weighted less heavily than the Shrine 2019 null (different array/coding-focused design may not capture this signal well) but still a discordant data point</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LILRB2</td>
+<td>Statistical genetics (pQTL identity only)</td>
+<td>Large-scale SomaScan aptamer-based plasma-proteome GWAS (3,622 proteins); Open Targets indexes this study as showing a plasma LILRB2 pQTL colocalizing with the lead credible-set variant rs383925</td>
+<td>Sun BB et al. 2018, Nature, PMID 29875488, DOI 10.1038/s41586-018-0175-2</td>
+<td>Paper identity verified; the specific LILRB2/rs383925 pairing is sourced from Open Targets' database indexing, not confirmed in the paper's own text — label as database-sourced, not independently confirmed literature</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LILRB2</td>
+<td>Immune (background/oncology context — not itemized as individual COPD evidence)</td>
+<td>LILRB2/ILT4 is a well-characterized immune-checkpoint/immunosuppressive receptor in solid-tumor immune evasion, including in lung adenocarcinoma/NSCLC tissue (7 papers spot-checked for existence only: PMID 38705566, 37622462, 33537094, 38313233, 37444609, 32549766, 38450191)</td>
+<td>Multiple authors 2020-2024, various oncology journals — see audit for full list</td>
+<td>Confirms LILRB2 is genuinely expressed/functional in lung tissue myeloid/tumor microenvironment; background biological plausibility only, not COPD-specific evidence — do not treat as disease-specific support</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NLRP12</td>
+<td>Immune (mouse, non-pulmonary)</td>
+<td>Nlrp12-/- mice show hyperinflammatory CD4+ T-cell responses (elevated IFN-γ, IL-17, TNF-α), worse colitis and atopic-dermatitis-like disease on CD4+ T-cell transfer, and an atypical IL-4-driven neuroinflammatory (EAE) phenotype</td>
+<td>Lukens JR et al. 2015, Immunity, PMID 25888258, DOI 10.1016/j.immuni.2015.03.006</td>
+<td>Establishes NLRP12 as a T-cell-intrinsic negative regulator of inflammation generically; mouse, not lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NLRP12</td>
+<td>Immune (mouse, non-pulmonary)</td>
+<td>Nlrp12-/- mice are highly susceptible to colitis and colitis-associated colon cancer via elevated noncanonical NF-κB (NIK/TRAF3) signaling</td>
+<td>Allen IC et al. 2012, Immunity, PMID 22503542, DOI 10.1016/j.immuni.2012.03.012</td>
+<td>Mechanistic basis for NLRP12 as an NF-κB checkpoint; colon tissue, not lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NLRP12</td>
+<td>Immune/structural (mouse, direct pulmonary test — negative)</td>
+<td>In OVA-acute and house-dust-mite-chronic allergic-airway-inflammation mouse models, Nlrp12-/- mice showed no significant overall difference in allergic airway disease development or airway function vs wild-type</td>
+<td>Allen IC et al. 2012, PLoS One, PMID 22291998, DOI 10.1371/journal.pone.0030612</td>
+<td>Negative for a Th2/asthma-type pulmonary role specifically; does NOT test a neutrophilic/innate-immune/cigarette-smoke model, which is the more COPD-relevant inflammatory program — not a full exclusion</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NLRP12</td>
+<td>Immune (human, correlational)</td>
+<td>In human asthmatic sputum, change in NLRP12 expression after a high-fat meal correlated with change in S100A16 expression and plasma non-esterified fatty acid levels</td>
+<td>Li Q et al. 2016, Nutrients, PMID 26751474, DOI 10.3390/nu8010030</td>
+<td>Weak/correlational; asthma context, dietary exposure, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NLRP12</td>
+<td>Immune (mouse, non-pulmonary organ)</td>
+<td>PM2.5 intratracheal instillation in mice significantly decreased cardiac NLRP12 mRNA while increasing NLRP3/NF-κB activation</td>
+<td>Jin Y et al. 2016, J Biochem Mol Toxicol, PMID 27158778, DOI 10.1002/jbt.21806</td>
+<td>Inhalational-exposure-responsive regulation of NLRP12 shown, but in cardiac tissue, not lung parenchyma — limited direct relevance</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not reviewed by citation-verifier or red-team-skeptic)</h2>
+<p><strong>LILRB2 (ENSG00000131042):</strong></p>
+<ul>
+<li>Platform-wide COPD association score: 0.320 (genetic_association datatype score 0.523, literature 0.068). COPD is LILRB2's #2-ranked disease association out of 222 (Alzheimer disease is #1, score 0.383; no verified literature mechanism found linking LILRB2 to Alzheimer's).</li>
+<li>Locus-to-gene (L2G): lead credible-set variant rs383925 is the fine-mapped lead SNP for an Open Targets COPD GWAS study (GCST90399695, PICS fine-mapping, p=3.54e-11); L2G score to LILRB2 = 0.861. The same variant also gets L2G 0.861-0.922 to LILRB2 for hematocrit and HDL-cholesterol GWAS signals fine-mapped at the identical SNP — a pleiotropic, multi-trait regulatory hub, not a COPD-specific signal in isolation.</li>
+<li>Colocalization: dense molecular-QTL hotspot (40-50 overlapping study loci at each of rs383925/rs383369), the majority naming LILRB2 transcripts/exons/CAGE peaks across many tissues, including a GTEx lung splicing QTL, BLUEPRINT neutrophil, and monocyte/macrophage eQTL panels under Salmonella/IFN-gamma/LPS/R848/Pam3CSK4 stimulation, plus a plasma LILRB2 protein pQTL. Neighboring paralogs LILRA1 and LILRB5 also show molecular-QTL colocalization at these same variants in monocyte/macrophage panels but received no L2G score at any disease-relevant GWAS study locus — paralog specificity is not cleanly resolved (see audit).</li>
+<li>Genetic constraint (gnomAD): LOEUF (oe_upper, LoF) ≈0.863 — only mildly below population median, not strongly constrained.</li>
+</ul>
+<p><strong>NLRP12 (ENSG00000142405):</strong></p>
+<ul>
+<li>Platform-wide COPD association score: 0.0045 — negligible, ranks ~230/401 diseases with any evidence for this gene. Dominant disease associations are monogenic autoinflammatory periodic-fever syndromes (rare gain-of-function), not complex-trait COPD.</li>
+<li>No L2G prediction or colocalization naming NLRP12 was found at either the lead variant or the missense credible-set variant queried at this locus.</li>
+<li>Physical location: NLRP12's gene body (chr19:53,792,139-53,824,403) sits ~375-560 kb centromeric of the 19:54,200,001-54,350,000 credible-set window — NLRP12 is NOT physically within the locus window.</li>
+<li>Genetic constraint (gnomAD): LOEUF ≈1.336 — tolerant of LoF variation.</li>
+</ul>
+<p>Full detail: <code>evidence_tables/_status/19_54200001-54350000/opentargets.md</code></p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>LILRB2 — Confidence: MODERATE (for gene identity at this locus; LOW confidence in a COPD-specific mechanism)</strong></p>
+<p>LILRB2 is the best-supported candidate gene at this locus, but the case is a statistical/fine-mapping one rather than a mechanistically proven COPD-biology one, and red-team-skeptic's verdict on it was explicitly WEAKENED, not fully verified-as-characterized. The positive case: two of the five credible-set variants are missense changes within the LILRB2 coding sequence (rs383369, PIP=0.378; rs386056, PIP=0.047) and the top-PIP variant (rs383925, PIP=0.433) is intronic to LILRB2 — this is gene-specific variant annotation, not just nearest-gene proximity inference. Open Targets' own L2G algorithm assigns LILRB2 a high, disease-matched score (0.861) at the lead variant for an actual COPD GWAS study, and this is reinforced by dense multi-tissue eQTL/sQTL colocalization to LILRB2 transcripts, including a GTEx lung splicing QTL (see Open Targets summary above).</p>
+<p>Against this: (1) the L2G signal is pleiotropic — the identical lead variant gets equally high L2G to LILRB2 for hematocrit and HDL-cholesterol, suggesting a generic blood/myeloid regulatory hub rather than COPD-specific action; (2) the largest available multi-ancestry lung-function GWAS (Shrine et al. 2019, PMID 30804560) found no signal at this locus for FEV1/FEV1-FVC, directly discordant with pipeline prior #2's expectation of spirometric concordance; (3) the largest COPD coding-variant exome-array meta-analysis (Moll et al. 2021, PMID 33909500) also did not flag LILRB2; (4) no COPD-specific cellular/functional literature exists for LILRB2 — the closest mechanistic precedent is an acute lung injury (not chronic COPD) alveolar-macrophage pyroptosis study (PMID 38758159); (5) the missense-variant-specific literature is largely unusable — two citations were NOT_FOUND, one (endometriosis) was a corrected non-significant finding, and one (Zika transmission) showed a protective rather than risk association, none in a COPD/pulmonary context; (6) LILRB2's own #1 platform-wide disease association (Alzheimer's) has no established literature mechanism, leaving the shared-vs-coincidental-pleiotropy question at this variant genuinely open; (7) two neighboring LILR-family paralogs (LILRA1, LILRB5) show comparable molecular-QTL colocalization at the same credible-set variants and are not cleanly excluded — the paralog-specificity of the signal rests substantially on L2G's disease-matched scoring rather than independent gene-specific functional literature.</p>
+<p><strong>Runner-up: NLRP12 (PoPS-prioritized) — confidence LOW/INSUFFICIENT as an alternative.</strong> NLRP12 has no L2G or colocalization support at this locus, sits ~375-560 kb outside the credible-set window, and its dominant human phenotype (monogenic periodic fever syndrome) is mechanistically distinct from common-variant COPD susceptibility. However, red-team-skeptic notes this should not be fully dropped: PoPS is an independent, similarity-based method not restricted by physical distance or colocalization, NLRP12 is a documented myeloid/T-cell negative regulator of NF-κB signaling (a mechanistically coherent, untested hypothesis for excess innate/neutrophilic inflammation if lost), and the one direct pulmonary functional test (PMID 22291998) specifically probed a Th2/asthma-type model, not the neutrophilic/innate-immune inflammatory program most relevant to COPD per pipeline prior #3 — so absence of evidence in that one negative mouse study is not the same as evidence of absence for a COPD-relevant mechanism.</p>
+<p><strong>What would resolve this call:</strong> (a) an independent lung-function (FEV1/FEV1-FVC) or COPD subtype (e.g., exacerbation-frequency, emphysema-predominant) GWAS/fine-mapping analysis that specifically discriminates LILRB2 from LILRA1/LILRB5/LILRB3 at this locus, ideally with tissue-specific (lung, alveolar macrophage) colocalization rather than blood/whole-tissue eQTL; (b) a direct smoking-initiation/nicotine-dependence GWAS lookup at rs383925/rs383369 (flagged by red-team-skeptic as not completed in this review due to exhausted search budget) to rule in/out a smoking-behavior-mediated mechanism per pipeline prior #1; (c) COPD-specific (not acute-injury or oncology) functional data on LILRB2 in airway/alveolar myeloid cells or CD8+ T-cell programs; (d) confirmation of whether NLRP12's PoPS signal reflects a genuine trans-acting or long-range regulatory mechanism, versus a false positive from genome-wide similarity scoring. Given the weight of the evidence, LILRB2 remains the recommended candidate for the study team to carry forward, but this should be treated as a moderate-confidence statistical/positional call awaiting COPD-specific mechanistic confirmation, not a settled result.</p>
+
+</body>
+</html>

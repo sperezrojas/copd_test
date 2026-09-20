@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>17_39150001-40150000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-gwas-locus-evidence-table-17_39150001-40150000-nearest-gene-pgap3">COPD GWAS locus evidence table: 17_39150001-40150000 (nearest gene PGAP3)</h1>
+<p>Region: 17:39,150,001-40,150,000 (GRCh38). Lead variant: rs1495100 (17:39676026, intron_variant
+in PGAP3, PIP=0.209). This is the well-known 17q12-21.1 asthma-susceptibility locus. Candidate
+genes from internal pipeline: nearest=PGAP3, MAGMA=KRT15, PoPS=JUP, ABC=PGAP3. Three additional
+genes (CSF3, GSDMA, PSMD3) were added by the researcher via independent enumeration of the
+1-Mb window and are included below with that caveat noted throughout — see Prioritized gene
+section and audit appendix for important caveats about CSF3/PSMD3 in particular.</p>
+<p><strong>2026-09-11 ADDENDUM:</strong> A genome-build error in the study team's MAGMA/PoPS gene-location
+merge file was discovered and corrected. The corrected re-merge surfaced THRA (thyroid
+hormone receptor alpha) as a 14th candidate gene at this locus, never evaluated in the
+original review. THRA has now been independently coordinate-checked, researched,
+citation-verified, and red-team-critiqued using the same pipeline rigor as the original 13
+genes, and is incorporated below. See the Prioritized gene section for whether this changes
+the original final call.</p>
+<p>All citations below carry a VERIFIED verdict from citation-verifier (confirmed to exist, not
+retracted, and to accurately reflect the claim made); see
+<code>evidence_tables/_status/17_39150001-40150000/verified_citations.md</code> (original 38 citations)
+and <code>evidence_tables/_status/17_39150001-40150000/verified_citations_thra_addendum.md</code> (13
+THRA-addendum citations) for the full verifier output. &quot;Skeptic verdict&quot; reflects the
+red-team-skeptic's gene-level call (CONTESTED / WEAKENED); see
+<code>audits/17_39150001-40150000_audit.md</code> for full reasoning on every CONTESTED gene, and the
+critique notes for WEAKENED genes.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PGAP3</td>
+<td>Statgen</td>
+<td>SMR/TWAS analyses implicate ORMDL3, PGAP3, MAPK3, and GMPPB as putative shared contributors to COPD/autoimmune-disease pleiotropy at 17q12/16p11.2; authors caution needs functional validation</td>
+<td>Wen et al. 2025, PMID 40917930, DOI 10.2147/COPD.S533401</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KRT15</td>
+<td>Structural</td>
+<td>Krt15-knockout mice develop more severe cigarette-smoke-induced airway remodeling, emphysema, and inflammatory infiltration than wild-type via increased MMP-9-driven epithelial-mesenchymal transition; Krt15+ basal cells transdifferentiate toward AT2 cells to protect alveoli</td>
+<td>Zhu et al. 2023, PMID 38007424, DOI 10.1186/s12931-023-02598-w</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KRT15</td>
+<td>Structural</td>
+<td>KRT15 required for airway basal-cell clonogenicity/self-renewal after injury; Krt15-KO shows reduced label-retention and impaired regenerative capacity resembling human bronchiolitis obliterans</td>
+<td>Ievlev et al. 2023, PMID 36512409, DOI 10.1172/jci.insight.162041</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KRT15</td>
+<td>Structural (background)</td>
+<td>General Krt5-lineage basal-cell/Wnt-β-catenin biology in tracheal epithelial repair (not KRT15-specific)</td>
+<td>Hsu et al. 2014, PMID 24280717, DOI 10.1016/j.jtcvs.2013.10.039</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JUP</td>
+<td>Structural (background, non-lung)</td>
+<td>Naxos disease case: biallelic JUP mutation causing ARVC with woolly hair/keratoderma</td>
+<td>Sonsöz et al. 2021, PMID 34587761, DOI 10.1161/CIRCIMAGING.121.013059</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JUP</td>
+<td>Structural (background, non-lung)</td>
+<td>Naxos disease narrative review of JUP/desmoplakin mutations and ARVC/skin phenotype</td>
+<td>Leopoulou et al. 2020, PMID 32966140, DOI 10.1080/14779072.2020.1828064</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GSDMB</td>
+<td>Statgen + structural + immune (variant-level, asthma outcome)</td>
+<td>rs2305480 (missense) and rs11078928 (splice acceptor) associated with LOWER asthma risk (OR 0.92 GERA, OR 0.85 EVE); rs11078928 causes exon-6 skipping (13 aa of N-terminal pyroptotic domain), abolishing GSDMB's ability to induce caspase-1-mediated pyroptosis in airway epithelial cells</td>
+<td>Panganiban et al. 2018, PMID 29330013, DOI 10.1016/j.jaci.2017.11.040</td>
+<td>WEAKENED — asthma-outcome evidence, not COPD-outcome; see audit</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GSDMB</td>
+<td>Statgen (locus-class, not gene-specific)</td>
+<td>Primary COPD GWAS (35,735 cases/222,076 controls) identifies 82 COPD loci including 17q12-21, with 14 loci explicitly shared with asthma or pulmonary fibrosis</td>
+<td>Sakornsakolpat et al. 2019, PMID 30804561, DOI 10.1038/s41588-018-0342-2</td>
+<td>WEAKENED — locus-level, does not isolate GSDMB</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GSDMB</td>
+<td>Statgen (locus-class)</td>
+<td>Lung-function GWAS of 400,102 individuals defines 279 signals jointly predicting COPD across smokers and never-smokers</td>
+<td>Shrine et al. 2019, PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
+<td>WEAKENED — locus-level</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GSDMB</td>
+<td>Statgen (methods)</td>
+<td>Fine-mapping of 82 COPD GWAS loci integrated with lung-cell ATAC-seq to prioritize putative causal regulatory variants</td>
+<td>Benway et al. 2021, PMID 33788674, DOI 10.1165/rcmb.2020-0475OC</td>
+<td>WEAKENED — general methods paper, does not name GSDMB specifically</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GSDMB</td>
+<td>Statgen</td>
+<td>Also names GSDMB among 162 MAGMA-prioritized pleiotropic genes for COPD-autoimmune shared loci at 17q12</td>
+<td>Wen et al. 2025, PMID 40917930, DOI 10.2147/COPD.S533401</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GSDMB</td>
+<td>Structural + immune (asthma model)</td>
+<td>Mice overexpressing human GSDMB develop asthma phenotype with increased airway smooth muscle and fibrosis (remodeling) WITHOUT airway inflammation; GSDMB regulates 5-lipoxygenase and TGF-β1 pathways</td>
+<td>Das, Miller, Broide 2017 (review), PMID 28826527, DOI 10.1016/bs.ai.2017.06.001</td>
+<td>WEAKENED — asthma model</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GSDMB</td>
+<td>Immune (background)</td>
+<td>General gasdermin-family pore-forming/pyroptosis structural review</td>
+<td>Ruan 2019, PMID 31628657, DOI 10.1007/978-981-13-9367-9_9</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GSDMB / ORMDL3 / ZPBP2 (domain-wide)</td>
+<td>Statgen + immune</td>
+<td>Disease-associated haplotypes alter CTCF binding and nucleosome occupancy, producing domain-wide cis-regulatory effects on GSDMB AND ORMDL3 expression relevant to asthma, type 1 diabetes, primary biliary cirrhosis, Crohn disease</td>
+<td>Verlaan et al. 2009, PMID 19732864, DOI 10.1016/j.ajhg.2009.08.007</td>
+<td>WEAKENED — supports shared-domain, not single-gene, causality</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GSDMB</td>
+<td>Immune</td>
+<td>Hypothesis-generating: 17q21 GSDMB/ORMDL3 risk allele (rs7216389-T) may mark alarmin-driven (IL-33/TSLP/IL-25) rather than classical eosinophilic Th2 asthma</td>
+<td>Poto et al. 2026, PMID 41885394, DOI 10.1097/ACI.0000000000001145</td>
+<td>WEAKENED — asthma endotype hypothesis</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>IKZF3</td>
+<td>Statgen</td>
+<td>Names IKZF3 among broader 17q12/16p11.2 COPD-autoimmune pleiotropy gene set (pathway enrichment: T-cell activation/immune regulation)</td>
+<td>Wen et al. 2025, PMID 40917930, DOI 10.2147/COPD.S533401</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>IKZF3</td>
+<td>Statgen + structural</td>
+<td>DNA demethylation modestly changes promoter methylation (8-13%) of ZPBP2/GSDMA with large RNA-level effects, and modifies allelic expression of ZPBP2/ORMDL3 in airway epithelial (NuLi-1), kidney (293T), and adenocarcinoma (MCF-7) cell lines</td>
+<td>Moussette et al. 2017, PMID 28241063, DOI 10.1371/journal.pone.0172707</td>
+<td>CONTESTED — shared-domain finding, not IKZF3-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>IKZF3</td>
+<td>Immune (allergic/Th2 mouse model, not COPD)</td>
+<td>Vitamin D induces IKZF3-encoded Aiolos in mouse lung CD4+ Th2 cells to suppress IL-2/Stat5 signaling; vitamin D deficiency causes severe allergic lung inflammation after allergen challenge, prevented by prenatal supplementation</td>
+<td>Kilic et al. 2024, PMID 38567749, DOI 10.7554/eLife.89270</td>
+<td>CONTESTED — allergic/Th2 model, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>IKZF3</td>
+<td>Immune (general T-cell biology, not COPD)</td>
+<td>IKZF3 expression correlates with IL-10-producing CD4+ T cells; pharmacological inhibition (lenalidomide) blocks IL-10 induction; IKZF3 overexpression alone insufficient to drive IL-10 transcription</td>
+<td>Ridley et al. 2020, PMID 32321757, DOI 10.4049/jimmunol.1901283</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>IKZF3 (paralog background)</td>
+<td>Immune</td>
+<td>IKZF1 (paralog of IKZF3) haploinsufficiency causes CVID-like primary immunodeficiency</td>
+<td>Nunes-Santos et al. 2020, PMID 32654692, DOI 10.1016/j.iac.2020.04.004</td>
+<td>CONTESTED — describes IKZF1, not IKZF3</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ERBB2</td>
+<td>Background (cancer genetics)</td>
+<td>ERBB2 amplicon gene cluster includes STARD3, PPP1R1B, TCAP, PNMT, ERBB2, IKZF3, TOP2A, in gastric-cancer context</td>
+<td>Qiu et al. 2013, PMID 24291029, DOI 10.1016/j.gene.2013.11.030</td>
+<td>CONTESTED — oncology-only, no lung relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STARD3</td>
+<td>Statgen (variant-level, non-respiratory)</td>
+<td>rs1877031 (STARD3 missense) associated with penoscrotal hypospadias severity in a North Indian cohort</td>
+<td>Singh et al. 2018, PMID 30078147, DOI 10.1007/s00383-018-4330-5</td>
+<td>CONTESTED — non-respiratory phenotype</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STARD3</td>
+<td>Background (cancer genetics)</td>
+<td>ERBB2-amplicon haplotype study in gastric cancer including STARD3</td>
+<td>Qiu et al. 2013, PMID 24291029, DOI 10.1016/j.gene.2013.11.030</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STARD3</td>
+<td>Structural (non-lung)</td>
+<td>STARD3/MLN64 required for tethering late endosomes to mitochondria and regulating cholesterol egress (studied in placental cells)</td>
+<td>Nara et al. 2023, PMID 37245582, DOI 10.1016/j.yexcr.2023.113668</td>
+<td>CONTESTED — no lung data</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZPBP2</td>
+<td>Statgen + immune (variant-level)</td>
+<td>In 1,366 Han Chinese (710 adult-onset asthma cases, 656 controls), rs11557467-G (ZPBP2 missense) associated with increased adult-onset asthma risk (OR 1.27, P=0.006); risk allele also associated with increased ORMDL3/GSDMB expression in leukocytes</td>
+<td>Fang et al. 2011, PMID 21985515, DOI 10.1186/1471-2350-12-133</td>
+<td>CONTESTED — own data suggest regulatory (ORMDL3/GSDMB-mediated) rather than independent ZPBP2 effect; no COPD outcome</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZPBP2</td>
+<td>Statgen + immune</td>
+<td>Domain-wide cis-regulatory effects across the ZPBP2/GSDMB/ORMDL3 three-gene block</td>
+<td>Verlaan et al. 2009, PMID 19732864, DOI 10.1016/j.ajhg.2009.08.007</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ORMDL3</td>
+<td>Statgen + immune (childhood asthma, not COPD)</td>
+<td>Association at ORMDL3/GSDMB locus (rs2305480) genome-wide significant SPECIFICALLY for childhood-onset asthma (P=6×10⁻²³), not adult-onset, in &gt;26,000 subjects</td>
+<td>Moffatt et al. 2010, PMID 20860503, DOI 10.1056/NEJMoa0906312</td>
+<td>WEAKENED — childhood-asthma-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ORMDL3</td>
+<td>Statgen + immune (childhood asthma)</td>
+<td>17q21 variant effects on asthma risk restricted to children with rhinovirus (not RSV) wheezing illness in early life (gene-by-virus interaction); ORMDL3/GSDMB expression increased after rhinovirus stimulation of PBMCs</td>
+<td>Caliskan et al. 2013, PMID 23534543, DOI 10.1056/NEJMoa1211592</td>
+<td>WEAKENED — childhood-asthma-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ORMDL3</td>
+<td>Statgen (childhood asthma)</td>
+<td>rs7216389-T asthma association confined to early-onset cases (age 0-5 and 14-17), absent in adult-onset; effect not fully explained by ORMDL3/GSDMB expression alone</td>
+<td>Halapi et al. 2010, PMID 20372189, DOI 10.1038/ejhg.2010.38</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ORMDL3</td>
+<td>Statgen (small, marginal, adult COPD)</td>
+<td>In 493 Slovenian adults, ORMDL3 rs4795405 CC genotype significantly associated with both asthma-without-rhinitis and COPD (37% CC in COPD cases vs 26% in controls, P=0.045)</td>
+<td>Balantic et al. 2013, PMID 23964555</td>
+<td>WEAKENED — underpowered, marginal, not smoking-adjusted; should not be treated as confirmatory human genetic evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ORMDL3</td>
+<td>Structural (smoking-specific, COPD-relevant)</td>
+<td>ORMDL3 mRNA/protein elevated in COPD patients' primary bronchial epithelial cells vs healthy controls; cigarette-smoke-medium exposure induces ORMDL3, driving ATF6/IRE1-dependent ER stress, MUC5AC mucin hypersecretion, and IL-8 release; ORMDL3 knockdown blunts these effects</td>
+<td>Chen et al. 2025, PMID 40317248, DOI 10.1080/10715762.2025.2501019</td>
+<td>WEAKENED — correlative/expression-level, no genotype-stratified data</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ORMDL3</td>
+<td>Structural (smoking-specific, COPD-relevant)</td>
+<td>ORMDL3 elevated in airway smooth muscle cells of smokers (with/without COPD) vs nonsmokers; cigarette-smoke exposure induces ORMDL3 in nonsmoker cells; knockdown reduces smoke-induced inflammation, ER stress, mitochondrial dysfunction</td>
+<td>Chen et al. 2021, PMID 34624393, DOI 10.1016/j.jaci.2021.09.028</td>
+<td>WEAKENED — correlative/expression-level</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ORMDL3</td>
+<td>Structural</td>
+<td>Reduced de novo sphingolipid synthesis (pathway ORMDL3 negatively regulates) increases bronchial hyperreactivity in mice absent inflammation</td>
+<td>Worgall et al. 2013, PMID 23698380, DOI 10.1126/scitranslmed.3005765</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ORMDL3</td>
+<td>Structural (asthma model)</td>
+<td>In OVA-induced mouse asthma model, ORMDL3 correlates with p-ERK, MMP-9, bronchial wall thickness; budesonide reduces all three</td>
+<td>Yu et al. 2017, PMID 28358425, DOI 10.3892/mmr.2017.6413</td>
+<td>WEAKENED — asthma model</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ORMDL3</td>
+<td>Structural + immune (asthma model)</td>
+<td>Estrogen upregulates ORMDL3 and alters sphingolipid metabolism, contributing to sex-differential airway hyperresponsiveness/remodeling in mouse asthma models</td>
+<td>Granato et al. 2025, PMID 41360340, DOI 10.1016/j.jaci.2025.10.035</td>
+<td>WEAKENED — asthma model</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ORMDL3</td>
+<td>Structural + immune (obesity-asthma model)</td>
+<td>ORMDL3 overexpression drives NLRP3/GSDMD/pyroptosis pathway activation and airway remodeling in obesity-asthma mouse model</td>
+<td>Liu et al. 2023, PMID 37594074, DOI 10.3892/mmr.2023.13073</td>
+<td>WEAKENED — asthma model</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ORMDL3</td>
+<td>Structural + statgen (review)</td>
+<td>Summarizes UPR/airway-remodeling and sphingolipid-synthesis/bronchial-hyperreactivity as leading functional hypotheses for ORMDL3 in childhood asthma</td>
+<td>Ono, Worgall, Worgall 2013 (review), PMID 24165737, DOI 10.1038/pr.2013.186</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PNMT</td>
+<td>Structural</td>
+<td>PNMT highly expressed during neonatal lung-developmental stage as part of β2-adrenergic-receptor (ADRB2) signaling gene set (rhesus monkey lung development atlas)</td>
+<td>Zheng et al. 2021, PMID 33512584, DOI 10.1007/s00408-021-00420-2</td>
+<td>CONTESTED — broad atlas, not disease-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PNMT</td>
+<td>Immune (asthma model, not COPD)</td>
+<td>PNMT-knockout mice resistant to OVA-induced asthma-like phenotype; restored by exogenous β2-adrenoceptor agonists (formoterol/salmeterol); PDE4 inhibitors attenuate restored phenotype</td>
+<td>Forkuo et al. 2016, PMID 26909542, DOI 10.1165/rcmb.2015-0373OC</td>
+<td>CONTESTED — asthma model</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CSF3 (not credible-set-annotated; see audit)</td>
+<td>Statgen + immune</td>
+<td>In Japanese GWAS (5,771 discovery + 1,894 replication), rs4794822 in PSMD3-CSF3 region at 17q21.1 genome-wide significant for neutrophil count (P=6.3×10⁻¹⁰); no significant association with lymphocyte/monocyte/eosinophil/basophil counts</td>
+<td>Okada et al. 2010, PMID 20172861, DOI 10.1093/hmg/ddq080</td>
+<td>WEAKENED — LD to this locus's credible set unconfirmed</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CSF3 (background; different gene)</td>
+<td>Statgen + immune</td>
+<td>Identifies CSF3R (G-CSF receptor, chromosome 1p34.3 — a different gene, not at this locus) associated with WBC-count trajectory phenotypes</td>
+<td>Hall et al. 2018, PMID 30459343, DOI 10.1038/s41435-018-0051-y</td>
+<td>WEAKENED — not evidence for this locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CSF3 (not credible-set-annotated; see audit)</td>
+<td>Structural + statgen + immune</td>
+<td>In 587 continuously-smoking NHLBI Lung Health Study subjects (fastest vs slowest lung-function decline) and 1,074 subjects (lowest vs highest baseline lung function), CSF3 promoter variant -1719T allele associated with protection against low lung function (OR 0.73, 95% CI 0.56-0.95); CSF3 haplotype associated with baseline FEV1; no corresponding CSF2 association</td>
+<td>He et al. 2008, PMID 18353856, DOI 10.1183/09031936.00040307</td>
+<td>WEAKENED — smoking- and spirometry-concordant, but LD to this locus's fine-mapped signal unconfirmed</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GSDMA (no credible-set variant)</td>
+<td>Statgen + structural</td>
+<td>GSDMA was the most methylation-responsive of five 17q12-q21 genes tested (IKZF3, ZPBP2, ORMDL3, GSDMA, GSDMB) upon DNA demethylation in three cell lines</td>
+<td>Moussette et al. 2017, PMID 28241063, DOI 10.1371/journal.pone.0172707</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GSDMA (no credible-set variant)</td>
+<td>Structural + immune (review, contradicting evidence)</td>
+<td>Explicitly states the 17q21 disease association is attributable to the ORMDL3/GSDMB pairing, NOT GSDMA, based on original GWAS/eQTL fine-mapping</td>
+<td>Das, Miller, Broide 2017 (review), PMID 28826527, DOI 10.1016/bs.ai.2017.06.001</td>
+<td>CONTESTED — direct contradicting evidence against GSDMA</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PSMD3 (no credible-set variant)</td>
+<td>Statgen + immune</td>
+<td>Genome-wide-significant neutrophil-count association reported jointly as &quot;PSMD3-CSF3&quot;; lead SNP sits in/near PSMD3, but PSMD3 (26S proteasome regulatory subunit) has no known neutrophil-specific function</td>
+<td>Okada et al. 2010, PMID 20172861, DOI 10.1093/hmg/ddq080</td>
+<td>CONTESTED — positional marker for adjacent CSF3 signal</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>THRA (added 2026-09-11 addendum; no credible-set variant — see audit)</td>
+<td>Statgen (unresolved)</td>
+<td>Primary COPD GWAS states 17q21.1 was one of two loci (with 7q22.1) reaching the maximum number of candidate effector genes implicated by the authors' own gene-prioritization pipeline (up to 17 genes at a single locus); whether THRA specifically was among those genes could not be confirmed from the accessible text</td>
+<td>Sakornsakolpat et al. 2019, PMID 30804561, DOI 10.1038/s41588-018-0342-2</td>
+<td>CONTESTED — unresolved gene-membership gap, near-zero evidentiary weight until resolved</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>THRA</td>
+<td>Structural (general thyroid-axis, not THRA-isoform-specific)</td>
+<td>Triiodothyronine (T3) developmentally stimulates Na-K-ATPase activity via PI3K/Akt signaling in late-gestation fetal rat distal lung epithelial cells, coincident with the perinatal fetal-to-postnatal lung-fluid-clearance switch</td>
+<td>Lei et al. 2006, PMID 16951134, DOI 10.1152/ajplung.00078.2006</td>
+<td>CONTESTED — does not distinguish THRA from THRB or systemic hormone action</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>THRA</td>
+<td>Structural (negative RCT)</td>
+<td>RCT (n=49) of postnatal thyroxine (T4) supplementation in preterm infants &lt;32 weeks found T4 did NOT reduce incidence of chronic lung disease/bronchopulmonary dysplasia or other prematurity complications</td>
+<td>Smith et al. 2000, PMID 11076326, DOI 10.1038/sj.jp.7200417</td>
+<td>CONTESTED — negative finding for thyroid-hormone-supplementation hypothesis</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>THRA</td>
+<td>Structural (trial protocol, background)</td>
+<td>TIPIT trial protocol documenting hypothyroxinemia of prematurity as common; lists chronic lung disease/oxygen requirement as a secondary morbidity outcome in a levothyroxine-vs-placebo RCT (primary outcomes were neurodevelopmental/brain imaging)</td>
+<td>Ng et al. 2008, PMID 18590560, DOI 10.1186/1471-2431-8-26</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>THRA</td>
+<td>Structural (negative/inconclusive)</td>
+<td>Cochrane review found no statistically significant difference in chronic lung disease incidence with iodine supplementation (affecting thyroid hormone synthesis) in the single eligible RCT identified</td>
+<td>Ibrahim et al. 2006, PMID 16625632, DOI 10.1002/14651858.CD005253.pub2</td>
+<td>CONTESTED — underpowered/inconclusive</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>THRA</td>
+<td>Structural (contradicting evidence — human LOF disease)</td>
+<td>Review of first reported RTHα (heterozygous THRA loss-of-function) patients: clinical phenotype is short stature, dysmorphism, developmental delay, constipation, bradycardia, low T4/T3 ratio; NO pulmonary/respiratory phenotype reported</td>
+<td>Vlaeminck-Guillem et al. 2015, PMID 26585273, DOI 10.1016/j.lpm.2015.07.022</td>
+<td>CONTESTED — absence of lung phenotype in direct human LOF model argues against THRA</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>THRA</td>
+<td>Structural (contradicting evidence — human LOF disease)</td>
+<td>RTHα case series: short stature, skeletal dysplasia, dysmorphic facies, developmental delay, constipation; no pulmonary symptoms documented</td>
+<td>Moran et al. 2017, PMID 28471274, DOI 10.1089/thy.2017.0157</td>
+<td>CONTESTED — no lung phenotype</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>THRA</td>
+<td>Structural (contradicting evidence — human LOF disease)</td>
+<td>RTHα case report (THRA p.G291S): short stature, motor-mental retardation, constipation, coarse facies, umbilical hernia; no respiratory phenotype</td>
+<td>Korkmaz et al. 2019, PMID 30747412, DOI 10.1007/s42000-019-00094-9</td>
+<td>CONTESTED — no lung phenotype</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>THRA</td>
+<td>Structural (contradicting evidence — human LOF disease)</td>
+<td>RTHα case series (3 patients): short stature, low FT4, mild constipation; no pulmonary outcomes reported</td>
+<td>Jorge et al. 2024, PMID 38744258, DOI 10.1159/000539348</td>
+<td>CONTESTED — no lung phenotype</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>THRA</td>
+<td>Immune (non-lung, decades-old)</td>
+<td>Developmental expression of CaMKIV in thymus/T lymphocytes controlled by thyroid hormone via THRA; CaMKIV modulates T-cell activation and apoptosis</td>
+<td>Means et al. 1997, PMID 9238860 (no DOI available)</td>
+<td>CONTESTED — old, indirect, non-lung/non-COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>THRA</td>
+<td>Immune (off-target — different receptor)</td>
+<td>Thyroid-stimulating hormone receptor (TSH-R), NOT THRA, implicated in thymocyte development/apoptosis in subclinical hypothyroidism mouse model</td>
+<td>Wu et al. 2017, PMID 27864993, DOI 10.1111/sji.12507</td>
+<td>CONTESTED — wrong gene (TSH-R, not THRA)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>THRA</td>
+<td>Immune/systemic (reverse-causation risk)</td>
+<td>Meta-analysis (12 studies): non-thyroidal illness syndrome (low circulating T3) present in 42.1% of COPD patients, more prevalent during exacerbations; associated with lower PaCO2, lower albumin, higher FEV1%</td>
+<td>Wu et al. 2025, PMID 40385580, DOI 10.3389/fmed.2025.1571165</td>
+<td>CONTESTED — thyroid status as consequence of COPD severity, not germline THRA causation</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>THRA</td>
+<td>Immune/systemic (reverse-causation risk)</td>
+<td>Meta-analysis: 44.2% non-thyroidal illness syndrome prevalence in COPD, higher during exacerbations, associated with lower SaO2; smoking status did not explain heterogeneity</td>
+<td>Vázquez &amp; Díez-Manglano 2026, PMID 42364217, DOI 10.5152/eurasianjmed.2026.251290</td>
+<td>CONTESTED — consequence of illness severity, not causal genetic evidence</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-verified-literature">Open Targets summary (structured database lookup — NOT verified literature)</h2>
+<p>Not passed through citation-verifier or red-team-skeptic. Disease context: MONDO_0005002
+(COPD); asthma (MONDO_0004979) scores also given because this locus's genetic architecture is
+dominated by its asthma association. Association scores are Open Targets' overall
+(all-datasource) target-disease association score, not a locus/credible-set-specific L2G score
+for this exact COPD GWAS signal (L2G/colocalization queries were attempted but could not be
+resolved via the available schema — see full note in
+<code>evidence_tables/_status/17_39150001-40150000/opentargets.md</code>). Constraint = gnomAD LOF
+observed/expected (oe) with 90% CI.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>COPD assoc. score</th>
+<th>Asthma assoc. score</th>
+<th>LOF constraint (oe, 90% CI)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PGAP3</td>
+<td>0.0067 (low)</td>
+<td>0.391 (high)</td>
+<td>0.850 (0.638-1.147) — not constrained</td>
+<td>Positional/ABC top gene but weak direct COPD signal</td>
+</tr>
+<tr>
+<td>KRT15</td>
+<td>0.025</td>
+<td>~0 (not in top 150 of 275)</td>
+<td>0.960 (0.755-1.231) — not constrained</td>
+<td>Disease profile dominated by skin/hair/unrelated traits</td>
+</tr>
+<tr>
+<td>JUP</td>
+<td>~0 (not in top 150 of 1027)</td>
+<td>~0 (not in top 150)</td>
+<td>0.386 (0.284-0.533) — strongly constrained</td>
+<td>Disease profile entirely cardiac/skin</td>
+</tr>
+<tr>
+<td>GSDMB</td>
+<td>0.192</td>
+<td>0.483 (highest)</td>
+<td>0.715 (0.506-1.030) — not strongly constrained</td>
+<td>Broadest respiratory-trait signal among the original 13 genes</td>
+</tr>
+<tr>
+<td>IKZF3</td>
+<td>~0 (not in top 150 of 529)</td>
+<td>0.338</td>
+<td>0.107 (0.052-0.244) — extremely constrained</td>
+<td>Disease profile dominated by cancer/immunodeficiency</td>
+</tr>
+<tr>
+<td>ERBB2</td>
+<td>~0 (not in top 150 of 1910)</td>
+<td>~0 (not in top 150)</td>
+<td>0.418 (0.339-0.518) — constrained</td>
+<td>Disease profile entirely oncological</td>
+</tr>
+<tr>
+<td>STARD3</td>
+<td>0.0026 (low)</td>
+<td>0.157</td>
+<td>0.626 (0.486-0.812) — moderately constrained</td>
+<td>Notable but unverified &quot;smoking initiation&quot; score (0.151)</td>
+</tr>
+<tr>
+<td>ZPBP2</td>
+<td>0.046</td>
+<td>0.441 (2nd highest)</td>
+<td>0.896 (0.663-1.228) — not strongly constrained</td>
+<td>Broad respiratory-trait signal</td>
+</tr>
+<tr>
+<td>ORMDL3</td>
+<td>0.131</td>
+<td>0.460 (tied-highest)</td>
+<td>0.462 (0.252-0.912) — moderately/strongly constrained</td>
+<td>Only gene with oeUpper meaningfully &lt;1 among the original strongest respiratory-signal genes</td>
+</tr>
+<tr>
+<td>PNMT</td>
+<td>~0 (not in top 150 of 438)</td>
+<td>0.089</td>
+<td>1.030 (0.740-1.458) — not constrained, LOF-tolerant</td>
+<td>Disease profile dominated by cardiac/ophthalmologic traits</td>
+</tr>
+<tr>
+<td>CSF3, GSDMA, PSMD3</td>
+<td>not queried</td>
+<td>not queried</td>
+<td>not queried</td>
+<td>Added by researcher via independent gene enumeration, not part of the orchestrator's original 10-gene Open Targets query; not separately looked up</td>
+</tr>
+<tr>
+<td><strong>THRA</strong> (added 2026-09-11)</td>
+<td><strong>0.252 — highest of any gene at this locus</strong>, incl. GSDMB (0.192) and ORMDL3 (0.131)</td>
+<td>not in top 150 of 1836 (negligible) — the only high-COPD-scoring gene at this locus with essentially no asthma association</td>
+<td>0.276 (0.179-0.439) — very strongly constrained (2nd most constrained gene at locus after IKZF3)</td>
+<td>Top disease overall is thyroid-endocrine; also scores 0.259 on &quot;bronchopulmonary dysplasia&quot; (its single highest of 1836 diseases) and 0.259 on &quot;obstructive sleep apnea syndrome.&quot; No credible-set variant; nearest fine-mapped variant is ~139 kb away. Per red-team-skeptic, this score is uncorroborated by any literature found across all three evidence domains and should be treated as an unresolved anomaly, not weighted as evidence of causality — see Prioritized gene section</td>
+</tr>
+</tbody>
+</table>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>ORMDL3 — confidence: LOW (reaffirmed after THRA addendum)</strong></p>
+<p>This call is close, and the pipeline instructions require naming a single best pick even when
+the evidence does not cleanly distinguish among genes in tight LD — that is exactly the
+situation here. The runner-up is <strong>GSDMB</strong>, and neither can be confidently excluded with the
+evidence in hand. THRA (added in this 2026-09-11 addendum after a genome-build-error
+correction surfaced it as a candidate) was investigated with the same rigor as the original 13
+genes and does <strong>not</strong> change this tension or unseat ORMDL3 — see the dedicated THRA
+discussion below for why.</p>
+<p>Both ORMDL3 and GSDMB carry the two highest Open Targets COPD-association scores among the
+original 13 genes at this locus (ORMDL3 0.131, GSDMB 0.192) and the two highest asthma scores
+(0.460 and 0.483 respectively) — but per the red-team-skeptic's critique (see audit), this Open
+Targets COPD score and the human genetic literature at this locus (Sakornsakolpat 2019, Shrine
+2019) are locus-class evidence that does not, by itself, distinguish ORMDL3 from GSDMB, ZPBP2,
+or even PGAP3, because all sit in the same CTCF-bounded, domain-wide cis-regulatory block
+(Verlaan et al. 2009, PMID 19732864) whose disease-associated haplotypes jointly alter GSDMB
+and ORMDL3 expression. Neither gene has a credible-set coding/splice variant whose functional
+effect has been tied to a COPD (rather than asthma) outcome: GSDMB's two directly
+characterized coding/splice variants (rs2305480, rs11078928; Panganiban et al. 2018, PMID
+29330013) were characterized entirely against asthma risk and in vitro pyroptosis, not COPD;
+ORMDL3 carries no coding/splice credible-set variant at all.</p>
+<p>The tie-breaker favoring ORMDL3 over GSDMB is the existence of two experimental papers showing
+cigarette-smoke-induced ORMDL3 up-regulation directly in COPD-relevant cell types — bronchial
+epithelium (Chen et al. 2025, PMID 40317248) and airway smooth muscle from smokers with/without
+COPD (Chen et al. 2021, PMID 34624393) — with ORMDL3 knockdown blunting smoke-induced ER
+stress, mucus hypersecretion, and inflammation. This is the only mechanistic narrative at this
+locus that is both (a) smoking-triggered, satisfying prior #1's call to evaluate
+smoking-mediated pathways, and (b) occurring in adult, disease-relevant airway cell types
+rather than exclusively in childhood-asthma or allergic mouse models. By contrast, GSDMB's
+deepest mechanistic evidence (Panganiban 2018; Das/Miller/Broide 2017 mouse model) is
+asthma-outcome literature, and per the skeptic's critique, framing it as COPD-supportive risks
+conflating asthma mechanism with COPD relevance, given this locus's extensive documented
+asthma-COPD overlap (Sakornsakolpat 2019 explicitly lists this as one of 14 shared loci) and
+the fact that the COPD GWAS is neither smoking- nor asthma-history-adjusted.</p>
+<p>However, this tie-breaker is itself weak: the skeptic correctly notes that the ORMDL3
+smoke-induction studies are correlative expression-level observations in exposed/diseased
+cells, not genotype-stratified data showing the GWAS risk allele itself modulates the
+smoke response, and the one human COPD genetic-association paper for ORMDL3 (Balantic et al.
+2013, PMID 23964555; P=0.045, small unadjusted Slovenian cohort) is too weak to be treated as
+confirmatory. Confidence is therefore LOW, not MODERATE.</p>
+<p><strong>Why THRA does not change this call:</strong> THRA (thyroid hormone receptor alpha) was added to
+this review in a 2026-09-11 addendum after a genome-build-error correction to the study team's
+MAGMA/PoPS gene-location merge file surfaced it as a candidate never previously evaluated.
+Independent coordinate-checking confirmed THRA (chr17:40,058,290-40,093,867) is a genuine
+physical resident of this locus's 1 Mb window, so the correction itself is legitimate. However:
+(1) THRA carries no credible-set variant — the nearest fine-mapped variant is ~139 kb away
+(rs7224129, PIP=0.0006, annotated to ORMDL3) — so THRA is not competing with ORMDL3/GSDMB on
+the same fine-mapping evidentiary axis at all; it is evidentiarily closer to CSF3/PSMD3
+(window-resident, no credible-set variant) than to the credible-set-anchored candidates. (2)
+Despite Open Targets assigning THRA the single highest raw COPD-association score at this
+locus (0.252, versus GSDMB 0.192 and ORMDL3 0.131), exhaustive literature search found zero
+THRA-specific GWAS, colocalization, TWAS, or MR evidence for COPD or spirometric traits. (3)
+The strongest and most decision-relevant evidence found is actually negative: the human THRA
+loss-of-function disease (RTHα, OMIM 614450), characterized across four independent case
+series (Vlaeminck-Guillem et al. 2015, PMID 26585273; Moran et al. 2017, PMID 28471274;
+Korkmaz et al. 2019, PMID 30747412; Jorge et al. 2024, PMID 38744258), has a well-documented
+multi-system clinical phenotype (growth, dysmorphism, neurodevelopment, GI, cardiac) that
+includes <strong>no reported pulmonary/respiratory phenotype</strong>, and three RCT/systematic-review-level
+studies found no benefit of thyroid-hormone supplementation for bronchopulmonary dysplasia
+(Smith et al. 2000, PMID 11076326; Ng et al. 2008, PMID 18590560; Ibrahim et al. 2006, PMID
+16625632). Per the red-team-skeptic, this combination — no credible-set variant, no
+statistical-genetics support, and negative-leaning mechanistic evidence from the direct human
+LOF disease model — means THRA's Open Targets COPD score should be treated as an unresolved,
+uncorroborated database anomaly (possibly reflecting text-mining/pleiotropy-scoring artifacts
+from THRA's broad multi-system disease-association profile) rather than evidence that should
+reweight or unseat the ORMDL3-vs-GSDMB tie-break, which rests on genuine (if imperfect)
+fine-mapping-adjacent and mechanistic literature that THRA entirely lacks. THRA is therefore
+recorded here as an evaluated-but-not-prioritized candidate with a documented open gap (whether
+THRA was among the ~17 candidate genes Sakornsakolpat et al. 2019 implicated at this locus was
+not resolvable from the accessible text — PMID 30804561 — and remains an open item for anyone
+with access to that paper's supplementary tables), not dismissed outright.</p>
+<p><strong>What would resolve the ORMDL3-vs-GSDMB tie:</strong> (1) A locus-specific colocalization/fine-mapping
+analysis (e.g., using lung-tissue and airway-epithelium eQTL panels) that assigns the COPD
+credible-set signal preferentially to ORMDL3 or GSDMB expression, rather than jointly to both
+as the current domain-wide cis-regulatory evidence suggests. (2) An asthma-history-adjusted or
+Mendelian randomization analysis of the COPD GWAS signal at this locus, to test whether the
+COPD association is fully mediated by asthma liability (as the skeptic recommends as a
+priority follow-up) or represents an independent adult/smoking-driven signal. (3)
+Genotype-stratified (risk-allele-dependent) functional data showing the credible-set variants
+themselves — not just disease-state or smoke-exposure status — modulate ORMDL3 or GSDMB
+expression/function in COPD-relevant airway cells. <strong>What would resolve THRA's status
+specifically:</strong> direct access to the Sakornsakolpat et al. 2019 supplementary gene tables to
+confirm/refute THRA's membership among the 17 candidate genes named at 17q21.1; a THRA-specific
+lung-tissue eQTL/colocalization query; and tracing the Open Targets &quot;bronchopulmonary
+dysplasia&quot; and COPD association scores back to their underlying data sources to determine
+whether they reflect genuine genetic-association evidence or database aggregation artifacts.</p>
+<p>PGAP3, despite topping the positional/ABC-prioritization ranking and harboring the highest-PIP
+credible-set variants, is not the recommended pick: it has the lowest Open Targets COPD score
+of the core candidates (0.0067), no COPD-specific literature beyond one hedged, multi-gene
+SMR/TWAS pleiotropy signal (Wen et al. 2025, PMID 40917930) that explicitly requires functional
+validation, and is best interpreted — per both the researcher and red-team-skeptic — as a
+&quot;hitchhiker&quot; gene tagging the true regulatory signal rather than an independent COPD driver.
+KRT15 has genuinely COPD- and smoking-specific structural biology (Zhu et al. 2023, PMID
+38007424; Ievlev et al. 2023, PMID 36512409) but only MAGMA-level (not fine-mapping/coloc)
+genetic support and no demonstrated link to this locus's specific credible-set variants, so it
+is not preferred over ORMDL3/GSDMB despite its compelling biology. CSF3 has the most
+distinctively COPD- and smoking-specific combination of evidence of any gene reviewed (a
+locus-adjacent neutrophil-count GWAS hit, Okada et al. 2010, PMID 20172861, plus a direct
+smoking-cohort lung-function-decline association, He et al. 2008, PMID 18353856) but is
+excluded from primary consideration because it was added via independent gene-window
+enumeration, carries no credible-set variant, and its LD relationship to this locus's actual
+fine-mapped signal (which clusters ~300-450 kb away, mostly in PGAP3/GSDMB) has not been
+established — per the red-team-skeptic, it should be treated as a flagged hypothesis-generating
+side-finding requiring an LD check, not folded into the ranked candidate list for this specific
+credible set. THRA (see discussion above) sits in a similar or weaker evidentiary category to
+CSF3/PSMD3 and is likewise excluded from primary consideration.</p>
+
+</body>
+</html>

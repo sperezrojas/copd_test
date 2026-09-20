@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>16_24600001-24950000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-locus-evidence-table-1624600001-24950000-lead-variant-rs8049667">COPD locus evidence table: 16:24,600,001-24,950,000 (lead variant rs8049667)</h1>
+<p>Candidate genes per internal pipeline: TNRC6A only (nearest gene, and FLAMES-, MAGMA-, PoPS-,
+and ABC-prioritized). No competing candidate gene is flagged by the input locus file. The
+credible set is essentially entirely intronic to TNRC6A, plus two missense variants
+(rs6497759, rs3803716, both TNRC6A) and a handful of intergenic/downstream variants at the
+TNRC6A 3' end.</p>
+<p>Only VERIFIED citations are included below. See <code>audits/16_24600001-24950000_audit.md</code> for
+excluded citations (RETRACTED / NOT_FOUND / CLAIM_MISMATCH) and the full red-team critique.</p>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TNRC6A</td>
+<td>Smoking-behavior (background, PRS follow-up; no locus-specific finding)</td>
+<td>Polygenic-risk-score follow-up study using GSCAN summary statistics; does not itself report a TNRC6A/16q13 locus-level association (background context only, not affirmative evidence)</td>
+<td>PMID 30875648 / DOI 10.1016/j.drugalcdep.2019.01.015</td>
+<td>WEAKENED (gene-level, see below)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TNRC6A</td>
+<td>Smoking-behavior (indirect, non-lung tissue, computational)</td>
+<td>Bioinformatic/computational study identifies TNRC6A as one of 8 &quot;hub&quot; genes in a predicted miRNA-target regulatory network differentially expressed in sperm of smokers vs. non-smokers; not a GWAS, not lung tissue, not functionally validated</td>
+<td>PMID 32614269 / DOI 10.1080/14647273.2020.1786172</td>
+<td>WEAKENED (gene-level, see below)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TNRC6A</td>
+<td>Spirometry/pulmonary function (negative/absence)</td>
+<td>Genome-wide association study of single-breath DLCO; TNRC6A/16q13 is NOT among the reported genome-wide-significant loci (TGFB2, CHRNA3, PDE11A) or the 12 suggestive loci</td>
+<td>PMID 30694715 / DOI 10.1165/rcmb.2018-0384OC</td>
+<td>WEAKENED (gene-level, see below)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TNRC6A</td>
+<td>Structural/developmental lung biology</td>
+<td>TNRC6A localizes to AGO2-containing apical granules (distinct from canonical P-bodies) in differentiating airway multiciliated cells; loss-of-function disrupts these granules, broadly reduces miRNA-target mRNA levels, downregulates ciliogenesis genes, and produces defective multiciliogenesis both in vivo and in primary airway epithelial cultures</td>
+<td>PMID 37127654 / DOI 10.1038/s41598-023-34365-8</td>
+<td>WEAKENED (gene-level; skeptic regards this as the genuine strength of the record but insufficient alone to confirm a direct pulmonary pathway — see critique)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TNRC6A (paralog TNRC6C data; TNRC6A background note within same paper)</td>
+<td>Structural/developmental lung biology</td>
+<td>TNRC6C-null mice die of respiratory failure at birth from defective distal-airspace sacculation and microvascular maturation; the same paper's background text (verified) additionally states TNRC6A-null mice are embryonic lethal (do not survive past ~E12.5) — meaning no direct in vivo TNRC6A lung phenotype has been demonstrated, only inferred developmental essentiality</td>
+<td>PMID 28811219 / DOI 10.1016/j.ydbio.2017.07.018</td>
+<td>WEAKENED (gene-level; paralog data only)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TNRC6A</td>
+<td>Structural/epithelial biology (tangential)</td>
+<td>TNRC6A binds intronic regions flanking circRNA-forming exons in human bronchial epithelial and lung cancer cell lines and is required for biogenesis of circ0006916, which regulates cell-cycle/proliferation; disease context is carcinogen-transformation/lung cancer proliferation, not COPD/airway remodeling</td>
+<td>PMID 29726904 / DOI 10.1093/carcin/bgy061</td>
+<td>WEAKENED (gene-level; tangential)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TNRC6A</td>
+<td>Immune/inflammatory (non-COPD-specific)</td>
+<td>GW182 (TNRC6A) is a target of autoantibodies in patients with systemic autoimmune/neurological disease (Sjögren's syndrome, SLE, RA, primary biliary cirrhosis) — not a COPD-relevant inflammatory program (no neutrophilic/CD8+/Th1/Th17/macrophage evidence identified)</td>
+<td>PMID 17870671 / DOI 10.1016/j.clim.2007.07.016</td>
+<td>WEAKENED (gene-level; off-target immune evidence)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TNRC6A</td>
+<td>Immune/inflammatory + variant-level (unresolved match)</td>
+<td>Characterizes a coding SNP in TNRC6A exon 5 (c.344C&gt;A, p.Pro115Gln) found in ~28.6% of GW/P-body-autoantibody-positive patients; genomic coordinate/rsID is not given in the paper, so it is NOT confirmed to correspond to either credible-set missense variant (rs6497759 or rs3803716) — explicitly unresolved, not asserted as a match</td>
+<td>PMID 23224974 / DOI 10.1007/978-1-4614-5107-5_14</td>
+<td>WEAKENED (gene-level; variant match unresolved)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGAP17 (non-candidate; no prioritization support, no credible-set overlap; included for regional completeness only)</td>
+<td>Structural/epithelial biology (generic, non-lung)</td>
+<td>RICH1 (ARHGAP17) regulates Cdc42 and maintains tight-junction integrity/apical-basal polarity in MDCK epithelial cells — a generic epithelial mechanism with no lung- or COPD-specific literature identified</td>
+<td>PMID 16678097 / DOI 10.1016/j.cell.2006.02.045</td>
+<td>HOLDS as a non-candidate (skeptic had zero independent search pass for this gene — see critique disclosure)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p>Note on variant-level coverage: no PubMed-indexed literature was found naming the lead variant
+(rs8049667) or either missense credible-set variant (rs6497759, rs3803716) directly. GWAS
+Catalog / Open Targets Genetics variant-page lookups for these three variants were not
+completed due to WebSearch tool-budget exhaustion in both the researcher's and the
+red-team-skeptic's sessions — this is an explicit, flagged tooling gap, not a negative finding,
+and should be revisited if search capacity becomes available.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — not a verified literature citation)</h2>
+<p>This section reports output from the Open Targets Platform GraphQL API (queried directly by
+the orchestrator on 2026-09-11). It did not go through citation-verifier or red-team-skeptic
+and must not be read as a peer-reviewed literature finding.</p>
+<p><strong>TNRC6A (ENSG00000090905)</strong> — the only candidate gene at this locus:</p>
+<ul>
+<li><strong>L2G score, COPD-specific (MONDO_0005002):</strong> ~0.79-0.81 (3 evidence rows via the
+<code>gwas_credible_sets</code> datasource), with no competing gene scored for the COPD term at this
+locus.</li>
+<li><strong>Aggregate association score, all datasources (COPD):</strong> 0.4109 overall, driven by
+<code>gwas_credible_sets</code> (0.6713) and <code>europepmc</code> text-mining (0.0912); no other datasource
+contributed.</li>
+<li><strong>Colocalization:</strong> Not independently queryable as a standalone statistic within tool budget
+(175 GWAS credible sets are registered on the lead variant across all traits genome-wide;
+paging through per-studyLocus colocalisation records was not tractable). This is a flagged
+gap, not an absence of signal — the L2G score above already incorporates fine-mapping and
+functional-genomics features but is not itself a colocalization statistic.</li>
+<li><strong>Cross-trait L2G pattern (context, not COPD-specific):</strong> In a spot-check of 20 of the 175
+GWAS credible sets at this exact position, TNRC6A had the highest L2G score in all 20
+(range ~0.70-0.82) — for HDL-cholesterol subfractions, adiposity/body-fat%, BMI, eGFR, and
+educational attainment/cognitive function — consistently outscoring the neighboring gene
+SLC5A11 (~0.06-0.27). This establishes TNRC6A as the consistently L2G-favored gene over its
+nearest neighbor, but also establishes this locus as highly pleiotropic and not lung-specific
+in its broader genetic architecture.</li>
+<li><strong>Genetic constraint (gnomAD):</strong> Loss-of-function observed/expected = 0.200 (oeLower 0.156,
+oeUpper 0.257; LOEUF ≈ 0.26), pLI-equivalent score = 1.0 — strongly LoF-intolerant/dosage-sensitive.
+Missense oe = 0.891 (mild missense constraint). Synonymous oe = 0.983 (unremarkable, as expected).</li>
+</ul>
+<p><strong>SLC5A11 and ARHGAP17</strong> were not resolved as separate candidate genes in step 1 (the locus
+input file lists only TNRC6A across all prioritization methods) and so were not independently
+queried in Open Targets; the SLC5A11 comparison figures above come from the TNRC6A variant's
+own credible-set L2G rows, which included SLC5A11 as the competing gene.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>TNRC6A — Confidence: LOW.</strong></p>
+<p>TNRC6A is named as the single best-supported candidate at this locus, but the confidence level
+must be LOW, not higher, and this is a case where the pipeline's own critique stage
+substantively weakened the initial read rather than confirming it.</p>
+<p>In favor of TNRC6A: it is the unanimous candidate across every prioritization method (nearest
+gene, FLAMES, MAGMA, PoPS, ABC), it is Open Targets' own L2G-favored gene both for COPD
+specifically (~0.79-0.81) and for ~20 other unrelated traits at this locus over the only
+plausible competing neighbor gene (SLC5A11), and it is strongly loss-of-function constrained
+(LOEUF ≈ 0.26, pLI = 1), consistent with dosage sensitivity. Most importantly, one VERIFIED,
+TNRC6A-specific (not paralog) mechanistic paper (PMID 37127654) shows TNRC6A has a
+non-redundant role in airway multiciliated cell differentiation via a distinct AGO2-associated
+local-translation mechanism — a plausible, lung-specific structural pathway (mucociliary
+dysfunction) that is not merely generic housekeeping biology.</p>
+<p>Against a confident call: the red-team-skeptic's critique (preserved in full in the audit file)
+identified that this apparent strength is substantially offset by three points that should not
+be read as mere &quot;gaps&quot;: (1) TNRC6A/16q13 is absent from the 82 genome-wide-significant loci in
+the largest prior COPD case-control GWAS referenced (Sakornsakolpat 2019, PMID 30804561 —
+CLAIM_MISMATCH, excluded from the table above) and absent from a dedicated DLCO GWAS (PMID
+30694715), meaning the only quantitative COPD-genetic evidence for TNRC6A at all is the Open
+Targets L2G score, which is a model output rather than independent literature replication and
+carries some risk of circularity with the GWAS underlying this very locus file; (2) the locus's
+extreme cross-trait pleiotropy — including a strong educational-attainment/cognitive-function
+association, a trait genetically and phenotypically correlated with smoking behavior — leaves
+the smoking-mediated-effects prior genuinely unresolved rather than cleared, since the one
+directly relevant smoking-behavior GWAS check (Liu 2019, PMID 30643251) could not be confirmed
+either way (CLAIM_MISMATCH, excluded from the table above); and (3) no COPD-relevant
+inflammatory/immune mechanism (neutrophilic, Th1/Th17, macrophage, CD8+ T-cell) was identified
+for TNRC6A at all — the only immune literature places it in unrelated systemic autoimmune
+autoantigen biology. The skeptic explicitly declined to mark TNRC6A CONTESTED (no alternative
+causal gene was identified or supported at this locus — SLC5A11 and ARHGAP17 both lack any
+credible-set overlap or prioritization support and were not elevated as competitors), but
+assigned an explicit WEAKENED verdict to the overall inference.</p>
+<p>There is no real runner-up gene to name: SLC5A11 and ARHGAP17 are documented in the researcher
+checkpoint only for regional completeness, have zero prioritization-method support and zero
+credible-set variant overlap, and neither the researcher nor Open Targets provides any
+evidence elevating either over TNRC6A. This is therefore not a tied-candidate-gene problem in
+the usual LD sense; it is a single-candidate-gene locus where the strength of mechanism for
+that one candidate is itself ambiguous.</p>
+<p>What would resolve this: (a) direct confirmation of whether this locus/rs8049667 reaches
+genome-wide significance in a more recent or larger COPD case-control or spirometry (FEV1,
+FEV1/FVC) GWAS than Sakornsakolpat 2019 — the absence in a 2019 GWAS is not dispositive given
+subsequent, larger meta-analyses may have picked it up; (b) a GWAS Catalog / PhenoScanner
+lookup of rs8049667, rs6497759, and rs3803716 directly (never completed in this run due to
+WebSearch budget exhaustion in both the researcher and red-team-skeptic sessions — see the
+note above); (c) a locus-level (not just genome-wide abstract-level) check of whether this
+16q13 region reaches significance in the large tobacco/alcohol-use GWAS (Liu 2019) to properly
+adjudicate the smoking-mediation question; and (d) additional functional evidence tying
+TNRC6A's multiciliogenesis role specifically to COPD-relevant airway pathology (e.g., in COPD
+patient airway epithelium or smoke-exposure models), rather than the developmental/homeostatic
+airway biology shown so far.</p>
+
+</body>
+</html>

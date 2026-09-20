@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>20_52850001-53050000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table-locus-2052850001-53050000-20q1333-nearestonly-candidate-gene-tshz2">Evidence table: locus 20:52,850,001-53,050,000 (20q13.33, nearest/only candidate gene: TSHZ2)</h1>
+<ul>
+<li><strong>Lead variant:</strong> rs6022186 (20:52,960,961, GRCh38; PIP=0.290; intron_variant/non_coding_transcript_variant, gene=-)</li>
+<li><strong>Second-highest-PIP credible-set variant:</strong> rs57139429 (20:52,970,572; PIP=0.245; upstream_gene_variant, gene=TSHZ2)</li>
+<li><strong>Candidate genes:</strong> TSHZ2 is the nearest gene, the FLAMES-prioritized gene, and the ABC-prioritized gene (MAGMA/PoPS: NA). TSHZ2 is confirmed (via researcher's Ensembl REST API lookup) to be the <em>only</em> protein-coding gene in the 20:52,850,001-53,050,000 interval; other overlapping features are four unnamed lncRNA loci and one processed pseudogene (RPL36P1), none pursued further.</li>
+<li>No credible-set variant is missense/splice-donor/splice-acceptor, so no dedicated variant-level literature search beyond the lead variant was required or performed, per pipeline scope rules.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TSHZ2</td>
+<td>Statistical genetics (behavioral trait)</td>
+<td>GWAS of self-reported sleep duration names TSHZ2 among top candidate genes, also citing it as previously implicated in sleep-duration GWAS</td>
+<td>Scheinfeldt et al. 2015, PMID 26333835, DOI 10.1002/ajmg.b.32362</td>
+<td>VERIFIED; skeptic notes this supports a broader pattern of TSHZ2 involvement in behavioral/neurological traits rather than structural organ-system traits</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TSHZ2</td>
+<td>Statistical genetics / background context (smoking GWAS lineage)</td>
+<td>GSCAN consortium GWAS of smoking initiation/cessation/heaviness and alcohol use identifies hundreds of loci genome-wide; does not itself name TSHZ2 (cited only for domain/lineage context)</td>
+<td>Liu et al. 2019, Nat Genet, PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
+<td>VERIFIED (claim as stated, i.e. paper is real/on-topic and does not name TSHZ2, is accurate)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TSHZ2</td>
+<td>Statistical genetics / immune-lung disease</td>
+<td>TSHZ2 is part of a 20-gene peripheral-blood expression signature distinguishing sarcoidosis from controls; TSHZ2 SNPs associated with sarcoidosis susceptibility/severity in a candidate-gene analysis; paper separately implicates T-cell-receptor/JAK-STAT pathway genes</td>
+<td>Zhou et al. 2012, PLoS ONE, PMID 22984568, DOI 10.1371/journal.pone.0044818</td>
+<td>VERIFIED; skeptic: this is the clearest lung-relevant immune tie in the literature, but sarcoidosis (Th1/Th17 granulomatous, largely non-smoking-driven) is mechanistically distant from COPD's neutrophilic/CD8+/emphysematous phenotype — should not be read as COPD-relevant inflammatory evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TSHZ2</td>
+<td>Statistical genetics / lung parenchymal disease</td>
+<td>Intron-1 TSHZ2 SNP rs12625311 shows a modest, non-genome-wide-significant association (P_combined=5.16×10⁻⁵) with drug-induced interstitial lung disease (DIILD) risk in a small Japanese case series (~26+18 patients)</td>
+<td>Udagawa et al. 2019, PLoS ONE, PMID 31584970, DOI 10.1371/journal.pone.0223371</td>
+<td>VERIFIED (claim matches paper exactly, including modest/non-GWS nature); mechanism (drug-induced fibrotic lung injury) differs from COPD/airway obstruction</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TSHZ2 (paralog Tshz3, not TSHZ2 itself)</td>
+<td>Developmental biology (gene-family context)</td>
+<td>Tshz3-null mice develop congenital hydronephrosis from failure of ureteric smooth-muscle differentiation downstream of SHH/BMP4</td>
+<td>Caubit et al. 2008, Development, PMID 18776146, DOI 10.1242/dev.022442</td>
+<td>VERIFIED; paralog context only, not TSHZ2-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TSHZ2</td>
+<td>Developmental biology (negative/exclusionary)</td>
+<td>Direct sequencing of TSHZ2 (and TSHZ3) found NO mutations in 48 human congenital pelvi-ureteric junction obstruction (PUJO) cases, despite Tshz2/Tshz3 expression in mouse/human embryonic ureter</td>
+<td>Jenkins et al. 2010, Nephrol Dial Transplant, PMID 19745106, DOI 10.1093/ndt/gfp453</td>
+<td>VERIFIED; skeptic notes &quot;explicitly excluded&quot; is a slight overclaim (absence of coding mutations in 48 cases doesn't rule out regulatory variants), but low-stakes since PUJO is not lung-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TSHZ2 (paralog Tshz1, not TSHZ2 itself)</td>
+<td>Developmental biology (gene-family context)</td>
+<td>Tshz1 (different paralog) knockout causes vertebral/craniofacial and middle-ear malformations in mice</td>
+<td>Coré et al. 2007, Dev Biol, PMID 17586487, DOI 10.1016/j.ydbio.2007.05.038</td>
+<td>VERIFIED; paralog context only, not TSHZ2-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TSHZ2</td>
+<td>Developmental biology (expression pattern context)</td>
+<td>Mouse Tshz1/Tshz2 embryonic expression patterns previously reported; all three mouse Tshz genes can rescue Drosophila teashirt loss-of-function phenotype; this paper itself does not describe a lung-specific Tshz2 expression domain or phenotype</td>
+<td>Manfroid et al. 2006, Gene Expr Patterns, PMID 16631416, DOI 10.1016/j.modgep.2006.03.004</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TSHZ2</td>
+<td>Cell biology (epithelial, breast/mammary context)</td>
+<td>TSHZ2 is an EGF-regulated gene that binds PRC1/cyclin B1 to inhibit cytokinesis; mammary-specific overexpression accelerates normal mammary gland development while inhibiting tumor growth/metastasis</td>
+<td>Uribe et al. 2021, Sci Signal, PMID 34158398, DOI 10.1126/scisignal.abe6156</td>
+<td>VERIFIED; general growth-factor-responsive cell-cycle regulatory function, breast/mammary tissue, not lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TSHZ2</td>
+<td>Cell biology (lung epithelial/tumor-suppressor)</td>
+<td>TSHZ2 is expressed in normal human lung epithelium and lung adenocarcinoma cell lines; low TSHZ2 expression observed in most lung adenocarcinoma tissue vs. adjacent non-tumor tissue; TSHZ2 overexpression suppresses proliferation/colony formation/migration in PC9 cells and predicts better patient survival</td>
+<td>Zhao et al. 2021, Int J Med Sci, PMID 33850468, DOI 10.7150/ijms.52109</td>
+<td>VERIFIED; skeptic: establishes TSHZ2 expression/function in lung tissue generally (tumor-suppressor, proliferation control) but is a lung-cancer study, not COPD/airway-remodeling evidence — should not be over-interpreted as COPD-relevant structural evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TSHZ2</td>
+<td>Bioinformatics / single-cell (fibrosis-to-cancer)</td>
+<td>TSHZ2 listed among genes upregulated in pulmonary-neuroendocrine-cell-like clusters with &quot;carcinogenic potential&quot; in a pulmonary-fibrosis single-cell transcriptomics dataset</td>
+<td>Gu et al. 2024, Int Immunopharmacol, PMID 39094357, DOI 10.1016/j.intimp.2024.112803</td>
+<td>VERIFIED; minor, non-central, hypothesis-generating finding in a fibrosis-to-cancer-progression study, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TSHZ2</td>
+<td>Bioinformatics / co-expression (vascular lung disease)</td>
+<td>TSHZ2 is one of three genes (with CXCL12, COL18A1) in a WGCNA-derived diagnostic gene module correlated with ACKR4 expression in pulmonary arterial hypertension (PAH) lung tissue</td>
+<td>Jiang et al. 2023, Front Immunol, PMID 37449198, DOI 10.3389/fimmu.2023.1153573</td>
+<td>VERIFIED; bioinformatics co-expression finding in a vascular lung disease distinct from COPD, uncertain mechanistic significance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TSHZ2</td>
+<td>Cell biology (unrelated cell line, tangential)</td>
+<td>TSHZ2 is one of six differentially expressed genes after CRISPR knockout of chemokine receptor CXCR2 in HeLa cervical cancer cells</td>
+<td>Dong et al. 2024, Ann Clin Lab Sci, PMID 39855736</td>
+<td>VERIFIED; researcher and skeptic agree this is non-specific/tangential, not meaningful immune evidence for COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TSHZ2</td>
+<td>Cell biology (breast, gene-regulatory context)</td>
+<td>miR-217/DNMT1 promoter methylation controls TSHZ2 expression; restored TSHZ2 inhibits Hedgehog-GLI signaling in breast ductal carcinoma in situ</td>
+<td>Wang et al. 2025, J Cell Commun Signal, PMID 40909350, DOI 10.1002/ccs3.70030</td>
+<td>VERIFIED; no immune or lung relevance, included for completeness on TSHZ2 gene regulation only</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Negative finding (not a citation, reported as evidence of absence):</strong> Targeted PubMed searches for &quot;TSHZ2 chronic obstructive pulmonary disease,&quot; &quot;TSHZ2 lung,&quot; &quot;TSHZ2 FEV1 spirometry pulmonary function,&quot; and &quot;TSHZ2 COPD&quot; returned no article directly linking TSHZ2 to COPD or spirometric lung function. The red-team-skeptic independently corroborated this with a PubMed WebFetch query (&quot;TSHZ2 AND COPD&quot; → zero results), though noted its own contradiction-search pass was shallow (single supplementary query, budget-limited) rather than exhaustive.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p><strong>Gene queried:</strong> TSHZ2 (ENSG00000182463) — the only candidate gene at this locus.</p>
+<ul>
+<li><strong>Genetic constraint (gnomAD):</strong> LoF-constrained (score ≈0.99998, obs/exp = 0.282 [0.199-0.406], observed 21 vs. expected 74.5 LoF variants) — intolerant of loss-of-function variation. Not constrained for missense (oe=0.931) or synonymous (oe=1.018) variation.</li>
+<li><strong>Direct TSHZ2-COPD evidence (MONDO_0005002):</strong> count = 0. Open Targets has no aggregated evidence (genetic, literature, or otherwise) linking TSHZ2 to COPD.</li>
+<li><strong>Direct TSHZ2-FEV1 evidence (EFO_0004314, &quot;forced expiratory volume&quot;):</strong> present but very weak — overall score 0.035, genetic_association datatype score 0.058.</li>
+<li><strong>COPD's own top associated targets genome-wide</strong> (n=6,323 targets scored): SCNN1B (0.806), SCNN1A (0.792), CFTR (0.760), SCNN1G (0.760), NR3C1 (0.707) — all ENaC/CFTR/corticosteroid-receptor genes; TSHZ2 is not among them.</li>
+<li><strong>TSHZ2's own top associated diseases/traits genome-wide</strong> (independent of COPD): &quot;Abnormality of the skeletal system&quot; (0.488), type 2 diabetes mellitus (0.442), smoking initiation (0.401, genetic_association 0.659), risk-taking behaviour (0.396), diabetes mellitus (0.356) — smoking initiation and risk-taking rank in TSHZ2's top 5 overall traits genome-wide.</li>
+<li><strong>Locus-to-gene (L2G) predictions at this locus's high-PIP credible-set variants</strong> (queried at both rs6022186 and rs57139429, which returned the identical set of 16 indexed GWAS/eQTL credible sets): TSHZ2 is the consistent, essentially sole L2G-predicted causal gene (L2G score range 0.872-0.886) for: smoking initiation (GCST90243985), externalizing behaviour/substance-use/ADHD (GCST90061435), and multiple adiposity/lipid traits — waist-to-hip ratio adj. BMI, waist circumference adj. BMI, body shape index, waist-hip index, HDL particle diameter, total/phospholipids in large HDL, apolipoprotein A, HDL cholesterol. <strong>No COPD or FEV1/FEV1-FVC GWAS credible set is indexed at this variant position at all</strong> — Open Targets simply has not catalogued a lung-function/COPD credible set here.</li>
+<li><strong>Colocalization:</strong> COLOC_PIP_ECAVIAR h4 values between these study-locus pairs are mostly high (0.65-0.999), and these signals also colocalize with TSHZ2 cis-eQTL/sc-eQTL in CD8+ T cells (naive and anti-CD3/CD28-stimulated), per Schmiedel 2018 (DICE) and OneK1K reference datasets indexed in Open Targets.</li>
+<li><strong>Interpretation (structured-data pattern only):</strong> Within Open Targets' own data, independent of anything found in the literature, TSHZ2's strongest and only genome-wide-significant, L2G-supported associations at this locus are with smoking-initiation/externalizing behavior and adiposity/lipid traits, colocalizing with TSHZ2 CD8+ T-cell eQTL — not with COPD or lung function.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>TSHZ2 — Confidence: LOW.</strong></p>
+<p>TSHZ2 is named as the prioritized gene by default, not by strength of pulmonary-biology evidence: it is the sole protein-coding gene in the 20:52,850,001-53,050,000 interval (confirmed via Ensembl lookup), so there is no competing candidate to weigh it against, and the FLAMES/ABC prioritization methods both point to it as well. There is no runner-up gene at this locus.</p>
+<p>However, the totality of verified evidence argues that this locus's COPD-GWAS signal is most parsimoniously explained by mechanisms other than direct pulmonary biology, and the red-team-skeptic explicitly marked the <em>mechanistic inference</em> of pulmonary causality CONTESTED (see audit file) even though TSHZ2's gene-identity is not in dispute. Specifically:</p>
+<ul>
+<li>Open Targets shows zero COPD evidence and only a very weak FEV1 association (0.035) for TSHZ2 (Open Targets summary above) — a direct violation of biological prior #2 (concordance with spirometric traits should strengthen prioritization; its near-total absence here, alongside a COPD signal, is itself informative).</li>
+<li>Every one of the 16 GWAS/eQTL credible sets Open Targets has indexed at this locus's two highest-PIP variants is for a non-pulmonary trait — overwhelmingly smoking initiation, externalizing behavior/substance use, and adiposity/lipid traits (L2G ~0.87-0.89 for TSHZ2 throughout) — consistent with biological prior #1 (this COPD GWAS is not adjusted for smoking, so a smoking-behavior locus can surface as a COPD hit without acting through lung biology).</li>
+<li>No verified literature (table above) links TSHZ2 to COPD or spirometric lung function at all; the closest lung-relevant findings are a modest sarcoidosis candidate-gene association (Zhou 2012 — mechanistically distant Th1/Th17 granulomatous disease, not COPD) and a lung-adenocarcinoma tumor-suppressor role (Zhao 2021 — general epithelial cell-cycle biology, not airway remodeling).</li>
+<li>The Teashirt gene family's characterized mouse developmental phenotypes belong to paralogs Tshz1 (skeletal/craniofacial) and Tshz3 (ureteric smooth muscle), not Tshz2, and TSHZ2 was directly excluded (by sequencing) as a cause of a paralog-associated human developmental phenotype (PUJO) — undercutting any extrapolation from paralog biology to a TSHZ2-specific structural/developmental lung role.</li>
+<li>TSHZ2 is LoF-constrained in gnomAD, indicating it is functionally important somewhere, but no source identifies that functional importance as lung-specific.</li>
+</ul>
+<p>What would resolve this: a direct TSHZ2 or 20q13.33 association with FEV1/FEV1-FVC in a spirometry GWAS (smoking-adjusted or unadjusted), a COPD association that persists after conditioning on smoking behavior, or a mechanistic study of TSHZ2 in airway/alveolar epithelium or COPD-relevant immune populations (e.g., CD8+ T cells, given the eQTL colocalization) — none of which currently exist in the verified literature or in Open Targets. Until such evidence emerges, TSHZ2 should be reported to the study team as the only candidate gene at this locus but flagged as a locus whose COPD signal may be substantially or wholly smoking-behavior-mediated (with adiposity/metabolic mediation as a secondary alternative), rather than as a novel pulmonary-biology COPD gene.</p>
+
+</body>
+</html>

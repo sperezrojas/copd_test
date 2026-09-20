@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>16_68950001-70600000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1668950001-70600000-lead-variant-rs889398-nearest-gene-nfat5">Evidence table — Locus 16:68950001-70600000 (lead variant rs889398; nearest gene NFAT5)</h1>
+<p>Candidate genes evaluated: <strong>NFAT5</strong> (nearest gene), <strong>WWP2</strong> (FLAMES/MAGMA/PoPS-prioritized),
+<strong>NQO1</strong> (gene annotated to lowest-PIP credible-set variant rs2917677, PIP=0.011).</p>
+<p>Only citations with citation-verifier verdict VERIFIED are included below. Citations with
+verdict RETRACTED or CLAIM_MISMATCH, and the red-team-skeptic's gene-level CONTESTED/WEAKENED
+verdicts, are documented in the companion audit file
+<code>audits/16_68950001-70600000_audit.md</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NFAT5</td>
+<td>Immune/inflammatory (mechanistic, non-lung/renal-metabolic)</td>
+<td>NFAT5/TonEBP intronic SNPs act as cis-eQTLs; NFAT5/TonEBP is broadly characterized as an &quot;immunometabolic stress protein&quot; implicated in type 2 diabetes, diabetic nephropathy, inflammation, hypertension, plasma osmolality, autoimmune disease, and atherosclerosis. No lung/COPD-specific data in this source.</td>
+<td>PMID 32157251 (Choi et al., Nat Rev Nephrol 2020)</td>
+<td>WEAKENED (gene-level) — off-tissue evidence, BMI-pleiotropy alternative not addressed</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NFAT5</td>
+<td>Immune/inflammatory (mechanistic, non-lung)</td>
+<td>NFAT5 is a Rel-family transcription factor that responds to Toll-like-receptor signaling and activates macrophage responses to microbial products; independently activated by hyperosmotic stress.</td>
+<td>PMID 30949179 (Aramburu &amp; López-Rodríguez, Front Immunol 2019)</td>
+<td>WEAKENED (gene-level) — no lung tissue studied</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NFAT5</td>
+<td>Immune/inflammatory (mechanistic, autoimmune-disease models)</td>
+<td>NFAT5 induces pathogenic Th17 cell generation and pro-inflammatory macrophage differentiation in response to hyperosmotic stress; implicated in rheumatoid arthritis and other autoimmune/inflammatory diseases (not airway disease).</td>
+<td>PMID 30873159 (Lee et al., Front Immunol 2019)</td>
+<td>WEAKENED (gene-level) — autoimmune model, not lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NFAT5</td>
+<td>Immune/inflammatory (primary research, autoimmune-arthritis model, in vivo)</td>
+<td>Myeloid-cell-specific TonEBP/NFAT5 deletion reduces severity of collagen-induced arthritis and inhibits dendritic-cell maturation and differentiation of pathogenic Th1/Th17 cells in vivo.</td>
+<td>PMID 32499518 (Ye et al., Cell Death Dis 2020)</td>
+<td>WEAKENED (gene-level) — arthritis model, not lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NFAT5</td>
+<td>Immune/inflammatory (mouse Th17-differentiation mechanism; COPD mentioned only as introductory disease-relevance framing, not as data)</td>
+<td>miR-18b/miR-106a/miR-363-3p target and regulate NFAT5 (among other Th17 transcription factors) during murine Th17 differentiation; the paper's abstract frames Th17-mediated inflammation as relevant to autoimmune encephalitis, IBD, and lung diseases including COPD and asthma.</td>
+<td>PMID 28617945 (Kästle et al., Immunology 2017)</td>
+<td>WEAKENED (gene-level) — critique explicitly flags that the COPD reference is context-setting in the introduction, not a COPD finding; must not be cited without this caveat</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NFAT5</td>
+<td>Statistical genetics (reference dataset; locus-specific hit not independently confirmed)</td>
+<td>GSCAN is the standard genome-wide meta-analysis reference for smoking initiation/cessation/heaviness and alcohol use (up to 1.2M individuals); likely underlies the smoking-initiation L2G signal attributed to NFAT5 in the Open Targets structured-DB lookup, but citation-verifier could not confirm from the paper itself that the 16q22.1/NFAT5 region reaches genome-wide significance for smoking initiation in GSCAN's own tables.</td>
+<td>PMID 30643251 (Liu et al., Nat Genet 2019)</td>
+<td>WEAKENED (gene-level) — critique notes this is exactly as DB-score-dependent/unconfirmed as WWP2's FEV1 claim below</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WWP2</td>
+<td>Statistical genetics (negative/background control)</td>
+<td>WWP2 is confirmed NOT among UK BiLEVE's headline novel lung-function loci (KANSL1, TSEN54, TET2, RBM19/TBX5, NPNT, HLA-DQB1/HLA-DQA2) — cited only as background context for the lineage of UK Biobank/SpiroMeta lung-function GWAS efforts in this region.</td>
+<td>PMID 26423011 (Wain et al., Lancet Respir Med 2015)</td>
+<td>WEAKENED (gene-level, borderline CONTESTED)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WWP2</td>
+<td>Structural/mechanistic (primary research, cardiac mouse model only — NOT lung tissue)</td>
+<td>WWP2 (specifically the N-terminal isoform) is a HECT-domain E3 ubiquitin ligase that positively regulates a pro-fibrotic gene network by promoting TGFβ1-induced nuclear translocation and transcriptional activity of SMAD2; WWP2-N-terminal-deficient mice show reduced myocardial fibrosis after pressure overload/infarction.</td>
+<td>PMID 31399586 (Chen et al., Nat Commun 2019)</td>
+<td>WEAKENED (gene-level, borderline CONTESTED) — legitimate mechanism but cross-organ extrapolation to lung is unvalidated</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NQO1</td>
+<td>Structural/oxidative-stress (human tissue, observational)</td>
+<td>Nrf2 protein is decreased and Keap1/Bach1 increased in alveolar macrophages of patients with emphysema; parallel decreases in NQO1 (and HO-1, GPX2) expression inversely correlate with airflow obstruction and lung distension indices.</td>
+<td>PMID 18559366 (Goven et al., Thorax 2008)</td>
+<td>CONTESTED (gene-level)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NQO1</td>
+<td>Structural/oxidative-stress (mouse model; NQO1 used as biomarker, not manipulated gene)</td>
+<td>NQO1 (with HO-1) measured as an oxidative-stress marker in a p53-knockout elastase-induced emphysema mouse model; p53 deletion aggravated emphysema, pulmonary inflammation, and oxidative stress.</td>
+<td>PMID 26106979 (Chrusciel et al., Am J Respir Cell Mol Biol 2016)</td>
+<td>CONTESTED (gene-level) — marker only, not causal gene</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NQO1</td>
+<td>Structural/oxidative-stress (mouse COPD model; NQO1 as pharmacodynamic marker)</td>
+<td>A Keap1/Nrf2-modulating compound (phycocyanin) ameliorated emphysema, goblet-cell metaplasia, and collagen deposition in a smoke+LPS mouse COPD model while modulating NQO1 and NOX2 in pulmonary macrophages.</td>
+<td>PMID 38211884 (Li et al., J Adv Res 2024)</td>
+<td>CONTESTED (gene-level) — pharmacodynamic marker, not genetic causal evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NQO1</td>
+<td>Statistical genetics (candidate-gene, wrong disease)</td>
+<td>NQO1 genotype combinations modify lung-CANCER (not COPD) susceptibility in a North Indian case-control candidate-gene study.</td>
+<td>PMID 36251537 (Walia et al., Int J Environ Health Res 2022)</td>
+<td>CONTESTED (gene-level) — wrong disease entirely</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NQO1</td>
+<td>Statistical genetics (candidate-gene, different variant than the credible set)</td>
+<td>NQO1 rs1131341 (a different variant than the credible-set variant rs2917677) was associated with COPD in an additive model in a Tatar-population case-control study, alongside CHRNA5/CHRNA3/CYP2A6 nicotine-metabolism genes with significant gene-by-smoking interactions reported for other genes in the panel.</td>
+<td>PMID 25845234 (Korytina et al., Mol Biol (Mosk) 2014)</td>
+<td>CONTESTED (gene-level) — different variant, underpowered candidate-gene-era study</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p>Disease/trait IDs: COPD = MONDO_0005002; FEV1 = EFO_0004314; FEV1/FVC ratio = EFO_0004713;
+smoking initiation = EFO_0005670. L2G-informed evidence pulled from Open Targets
+<code>disease.evidences(datasourceIds: [&quot;gwas_credible_sets&quot;])</code>; constraint from
+<code>target.geneticConstraint</code> (gnomAD-derived LOEUF).</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>COPD L2G evidence (max score, n)</th>
+<th>FEV1 L2G evidence (max score, n)</th>
+<th>FEV1/FVC ratio</th>
+<th>Smoking initiation (max score, n)</th>
+<th>LOEUF (lof oe)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NFAT5</td>
+<td>0.383 (n=2)</td>
+<td>0.506 (n=2)</td>
+<td>none (n=0)</td>
+<td>0.647 (n=6) — strongest signal at locus</td>
+<td>0.235 (constrained)</td>
+</tr>
+<tr>
+<td>WWP2</td>
+<td>none (n=0)</td>
+<td>0.723 (n=18) — strongest signal at locus</td>
+<td>none (n=0)</td>
+<td>0.194 (n=2)</td>
+<td>0.572 (moderately tolerant)</td>
+</tr>
+<tr>
+<td>NQO1</td>
+<td>none (n=0)</td>
+<td>0.151 (n=12, weak)</td>
+<td>none (n=0)</td>
+<td>0.477 (n=3)</td>
+<td>1.23 (unconstrained/tolerant)</td>
+</tr>
+</tbody>
+</table>
+<p>Colocalization: a raw colocalization posterior-probability field could not be resolved via
+the Open Targets GraphQL API within this session's tool-error-driven exploration (repeated
+schema/type-dependency introspection calls exceeded the tool's return-size limit and could
+not be chunked). This is recorded as a gap, not as an absence of colocalization evidence.</p>
+<p>Lead-variant note (structured database, not literature): rs889398 itself is reported by
+GWAS Catalog (REST API lookup) to associate most robustly with body mass index (BMI; p as
+low as ~2×10⁻³⁵) in a dense ~1 Mb, ~19-gene window (including CYB5B, TERF2, VPS4A, NQO1,
+NFAT5). No direct COPD, FEV1, or smoking-initiation association for rs889398 itself was
+found in that lookup, and no PubMed literature specifically discussing rs889398 was found.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>WWP2 — confidence LOW.</strong></p>
+<p>This call is close, and the case for WWP2 has a real structural weakness that must be
+stated plainly: both of the statistical-genetics citations that would have literature-
+confirmed WWP2 as the causal gene at this locus — Shrine et al. 2023 (the largest
+multi-ancestry lung-function GWAS to date) and Sakornsakolpat et al. 2019 (the principal
+COPD GWAS) — came back <strong>CLAIM_MISMATCH</strong> from the citation-verifier: neither paper could
+be confirmed to name WWP2 at a 16q22.1 locus in accessible text. WWP2's only verified,
+gene-specific mechanistic support (PMID 31399586) is a cardiac-fibrosis mouse model, not
+lung tissue. The red-team-skeptic rated WWP2 WEAKENED, borderline CONTESTED, on exactly
+these grounds.</p>
+<p>Despite that, WWP2 is still the best-supported single pick among the three candidates,
+for three reasons visible in the tables above. First, it is the only gene at this locus
+independently prioritized by three different gene-prioritization algorithms (FLAMES,
+MAGMA, PoPS), which — while not itself a verified literature citation — is a form of
+convergent evidence distinct from, and not circular with, the L2G database score. Second,
+its Open Targets FEV1 evidence (0.723, n=18 contributing credible sets/studies) is by far
+the largest, most consistent quantitative signal at this locus for any gene/trait pair,
+concordant with prior #2 (spirometric evidence supporting lung-biology mediation), whereas
+NFAT5's FEV1 signal is weaker (0.506, n=2) and NQO1's is negligible (0.151, n=12). Third,
+its verified mechanistic biology (TGF-β/SMAD2-driven pathological fibrosis via HECT-domain
+ubiquitination) is at least directionally consistent with airway-remodeling/ECM pathways
+that COPD GWAS pathway-enrichment analyses have flagged as relevant to COPD risk loci in
+general, even though this specific paper's SMAD-binding/ECM enrichment claim could not be
+tied to this locus by name and the mechanism itself was shown in heart, not lung.</p>
+<p><strong>Runner-up: NFAT5</strong>, which is not clearly weaker — it has the only <em>direct</em> (if modest)
+COPD L2G evidence of the three genes (0.383, n=2), a verified and mechanistically coherent
+(if entirely non-pulmonary, autoimmune/renal-model) pro-inflammatory Th1/Th17/macrophage
+literature, and a constrained/LoF-intolerant gene (LOEUF 0.235) consistent with an
+essential regulatory role — but it also carries the locus's strongest smoking-initiation
+signal (0.647, n=6), raising a live alternative hypothesis (per prior #1) that this
+locus's COPD association is partly or wholly mediated through smoking-behavior biology
+rather than lung-intrinsic disease, and the red-team-skeptic noted this smoking-mediation
+evidence is exactly as database-score-dependent and literature-unconfirmed as WWP2's FEV1
+claim. <strong>NQO1</strong> is not a serious contender: its sole causal mechanistic paper is retracted,
+its fine-mapping PIP is the lowest in the credible set (0.011), it has zero COPD or
+FEV1/FVC L2G evidence, and it is not under selective constraint (LOEUF 1.23).</p>
+<p><strong>What would resolve this tie:</strong> (1) direct confirmation (via full-text/supplementary-table
+access) of whether Shrine et al. 2023 and/or Sakornsakolpat et al. 2019 name WWP2 (or
+NFAT5, or neither) as the prioritized gene at this specific 16q22.1 signal; (2) lung-tissue
+(airway epithelial or fibroblast) eQTL/colocalization data distinguishing WWP2 from NFAT5
+and NQO1 at this locus, since none of the three genes currently has literature-confirmed,
+locus-specific colocalization; (3) a locus-level look at whether rs889398's dominant BMI
+association is causally upstream of, or independent from, its lung-function/COPD signal,
+since BMI is a known confounder/mediator of spirometric measurement and systemic
+inflammation. Given the CLAIM_MISMATCH status of both key WWP2 statistical-genetics
+citations and the unresolved BMI-pleiotropy concern affecting the whole locus, this
+recommendation should be treated as provisional, not a settled call — the study team
+should weigh WWP2 and NFAT5 as roughly comparable candidates pending the evidence above.</p>
+
+</body>
+</html>

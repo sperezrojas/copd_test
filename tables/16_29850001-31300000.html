@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>16_29850001-31300000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1629850001-31300000-nearest-gene-prss36">Evidence table — locus 16:29,850,001-31,300,000 (nearest gene PRSS36)</h1>
+<p>Lead variant: rs9972727 (16:31,137,821, GRCh38). Candidate genes: PRSS36 (nearest),
+BCKDK (MAGMA), MYLPF (PoPS), PRSS8 (ABC), plus credible-set genes KAT8, STX4, STX1B,
+VKORC1, ZNF668.</p>
+<p>All rows below carry citation-verifier verdict VERIFIED (checked 2026-09-11). One
+citation returned CLAIM_MISMATCH and is excluded from this table — see
+<code>audits/16_29850001-31300000_audit.md</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRSS36</td>
+<td>Statgen (MR + colocalization)</td>
+<td>cis-eQTL Mendelian randomization + colocalization (PP.H4&gt;0.80) implicates PRSS36 expression as causally associated with psoriasis risk (immune/skin disease, not lung)</td>
+<td>Guo X et al., Sci Rep 2024, PMID 39397091, DOI 10.1038/s41598-024-74148-3</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRSS36</td>
+<td>Expression/immune (bioinformatic, not genetic-association)</td>
+<td>PRSS36 among 5 basement-membrane-related genes with lower blood expression in coronary artery disease vs. control; study also reports CD8 T-cell population differences between groups</td>
+<td>Dong Z et al., Cardiovascular Therapeutics 2026, PMID 42423160, DOI 10.1155/cdr/5358909</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>BCKDK</td>
+<td>Statgen (GWAS replication, null)</td>
+<td>rs14235 (&quot;BCKDK/STX1B&quot; locus) previously reported as a Caucasian-population Parkinson's disease GWAS signal; this Han Chinese replication study found NO significant genotype/allele-frequency association</td>
+<td>Wang L et al., Neurosci Lett 2019, PMID 30880162, DOI 10.1016/j.neulet.2019.03.019</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>BCKDK</td>
+<td>Statgen (GWAS replication, null)</td>
+<td>Independent Taiwanese replication of the same BCKDK/STX1B rs14235 Parkinson's disease signal, again null</td>
+<td>Chang KH et al., Parkinson's Disease 2019, PMID 30719275, DOI 10.1155/2019/3489638</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STX1B</td>
+<td>Statgen (GWAS replication, null; signal shared/ambiguous with BCKDK)</td>
+<td>Same rs14235 PD signal as above, jointly annotated to &quot;BCKDK/STX1B&quot; locus; does not discriminate which gene is causal</td>
+<td>Wang L et al., Neurosci Lett 2019, PMID 30880162 (see above)</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STX1B</td>
+<td>Immune (mast cell expression/function)</td>
+<td>Human intestinal mast cells express STX1B/STX2/STX3/STX4/STX6; functional knockdown implicates SNAP-23/STX4/VAMP7/VAMP8 (not STX1B) in IgE-mediated histamine release</td>
+<td>Sander LE et al., Eur J Immunol 2008, PMID 18253931, DOI 10.1002/eji.200737634</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRSS8</td>
+<td>Epidemiologic mediation (lung cancer, not COPD)</td>
+<td>Circulating prostasin (PRSS8) is one of three plasma-protein mediators partially explaining night-shift-work/smoking association with lung cancer risk in UK Biobank</td>
+<td>Zheng X et al., Sleep 2025, PMID 40488442, DOI 10.1093/sleep/zsaf159</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRSS8</td>
+<td>Proteomic (combined CAD+airflow-obstruction phenotype; NOT airflow obstruction alone)</td>
+<td>Circulating prostasin was one of nine biomarkers associated with combined CAD+airflow-obstruction diagnosis; no biomarker (incl. PRSS8) was associated with airflow obstruction alone</td>
+<td>Casselbrant A et al., PLoS One 2022, PMID 35263363, DOI 10.1371/journal.pone.0264376</td>
+<td>CONTESTED (counter-evidence against a pure lung mechanism)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRSS8</td>
+<td>Structural (airway epithelial ENaC activation)</td>
+<td>Prostasin activates ENaC currents ~60-80% in human airway epithelium (Xenopus oocyte expression system)</td>
+<td>Donaldson SH et al., J Biol Chem 2001, PMID 11756432, DOI 10.1074/jbc.M105044200</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRSS8</td>
+<td>Structural (cystic fibrosis airway epithelium, not COPD)</td>
+<td>Prostasin surface expression increases with airway-surface-liquid volume and is elevated &gt;50% in CF airway epithelial cultures</td>
+<td>Myerburg MM et al., Am J Physiol Lung Cell Mol Physiol 2008, PMID 18310226, DOI 10.1152/ajplung.00437.2007</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRSS8</td>
+<td>Structural/immune (CF mucociliary clearance; neutrophil-elastase link)</td>
+<td>Inhibiting channel-activating proteases including prostasin restores airway-surface-liquid height/mucociliary clearance in CF cultures and protects against neutrophil-elastase-driven ENaC activation</td>
+<td>Reihill JA et al., Am J Respir Crit Care Med 2016, PMID 27014936, DOI 10.1164/rccm.201511-2216OC</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRSS8</td>
+<td>Structural (biochemical, pH-dependence)</td>
+<td>Prostasin is typically inactive below pH 7.0, motivating study of alternative proteases in acidic CF/COPD-type airway conditions</td>
+<td>Tan CD et al., J Physiol 2014, PMID 25260629, DOI 10.1113/jphysiol.2013.267286</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRSS8</td>
+<td>Structural (kidney knockout mouse, not lung)</td>
+<td>Kidney-specific Prss8 (prostasin)-deficient mouse physiology / ENaC subunit abundance studies</td>
+<td>Ehret E et al., Cells 2023, PMID 37830556, DOI 10.3390/cells12192342</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRSS8</td>
+<td>Structural (kidney knockout mouse, not lung)</td>
+<td>Kidney-specific CAP1/Prss8-deficient mice maintain ENaC-mediated sodium balance</td>
+<td>PMID 35743186, Int J Mol Sci 2022, DOI 10.3390/ijms23126745</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRSS8</td>
+<td>Structural (mouse mutant, not lung)</td>
+<td>Zymogen-locked mutant prostasin leads to incomplete proteolytic activation</td>
+<td>PMID 33650216, Acta Physiol 2021, DOI 10.1111/apha.13640</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRSS8</td>
+<td>Structural (nephrotic syndrome mouse model, not lung)</td>
+<td>Sodium retention in nephrotic syndrome is independent of prostasin activation</td>
+<td>PMID 35312839, Pflugers Arch 2022, DOI 10.1007/s00424-022-02682-y</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRSS8</td>
+<td>Structural (epidermal barrier, not lung)</td>
+<td>Prostasin supports epidermal development/homeostasis independent of its own enzymatic activity in mouse knockouts</td>
+<td>Peters DE et al., J Biol Chem 2014, PMID 24706745, DOI 10.1074/jbc.M113.541318</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRSS8</td>
+<td>Immune/metabolic (hepatic, not pulmonary)</td>
+<td>Review of PRSS8 role in glucose homeostasis via hepatic TLR4-mediated signaling, linked to obesity-induced inflammation</td>
+<td>Uchimura K, Kitamura K, Nihon Rinsho 2015, PMID 25812384 (no DOI captured)</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRSS8</td>
+<td>Structural (lung cancer, not COPD)</td>
+<td>PRSS8 re-expression suppresses tumor growth/EMT/JAK-STAT3 signaling in NSCLC cell lines</td>
+<td>Ma C et al., Oncology Research 2016, PMID 27983914, DOI 10.3727/096504016X14772417575982</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KAT8</td>
+<td>Mechanistic (Alzheimer's disease, not lung)</td>
+<td>KAT8/H4K16ac decreased in AD patient plasma; KAT8 overexpression shifts APP processing toward non-amyloidogenic pathway in cell model</td>
+<td>Chen F et al., Exp Ther Med 2020, PMID 32973937, DOI 10.3892/etm.2020.9216</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KAT8</td>
+<td>Mechanistic (lung cancer cell biology, not COPD)</td>
+<td>KAT8 enhances lung cancer cell resistance to cisplatin via PKM2 acetylation (PKM2/PARP/cyclin D1/AKT/ERK pathway)</td>
+<td>PMID 38771737, Anticancer Drugs 2024, DOI 10.1097/CAD.0000000000001622</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KAT8</td>
+<td>Mechanistic (lung cancer cell biology, not COPD)</td>
+<td>RNAi screen identifies KAT8 as important for lung cancer cell (A549) survival via AKT/ERK-cyclin D1 signaling</td>
+<td>Zhang S et al., Int J Clin Exp Pathol 2013, PMID 23638218</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KAT8</td>
+<td>Mechanistic (NSCLC, not COPD)</td>
+<td>CDK1 phosphorylates KAT8 to stabilize MSL complex and promote H4K16 acetylation in NSCLC</td>
+<td>PMID 42193906, Cells 2026, DOI 10.3390/cells15100897</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KAT8</td>
+<td>Chemical biology (drug discovery, not disease-specific)</td>
+<td>First-in-class selective small-molecule inhibitors of KAT8</td>
+<td>PMID 37155735, J Med Chem 2023, DOI 10.1021/acs.jmedchem.2c01937</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KAT8</td>
+<td>Immune (mouse model, allergic/protease-challenge, not COPD/smoke)</td>
+<td>KAT8-mediated PCBP1 acetylation drives neutrophil recruitment in papain-induced airway inflammation; myeloid Kat8 knockout reduces CXCL1/CXCL2 and neutrophil recruitment</td>
+<td>Huang R et al., Am J Respir Cell Mol Biol 2026, PMID 42244110, DOI 10.1093/ajrcmb/aanag121</td>
+<td>WEAKENED (bordering CONTESTED — model system is allergic/asthma-type, not COPD)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KAT8</td>
+<td>Immune (mouse model, house-dust-mite allergic airway inflammation, not COPD)</td>
+<td>KAT8 drives M2 macrophage polarization via STAT3 acetylation in HDM-induced allergic airway inflammation; macrophage-specific KAT8 deficiency attenuates inflammation</td>
+<td>Lai X et al., iScience 2026, PMID 41952982, DOI 10.1016/j.isci.2026.115348</td>
+<td>WEAKENED (bordering CONTESTED — Th2/allergic model, not COPD's typical neutrophilic/CD8+/Th1-Th17 phenotype)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KAT8</td>
+<td>Immune (mouse model, LPS acute lung injury, not COPD)</td>
+<td>KAT8 inhibition reduces oxidative stress/NLRP3 inflammasome activation/neutrophil infiltration in LPS-induced acute lung injury via reduced p53 acetylation</td>
+<td>You Q et al., Arch Biochem Biophys 2025, PMID 40250723, DOI 10.1016/j.abb.2025.110425</td>
+<td>WEAKENED (bordering CONTESTED — acute injury model, not chronic COPD)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STX4</td>
+<td>Structural (ovarian cancer, not lung)</td>
+<td>STX4 silencing inhibits proliferation/migration/invasion of ovarian cancer cells via EMT/MMP2/CCND1 signaling</td>
+<td>Ye W et al., J Ovarian Res 2025, PMID 40483481, DOI 10.1186/s13048-025-01705-3</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STX4</td>
+<td>Structural (ovarian cancer, not lung)</td>
+<td>STX4 expression associated with classification, clinical stage, lymphatic metastasis in ovarian cancer</td>
+<td>PMID 35116778, Transl Cancer Res 2019, DOI 10.21037/tcr.2019.02.11</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STX4</td>
+<td>Immune (mast cell degranulation)</td>
+<td>ELKS1 controls mast-cell degranulation via Kdm2b-dependent transcription of Stxbp2/Syntaxin 4</td>
+<td>Lam HY et al., Sci Adv 2020, PMID 32937583, DOI 10.1126/sciadv.abb2497</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STX4</td>
+<td>Immune (mast cell degranulation — DIRECTLY CONTRADICTS STX4-centric model above)</td>
+<td>Conditional-knockout mice show STX3 (not STX4) is required for mast-cell compound exocytosis/degranulation</td>
+<td>Sanchez E et al., J Biol Chem 2018, PMID 30563839, DOI 10.1074/jbc.RA118.005532</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>VKORC1</td>
+<td>Statgen/pharmacogenomic (warfarin dosing, not COPD)</td>
+<td>Systematic review/meta-analysis of CYP2C9/VKORC1/CYP4F2 polymorphisms and pediatric warfarin maintenance dose</td>
+<td>Takeuchi M et al., Pharmacogenomics J 2019, PMID 31673144, DOI 10.1038/s41397-019-0117-x</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>VKORC1</td>
+<td>Structural (single-family case report, IPF not COPD)</td>
+<td>VKORC1/CYP2C9 variants linked to early-onset idiopathic pulmonary fibrosis in one Dutch family (hypothesis-generating only)</td>
+<td>Wijnen P et al., Int J Mol Sci 2019, PMID 30866412, DOI 10.3390/ijms20051160</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>VKORC1</td>
+<td>Immune/hypothesis (speculative, COVID-19, not COPD)</td>
+<td>Hypothesis paper speculating VKORC1 -1639A allele may protect against COVID-19 thrombotic complications</td>
+<td>Janssen R, Walk J, Med Hypotheses 2020, PMID 33254525, DOI 10.1016/j.mehy.2020.110218</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZNF668</td>
+<td>Gene-function background (DNA-damage response, not lung/immune)</td>
+<td>ZNF668 interacts with Tip60 to promote H2AX acetylation after DNA damage</td>
+<td>Hu R et al., Cell Cycle 2013, PMID 23777805, DOI 10.4161/cc.25064</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZNF668</td>
+<td>Gene-function background (breast cancer tumor suppressor, not lung/immune)</td>
+<td>ZNF668 functions as tumor suppressor by regulating p53 stability in breast cancer</td>
+<td>Hu R et al., Cancer Res 2011, PMID 21852383, DOI 10.1158/0008-5472.CAN-11-0853</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MYLPF (alias MYL11)</td>
+<td>Structural (skeletal-muscle development, not lung)</td>
+<td>MYLPF variants cause distal arthrogryposis via impaired myosin-light-chain function; zebrafish knockout models</td>
+<td>Chong JX et al., Am J Hum Genet 2020, PMID 32707087, DOI 10.1016/j.ajhg.2020.06.014</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MYLPF (alias MYL11)</td>
+<td>Structural (zebrafish developmental biology, preprint, not lung)</td>
+<td>Mylpf gene dosage controls fast-twitch myofibril growth in zebrafish embryo (bioRxiv preprint, not peer-reviewed)</td>
+<td>Adekeye TE et al., bioRxiv 2024, PMID 39345555, DOI 10.1101/2024.09.18.613721</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MYLPF (alias MYL11)</td>
+<td>Structural (comparative/agricultural biology)</td>
+<td>Caprine MYLPF gene cloning/expression analysis; low-level expression detected in goat lung tissue vs. dominant skeletal-muscle expression</td>
+<td>Xu H et al., Mol Biol Rep 2013, PMID 23277391, DOI 10.1007/s11033-012-2342-0</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p>Queried 2026-09-11 via <code>mcp__open-targets__*</code> GraphQL tools. Full detail in
+<code>evidence_tables/_status/16_29850001-31300000/opentargets.md</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>L2G / disease-association (COPD, MONDO_0005002)</th>
+<th>L2G / disease-association (FEV1, FEV1/FVC)</th>
+<th>Locus-level colocalization context (credibleSets @ rs9972727, partial sample ~75/354)</th>
+<th>Genetic constraint (gnomAD-style o/e)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRSS36</td>
+<td>No data (0 associations)</td>
+<td>No data</td>
+<td>Never an L2G hit in sampled rows</td>
+<td>syn o/e 1.11, mis o/e 1.11, LoF o/e 1.04 (unconstrained)</td>
+</tr>
+<tr>
+<td>BCKDK</td>
+<td>Score 0.0033, literature-only (no genetic_association)</td>
+<td>No data</td>
+<td>Secondary L2G hit (~0.05-0.10) for lipid/warfarin traits, never top</td>
+<td>syn o/e 1.07, mis o/e 0.81 (modest), LoF o/e 0.62</td>
+</tr>
+<tr>
+<td>MYLPF (MYL11)</td>
+<td>No data</td>
+<td>No data</td>
+<td>Never an L2G hit in sampled rows</td>
+<td>syn o/e 0.85, mis o/e 0.88, LoF o/e 0.41</td>
+</tr>
+<tr>
+<td>PRSS8</td>
+<td>Score 0.0033, literature-only (no genetic_association)</td>
+<td>No data</td>
+<td>Secondary L2G hit (~0.05-0.13) for lipid/obesity/hypertension traits, never top</td>
+<td>syn o/e 0.97, mis o/e 0.81, LoF o/e 0.50</td>
+</tr>
+<tr>
+<td>KAT8</td>
+<td>Score 0.014, literature-only (no genetic_association)</td>
+<td>No data</td>
+<td>Most frequent top/near-top L2G hit locus-wide (0.14-0.42) for lipid/BMI/obesity/PD traits</td>
+<td>syn o/e 1.14, mis o/e 0.67 (most constrained of set), LoF o/e 0.65</td>
+</tr>
+<tr>
+<td>STX4</td>
+<td>No data</td>
+<td>No data</td>
+<td>Never an L2G hit in sampled rows</td>
+<td>syn o/e 1.01, mis o/e 0.80, LoF o/e 0.59</td>
+</tr>
+<tr>
+<td>STX1B</td>
+<td>No data</td>
+<td>No data</td>
+<td>Secondary L2G hit (~0.06-0.15) for body-composition traits</td>
+<td>syn o/e 0.92, mis o/e 0.50, LoF o/e 0.16 (strongly LoF-constrained)</td>
+</tr>
+<tr>
+<td>VKORC1</td>
+<td>No data</td>
+<td>No data</td>
+<td>Clear top L2G hit (0.268) specifically for warfarin-dose-response GWAS</td>
+<td>syn o/e 1.03, mis o/e 1.02, LoF o/e 0.72 (unconstrained)</td>
+</tr>
+<tr>
+<td>ZNF668</td>
+<td>No data</td>
+<td>No data</td>
+<td>Secondary L2G hit (~0.07-0.14) for HDL/lipid traits</td>
+<td>syn o/e 1.11, mis o/e 0.85, LoF o/e 0.27 (strongly LoF-constrained)</td>
+</tr>
+</tbody>
+</table>
+<p>No candidate gene has L2G-based genetic-association evidence for COPD, FEV1, or
+FEV1/FVC in Open Targets. The locus's own indexed GWAS signal is dominated by lipid,
+anthropometric, warfarin-pharmacogenomic, and Parkinson's-disease traits.</p>
+<h2 id="prioritized-gene-synthesis">Prioritized-gene synthesis</h2>
+<p><strong>Prioritized gene: PRSS8 — Confidence: LOW.</strong></p>
+<p>This call is close and should be read as such. PRSS8 carries the largest credible-set
+PIP mass at this locus (lead variant rs9972727, PIP=0.43, plus rs12597511 and
+rs2855475), is the ABC-prioritized gene, and has by far the deepest mechanistic
+literature of any candidate here: an extensively replicated, decades-old role
+activating airway epithelial ENaC and regulating airway-surface-liquid volume and
+mucociliary clearance (rows above, PMIDs 11756432, 18310226, 27014936, 25260629), a
+disease process directly analogous to the mucociliary dysfunction seen in COPD, plus a
+mechanistic tie to neutrophil-elastase-driven airway pathophysiology (PMID 27014936) —
+a link to the neutrophilic inflammatory program named in this pipeline's biological
+priors.</p>
+<p>However, this recommendation is explicitly weak, and the red-team-skeptic marked PRSS8
+CONTESTED for good reason: (1) none of the mechanistic evidence comes from COPD or
+cigarette-smoke models — it is almost entirely cystic fibrosis (airway) and kidney
+(knockout mouse) literature; (2) Open Targets shows zero L2G/genetic-association
+evidence for COPD, FEV1, or FEV1/FVC at this locus for any gene, including PRSS8; (3)
+the one COPD-adjacent proteomic finding (Casselbrant et al. 2022, PMID 35263363) found
+PRSS8 associated with a <em>combined</em> CAD+airflow-obstruction phenotype but explicitly
+<strong>not</strong> with airflow obstruction alone — active counter-evidence against a pure lung
+mechanism, and consistent with this locus's dominant cardiometabolic/lipid pleiotropy;
+and (4) this locus's own GWAS Catalog record for the lead variant shows only
+triglyceride and cardiovascular-disorder associations, not lung-function or
+smoking-behavior ones.</p>
+<p><strong>Runner-up: KAT8</strong>, which carries the second-largest credible-set PIP mass, is the
+most missense-constrained gene in this candidate set, and has newly emerging (2025-2026)
+mechanistic evidence linking it to neutrophil recruitment and M2 macrophage
+polarization in airway inflammation (PMIDs 42244110, 41952982, 40250723) — but that
+evidence is exclusively from allergic-asthma (papain, house-dust-mite) and LPS
+acute-lung-injury mouse models, not COPD/smoke-exposure models, and its own locus-wide
+Open Targets L2G dominance (the single strongest of any candidate gene here) is for
+metabolic, anthropometric, and neurological traits, not respiratory ones.</p>
+<p>What would resolve this tie: (a) a COPD- or cigarette-smoke-specific mouse/cell model
+showing PRSS8- or KAT8-dependent airway inflammatory or mucociliary phenotypes; (b) a
+COPD- or FEV1/FEV1-FVC-specific colocalization or fine-mapping study at this locus (none
+exists yet in Open Targets or GWAS Catalog for the lead variant); (c) tissue- and
+cell-type-resolved eQTL/sQTL colocalization in COPD-relevant airway tissue for PRSS8 vs.
+KAT8 vs. the other credible-set genes, to determine which gene's expression is actually
+regulated by the credible-set variants in lung.</p>
+<p>The remaining candidates (BCKDK, STX1B — both undermined by a Parkinson's-disease GWAS
+signal that failed to replicate outside Caucasian populations, and by contradictory
+functional mast-cell data for STX1B; STX4 — internally contradicted mast-cell biology,
+STX3 vs. STX4; VKORC1 — a genetically and mechanistically confirmed warfarin
+pharmacogenomic &quot;passenger&quot; gene at this locus; ZNF668 and PRSS36 — essentially no
+lung/immune literature footprint; MYLPF/MYL11 — zero credible-set PIP and a gene body
+located ~750 kb outside the entire credible-set span) are not competitive with PRSS8 or
+KAT8 and are not recommended.</p>
+<p>Given the locus-wide absence of COPD/FEV1/FEV1-FVC genetic evidence in Open Targets, the
+dominant lipid/cardiometabolic/pharmacogenomic pleiotropy at this locus, and the
+red-team-skeptic's explicit alternative hypothesis that the COPD association here may
+be a comorbidity/pleiotropy artifact rather than a genuine lung-mechanism signal, this
+locus's causal gene call should be treated as <strong>unresolved</strong> pending COPD- or
+smoke-specific functional or fine-mapping evidence. PRSS8 is named as the best-supported
+single pick on mechanistic-plausibility and PIP-mass grounds, but confidence is LOW, not
+MODERATE, precisely because that plausibility is not yet corroborated by any
+COPD-specific genetic or model evidence, and because credible counter-evidence and a
+parsimonious alternative (locus-wide metabolic/comorbidity pleiotropy) both exist.</p>
+
+</body>
+</html>

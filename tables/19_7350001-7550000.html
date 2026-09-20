@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>19_7350001-7550000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-locus-evidence-table--197350001-7550000-nearest-gene-arhgef18">COPD locus evidence table — 19:7350001-7550000 (nearest gene ARHGEF18)</h1>
+<p><strong>Lead variant:</strong> rs7257153 (19:7442558, GRCh38), PIP=0.344, intron_variant in ARHGEF18, MODIFIER impact.
+<strong>Credible set:</strong> 55 variants (ABF fine-mapping), all intron_variant/MODIFIER, ALL annotated to ARHGEF18 (no missense/splice variants).
+<strong>Candidate genes:</strong> ARHGEF18 (nearest gene; sole gene overlapping credible set), PEX11G (PoPS-prioritized, no fine-mapping support).</p>
+<p>All rows below use only citations with verifier verdict VERIFIED. See <code>audits/19_7350001-7550000_audit.md</code> for excluded citations (none in this locus — all 27 submitted citations verified) and the full red-team critique, including the gene-level CONTESTED/WEAKENED reasoning that qualifies how this table should be read.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ARHGEF18</td>
+<td>Statistical genetics (other disease)</td>
+<td>Candidate-SNP case-control study found a DIFFERENT ARHGEF18 variant (rs3745357, 3'-UTR) associated with non-idiopathic pulmonary arterial hypertension (pulmonary vascular, not airway/COPD disease) in a Chinese cohort (117 cases/176 controls).</td>
+<td>PMID 30405854 / DOI 10.1155/2018/2461845</td>
+<td>Gene-level: WEAKENED (see audit) — distinct variant, distinct pulmonary-vascular phenotype, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGEF18</td>
+<td>Statistical genetics (other disease, preprint)</td>
+<td>Exome-wide association in a diabetic-kidney-disease EHR cohort identified a novel ARHGEF18 variant in glomerular podocytes causing impaired protein degradation and increased RhoA/Rac1 signaling. NOT peer-reviewed (medRxiv preprint).</td>
+<td>PMID 37732187 / DOI 10.1101/2023.09.06.23295120</td>
+<td>Gene-level: WEAKENED (see audit) — renal phenotype, not lung; unreviewed preprint</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGEF18</td>
+<td>Structural (bronchial epithelium)</td>
+<td>RNAi screen in human bronchial epithelial cell monolayers identified an ARHGEF18-RHOA cluster regulating collective epithelial migration.</td>
+<td>PMID 28512143 / DOI 10.1083/jcb.201609095</td>
+<td>Gene-level: WEAKENED overall, but skeptic notes this is one of only two papers actually done in airway/bronchial tissue — among the strongest tissue-relevant evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGEF18</td>
+<td>Structural (bronchial epithelium)</td>
+<td>In bronchial epithelial cell line 16HBE14o-, the lung-cancer tumor suppressor LKB1 requires p114RhoGEF/ARHGEF18 to activate RhoA and drive apical-junction maturation.</td>
+<td>PMID 23648482 / DOI 10.1128/MCB.00154-13</td>
+<td>Gene-level: WEAKENED overall, but skeptic notes this is one of only two papers actually done in airway/bronchial tissue — among the strongest tissue-relevant evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGEF18</td>
+<td>Structural (lung tissue, cancer context)</td>
+<td>p114RhoGEF/ARHGEF18 protein is upregulated in squamous-cell lung carcinoma vs adenocarcinoma/normal lung, correlating with lymph-node metastasis and worse survival.</td>
+<td>PMID 23512329 / DOI 10.1007/s13277-013-0737-8</td>
+<td>Skeptic: disease-irrelevant to COPD (cancer context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGEF18</td>
+<td>Structural/developmental (non-lung: retina, cross-species)</td>
+<td>In medaka fish, ArhGEF18 is required for RhoA-Rock2-mediated apicobasal polarity and proliferative/neurogenic division control in retinal neuroepithelium; human ARHGEF18 rescues the fish mutant.</td>
+<td>PMID 23698346 / DOI 10.1242/dev.096487</td>
+<td>Skeptic: non-lung tissue, stretches &quot;mechanistically coherent&quot; framing</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGEF18</td>
+<td>Structural/developmental (non-lung: retina, review)</td>
+<td>Commentary/review summarizing ArhGEF18's role in vertebrate epithelial apicobasal polarity during retina morphogenesis.</td>
+<td>PMID 24231347 / DOI 10.4161/sgtp.27061</td>
+<td>Skeptic: non-lung tissue, review of above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGEF18</td>
+<td>Structural (Mendelian disease, non-lung)</td>
+<td>Biallelic ARHGEF18 mutations cause adult-onset retinal degeneration via disruption of the RHOA/tight-junction/adherens-junction epithelial-polarity pathway.</td>
+<td>PMID 28132693 / DOI 10.1016/j.ajhg.2016.12.014</td>
+<td>Skeptic: non-lung Mendelian eye disease; establishes ARHGEF18 as a known RP gene, unrelated to COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGEF18</td>
+<td>Structural (non-lung: breast epithelial cell line)</td>
+<td>p114RhoGEF/ARHGEF18 stimulates junctional RhoA activity during collective epithelial (MCF-7) migration, stabilizing E-cadherin at adherens junctions.</td>
+<td>PMID 34368835 / DOI 10.1242/jcs.258767</td>
+<td>Skeptic: non-lung tissue, general epithelial mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGEF18</td>
+<td>Structural (non-lung: generic epithelium)</td>
+<td>p114RhoGEF/ARHGEF18 recruitment to tight junctions is regulated by JAM-A and ECM stiffness, required for junctional actomyosin activity and tight-junction integrity.</td>
+<td>PMID 32697990 / DOI 10.1016/j.celrep.2020.107924</td>
+<td>Skeptic: non-lung tissue, general mechanotransduction mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGEF18</td>
+<td>Structural/developmental (non-lung: placenta)</td>
+<td>ARHGEF18/p114RhoGEF is required for trophoblast cell-cell fusion (syncytialization) during placenta morphogenesis via actomyosin remodeling.</td>
+<td>PMID 33842485 / DOI 10.3389/fcell.2021.658006</td>
+<td>Skeptic: non-lung tissue</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGEF18</td>
+<td>Structural (mucociliary-relevant, generic ciliated cell model)</td>
+<td>SEPTIN9 binds and activates ARHGEF18 to drive RhoA-dependent exocyst-complex recruitment of ciliary transition-zone proteins required for primary ciliogenesis.</td>
+<td>PMID 36912772 / DOI 10.1083/jcb.201911062</td>
+<td>Skeptic: done in a generic (non-airway) ciliated cell model, not motile/airway cilia or mucociliary clearance specifically</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGEF18</td>
+<td>Structural (non-lung: cardiac, null result)</td>
+<td>Cardiomyocyte-specific ArhGEF18 knockout altered cytoskeletal/polarity protein expression but produced NO overt left-ventricular-noncompaction phenotype.</td>
+<td>PMID 40625715 / DOI 10.1002/pdi3.20</td>
+<td>Skeptic: explicitly null/negative result in a different organ</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGEF18</td>
+<td>Immune (eosinophil, type-2 biology)</td>
+<td>Eosinophils express a leukocyte-specific ARHGEF18 isoform (&quot;LOCGEF&quot;) that relocalizes with RHOA during polarization by IL-5, CCL11 (eotaxin), or IL-33.</td>
+<td>PMID 29601110 / DOI 10.1002/JLB.2MA1017-418RR</td>
+<td>Skeptic: type-2/eosinophilic biology, off-target relative to COPD's classic neutrophilic/Th1/Tc17 programs</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGEF18</td>
+<td>Immune (monocyte, associative)</td>
+<td>Proteomics screen identified ARHGEF18 as an interacting partner within monocyte TLR2 signaling complexes.</td>
+<td>PMID 34318608 / DOI 10.15252/msb.202010125</td>
+<td>Skeptic: purely associative, not mechanistically dissected</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGEF18</td>
+<td>Immune (disease-nonspecific biomarker)</td>
+<td>ARHGEF18 was 1 of 15 machine-learning-selected blood transcriptomic biomarker genes for septic shock, and among those associated with patient survival.</td>
+<td>PMID 35045818 / DOI 10.1186/s12879-022-07056-4</td>
+<td>Skeptic: disease-nonspecific, purely associative bioinformatics</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ARHGEF18</td>
+<td>Immune (foundational biochemistry, non-leukocyte)</td>
+<td>p114RhoGEF/ARHGEF18 is activated by G-protein βγ subunits downstream of GPCR signaling and activates RhoA and Rac1, driving actin stress fibers and NADPH-oxidase-dependent ROS production, in fibroblast/heterologous cells.</td>
+<td>PMID 14512443 / DOI 10.1161/01.RES.0000097607.14733.0C</td>
+<td>Skeptic: never tested in neutrophils or any leukocyte; offered only as mechanistic precedent</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PEX11G</td>
+<td>Structural (non-lung: general cell biology)</td>
+<td>Identified/named PEX11gamma (PEX11G) as the third mammalian PEX11 paralog, encoding a peroxisomal protein; did not test lung tissue.</td>
+<td>PMID 12417726 / DOI 10.1128/MCB.22.23.8226-8240.2002</td>
+<td>Gene-level: HOLDS (no COPD/lung relevance found)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PEX11G</td>
+<td>Structural (non-lung: general review)</td>
+<td>Review of the PEX11 protein family's (including PEX11γ) role in peroxisomal membrane growth/division; no lung-specific content.</td>
+<td>PMID 17178468 / DOI 10.1016/S0074-7696(06)55005-3</td>
+<td>Gene-level: HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PEX11G</td>
+<td>Structural (non-lung: paralog Mendelian disease)</td>
+<td>Describes a human PEX11β-deficiency patient (cataracts, intellectual disability, hearing loss, non-pulmonary); PEX11γ expression was decreased at elevated temperature in the PEX11β-deficient fibroblasts.</td>
+<td>PMID 22581968 / DOI 10.1136/jmedgenet-2012-100778</td>
+<td>Gene-level: HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PEX11G</td>
+<td>Structural/metabolic (non-lung: Drosophila/adipose)</td>
+<td>Drosophila PEX11G homolog CG33474 (and human PEX11G, tested by overexpression) promotes peroxisome enlargement and lipid-droplet/peroxisome contacts and fat loss downstream of dietary amino acids and TOR signaling.</td>
+<td>PMID 38649521 / DOI 10.1007/s00018-024-05226-y</td>
+<td>Gene-level: HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PEX11G</td>
+<td>Not disease-relevant (cancer bioinformatics)</td>
+<td>A PEX11G-antisense lncRNA (Lnc-PEX11G-4) was one of three lncRNAs in a colorectal-cancer ferroptosis prognostic model.</td>
+<td>PMID 40364849 / DOI 10.3389/fimmu.2025.1561210</td>
+<td>Gene-level: HOLDS — unrelated to PEX11G protein function or lung disease</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PEX11G</td>
+<td>Immune (incidental, unrelated disease)</td>
+<td>Whole-exome sequencing of mevalonate-kinase-deficiency (autoinflammatory disease) patients incidentally found a homozygous missense PEX11γ variant in one patient, loosely correlated with visual blurring; proposed as a possible modifier gene.</td>
+<td>PMID 26935981 / DOI 10.3892/mmr.2016.4918</td>
+<td>Gene-level: HOLDS — single-patient incidental finding, unrelated autoinflammatory disease</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MCOLN1 (outside credible set, background)</td>
+<td>Immune (non-pulmonary macrophage autophagy)</td>
+<td>MCOLN1/TRPML1 is required (via PIKFYVE-TFEB) for trehalose-induced autophagy/xenophagy clearing mycobacteria from human macrophages during HIV co-infection.</td>
+<td>PMID 32079455 / DOI 10.1080/15548627.2020.1725374</td>
+<td>Gene-level: HOLDS — non-pulmonary, background gene only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MCOLN1 (outside credible set, background)</td>
+<td>Immune/structural (non-pulmonary epithelial/glial)</td>
+<td>TLR3 activation triggers TRPML1(MCOLN1)-dependent lysosomal ATP release in astrocytes and epithelial cells (non-airway).</td>
+<td>PMID 29636491 / DOI 10.1038/s41598-018-23877-3</td>
+<td>Gene-level: HOLDS — non-pulmonary, background gene only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PNPLA6 (outside credible set, background)</td>
+<td>Structural (rare Mendelian syndrome)</td>
+<td>Both reported PNPLA6-biallelic-variant Oliver-McFarlane-syndrome patients had prolonged neonatal respiratory distress; one had persistent abnormal lung structure on follow-up.</td>
+<td>PMID 33818269 / DOI 10.1080/13816810.2021.1904419</td>
+<td>Gene-level: HOLDS-as-background — outside credible set, rare monogenic (not GWAS-relevant) biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PNPLA6 (outside credible set, background)</td>
+<td>Structural (rare Mendelian syndrome, contradicting finding)</td>
+<td>Characterizes NTE(PNPLA6) enzymatic activity thresholds driving retinopathy/endocrinopathy phenotype severity across the PNPLA6 disease spectrum in a larger cohort; no lung-specific findings reported.</td>
+<td>PMID 38735647 / DOI 10.1093/brain/awae055</td>
+<td>Gene-level: HOLDS-as-background — this larger cohort study reports no lung phenotype, tempering the signal from PMID 33818269</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<ul>
+<li><strong>ARHGEF18</strong> (ENSG00000104880): No L2G score, colocalization, or curated disease association exists for COPD (MONDO_0005002) in Open Targets — this COPD credible set is not yet indexed there. At the lead variant (rs7257153/19_7442558_T_C), Open Targets indexes 15 credible sets, none for COPD or any lung-function trait; traits present are HDL cholesterol (6 cohorts), white blood cell/leukocyte count (2 cohorts), neutrophil count, blood bicarbonate (2 measures), and BMI-adjusted waist circumference, plus an artery-tibial transcript-usage QTL and an ARHGEF18 fibroblast gene-expression eQTL (GENCORD study). Pairwise colocalization among the non-COPD trait credible sets is high (h4 ≈ 0.90–0.99); the ARHGEF18 fibroblast eQTL colocalizes with these same traits at h4 ≈ 0.64–0.77. In every credible set queried, ARHGEF18 is the ONLY gene with any L2G prediction (score ≈ 0.09–0.12 across traits — modest, well below the ~0.5 high-confidence threshold); PEX11G receives no L2G prediction at all. Curated disease associations (target-level, all diseases): retinitis pigmentosa (~0.60, strong — known Mendelian RP gene), hypertensive disorder (0.45), essential hypertension (0.35), cardiovascular disorder (0.25); asthma (0.006, rna_expression only), pulmonary arterial hypertension (0.0086, literature only), and lung cancer/lung carcinoma/squamous-cell lung carcinoma (all ≤0.0015, literature-only, genetic_association=0) are present but very weak. No COPD or FEV1/FEV1-FVC entry appears at all among 254 total disease associations returned. gnomAD constraint: LOEUF ≈ 0.81 (moderately constrained against LoF), missense oe ≈ 0.945 (near-neutral).</li>
+<li><strong>PEX11G</strong> (ENSG00000104883): No L2G score, colocalization, or curated disease association for COPD; not among any l2GPredictions rows for the 15 credible sets overlapping the lead variant (i.e., Open Targets assigns it no regulatory link to this locus at all, despite its PoPS prioritization). Curated disease associations (26 total, essentially exhaustive to score=0): hypertensive disorder (0.042), cardiovascular disorder/blood pressure (~0.028), glomerulonephritis (0.023), hepatocellular carcinoma/COVID-19 (rna_expression only), peroxisomal disease/Zellweger-spectrum (genetic_literature only). No asthma, lung cancer, pulmonary hypertension, or spirometry entries. gnomAD constraint: LOEUF ≈ 1.55 (tolerant of LoF, unconstrained) — consistent with a non-essential PEX11 paralog.</li>
+</ul>
+<h2 id="prioritized-gene-synthesis">Prioritized-gene synthesis</h2>
+<p><strong>Prioritized gene: ARHGEF18. Confidence: LOW.</strong></p>
+<p>The positional case for ARHGEF18 is essentially unambiguous: all 55 credible-set variants (ABF fine-mapping) sit in its introns, and it is the only gene at this locus with any Open Targets L2G prediction at all — PEX11G, the PoPS-prioritized alternative, has no fine-mapping overlap and no L2G signal whatsoever (see Open Targets summary above), and the researcher found essentially no COPD/lung/smoking/immune-relevant literature for PEX11G (evidence table rows above, all gene-level HOLDS). On pure &quot;which gene does the credible set point to&quot; grounds, ARHGEF18 is the clear pick over PEX11G and over the other regional genes (MCOLN1, PNPLA6, SAXO5, ZNF358), none of which have any fine-mapping or L2G support and are included in the table only as background.</p>
+<p>However, the red-team-skeptic's critique (preserved in full in <code>audits/19_7350001-7550000_audit.md</code>) identifies a real and unresolved tension that keeps confidence at LOW rather than HIGH or MODERATE: every genome-wide-significant trait Open Targets has indexed at this locus is lipid/hematological (HDL cholesterol, white blood cell count, neutrophil count, blood bicarbonate, waist circumference) — not COPD, and not any lung-function/spirometry trait, which per this pipeline's prior #2 would be the strongest corroborating evidence for a pulmonary mechanism. The ARHGEF18 fibroblast eQTL colocalizes only with those same non-pulmonary traits (h4 0.64–0.77), not with COPD. The structural/epithelial-biology literature for ARHGEF18 (rows above), while substantial and well-replicated, is drawn overwhelmingly from non-airway tissue contexts (retina, placenta, breast-cancer cell line, generic non-airway ciliated cells, and a null cardiac knockout) — only two of the twelve structural citations are actually in bronchial epithelium (PMID 28512143, 23648482), and the immune evidence is scattered across eosinophil/type-2, monocyte-associative, and disease-nonspecific findings that do not cleanly match COPD's more classically neutrophilic/Th1/Tc17 inflammatory programs. No COPD-specific GWAS, TWAS, MR, or lung-function association was found in the literature for ARHGEF18 at all (absence of evidence, explicitly noted by the researcher), and no smoking-behavior trait is associated with this locus either — so the signal cannot currently be cleanly assigned to either the &quot;smoking-mediated&quot; or &quot;lung-function-mediated&quot; pathway this pipeline's priors describe.</p>
+<p>The runner-up, PEX11G, is not a close competitor on the evidence assembled — it lacks fine-mapping support, L2G support, and any disease-relevant literature — so this is not a tied call between two genes in LD. It is instead a confident gene assignment (ARHGEF18) paired with genuine uncertainty about the assigned gene's mechanism: this locus may reflect airway-epithelial/RhoA-junction biology as the researcher's structural evidence suggests, or it may equally plausibly be a hematological/neutrophil-count pleiotropy signal (COPD patients have altered circulating neutrophil counts) that reaches significance in the COPD GWAS through that route rather than through lung-structural pathobiology — the assembled evidence does not distinguish between these two mechanistic hypotheses. What would resolve this: (1) a direct COPD or FEV1/FEV1-FVC colocalization or L2G analysis at this locus once available (absent from Open Targets currently), (2) an airway-tissue (not fibroblast) eQTL/sQTL colocalization for ARHGEF18 specifically with COPD or lung function, and (3) Mendelian-randomization or multi-trait analysis testing whether the COPD association here is fully explained by neutrophil-count/hematological mediation. Given these gaps, ARHGEF18 is recommended as the best-supported single gene at this locus by positional/fine-mapping and structural-biology criteria, but the study team should treat the mechanism (and therefore the biological interpretation) as unresolved, not confirmed.</p>
+
+</body>
+</html>

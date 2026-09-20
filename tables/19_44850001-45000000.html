@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>19_44850001-45000000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1944850001-45000000-nearest-gene-apoe">Evidence table — Locus 19:44,850,001-45,000,000 (nearest gene APOE)</h1>
+<p>Lead / sole credible-set variant: rs429358 (19:44,908,684; PIP=0.9987; missense_variant,
+MODERATE impact). rs429358, together with rs7412 (not in this credible set), defines the
+classic APOE epsilon2/epsilon3/epsilon4 haplotypes. Candidate genes evaluated: <strong>APOE</strong>
+(nearest gene; harbors the sole credible-set missense variant) and <strong>ZNF180</strong> (PoPS-
+prioritized only; no other prioritization method flags it).</p>
+<p>All rows below use only citations with a citation-verifier verdict of VERIFIED. The one
+CLAIM_MISMATCH citation (Wang et al. 1996, PMID 8914611) is excluded from the table and
+listed in the audit appendix instead.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>APOE</td>
+<td>Locus framing / statistical genetics</td>
+<td>Established chr19q13 COPD GWAS locus (RAB4B/EGLN2/MIA/CYP2A6, lead rs7937) is a distinct locus several Mb away from APOE — not the same signal as this locus.</td>
+<td>PMID 22080838 / DOI 10.1093/hmg/ddr524</td>
+<td>Not separately contested (context only)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Statistical genetics (candidate-gene case-control)</td>
+<td>Chinese case-control study (480 cases/322 controls): no significant main-effect association between APOE genotype (rs429358/rs7412) and COPD; MDR analysis found rs429358 x smoking-status was the &quot;best interaction model.&quot;</td>
+<td>PMID 33285739 / DOI 10.1097/MD.0000000000023442</td>
+<td>WEAKENED (part of overall APOE verdict; smoking-mediation flagged as unresolved, not ruled out)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Statistical genetics (population cohort)</td>
+<td>Taiwan Biobank (n~150,709): APOE-rs429358 associated with metabolic syndrome and fatty liver, but the airflow-limitation/pulmonary-function signal in the SAME cohort was carried by LEPR-rs1805096, not APOE-rs429358.</td>
+<td>PMID 38866261 / DOI 10.1016/j.gene.2024.148660</td>
+<td>WEAKENED (cited by skeptic as key evidence against direct pulmonary-function support)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Statistical genetics (cross-trait comorbidity)</td>
+<td>Cross-trait lung-GI colocalization study flags APOE among 66 candidate pleiotropic genes (gene set enriched in immune/inflammatory activities); does not isolate an APOE-specific mechanism.</td>
+<td>PMID 40155373 / DOI 10.1038/s41467-025-58248-w</td>
+<td>WEAKENED (skeptic: comorbidity-pleiotropy evidence, not lung-specific mechanism)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Statistical genetics (cross-trait comorbidity)</td>
+<td>COPD-GI comorbidity multi-omics/MR study: APOE one of 13 candidate pleiotropic genes &quot;supported by proteomic evidence (pQTL)&quot;; smoking partially mediates COPD's effect on some GI outcomes (not APOE-specific).</td>
+<td>PMID 41978582 / DOI 10.2147/COPD.S561645</td>
+<td>WEAKENED (same concern as above)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Statistical genetics (cross-trait comorbidity)</td>
+<td>COPD/asthma-musculoskeletal comorbidity MR/colocalization study implicates APOE (with IFIH1, CXCR5) via inflammatory and lipid pathways.</td>
+<td>PMID 42260503 / DOI 10.1186/s12931-026-03726-y</td>
+<td>WEAKENED (same concern as above)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Statistical genetics (resource paper)</td>
+<td>Large UK Biobank whole-genome-sequencing resource paper; general resource/methods description, no COPD-specific APOE finding confirmed (Open-Targets-linked lead only).</td>
+<td>PMID 40770095 / DOI 10.1038/s41586-025-09272-9</td>
+<td>Not informative for this locus (flagged as non-substantive lead)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Smoking-mediated effects</td>
+<td>Small study (n=74 female smokers): APOE epsilon4 carriers showed larger P3b amplitude reduction upon 12-17h nicotine abstinence than epsilon3/epsilon3 carriers — plausible link between APOE genotype and nicotine-withdrawal sensitivity.</td>
+<td>PMID 33506304 / DOI 10.1007/s00213-021-05763-5</td>
+<td>WEAKENED (skeptic: supports smoking-mediation as a live, unresolved alternative hypothesis)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Smoking/mortality-survivorship</td>
+<td>In 358 AECOPD patients, elevated serum ApoE PROTEIN level (not genotype) independently predicted higher one-year all-cause mortality (adjusted HR 2.10, 95% CI 1.19-3.72).</td>
+<td>PMID 40433394 / DOI 10.2147/COPD.S512096</td>
+<td>WEAKENED (skeptic: supports an uninvestigated survivorship-bias alternative explanation)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Mortality/aging pleiotropy</td>
+<td>UK Biobank plasma proteomics aging study: organ-age estimates predicted future COPD onset; separately discusses brain-age/APOE4 risk relative to Alzheimer's risk. No COPD-specific APOE genetic finding.</td>
+<td>PMID 40634782 / DOI 10.1038/s41591-025-03798-1</td>
+<td>WEAKENED (context for survivorship/aging-pleiotropy alternative)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural lung biology</td>
+<td>ApoE (and ApoA-I)-containing lipid particles stimulate surfactant phosphatidylcholine secretion and PKC/Ca2+ signal transduction in alveolar type II cells via the LDL-receptor pathway.</td>
+<td>PMID 8483941 / DOI 10.1073/pnas.90.9.4256</td>
+<td>Non-industry, mechanistically direct — retained as genuine lung-autonomous evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural lung biology</td>
+<td>Gi-protein signaling downstream of ApoE/lipoprotein receptor engagement mediates surfactant secretion by alveolar type II pneumocytes.</td>
+<td>PMID 9316499 / DOI 10.1152/ajplung.1997.273.3.L634</td>
+<td>Non-industry, mechanistically direct</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural/developmental lung biology</td>
+<td>Apoe-knockout mice show altered disaturated phosphatidylcholine content and CCT activity in fetal pre-type-II alveolar cells vs. Ldlr-knockout/wild-type, linking maternal VLDL/ApoE-dependent lipid handling to fetal lung surfactant synthesis.</td>
+<td>PMID 12114192 / DOI 10.1152/ajplung.00021.2002</td>
+<td>Non-industry, mechanistically direct</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural lung biology</td>
+<td>ApoE (and transferrin) markedly enriched in alveolar type I cells and functionally protective against hyperoxic/oxidative epithelial injury.</td>
+<td>PMID 16497717 / DOI 10.1113/jphysiol.2005.103465</td>
+<td>Non-industry, mechanistically direct</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural lung biology (caveat)</td>
+<td>In a pulmonary-fibrosis mouse model, ApoE signaling was activated in macrophages during fibrotic remodeling, but genetic ApoE deletion had &quot;limited impact on inflammation and mortality.&quot;</td>
+<td>PMID 39100672 / DOI 10.3389/fimmu.2024.1425466</td>
+<td>Skeptic-flagged internal contradiction: undercuts ApoE-specific mechanistic necessity</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE (receptor pathway, not APOE itself)</td>
+<td>Structural lung biology</td>
+<td>LRP1 (an ApoE receptor, not APOE) is upregulated in COPD bronchial epithelium and smoke-exposed mouse airway; airway-epithelial-specific Lrp1 knockout mice develop a combined restrictive/obstructive phenotype with increased inflammation, oxidative damage, and fibrosis after chronic smoke exposure.</td>
+<td>PMID 35202607 / DOI 10.1016/j.jlr.2022.100185</td>
+<td>Supporting pathway context only — not direct APOE evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural lung biology (knockout-mouse, non-industry)</td>
+<td>Apoe-/- mice on a Western-type diet (no cigarette smoke) spontaneously develop airspace enlargement, macrophage/lymphocyte infiltration, and MMP-9/MMP-12 upregulation via TLR4-pathway activation downstream of abnormal cholesterol efflux.</td>
+<td>PMID 22447954 / DOI 10.1152/ajplung.00454.2010</td>
+<td>Non-industry — one of only 2 non-conflicted, mechanistically-targeted knockout papers per skeptic</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural lung biology (knockout-mouse, non-industry)</td>
+<td>Cigarette-smoke-exposed Apoe-/- mice show augmented lung inflammatory response, oxidative stress, MMP-9/MMP-12 upregulation, reduced eNOS, and airspace enlargement/lung-function decline relative to smoke-exposed wild-type mice.</td>
+<td>PMID 20663150 / DOI 10.1186/1476-9255-7-34</td>
+<td>Non-industry — one of only 2 non-conflicted, mechanistically-targeted knockout papers per skeptic</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural lung biology (knockout-mouse, caveat)</td>
+<td>Apoe-/- mice were one of 5 smoke-susceptible mouse strains sharing common CS-induced emphysema pathways (NF-kB, TLR4, TNF-alpha, CSF2, interleukins) — i.e., NOT a uniquely ApoE-dependent pathway.</td>
+<td>PMID 25962837 / DOI 10.1007/s00011-015-0820-2</td>
+<td>Skeptic-flagged: evidence of non-specificity, undercuts ApoE-specific necessity</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural lung biology (industry-funded systems toxicology)</td>
+<td>Review summarizing why Apoe-/- mice are used as a combined COPD/atherosclerosis smoke-exposure comorbidity model.</td>
+<td>PMID 27207171 / DOI 10.1186/s12967-016-0901-1</td>
+<td>Industry-funded (Philip Morris International) — flagged for COI; host-strain model, not a test of ApoE mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural lung biology (industry-funded systems toxicology)</td>
+<td>Smoke-induced inflammatory/remodeling transcriptional programs in Apoe-/- respiratory tissue reverse with smoking cessation.</td>
+<td>PMID 24096154 / DOI 10.1016/j.tox.2013.09.013</td>
+<td>Industry-funded (Philip Morris International) — flagged for COI</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural lung biology (industry-funded systems toxicology)</td>
+<td>6-month inhalation study: cigarette smoke (not e-vapor) causes emphysematous changes and impaired lung function in female Apoe-/- mice.</td>
+<td>PMID 33963423 / DOI 10.1007/s00204-021-03020-4</td>
+<td>Industry-funded (Philip Morris International) — flagged for COI</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural lung biology (industry-funded systems toxicology)</td>
+<td>Characterizes smoke-induced respiratory disease endpoints in the Apoe-/- mouse model comparing whole-body vs. nose-only inhalation exposure systems.</td>
+<td>PMID 33825214 / DOI 10.1002/jat.4149</td>
+<td>Industry-funded (Philip Morris International) — flagged for COI</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural lung biology (industry-funded systems toxicology)</td>
+<td>8-month cigarette-smoke exposure in Apoe-/- mice caused nasal epithelial hyperplasia/metaplasia, lung inflammation, and emphysematous changes (impaired pulmonary function, alveolar damage), reversible with cessation.</td>
+<td>PMID 26609137 / DOI 10.1093/toxsci/kfv243</td>
+<td>Industry-funded (Philip Morris International) — flagged for COI</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural/immune lung biology (host-model, mixed funding signal)</td>
+<td>In smoke-exposed Apoe-/- mice (used as a COPD/atherosclerosis comorbidity model), Btk/MMP-9 inhibition reduced smoke-induced alveolar/inflammatory changes.</td>
+<td>PMID 29364178 / DOI 10.3390/ijms19020343</td>
+<td>Host-strain model, does not test ApoE mechanism directly</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural lung biology (industry-funded systems toxicology)</td>
+<td>Part of the same Apoe-/- systems-toxicology inhalation research program (conventional vs. modified-risk tobacco products).</td>
+<td>PMID 30763686 / DOI 10.1016/j.fct.2019.02.008</td>
+<td>Industry-funded (Philip Morris International) — flagged for COI</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural lung biology (industry-funded systems toxicology)</td>
+<td>Part of the same Apoe-/- systems-toxicology inhalation research program (multi-omics).</td>
+<td>PMID 32419906 / DOI 10.1016/j.csbj.2020.04.011</td>
+<td>Industry-funded (Philip Morris International) — flagged for COI</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural lung biology (industry-funded systems toxicology)</td>
+<td>Part of the same Apoe-/- systems-toxicology inhalation research program (ceramide/lipid biomarkers).</td>
+<td>PMID 33189821 / DOI 10.1016/j.lfs.2020.118753</td>
+<td>Industry-funded (Philip Morris International) — flagged for COI</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Structural lung biology (negative/dissociating finding)</td>
+<td>Using the APOE*3-Leiden transgenic hyperlipidemic mouse, elastase-induced emphysema does NOT itself worsen atherosclerosis — dissociates emphysema from atherosclerosis progression in an ApoE-humanized model.</td>
+<td>PMID 24303000 / DOI 10.1371/journal.pone.0080196</td>
+<td>Negative/dissociating result — limits inference of shared mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Immune/inflammatory (computational)</td>
+<td>Bioinformatic/machine-learning study nominates APOE as 1 of 7 &quot;feature genes&quot; linking benzo(a)pyrene exposure, oxidative stress/inflammation pathways, and immune-cell infiltration in COPD; purely computational/correlative, no experimental validation.</td>
+<td>PMID 39962573 / DOI 10.1186/s40360-025-00842-1</td>
+<td>Hypothesis-generating only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOE</td>
+<td>Immune/inflammatory (proteomic biomarker)</td>
+<td>Plasma proteomics found ApoE among 9 differentially expressed circulating proteins in acute exacerbations of COPD vs. stable COPD vs. healthy controls (proteolysis, platelet degranulation, cholesterol-metabolism pathways).</td>
+<td>PMID 31920121 / DOI 10.1080/15412555.2019.1711035</td>
+<td>Correlative, protein-level only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZNF180</td>
+<td>Gene function (non-lung)</td>
+<td>ZNF180 is epigenetically silenced by promoter methylation in colorectal cancer; re-expression activates METTL14 transcription, inducing apoptosis and inhibiting proliferation; low ZNF180/METTL14 predicts poor CRC prognosis. No lung/COPD/immune relevance.</td>
+<td>PMID 39054954 / DOI 10.3892/or.2024.8784</td>
+<td>HOLDS (as evidence of no lung relevance)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — not a verified literature citation)</h2>
+<p>This section reports a structured Open Targets Platform GraphQL API lookup performed
+directly by the orchestrator. It has NOT gone through citation-verifier or red-team-skeptic
+and should not be treated as equivalent to the literature rows above.</p>
+<ul>
+<li><strong>APOE (ENSG00000130203):</strong>
+<ul>
+<li>Overall target-disease association score for COPD (MONDO_0005002): 0.4624, composite
+across datasources; datatype breakdown: genetic_association 0.7231, literature 0.7487.</li>
+<li>GWAS-credible-set evidence (closest analog to L2G/colocalization in the current API): 2
+independent evidence rows, both resourceScore/score = 0.9516 (high), each tied to a
+distinct studyLocusId, each with an Open-Targets-linked literature PMID (40770095,
+40155373 — both included and characterized in the table above; neither independently
+confirmed an APOE-specific COPD mechanism from its abstract).</li>
+<li>Genetic constraint (gnomAD): NOT LoF-constrained (score ~0.0003, o/e = 0.815, 95% CI
+0.521-1.319, CI crosses 1); not missense-constrained (o/e = 1.153).</li>
+<li>Tractability: structure with ligand (small molecule) and favorable antibody-modality
+flags; no approved drug or clinical-stage compound specifically annotated against APOE
+in this dataset.</li>
+</ul>
+</li>
+<li><strong>ZNF180 (ENSG00000167384):</strong>
+<ul>
+<li>No Open Targets target-disease association data of any kind for COPD (not a low score —
+absent/unscored).</li>
+<li>No GWAS-credible-set/L2G-analog evidence rows for COPD.</li>
+<li>Genetic constraint: not LoF-constrained (o/e = 1.115, wide CI 0.597-1.846); mis o/e =
+0.952.</li>
+<li>Tractability not queried (no disease-association signal to contextualize).</li>
+</ul>
+</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>APOE — Confidence: MODERATE.</strong></p>
+<p>APOE is the clear better-supported candidate relative to ZNF180: the sole credible-set
+variant (rs429358, PIP=0.9987) is a missense variant unambiguously located inside APOE
+itself, which is a direct and strong form of variant-to-gene evidence; ZNF180's candidacy by
+contrast rests entirely on a PoPS similarity-based score with zero Open Targets association
+data, zero GWAS-credible-set evidence, and zero lung/COPD/immune literature of any kind
+(table row, PMID 39054954, is CRC-specific and irrelevant to lung biology). This is not a
+close call between the two named candidates.</p>
+<p>However, confidence in APOE is capped at MODERATE rather than HIGH because red-team-skeptic
+identified a real, unresolved gap between the strength of the genetic signal (Open Targets
+L2G-analog resourceScore 0.95, genetic_association datatype score 0.72) and the strength of
+the mechanistic case for a lung-autonomous causal pathway specifically:</p>
+<ul>
+<li>No headline COPD or spirometry (FEV1/FEV1-FVC) GWAS reporting rs429358/APOE as a
+genome-wide-significant hit was located, and no direct evidence of colocalization with an
+independent lung-function GWAS signal at this exact locus was found or ruled out (search
+budget exhausted on both the researcher's and skeptic's passes) — per this pipeline's
+biological prior #2, a COPD association without independently confirmed pulmonary-function
+concordance warrants weighing alternative pathways, and that check remains open.</li>
+<li>A population cohort that directly tested this (Taiwan Biobank, PMID 38866261) found the
+cohort's airflow-limitation signal was carried by a different gene (LEPR), not
+APOE-rs429358, even though APOE-rs429358 showed a robust signal for metabolic
+syndrome/fatty liver in the same data.</li>
+<li>Two live, non-mutually-exclusive alternative explanations remain unruled-out: (1)
+smoking-behavior mediation (Zhang 2020's rs429358 x smoking-status interaction; Coppens
+2021's nicotine-abstinence EEG effect in epsilon4 carriers) and (2)
+mortality/survivorship-bias confounding in case-control ascertainment, given APOE's
+well-documented general association with all-cause/cardiovascular mortality and
+aging-pleiotropy, reinforced locally by serum ApoE protein predicting one-year AECOPD
+mortality (PMID 40433394) and organ-aging/COPD-onset associations (PMID 40634782).</li>
+<li>The knockout-mouse emphysema literature that would most directly support a lung-autonomous
+causal mechanism is thinner than its apparent volume suggests: of ~13 Apoe-/- emphysema
+papers, 8-9 are from a single industry-funded (Philip Morris International) systems-
+toxicology program not designed to isolate ApoE's own mechanistic contribution (Apoe-/- used
+only as a convenient comorbidity host strain), and the two most directly relevant papers
+outside that program have an internal tension: Cabanski 2015 finds the smoke-susceptible
+emphysema phenotype is shared across 5 mouse strains via a generic NF-kB/TLR4/TNF-alpha
+pathway (not uniquely ApoE-dependent), and Moos 2024 finds genetic ApoE deletion had
+&quot;limited impact on inflammation and mortality&quot; in a fibrosis model. Only Goldklang 2012 and
+Arunachalam 2010 are both non-industry-funded and directly implicate ApoE loss-of-function
+in emphysema susceptibility.</li>
+</ul>
+<p>Set against this, genuine non-industry, mechanistically direct, lung-autonomous ApoE biology
+independent of its Alzheimer's/lipid/cardiovascular fame is real and reasonably well
+supported: ApoE-dependent surfactant lipid secretion and signaling in alveolar type II cells
+(PMID 8483941, 9316499), a developmental role in fetal surfactant synthesis (PMID 12114192),
+and marked ApoE enrichment/oxidative-injury protection in alveolar type I cells (PMID
+16497717) — these are non-trivial, non-industry, and not obviously reducible to APOE's
+neuro/lipid/CVD roles.</p>
+<p><strong>Net call:</strong> APOE is the single best-supported candidate gene at this locus and should be
+prioritized for follow-up, but this is a case where the genetic signal (strong) and the
+mechanistic/directional evidence for a lung-specific causal pathway (real but incomplete,
+and competing with un-excluded smoking-mediation and mortality-confounding explanations) are
+not yet fully concordant. What would resolve this to HIGH confidence: (1) an explicit
+colocalization/concordance check of this exact locus against a large independent
+FEV1/FEV1-FVC GWAS (e.g., SpiroMeta, UK Biobank spirometry) — the single highest-value
+missing piece; (2) confirmation of whether the COPD-risk allele direction at this locus is
+epsilon4-concordant (would support the pleiotropy/mortality-confounding explanation) or
+discordant (would argue against it); (3) a direct Mendelian-randomization test of
+APOE/rs429358 against smoking-initiation, cigarettes-per-day, or cessation phenotypes in a
+well-powered GWAS consortium (e.g., GSCAN), which was searched for but not confirmed or
+ruled out in this review. ZNF180 remains a distant runner-up with essentially no orthogonal
+support and should not be prioritized ahead of APOE absent new evidence.</p>
+
+</body>
+</html>

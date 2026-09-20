@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>20_25100001-33050000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-locus-evidence-table-20_25100001-33050000-nearest-gene-c20orf203">COPD locus evidence table: 20_25100001-33050000 (nearest gene C20orf203)</h1>
+<p><strong>Region:</strong> chr20:25,100,001-33,050,000 (GRCh38), ~7.95 Mb.
+<strong>Lead variant:</strong> rs17123518 (20:32,660,463, PIP=0.1248, intronic in C20orf203).
+<strong>Candidate genes from internal pipeline:</strong> Nearest = C20orf203; FLAMES = NA; MAGMA = NECAB3; PoPS = E2F1; ABC = NINL.
+<strong>Ancestry/cohort:</strong> not provided.</p>
+<p><strong>Locus-architecture note (applies to the whole table below):</strong> This window straddles the
+chr20 centromere (~28.1-30.4 Mb GRCh38). The 121 credible-set variants split into two
+clusters ~7 Mb apart — a proximal cluster (~32.19-32.88 Mb, containing the lead variant:
+C20orf203, ASXL1, EFCAB8, MAPRE1, DNMT3B, KIF3B, POFUT1, PLAGL2, NOL4L) and a distal cluster
+(~25.10-25.78 Mb: NINL, PYGB, NANP, ABHD12, GINS1, ZNF337, ZNF337-AS1, ENTPD6, FAM182B,
+VN1R108P) — with no credible-set variants at all fine-mapped through the intervening
+gene-poor pericentromeric gap. Per red-team-skeptic critique (preserved in full in the audit
+file), this architecture means recombination between the clusters is effectively suppressed,
+so the two clusters should be read as two largely independent candidate-gene questions rather
+than one locus with one causal gene. The maximum PIP anywhere is 0.125 (C20orf203), with the
+next three genes nearly tied (ASXL1 0.068, EFCAB8 0.066, MAPRE1 0.047) — a diffuse, not
+clean, signal even before biology is weighed. NECAB3 (MAGMA) and E2F1 (PoPS) are gene-based
+statistical prioritizations with no anchoring credible-set variant.</p>
+<p>No FEV1/FEV1-FVC spirometry-GWAS concordance was identified for any gene at this locus in the
+literature search conducted — this is a locus-wide gap, not a per-gene one, and the red-team
+critique concluded it should meaningfully lower confidence that this locus reflects direct
+pulmonary biology as opposed to smoking-behavior-mediated or indeterminate mechanism.</p>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C20orf203</td>
+<td>Statistical genetics (gene discovery) + structural/neurobiology</td>
+<td>C20orf203/FLJ33706 was identified via a computational screen of GWAS/linkage loci for <strong>nicotine addiction</strong> (not COPD); is a human/chimpanzee-lineage-specific de novo protein-coding gene, most highly expressed in brain (neurons, cortex/cerebellum/midbrain), under purifying selection, with elevated expression in Alzheimer's disease brain.</td>
+<td>PMID 20376170 / DOI 10.1371/journal.pcbi.1000734</td>
+<td>CONTESTED — nicotine-addiction/neuro discovery history argues against a direct pulmonary mechanism for the nearest/lead-variant gene, not merely an absence of lung evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>C20orf203</td>
+<td>Statistical genetics (cross-trait pleiotropy)</td>
+<td>C20orf203 reached gene-based significance as one of six genes at a shared headache-thyroid-stimulating-hormone pleiotropic locus (unrelated neuro-endocrine trait pair).</td>
+<td>PMID 36672757 / DOI 10.3390/genes14010016</td>
+<td>CONTESTED — demonstrates broad pleiotropy at this locus, not lung/COPD relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ASXL1</td>
+<td>Clinical/epidemiological (somatic clonal hematopoiesis)</td>
+<td>In 125 COPD patients, clonal hematopoiesis of indeterminate potential (CHIP) specifically in ASXL1 was significantly associated with history of acute exacerbations of COPD; CHIP in DNMT3A (not ASXL1) was associated with current smoking status.</td>
+<td>PMID 38320547 / DOI 10.4046/trd.2023.0165</td>
+<td>WEAKENED — all ASXL1-COPD evidence concerns acquired <strong>somatic</strong> CH mutations in blood, not the <strong>germline</strong> noncoding credible-set variant (rs2424880); no data link the germline locus to ASXL1 dosage/expression/CH-acquisition rate</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ASXL1</td>
+<td>Review/mechanistic (myeloid inflammation)</td>
+<td>Clonal hematopoiesis (predominantly TET2/DNMT3A-driven, with ASXL1 among other recurrently mutated CH genes) is associated with, and shown in mouse models to promote, age-related diseases including COPD via myeloid chemokine expression and inflammasome hyperactivation.</td>
+<td>PMID 36941354 / DOI 10.1038/s41577-023-00843-3</td>
+<td>WEAKENED — the cited mouse mechanistic evidence concerns TET2/DNMT3A-driven CH; ASXL1 is only &quot;among other&quot; CH genes, not the specifically tested driver</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ASXL1</td>
+<td>Clinical review</td>
+<td>COPD is listed among non-hematological conditions epidemiologically associated with CHIP generally.</td>
+<td>PMID 36938794 / DOI 10.1002/ajh.26915</td>
+<td>WEAKENED — generic CHIP-COPD association, not ASXL1-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>EFCAB8</td>
+<td>Statistical genetics (regional eQTL, incidental)</td>
+<td>A DNMT3B-region tag SNP (rs2424905) is a significant multi-tissue cis-eQTL for DNMT3B, C20orf203, COMMD7, EFCAB8, and MAPRE1 in GTEx (reported incidentally in a hip-osteoarthritis GWAS paper).</td>
+<td>PMID 32776659 / DOI 10.1111/1756-185X.13943</td>
+<td>INSUFFICIENT-EVIDENCE — third-highest PIP in the whole credible set (0.066) but essentially no dedicated functional/disease literature exists for EFCAB8; this single pleiotropic eQTL citation is reused (non-independently) across three genes at this locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAPRE1</td>
+<td>Statistical genetics (regional eQTL, incidental; same paper as EFCAB8/DNMT3B)</td>
+<td>Same rs2424905 multi-tissue cis-eQTL also affects MAPRE1 expression.</td>
+<td>PMID 32776659 / DOI 10.1111/1756-185X.13943</td>
+<td>WEAKENED — non-independent eQTL citation shared across three genes; hip-OA study, unrelated to COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAPRE1</td>
+<td>Structural/cell biology (lung-cancer cell line)</td>
+<td>CRMP2 binds the EB1 (MAPRE1) plus-tip protein in migrating lung adenocarcinoma cells; phosphomimetic CRMP2 mutants lose EB1 binding, show impaired migratory function, and reduce xenograft tumor growth.</td>
+<td>PMID 34680167 / DOI 10.3390/biom11101533</td>
+<td>WEAKENED — lung-cancer cell-line study of an essential, ubiquitous cytoskeletal gene; likely literature-volume bias rather than COPD-specific signal</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAPRE1</td>
+<td>Structural/cell biology</td>
+<td>EB1 (MAPRE1) phosphorylation via ROS/Akt/GSK3β regulates its microtubule plus-end accumulation and modulates NSCLC cell migration/proliferation.</td>
+<td>PMID 24930764 / DOI 10.18632/oncotarget.1982</td>
+<td>WEAKENED — same caveat: lung-cancer cell biology, not COPD/airway-remodeling evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DNMT3B</td>
+<td>Statistical genetics (regional eQTL, incidental) + clinical (unrelated disease)</td>
+<td>DNMT3B tag SNP rs2424905 associated with hip osteoarthritis risk (OR=1.53) in a Han Chinese case-control study, and is a significant multi-tissue cis-eQTL for DNMT3B and neighboring genes.</td>
+<td>PMID 32776659 / DOI 10.1111/1756-185X.13943</td>
+<td>CONTESTED — osteoarthritis, not COPD; shared non-independent eQTL citation</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DNMT3B</td>
+<td>Clinical/epidemiological (paralog distinction)</td>
+<td>In the same COPD-CHIP cohort, DNMT3A (the paralog, not DNMT3B) was the gene whose CHIP mutations were associated with current smoking status.</td>
+<td>PMID 38320547 / DOI 10.4046/trd.2023.0165</td>
+<td>CONTESTED — this is evidence pointing <em>away</em> from DNMT3B for the smoking-mediation mechanism being considered, since the paralog DNMT3A (not the locus gene DNMT3B) was implicated</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NECAB3</td>
+<td>Structural/neurobiology (paralog only)</td>
+<td>NECAB1/NECAB2 (paralogs of NECAB3, not NECAB3 itself) are characterized as calcium-binding proteins in cortical GABAergic interneurons — general gene-family context.</td>
+<td>PMID 33230531 / DOI 10.1093/cercor/bhaa326</td>
+<td>INSUFFICIENT-EVIDENCE — about paralogs, not NECAB3; neurobiology, not lung-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NECAB3</td>
+<td>Developmental epigenetics</td>
+<td>Assisted-reproductive-technology conception was associated with lower NECAB3 DNA methylation in cord blood, but methylation changes did not appear to mediate the cardiometabolic phenotype differences studied.</td>
+<td>PMID 34556649 / DOI 10.1038/s41467-021-25899-4</td>
+<td>INSUFFICIENT-EVIDENCE — a negative/non-mediating finding, not lung/COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>E2F1</td>
+<td>Toxicology review (weak/indirect)</td>
+<td>E2F1 appears only in a glossary/abbreviation list within a broader e-cigarette pathology review; no specific mechanistic claim links E2F1 to smoke-related lung pathology in the review text.</td>
+<td>PMID 36561957 / DOI 10.1016/j.toxrep.2022.06.006</td>
+<td>CONTESTED — outright overclaim risk; should not be treated as supporting evidence for an E2F1-smoking-lung mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>E2F1</td>
+<td>Structural/smoking-mechanism (lung-cancer cell line)</td>
+<td>Nicotine and e-cigarette extract activate an nAChR(α7)-Yap1-E2F1 signaling axis downstream of Src/Yes kinases in NSCLC cell lines, inducing Sox2 expression and cancer-stem-like self-renewal.</td>
+<td>PMID 30322398 / DOI 10.1186/s12943-018-0901-2</td>
+<td>CONTESTED — lung-cancer cell-culture model, not COPD tissue</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>E2F1</td>
+<td>Structural/smoking-mechanism</td>
+<td>In nicotine-treated lung cancer cell lines, parthenolide upregulated E2F1 (with p53/GADD45/BAX/BIM/caspases), activating p53-dependent apoptosis and counteracting nicotine's pro-survival effect.</td>
+<td>PMID 30257366 / DOI 10.1016/j.biopha.2018.08.139</td>
+<td>CONTESTED — lung-cancer cell-culture model</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>E2F1</td>
+<td>Structural (COPD-context regenerative stem-cell model)</td>
+<td>In a rat bone-marrow mesenchymal stem cell (BM-MSC) model of cigarette-smoke-extract-induced dysfunction, Notch1 overexpression increased cyclin D1/phospho-Rb/E2F-1, improving proliferation/migration/survival of smoke-challenged BM-MSCs, partly via PI3K/Akt.</td>
+<td>PMID 29138545 / DOI 10.2147/COPD.S146201</td>
+<td>CONTESTED — the only directly COPD-labeled paper for E2F1, but a regenerative-therapy stem-cell readout, not endogenous airway/alveolar disease biology; the one paper directly connecting E2F1 to locus-mate PLAGL2 in lung cancer is retracted (see audit appendix)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NINL</td>
+<td>Immune (innate antiviral)</td>
+<td>NINL (a dynein-activating adaptor) has evolved under recurrent positive selection in its cargo-binding domain; NINL-knockout cells show impaired interferon response and increased viral permissiveness; NINL is targeted/cleaved by proteases from diverse picornaviruses and coronaviruses.</td>
+<td>PMID 36222652 / DOI 10.7554/eLife.81606</td>
+<td>WEAKENED — genuine, mechanistically clean antiviral-immune function, but never tested in lung tissue; COPD-exacerbation relevance is an inferential plausibility argument</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NINL</td>
+<td>Structural (autophagy)</td>
+<td>NINL facilitates autophagosome-to-autophagolysosome maturation via enhancing the Rab7-FYCO1 interaction; NINL-deficient mice show increased hepatomegaly/liver cancer with impaired hepatic autophagy.</td>
+<td>PMID 33859171 / DOI 10.1038/s41392-021-00543-1</td>
+<td>WEAKENED — hepatic phenotype, not pulmonary</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NINL</td>
+<td>Structural (ciliopathy)</td>
+<td>NINL is a physical interaction partner of ciliopathy protein CC2D2A; ninl knockdown in zebrafish causes photoreceptor outer-segment loss and ciliary cargo mislocalization, phenocopying cc2d2a mutants, with in vivo genetic interaction.</td>
+<td>PMID 26485645 / DOI 10.1371/journal.pgen.1005575</td>
+<td>WEAKENED — retinal/photoreceptor cilia, not airway motile cilia; extrapolation to mucociliary clearance is inferential</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NINL</td>
+<td>Structural (ciliopathy)</td>
+<td>A novel NINL isoform interacts with USH2A and lebercilin, co-localizing at photoreceptor connecting-cilium basal bodies; proposed as a candidate gene for Usher syndrome/Leber congenital amaurosis.</td>
+<td>PMID 18826961 / DOI 10.1093/hmg/ddn312</td>
+<td>WEAKENED — retinal ciliopathy context only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PYGB</td>
+<td>Structural (glial metabolism)</td>
+<td>Reviews the three glycogen phosphorylase isoforms (PYGM muscle, PYGB brain, PYGL liver) in glial cell metabolism and O-GlcNAcylation-linked neurodegeneration.</td>
+<td>PMID 38661212 / DOI 10.1042/BST20231058</td>
+<td>INSUFFICIENT-EVIDENCE — no lung/immune relevance; the two PYGB missense credible-set variants (rs2228976, rs2227891) went unsearched due to session tool-budget exhaustion, an explicitly incomplete search</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PYGB</td>
+<td>Structural (cardiac biomarker)</td>
+<td>PYGB is released in cardiac-derived extracellular vesicles as an early biomarker of doxorubicin-induced cardiac injury in mice.</td>
+<td>PMID 29070527 / DOI 10.1158/1078-0432.CCR-17-2046</td>
+<td>INSUFFICIENT-EVIDENCE — not lung-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PYGB</td>
+<td>Structural (muscle metabolic disease)</td>
+<td>Establishes PYGB (GP-BB) as the fetal/compensatory glycogen phosphorylase isoform relevant to McArdle disease (a PYGM, not PYGB, disorder).</td>
+<td>PMID 25762569 / DOI 10.1242/dmm.020230</td>
+<td>INSUFFICIENT-EVIDENCE — not lung-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PYGB</td>
+<td>Structural (basic gene mapping)</td>
+<td>Localizes the muscle/liver/brain glycogen phosphorylase genes (including Pygb) on mouse chromosome linkage maps.</td>
+<td>PMID 2575583 / DOI 10.1016/0888-7543(89)90017-7</td>
+<td>INSUFFICIENT-EVIDENCE — historical mapping paper, no disease relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NANP</td>
+<td>Structural (metabolism, knockout)</td>
+<td>NANP knockout CHO cells show largely unaffected cell-surface sialylation and normal CMP-sialic acid levels, indicating NANP is dispensable for de novo sialic acid biosynthesis (unlike GNE/NANS/CMAS knockouts).</td>
+<td>PMID 31121216 / DOI 10.1016/j.bbagen.2019.05.011</td>
+<td>WEAKENED — evidence that NANP's own canonical enzymatic function is dispensable/redundant argues against phenotypic importance via this pathway</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NANP</td>
+<td>Structural (cancer, TNFR1/NF-κB signaling)</td>
+<td>NANP is functionally linked to TNFR1 sialylation/internalization and NF-κB signaling, shown to drive a mesenchymal shift in a glioblastoma radiosensitization model.</td>
+<td>PMID 41851195 / DOI 10.1038/s41467-026-70853-x</td>
+<td>WEAKENED — glioblastoma-only, never tested in lung or immune cells</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ABHD12</td>
+<td>Immune (macrophage lipid signaling, in vivo lung phenotype)</td>
+<td>ABHD12 metabolizes lysophosphatidylserine (lyso-PS); Abhd12-knockout mice show elevated brain lyso-PS and heightened innate immune activation; both pharmacological (DO264 inhibitor) and genetic ABHD12 blockade heighten immune responses to LCMV infection, manifesting as <strong>severe lung pathology with elevated proinflammatory chemokines</strong>.</td>
+<td>PMID 30420694 / DOI 10.1038/s41589-018-0155-8</td>
+<td>WEAKENED/borderline CONTESTED — the strongest direct lung-immune mechanistic finding at this whole locus, but from an acute viral-injury model (not chronic cigarette-smoke/emphysema), and the human Mendelian null (PHARC) has no reported pulmonary phenotype despite this mouse lung finding</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ABHD12</td>
+<td>Immune (macrophage cytokine regulation)</td>
+<td>ABHD12 and ABHD16A have opposing effects on lyso-PS levels and LPS-induced cytokine production in mouse macrophages; ABHD12 disruption increases both lyso-PS and LPS-induced cytokine output.</td>
+<td>PMID 25580854 / DOI 10.1038/nchembio.1721</td>
+<td>WEAKENED — direct macrophage inflammatory-regulation mechanism, but not lung-tissue-tested</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GINS1</td>
+<td>Clinical genetics (primary immunodeficiency)</td>
+<td>Compound heterozygous hypomorphic GINS1 mutations (3-16% residual activity) in 5 patients from 4 kindreds caused growth retardation, chronic neutropenia, and NK-cell deficiency via a bone-marrow differentiation blockade; patient fibroblasts showed impaired GINS complex assembly and replication stress.</td>
+<td>PMID 28414293 / DOI 10.1172/JCI90727</td>
+<td>WEAKENED — no pulmonary phenotype reported in any known GINS1-deficient patient; GINS1's essentiality for DNA replication makes a common regulatory variant recapitulating this near-null phenotype implausible</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GINS1</td>
+<td>Clinical genetics (case report/review)</td>
+<td>Reports a new GINS1-deficient patient with growth retardation, chronic neutropenia, and glaucoma (no infection history); reviews all 9 individuals with GINS1 deficiency reported to date.</td>
+<td>PMID 41689265 / DOI 10.1111/cge.70147</td>
+<td>WEAKENED — again, no pulmonary phenotype in any reported patient</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZNF337</td>
+<td>Statistical/bioinformatic (pan-cancer correlation)</td>
+<td>ZNF337 expression correlates with immune cell infiltration and immune checkpoint gene expression across TCGA/GTEx pan-cancer data; specifically studied as a biomarker in kidney renal clear cell carcinoma, where knockdown reduced KIRC cell line proliferation/migration.</td>
+<td>PMID 39123194 / DOI 10.1186/s12885-024-12703-x</td>
+<td>INSUFFICIENT-EVIDENCE — generic pan-cancer (mainly renal) bioinformatics correlation; &quot;immunological&quot; refers to generic tumor-immune-infiltration correlation, not a lung- or COPD-relevant mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ENTPD6</td>
+<td>Review (purinergic signaling)</td>
+<td>ENTPD6 (a CD39-family ectonucleotidase) is broadly/stably expressed across tissues, contrasting with its oncogenic paralog ENTPD5; ENTPD6's specific role in any particular disease, including cancer, &quot;remains unclear.&quot;</td>
+<td>PMID 41685236 / DOI 10.3389/fendo.2026.1680378</td>
+<td>INSUFFICIENT-EVIDENCE — this is a citation to an explicit absence of disease-specific evidence and should not be read as supportive of a COPD-relevant mechanism</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Genes with no verified literature evidence to report (reported as genuine gaps by the
+researcher, not search failures except where noted):</strong> EFCAB8 has no dedicated literature
+beyond the shared eQTL row above. KIF3B, POFUT1, PLAGL2, NOL4L, ZNF337-AS1, and FAM182B had
+essentially no COPD/lung-relevant literature identified (see audit appendix for the
+unreviewed PMID lists the researcher's searches surfaced but did not extract specific,
+verifiable claims from). VN1R108P (a vomeronasal-receptor pseudogene) was deliberately not
+searched — no plausible protein-coding mechanism.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
+<p>Disease queried: chronic obstructive pulmonary disease, MONDO_0005002. Of 21 candidate genes
+queried, only 7 returned any association record at all:</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>Overall assoc. score</th>
+<th>genetic_association datatype</th>
+<th>literature datatype</th>
+<th>gnomAD LoF constraint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ASXL1</td>
+<td>0.269</td>
+<td>0.441 (only gene at locus with this datatype)</td>
+<td>0.033</td>
+<td>NOT pLI-constrained (lof score ~1.6e-16) despite known clinical haploinsufficiency (Bohring-Opitz syndrome) — a documented pLI/known-biology discordance</td>
+</tr>
+<tr>
+<td>E2F1</td>
+<td>0.022</td>
+<td>none</td>
+<td>0.182</td>
+<td>Strongly constrained (lof=0.999, oe=0.212)</td>
+</tr>
+<tr>
+<td>ABHD12</td>
+<td>0.017</td>
+<td>none</td>
+<td>0.141</td>
+<td>Mildly constrained by LOEUF only (oe=0.735)</td>
+</tr>
+<tr>
+<td>PLAGL2</td>
+<td>0.014</td>
+<td>none</td>
+<td>0.116</td>
+<td>Strongly constrained (lof=0.991, oe=0.250)</td>
+</tr>
+<tr>
+<td>DNMT3B</td>
+<td>0.011</td>
+<td>none</td>
+<td>0.094</td>
+<td>Strongly constrained (lof=1.0, oe=0.301)</td>
+</tr>
+<tr>
+<td>PYGB</td>
+<td>0.0046</td>
+<td>none</td>
+<td>0.038</td>
+<td>Not constrained (oe=0.853)</td>
+</tr>
+<tr>
+<td>NOL4L</td>
+<td>0.0046</td>
+<td>none</td>
+<td>0.038</td>
+<td>Extremely constrained (lof=1.0, oe=0.089)</td>
+</tr>
+</tbody>
+</table>
+<p>The following 14 genes returned <strong>no COPD association record at all</strong> in Open Targets (no
+genetic_association, no literature score, nothing): <strong>C20orf203 (the nearest/lead-variant
+gene itself)</strong>, NECAB3, NINL, EFCAB8, MAPRE1, NANP, ZNF337, ZNF337-AS1, GINS1, VN1R108P,
+KIF3B, FAM182B, ENTPD6, POFUT1.</p>
+<p>A dedicated attempt to pull locus-specific L2G/colocalization scores (rather than
+platform-wide target-disease association scores) was made but not resolvable within this
+session's Open Targets GraphQL schema/tool-size constraints (the L2GPrediction/credibleSet
+type graph repeatedly exceeded response-size limits) — this is a genuine data gap, not
+evidence of absent colocalization. Full detail: <code>evidence_tables/_status/20_25100001-33050000/opentargets.md</code>.</p>
+<h2 id="prioritized-gene-synthesis">Prioritized-gene synthesis</h2>
+<p><strong>Prioritized gene: ASXL1. Confidence: LOW.</strong></p>
+<p>This locus does not support a high-confidence single-gene call, for reasons documented
+throughout the table and audit above: fine-mapping is diffuse (max PIP 0.125, with three
+other proximal-cluster genes nearly tied), the ~8 Mb window straddles the chr20 centromere
+and effectively contains two independent candidate-gene questions (proximal vs. distal
+cluster) rather than one clean locus, and no gene at this locus has any spirometry
+(FEV1/FEV1-FVC) evidence to corroborate a direct pulmonary mechanism.</p>
+<p>Within that constrained picture, <strong>ASXL1</strong> is the best-supported single candidate: it has
+the highest Open Targets genetic_association-datatype score of any gene at this locus (0.441,
+the only gene here with any such score) and the highest overall Open Targets COPD
+association score (0.269); it carries the second-highest PIP in the whole credible set
+(0.068, rs2424880); and it has real, verified clinical literature directly linking ASXL1
+clonal hematopoiesis to COPD exacerbation history (PMID 38320547) and to COPD generally via
+myeloid inflammatory mechanisms (PMID 36941354, 36938794). However, this call is explicitly
+weakened, not strong: every piece of that clinical/mechanistic evidence concerns <strong>somatic</strong>
+clonal-hematopoiesis mutations acquired with age in blood cells, not the <strong>germline</strong>
+noncoding intronic credible-set variant actually present at this locus — no evidence
+currently shows the germline locus affects ASXL1 expression, dosage, or somatic CH
+acquisition rate, so the connection between &quot;GWAS hit near ASXL1&quot; and &quot;ASXL1-driven CH
+promotes COPD&quot; is presently a name-match, not a demonstrated regulatory link (flagged
+explicitly by red-team-skeptic). It is also possible the Open Targets genetic_association
+score for ASXL1 reflects this same GWAS's own locus-to-gene assignment rather than
+independent corroborating evidence — this was not resolvable within this session and should
+be checked before treating the Open Targets score as independent support.</p>
+<p><strong>Runner-up: C20orf203</strong> (the nearest gene and highest-PIP gene overall, 0.125). Its only
+verified literature ties it to a nicotine-addiction gene-discovery screen and brain
+expression, not pulmonary biology — this is consistent with (and arguably supports) the
+locus's smoking-mediation prior rather than a direct-pulmonary-biology story, but that
+reframes the causal hypothesis rather than strengthening a COPD-specific mechanism for this
+gene. <strong>Second runner-up (distal cluster only): NINL</strong> (ABC-prioritized, highest cumulative
+PIP in the distal cluster), which has genuinely well-characterized innate-antiviral-immune
+biology plausibly relevant to COPD exacerbations, but has never been tested in lung tissue.</p>
+<p><strong>What would resolve the tie / raise confidence:</strong> (1) an eQTL or eQTL-colocalization check
+of whether the credible-set variants at this locus (rs2424880 and neighbors) actually
+regulate ASXL1 expression, ideally in lung/blood/myeloid tissue, and whether they influence
+CH-variant-allele-fraction/acquisition rate; (2) confirmation of whether Open Targets'
+ASXL1 genetic_association score for COPD is independent of this study's own locus-to-gene
+pipeline or circular with it; (3) a dedicated spirometry-GWAS (FEV1/FEV1-FVC, e.g.
+UK Biobank/SpiroMeta) lookup at both the proximal and distal clusters, since none was found
+in this pass; (4) a dedicated smoking-behavior GWAS (GSCAN-type) lookup at both clusters, to
+test whether this signal is better explained as smoking-initiation/heaviness genetics than as
+COPD-specific pulmonary biology — plausible given C20orf203's nicotine-addiction discovery
+history; (5) re-running the PYGB missense-variant (rs2228976, rs2227891) literature/ClinVar
+search that could not be completed in this session due to tool-budget exhaustion, before
+ruling PYGB out. Given all of the above, the study team should treat ASXL1 as the
+best-available lead, not a settled causal-gene call, and should weigh seriously whether this
+locus is better characterized as two independent, individually weak signals than as one gene.</p>
+
+</body>
+</html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>19_33150001-33300000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1933150001-33300000-lead-variant-rs10414065-pip099">Evidence table — locus 19:33,150,001-33,300,000 (lead variant rs10414065, PIP=0.99)</h1>
+<p>Candidate genes evaluated: SLC7A10 (nearest gene / sole gene in the PIP=0.99 credible set),
+NUDT19 (PoPS-prioritized), and CEBPA, LRP3, WDR88 (added by the researcher via direct
+enumeration of all protein-coding genes physically within/adjacent to the stated locus
+window, since they recur as GWAS-Catalog co-mapped alternative genes at this locus).</p>
+<p>Only citations with citation-verifier verdict <strong>VERIFIED</strong> are included below. Citations
+verdicted RETRACTED / NOT_FOUND / CLAIM_MISMATCH, and the full reasoning for the CONTESTED
+gene verdict, are in the companion audit file (see <code>audits/19_33150001-33300000_audit.md</code>),
+not here.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SLC7A10</td>
+<td>Statistical genetics (GWAS, general tissue-expression claim, not locus-specific P-value)</td>
+<td>Adult-onset-asthma risk genes (locus co-mapped to LRP3/CEBPA) are most highly expressed in lung, blood, small intestine and spleen, versus skin for childhood-onset asthma genes — consistent with a more lung-centred, environmentally-modified asthma subtype</td>
+<td>Pividori et al. 2019, Lancet Respir Med, PMID 31036433 / DOI 10.1016/S2213-2600(19)30055-4</td>
+<td>WEAKENED — tissue-expression claim is general to the paper's adult-onset-asthma gene set, not independently confirmed as locus-specific; locus P-value/gene assignment not checked by verifier</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SLC7A10</td>
+<td>Statistical genetics (context only, not locus-specific)</td>
+<td>Primary UK Biobank + ICGC COPD GWAS (82 loci) reports 14 COPD loci shared with either asthma or pulmonary fibrosis, establishing that asthma-shared COPD loci are a real, recurring phenomenon in COPD GWAS generally</td>
+<td>Sakornsakolpat et al. 2019, Nat Genet, PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
+<td>Context only — researcher could not confirm this specific SLC7A10 locus is among the 14 shared loci</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SLC7A10</td>
+<td>Statistical genetics (context only, not locus-specific)</td>
+<td>279 lung-function GWAS signals show &quot;autoimmune-related and other pleiotropic effects&quot; in phenome-wide scans, thematically consistent with an allergic/immune pleiotropic locus</td>
+<td>Shrine et al. 2019, Nat Genet, PMID 30804560 / DOI 10.1038/s41588-018-0321-7</td>
+<td>Context only — no confirmed gene-specific overlap with this locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SLC7A10</td>
+<td>Structural/molecular (non-lung, CNS)</td>
+<td>Cryo-EM structure of the human Asc-1 (SLC7A10) transporter complex; defines mechanism of NMDA-receptor-modulating D-serine/glycine transport</td>
+<td>Li et al. 2024, Nat Commun, PMID 38589439 / DOI 10.1038/s41467-024-47468-1</td>
+<td>No lung relevance; establishes Asc-1 CNS biology only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SLC7A10</td>
+<td>Structural/molecular (non-lung, CNS)</td>
+<td>Dysfunctional Asc-1 (SLC7A10) transporter causes human startle disease and developmental delay via impaired glycine/D-serine transport</td>
+<td>Drehmann et al. 2023, eNeuro, PMID 37903619 / DOI 10.1523/ENEURO.0263-23.2023</td>
+<td>No lung relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SLC7A10</td>
+<td>Structural/metabolic (non-lung)</td>
+<td>SLC7A10 is a marker of white (vs. thermogenic) adipocytes and regulates serine/glutathione uptake, ROS, and insulin resistance</td>
+<td>Jersin et al. 2021, Diabetes, PMID 33408126 / DOI 10.2337/db20-0096</td>
+<td>No lung relevance; metabolic/adipocyte biology only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NUDT19</td>
+<td>Structural (renal, non-lung)</td>
+<td>NUDT19 is a kidney-specific peroxisomal CoA diphosphohydrolase, biochemically distinct from the hepatic NUDT7 isoform</td>
+<td>Shumar et al. 2018, J Biol Chem, PMID 29378847 / DOI 10.1074/jbc.RA117.001358</td>
+<td>CONTESTED gene overall (see audit) — no lung relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NUDT19</td>
+<td>Structural (renal, non-lung)</td>
+<td>Nudt19-knockout mice on high-fat diet show worsened albuminuria and disrupted renal lipid homeostasis; no pulmonary phenotype reported</td>
+<td>Saporito et al. 2026, Sci Rep, PMID 41559371 / DOI 10.1038/s41598-026-36136-7</td>
+<td>CONTESTED gene overall (see audit) — no lung relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NUDT19</td>
+<td>Structural (hepatic, non-lung)</td>
+<td>Nudix hydrolase NUDT19 regulates mitochondrial function and ATP production in murine hepatocytes; candidate NAFLD/T2D gene</td>
+<td>Görigk et al. 2022, BBA Mol Cell Biol Lipids, PMID 35367353 / DOI 10.1016/j.bbalip.2022.159153</td>
+<td>CONTESTED gene overall (see audit) — no lung relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NUDT19</td>
+<td>Molecular (non-immune)</td>
+<td>NUDT19 is among several Nudix-family proteins with in vitro mRNA-decapping activity</td>
+<td>Song et al. 2013, RNA, PMID 23353937 / DOI 10.1261/rna.037309.112</td>
+<td>CONTESTED gene overall (see audit) — no lung or immune relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NUDT19</td>
+<td>Oncology (non-lung)</td>
+<td>NUDT19 identified as a fatty-acid-metabolism-linked candidate gene in prostate cancer epithelium</td>
+<td>Wang et al. 2026, World J Surg Oncol, PMID 42351175 / DOI 10.1186/s12957-026-04446-9</td>
+<td>CONTESTED gene overall (see audit) — no lung relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CEBPA</td>
+<td>Structural/mechanistic (lung, smoking-conditional)</td>
+<td>C/EBPα is required for postnatal maintenance of the serine protease/antiprotease balance in bronchiolar epithelium; epithelium-specific Cebpa-knockout mice exposed to chronic cigarette smoke develop an emphysema-like phenotype (elevated protease activity, impaired ciliated-cell regeneration, epithelial barrier dysfunction, decreased alveolar attachments) via SPINK5/LEKTI downregulation, rescued by antiprotease treatment; CEBPA is downregulated in human emphysema lung tissue, and smokers with centrilobular emphysema have reduced small-airway LEKTI versus smokers without</td>
+<td>Uemasu et al. 2020, Am J Respir Cell Mol Biol, PMID 32101459 / DOI 10.1165/rcmb.2019-0377OC</td>
+<td>WEAKENED — mechanism is real and directly relevant to protease/antiprotease COPD biology, but is NOT locus-specific genetic evidence: CEBPA is not flagged by PIP, PoPS, or L2G at this locus (L2G ~0.05-0.06 vs. SLC7A10's ~0.70-0.77 across 44 allergic-trait credible sets); risk of illegitimately transferring this locus's statistical signal to a neighboring gene on mechanism-only plausibility</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CEBPA</td>
+<td>Structural/mechanistic (lung, smoking-conditional)</td>
+<td>Cigarette-smoke exposure of primary human lung fibroblasts upregulates full-length C/EBPα and C/EBPβ protein via translational control, coinciding with increased IL-8 release and decreased functional elastin</td>
+<td>Miglino et al. 2011, Eur Respir J, PMID 21852335 / DOI 10.1183/09031936.00174310</td>
+<td>WEAKENED — same reasoning as above; real mechanism, no locus-specific genetic support</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CEBPA</td>
+<td>Immune/hematologic (general, not COPD-specific)</td>
+<td>Hematopoietic-specific deletion of a Cebpa enhancer causes ~10-fold reduction in marrow neutrophils and impaired granulocyte/B-lymphoid colony formation in mice; lung Cebpa mRNA is unaffected by this hematopoietic-specific deletion</td>
+<td>Guo et al. 2016, PLoS One, PMID 26937964 / DOI 10.1371/journal.pone.0150809</td>
+<td>WEAKENED — establishes CEBPA's general myeloid/granulopoiesis role, not a COPD- or airway-neutrophil-specific study; no locus-specific genetic support</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LRP3</td>
+<td>Structural (non-lung)</td>
+<td>Cholesterol-induced LRP3 downregulation promotes cartilage degeneration in osteoarthritis by targeting Syndecan-4</td>
+<td>Cao et al. 2022, Nat Commun, PMID 36414669 / DOI 10.1038/s41467-022-34830-4</td>
+<td>HOLDS deprioritization — no lung relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LRP3</td>
+<td>Structural/evolutionary (non-lung)</td>
+<td>Comparative/evolutionary developmental-biology characterization of LDLR-superfamily members including LRP3</td>
+<td>Spinsante et al. 2025, Sci Rep, PMID 39870874 / DOI 10.1038/s41598-025-88011-6</td>
+<td>HOLDS deprioritization — no lung relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WDR88</td>
+<td>Statistical genetics (non-lung, non-immune)</td>
+<td>WDR88 (&quot;a gene of unknown function&quot;) reaches gene-wise significance (P=6.5×10⁻⁷) in a rare-variant exome-array schizophrenia association study</td>
+<td>Richards et al. 2016, Hum Mol Genet, PMID 26740555 / DOI 10.1093/hmg/ddv620</td>
+<td>HOLDS deprioritization — no lung or immune relevance</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — not a verified literature citation)</h2>
+<p>This section reports results of direct Open Targets GraphQL queries performed by the
+orchestrator. It did not go through citation-verifier or red-team-skeptic and should never
+be cited as a literature finding.</p>
+<ul>
+<li><strong>SLC7A10 (ENSG00000130876):</strong> Significantly LoF-constrained (gnomAD lof o/e=0.570, 90% CI
+0.425–0.773). Aggregated target-disease association scores dominated by allergic/atopic/Th2
+conditions (asthma 0.46, allergic rhinitis 0.42, Crohn disease 0.41, IBD 0.41, childhood
+asthma 0.41, atopic eczema 0.39, chronic rhinosinusitis 0.35, &quot;Chronic Obstructive Asthma&quot;
+0.28) but <strong>zero</strong> aggregated association evidence specifically against &quot;chronic obstructive
+pulmonary disease&quot; (MONDO_0005002). At the lead variant (19:33,230,549 / rs10414065), 44
+independent GWAS fine-mapped credible sets exist in Open Targets — all allergic/atopic/
+eosinophil/asthma phenotypes — and SLC7A10 receives the top locus-to-gene (L2G) score in
+every one (~0.70–0.77), versus CEBPA (~0.05–0.06) when it appears at all. No COPD-specific
+GWAS credible set is registered at this variant. Colocalization (h4≈0.998 across 96 pairwise
+comparisons for one representative credible set) links this locus across the
+allergic/atopic/eosinophilic phenotype space, including composite &quot;Asthma/COPD&quot; (FinnGen
+KELA code 203) and &quot;ICD10 J40-J47: Chronic lower respiratory diseases&quot; phenotypes (which
+bundle COPD with asthma/bronchitis/emphysema) — but no isolated/pure COPD phenotype, and no
+molecular-QTL (eQTL/sQTL/pQTL) colocalization evidence.</li>
+<li><strong>NUDT19 (ENSG00000213965):</strong> Not LoF-constrained (gnomAD lof o/e=1.663, tolerant).
+Aggregated disease-association scores are weak overall (top: gout, 0.28; various rare
+pulmonary/interstitial-lung diseases ≤0.08). The only COPD-specific (MONDO_0005002) evidence
+in Open Targets is 3 evidence rows, all from the IMPC &quot;animal_model&quot; datasource (mouse
+knockout phenotype, scores 0.47–0.55) — no human genetic-association evidence. NUDT19 never
+appears as an L2G hit in any of the 44 GWAS credible sets at the lead variant. Per the
+researcher's independent Ensembl coordinate check, NUDT19's gene body
+(chr19:32,691,786-32,714,101) lies ~440–500kb outside the stated locus window and lead
+variant — i.e., physically outside the fine-mapped interval despite being the PoPS-nominated
+gene. (This coordinate fact is a simple genomic-position lookup, not itself a literature
+claim, and was not independently re-verified by citation-verifier, but is not the kind of
+claim that requires literature verification.)</li>
+<li><strong>CEBPA, LRP3, WDR88:</strong> Not separately queried against Open Targets by the orchestrator (out
+of scope of step 1's candidate-gene list, which covered only the input file's nominated
+genes SLC7A10 and NUDT19); any L2G/coloc figures for CEBPA reported above were obtained
+incidentally from the SLC7A10 lead-variant credible-set query, not from a full targeted
+Open Targets lookup for CEBPA in its own right.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>SLC7A10 — confidence LOW.</strong></p>
+<p>This is a close call and the evidence does not cleanly point to a single gene for <em>COPD</em>
+specifically, so the confidence is set low despite SLC7A10 being an unambiguous statistical
+winner for a related-but-distinct phenotype cluster.</p>
+<p>SLC7A10 is the nearest gene, the sole gene in the PIP=0.99 credible set, and — per the Open
+Targets structured lookup — is the consistent, strongly-favored locus-to-gene (L2G) target at
+the exact lead variant across 44 independent fine-mapped GWAS credible sets (L2G ~0.70–0.77
+vs. CEBPA's ~0.05–0.06), with near-unity colocalization (h4≈0.998) tying this single signal
+across the allergic/atopic/eosinophilic/asthma phenotype space. However, as both the
+researcher and red-team-skeptic emphasize, none of that statistical evidence is COPD-specific:
+no isolated/pure-COPD GWAS credible set exists at this variant, no FEV1/FEV1-FVC/spirometric
+concordance was found (a prior this pipeline weighs heavily), and the only COPD-adjacent
+colocalization is with composite phenotypes that bundle COPD together with asthma/bronchitis/
+emphysema (FinnGen &quot;Asthma/COPD,&quot; ICD10 J40-J47). The most parsimonious reading, per the
+skeptic's WEAKENED verdict, is that this is a genuine and robust asthma/allergic/eosinophilic
+disease locus that appears in COPD GWAS through case-definition overlap with asthma-COPD
+overlap syndrome (ACO) or comorbid atopic disease in COPD cohorts, rather than through a
+demonstrated mechanism of airflow obstruction or structural lung damage. A genuine
+eosinophilic-COPD-endotype interpretation cannot be excluded but is not independently
+supported here.</p>
+<p><strong>Runner-up: CEBPA</strong>, on the strength of an unrelated line of evidence — direct,
+mechanistically specific, smoking-conditional causal biology (epithelial Cebpa loss →
+protease/antiprotease imbalance → emphysema-like pathology in mice, downregulated in human
+emphysema tissue; smoke-induced upregulation in lung fibroblasts linked to elastin loss) that
+SLC7A10 entirely lacks. But CEBPA has no locus-specific statistical support of its own at this
+locus (not the nearest gene, not flagged by PIP/PoPS/L2G; L2G score ~0.05–0.06 in the only
+fine-mapping data available, which is for allergic traits, not COPD/spirometry) — crediting it
+with this credible set's genetic signal risks illegitimately transferring statistical evidence
+to a neighboring gene on mechanism-only plausibility, per the skeptic's explicit flag.</p>
+<p>NUDT19 is not a serious competing candidate: it is marked CONTESTED by red-team-skeptic and
+its own gene body sits outside the physical locus/credible-set window; LRP3 and WDR88 have no
+plausible COPD-relevant biology and are not prioritized (see audit for full reasoning).</p>
+<p><strong>What would resolve the SLC7A10-vs-CEBPA tie:</strong> a COPD- or spirometry-specific (not
+allergic-trait) fine-mapping or colocalization analysis at this exact variant; an
+eosinophilic-COPD-endotype-stratified GWAS; or molecular-QTL (eQTL/sQTL) colocalization
+tying the credible-set variant to SLC7A10 or CEBPA expression specifically in lung tissue
+(airway epithelium or fibroblasts) — none of which currently exists in the evidence reviewed.</p>
+
+</body>
+</html>

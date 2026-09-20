@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>21_34150001-34400000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table-locus-2134150001-34400000-nearest-gene-kcne2">Evidence table: locus 21:34,150,001-34,400,000 (nearest gene KCNE2)</h1>
+<p><strong>Lead variant:</strong> rs62213732 (PIP=0.546, intronic to LINC00310). <strong>Credible set:</strong> 63
+variants (ABF fine-mapping), &gt;90% of PIP mass in LINC00310 (intronic/downstream, MODIFIER
+impact), remainder in KCNE2 introns (max PIP 0.0076). No missense/splice-donor/
+splice-acceptor variants in the credible set. <strong>Candidate genes:</strong> KCNE2 (nearest gene),
+LINC00310 (lead-variant host), C21orf62 / &quot;EPCIP&quot; (PoPS-prioritized).</p>
+<p>All rows below use only citations verified VERIFIED by citation-verifier. See
+<code>audits/21_34150001-34400000_audit.md</code> for excluded citations (none in this locus — all 24
+were verified) and full CONTESTED/WEAKENED reasoning from the red-team-skeptic.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KCNE2</td>
+<td>Statistical genetics (spirometry GWAS)</td>
+<td>Large lung-function GWAS meta-analysis (48,201 discovery + up to 46,411 follow-up) found genome-wide-significant association of a locus in/near KCNE2 with FEV1 and/or FEV1/FVC, among 16 novel pulmonary-function loci.</td>
+<td>Soler Artigas et al., Nat Genet 2011, PMID 21946350 / DOI 10.1038/ng.941</td>
+<td>WEAKENED (region-level, not gene-specific; no colocalization anchors this to KCNE2 rather than a regulatory element acting on a neighbor)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNE2</td>
+<td>Statistical genetics (cross-trait)</td>
+<td>The lung-function-associated SNP rs9978142 in KCNE2 is also significantly associated with coronary artery disease risk and carotid intima-media thickness.</td>
+<td>Sabater-Lleal et al., PLoS ONE 2014, PMID 25093840 / DOI 10.1371/journal.pone.0104082</td>
+<td>WEAKENED — supports cardiovascular pleiotropy alternative at this locus rather than lung-intrinsic mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNE2</td>
+<td>Structural / physiological lung biology (mouse knockout)</td>
+<td>Germline Kcne2-knockout mice show reduced pulmonary Kcnq1 expression, Kcne2-Kcnq1 complex in mouse lung, impaired gas exchange (reduced blood O2, increased CO2), pulmonary apoptosis, pulmonary vascular leakage, elevated TNF-a/IL-6 and BAL leukocytes, and reduced resilience to pulmonary ischemia-reperfusion injury; a human polymorphism upstream of KCNE2 is associated with reduced lung function.</td>
+<td>Zhou et al., FASEB J 2019, PMID 31162977 / DOI 10.1096/fj.201802519R</td>
+<td>WEAKENED — this is a whole-body/systemic knockout; the lung phenotype is at least as consistent with being secondary to cardiac/circulatory dysfunction (Kcne2's established cardiac role) as with cell-intrinsic lung biology; no locus-specific colocalization ties this mouse biology to the human GWAS signal</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNE2</td>
+<td>Structural (human airway epithelium)</td>
+<td>Human airway cell line Calu-3 expresses KCNE2 alongside KCNQ1/KCNN4/KCNE3; KCNQ1-containing basolateral K+ channel complexes are required for transepithelial anion secretion.</td>
+<td>Cowley &amp; Linsdell, J Physiol 2002, PMID 11826162 / DOI 10.1113/jphysiol.2001.013300</td>
+<td>Not separately contested; supports KCNE2 expression/relevance in airway epithelium but does not establish disease mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNE2</td>
+<td>Structural (tissue expression review)</td>
+<td>KCNE2 protein is expressed in gastric mucosa, thyroid, pancreatic islets, liver, and lung — not cardiac-restricted.</td>
+<td>Song et al., Cells 2024, PMID 39272981 / DOI 10.3390/cells13171409</td>
+<td>Not separately contested; general expression context</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNE2</td>
+<td>Clinical genetics (gene-disease validity reappraisal)</td>
+<td>Systematic evidence-based gene-disease curation classifies KCNE2 as &quot;Disputed&quot; (lowest evidence tier) for causation of congenital Long QT Syndrome.</td>
+<td>Adler et al., Circulation 2020, PMID 31983240 / DOI 10.1161/CIRCULATIONAHA.119.043132</td>
+<td>Notable finding, not itself contested — materially weakens confidence in KCNE2's classic cardiac-gene status, which cuts against both the cardiac and (by extension) the pulmonary causal narratives for this gene</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNE2</td>
+<td>Clinical genetics (older reviews, cardiac context)</td>
+<td>KCNE2 mutations are among classic genetic causes of congenital LQTS (LQT6) via KCNQ1/KCNE2 or HERG/KCNE2 dysfunction; KCNE2 included among cLQTS potassium-channel genes with pooled (not gene-specific) rare-variant enrichment in drug-induced LQTS.</td>
+<td>Crotti et al., Orphanet J Rare Dis 2008, PMID 18606002; Weeke et al., JACC 2014, PMID 24561134; Stevens et al., Adv Exp Med Biol 2024, PMID 38884769</td>
+<td>Superseded in part by the 2020 &quot;Disputed&quot; reappraisal above; retained for historical context on KCNE2's cardiac reputation</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC00310</td>
+<td>Statistical genetics (fine-mapping)</td>
+<td>Hosts the lead variant rs62213732 (PIP=0.546) and &gt;90% of the credible-set PIP mass at this locus (intronic/downstream, MODIFIER impact variants).</td>
+<td>Locus input file / internal ABF fine-mapping (not an independent literature citation)</td>
+<td>Statistical/positional evidence is strong, but must not be conflated with mechanistic support — see below</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC00310</td>
+<td>Functional (unrelated tissue)</td>
+<td>CRISPR/Cas9 knockout shows LINC00310 promotes proliferation via c-Myc regulation in breast cancer; serum LINC00310 elevated in breast cancer patients.</td>
+<td>Li et al., J Cell Mol Med 2018, PMID 29993199 / DOI 10.1111/jcmm.13750</td>
+<td>WEAKENED for this locus — unrelated tissue/disease, shows LINC00310 is not inert but provides no lung/COPD mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC00310</td>
+<td>Functional (airway epithelial cell line, non-COPD endpoint)</td>
+<td>In human bronchial epithelial cells (16HBE), LINC00310 expression is dynamically dysregulated during glycidyl-methacrylate-induced malignant transformation, correlating with c-Myc.</td>
+<td>Ma et al., Wei Sheng Yan Jiu 2020, PMID 33070810</td>
+<td>WEAKENED — only LINC00310 paper in an airway-epithelial system, but endpoint is carcinogen-induced transformation, not inflammation/remodeling/COPD-relevant biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC00310</td>
+<td>COPD-associated expression (peripheral, not lung)</td>
+<td>In a COPD quadriceps-muscle transcriptomic study, LINC00310 was among 18 transcripts with &gt;=2-fold expression change between COPD patients and controls.</td>
+<td>Willis-Owen et al., Sci Rep 2018, PMID 30111857 / DOI 10.1038/s41598-018-29789-6</td>
+<td>WEAKENED — only direct LINC00310+COPD co-occurrence found, but in peripheral skeletal muscle (a COPD comorbidity/systemic manifestation), not lung tissue; purely observational, part of a broad 18-transcript list, no mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC00310</td>
+<td>Statistical genetics (cross-trait, vascular)</td>
+<td>Independent GWASs of spontaneous coronary artery dissection (SCAD) both identify a signal near LINC00310 at 21q22.11 (discovery OR 2.11, meta-analysis OR 2.18; independently replicated with a female-specific signal).</td>
+<td>Turley et al., JAMA Cardiol 2020, PMID 32374345; Saw et al., Nat Commun 2020, PMID 32887874</td>
+<td>WEAKENED for a COPD-specific mechanism — supports a convergent vascular/arteriopathy signal at this cytogenetic band, raised by the skeptic as a serious alternative hypothesis to lung-intrinsic biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>C21orf62 / EPCIP</td>
+<td>Structural (unrelated tissue)</td>
+<td>C21orf62 (&quot;CU062&quot;) is a secreted glycoprotein interacting with polycystin-1, localizing near cilia/focal adhesions in kidney epithelium/urinary extracellular vesicles, decreased in ADPKD patient samples.</td>
+<td>Lea et al., Cells 2023, PMID 37681898 / DOI 10.3390/cells12172166</td>
+<td>CONTESTED (see gene-level verdict below) — renal ciliary biology, no lung data</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>C21orf62 / EPCIP</td>
+<td>Correlative only (no functional validation of this gene)</td>
+<td>C21orf62 was among genes with concordant differential methylation/expression in an infection-transcriptome study and among four genes in a glioma prognostic gene signature; in both papers, functional validation was performed on other genes in the signature, not C21orf62 itself.</td>
+<td>Wu et al., BMC Genomics 2025, PMID 40597609; Sun et al., J Cancer 2024, PMID 38577605</td>
+<td>CONTESTED — zero direct functional validation of C21orf62 exists anywhere in the literature identified</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="excluded-from-table-but-verified-genericoff-topic-listed-for-completeness">Excluded from table but verified (generic/off-topic, listed for completeness)</h2>
+<p>Four additional LINC00310-mentioning PMIDs (32876881, 31930966, 27833134, 26942882) and two
+C21orf62-AS1-mentioning PMIDs (33869776, 27799788) were verified as real and accurately
+mentioning the respective gene, but are generic pan-cancer bioinformatic lncRNA-prognostic
+screens with no lung/COPD/immune relevance; they are not included as evidence rows because
+they do not bear on this locus's disease biology. See audit file for detail, including a
+minor topic/PMID labeling mix-up among the four LINC00310 papers that the citation-verifier
+caught and corrected (inconsequential to any claim in this table).</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-no-skepticverifier-review-applies-to-this-section">Open Targets summary (structured database lookup — not a verified literature citation; no skeptic/verifier review applies to this section)</h2>
+<p>Disease resolved: chronic obstructive pulmonary disease -&gt; MONDO_0005002. COPD GWAS study
+present in Open Targets: GCST007692 (Sakornsakolpat et al. 2019, n=257,811) — does not
+contribute a credible set overlapping this locus interval in Open Targets' index.</p>
+<ul>
+<li><strong>KCNE2</strong> (ENSG00000159197): No COPD-specific L2G or colocalization evidence. At the lead
+variant rs62213732, Open Targets' own L2G model ranks KCNE2 top (~0.49-0.53) only for
+unrelated traits (height, hallux valgus), not COPD/pulmonary traits. Overall COPD
+association score: 0.013 (very low). Top disease associations genome-wide: Romano-Ward
+syndrome (0.740), familial atrial fibrillation (0.607), familial long QT syndrome
+(0.385) — i.e., cardiac arrhythmia dominates KCNE2's Open Targets disease profile, not
+COPD. Genetic constraint: LoF oe 0.817 (not strongly depleted; not classically
+haploinsufficient). Tractability: not druggable by small molecule; some antibody-modality
+flags true.</li>
+<li><strong>LINC00310</strong> (ENSG00000227456): No L2G predictions in any of 7 Open Targets credible
+sets (all molecular QTL studies, no disease overlay). No disease associations recorded
+(count=0). No constraint metrics computed (lncRNA biotype).</li>
+<li><strong>C21orf62 / &quot;EPCIP&quot;</strong> (ENSG00000205929): No L2G predictions; 31 Open Targets credible
+sets are all molecular QTLs, essentially all mapping to chr21:~32.5-33.5 Mb — several
+hundred kb to ~1.5 Mb outside this locus's 34.15-34.40 Mb window, indicating this gene's
+QTL/regulatory footprint sits substantially outside the fine-mapped interval. No disease
+associations recorded. Constraint: LoF oe 1.057 (tolerant of loss-of-function).</li>
+<li><strong>C21orf62-AS1 / &quot;EPCIP-AS1&quot;</strong> (ENSG00000205930): Queried for completeness; lncRNA, no
+constraint metrics, no disease associations, QTL-only credible sets outside this locus
+window (same caveat as C21orf62).</li>
+</ul>
+<p><strong>Summary:</strong> Open Targets provides no COPD- or pulmonary-trait-specific L2G,
+colocalization, or association evidence for any candidate gene at this locus. All positive
+L2G signal at the lead variant comes from unrelated traits and likely reflects positional
+weighting rather than disease-specific fine-mapping. This absence is itself informative.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>KCNE2 — confidence: LOW.</strong></p>
+<p>This is a genuinely close call between KCNE2 and LINC00310, and the evidence does not
+cleanly resolve it. LINC00310 hosts the lead variant and the overwhelming majority of
+fine-mapping PIP mass, which is the single strongest quantitative signal at this locus for
+any gene — but LINC00310 has no COPD-relevant functional characterization whatsoever: its
+only direct COPD co-occurrence is a peripheral (quadriceps muscle, not lung) transcriptomic
+correlation in a list of 18 genes (Willis-Owen et al. 2018), and its other literature is
+generic pan-cancer bioinformatics and cardiomyopathy ceRNA correlation, none of it
+lung-mechanistic.</p>
+<p>KCNE2, by contrast, has two independent lines of genuinely pulmonary-relevant evidence not
+available for any other gene at this locus: an independent human spirometry GWAS hit
+(FEV1/FEV1-FVC, Soler Artigas et al. 2011 — direct pulmonary-function evidence per this
+pipeline's priors, not just COPD case-control) and a causal mouse-genetics experiment
+showing a specific lung phenotype on Kcne2 loss (Zhou et al. 2019), including a stated
+human lung-function association motivating that work. No other gene at this locus has
+comparable direct functional pulmonary evidence. This tips the balance toward KCNE2 over
+LINC00310 despite KCNE2 carrying almost no fine-mapping PIP mass itself.</p>
+<p>However, confidence must be capped at LOW, not MODERATE, for reasons the red-team-skeptic
+raised and that are not resolved by any evidence in hand: (1) the Zhou et al. mouse model is
+a whole-body knockout, so the lung phenotype is at least as consistent with being secondary
+to KCNE2's well-documented cardiac/circulatory role as with a cell-intrinsic lung mechanism,
+and no colocalization or cell-type-specific data rules this out; (2) Open Targets' own COPD
+association score for KCNE2 is very low (0.013) against a strong cardiac-arrhythmia
+signature, and the field's own gene-disease curation now rates KCNE2 as &quot;Disputed&quot; even for
+its classic LQTS role, undermining confidence in KCNE2 causal claims generally; (3) three
+independent GWAS signals for vascular/arteriopathy phenotypes (CAD/carotid-IMT via
+Sabater-Lleal 2014; SCAD via Turley 2020 and Saw 2020, the latter two nominally attributed
+to LINC00310 but at the same cytogenetic band) raise a serious, unresolved alternative
+hypothesis that this locus is fundamentally cardiovascular/vascular rather than
+airway-intrinsic, with the COPD signal reflecting pleiotropy, pulmonary-vascular
+subphenotype effects, or LD-tagging; and (4) whether this locus's COPD association is
+smoking-mediated could not be determined in either the researcher's or the red-team-skeptic's
+searches (both hit search-tool budget limits), so this remains a fully open question, not a
+ruled-out one.</p>
+<p><strong>Runner-up:</strong> LINC00310 (on fine-mapping/positional grounds alone). <strong>C21orf62/EPCIP is
+excluded</strong> from serious consideration — its Open Targets QTL footprint sits outside this
+locus's actual credible-set window, it has zero direct functional validation in any paper
+identified, and its only characterized biology (renal ciliary/polycystin-1 interaction) is
+unrelated to lung. What would resolve the KCNE2-vs-LINC00310 tie: a COPD- or
+lung-function-specific colocalization or eQTL analysis at this locus (which Open Targets
+currently lacks), cell-type-resolved (airway epithelial vs. cardiac/vascular)
+expression/functional data for KCNE2, and a direct smoking-behavior-GWAS lookup for
+rs62213732 and its LD proxies.</p>
+
+</body>
+</html>

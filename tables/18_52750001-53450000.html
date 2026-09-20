@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>18_52750001-53450000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1852750001-53450000-nearest-gene-dcc">Evidence table — locus 18:52,750,001-53,450,000 (nearest gene DCC)</h1>
+<p><strong>Lead variant:</strong> rs12965339 (18:52,885,080, intron_variant, PIP=0.162). <strong>Credible set:</strong>
+178 variants (ABF finemapping), all intron_variant/MODIFIER, all annotated to DCC by
+nearest-gene/physical overlap; no missense/splice-donor/splice-acceptor variants present.
+<strong>Candidate genes:</strong> DCC (nearest gene, FLAMES-prioritized), TCF4 (MAGMA-prioritized,
+PoPS-prioritized). PubMed search for the lead variant rsID itself (&quot;rs12965339&quot;) returned
+zero results — no dedicated publication record.</p>
+<p><strong>Structural note carried through all rows below:</strong> Per Ensembl REST lookup, DCC spans
+chr18:52,340,197-53,535,899 (GRCh38) and is the only protein-coding gene physically
+overlapping this locus. TCF4 is located at chr18:55,222,185-55,664,787 — approximately
+1.77 Mb from the locus boundary and NOT physically overlapping the locus or DCC's gene
+body, despite being the MAGMA/PoPS-prioritized gene. See red-team critique and audit
+appendix for discussion of whether this reflects a genuine long-range signal or a
+gene-assignment/LD-window artifact.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DCC</td>
+<td>Genomic architecture</td>
+<td>DCC physically spans and is the sole protein-coding gene overlapping the entire 178-variant credible set (chr18:52,340,197-53,535,899, GRCh38); all credible-set variants are intronic/nearest-gene-annotated to DCC.</td>
+<td>Ensembl REST lookup (tool-derived structural fact, not a literature citation)</td>
+<td>Not independently disputed — gene assignment by physical overlap is unambiguous</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DCC</td>
+<td>Gene identity / oncology</td>
+<td>Original cloning of DCC (&quot;deleted in colorectal cancer&quot;) as a chr18q candidate tumor suppressor, expressed in normal colonic mucosa, lost/reduced in most colorectal carcinomas.</td>
+<td>Fearon ER et al., Science 1990. PMID 2294591; DOI 10.1126/science.2294591</td>
+<td>VERIFIED; background/identity only, not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DCC</td>
+<td>Oncology (lung vs. colorectal contrast)</td>
+<td>DCC alterations detected in 100% of examined colorectal-carcinoma metastases; distinct tumor-suppressor losses (RB, p53, 3p/13q/17p — not DCC) documented for lung-carcinoma metastasis.</td>
+<td>Yokota J et al., Princess Takamatsu Symp. 1991. PMID 1844253</td>
+<td>VERIFIED; supports DCC as colorectal- not lung-cancer-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DCC</td>
+<td>Structural/developmental lung biology</td>
+<td>Netrin-1/netrin-4 and receptor Unc5b (not DCC per se) are expressed during lung branching morphogenesis and modulate epithelial-bud outgrowth via FGF signaling in ex vivo lung explants.</td>
+<td>Liu Y et al., Curr Biol 2004. PMID 15186747; DOI 10.1016/j.cub.2004.05.020</td>
+<td>VERIFIED; implicates netrin-1/Unc5b, not DCC receptor specifically</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DCC</td>
+<td>Structural/developmental lung biology</td>
+<td>Netrin-1 regulates development of nervous system, vasculature, lung, pancreas, muscle, mammary gland; netrin-1(-/-) mice show upregulated DCC and neogenin receptor expression.</td>
+<td>Bin JM et al., Cell Reports 2015. PMID 26257176; DOI 10.1016/j.celrep.2015.07.028</td>
+<td>VERIFIED; functional experiments focus on axon guidance/CNS, not lung phenotypes</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DCC</td>
+<td>Immune/inflammatory biology</td>
+<td>Netrin-1 (via adenosine 2B receptor, not DCC) decreases neutrophil infiltration and promotes M2 macrophage transition in diabetic corneal wound healing (non-pulmonary tissue).</td>
+<td>Zhang Y et al., Sci Rep 2018. PMID 29662125; DOI 10.1038/s41598-018-24506-9</td>
+<td>VERIFIED; ligand/alternate-receptor evidence, not DCC-specific, non-pulmonary</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DCC</td>
+<td>Immune/inflammatory biology</td>
+<td>Netrin-1/UNC5B (not DCC) reduced in sepsis-induced acute lung injury in rats; netrin-1 upregulation reduces TNF-alpha/IL-1beta/IL-6 in LPS-stimulated bronchial epithelial (BEAS-2B) cells.</td>
+<td>Liu J et al., Med Sci Monit 2019. PMID 31639817; DOI 10.12659/MSM.917279</td>
+<td>VERIFIED; netrin-1/UNC5B axis, not DCC receptor; acute injury model, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DCC</td>
+<td>Immune/inflammatory biology</td>
+<td>Netrin-1 (via A2BAR, not DCC) increases alveolar fluid clearance in LPS-induced acute lung injury mouse model.</td>
+<td>He J et al., Respiration 2014. PMID 24663055; DOI 10.1159/000358066</td>
+<td>VERIFIED; netrin-1/A2BAR axis, not DCC; acute injury model, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DCC</td>
+<td>Smoking-behavior genetic architecture (context)</td>
+<td>Largest published GWAS of smoking initiation/cessation/behavior (up to 1.2M individuals, 406 loci); cited as general architecture context for DCC's smoking-trait associations. DCC/NTN1 not confirmed by name in accessible text.</td>
+<td>Liu M et al., Nat Genet 2019. PMID 30643251; DOI 10.1038/s41588-018-0307-5</td>
+<td>VERIFIED as a paper; claim re: DCC-specific nomination NOT confirmed — general context only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DCC</td>
+<td>Smoking-behavior genetic architecture (context)</td>
+<td>Companion rare-coding-variant fine-mapping study of smoking/alcohol traits (N up to 433,216; 171 loci); DCC-specific nomination not confirmed.</td>
+<td>Brazel DM et al., Biol Psychiatry 2018/2019. PMID 30679032; DOI 10.1016/j.biopsych.2018.11.024</td>
+<td>VERIFIED as a paper; claim re: DCC-specific nomination NOT confirmed — general context only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DCC / TCF4</td>
+<td>Lung-function GWAS (negative/inconclusive)</td>
+<td>Largest multi-ancestry spirometry GWAS (400,102 individuals, 279 lung-function signals); whether a DCC/TCF4/18q21.2 signal is among the 279 loci could not be confirmed from abstract-level access by researcher or citation-verifier.</td>
+<td>Shrine N et al., Nat Genet 2019. PMID 30804560; DOI 10.1038/s41588-018-0321-7</td>
+<td>VERIFIED as a paper; DCC/TCF4-specific sub-claim UNRESOLVED (open question, not contradicted)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DCC / TCF4</td>
+<td>COPD case-control GWAS (negative finding)</td>
+<td>Largest COPD case-control GWAS at the time (35,735 cases/222,076 controls, 82 loci); full-text review found NO mention of DCC or TCF4 by name anywhere in accessible prose, and no reference to an 18q21.2 locus (limited by possible table-stripping in text extraction).</td>
+<td>Sakornsakolpat P et al., Nat Genet 2019. PMID 30804561; DOI 10.1038/s41588-018-0342-2</td>
+<td>VERIFIED as a paper; negative finding for both genes flagged as meaningful (not fully definitive) by red-team-skeptic</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCF4</td>
+<td>Immune/inflammatory biology</td>
+<td>TCF4 (E2-2) is preferentially expressed in plasmacytoid dendritic cells (pDCs); E2-2 deletion in mice selectively blocks pDC development (sparing other immune lineages) and abolishes type-I interferon response to viral DNA; E2-2 haploinsufficiency in mice and human Pitt-Hopkins patients is associated with an aberrant pDC gene-expression profile; E2-2 directly activates SpiB/Irf8/Irf7.</td>
+<td>Cisse B et al., Cell 2008. PMID 18854153; DOI 10.1016/j.cell.2008.09.016</td>
+<td>VERIFIED; gene identity confirmed as bHLH E2-2/TCF4, not TCF7L2. Paper does not itself address COPD/lung disease — general pDC immunobiology; pDC lineage not conventionally central to COPD's neutrophilic/CD8/Th17 literature (specificity gap noted by skeptic)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCF4</td>
+<td>Central respiratory-control phenotype (contrast, not COPD-relevant)</td>
+<td>Tcf4-truncation mouse model of Pitt-Hopkins syndrome exhibits breathing abnormalities (hyperventilation/apnea) due to loss of brainstem parafacial respiratory rhythm-generating neurons — a central/autonomic mechanism, explicitly distinct from peripheral airway/lung-structural disease.</td>
+<td>Cleary CM et al., Nat Commun 2021. PMID 34645823; DOI 10.1038/s41467-021-26263-2</td>
+<td>VERIFIED; gene identity confirmed as TCF4/Pitt-Hopkins, not TCF7L2. Included specifically to prevent conflating this central phenotype with COPD-relevant pulmonary biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCF4</td>
+<td>Multi-disease integrative GWAS / single-cell regulon (HIGH SCRUTINY)</td>
+<td>Integrative GWAS across COPD, asthma, bronchiectasis, and chronic rhinosinusitis identifies a shared &quot;gAirwayDisease&quot; genetic-liability factor; scMORE single-cell regulon analysis reports a TCF4 regulon among 36 significant regulon-cell-type pairs, with TCF4 (alongside SPIB) implicated in pDC/B-cell identity and antigen-sensing programs. Not a COPD-specific finding — a regulon enrichment within a composite four-disease liability factor, not explicitly tied back to this credible set/locus.</td>
+<td>Tu T et al., Int J Mol Sci 2026. PMID 42653451; DOI 10.3390/ijms27167450</td>
+<td>VERIFIED (full text accessed, gene identity confirmed as TCF4/E2-2 not TCF7L2) but flagged CONTESTED-supporting: single, ~1-month-old, unreplicated source; not COPD-specific; plausibly reflects TCF4's broad pleiotropy in trait-agnostic multi-omic screens rather than a COPD-causal role at this locus</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Genes/claims deliberately excluded from the table above</strong> (absence-of-evidence findings,
+kept out of the main table per pipeline convention but preserved for completeness): direct
+PubMed searches for &quot;DCC gene lung function COPD,&quot; &quot;DCC FEV1 spirometry pulmonary function
+genome-wide,&quot; &quot;COPD GWAS chromosome 18q21 DCC TCF4 locus,&quot; &quot;DCC deleted in colorectal
+cancer emphysema airway epithelium,&quot; &quot;netrin-1 DCC receptor lung inflammation neutrophil,&quot;
+&quot;DCC gene expression lung airway epithelium bronchial cell,&quot; &quot;netrin-1 DCC lung fibrosis
+pulmonary hypertension COPD,&quot; &quot;TCF4 FEV1 spirometry pulmonary function genome-wide,&quot; and
+&quot;TCF4 Th17 T helper cell differentiation E protein&quot; all returned zero PubMed results. These
+absences are discussed in the narrative sections above and in the audit appendix, not
+fabricated as positive findings.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — NOT a verified literature citation)</h2>
+<p>This section is a structured database lookup via the Open Targets Platform GraphQL API. It
+did <strong>not</strong> go through citation-verifier or red-team-skeptic and should be weighted
+accordingly — it is context, not peer-reviewed evidence.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>LoF constraint (gnomAD oe)</th>
+<th>COPD association in OT</th>
+<th>FEV1/lung-function association in OT</th>
+<th>Lung molecular QTL</th>
+<th>Immune/monocyte QTL</th>
+<th>Smoking-trait association rank</th>
+<th>Dominant OT disease signal</th>
+<th>L2G at this locus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DCC</td>
+<td>0.32 (constrained; consistent with known haploinsufficiency phenotype)</td>
+<td>None in top 500 of 2130 total associations</td>
+<td>None in top 500</td>
+<td>None found (21 molecular-QTL credible sets, all GTEx testis/brain-cerebellum + 1 UKB-PPP plasma protein QTL)</td>
+<td>None found</td>
+<td>Smoking initiation (0.450), behavior (0.306), cessation (0.289) all in DCC's own top ~35 associations — above any respiratory trait (bronchial disorder 0.201, asthma 0.076)</td>
+<td>Neurodevelopmental (mirror movements MONDO_0008002 score 0.79, agenesis of corpus callosum) + colorectal/esophageal/lung cancers (classic tumor-suppressor driver pattern)</td>
+<td>Not available — this COPD GWAS is not yet integrated into Open Targets' L2G pipeline</td>
+</tr>
+<tr>
+<td>TCF4</td>
+<td>0.037 (extremely constrained; consistent with Pitt-Hopkins haploinsufficiency)</td>
+<td>None in top 500 of 1192 total associations</td>
+<td>None in top 500</td>
+<td>2 GTEx lung transcript-usage (isoform) QTL records</td>
+<td>3 monocyte eQTL records (Fairfax 2014 LPS-stimulated 2h/24h; Quach 2016 Pam3CSK4/TLR1-2-agonist-stimulated)</td>
+<td>Wheezing (0.291), smoking initiation (0.313), smoking behavior (0.221) — present but ranked lower than DCC's</td>
+<td>Pitt-Hopkins syndrome (score 0.85), schizophrenia, autism, major depressive disorder, bipolar disorder, Fuchs endothelial corneal dystrophy</td>
+<td>Not available — same integration-lag caveat as DCC</td>
+</tr>
+</tbody>
+</table>
+<p>Full narrative detail (including the complete top-disease-association lists queried) is
+preserved in the working checkpoint at
+<code>evidence_tables/_status/18_52750001-53450000/opentargets.md</code>.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Gene: DCC</strong>
+<strong>Confidence: LOW</strong></p>
+<p>This call is close, and confidence is capped at LOW because neither candidate has direct
+COPD or FEV1/FEV1-FVC evidence, and the largest dedicated COPD case-control GWAS
+(Sakornsakolpat et al. 2019, PMID 30804561) does not name either gene in its accessible
+full text — a live negative finding for both candidates, not merely an absence of
+positive support.</p>
+<p>DCC is preferred over TCF4 primarily on <strong>genomic architecture, not mechanistic strength</strong>:
+DCC physically spans the entire 178-variant credible set and is the sole protein-coding
+gene overlapping the locus (Ensembl REST lookup, table row 1), whereas TCF4 sits ~1.77 Mb
+away and does not overlap the locus at all. The red-team-skeptic's critique (see audit
+appendix) raises a serious, unresolved possibility that TCF4's MAGMA/PoPS prioritization
+reflects a gene-assignment/LD-window artifact in this large 18q21 gene desert rather than
+a genuine long-range regulatory link — standard MAGMA/PoPS windows do not typically reach
+1.77 Mb, and no independent second signal or enhancer-linkage evidence near TCF4 was
+found to support a real long-range mechanism. Absent that clarification, physical overlap
+is the more defensible default.</p>
+<p>However, DCC's own mechanistic case is explicitly <strong>WEAKENED</strong> per the skeptic's critique
+(evidence table rows above): its lung-developmental and immune literature (Fearon 1990,
+Yokota 1991, Liu 2004, Bin 2015, Zhang 2018, Liu 2019, He 2014) almost entirely implicates
+the netrin-1 ligand or alternate receptors (UNC5B, neogenin, A2BAR), not the DCC receptor
+itself, in lung or immune biology. DCC's most plausible mechanistic story — smoking-related
+neurobehavioral genetics via its axon-guidance role — rests on a circular Open Targets
+association ranking (itself derived from other studies' own gene-assignment heuristics)
+plus two smoking-behavior GWAS (Liu 2019, Brazel 2018) that the researcher could not
+confirm actually name DCC/NTN1. This should be read as &quot;smoking-behavior-plausible,
+lung-mechanism-absent,&quot; not as confirmed smoking mediation.</p>
+<p><strong>Runner-up: TCF4</strong>, marked <strong>CONTESTED</strong> by red-team-skeptic. TCF4 has a more specific
+and mechanistically well-characterized immune-biology story (essential, non-redundant
+regulator of plasmacytoid dendritic cell development and type-I interferon response, Cisse
+et al. 2008, PMID 18854153) and some direct lung/immune molecular-QTL evidence that DCC
+entirely lacks (2 GTEx lung transcript-usage QTLs, 3 stimulated-monocyte eQTLs, versus zero
+lung QTLs for DCC). Its single COPD-relevant statistical link (Tu et al. 2026, PMID
+42653451) is a very recent, unreplicated, non-COPD-specific composite-liability regulon
+finding that neither confirms nor is contradicted by other evidence, and TCF4's dominant
+Mendelian/common disease burden (Pitt-Hopkins syndrome, schizophrenia, Fuchs corneal
+dystrophy) is mechanistically unrelated to COPD.</p>
+<p><strong>What would resolve the tie:</strong> (1) confirmation of the actual MAGMA/PoPS gene-assignment
+window used in this pipeline, to determine whether TCF4's 1.77 Mb prioritization is
+methodologically expected or an artifact; (2) a colocalization or fine-mapping analysis
+specifically testing whether this locus's COPD credible set colocalizes with TCF4's lung
+transcript-usage QTLs or monocyte eQTLs (versus any DCC signal); (3) independent
+replication of the Tu et al. 2026 TCF4-regulon/gAirwayDisease finding in a COPD-specific
+(not composite) analysis; (4) a targeted search of any post-2019 COPD/spirometry GWAS
+(the skeptic could not complete this due to search-budget exhaustion — see audit
+appendix) to check whether a more recent, larger study has reassigned this locus to a
+third gene. Until then, this locus should be treated as genuinely ambiguous between a
+physically-overlapping gene with a weak/circular mechanistic story (DCC) and a
+statistically-flagged, physically-distant gene with a more specific but so-far
+COPD-unconnected mechanistic story (TCF4).</p>
+
+</body>
+</html>
