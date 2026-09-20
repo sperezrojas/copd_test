@@ -392,9 +392,24 @@ code {
     color: #0969da;
 }
 
-.tag.warning {
+.tag-warning {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
     background: #fff3e0;
     color: #b45309;
+}
+
+.tag-hold {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    background: #5f5e5c;
+    color: #b2b6c1;
 }
 
 @media (max-width: 800px) {
