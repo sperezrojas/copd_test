@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chromosome 9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="sidebar">
+  <div class="sidebar-header">
+    🧬 Agentic Gene Prioritization<br>Dashboard
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-title">Overview</div>
+    <a class="nav-link" href="index.html">🏠 Home</a>
+    <a class="nav-link" href="methods.html">🔬 Methods</a>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-title">Chromosomes</div>
+    <a class="nav-link" href="CHR1.html">CHR1</a>
+    <a class="nav-link" href="CHR2.html">CHR2</a>
+    <a class="nav-link" href="CHR3.html">CHR3</a>
+    <a class="nav-link" href="CHR4.html">CHR4</a>
+    <a class="nav-link" href="CHR5.html">CHR5</a>
+    <a class="nav-link" href="CHR6.html">CHR6</a>
+    <a class="nav-link" href="CHR7.html">CHR7</a>
+    <a class="nav-link" href="CHR8.html">CHR8</a>
+    <a class="nav-link active" href="CHR9.html">CHR9</a>
+    <a class="nav-link" href="CHR10.html">CHR10</a>
+    <a class="nav-link" href="CHR11.html">CHR11</a>
+    <a class="nav-link" href="CHR12.html">CHR12</a>
+    <a class="nav-link" href="CHR13.html">CHR13</a>
+    <a class="nav-link" href="CHR14.html">CHR14</a>
+    <a class="nav-link" href="CHR15.html">CHR15</a>
+    <a class="nav-link" href="CHR16.html">CHR16</a>
+    <a class="nav-link" href="CHR17.html">CHR17</a>
+    <a class="nav-link" href="CHR18.html">CHR18</a>
+    <a class="nav-link" href="CHR19.html">CHR19</a>
+    <a class="nav-link" href="CHR20.html">CHR20</a>
+    <a class="nav-link" href="CHR21.html">CHR21</a>
+    <a class="nav-link" href="CHR22.html">CHR22</a>
+  </div>
+</div>
+
+    <div id="main-content">
+        <div id="display-area" class="content-card">
+            <h1>Chromosome 9</h1>
+
+            <div class="controls">
+
+                <!-- Plot Selection Dropdown -->
+                <div class="control-group">
+                    <label for="plotSelect">Select Locus:</label>
+                    <select id="plotSelect" onchange="displayPlot()">
+                        <!-- Populated dynamically via JS -->
+                    </select>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="control-group">
+                    <button id="prevBtn" onclick="navigatePlot(-1)">◄ Prev</button>
+                    <button id="nextBtn" onclick="navigatePlot(1)">Next ►</button>
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img id="plotImage" src="" alt="Regional Association plot for Chromosome 9" style="display: none;" onerror="handleImageError()">
+                <div id="placeholder" class="placeholder-text">
+                    Select a locus to view.
+                </div>
+            </div>
+
+            <!-- FILES SECTION -->
+            <div class="files-section">
+            <h3 class="files-heading">Files</h3>
+
+            <div id="files-placeholder-msg" class="files-placeholder-msg">
+                Select a locus to view available files.
+            </div>
+
+            <div id="files-links-container" class="files-links-container hidden">
+                <span class="files-locus-label">
+                Locus: <strong id="files-locus-display"></strong>
+                </span>
+
+                <div class="files-links">
+                <a id="link-evidence-table"
+                    href="#"
+                    class="file-link file-link--evidence"
+                    rel="noopener noreferrer">
+                    📄 Evidence Table
+                </a>
+
+                <a id="link-audit-report"
+                    href="#"
+                    class="file-link file-link--audit"
+                    rel="noopener noreferrer">
+                    🔍 Audit Report
+                </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    // Configuration of plots available for each item
+    const dataset = {
+        "chr9": [
+            { id: 1, name: "9:6100001-6350000", filename: "plots/chr9-6100001-6350000.png" },
+            { id: 2, name: "9:14000001-14300000", filename: "plots/chr9-14000001-14300000.png" },
+            { id: 3, name: "9:15450001-16150000", filename: "plots/chr9-15450001-16150000.png" },
+            { id: 4, name: "9:30050001-30500000", filename: "plots/chr9-30050001-30500000.png" },
+            { id: 5, name: "9:107350001-107500000", filename: "plots/chr9-107350001-107500000.png" },
+            { id: 6, name: "9:116900001-117100000", filename: "plots/chr9-116900001-117100000.png" },
+            { id: 7, name: "9:117600001-117950000", filename: "plots/chr9-117600001-117950000.png" },
+            { id: 8, name: "9:124750001-126050000", filename: "plots/chr9-124750001-126050000.png" },
+            { id: 9, name: "9:131850001-132150000", filename: "plots/chr9-131850001-132150000.png" },
+            { id: 10, name: "9:133400001-133700000", filename: "plots/chr9-133400001-133700000.png" },
+            { id: 11, name: "9:134250001-134450000", filename: "plots/chr9-134250001-134450000.png" }
+
+        ]
+    };
+
+    const plotSelect = document.getElementById('plotSelect');
+    const plotImage = document.getElementById('plotImage');
+    const placeholder = document.getElementById('placeholder');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    // Initialize dropdowns on load
+    function init() {
+        updatePlotOptions();
+        
+        // Add keyboard arrow key navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') navigatePlot(-1);
+            if (e.key === 'ArrowRight') navigatePlot(1);
+        });
+    }
+
+    // Populate plot dropdown based on selected item
+    function updatePlotOptions() {
+        const plots = dataset["chr9"] || [];
+        
+        plotSelect.innerHTML = '';
+        plots.forEach((plot, index) => {
+            const option = document.createElement('option');
+            option.value = index;
+            option.textContent = plot.name;
+            plotSelect.appendChild(option);
+        });
+
+        displayPlot();
+    }
+
+    // Load and display the current selected plot image
+    function displayPlot() {
+        const plotIndex = parseInt(plotSelect.value, 10);
+        const plots = dataset["chr9"] || [];
+
+        if (plots && plots[plotIndex]) {
+            const currentPlot = plots[plotIndex];
+            const plotFileKey = currentPlot.filename
+                .replace(/^plots\//, '')
+                .replace(/\.png$/, '')
+                .replace('chr9-', ''); // Remove "chr1" prefix if present
+            plotImage.src = currentPlot.filename;
+            plotImage.style.display = 'block';
+            placeholder.style.display = 'none';
+            updateFileLinks(plotFileKey, currentPlot.name);
+        } else {
+            plotImage.style.display = 'none';
+            placeholder.style.display = 'block';
+            placeholder.textContent = 'No plot selected or available.';
+            updateFileLinks(null);
+        }
+
+        updateButtonStates();
+    }
+
+    // Navigate using Prev/Next buttons or arrow keys
+    function navigatePlot(direction) {
+        const currentIndex = parseInt(plotSelect.value, 10);
+        const newIndex = currentIndex + direction;
+        
+        if (newIndex >= 0 && newIndex < plotSelect.options.length) {
+            plotSelect.value = newIndex;
+            displayPlot();
+        }
+    }
+
+    // Enable/Disable navigation buttons at boundaries
+    function updateButtonStates() {
+        const currentIndex = parseInt(plotSelect.value, 10);
+        const totalPlots = plotSelect.options.length;
+
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === totalPlots - 1;
+    }
+
+    // Fallback if image file is missing or not found
+    function handleImageError() {
+        plotImage.style.display = 'none';
+        placeholder.style.display = 'block';
+        const filename = plotImage.src.split('/').pop();
+        placeholder.innerHTML = `⚠️ Could not load <code>${filename}</code>.<br><br><small>Make sure the image file is placed in the same folder as this HTML page.</small>`;
+    }
+
+    // ─── Dynamic File Links ─────────────────────────────────────────────────────
+
+    /**
+     * Adjust these two functions to match your actual file naming convention.
+     * Examples assume files are named like: CHR1_LOC001_evidence_table.html
+     */
+    function getEvidenceTablePath(plotFileKey) {
+    // e.g. "LOC001" → "files/LOC001_evidence_table.html"
+    return `tables/9_${plotFileKey}.html`;
+    }
+
+    function getAuditReportPath(plotFileKey) {
+    // e.g. "LOC001" → "files/LOC001_audit_report.html"
+    return `audits/9_${plotFileKey}_audit_report.html`;
+    }
+
+    /**
+     * Call this function whenever the selected locus changes.
+    * @param {string|null} plotFileKey - The selected plot filename without its folder or extension.
+    * @param {string|null} displayName - The selected locus name to display.
+     */
+    function updateFileLinks(plotFileKey, displayName = plotFileKey) {
+    const placeholder   = document.getElementById('files-placeholder-msg');
+    const linksContainer = document.getElementById('files-links-container');
+    const locusDisplay  = document.getElementById('files-locus-display');
+    const evidenceLink  = document.getElementById('link-evidence-table');
+    const auditLink     = document.getElementById('link-audit-report');
+
+    if (plotFileKey === null || plotFileKey === undefined || plotFileKey === '') {
+        // No locus selected — show placeholder, hide links
+        placeholder.classList.remove('hidden');
+        linksContainer.classList.add('hidden');
+        evidenceLink.href = '#';
+        auditLink.href    = '#';
+        return;
+    }
+
+    // Locus selected — update links and show them
+    locusDisplay.textContent = displayName;
+    evidenceLink.href = getEvidenceTablePath(plotFileKey);
+    auditLink.href    = getAuditReportPath(plotFileKey);
+
+    placeholder.classList.add('hidden');
+    linksContainer.classList.remove('hidden');
+    }
+
+    // Run initialization
+    init();
+</script>
+
+</body>
+</html>
