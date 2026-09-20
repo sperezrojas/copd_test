@@ -1,374 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>1_72350001-73700000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPD locus evidence table: 1:72,350,001-73,700,000 (GRCh38)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="copd-locus-evidence-table-172350001-73700000-grch38">COPD locus evidence table: 1:72,350,001-73,700,000 (GRCh38)</h1>
-<p><strong>Nearest gene:</strong> LRRIQ3 | <strong>PoPS prioritized:</strong> NEGR1 | <strong>FLAMES/MAGMA/ABC prioritized:</strong> NA
-<strong>Lead variant:</strong> rs12142152 (1:73,189,630, PIP=0.322) | <strong>Credible set size:</strong> 237 variants (ABF finemapping)</p>
-<p><strong>Locus/region note:</strong> This 1.35 Mb window is a genuine gene desert (confirmed via Ensembl
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="copd-locus-evidence-table-172350001-73700000-grch38">COPD locus evidence table: 1:72,350,001-73,700,000 (GRCh38)</h1><div class="summary"><p><strong>Nearest gene:</strong> LRRIQ3 | <strong>PoPS prioritized:</strong> NEGR1 | <strong>FLAMES/MAGMA/ABC prioritized:</strong> NA
+<strong>Lead variant:</strong> rs12142152 (1:73,189,630, PIP=0.322) | <strong>Credible set size:</strong> 237 variants (ABF finemapping)</p><p><strong>Locus/region note:</strong> This 1.35 Mb window is a genuine gene desert (confirmed via Ensembl
 overlap query by the researcher) — no protein-coding gene lies inside the region itself.
 LRRIQ3 sits ~840 kb from the lead variant, past the region's centromeric boundary; NEGR1
 sits ~70 kb telomeric of the region's start, also outside the window. FPGT-TNNI3K is
@@ -377,9 +59,11 @@ missense, splice-donor, or splice-acceptor variant; nearly all variants are
 intergenic/upstream/downstream of a 7SK snRNA pseudogene (RN7SKP19) or non-coding, and one
 very-low-PIP variant is nearest a keratin pseudogene (KRT8P21). Per pipeline scope, no
 variant-by-variant literature search was performed beyond the lead variant; a targeted
-PubMed search on the lead variant rsID (rs12142152) returned zero results.</p>
+PubMed search on the lead variant rsID (rs12142152) returned zero results.</p></div>
+
+
 <h2 id="evidence-table">Evidence table</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -392,31 +76,31 @@ PubMed search on the lead variant rsID (rs12142152) returned zero results.</p>
 </thead>
 <tbody>
 <tr>
-<td>LRRIQ3</td>
+<td class="gene">LRRIQ3</td>
 <td>Statistical genetics (GWAS)</td>
 <td>rs640561 (intergenic, near LRRIQ3, same broader locus as lead variant but not identical to it) reached genome-wide significance for problematic opioid use (POU) in a 23andMe GWAS (n=132,113); POU showed strong positive genetic correlation with smoking initiation (rg=0.63), alcohol dependence (rg=0.74), major depressive disorder (rg=0.44), and chronic pain (rg=0.42)</td>
 <td>Sanchez-Roige et al. 2021, Mol Psychiatry, PMID 34728798, DOI 10.1038/s41380-021-01335-3</td>
-<td>WEAKENED (gene-specificity not established — see audit)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-specificity not established — see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LRRIQ3</td>
+<td class="gene">LRRIQ3</td>
 <td>Statistical genetics (GWAS replication)</td>
 <td>Independent replication attempt of rs640561 in a persistent-opioid-use-after-surgery cohort found only a nominal association (p=0.015), substantially weaker than OPRM1 (p=8.7e-7) — limited independent replication of the LRRIQ3-region signal</td>
 <td>Annis et al. 2024, Genet Epidemiol, PMID 39385445, DOI 10.1002/gepi.22588</td>
-<td>WEAKENED (same gene-specificity caveat; also shows fragility of replication)</td>
+<td><span class="tag-warning">WEAKENED</span> (same gene-specificity caveat; also shows fragility of replication)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LRRIQ3</td>
+<td class="gene">LRRIQ3</td>
 <td>Statistical genetics (conditional FDR / eQTL-adjacent)</td>
-<td>Conditional FDR analysis (MDD vs. chronic pain GWAS) found SNPs associated specifically with MDD in the same gene-dense chr1 region containing LINC01360, LRRIQ3, FPGT, and FPGT-TNNI3K; several SNPs associated with brain/CNS expression of &quot;nearby genes&quot; (not LRRIQ3-specific)</td>
+<td>Conditional FDR analysis (MDD vs. chronic pain GWAS) found SNPs associated specifically with MDD in the same gene-dense chr1 region containing LINC01360, LRRIQ3, FPGT, and FPGT-TNNI3K; several SNPs associated with brain/CNS expression of "nearby genes" (not LRRIQ3-specific)</td>
 <td>Johnston et al. 2019, Transl Psychiatry, PMID 31748543, DOI 10.1038/s41398-019-0613-4</td>
-<td>WEAKENED — this source itself undercuts LRRIQ3-specificity by naming multiple co-located candidate genes (see audit)</td>
+<td><span class="tag-warning">WEAKENED</span> — this source itself undercuts LRRIQ3-specificity by naming multiple co-located candidate genes (see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LRRIQ3</td>
+<td class="gene">LRRIQ3</td>
 <td>Rare-variant / structural (neurodevelopmental)</td>
 <td>Homozygous truncating variant in LRRIQ3 identified as one of 52 novel, unreplicated candidate genes via exome sequencing of consanguineous intellectual-disability families</td>
 <td>Reuter et al. 2017, JAMA Psychiatry, PMID 28097321, DOI 10.1001/jamapsychiatry.2016.3798</td>
@@ -424,63 +108,63 @@ PubMed search on the lead variant rsID (rs12142152) returned zero results.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LRRIQ3</td>
+<td class="gene">LRRIQ3</td>
 <td>Comparative genomics (context only, non-human)</td>
 <td>LRRIQ3 is part of a duplicated autosomal segment on supernumerary B chromosomes of Siberian roe deer</td>
 <td>Trifonov et al. 2013, BMC Biology, PMID 23915065, DOI 10.1186/1741-7007-11-90</td>
-<td>Verified as reported; explicitly noted as a curiosity with no bearing on human lung biology</td>
+<td><span class="tag">Verified</span> as reported; explicitly noted as a curiosity with no bearing on human lung biology</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LRRIQ3</td>
+<td class="gene">LRRIQ3</td>
 <td>Immunology (incidental, non-pulmonary)</td>
 <td>LRRIQ3 expression regulated downstream of SPHK2 knockdown in an osteoarthritis fibroblast-like-synoviocyte model (joint disease, not COPD/lung)</td>
 <td>Zheng et al. 2024, J Inflamm Res, PMID 39416266, DOI 10.2147/JIR.S476077</td>
-<td>Verified as reported; incidental finding, not COPD/lung-relevant</td>
+<td><span class="tag">Verified</span> as reported; incidental finding, not COPD/lung-relevant</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NEGR1</td>
+<td class="gene">NEGR1</td>
 <td>Statistical genetics / neurobiology</td>
 <td>NEGR1 transcript and protein levels significantly elevated in dorsolateral prefrontal cortex of schizophrenia patients vs. controls</td>
 <td>Karis et al. 2018, Front Mol Neurosci, PMID 29434535, DOI 10.3389/fnmol.2018.00008</td>
-<td>Verified as reported; CNS-tissue context, not lung</td>
+<td><span class="tag">Verified</span> as reported; CNS-tissue context, not lung</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NEGR1</td>
+<td class="gene">NEGR1</td>
 <td>Statistical genetics (cross-trait GWAS)</td>
-<td>Cross-trait GWAS analysis identified NEGR1 as one of seven &quot;key genes&quot; with shared genetic architecture between smoking-behavior GWAS and major depressive disorder GWAS, enriched in limbic/GABAergic/dopaminergic neuron and synaptic pathways</td>
+<td>Cross-trait GWAS analysis identified NEGR1 as one of seven "key genes" with shared genetic architecture between smoking-behavior GWAS and major depressive disorder GWAS, enriched in limbic/GABAergic/dopaminergic neuron and synaptic pathways</td>
 <td>Wang et al. 2025, J Affect Disord, PMID 39842668, DOI 10.1016/j.jad.2025.01.093</td>
-<td>Verified as reported; direct literature link between NEGR1 and smoking-behavior genetics (supports prior #1)</td>
+<td><span class="tag">Verified</span> as reported; direct literature link between NEGR1 and smoking-behavior genetics (supports prior #1)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NEGR1</td>
+<td class="gene">NEGR1</td>
 <td>Statistical genetics / structural biology (review)</td>
 <td>NEGR1 originally identified as a GWAS risk gene for obesity/BMI; more recent evidence implicates NEGR1 in major depressive disorder and other psychiatric disorders via cross-talk with cytokine-receptor signaling; Negr1-knockout mice show psychiatric-relevant (not pulmonary) behavioral phenotypes</td>
 <td>Noh et al. 2020, Exp Neurobiol, PMID 32122104, DOI 10.5607/en.2020.29.1.1</td>
-<td>Verified as reported; cytokine cross-talk is CNS-context only, tissue-mismatched to COPD-relevant airway immunology</td>
+<td><span class="tag">Verified</span> as reported; cytokine cross-talk is CNS-context only, tissue-mismatched to COPD-relevant airway immunology</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NEGR1</td>
+<td class="gene">NEGR1</td>
 <td>Structural/developmental (neurodevelopmental)</td>
 <td>NEGR1 and other IgLON family cell-adhesion molecules are shed from the neuronal cell surface by metalloproteinases (ADAMs/MMPs) to promote cortical neurite outgrowth</td>
 <td>Sanz et al. 2015 (J Biol Chem, online Dec 2014), PMID 25538237, DOI 10.1074/jbc.M114.628438</td>
-<td>Verified as reported; researcher explicitly declined to over-interpret the metalloproteinase/COPD-protease overlap as pulmonary-relevant — appropriate restraint</td>
+<td><span class="tag">Verified</span> as reported; researcher explicitly declined to over-interpret the metalloproteinase/COPD-protease overlap as pulmonary-relevant — appropriate restraint</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NEGR1</td>
+<td class="gene">NEGR1</td>
 <td>Structural/developmental (CNS injury, immune-adjacent)</td>
 <td>IgLON-family paralog neurotractin/kilon (related to NEGR1) is induced on reactive astrocytes after entorhinal cortex lesion, illustrating an IgLON role in CNS injury response</td>
 <td>Schäfer et al. 2005, Mol Cell Neurosci, PMID 15946856, DOI 10.1016/j.mcn.2005.04.010</td>
-<td>Verified as reported; CNS-glial context, not peripheral/pulmonary immune biology</td>
+<td><span class="tag">Verified</span> as reported; CNS-glial context, not peripheral/pulmonary immune biology</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="notes-on-evidence-strength-read-together-with-skeptic-verdicts-above">Notes on evidence strength (read together with skeptic verdicts above)</h2>
 <ul>
 <li>No verified citation in this table establishes lung-structural, airway-epithelial, or
@@ -501,7 +185,7 @@ the gene level (Wang et al. 2025 for NEGR1 is the closest thing to a positive
 smoking-specific gene-level finding).</li>
 </ul>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not reviewed by citation-verifier or red-team-skeptic)</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -513,35 +197,35 @@ smoking-specific gene-level finding).</li>
 </thead>
 <tbody>
 <tr>
-<td>LRRIQ3 (ENSG00000162620)</td>
+<td class="gene">LRRIQ3 (ENSG00000162620)</td>
 <td>0.0804 — the only gene Open Targets' L2G model ever resolves at the lead variant's 43 registered credible sets, but this identical score recurs across all 43 phenotypically unrelated traits (depression, ADHD, food-liking, COPD, etc.), suggesting a static distance-based feature rather than trait-specific molecular evidence (flagged as uninformative by red-team-skeptic)</td>
-<td>The COPD-phecode (&quot;Chronic airway obstruction&quot;) credible set at this locus colocalizes strongly with age-of-smoking-initiation (h4=0.92) and smoking-status-ever-vs-never (h4=0.81), and with numerous psychiatric traits (depression/MDD h4~0.81-0.94, bipolar h4=0.88, schizophrenia h4~0.72-0.73, ADHD h4~0.73, anxiety h4=0.73, PTSD-PRS h4=0.89 but inconsistent across PTSD definitions); near-null colocalization with FEV1 (h4=0.023) and with the &quot;chronic bronchitis&quot; PheCode (h4=0.061)</td>
+<td>The COPD-phecode ("Chronic airway obstruction") credible set at this locus colocalizes strongly with age-of-smoking-initiation (h4=0.92) and smoking-status-ever-vs-never (h4=0.81), and with numerous psychiatric traits (depression/MDD h4~0.81-0.94, bipolar h4=0.88, schizophrenia h4~0.72-0.73, ADHD h4~0.73, anxiety h4=0.73, PTSD-PRS h4=0.89 but inconsistent across PTSD definitions); near-null colocalization with FEV1 (h4=0.023) and with the "chronic bronchitis" PheCode (h4=0.061)</td>
 <td>No LoF constraint: oe=1.26 (90% CI 1.00-1.60) — tolerant</td>
 <td>0.030 (genetic_association datatype score 0.049)</td>
 </tr>
 <tr>
-<td>NEGR1 (ENSG00000172260)</td>
+<td class="gene">NEGR1 (ENSG00000172260)</td>
 <td>Never the L2G-preferred target at this locus (L2G always resolves to LRRIQ3 instead)</td>
 <td>Not gene-specific (colocalization in Open Targets is keyed to the variant/trait credible set, not to a candidate gene); same locus-level pattern above applies regardless of which gene is causal</td>
 <td>LoF-constrained: oe=0.20 (90% CI 0.11-0.43) — intolerant, unlike LRRIQ3</td>
 <td>0.222 (genetic_association datatype score 0.365) — likely reflects NEGR1's very large general GWAS footprint (BMI, psychiatric traits), not COPD-specific causal evidence</td>
 </tr>
 <tr>
-<td>RN7SKP19 / RN7SKP195 / RN7SKP196 (7SK snRNA pseudogenes)</td>
+<td class="gene">RN7SKP19 / RN7SKP195 / RN7SKP196 (7SK snRNA pseudogenes)</td>
 <td>No data available (misc_RNA biotype; not L2G-evaluated)</td>
 <td>No data available</td>
 <td>No constraint data</td>
 <td>No disease-association data (count=0)</td>
 </tr>
 <tr>
-<td>KRT8P21 (keratin pseudogene)</td>
+<td class="gene">KRT8P21 (keratin pseudogene)</td>
 <td>No data available</td>
 <td>No data available</td>
 <td>No constraint data</td>
 <td>No disease-association data (count=0)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Full Open Targets query detail: see <code>evidence_tables/_status/1_72350001-73700000/opentargets.md</code>.</p>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>Prioritized gene: NONE with confidence above LOW — best-supported single pick is LRRIQ3, confidence LOW.</strong></p>
@@ -583,5 +267,7 @@ pulmonary evidence than on a <em>positive</em>, gene-level smoking mechanism (wi
 exception of the verified NEGR1-smoking-behavior cross-trait GWAS finding), and the study
 team should weigh it accordingly.</p>
 
+        </div>
+    </div>
 </body>
 </html>

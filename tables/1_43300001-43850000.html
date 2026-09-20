@@ -1,377 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>1_43300001-43850000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 1:43,300,001-43,850,000 (nearest gene PTPRF)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-143300001-43850000-nearest-gene-ptprf">Evidence table — Locus 1:43,300,001-43,850,000 (nearest gene PTPRF)</h1>
-<p>Lead variant: rs2842171 (1:43,574,179, GRCh38, PIP=0.162, PTPRF intron). 32-variant
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-143300001-43850000-nearest-gene-ptprf">Evidence table — Locus 1:43,300,001-43,850,000 (nearest gene PTPRF)</h1><div class="summary"><p>Lead variant: rs2842171 (1:43,574,179, GRCh38, PIP=0.162, PTPRF intron). 32-variant
 credible set, all intron/upstream/intergenic consequence (no missense/splice-donor/
 splice-acceptor variants); PTPRF is the annotated gene for the great majority of the
 credible set. Candidate genes from internal pipeline: PTPRF (nearest gene), SLC2A1
-(MAGMA-prioritized), ERMAP (PoPS-prioritized).</p>
-<p><strong>RE-OPENING NOTE (2026-09-11):</strong> SLC2A1 and ERMAP were subsequently discovered to
+(MAGMA-prioritized), ERMAP (PoPS-prioritized).</p><p><strong>RE-OPENING NOTE (2026-09-11):</strong> SLC2A1 and ERMAP were subsequently discovered to
 be artifacts of a genome-build error in the MAGMA/PoPS gene-location merge file
 (<code>loci/copd-all-gene-prioritization.txt</code>) — both genes sit 500-730kb outside this
 locus's stated window. A corrected re-merge surfaced <strong>CDC20</strong> as a new candidate
@@ -379,12 +61,14 @@ gene for this same locus, never evaluated in the original review. CDC20 has now
 been independently confirmed to genuinely overlap this locus's window (unlike
 SLC2A1/ERMAP) and has been fully researched, verified, and critiqued per the
 pipeline's standard process; see the dedicated CDC20 section below and the
-updated &quot;Prioritized gene&quot; synthesis at the end of this file.</p>
-<p>All citations below carry a citation-verifier verdict of VERIFIED (checked
-2026-09-11). &quot;Skeptic verdict&quot; reflects the red-team-skeptic's gene-level
+updated "Prioritized gene" synthesis at the end of this file.</p><p>All citations below carry a citation-verifier verdict of VERIFIED (checked
+2026-09-11). "Skeptic verdict" reflects the red-team-skeptic's gene-level
 assessment (see full reasoning in <code>audits/1_43300001-43850000_audit.md</code>), not a
-per-citation re-verification.</p>
-<table>
+per-citation re-verification.</p></div>
+
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -397,287 +81,287 @@ per-citation re-verification.</p>
 </thead>
 <tbody>
 <tr>
-<td>PTPRF</td>
+<td class="gene">PTPRF</td>
 <td>Statistical genetics (background)</td>
 <td>GSCAN: tobacco/alcohol-use GWAS of up to 1.2M individuals, 406 loci — establishes existence/scale of smoking-behavior GWAS signal class underlying the Open Targets colocalization pattern at this locus; abstract does not confirm PTPRF by gene symbol</td>
 <td>PMID 30643251 / DOI 10.1038/s41588-018-0307-5</td>
-<td>WEAKENED (background only, no gene-level attribution)</td>
+<td><span class="tag-warning">WEAKENED</span> (background only, no gene-level attribution)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PTPRF</td>
+<td class="gene">PTPRF</td>
 <td>Statistical genetics (background)</td>
 <td>COPD GWAS (UK Biobank + ICGC), 82 loci — general background; abstract does not confirm PTPRF by gene symbol</td>
 <td>PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
-<td>WEAKENED (background only)</td>
+<td><span class="tag-warning">WEAKENED</span> (background only)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PTPRF</td>
+<td class="gene">PTPRF</td>
 <td>Statistical genetics (background)</td>
 <td>Lung-function GWAS, 279 signals in 400,102 individuals; PTPRF not named in abstract</td>
 <td>PMID 30804560 / DOI 10.1038/s41588-018-0321-7</td>
-<td>WEAKENED (background only; absence of PTPRF mention is consistent with no confirmed spirometry link)</td>
+<td><span class="tag-warning">WEAKENED</span> (background only; absence of PTPRF mention is consistent with no confirmed spirometry link)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PTPRF</td>
+<td class="gene">PTPRF</td>
 <td>Statistical genetics</td>
-<td>PTPRF explicitly named (&quot;significant associations proximal to genes such as TCF4 and PTPRF&quot;) in a GWAS of impulsive personality / drug-experimentation traits</td>
+<td>PTPRF explicitly named ("significant associations proximal to genes such as TCF4 and PTPRF") in a GWAS of impulsive personality / drug-experimentation traits</td>
 <td>PMID 37173343 / DOI 10.1038/s41398-023-02453-y</td>
-<td>WEAKENED — behavioral trait, not respiratory; supports smoking/impulsivity-mediated interpretation (prior #1) over direct pulmonary biology (prior #2)</td>
+<td><span class="tag-warning">WEAKENED</span> — behavioral trait, not respiratory; supports smoking/impulsivity-mediated interpretation (prior #1) over direct pulmonary biology (prior #2)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PTPRF</td>
+<td class="gene">PTPRF</td>
 <td>Statistical genetics</td>
 <td>PTPRF among 10 genes with GWAS signals for ≥4 reproductive traits, linked to Mendelian reproductive disorders</td>
 <td>PMID 39672892 / DOI 10.1038/s43587-024-00733-w</td>
-<td>WEAKENED — nonspecific cross-trait pleiotropy</td>
+<td><span class="tag-warning">WEAKENED</span> — nonspecific cross-trait pleiotropy</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PTPRF</td>
+<td class="gene">PTPRF</td>
 <td>Statistical genetics</td>
 <td>PTPRF among cell-adhesion/Ig-like-domain pathway genes recurring across Alzheimer's disease GWAS datasets</td>
 <td>PMID 26028559 / DOI 10.1016/j.bbrc.2015.05.044</td>
-<td>WEAKENED — nonspecific cross-disease pleiotropy</td>
+<td><span class="tag-warning">WEAKENED</span> — nonspecific cross-disease pleiotropy</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PTPRF</td>
+<td class="gene">PTPRF</td>
 <td>Structural/developmental</td>
 <td>Homozygous truncating PTPRF mutation causes athelia; PTPRF localizes to adherens junctions, regulates epithelial cell-cell contact/Wnt signaling; Ptprf-null female mice have a lactation defect</td>
 <td>PMID 24781087 / DOI 10.1007/s00439-014-1445-1</td>
-<td>WEAKENED — general epithelial-adhesion biology, not lung-specific (no PTPRF airway/alveolar literature exists at all per targeted search)</td>
+<td><span class="tag-warning">WEAKENED</span> — general epithelial-adhesion biology, not lung-specific (no PTPRF airway/alveolar literature exists at all per targeted search)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PTPRF</td>
+<td class="gene">PTPRF</td>
 <td>Structural (metabolic)</td>
 <td>PTPRF/LAR overexpression in muscle causes whole-body insulin resistance via IRS dephosphorylation</td>
 <td>PMID 11309481 / DOI 10.1073/pnas.071050398</td>
-<td>WEAKENED — classic metabolic biology, not lung-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — classic metabolic biology, not lung-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PTPRF</td>
+<td class="gene">PTPRF</td>
 <td>Structural (metabolic)</td>
 <td>LAR/PTPRF increased in skeletal muscle of obese/insulin-resistant humans; dephosphorylates insulin receptor kinase</td>
 <td>PMID 9218523 / DOI 10.1172/JCI119552</td>
-<td>WEAKENED — metabolic, not lung-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — metabolic, not lung-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PTPRF</td>
+<td class="gene">PTPRF</td>
 <td>Structural (review)</td>
 <td>Review of LAR/PTPRF and other PTPs as negative regulators of insulin signaling</td>
 <td>PMID 12626322 / DOI 10.1152/ajpendo.00462.2002</td>
-<td>WEAKENED — background review, not lung-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — background review, not lung-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PTPRF</td>
+<td class="gene">PTPRF</td>
 <td>Structural (basic cell biology)</td>
 <td>Structural basis of GIT1/liprin-alpha (PTPRF-interacting-protein family)/paxillin interactions in focal-adhesion dynamics</td>
 <td>PMID 30737283 / DOI 10.1074/jbc.RA118.006915</td>
-<td>WEAKENED — basic cell biology, not disease- or lung-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — basic cell biology, not disease- or lung-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC2A1</td>
+<td class="gene">SLC2A1</td>
 <td>Statistical genetics</td>
 <td>Mendelian randomization: SLC2A1 expression has a causal effect on COPD risk (OR=1.32, 95% CI 1.02-1.71)</td>
 <td>PMID 40964458 / DOI 10.2147/COPD.S524381</td>
-<td>CONTESTED — single small exploratory MR+ML study, CI lower bound near null (1.02); gene lies ~650kb outside the stated locus and has zero L2G support at the lead variant across all 70 fine-mapped studies examined</td>
+<td><span class="tag-warning">CONTESTED</span> — single small exploratory MR+ML study, CI lower bound near null (1.02); gene lies ~650kb outside the stated locus and has zero L2G support at the lead variant across all 70 fine-mapped studies examined</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC2A1</td>
+<td class="gene">SLC2A1</td>
 <td>Structural/developmental</td>
 <td>SLC2A1 (GLUT1) mRNA higher in central vs. peripheral human airway in both healthy and COPD (ex-smoker) subjects; NOT differentially expressed between COPD and healthy lung</td>
 <td>PMID 25505599 / DOI 10.1002/prp2.54</td>
-<td>CONTESTED — this specific lung-tissue evidence argues against, not for, COPD-specific SLC2A1 dysregulation</td>
+<td><span class="tag-warning">CONTESTED</span> — this specific lung-tissue evidence argues against, not for, COPD-specific SLC2A1 dysregulation</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC2A1</td>
+<td class="gene">SLC2A1</td>
 <td>Structural (adjacent phenotype)</td>
 <td>Rodent monocrotaline PAH model: shikonin reduces glycolytic shift (GLUT1/PKM2 downregulation) in pulmonary vascular remodeling</td>
 <td>PMID 36734266 / DOI 10.3892/mmr.2023.12947</td>
-<td>CONTESTED — different pulmonary vascular phenotype (PAH/RVH), not COPD/emphysema</td>
+<td><span class="tag-warning">CONTESTED</span> — different pulmonary vascular phenotype (PAH/RVH), not COPD/emphysema</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC2A1</td>
+<td class="gene">SLC2A1</td>
 <td>Structural (adjacent phenotype)</td>
 <td>p53 activation affects Glut1 expression in a right-ventricular-hypertrophy model</td>
 <td>PMID 32559203 / DOI 10.1371/journal.pone.0234872</td>
-<td>CONTESTED — different pulmonary vascular phenotype, not COPD</td>
+<td><span class="tag-warning">CONTESTED</span> — different pulmonary vascular phenotype, not COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC2A1</td>
+<td class="gene">SLC2A1</td>
 <td>Structural (adjacent phenotype)</td>
 <td>PDK inhibition reverses enhanced glycolysis in right-ventricular-hypertrophy models</td>
 <td>PMID 19949938 / DOI 10.1007/s00109-009-0524-6</td>
-<td>CONTESTED — different phenotype, not COPD</td>
+<td><span class="tag-warning">CONTESTED</span> — different phenotype, not COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC2A1</td>
+<td class="gene">SLC2A1</td>
 <td>Immunology (nonspecific)</td>
 <td>Brd4 upregulates GLUT1/Myc to support CD8+ T-cell glucose uptake and clonal expansion</td>
 <td>PMID 34512660 / DOI 10.3389/fimmu.2021.728082</td>
-<td>CONTESTED — generic immunometabolism common to all activated immune cells, not COPD- or airway-specific</td>
+<td><span class="tag-warning">CONTESTED</span> — generic immunometabolism common to all activated immune cells, not COPD- or airway-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC2A1</td>
+<td class="gene">SLC2A1</td>
 <td>Immunology (nonspecific)</td>
 <td>GLUT1 (SLC2A1) expression correlates with B-cell, CD8+/CD4+ T-cell, macrophage, neutrophil, and dendritic-cell infiltration in NSCLC</td>
 <td>PMID 34238200 / DOI 10.2174/1871520621666210708115406</td>
-<td>CONTESTED — tumor-immune correlational analysis, not a COPD-immunology study</td>
+<td><span class="tag-warning">CONTESTED</span> — tumor-immune correlational analysis, not a COPD-immunology study</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ERMAP</td>
+<td class="gene">ERMAP</td>
 <td>Structural (hematology)</td>
 <td>Review of ERMAP genetic variation and the Scianna blood-group serology system; no lung/airway relevance</td>
 <td>PMID 31246487 (PMC6684214)</td>
-<td>CONTESTED — gene lies ~500-730kb outside the stated locus, zero L2G support, zero Open Targets COPD association evidence</td>
+<td><span class="tag-warning">CONTESTED</span> — gene lies ~500-730kb outside the stated locus, zero L2G support, zero Open Targets COPD association evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ERMAP</td>
+<td class="gene">ERMAP</td>
 <td>Structural (hematology)</td>
 <td>ERMAP knockdown impairs Ara-C-induced erythroid differentiation of K562 cells</td>
 <td>PMID 19236746</td>
-<td>CONTESTED — supports erythroid-lineage role only, no lung relevance</td>
+<td><span class="tag-warning">CONTESTED</span> — supports erythroid-lineage role only, no lung relevance</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ERMAP</td>
+<td class="gene">ERMAP</td>
 <td>Immunology</td>
 <td>ERMAP is a B7-family-related molecule expressed on antigen-presenting cells; ERMAP-Ig inhibits T-cell function in vitro and ameliorates EAE and type 1 diabetes in mice; anti-ERMAP antibody enhances macrophage phagocytosis and inhibits tumor growth in vivo</td>
 <td>PMID 32620788 / DOI 10.1038/s41423-020-0494-8</td>
-<td>CONTESTED — mechanistically specific and genuinely relevant to CD4+/CD8+ T-cell and macrophage biology (prior #3), but studied only in autoimmune-encephalomyelitis/type-1-diabetes/tumor-immunology contexts, never lung or COPD; skeptic explicitly warns against letting this narrative plausibility substitute for absent locus-specific genetics</td>
+<td><span class="tag-warning">CONTESTED</span> — mechanistically specific and genuinely relevant to CD4+/CD8+ T-cell and macrophage biology (prior #3), but studied only in autoimmune-encephalomyelitis/type-1-diabetes/tumor-immunology contexts, never lung or COPD; skeptic explicitly warns against letting this narrative plausibility substitute for absent locus-specific genetics</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CDC20</td>
+<td class="gene">CDC20</td>
 <td>Structural (senescence)</td>
 <td>Cdc20 downregulation is necessary and sufficient (with APC/C inhibition) to induce p53-dependent premature senescence in normal human lung fibroblasts; in lung adenocarcinoma cells Cdc20 is instead upregulated and its knockdown promotes apoptosis, not senescence</td>
 <td>PMID 35988650 / DOI 10.1016/j.jbc.2022.102405</td>
-<td>WEAKENED — real, lung-fibroblast-specific senescence mechanism (COPD-relevant biology class), but no eQTL/genetic link back to this locus's actual GWAS signal; hypothesis-generating, not locus-confirming</td>
+<td><span class="tag-warning">WEAKENED</span> — real, lung-fibroblast-specific senescence mechanism (COPD-relevant biology class), but no eQTL/genetic link back to this locus's actual GWAS signal; hypothesis-generating, not locus-confirming</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CDC20</td>
+<td class="gene">CDC20</td>
 <td>Structural (pulmonary fibrosis)</td>
 <td>CDC20 upregulated in bleomycin-induced mouse pulmonary fibrosis and TGF-β1-activated human lung fibroblasts (MRC-5); knockdown suppresses fibroblast activation and protects against bleomycin-induced lung injury via TSC1/mTOR-pathway modulation</td>
 <td>PMID 42710704 / DOI 10.1016/j.cellsig.2026.112886</td>
-<td>WEAKENED — an IPF/pulmonary-fibrosis model, mechanistically distinct from COPD/emphysema's protease-antiprotease-driven pathology</td>
+<td><span class="tag-warning">WEAKENED</span> — an IPF/pulmonary-fibrosis model, mechanistically distinct from COPD/emphysema's protease-antiprotease-driven pathology</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CDC20</td>
+<td class="gene">CDC20</td>
 <td>Structural (pulmonary fibrosis)</td>
 <td>CDC20 differentially expressed in IPF patient lung tissue/cells vs. controls (qPCR/western-blot validated)</td>
 <td>PMID 40170095 / DOI 10.1186/s41065-025-00401-y</td>
-<td>WEAKENED — IPF, not COPD</td>
+<td><span class="tag-warning">WEAKENED</span> — IPF, not COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CDC20</td>
+<td class="gene">CDC20</td>
 <td>Structural (pulmonary vascular)</td>
 <td>Noncanonical HIPPO-MST1/2 signaling upregulates CDC20 to drive hyperproliferation/apoptosis resistance in human PAH pulmonary-artery smooth-muscle cells/adventitial fibroblasts</td>
 <td>PMID 40920996 (preprint PMID 40236147) / DOI 10.1165/rcmb.2025-0238LE</td>
-<td>WEAKENED — a PAH/pulmonary-vascular-remodeling model, not COPD/emphysema (PH is a recognized COPD comorbidity, but this is not evidence of a COPD-causal mechanism)</td>
+<td><span class="tag-warning">WEAKENED</span> — a PAH/pulmonary-vascular-remodeling model, not COPD/emphysema (PH is a recognized COPD comorbidity, but this is not evidence of a COPD-causal mechanism)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CDC20</td>
+<td class="gene">CDC20</td>
 <td>Structural (toxicology)</td>
 <td>Chronic hexavalent-chromium exposure alters Cdc20 kinetochore localization and Cdc20-Mad2 interaction in human lung fibroblasts, causing spindle-assembly-checkpoint bypass</td>
 <td>PMID 33312751 / DOI 10.4172/2157-2518.1000140</td>
-<td>WEAKENED — carcinogenesis/toxicology framing, not COPD</td>
+<td><span class="tag-warning">WEAKENED</span> — carcinogenesis/toxicology framing, not COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CDC20</td>
+<td class="gene">CDC20</td>
 <td>Structural (smoking mechanism)</td>
 <td>Cigarette smoke condensate impairs CDC20/CDH1/APC2-mediated ubiquitination and degradation of the oncoprotein OLC1 in lung cancer cells</td>
 <td>PMID 21439932 / DOI 10.1016/j.bbrc.2011.03.095</td>
-<td>WEAKENED — a genuine, direct smoking-CDC20 mechanistic link, but demonstrated in a lung-cancer cell-biology readout, not COPD/emphysema</td>
+<td><span class="tag-warning">WEAKENED</span> — a genuine, direct smoking-CDC20 mechanistic link, but demonstrated in a lung-cancer cell-biology readout, not COPD/emphysema</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CDC20</td>
+<td class="gene">CDC20</td>
 <td>Structural (oncology bioinformatics)</td>
-<td>CDC20 among cell-cycle &quot;hub genes&quot; upregulated/correlated with prognosis in smoking-associated lung adenocarcinoma (bioinformatic DEG/TCGA analyses)</td>
+<td>CDC20 among cell-cycle "hub genes" upregulated/correlated with prognosis in smoking-associated lung adenocarcinoma (bioinformatic DEG/TCGA analyses)</td>
 <td>PMID 30588191, PMID 29328493, PMID 26622675</td>
-<td>WEAKENED — correlative oncology bioinformatics; a generic proliferation-marker signature, not a COPD- or airway-remodeling-specific finding</td>
+<td><span class="tag-warning">WEAKENED</span> — correlative oncology bioinformatics; a generic proliferation-marker signature, not a COPD- or airway-remodeling-specific finding</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CDC20</td>
+<td class="gene">CDC20</td>
 <td>Structural (oncology bioinformatics)</td>
 <td>CDC20 among DEGs in a NON-smoking-female lung-cancer cohort (explicitly not a smoking-related cohort, despite superficial grouping with the above)</td>
 <td>PMID 25514196 / DOI 10.3109/01902148.2014.971472</td>
-<td>WEAKENED — oncology, not smoking-related, not COPD</td>
+<td><span class="tag-warning">WEAKENED</span> — oncology, not smoking-related, not COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CDC20</td>
+<td class="gene">CDC20</td>
 <td>Immunology (nonspecific)</td>
 <td>CDC20 is one of several hub genes associated with an imbalanced (macrophage-predominant, T-cell-suppressed) tumor immune microenvironment in hepatocellular carcinoma</td>
 <td>PMID 41288681 / DOI 10.1007/s00210-025-04835-z</td>
-<td>CONTESTED — generic pan-cancer proliferation-marker/immune-infiltration correlation, not lung- or COPD-specific</td>
+<td><span class="tag-warning">CONTESTED</span> — generic pan-cancer proliferation-marker/immune-infiltration correlation, not lung- or COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CDC20</td>
+<td class="gene">CDC20</td>
 <td>Immunology (nonspecific)</td>
 <td>Pan-cancer analysis: CDC20 expression positively correlates with cancer-associated-fibroblast and myeloid-derived-suppressor-cell infiltration across most cancer types</td>
 <td>PMID 34527589 / DOI 10.3389/fonc.2021.721797</td>
-<td>CONTESTED — pan-cancer correlational bioinformatics, not lung/COPD-specific</td>
+<td><span class="tag-warning">CONTESTED</span> — pan-cancer correlational bioinformatics, not lung/COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CDC20</td>
+<td class="gene">CDC20</td>
 <td>Immunology (nonspecific)</td>
 <td>CDC20 is one of five hub genes (with CCL2, MKI67, CX3CR1, CXCL1) linked to chemokine-signaling/cell-division pathways and altered myocardial immune-cell proportions in a mouse model of lung-adenocarcinoma-driven cardiac cachexia</td>
 <td>PMID 40759788 / DOI 10.1007/s12032-025-02933-9</td>
-<td>CONTESTED — cancer-cachexia context, not COPD/airway-immune biology</td>
+<td><span class="tag-warning">CONTESTED</span> — cancer-cachexia context, not COPD/airway-immune biology</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CDC20</td>
+<td class="gene">CDC20</td>
 <td>Structural/immunology (vascular, nonspecific)</td>
 <td>TAOK1 overexpression counteracts ox-LDL-induced pro-inflammatory cytokine/chemokine upregulation, senescence, and apoptosis in human endothelial cells partly via a CDC20-dependent mechanism (confirmed by CDC20 knockdown reversing the protective effect)</td>
 <td>PMID 39726311 / DOI 10.24976/Discov.Med.202436191.218</td>
-<td>CONTESTED — atherosclerosis/vascular-endothelial context, not airway or lung-parenchymal biology</td>
+<td><span class="tag-warning">CONTESTED</span> — atherosclerosis/vascular-endothelial context, not airway or lung-parenchymal biology</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CDC20</td>
+<td class="gene">CDC20</td>
 <td>Statistical genetics (exploratory, non-significant)</td>
 <td>CDC20 among genes nearest sub-epigenome-wide-significant (P&lt;0.001) differentially methylated loci in heavy cannabis users' blood; explicitly NOT epigenome-wide significant, and cannabis-only users showed no epigenome-wide-significant methylation changes</td>
 <td>PMID 32321915 / DOI 10.1038/s41398-020-0800-3</td>
-<td>CONTESTED — sub-significance-threshold, non-tobacco-specific, exploratory finding; should not be read as smoking/COPD-relevant genetic evidence</td>
+<td><span class="tag-warning">CONTESTED</span> — sub-significance-threshold, non-tobacco-specific, exploratory finding; should not be read as smoking/COPD-relevant genetic evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CDC20</td>
+<td class="gene">CDC20</td>
 <td>Structural (general senescence background, non-lung)</td>
 <td>Background mechanistic support that CDC20/APC(C) activity governs cellular senescence in non-lung cell types: SIRT1 degradation during senescence is driven by APC/C coactivator Cdh1, explicitly NOT Cdc20 (contrast case); HNRNPK loss reduces CDC20 and impairs proliferation in diploid fibroblasts; hTERT variants act partly via CDC20/FBXO5-mediated Siah1 degradation to block senescence signaling in diploid fibroblasts</td>
 <td>PMID 37258580, PMID 39804141, PMID 40371663</td>
-<td>WEAKENED — general (non-lung) senescence-pathway background only; one of the three (PMID 37258580) explicitly implicates the <em>Cdh1</em> coactivator, not Cdc20, for the specific mechanism studied</td>
+<td><span class="tag-warning">WEAKENED</span> — general (non-lung) senescence-pathway background only; one of the three (PMID 37258580) explicitly implicates the Cdh1 coactivator, not Cdc20, for the specific mechanism studied</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="supplementary-st3gal3-not-a-directed-candidate-gene-for-this-locus-flagged-by-open-targets-l2g-and-by-red-team-skeptic">Supplementary: ST3GAL3 (not a directed candidate gene for this locus, flagged by Open Targets L2G and by red-team-skeptic)</h2>
 <p>ST3GAL3 physically overlaps the locus's upper boundary and is the consistent #2
 locus-to-gene (L2G) gene at the lead variant — including on the COPD/chronic-
@@ -687,7 +371,7 @@ pipeline's candidate-gene list (nearest/FLAMES/MAGMA/PoPS/ABC) and so was only
 briefly investigated by the researcher, not fully worked up across all three
 evidence domains. Included here for transparency per the red-team-skeptic's
 explicit recommendation; NOT treated as a fourth fully-evaluated candidate.</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -700,15 +384,15 @@ explicit recommendation; NOT treated as a fourth fully-evaluated candidate.</p>
 </thead>
 <tbody>
 <tr>
-<td>ST3GAL3 (supplementary)</td>
+<td class="gene">ST3GAL3 (supplementary)</td>
 <td>Structural/immune</td>
 <td>ST3Gal3-dependent sialylated Muc5b binds Siglec-F and induces apoptosis in mouse eosinophils</td>
 <td>PMID 27027967 / DOI 10.1513/AnnalsATS.201511-743MG</td>
-<td>FLAGGED, not fully adjudicated — real, lung-specific, mechanistically concrete pathway, but demonstrated in asthma/eosinophilic-inflammation models, not neutrophilic COPD biology; skeptic notes prior #3 allows for eosinophilic COPD subtypes, so this should not be dismissed purely on &quot;wrong disease&quot; grounds without further work-up</td>
+<td>FLAGGED, not fully adjudicated — real, lung-specific, mechanistically concrete pathway, but demonstrated in asthma/eosinophilic-inflammation models, not neutrophilic COPD biology; skeptic notes prior #3 allows for eosinophilic COPD subtypes, so this should not be dismissed purely on "wrong disease" grounds without further work-up</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ST3GAL3 (supplementary)</td>
+<td class="gene">ST3GAL3 (supplementary)</td>
 <td>Structural/immune</td>
 <td>St3gal3-dependent sialylated glycoproteins on mouse airway epithelium are ligands for Siglec-8 (human)/Siglec-F (mouse), enhancing eosinophil apoptosis</td>
 <td>PMID 23160308 / DOI 10.1097/ACI.0b013e32835b594a</td>
@@ -716,15 +400,15 @@ explicit recommendation; NOT treated as a fourth fully-evaluated candidate.</p>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
 <p>Full detail in <code>evidence_tables/_status/1_43300001-43850000/opentargets.md</code>. Key
 points:</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
-<th>L2G at lead variant on COPD credible set (GCST90476027, &quot;Chronic airway obstruction PheCode 496&quot;)</th>
+<th>L2G at lead variant on COPD credible set (GCST90476027, "Chronic airway obstruction PheCode 496")</th>
 <th>Overall OT target-disease association score (COPD)</th>
 <th>Genetic constraint (gnomAD lof oe)</th>
 <th>FEV1/FEV1-FVC/lung-function evidence in OT</th>
@@ -732,49 +416,49 @@ points:</p>
 </thead>
 <tbody>
 <tr>
-<td>PTPRF</td>
+<td class="gene">PTPRF</td>
 <td>0.331 (top gene)</td>
 <td>0.123 (genetic_association datatype = 0.201)</td>
 <td>0.278 (constrained)</td>
 <td>none found</td>
 </tr>
 <tr>
-<td>SLC2A1</td>
+<td class="gene">SLC2A1</td>
 <td>not in L2G list (absent from all 70 fine-mapped studies at this variant)</td>
 <td>0.064 (literature-only, 0.527)</td>
 <td>0.044 (highly constrained)</td>
 <td>none found</td>
 </tr>
 <tr>
-<td>ERMAP</td>
+<td class="gene">ERMAP</td>
 <td>not in L2G list</td>
 <td>no data (zero association rows)</td>
 <td>0.679 (not constrained)</td>
 <td>none found</td>
 </tr>
 <tr>
-<td>CDC20</td>
+<td class="gene">CDC20</td>
 <td>not in L2G list (absent from all 70 fine-mapped studies at this variant, including the COPD study)</td>
 <td>0.0074 (very low — ~17x below PTPRF, below even SLC2A1)</td>
 <td>0.551 (moderate constraint)</td>
 <td>none found</td>
 </tr>
 <tr>
-<td>ST3GAL3 (not a directed candidate)</td>
+<td class="gene">ST3GAL3 (not a directed candidate)</td>
 <td>0.074 (#2 gene)</td>
 <td>0.028</td>
 <td>0.398 (moderately constrained)</td>
 <td>none found</td>
 </tr>
 <tr>
-<td>KDM4A (not a directed candidate)</td>
-<td>not in L2G list for this credible set (but top gene for &quot;ever smoker&quot; 0.54 and RBC-count traits)</td>
+<td class="gene">KDM4A (not a directed candidate)</td>
+<td>not in L2G list for this credible set (but top gene for "ever smoker" 0.54 and RBC-count traits)</td>
 <td>no data</td>
 <td>0.182 (constrained)</td>
 <td>none found</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>CDC20 physical-location note:</strong> CDC20's genomic coordinates (chr1:43,358,928-
 43,363,207, GRCh38, confirmed via Open Targets/Ensembl) genuinely fall inside
 this locus's stated window (1:43,300,001-43,850,000) — unlike SLC2A1 and ERMAP,
@@ -809,19 +493,19 @@ interesting but entirely non-lung B7-family immune mechanism for ERMAP) do not
 overcome this physical/statistical gap.</p>
 <p>However, the case for PTPRF is explicitly NOT a pulmonary-biology case: no
 lung-specific structural, developmental, or immune literature for PTPRF was
-found despite targeted searching (zero hits for &quot;PTPRF airway epithelial cell
-adhesion,&quot; &quot;PTPRF lung function FEV1,&quot; and &quot;PTPRF LAR phosphatase immune T
-cell&quot;), and Open Targets shows zero PTPRF association with FEV1, FEV1/FVC, or
+found despite targeted searching (zero hits for "PTPRF airway epithelial cell
+adhesion," "PTPRF lung function FEV1," and "PTPRF LAR phosphatase immune T
+cell"), and Open Targets shows zero PTPRF association with FEV1, FEV1/FVC, or
 general lung function. Instead, the same COPD credible set at this locus
 colocalizes at H4 0.87-0.96 with multiple independent smoking-behavior credible
 sets (smoking initiation, cessation, ever-smoker, tobacco use disorder, age of
 initiation), and the one piece of independent literature that names PTPRF by
 gene symbol (PMID 37173343) does so for impulsive personality / drug-
 experimentation traits, not respiratory phenotypes. The red-team-skeptic
-concluded this pattern is &quot;a textbook signature of prior #1 (smoking-mediated),
-not prior #2,&quot; and explicitly warned against treating &quot;PTPRF is the dominant
-credible-set gene&quot; as equivalent to &quot;PTPRF drives COPD through pulmonary
-biology.&quot; I agree with that distinction and it is the reason confidence here is
+concluded this pattern is "a textbook signature of prior #1 (smoking-mediated),
+not prior #2," and explicitly warned against treating "PTPRF is the dominant
+credible-set gene" as equivalent to "PTPRF drives COPD through pulmonary
+biology." I agree with that distinction and it is the reason confidence here is
 MODERATE rather than HIGH: the gene-identification call at this locus (PTPRF
 over SLC2A1/ERMAP) is reasonably well supported, but the mechanistic
 interpretation is very likely smoking-behavior-mediated rather than
@@ -847,10 +531,10 @@ and pulmonary arterial hypertension models — diseases mechanistically adjacent
 to, but distinct from, COPD/emphysema — plus one direct but cancer-cell-line
 demonstration that cigarette smoke impairs CDC20/APC-mediated protein
 degradation. No COPD-specific, emphysema-specific, or airway-epithelial study of
-CDC20 exists, and its &quot;immune&quot; literature is generic pan-cancer
+CDC20 exists, and its "immune" literature is generic pan-cancer
 tumor-immune-infiltration correlation with no airway or COPD specificity. The
-red-team-skeptic characterized CDC20 as &quot;inside the window, but outside the
-signal&quot; and explicitly recommended reaffirming PTPRF at MODERATE confidence
+red-team-skeptic characterized CDC20 as "inside the window, but outside the
+signal" and explicitly recommended reaffirming PTPRF at MODERATE confidence
 without promoting CDC20 to co-favorite or tie status. I concur: CDC20 is best
 treated as a secondary, hypothesis-generating note (its lung-fibroblast
 senescence mechanism, PMID 35988650, would be worth a dedicated lung-tissue
@@ -870,5 +554,7 @@ weaker physical/statistical footing than ST3GAL3 (zero L2G vs. ST3GAL3's
 nonzero 0.074) but with its own distinct (senescence/fibrosis) mechanistic
 rationale worth flagging for any future eQTL follow-up at this locus.</p>
 
+        </div>
+    </div>
 </body>
 </html>

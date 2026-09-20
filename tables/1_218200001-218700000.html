@@ -1,382 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>1_218200001-218700000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 1:218,200,001-218,700,000 (nearest gene: TGFB2)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-1218200001-218700000-nearest-gene-tgfb2">Evidence table — Locus 1:218,200,001-218,700,000 (nearest gene: TGFB2)</h1>
-<p><strong>Lead variant:</strong> rs2799098 (PIP=0.511, intron of TGFB2)
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-1218200001-218700000-nearest-gene-tgfb2">Evidence table — Locus 1:218,200,001-218,700,000 (nearest gene: TGFB2)</h1><div class="summary"><p><strong>Lead variant:</strong> rs2799098 (PIP=0.511, intron of TGFB2)
 <strong>Credible set:</strong> 8 variants; top 3 by PIP (rs2799098, rs10495098, rs2799097; combined
 PIP ~0.94) all annotate to TGFB2 (intron/upstream, MODIFIER impact). A low-PIP tail (3
 variants, combined PIP ~0.037: rs3121580, rs56238934, rs946213) annotates to RRP15
 (intron/upstream, MODIFIER impact). One variant (rs259469, PIP=0.015) is intergenic with
-no gene annotation. No credible-set variant is missense/splice-donor/splice-acceptor.</p>
-<p>Only citations with verifier verdict <strong>VERIFIED</strong> are included below. Citations verified
+no gene annotation. No credible-set variant is missense/splice-donor/splice-acceptor.</p><p>Only citations with verifier verdict <strong>VERIFIED</strong> are included below. Citations verified
 as CLAIM_MISMATCH, and genes/claims flagged CONTESTED or materially weakened by the
 red-team-skeptic, are documented in the companion audit file (see
-<code>audits/1_218200001-218700000_audit.md</code>), not omitted silently.</p>
-<table>
+<code>audits/1_218200001-218700000_audit.md</code>), not omitted silently.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -389,63 +73,63 @@ red-team-skeptic, are documented in the companion audit file (see
 </thead>
 <tbody>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Statistical genetics (COPD GWAS)</td>
 <td>TGFB2 identified as genome-wide-significant COPD susceptibility locus (joint meta-analysis P=8.3x10^-9) across COPDGene/ECLIPSE/NETT-NAS/GenKOLS/ICGN cohorts</td>
 <td>Cho et al. 2014, Lancet Respir Med. PMID 24621683 / DOI 10.1016/S2213-2600(14)70002-5</td>
-<td>WEAKENED (gene overall) — this specific citation itself not individually disputed</td>
+<td><span class="tag-warning">WEAKENED</span> (gene overall) — this specific citation itself not individually disputed</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Statistical genetics (spirometry GWAS, general population)</td>
 <td>Large population-based GWAS (48,201 + 46,411 follow-up, European ancestry, not smoking-restricted) identified TGFB2 as a novel genome-wide-significant FEV1/FEV1-FVC locus</td>
 <td>Soler Artigas et al. 2011, Nat Genet. PMID 21946350 / DOI 10.1038/ng.941</td>
-<td>WEAKENED (gene overall); this specific citation supports prior #2 concordance well</td>
+<td><span class="tag-warning">WEAKENED</span> (gene overall); this specific citation supports prior #2 concordance well</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Statistical genetics (spirometry GWAS, smokers only)</td>
 <td>Meta-analysis restricted to smokers (COPDGene/ECLIPSE/GenKOLS, n=13,532) found genome-wide-significant TGFB2 association with FEV1 and FEV1/FVC (P=8.99x10^-9 both)</td>
 <td>Lutz et al. 2015, BMC Genet. PMID 26634245 / DOI 10.1186/s12863-015-0299-4</td>
-<td>WEAKENED (gene overall); replicates in smoker-only stratum but does not itself test smoking-mediation</td>
+<td><span class="tag-warning">WEAKENED</span> (gene overall); replicates in smoker-only stratum but does not itself test smoking-mediation</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Statistical genetics / regulatory genomics (CT emphysema GWAS)</td>
 <td>GWAS of CT-quantified emphysema patterns in COPDGene smokers (n=9,614) found TGFB2 among 5 known COPD loci falling within lung-fibroblast enhancer/DNaseI-hypersensitivity regions; fibroblasts showed strongest enhancer enrichment among top loci overall</td>
 <td>Castaldi et al. 2014, Am J Respir Crit Care Med. PMID 25006744 / DOI 10.1164/rccm.201403-0569OC</td>
-<td>WEAKENED (gene overall); skeptic notes this enrichment was general across 5 loci tested, not TGFB2-unique</td>
+<td><span class="tag-warning">WEAKENED</span> (gene overall); skeptic notes this enrichment was general across 5 loci tested, not TGFB2-unique</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Fine-mapping / functional genomics</td>
 <td>GWAS + eQTL/DNaseI/chromatin-conformation-capture identified variant rs1690789 (~200kb downstream of TGFB2, distinct from this locus's credible-set variants) that regulates TGFB2 expression specifically in lung fibroblasts; CRISPR/Cas9 deletion of the region reduced TGFB2 expression</td>
 <td>Parker et al. 2019, eLife. PMID 31343404 / DOI 10.7554/eLife.42720</td>
-<td>WEAKENED (gene overall); skeptic flags this validates a different variant than the credible set, so gene-level not variant-level support</td>
+<td><span class="tag-warning">WEAKENED</span> (gene overall); skeptic flags this validates a different variant than the credible set, so gene-level not variant-level support</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Statistical genetics (DLCO GWAS)</td>
 <td>GWAS of DLCO (gas-exchange/emphysema-relevant trait) in COPD-enriched cohorts found TGFB2 associated; some DLCO variants also associated with COPD/emphysema/spirometry</td>
 <td>Sakornsakolpat et al. 2019, Am J Respir Cell Mol Biol. PMID 30694715 / DOI 10.1165/rcmb.2018-0384OC</td>
-<td>WEAKENED (gene overall)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene overall)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Structural/developmental lung biology (mouse model)</td>
 <td>Mesenchymal (Pdgfrb+) Galphaq/11 deletion in mice reduces TGFbeta2 deposition, causing abnormal alveolar development (developmental deletion) and emphysema with reduced elastin (adult-onset deletion)</td>
 <td>Goodwin et al. 2023, Development. PMID 37102682 / DOI 10.1242/dev.201046</td>
-<td>WEAKENED (gene overall); note this is a Galphaq/11 knockout with TGFB2 reduction as downstream consequence, not a direct Tgfb2 knockout</td>
+<td><span class="tag-warning">WEAKENED</span> (gene overall); note this is a Galphaq/11 knockout with TGFB2 reduction as downstream consequence, not a direct Tgfb2 knockout</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Immune/inflammatory (airway epithelium, non-COPD context)</td>
 <td>Th2 cytokines IL-4/IL-13 selectively induce TGF-beta2 (not TGF-beta1/3) in human bronchial epithelial cells; IFN-gamma (Th1) suppresses this</td>
 <td>Wen et al. 2002, Am J Respir Cell Mol Biol. PMID 11919085 / DOI 10.1165/ajrcmb.26.4.4784</td>
@@ -453,39 +137,39 @@ red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Structural biology (mouse aorta, isoform specificity)</td>
 <td>Tgfb2-haploinsufficient mice show distinct aortic wall mechanical phenotype (thickening, decreased biaxial stiffness/stress, decreased stored energy) not seen in Tgfb1 or Tgfb3 haploinsufficient mice</td>
 <td>Lane et al. 2021, J Biomech. PMID 34174532 / DOI 10.1016/j.jbiomech.2021.110543</td>
-<td>WEAKENED (gene overall); aortic, not pulmonary, phenotype</td>
+<td><span class="tag-warning">WEAKENED</span> (gene overall); aortic, not pulmonary, phenotype</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Rare-variant/Mendelian disease (dosage sensitivity)</td>
 <td>TGFB2 splice-site mutation (c.839-1G&gt;A) causes haploinsufficiency and Loeys-Dietz syndrome type 4 (LDS4) with mild vascular phenotype; aneurysm/dissection did not occur</td>
 <td>Ritelli et al. 2014, BMC Med Genet. PMID 25163805 / DOI 10.1186/s12881-014-0091-8</td>
-<td>WEAKENED (gene overall); LDS4 phenotype is aortic/skeletal, no pulmonary phenotype reported</td>
+<td><span class="tag-warning">WEAKENED</span> (gene overall); LDS4 phenotype is aortic/skeletal, no pulmonary phenotype reported</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Rare-variant/Mendelian disease</td>
 <td>De novo TGFB2 microdeletion (chromothripsis) causes LDS4 with aortic dilation and skeletal/neurodevelopmental features</td>
 <td>Fontana et al. 2014, Gene. PMID 24440784 / DOI 10.1016/j.gene.2014.01.017</td>
-<td>WEAKENED (gene overall)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene overall)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Rare-variant/Mendelian disease</td>
 <td>TGFB2 frameshift mutation (p.Leu332TrpfsTer27) causes LDS4 with diffuse arterial aneurysms/dissections (aortic sinus, intracranial, iliac); phenotypic variability including one case with no vascular events at advanced age</td>
 <td>Mazzella et al. 2016, Clin Genet. PMID 27440102 / DOI 10.1111/cge.12838</td>
-<td>WEAKENED (gene overall)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene overall)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Rare-variant/Mendelian disease (mechanistic caveat)</td>
 <td>A predicted loss-of-function TGFB2 missense variant (p.Arg320Cys) paradoxically increased aortic TGFB1/TGFB2 protein expression, complicating simple loss-of-function direction-of-effect inference</td>
 <td>Al Maskari et al. 2016, Eur J Hum Genet. PMID 27782106 / DOI 10.1038/ejhg.2016.143</td>
@@ -493,55 +177,55 @@ red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Rare-variant/Mendelian disease</td>
 <td>Whole-TGFB2-gene deletion causes LDS4 phenotype overlapping with Marfan syndrome (aortic ectasia/aneurysm, tortuosity)</td>
 <td>Nistri et al. 2021, Genes (Basel). PMID 34680857 / DOI 10.3390/genes12101462</td>
-<td>WEAKENED (gene overall)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene overall)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Rare-variant/Mendelian disease</td>
 <td>Case report of ectopia lentis in a patient with a pathogenic TGFB2 variant, expanding LDS4 phenotypic spectrum; no pulmonary phenotype mentioned</td>
 <td>Braverman et al. 2020, Am J Med Genet A. PMID 32462795 / DOI 10.1002/ajmg.a.61633</td>
-<td>WEAKENED (gene overall)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene overall)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Rare-variant/Mendelian disease</td>
 <td>TGFB2-haploinsufficient LDS4 patients show corneal thinning/cornea guttata</td>
 <td>Eghrari et al. 2020, Can J Ophthalmol. PMID 32307099 / DOI 10.1016/j.jcjo.2020.03.007</td>
-<td>WEAKENED (gene overall)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene overall)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Rare-variant/Mendelian disease</td>
 <td>De novo TGFB2 missense variant (p.Arg299Gln) causes LDS4 with marfanoid habitus and aortic aneurysms; no pulmonary phenotype described</td>
 <td>Stathori et al. 2025, Genes (Basel). PMID 40282317 / DOI 10.3390/genes16040357</td>
-<td>WEAKENED (gene overall)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene overall)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Rare-variant/Mendelian disease (clinical/surgical)</td>
 <td>Surgical outcomes series of LDS patients (including TGFB2-mutation-positive LDS4) — cardiovascular-surgical context only, no pulmonary phenotype reported</td>
 <td>Weininger et al. 2022, J Card Surg. PMID 35989525 / DOI 10.1111/jocs.16855</td>
-<td>WEAKENED (gene overall)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene overall)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Rare-variant/Mendelian disease (systematic review — key negative finding)</td>
 <td>Systematic review of ~3,896 LDS cases (all subtypes 1-5) found most common features to be aortic aneurysm/dissection, arterial tortuosity, high-arched palate, hypertelorism; LDS types 4/5 showed lower musculoskeletal/cardiovascular prevalence than types 1-3; no explicit pulmonary/respiratory phenotype reported for LDS4</td>
 <td>Gouda et al. 2022, Int J Cardiol. PMID 35662564 / DOI 10.1016/j.ijcard.2022.05.065</td>
-<td>Central to skeptic's WEAKENED verdict — this is the key evidence gap between human Mendelian LOF phenotype and the hypothesized pulmonary mechanism</td>
+<td><span class="tag-warning">WEAKENED</span>Central to skeptic's  verdict — this is the key evidence gap between human Mendelian LOF phenotype and the hypothesized pulmonary mechanism</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TGFB2</td>
+<td class="gene">TGFB2</td>
 <td>Rare-variant/Mendelian disease (mechanistic caveat)</td>
 <td>A distinct TGFB2 missense variant causes a gain-of-function-like skeletal dysplasia (Camurati-Engelmann disease type 2, hyperostosis), opposite in character to haploinsufficiency-driven LDS4</td>
 <td>Mumm et al. 2025, Bone. PMID 40204055 / DOI 10.1016/j.bone.2025.117477</td>
@@ -549,7 +233,7 @@ red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RRP15</td>
+<td class="gene">RRP15</td>
 <td>Structural biology (non-lung, non-immune)</td>
 <td>Yeast Rrp15p is a pre-60S ribosomal particle component required for 60S ribosome subunit maturation</td>
 <td>De Marchis et al. 2005, RNA. PMID 15769876 / DOI 10.1261/rna.7200205</td>
@@ -557,7 +241,7 @@ red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RRP15</td>
+<td class="gene">RRP15</td>
 <td>Structural biology (non-lung, non-immune)</td>
 <td>Human RRP15 required for nucleolar formation/ribosome biogenesis; depletion induces nucleolar-stress checkpoint (p53-dependent in normal cells, ATR-Chk1 in p53-deficient tumor cells)</td>
 <td>Dong et al. 2017, Oncotarget. PMID 28099941 / DOI 10.18632/oncotarget.14658</td>
@@ -565,7 +249,7 @@ red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RRP15</td>
+<td class="gene">RRP15</td>
 <td>Structural biology (oncology, non-lung)</td>
 <td>RRP15 promotes colorectal cancer proliferation/metastasis via ribosome-stress-mediated Wnt/beta-catenin regulation</td>
 <td>Dong et al. 2023, Cell Death Dis. PMID 36750557 / DOI 10.1038/s41419-023-05578-6</td>
@@ -573,7 +257,7 @@ red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RRP15</td>
+<td class="gene">RRP15</td>
 <td>Comparative biology (plant, non-mammalian)</td>
 <td>Maize Rrp15p-domain ortholog essential for ribosome biogenesis and seed/embryo development</td>
 <td>Ma et al. 2023, New Phytol. PMID 38058237 / DOI 10.1111/nph.19460</td>
@@ -581,7 +265,7 @@ red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RRP15</td>
+<td class="gene">RRP15</td>
 <td>Structural biology (non-lung, non-immune)</td>
 <td>SURF6/Rrp14, in complex with Ssf1 and Rrp15, participates in early pre-rRNA processing</td>
 <td>Moraleva et al. 2023, PLoS One. PMID 37450438 / DOI 10.1371/journal.pone.0285833</td>
@@ -589,7 +273,7 @@ red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RRP15</td>
+<td class="gene">RRP15</td>
 <td>Structural biology (non-lung, non-immune)</td>
 <td>S6-kinase-dependent transcriptional control of ribosome-biogenesis factors including Rrp15 in mouse liver</td>
 <td>Chauvin et al. 2013, Oncogene. PMID 23318442 / DOI 10.1038/onc.2012.606</td>
@@ -597,7 +281,7 @@ red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
 <p><strong>TGFB2 (ENSG00000092969):</strong></p>
 <ul>
@@ -674,5 +358,7 @@ specifically for rs2799098/rs10495098/rs2799097 (not just the distal rs1690789 v
 and (c) confirmation from the full text (not just abstracts) of Hobbs 2017 and
 Sakornsakolpat 2019 Nat Genet that TGFB2/this locus is indeed among their reported loci.</p>
 
+        </div>
+    </div>
 </body>
 </html>

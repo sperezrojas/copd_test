@@ -1,382 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>1_28200001-28950000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPD GWAS locus 1:28,200,001-28,950,000 (nearest gene PHACTR4) — Evidence Table</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="copd-gwas-locus-128200001-28950000-nearest-gene-phactr4--evidence-table">COPD GWAS locus 1:28,200,001-28,950,000 (nearest gene PHACTR4) — Evidence Table</h1>
-<p><strong>Lead variant:</strong> rs61783851 (1:28,441,880, GRCh38, intron_variant in PHACTR4, PIP=0.0423 —
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="copd-gwas-locus-128200001-28950000-nearest-gene-phactr4--evidence-table">COPD GWAS locus 1:28,200,001-28,950,000 (nearest gene PHACTR4) — Evidence Table</h1><div class="summary"><p><strong>Lead variant:</strong> rs61783851 (1:28,441,880, GRCh38, intron_variant in PHACTR4, PIP=0.0423 —
 the single highest-PIP variant in a large, diffuse 159-variant ABF credible set; no variant
 reaches even 5% PIP). <strong>Missense credible-set variant:</strong> rs61785974 (1:28,473,868, PHACTR4,
 MODERATE impact, PIP=0.028). No splice-donor/splice-acceptor variants in the credible set.
 <strong>Pipeline-prioritized genes:</strong> nearest = PHACTR4; MAGMA = RCC1; PoPS = RCC1; ABC = SNHG3;
 FLAMES = NA. <strong>Credible-set genes:</strong> PHACTR4, RCC1, RAB42, TAF12, OPRD1, TRNAU1AP, GMEB1,
-TAF12-DT (SNHG3 has no credible-set variant of its own — linked only via ABC score).</p>
-<p>Only VERIFIED citations are included below. RETRACTED citations and CONTESTED-gene reasoning
+TAF12-DT (SNHG3 has no credible-set variant of its own — linked only via ABC score).</p><p>Only VERIFIED citations are included below. RETRACTED citations and CONTESTED-gene reasoning
 are preserved in the companion audit file:
-<code>audits/1_28200001-28950000_audit.md</code>.</p>
-<table>
+<code>audits/1_28200001-28950000_audit.md</code>.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -389,319 +73,319 @@ are preserved in the companion audit file:
 </thead>
 <tbody>
 <tr>
-<td>PHACTR4</td>
+<td class="gene">PHACTR4</td>
 <td>Genetics (statgen, pleiotropy)</td>
 <td>TWAS found elevated RCC1 expression associated with shorter time to biochemical recurrence and higher PHACTR4 expression associated with higher Gleason grade in prostate cancer — this chr1 locus is pleiotropic for an unrelated (prostate cancer) phenotype</td>
 <td>Fu et al. 2026, Eur J Hum Genet, PMID 42323493 / DOI 10.1038/s41431-026-02147-1</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PHACTR4</td>
+<td class="gene">PHACTR4</td>
 <td>Genetics (statgen, pleiotropy)</td>
 <td>Immune-cell-eQTL MR/colocalization prioritized PHACTR4 (of 21 genes) as a candidate causal gene for type 1 diabetes risk</td>
 <td>Sklar et al. 2025, BMC Med, PMID 41299435 / DOI 10.1186/s12916-025-04527-8</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PHACTR4</td>
+<td class="gene">PHACTR4</td>
 <td>Structural/developmental (non-pulmonary)</td>
-<td>Mouse &quot;humdy&quot; Phactr4 PP1-binding missense mutant fails neural tube and optic fissure closure via PP1-Rb-E2F1 dysregulation</td>
+<td>Mouse "humdy" Phactr4 PP1-binding missense mutant fails neural tube and optic fissure closure via PP1-Rb-E2F1 dysregulation</td>
 <td>Kim et al. 2007, Dev Cell, PMID 17609112 / DOI 10.1016/j.devcel.2007.04.018</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PHACTR4</td>
+<td class="gene">PHACTR4</td>
 <td>Structural/developmental (non-pulmonary)</td>
 <td>De novo damaging missense variants in the RPEL3 domain of PHACTR4 (same domain region as, but distinct from, credible-set variant rs61785974) cause a multi-system congenital-anomaly syndrome (craniofacial, ophthalmologic, renal, neurodevelopmental); no pulmonary phenotype reported</td>
 <td>Torti et al. 2025, HGG Adv, PMID 40012205 / DOI 10.1016/j.xhgg.2025.100421</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PHACTR4</td>
+<td class="gene">PHACTR4</td>
 <td>Structural/mechanistic (non-pulmonary)</td>
 <td>PHACTR4 attenuates IL-6-induced STAT3 phosphorylation, acting as a tumor suppressor in hepatocellular carcinoma</td>
 <td>Cao et al. 2016, Eur Rev Med Pharmacol Sci, PMID 27608898</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PHACTR4</td>
+<td class="gene">PHACTR4</td>
 <td>Structural/mechanistic (editorial, non-pulmonary)</td>
 <td>Editorial commentary on the PHACTR4-STAT3 hepatocellular carcinoma mechanism; no new data</td>
 <td>Li Volti et al. 2016, Eur Rev Med Pharmacol Sci, PMID 27775809</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PHACTR4</td>
+<td class="gene">PHACTR4</td>
 <td>Immune (biomarker, non-pulmonary)</td>
 <td>PHACTR4-containing circulating immune complexes distinguished lupus nephritis patients from healthy controls (AUC 0.99)</td>
 <td>Tang et al. 2022, Front Immunol, PMID 35419005 / DOI 10.3389/fimmu.2022.850015</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RCC1</td>
+<td class="gene">RCC1</td>
 <td>Genetics (statgen, pleiotropy)</td>
 <td>Same prostate-cancer TWAS as above — elevated RCC1 expression associated with shorter time to biochemical recurrence in prostate cancer</td>
 <td>Fu et al. 2026, Eur J Hum Genet, PMID 42323493 / DOI 10.1038/s41431-026-02147-1</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RCC1</td>
+<td class="gene">RCC1</td>
 <td>Structural (housekeeping, non-pulmonary)</td>
 <td>Structural characterization of RCC1 bound to nucleosomes and Ran; RCC1 concentrates at chromatin to catalyze RanGDP-to-RanGTP exchange</td>
 <td>Huang et al. 2024, Biochemistry, PMID 38501608 / DOI 10.1021/acs.biochem.3c00724</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RCC1</td>
+<td class="gene">RCC1</td>
 <td>Structural (housekeeping, non-pulmonary)</td>
 <td>Nup50-stimulated RCC1 activity is required for nuclear pore complex reassembly after mitosis</td>
 <td>Holzer et al. 2021, EMBO J, PMID 34725842 / DOI 10.15252/embj.2021108788</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RCC1</td>
+<td class="gene">RCC1</td>
 <td>Structural (housekeeping, non-pulmonary)</td>
 <td>RanBP1 regulates RCC1 dynamics during mitosis to control spindle assembly factor localization</td>
 <td>Yau et al. 2020, Cell Cycle, PMID 32594833 / DOI 10.1080/15384101.2020.1782036</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RCC1</td>
+<td class="gene">RCC1</td>
 <td>Structural (housekeeping, non-pulmonary)</td>
 <td>Heterochromatin loss disrupts the RCC1-dependent Ran gradient, impairing nuclear import of large proteins (e.g., ATM) and DNA-damage signaling</td>
 <td>Dworak et al. 2018, Aging Cell, PMID 30565836 / DOI 10.1111/acel.12851</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RCC1</td>
+<td class="gene">RCC1</td>
 <td>Structural/mechanistic (cancer, non-pulmonary)</td>
 <td>RCC1 overexpression is an independent prognostic marker for worse survival in colorectal liver metastases</td>
 <td>Deng et al. 2021, Pathol Oncol Res, PMID 34924821 / DOI 10.3389/pore.2021.1610077</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OPRD1</td>
+<td class="gene">OPRD1</td>
 <td>Genetics (statgen, smoking-mediation hypothesis)</td>
 <td>Candidate-gene study of three OPRD1 intron-1 variants found NO significant association with nicotine dependence in an Iranian cohort (224 smokers vs 202 controls)</td>
 <td>Sharafshah et al. 2021, J Mol Neurosci, PMID 33506435 / DOI 10.1007/s12031-020-01757-8</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OPRD1</td>
+<td class="gene">OPRD1</td>
 <td>Genetics (statgen, smoking-mediation hypothesis)</td>
 <td>In a ~40,000-person study, OPRD1 (unlike OPRM1) showed NO significant genetic signal for persistent opioid use after surgery</td>
 <td>Annis et al. 2024, Genet Epidemiol, PMID 39385445 / DOI 10.1002/gepi.22588</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OPRD1</td>
+<td class="gene">OPRD1</td>
 <td>Immune (general pharmacology, not lung- or OPRD1-specific)</td>
 <td>Neutrophils, macrophages, and CD4/CD8 T lymphocytes express mu-, delta-, and kappa-opioid receptors, and opioid-receptor activation modulates proinflammatory cytokine and ROS production by these cells</td>
 <td>Gusakova et al. 2026, J Biomed Res, PMID 41194441 / DOI 10.7555/JBR.39.20250328</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SNHG3</td>
+<td class="gene">SNHG3</td>
 <td>Structural/immune (acute, not chronic, lung injury)</td>
 <td>SNHG3 is upregulated in LPS-induced acute lung injury (mouse/endothelial models) and septic patients' serum; knockdown reduced lung inflammation (IL-1β, IL-6), improved tight-junction proteins, and reduced apoptosis via a SNHG3-miR-186-5p-Wnt/β-catenin axis</td>
 <td>Wu et al. 2026, Biochem Pharmacol, PMID 41571208 / DOI 10.1016/j.bcp.2026.117723</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAB42</td>
+<td class="gene">RAB42</td>
 <td>Structural (oncology, non-pulmonary)</td>
 <td>RAB42 overexpression is an independent adverse prognostic factor in glioma, linked to VEGF signaling activation</td>
 <td>Liu et al. 2021, Front Oncol, PMID 34912698 / DOI 10.3389/fonc.2021.657029</td>
-<td>HOLDS (non-candidate)</td>
+<td><span class="tag-hold">HOLDS</span> (non-candidate)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAB42</td>
+<td class="gene">RAB42</td>
 <td>Immune (glioma tumor-microenvironment context, non-pulmonary)</td>
 <td>RAB42 identified as one of several CAF-risk-model genes in glioma associated with M2 macrophage infiltration in the tumor microenvironment</td>
 <td>Zhang et al. 2023, Am J Physiol Cell Physiol, PMID 37982173 / DOI 10.1152/ajpcell.00234.2023</td>
-<td>HOLDS (non-candidate)</td>
+<td><span class="tag-hold">HOLDS</span> (non-candidate)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAB42</td>
+<td class="gene">RAB42</td>
 <td>Structural (neurodegeneration, off-target)</td>
 <td>Rab42 downregulation observed in a brain transcriptional signature in a Parkinson's-disease mouse model</td>
 <td>Gispert et al. 2014, Hum Mol Genet, PMID 25296918 / DOI 10.1093/hmg/ddu520</td>
-<td>HOLDS (non-candidate)</td>
+<td><span class="tag-hold">HOLDS</span> (non-candidate)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TAF12</td>
+<td class="gene">TAF12</td>
 <td>Structural (basic transcription-complex biology, non-human, non-pulmonary)</td>
 <td>TAF12 assembles co-translationally with TAF4 via its histone-fold domain to form TFIID, distinct from the paralogous TAF12L-Ada1 SAGA assembly (studied in Candida albicans)</td>
 <td>Bhardwaj et al. 2026, J Biol Chem, PMID 41651412 / DOI 10.1016/j.jbc.2026.111239</td>
-<td>HOLDS (non-candidate)</td>
+<td><span class="tag-hold">HOLDS</span> (non-candidate)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TRNAU1AP</td>
+<td class="gene">TRNAU1AP</td>
 <td>Structural/developmental (general cell biology, non-pulmonary)</td>
 <td>Trnau1ap knockdown reduces selenoprotein expression and inhibits proliferation/migration of embryonic, trophoblast, and placental cell lines via PI3K/Akt</td>
 <td>Hu et al. 2018, Biochem Biophys Res Commun, PMID 29758194 / DOI 10.1016/j.bbrc.2018.05.065</td>
-<td>HOLDS (non-candidate)</td>
+<td><span class="tag-hold">HOLDS</span> (non-candidate)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TRNAU1AP</td>
+<td class="gene">TRNAU1AP</td>
 <td>Structural (cardiac, non-pulmonary)</td>
 <td>Trnau1ap regulates selenoprotein expression and proliferation/apoptosis in cardiomyocyte-like H9c2 cells</td>
 <td>Li et al. 2016, Mol Med Rep, PMID 28101579 / DOI 10.3892/mmr.2016.6099</td>
-<td>HOLDS (non-candidate)</td>
+<td><span class="tag-hold">HOLDS</span> (non-candidate)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TRNAU1AP</td>
+<td class="gene">TRNAU1AP</td>
 <td>Structural (mouse model, non-pulmonary)</td>
 <td>Conditional hepatocyte-/neuron-specific Trnau1ap domain deletions in mice showed largely preserved selenoprotein expression; whole-body deletion of a different exon pair was embryonic lethal; no lung phenotype assessed</td>
 <td>Mahdi et al. 2015, PLoS One, PMID 26043259 / DOI 10.1371/journal.pone.0127349</td>
-<td>HOLDS (non-candidate)</td>
+<td><span class="tag-hold">HOLDS</span> (non-candidate)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GMEB1</td>
+<td class="gene">GMEB1</td>
 <td>Structural/mechanistic (cancer, non-pulmonary)</td>
 <td>GMEB1 transcriptionally activates YAP1 to promote hepatocellular carcinoma proliferation/invasion</td>
 <td>Chen et al. 2023, World J Gastrointest Oncol, PMID 37389116 / DOI 10.4251/wjgo.v15.i6.988</td>
-<td>HOLDS (non-candidate)</td>
+<td><span class="tag-hold">HOLDS</span> (non-candidate)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GMEB1</td>
+<td class="gene">GMEB1</td>
 <td>Immune (mechanistic, general, non-pulmonary)</td>
 <td>TRAF3 (a TNF-receptor-family immune-signaling adaptor) interacts with and enhances the anti-apoptotic activity of GMEB1 in HeLa/B-cell-derived systems</td>
 <td>Kotsaris et al. 2020, J Biol Res (Thessalon), PMID 32514408 / DOI 10.1186/s40709-020-00117-2</td>
-<td>HOLDS (non-candidate)</td>
+<td><span class="tag-hold">HOLDS</span> (non-candidate)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GMEB1</td>
+<td class="gene">GMEB1</td>
 <td>Structural (metabolic, off-target)</td>
 <td>circGlis3 promotes GMEB1 degradation via MIB2 in a type 2 diabetes beta-cell/islet-endothelial model</td>
 <td>Xiong et al. 2022, Diabetologia, PMID 34751796 / DOI 10.1007/s00125-021-05591-4</td>
-<td>HOLDS (non-candidate)</td>
+<td><span class="tag-hold">HOLDS</span> (non-candidate)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SESN2 (not credible-set/MAGMA/PoPS/ABC-flagged; ~160kb outside fine-mapped span)</td>
+<td class="gene">SESN2 (not credible-set/MAGMA/PoPS/ABC-flagged; ~160kb outside fine-mapped span)</td>
 <td>Structural (causal mouse model + human tissue)</td>
 <td>Sesn2 represses PDGFRβ signaling; Sesn2-inactivating mutation in mice PREVENTED cigarette-smoke-induced emphysema (superoxide/PDGFRβ derepression); SESN2 overexpressed (PDGFRβ downregulated) in emphysematous human COPD lungs</td>
 <td>Heidler et al. 2013, Dis Model Mech, PMID 24046361 / DOI 10.1242/dmm.013482</td>
-<td>CONTESTED (for this locus's causal-gene assignment; biology itself not in question)</td>
+<td><span class="tag-warning">CONTESTED</span> (for this locus's causal-gene assignment; biology itself not in question)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SESN2</td>
+<td class="gene">SESN2</td>
 <td>Structural (human tissue)</td>
 <td>In a 124-subject study, airway-tissue and serum sestrin2 (and MMP9) were significantly elevated in COPD versus controls and correlated with CT airway-remodeling parameters</td>
 <td>Zhang et al. 2020, BMC Pulm Med, PMID 33198738 / DOI 10.1186/s12890-020-01329-x</td>
-<td>CONTESTED (locus linkage)</td>
+<td><span class="tag-warning">CONTESTED</span> (locus linkage)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SESN2</td>
+<td class="gene">SESN2</td>
 <td>Structural (mouse comorbidity model)</td>
 <td>In a cigarette-smoke-induced COPD mouse model, hippocampal sestrin2 protects against ferroptosis and cognitive impairment (a COPD comorbidity, not primary airway pathology)</td>
 <td>Zhang et al. 2025, Redox Biol, PMID 40466570 / DOI 10.1016/j.redox.2025.103673</td>
-<td>CONTESTED (locus linkage)</td>
+<td><span class="tag-warning">CONTESTED</span> (locus linkage)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SESN2</td>
+<td class="gene">SESN2</td>
 <td>Structural (review)</td>
 <td>Review describing sestrin2's protective, ROS-limiting role (AMPK/mTOR, Nrf2) across hypoxia-related diseases, explicitly including COPD</td>
 <td>Che et al. 2021, Redox Rep, PMID 34225572 / DOI 10.1080/13510002.2021.1948774</td>
-<td>CONTESTED (locus linkage)</td>
+<td><span class="tag-warning">CONTESTED</span> (locus linkage)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SESN2</td>
+<td class="gene">SESN2</td>
 <td>Structural/immune (review)</td>
 <td>Broad review listing SESN2 among organelle-quality-control/autophagy regulators relevant to inflammatory diseases including COPD</td>
 <td>Yao et al. 2020, Autophagy, PMID 32048886 / DOI 10.1080/15548627.2020.1725377</td>
-<td>CONTESTED (locus linkage)</td>
+<td><span class="tag-warning">CONTESTED</span> (locus linkage)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>YTHDF2 (not credible-set/MAGMA/PoPS/ABC-flagged)</td>
+<td class="gene">YTHDF2 (not credible-set/MAGMA/PoPS/ABC-flagged)</td>
 <td>Structural (human tissue + cigarette-smoke model)</td>
 <td>METTL3-mediated m6A methylation of FSP1 mRNA, read by YTHDF2, reduces FSP1 expression, promoting ferroptosis and emphysema in human COPD lung tissue and a cigarette-smoke-exposure model; FSP1 overexpression alleviated emphysema</td>
 <td>Yang et al. 2025, Am J Respir Cell Mol Biol, PMID 39453438 / DOI 10.1165/rcmb.2023-0467OC</td>
-<td>CONTESTED (for this locus's causal-gene assignment; biology itself not in question)</td>
+<td><span class="tag-warning">CONTESTED</span> (for this locus's causal-gene assignment; biology itself not in question)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>YTHDF2</td>
+<td class="gene">YTHDF2</td>
 <td>Immune/structural (bronchial epithelial cell model)</td>
 <td>Cigarette-smoke-extract exposure suppresses the anti-inflammatory deubiquitinase OTUD1 via METTL3-mediated m6A methylation read by YTHDF2, increasing IL-1β/IL-18 and pyroptosis</td>
 <td>Gao et al. 2025, Mol Med Rep, PMID 40417884 / DOI 10.3892/mmr.2025.13571</td>
-<td>CONTESTED (locus linkage)</td>
+<td><span class="tag-warning">CONTESTED</span> (locus linkage)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>YTHDF2</td>
+<td class="gene">YTHDF2</td>
 <td>Structural (review, indirect)</td>
 <td>Review noting YTHDF2 SUMOylation is relevant in cancer contexts, and separately (a different protein, HDAC2) SUMOylation is relevant to COPD</td>
 <td>Zheng et al. 2023, Mol Med (Cambridge), PMID 37670258 / DOI 10.1186/s10020-023-00719-1</td>
-<td>CONTESTED (locus linkage; also not a direct YTHDF2-COPD claim)</td>
+<td><span class="tag-warning">CONTESTED</span> (locus linkage; also not a direct YTHDF2-COPD claim)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EPB41 (region edge; not prioritized)</td>
+<td class="gene">EPB41 (region edge; not prioritized)</td>
 <td>Structural (lung cancer, not COPD)</td>
 <td>EPB41 inhibits Wnt/β-catenin signaling and NSCLC proliferation/invasion by sequestering ALDOC; low tumor EPB41 associated with worse NSCLC prognosis</td>
 <td>Yuan et al. 2020, Cancer Lett, PMID 33242559 / DOI 10.1016/j.canlet.2020.11.024</td>
-<td>HOLDS (non-candidate)</td>
+<td><span class="tag-hold">HOLDS</span> (non-candidate)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EPB41</td>
+<td class="gene">EPB41</td>
 <td>Structural (lung cancer, not COPD)</td>
 <td>A circular-RNA isoform of EPB41 promotes NSCLC stemness/invasion via miR-486-3p/eIF5A</td>
 <td>Jin et al. 2022, Cancer Cell Int, PMID 35725615 / DOI 10.1186/s12935-022-02618-7</td>
-<td>HOLDS (non-candidate)</td>
+<td><span class="tag-hold">HOLDS</span> (non-candidate)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EPB41</td>
+<td class="gene">EPB41</td>
 <td>Structural (cardiac, off-target)</td>
 <td>4.1R-knockout mice show altered cardiac repolarization and calcium handling</td>
 <td>Stagg et al. 2008, Circ Res, PMID 18787192 / DOI 10.1161/CIRCRESAHA.108.176461</td>
-<td>HOLDS (non-candidate)</td>
+<td><span class="tag-hold">HOLDS</span> (non-candidate)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EPB41</td>
+<td class="gene">EPB41</td>
 <td>Structural/immune (lung adenocarcinoma, not COPD)</td>
 <td>EPB41 identified as one of five prognostic genes in a lung adenocarcinoma RNA-seq risk model associated with differential immune-cell (including M2 macrophage) infiltration</td>
 <td>Li et al. 2026, Discov Oncol, PMID 41787185 / DOI 10.1007/s12672-026-04742-6</td>
-<td>HOLDS (non-candidate)</td>
+<td><span class="tag-hold">HOLDS</span> (non-candidate)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>(background, not locus-specific)</td>
+<td class="gene">(background, not locus-specific)</td>
 <td>Genetics (background reference; relevance to this specific locus unconfirmed)</td>
 <td>Major lung-function GWAS meta-analysis reporting genome-wide-significant signals for FEV1/FEV1-FVC; whether this specific chr1:28.2-28.95Mb locus is among its reported signals could not be confirmed by abstract-level search</td>
 <td>Shrine et al. 2019, Nat Genet, PMID 30804560 / DOI 10.1038/s41588-018-0321-7</td>
@@ -709,13 +393,13 @@ are preserved in the companion audit file:
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>MED18, DNAJC8, ATP5IF1, TAF12-DT: no citable literature (VERIFIED or otherwise) with any
 lung/COPD/immune relevance was identified. TAF12-DT has zero PubMed-indexed literature at
 all. These are noted for completeness but have no evidence-table rows.</p>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did">Open Targets summary (structured database lookup — NOT a verified literature citation; did</h2>
 <p>not go through citation-verifier or red-team-skeptic)</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -727,71 +411,71 @@ all. These are noted for completeness but have no evidence-table rows.</p>
 </thead>
 <tbody>
 <tr>
-<td>PHACTR4</td>
+<td class="gene">PHACTR4</td>
 <td>Not present in aggregated evidence (188 associated diseases total; COPD absent)</td>
 <td>Not resolved (locus-specific L2G/coloc API not queryable within tool budget — see method note)</td>
 <td>2</td>
 <td>Smoking initiation (EFO_0005670) present, weak: score 0.037, genetic_association 0.062</td>
 </tr>
 <tr>
-<td>RCC1</td>
+<td class="gene">RCC1</td>
 <td>Not present (274 diseases total; COPD absent)</td>
 <td>Not resolved</td>
 <td>0 (most constrained)</td>
 <td>No smoking or lung-function evidence at all; top hits are myasthenia gravis and literature-mined cancer associations</td>
 </tr>
 <tr>
-<td>SNHG3</td>
+<td class="gene">SNHG3</td>
 <td>Not present (119 diseases; almost entirely literature-mined cancer associations)</td>
 <td>Not resolved</td>
 <td>No constraint data (non-coding)</td>
 <td>No smoking or COPD evidence</td>
 </tr>
 <tr>
-<td>RAB42</td>
+<td class="gene">RAB42</td>
 <td>Not present (52 diseases; COPD absent)</td>
 <td>Not resolved</td>
 <td>5 (most tolerant)</td>
 <td>Smoking initiation present, weak: score 0.070, genetic_association 0.116</td>
 </tr>
 <tr>
-<td>TAF12</td>
+<td class="gene">TAF12</td>
 <td>Not present (43 diseases; COPD absent)</td>
 <td>Not resolved</td>
 <td>0 (most constrained)</td>
 <td>Smoking initiation present, weak: score 0.058, genetic_association 0.095</td>
 </tr>
 <tr>
-<td>OPRD1</td>
+<td class="gene">OPRD1</td>
 <td><strong>Present: score 0.277, genetic_association 0.453</strong> (only gene at locus with a direct COPD score)</td>
 <td>Not resolved</td>
 <td>4 (tolerant)</td>
 <td>Extensive nicotine-dependence/substance-use/pain clinical-genetics profile (nicotine dependence genetic_association 0.450; substance-related disorder 0.624)</td>
 </tr>
 <tr>
-<td>TRNAU1AP</td>
+<td class="gene">TRNAU1AP</td>
 <td>Not present (25 diseases; COPD absent)</td>
 <td>Not resolved</td>
 <td>3</td>
 <td>Smoking initiation present, very weak: score 0.020, genetic_association 0.033</td>
 </tr>
 <tr>
-<td>GMEB1</td>
+<td class="gene">GMEB1</td>
 <td>Not present (35 diseases; COPD absent)</td>
 <td>Not resolved</td>
 <td>0 (most constrained)</td>
-<td>Smoking initiation present, weak: score 0.025, genetic_association 0.041; nonspecific &quot;Respiratory insufficiency&quot; HPO term present (genetic_association 0.267)</td>
+<td>Smoking initiation present, weak: score 0.025, genetic_association 0.041; nonspecific "Respiratory insufficiency" HPO term present (genetic_association 0.267)</td>
 </tr>
 <tr>
-<td>TAF12-DT</td>
+<td class="gene">TAF12-DT</td>
 <td>Not present (only 2 diseases total, both rna_expression-only, no genetic evidence)</td>
 <td>Not resolved</td>
 <td>No constraint data (non-coding)</td>
 <td>—</td>
 </tr>
 </tbody>
-</table>
-<p>No gene queried at this locus has any Open Targets FEV1, FEV1/FVC, &quot;lung function,&quot; or
+</table></div>
+<p>No gene queried at this locus has any Open Targets FEV1, FEV1/FVC, "lung function," or
 emphysema evidence. Locus-specific L2G/colocalization scores for this particular COPD credible
 set could not be resolved within tool budget (schema introspection for the relevant query shape
 repeatedly exceeded the tool's own output-size limits, and no per-disease filter argument exists
@@ -821,7 +505,7 @@ lung-relevant, or immune-relevant literature of any kind (skeptic verdict: CONTE
 the red-team critique, RCC1's essential nucleocytoplasmic-transport housekeeping role is
 exactly the profile MAGMA/PoPS can falsely prioritize at gene-dense loci (this locus packs
 eight genes into ~750kb), and the same prostate-cancer TWAS that flags PHACTR4 also flags
-RCC1 — supporting a &quot;pleiotropic regulatory hub&quot; alternative explanation over a COPD-specific
+RCC1 — supporting a "pleiotropic regulatory hub" alternative explanation over a COPD-specific
 mechanism.</li>
 <li><strong>OPRD1</strong> (second runner-up, smoking-mediation hypothesis) is the only gene with a direct
 Open Targets COPD genetic-association score, consistent with prior #1 (smoking-mediated
@@ -851,5 +535,7 @@ variant, MAGMA/PoPS/ABC flag, or other statistical connection to this GWAS signa
 supported causal-gene candidates for this locus's GWAS signal specifically, despite their
 strong general COPD biology — see audit file for full reasoning.</p>
 
+        </div>
+    </div>
 </body>
 </html>

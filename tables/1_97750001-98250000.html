@@ -1,387 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>1_97750001-98250000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPD GWAS locus evidence table — 1:97,750,001-98,250,000 (GRCh38)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="copd-gwas-locus-evidence-table--197750001-98250000-grch38">COPD GWAS locus evidence table — 1:97,750,001-98,250,000 (GRCh38)</h1>
-<p><strong>Lead variant:</strong> rs61787828 (PIP=0.179, upstream_gene_variant, DPYD-annotated)
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="copd-gwas-locus-evidence-table--197750001-98250000-grch38">COPD GWAS locus evidence table — 1:97,750,001-98,250,000 (GRCh38)</h1><div class="summary"><p><strong>Lead variant:</strong> rs61787828 (PIP=0.179, upstream_gene_variant, DPYD-annotated)
 <strong>Candidate genes:</strong> DPYD (nearest gene; unanimously prioritized by FLAMES, MAGMA, PoPS,
 and ABC), MIR137HG (overlaps ~28 of 47 credible-set variants by physical position, but
 selected by none of the four prioritization methods)
 <strong>Credible set:</strong> 47 variants, all MODIFIER impact (upstream_gene_variant,
 intron_variant, downstream_gene_variant, non_coding_transcript_variant — no
-missense/splice-donor/splice-acceptor variants)</p>
-<p>Note on a non-literature database fact: a direct GWAS Catalog API lookup for the lead
+missense/splice-donor/splice-acceptor variants)</p><p>Note on a non-literature database fact: a direct GWAS Catalog API lookup for the lead
 variant rs61787828 (performed by the researcher) returned zero records — this SNP has
 no catalogued trait association of its own in GWAS Catalog as of this review. This is a
 database-lookup fact, not a literature citation, and is not subject to
 citation-verifier/red-team-skeptic review, but is noted here because it bears directly
 on how much weight the table's GWAS-paper rows below can carry (see Skeptic verdict
-column and the audit appendix).</p>
+column and the audit appendix).</p></div>
+
+
 <h2 id="evidence-table">Evidence table</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -394,124 +78,124 @@ column and the audit appendix).</p>
 </thead>
 <tbody>
 <tr>
-<td>DPYD</td>
+<td class="gene">DPYD</td>
 <td>Statistical genetics (COPD GWAS, general/background)</td>
 <td>Primary COPD case-control GWAS (35,735 cases/222,076 controls, UK Biobank + International COPD Genetics Consortium) identified 82 genome-wide-significant COPD loci; 13 of 35 novel loci also associated with lung function in a separate 79,055-participant cohort. <strong>This exact chr1:97.75-98.25Mb DPYD/MIR137HG locus's inclusion among the 82 reported loci was NOT independently confirmed</strong> despite two dedicated search attempts.</td>
 <td>Sakornsakolpat et al. 2019, PMID 30804561, DOI 10.1038/s41588-018-0342-2</td>
-<td>WEAKENED (locus-specificity unconfirmed)</td>
+<td><span class="tag-warning">WEAKENED</span> (locus-specificity unconfirmed)</td>
 <td>March 2019</td>
 </tr>
 <tr>
-<td>DPYD</td>
+<td class="gene">DPYD</td>
 <td>Statistical genetics (smoking-behavior GWAS, general/background)</td>
 <td>GSCAN GWAS found 566 variants across 406 loci for smoking initiation/cessation/heaviness and alcohol use. <strong>This exact locus's inclusion among the 406 loci was NOT independently confirmed.</strong></td>
 <td>Liu et al. 2019, PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
-<td>WEAKENED (locus-specificity unconfirmed)</td>
+<td><span class="tag-warning">WEAKENED</span> (locus-specificity unconfirmed)</td>
 <td>February 2019</td>
 </tr>
 <tr>
-<td>DPYD</td>
+<td class="gene">DPYD</td>
 <td>Statistical genetics (smoking-behavior GWAS, general/background)</td>
 <td>Multi-ancestry (~3.4M individuals, ~21% non-European) update identifying 3,823 variants across 2,143 loci for tobacco/alcohol use. <strong>This exact locus's inclusion among the 2,143 loci was NOT independently confirmed.</strong></td>
 <td>Saunders et al. 2022, PMID 36477530, DOI 10.1038/s41586-022-05477-4</td>
-<td>WEAKENED (locus-specificity unconfirmed)</td>
+<td><span class="tag-warning">WEAKENED</span> (locus-specificity unconfirmed)</td>
 <td>December 2022</td>
 </tr>
 <tr>
-<td>DPYD</td>
+<td class="gene">DPYD</td>
 <td>Structural/lung biology (oncology context)</td>
 <td>DPYD-catalyzed dihydropyrimidine accumulation is mechanistically required for cancer cells to undergo EMT and extravasate into mouse lung in a metastasis model.</td>
 <td>Shaul et al. 2014, PMID 25171410, DOI 10.1016/j.cell.2014.07.032</td>
-<td>WEAKENED (cancer/EMT context, not COPD or airway remodeling)</td>
+<td><span class="tag-warning">WEAKENED</span> (cancer/EMT context, not COPD or airway remodeling)</td>
 <td>August 2014</td>
 </tr>
 <tr>
-<td>DPYD</td>
+<td class="gene">DPYD</td>
 <td>Structural/expression biology</td>
 <td>DPD/DPYD protein is expressed in normal human lung tissue (and lung tumor tissue), post-transcriptionally regulated by miR-27a/27b/134/582-5p.</td>
 <td>Hirota et al. 2012, PMID 22306127, DOI 10.1016/j.lungcan.2011.12.018</td>
-<td>WEAKENED (expression-only finding; paper's focus is chemotherapy pharmacogenomics)</td>
+<td><span class="tag-warning">WEAKENED</span> (expression-only finding; paper's focus is chemotherapy pharmacogenomics)</td>
 <td>July 2012</td>
 </tr>
 <tr>
-<td>DPYD</td>
+<td class="gene">DPYD</td>
 <td>Structural/expression biology (oncology context)</td>
 <td>EGFR signaling via Sp1 regulates DPYD/DPD expression in EGFR-mutant non-small-cell lung cancer cell lines.</td>
 <td>Tominaga et al. 2016, PMID 27268079, DOI 10.1186/s12885-016-2392-0</td>
-<td>WEAKENED (oncology context, not COPD)</td>
+<td><span class="tag-warning">WEAKENED</span> (oncology context, not COPD)</td>
 <td>June 2016</td>
 </tr>
 <tr>
-<td>DPYD</td>
+<td class="gene">DPYD</td>
 <td>Pharmacogenomics / constraint context</td>
 <td>Common partial-loss-of-function DPYD alleles (e.g., DPYD*2A/rs3918290) are clinically actionable pharmacogenomic variants for fluoropyrimidine toxicity risk — consistent with DPYD's near-population-average genetic constraint (see Open Targets summary below).</td>
 <td>Amstutz et al. 2017 (CPIC guideline), PMID 29152729, DOI 10.1002/cpt.911</td>
-<td>WEAKENED (mechanism unrelated to COPD; explains why DPYD's dominant biology is pharmacogenomic, not pulmonary)</td>
+<td><span class="tag-warning">WEAKENED</span> (mechanism unrelated to COPD; explains why DPYD's dominant biology is pharmacogenomic, not pulmonary)</td>
 <td>November 2017</td>
 </tr>
 <tr>
-<td>DPYD</td>
+<td class="gene">DPYD</td>
 <td>Structural/chronic-lung-disease genetics (different phenotype: CF)</td>
 <td>In a Canadian cystic fibrosis cohort, two DPYD-annotated SNPs (rs10875080, rs11582736) in the syntenic chr1 ~97.0-105.0 Mb locus were significantly associated with age at first Pseudomonas aeruginosa infection.</td>
 <td>Lorè et al. 2020, PMID 32127447, DOI 10.1128/mBio.00097-20</td>
-<td>WEAKENED (phenotype-mismatched: CF airway-infection timing, not COPD airflow obstruction; argues mildly against pure LD/positional artifact but does not corroborate a COPD-specific mechanism)</td>
+<td><span class="tag-warning">WEAKENED</span> (phenotype-mismatched: CF airway-infection timing, not COPD airflow obstruction; argues mildly against pure LD/positional artifact but does not corroborate a COPD-specific mechanism)</td>
 <td>March 2020</td>
 </tr>
 <tr>
-<td>MIR137HG</td>
+<td class="gene">MIR137HG</td>
 <td>Statistical genetics (different disease: schizophrenia)</td>
 <td>This exact chromosomal region (1p21.3, index SNP rs1625579, intronic to what is now annotated MIR137HG) is a genome-wide-significant schizophrenia risk locus (P=1.6x10^-11); four other schizophrenia loci also contained predicted MIR137 mRNA targets.</td>
 <td>Ripke et al. 2011, PMID 21926974, DOI 10.1038/ng.940</td>
-<td>CONTESTED (confirms locus identity as a well-replicated psychiatric locus, not a COPD/lung locus; no COPD/FEV1 evidence found for MIR137HG anywhere)</td>
+<td><span class="tag-warning">CONTESTED</span> (confirms locus identity as a well-replicated psychiatric locus, not a COPD/lung locus; no COPD/FEV1 evidence found for MIR137HG anywhere)</td>
 <td>September 2011</td>
 </tr>
 <tr>
-<td>MIR137HG</td>
+<td class="gene">MIR137HG</td>
 <td>Immune/neurodevelopmental biology</td>
 <td>miR-137 is a brain-enriched microRNA regulating ~500 genes in a hippocampal neuronal gene network relevant to neurodevelopment and synaptic plasticity.</td>
 <td>Olde Loohuis et al. 2016, PMID 26925706, DOI 10.1016/j.pnpbp.2016.02.009</td>
-<td>CONTESTED (reinforces CNS-restricted mechanism, arguing against pulmonary/immune relevance)</td>
+<td><span class="tag-warning">CONTESTED</span> (reinforces CNS-restricted mechanism, arguing against pulmonary/immune relevance)</td>
 <td>February 2016</td>
 </tr>
 <tr>
-<td>MIR137HG</td>
+<td class="gene">MIR137HG</td>
 <td>Immune/neurodevelopmental biology</td>
 <td>Heterozygous Mir137 knockout mice show repetitive behavior and impaired learning/sociability via increased Pde10a.</td>
 <td>Cheng et al. 2018, PMID 30397325, DOI 10.1038/s41593-018-0261-7</td>
-<td>CONTESTED (CNS mechanism, not lung/immune)</td>
+<td><span class="tag-warning">CONTESTED</span> (CNS mechanism, not lung/immune)</td>
 <td>December 2018</td>
 </tr>
 <tr>
-<td>MIR137HG</td>
+<td class="gene">MIR137HG</td>
 <td>Immune biology (acute lung injury model, non-COPD)</td>
 <td>Exosomal miR-137-3p from bone-marrow mesenchymal stem cells promotes M2 (anti-inflammatory) alveolar-macrophage polarization via TRIM24/STAT6 suppression in a mouse LPS-induced acute lung injury model.</td>
 <td>Cao et al. 2025, PMID 41395781, DOI 10.1096/fj.202502772R</td>
-<td>CONTESTED (acute-injury model, not chronic COPD; directionally contradicted by the next row)</td>
+<td><span class="tag-warning">CONTESTED</span> (acute-injury model, not chronic COPD; directionally contradicted by the next row)</td>
 <td>December 2025</td>
 </tr>
 <tr>
-<td>MIR137HG</td>
+<td class="gene">MIR137HG</td>
 <td>Immune biology (glioma model, non-COPD)</td>
 <td>miR-137 promotes M1 (pro-inflammatory) tumor-associated macrophage polarization via SPHK2 targeting in a glioma model — the OPPOSITE direction of macrophage polarization from the acute-lung-injury paper above.</td>
 <td>Liu et al. 2023, PMID 37533491, DOI 10.3892/etm.2023.12096</td>
-<td>CONTESTED (directionally contradicts prior row; non-lung context)</td>
+<td><span class="tag-warning">CONTESTED</span> (directionally contradicts prior row; non-lung context)</td>
 <td>August 2023</td>
 </tr>
 <tr>
-<td>MIR137HG</td>
+<td class="gene">MIR137HG</td>
 <td>Immune biology (atherosclerosis/THP-1 model, non-COPD)</td>
 <td>A miR-137/TNFAIP1 competing-endogenous-RNA axis (with lncRNA KCNQ1OT1) modulates oxidized-LDL-induced inflammatory response and oxidative stress in THP-1 macrophages.</td>
 <td>Xu et al. 2022, PMID 35598525, DOI 10.1016/j.cyto.2022.155912</td>
-<td>CONTESTED (non-pulmonary, atherosclerosis-focused context)</td>
+<td><span class="tag-warning">CONTESTED</span> (non-pulmonary, atherosclerosis-focused context)</td>
 <td>July 2022</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>All 14 citations above carry a VERIFIED verdict from citation-verifier (existence,
 non-retraction, and claim-correspondence all confirmed) — see
 <code>evidence_tables/_status/1_97750001-98250000/verified_citations.md</code> for full verifier
 justifications. No citations were excluded on verification grounds at this locus. The
-&quot;Skeptic verdict&quot; column reflects red-team-skeptic's assessment of evidentiary strength
+"Skeptic verdict" column reflects red-team-skeptic's assessment of evidentiary strength
 and relevance, not a verification failure — see <code>audits/1_97750001-98250000_audit.md</code>
 for full skeptic reasoning.</p>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — NOT a verified literature citation)</h2>
@@ -525,7 +209,7 @@ by the genetic_association datatype (0.4131) rather than literature co-mention
 (0.0122).</li>
 <li>A separate gwas_credible_sets evidence record scores 0.6795 for DPYD-COPD.</li>
 <li>Strong genetic-association scores also exist for smoking cessation (0.6001), smoking
-initiation (0.5757), and &quot;Wheezing&quot; (0.7557).</li>
+initiation (0.5757), and "Wheezing" (0.7557).</li>
 <li>No DPYD-FEV1 (EFO_0004314) gwas_credible_sets evidence exists in Open Targets — i.e.,
 no spirometric concordance signal captured by this database.</li>
 <li>Genetic constraint: synonymous score 0.225 (oe 0.980), missense score 0.100 (oe
@@ -597,5 +281,7 @@ data are available, this call should be treated as the best-supported working
 hypothesis, not a settled conclusion — the study team should weigh the LOW confidence
 rating accordingly.</p>
 
+        </div>
+    </div>
 </body>
 </html>

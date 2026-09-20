@@ -1,383 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>1_149850001-150100000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPD GWAS locus 1:149,850,001-150,100,000 — Evidence table</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="copd-gwas-locus-1149850001-150100000--evidence-table">COPD GWAS locus 1:149,850,001-150,100,000 — Evidence table</h1>
-<p><strong>Lead variant:</strong> rs11205303 (1:149,934,520, GRCh38; PIP=0.894; VEP-annotated downstream_gene_variant
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="copd-gwas-locus-1149850001-150100000--evidence-table">COPD GWAS locus 1:149,850,001-150,100,000 — Evidence table</h1><div class="summary"><p><strong>Lead variant:</strong> rs11205303 (1:149,934,520, GRCh38; PIP=0.894; VEP-annotated downstream_gene_variant
 of OTUD7B). <strong>Secondary credible-set variants:</strong> rs67807996 (PIP=0.056; intron/non-coding-transcript
 variant, no gene annotation) and rs11205277 (PIP=0.030; upstream_gene_variant of SV2A).
-<strong>Nearest gene:</strong> MTMR11. <strong>PoPS-prioritized gene:</strong> SF3B4. FLAMES/MAGMA/ABC: not prioritized (NA).</p>
-<p>No missense or splice-altering credible-set variant exists at this locus, so no dedicated
-variant-level literature search beyond the lead variant was warranted per pipeline scope rules.</p>
-<p>All citations below carry verdict VERIFIED from citation-verifier (existence, non-retraction, and
+<strong>Nearest gene:</strong> MTMR11. <strong>PoPS-prioritized gene:</strong> SF3B4. FLAMES/MAGMA/ABC: not prioritized (NA).</p><p>No missense or splice-altering credible-set variant exists at this locus, so no dedicated
+variant-level literature search beyond the lead variant was warranted per pipeline scope rules.</p><p>All citations below carry verdict VERIFIED from citation-verifier (existence, non-retraction, and
 claim-correspondence all confirmed). Full verifier output is preserved in
 <code>evidence_tables/_status/1_149850001-150100000/verified_citations.md</code>. Per-gene skeptic verdicts
-(from red-team-skeptic) are given in the final column and are elaborated in the audit appendix.</p>
-<h2 id="addendum-notice-2026-09-11-targeted-re-opening">ADDENDUM NOTICE (2026-09-11, targeted re-opening)</h2>
-<p>This locus's original review (candidates MTMR11, SF3B4, OTUD7B, SV2A, plus VPS45/BOLA1 found via
+(from red-team-skeptic) are given in the final column and are elaborated in the audit appendix.</p><p>This locus's original review (candidates MTMR11, SF3B4, OTUD7B, SV2A, plus VPS45/BOLA1 found via
 regional enumeration) is preserved below unchanged. A genome-build error in the original
 MAGMA/PoPS gene-location merge file was subsequently discovered, and a corrected re-merge surfaced
 <strong>H3C15</strong> (a replication-dependent, canonical H3.1/H3.2-type histone gene, formerly named
@@ -386,11 +65,9 @@ HIST2H3A) as a candidate gene at this locus that had not previously been individ
 regional-enumeration step). H3C15's coordinates (chr1:149,852,608-149,853,125, GRCh38) were
 independently re-confirmed to genuinely, physically fall inside this locus's window — this is not
 an artifact of the build-error bug — so it was researched, verified, and critiqued to the same
-standard as the other candidates. See the H3C15 rows below and the &quot;Prioritized gene&quot; section for
+standard as the other candidates. See the H3C15 rows below and the "Prioritized gene" section for
 the outcome: <strong>H3C15 does not disturb the original MTMR11/OTUD7B tie</strong> and has been added to the
-table at the same INSUFFICIENT EVIDENCE tier as SV2A/BOLA1/VPS45.</p>
-<h2 id="locus-level-note-applies-across-genes">Locus-level note (applies across genes)</h2>
-<p>The lead credible-set variant (rs11205303) and its correlated SNPs (rs11205277, rs67807996) have an
+table at the same INSUFFICIENT EVIDENCE tier as SV2A/BOLA1/VPS45.</p><p>The lead credible-set variant (rs11205303) and its correlated SNPs (rs11205277, rs67807996) have an
 independently published, genome-wide-significant common-variant association with mammographic breast
 density (Fernandez-Navarro et al. 2014) and, at the correlated SNP rs11205277, with growth-hormone
 treatment response in idiopathic short stature (Quigley et al. 2019, which explicitly nominates SF3B4
@@ -398,8 +75,15 @@ as most relevant of the four nearby genes) and with adult-height/infant-length G
 (van der Valk et al. 2014). The locus's best-replicated common-variant phenotype in the literature is
 anthropometric/developmental (height, growth, breast density), not pulmonary or smoking-related — a
 locus-level alternative hypothesis (e.g., allometric lung-size effects on spirometry) that applies
-across all four originally-listed candidate genes and is not resolved by the current evidence.</p>
-<table>
+across all four originally-listed candidate genes and is not resolved by the current evidence.</p></div>
+
+
+
+<h2 id="addendum-notice-2026-09-11-targeted-re-opening">ADDENDUM NOTICE (2026-09-11, targeted re-opening)</h2>
+
+<h2 id="locus-level-note-applies-across-genes">Locus-level note (applies across genes)</h2>
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -412,7 +96,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 </thead>
 <tbody>
 <tr>
-<td>MTMR11</td>
+<td class="gene">MTMR11</td>
 <td>Statistical genetics</td>
 <td>No COPD/FEV1/FEV1-FVC/spirometry GWAS, fine-mapping, colocalization, TWAS, or MR study naming MTMR11 exists in PubMed (absence of evidence, not a citation).</td>
 <td>—</td>
@@ -420,7 +104,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MTMR11</td>
+<td class="gene">MTMR11</td>
 <td>Statistical genetics</td>
 <td>Lead credible-set variant rs11205303 (and correlated rs11205277, rs67807996) independently associated with mammographic breast density (OR=0.73, 95% CI 0.66–0.80), not any lung/smoking trait.</td>
 <td>PMID 25353672 / DOI 10.1002/ijc.29299 (Fernandez-Navarro et al. 2014, Int J Cancer)</td>
@@ -428,7 +112,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MTMR11</td>
+<td class="gene">MTMR11</td>
 <td>Statistical genetics</td>
 <td>rs11205277 (near MTMR11/SV2A/SF3B4) associated with growth-hormone-treatment height response; authors explicitly nominate SF3B4, not MTMR11, as most relevant gene.</td>
 <td>PMID 30970347 / DOI 10.1159/000496989 (Quigley et al. 2019, Horm Res Paediatr)</td>
@@ -436,23 +120,23 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MTMR11</td>
-<td>Nonspecific bioinformatics (&quot;guilt by association&quot;)</td>
+<td class="gene">MTMR11</td>
+<td>Nonspecific bioinformatics ("guilt by association")</td>
 <td>MTMR11 listed among 8 ML-selected ulcerative colitis diagnostic biomarkers; no functional validation, not COPD-related.</td>
 <td>PMID 39414957 / DOI 10.1038/s41598-024-75797-0 (Jiang et al. 2024, Sci Rep)</td>
 <td>INSUFFICIENT EVIDENCE</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MTMR11</td>
+<td class="gene">MTMR11</td>
 <td>Nonspecific bioinformatics</td>
-<td>MTMR11 listed among 13 random-forest &quot;hub genes&quot; for peri-implantitis; not COPD-related.</td>
+<td>MTMR11 listed among 13 random-forest "hub genes" for peri-implantitis; not COPD-related.</td>
 <td>PMID 37671094 / DOI 10.1515/biol-2022-0691 (Fan et al. 2023, Open Life Sci)</td>
 <td>INSUFFICIENT EVIDENCE</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MTMR11</td>
+<td class="gene">MTMR11</td>
 <td>Nonspecific bioinformatics</td>
 <td>MTMR11 among deregulated protein phosphatases distinguishing AML subtypes.</td>
 <td>PMID 23440723 / DOI 10.1007/s12032-013-0517-8 (Kabir et al. 2013, Med Oncol)</td>
@@ -460,7 +144,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MTMR11</td>
+<td class="gene">MTMR11</td>
 <td>Nonspecific bioinformatics</td>
 <td>MTMR11 among tyrosine/dual-specificity phosphatases altered in HER2+ breast cancer cells/tumors.</td>
 <td>PMID 20413845 / DOI 10.3233/CLO-2010-0520 (Lucci et al. 2010, Cell Oncol)</td>
@@ -468,7 +152,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MTMR11</td>
+<td class="gene">MTMR11</td>
 <td>Nonspecific bioinformatics</td>
 <td>MTMR11 among differentially expressed genes in an endometrial-cancer drug-resistance transcriptomic profile.</td>
 <td>PMID 32598254 / DOI 10.2174/1389201021666200629151008 (Januszyk et al. 2021, Curr Pharm Biotechnol)</td>
@@ -476,7 +160,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MTMR11</td>
+<td class="gene">MTMR11</td>
 <td>Nonspecific bioinformatics</td>
 <td>MTMR11 among transcription-factor-binding-site-validated genes in an abdominal aortic aneurysm panel.</td>
 <td>PMID 25993293 / DOI 10.3390/ijms160511229 (Pahl et al. 2015, Int J Mol Sci)</td>
@@ -484,7 +168,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MTMR11</td>
+<td class="gene">MTMR11</td>
 <td>Genomic context (not disease evidence)</td>
 <td>Confirms SF3B4/OTUD7B/MTMR11 form a 93-kb physically duplicated/clustered region at 1q21.2 in leukemia/lymphoma cytogenetics.</td>
 <td>PMID 17498563 / DOI 10.1016/j.cancergencyto.2007.01.011 (La Starza et al. 2007, Cancer Genet Cytogenet)</td>
@@ -492,7 +176,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MTMR11</td>
+<td class="gene">MTMR11</td>
 <td>Structural biology (non-lung)</td>
 <td>Mtmr11 intron retention is a passive downstream splicing readout of U4 spliceosomal RNA depletion in a rat Schwann-cell (peripheral nerve) diabetic-neuropathy model.</td>
 <td>PMID 38916813 / DOI 10.1007/s11064-024-04200-1 (Jin et al. 2024, Neurochem Res)</td>
@@ -500,183 +184,183 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SF3B4</td>
+<td class="gene">SF3B4</td>
 <td>Statistical genetics (rare-variant, different architecture)</td>
 <td>Frameshift/LoF SF3B4 mutations (exome sequencing) found in 57% of Nager syndrome families, establishing haploinsufficiency as the disease mechanism for this monogenic craniofacial syndrome.</td>
 <td>PMID 22541558 / DOI 10.1016/j.ajhg.2012.04.004 (Bernier et al. 2012, Am J Hum Genet)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SF3B4</td>
+<td class="gene">SF3B4</td>
 <td>Statistical genetics</td>
 <td>SF3B4 explicitly nominated as the most biologically plausible gene (over MTMR11/SV2A) for the growth-hormone-treatment-response signal at rs11205277.</td>
 <td>PMID 30970347 / DOI 10.1159/000496989 (Quigley et al. 2019, Horm Res Paediatr)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SF3B4</td>
+<td class="gene">SF3B4</td>
 <td>Statistical genetics</td>
 <td>SF3B4 is among 11 of 180 known adult-height GWAS loci also genome-wide significantly associated with infant length — reinforcing an anthropometric, not pulmonary, common-variant phenotype at this locus.</td>
 <td>PMID 25281659 / DOI 10.1093/hmg/ddu510 (van der Valk et al. 2014, Hum Mol Genet)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SF3B4</td>
+<td class="gene">SF3B4</td>
 <td>Structural/functional (oncology, lung-derived cells)</td>
 <td>SF3B4 knockdown alters 5'-UTR alternative splicing of KAT2A, restraining lung adenocarcinoma (LUAD) cell tumorigenesis.</td>
 <td>PMID 38168564 / DOI 10.1038/s41598-023-50606-2 (Qu et al. 2024, Sci Rep)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SF3B4</td>
+<td class="gene">SF3B4</td>
 <td>Structural/functional (oncology, lung-derived cells)</td>
 <td>METTL3-stabilized SF3B4 promotes NSCLC growth/metastasis/stemness via enhancing LSM4 expression.</td>
 <td>PMID 38462740 / DOI 10.1111/1759-7714.15275 (He et al. 2024, Thorac Cancer)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SF3B4</td>
+<td class="gene">SF3B4</td>
 <td>Structural/functional (oncology, lung-derived cells)</td>
 <td>SF3B4 knockdown induces p21-dependent cellular senescence in A549 NSCLC cells and primary fibroblasts.</td>
 <td>PMID 39467623 / DOI 10.21873/cgp.20478 (Yang et al. 2024, Cancer Genomics Proteomics)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SF3B4</td>
+<td class="gene">SF3B4</td>
 <td>Statistical/computational (oncology, not lung)</td>
 <td>SF3B4 identified as a candidate oncogene with a promoter driver mutation in basal-like breast cancer.</td>
 <td>PMID 37551622 / DOI 10.1093/bib/bbad274 (Nourbakhsh et al. 2023, Brief Bioinform)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OTUD7B</td>
+<td class="gene">OTUD7B</td>
 <td>Statistical genetics (transcriptomic, COPD-specific)</td>
 <td>OTUD7B (with POLD2) identified as an ML-derived COPD biomarker, downregulated in COPD samples; positively correlated with regulatory T-cell infiltration and negatively with eosinophil infiltration (CIBERSORT deconvolution). Single, unreplicated, correlational study — not GWAS/genetic evidence.</td>
 <td>PMID 42032709 / DOI 10.1186/s41065-026-00682-x (Lei et al. 2026, Hereditas)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OTUD7B</td>
+<td class="gene">OTUD7B</td>
 <td>Statistical genetics</td>
 <td>Correlated credible-set SNP rs67807996 (annotated to OTUD7B) independently associated with mammographic breast density, not a lung/smoking trait.</td>
 <td>PMID 25353672 / DOI 10.1002/ijc.29299 (Fernandez-Navarro et al. 2014, Int J Cancer)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OTUD7B</td>
+<td class="gene">OTUD7B</td>
 <td>Immune/inflammatory (T cells, general — not lung)</td>
 <td>Otud7b deubiquitinates Zap70 upon TCR ligation, promoting T-cell activation; Otud7b-deficient mice show impaired T-cell activation/differentiation and protection from EAE — a POSITIVE regulator of TCR signaling/T-cell inflammation.</td>
 <td>PMID 26903241 / DOI 10.1084/jem.20151426 (Hu et al. 2016, J Exp Med)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OTUD7B</td>
+<td class="gene">OTUD7B</td>
 <td>Immune/inflammatory (endothelium/epithelium, general — not lung)</td>
 <td>Founding characterization of Cezanne/OTUD7B as a TNF-inducible negative regulator of NF-κB, suppressing IL-8 induction and RIP1 polyubiquitination.</td>
 <td>PMID 18178551 / DOI 10.1074/jbc.M708690200 (Enesa et al. 2008, J Biol Chem)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OTUD7B</td>
+<td class="gene">OTUD7B</td>
 <td>Immune/inflammatory (mechanistic, general)</td>
 <td>Oxidative stress (H2O2) inhibits Cezanne/OTUD7B catalytic activity and its restraint of RIP1 ubiquitination/NF-κB activation — mechanistically relevant to oxidant-rich environments (e.g. cigarette smoke) though not tested in lung.</td>
 <td>PMID 18474597 / DOI 10.1074/jbc.M801312200 (Enesa et al. 2008, J Biol Chem)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OTUD7B</td>
+<td class="gene">OTUD7B</td>
 <td>Immune/inflammatory (upper-airway epithelium)</td>
 <td>Cezanne/OTUD7B (with A20, CYLD) expressed in human sinonasal epithelium, differentially modulated by TNF-α/IL-4/IL-13/LPS — the closest literature comes to an airway-epithelium immune role, but upper (sinonasal), not lower, airway.</td>
 <td>PMID 25907801 / DOI 10.1002/alr.21538 (Li et al. 2015, Int Forum Allergy Rhinol)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OTUD7B</td>
+<td class="gene">OTUD7B</td>
 <td>Immune/inflammatory (endothelium/vascular, not lung)</td>
 <td>Cezanne/OTUD7B induced by hypoxia, restrains TRAF6 ubiquitination/NF-κB in endothelial cells; genetic deletion increases renal ischemia-reperfusion injury in mice.</td>
 <td>PMID 23564640 / DOI 10.1161/CIRCRESAHA.111.300119 (Luong et al. 2013, Circ Res)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OTUD7B</td>
+<td class="gene">OTUD7B</td>
 <td>Immune/vascular (not lung)</td>
 <td>Low shear stress induces Cezanne/OTUD7B via NF-κB, stabilizing HIF1α and promoting endothelial proliferation/inflammation at atheroprone sites.</td>
 <td>PMID 28882872 / DOI 10.1161/ATVBAHA.117.309249 (Feng et al. 2017, Arterioscler Thromb Vasc Biol)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OTUD7B</td>
+<td class="gene">OTUD7B</td>
 <td>Mechanistic (general, not disease-specific)</td>
 <td>N-terminal UBA domain of Cezanne/OTUD7B is required for recruitment to activated TNFR complexes.</td>
 <td>PMID 28817177 / DOI 10.1002/jcb.26359 (Ji et al. 2017, J Cell Biochem)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OTUD7B</td>
+<td class="gene">OTUD7B</td>
 <td>Structural/vascular (not lung) — counter-example to a simple anti-inflammatory narrative</td>
-<td>Cezanne/OTUD7B drives vascular smooth muscle cell proliferation/pathological arterial remodeling via β-catenin/CCN1 signaling; explicitly &quot;no significant effects... on NF-κB signalling, or inflammation&quot; in this cell type, showing OTUD7B function is highly cell-type-dependent.</td>
+<td>Cezanne/OTUD7B drives vascular smooth muscle cell proliferation/pathological arterial remodeling via β-catenin/CCN1 signaling; explicitly "no significant effects... on NF-κB signalling, or inflammation" in this cell type, showing OTUD7B function is highly cell-type-dependent.</td>
 <td>PMID 33599243 / DOI 10.1093/cvr/cvab056 (An et al. 2022, Cardiovasc Res)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OTUD7B</td>
+<td class="gene">OTUD7B</td>
 <td>General mechanistic background (non-pulmonary)</td>
 <td>DJ-1/Cezanne interaction relevant to cell survival.</td>
 <td>PMID 21097510 / DOI 10.1074/jbc.M110.147371 (McNally et al. 2010, J Biol Chem)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OTUD7B</td>
+<td class="gene">OTUD7B</td>
 <td>General mechanistic background (non-pulmonary)</td>
 <td>DJ-1 activates noncanonical NF-κB via Cezanne interaction, inhibiting apoptosis/promoting proliferation of Ishikawa (endometrial) cells.</td>
 <td>PMID 34374892 / DOI 10.1007/s11033-021-06614-4 (Zhu et al. 2021, Mol Biol Rep)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OTUD7B</td>
+<td class="gene">OTUD7B</td>
 <td>General mechanistic background (neuroinflammation, non-pulmonary)</td>
 <td>Sulforaphane mitigates LPS-induced neuroinflammation via modulation of Cezanne/NF-κB signaling.</td>
 <td>PMID 33010279 / DOI 10.1016/j.lfs.2020.118519 (Wang et al. 2020, Life Sci)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OTUD7B</td>
+<td class="gene">OTUD7B</td>
 <td>General mechanistic background (glioma, non-pulmonary)</td>
 <td>miR-486 sustains NF-κB activity by suppressing NF-κB-negative regulators CYLD and Cezanne/OTUD7B.</td>
 <td>PMID 23247627 / DOI 10.1038/cr.2012.174 (Song et al. 2012, Cell Res)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OTUD7B</td>
+<td class="gene">OTUD7B</td>
 <td>Immune/macrophage (RAW264.7, not lung-specific)</td>
 <td>Vitamin E γ-tocotrienol increases Cezanne/OTUD7B (an NF-κB inhibitor) in A20-deficient macrophages.</td>
 <td>PMID 26002975 / DOI 10.4049/jimmunol.1403149 (Wang et al. 2015, J Immunol)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SV2A</td>
+<td class="gene">SV2A</td>
 <td>Statistical genetics</td>
 <td>rs11205277 (near SV2A) growth-hormone-response signal explicitly attributed to SF3B4, not SV2A, by study authors.</td>
 <td>PMID 30970347 / DOI 10.1159/000496989 (Quigley et al. 2019, Horm Res Paediatr)</td>
@@ -684,71 +368,71 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>VPS45 (boundary-adjacent; not flagged by any of the 5 prioritization methods)</td>
+<td class="gene">VPS45 (boundary-adjacent; not flagged by any of the 5 prioritization methods)</td>
 <td>Statistical genetics (different trait, different architecture)</td>
 <td>At a schizophrenia GWAS risk locus containing VPS45, editing the top allele-specific-open-chromatin SNP alters VPS45/nearby-gene expression with synergistic effects on neuronal dendritic complexity/hyperactivity in iPSC neurons.</td>
 <td>PMID 37719141 / DOI 10.1016/j.xgen.2023.100399 (Zhang et al. 2023, Cell Genom)</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>VPS45</td>
+<td class="gene">VPS45</td>
 <td>Statistical genetics (different trait)</td>
 <td>Splicing-aware TWAS (SpliTWAS) with fine-mapping identifies VPS45 (and APOPT1) as putatively causal for schizophrenia risk via exon-specific splicing.</td>
 <td>PMID 38925119 / DOI 10.1016/j.ajhg.2024.06.001 (Hervoso et al. 2024, Am J Hum Genet)</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>VPS45</td>
+<td class="gene">VPS45</td>
 <td>Statistical genetics (different trait)</td>
 <td>Brain-expressed lncRNA near VPS45 has a GWAS-colocalizing eQTL relevant to brain complex traits.</td>
 <td>PMID 41406972 / DOI 10.1016/j.ajhg.2025.11.012 (Chen et al. 2025, Am J Hum Genet)</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>VPS45</td>
+<td class="gene">VPS45</td>
 <td>Statistical/epigenetic (cardiovascular, monocytes; different trait)</td>
 <td>A VPS45 DNA methylation locus in CD14+ monocytes mediates the association between physical activity and incident cardiovascular disease.</td>
 <td>PMID 34732130 / DOI 10.1186/s12864-021-08108-w (Shi et al. 2021, BMC Genomics)</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>VPS45</td>
+<td class="gene">VPS45</td>
 <td>Immune (rare recessive Mendelian disease — different architecture/direction from common-variant COPD hypothesis)</td>
 <td>Biallelic (homozygous) VPS45 LoF mutations cause autosomal recessive congenital neutropenia with neutrophil dysfunction (impaired motility, increased apoptosis, reduced β1 integrin), bone marrow fibrosis, nephromegaly; zebrafish vps45-deficiency model shows paucity of myeloperoxidase-positive neutrophils.</td>
 <td>PMID 23738510 / DOI 10.1056/NEJMoa1301296 (Vilboux et al. 2013, N Engl J Med)</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>VPS45</td>
+<td class="gene">VPS45</td>
 <td>Immune (review, rare disease)</td>
 <td>Review classifying VPS45 deficiency among monogenic congenital neutropenia syndromes via protein/vesicle mistrafficking.</td>
 <td>PMID 24145314 / DOI 10.1097/ACI.0000000000000014 (Hauck &amp; Klein 2013, Curr Opin Allergy Clin Immunol)</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>VPS45</td>
+<td class="gene">VPS45</td>
 <td>Immune (rare disease, clinical case series)</td>
 <td>VPS45-associated primary infantile myelofibrosis (homozygous Thr224Asn) with severe congenital neutropenia and accelerated neutrophil apoptosis, treated by HSCT.</td>
 <td>PMID 24164830 / DOI 10.1111/petr.12169 (Stepensky et al. 2013, Pediatr Transplant)</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>VPS45</td>
+<td class="gene">VPS45</td>
 <td>Immune (differential-diagnosis context only)</td>
 <td>Case report of DADA2 listing VPS45 among genes excluded as a cause of the patient's neutropenia.</td>
 <td>PMID 29564582 / DOI 10.1007/s10875-018-0487-x (Cipe et al. 2018, J Clin Immunol)</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BOLA1 (not flagged by any of the 5 prioritization methods)</td>
+<td class="gene">BOLA1 (not flagged by any of the 5 prioritization methods)</td>
 <td>Structural biology (basic mitochondrial biochemistry, not lung/immune)</td>
 <td>Defines structure/cluster-coordination chemistry of BOLA1-GRX5 and BOLA3-GRX5 heterocomplexes.</td>
 <td>PMID 28483642 / DOI 10.1016/j.bbagen.2017.05.005 (Nasta et al. 2017, Biochim Biophys Acta)</td>
@@ -756,7 +440,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BOLA1</td>
+<td class="gene">BOLA1</td>
 <td>Structural biology (basic biochemistry)</td>
 <td>Kinetic characterization of Fe-S cluster exchange reactivity of the BOLA1-GLRX5 complex.</td>
 <td>PMID 32542995 / DOI 10.1111/febs.15452 (Sen et al. 2020, FEBS J)</td>
@@ -764,7 +448,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BOLA1</td>
+<td class="gene">BOLA1</td>
 <td>Structural biology (non-human parasite model, not relevant)</td>
 <td>Late Fe-S cluster (ISC) pathway adaptation in Giardia intestinalis mitosomes.</td>
 <td>PMID 37792908 / DOI 10.1371/journal.ppat.1010773 (Motyčková et al. 2023, PLoS Pathog)</td>
@@ -772,7 +456,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BOLA1</td>
+<td class="gene">BOLA1</td>
 <td>Structural biology (neurodegeneration/iron homeostasis, not lung)</td>
 <td>Iron-homeostasis proteomics screen modified by PINK1 absence.</td>
 <td>PMID 33023155 / DOI 10.3390/cells9102229 (Key et al. 2020, Cells)</td>
@@ -780,7 +464,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>H3C15 (formerly HIST2H3A; surfaced by corrected MAGMA/PoPS build-error re-merge; not flagged by nearest-gene/FLAMES/ABC)</td>
+<td class="gene">H3C15 (formerly HIST2H3A; surfaced by corrected MAGMA/PoPS build-error re-merge; not flagged by nearest-gene/FLAMES/ABC)</td>
 <td>Statistical genetics</td>
 <td>No PubMed literature (GWAS/TWAS/MR/eQTL/colocalization) links H3C15 or its former symbol HIST2H3A to COPD, spirometry (FEV1/FEV1-FVC), or smoking behavior — a genuine literature null concordant with the Open Targets structured-database null (zero credible sets/L2G assignments genome-wide, zero <code>genetic_association</code>-datatype evidence; see Open Targets summary below). Absence of evidence, not a citation.</td>
 <td>—</td>
@@ -788,7 +472,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>H3C15</td>
+<td class="gene">H3C15</td>
 <td>Genomic identity confirmation (not disease evidence)</td>
 <td>Confirms H3C15 (=HIST2H3A) is a genuinely distinct, individually-sequenced locus from its paralogs H3C13/H3C14 (=HIST2H3D/HIST2H3C) and the H3.3-encoding genes (H3F3A/H3F3B/H3F3C); no somatic mutation found in any of these genes in 15 soft-tissue giant cell tumors (oncology context, non-COPD).</td>
 <td>PMID 28084336 / DOI 10.1038/modpathol.2016.236 (Lee et al. 2017, Mod Pathol)</td>
@@ -796,15 +480,15 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>H3C15</td>
+<td class="gene">H3C15</td>
 <td>Immune/inflammatory — <strong>gene-family-level pooled histone-H3 evidence, NOT H3C15-gene-specific</strong> (citrullination epitopes R2/R8/R17/R26 are conserved identically across ~10-15 canonical H3.1/H3.2 paralogs; no literature distinguishes H3C15 from other paralogs in NET composition)</td>
-<td>Citrullinated histone H3 (citH3) abundant in NETs/NETotic neutrophils in acutely exacerbated COPD sputum; &quot;NETosis is an integral part of COPD pathology.&quot;</td>
+<td>Citrullinated histone H3 (citH3) abundant in NETs/NETotic neutrophils in acutely exacerbated COPD sputum; "NETosis is an integral part of COPD pathology."</td>
 <td>PMID 24831032 / DOI 10.1371/journal.pone.0097784 (Obermayer et al. 2014, PLoS One)</td>
 <td>INSUFFICIENT EVIDENCE (pooled-H3 only, not H3C15-specific)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>H3C15</td>
+<td class="gene">H3C15</td>
 <td>Immune/inflammatory — pooled histone-H3 evidence, NOT H3C15-specific</td>
 <td>Hedgehog-pathway inhibition (Vismodegib) reduced NET markers (Cit-H3, neutrophil elastase, MPO) and shifted M1→M2 macrophage polarization in a cigarette-smoke/LPS mouse COPD model.</td>
 <td>PMID 41637659 / DOI 10.1111/cbdd.70258 (Wu et al. 2026, Chem Biol Drug Des)</td>
@@ -812,7 +496,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>H3C15</td>
+<td class="gene">H3C15</td>
 <td>Immune/inflammatory — pooled histone-H3 evidence, NOT H3C15-specific</td>
 <td>PDE4 inhibition (roflumilast, an approved COPD drug) reduces NET formation and histone H3 citrullination in airway neutrophils in a cystic-fibrosis-relevant infection model.</td>
 <td>PMID 34566635 / DOI 10.3389/fphar.2021.702677 (Totani et al. 2021, Front Pharmacol)</td>
@@ -820,7 +504,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>H3C15</td>
+<td class="gene">H3C15</td>
 <td>Immune/inflammatory — pooled histone-H3 evidence, NOT H3C15-specific, and vascular- (not lung-) disease-focused</td>
 <td>Review noting NETosis/citrullinated histones implicated across chronic inflammatory vascular conditions, with COPD mentioned only as a co-occurring risk factor for aortic aneurysm.</td>
 <td>PMID 34961758 / DOI 10.12659/MSM.935134 (Michalska et al. 2021, Med Sci Monit)</td>
@@ -828,7 +512,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>H3C15</td>
+<td class="gene">H3C15</td>
 <td>General background (histones-as-DAMPs review; not COPD-specific, not H3C15-specific)</td>
 <td>Extracellular histones act as DAMPs engaging TLR2/TLR4/TLR9 driving endothelial dysfunction/platelet activation/cytokine release in sepsis, stroke, ARDS, COVID-19, autoimmune disease (no COPD/lung mention).</td>
 <td>PMID 41993174 / DOI 10.3389/fimmu.2026.1791619 (Mohiuddin et al. 2026, Front Immunol)</td>
@@ -836,7 +520,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>H3C15</td>
+<td class="gene">H3C15</td>
 <td>Immune/lung inflammation model, but not histone-H3-centric</td>
 <td>Adenoviral protein VII sequesters host HMGB1 (a related but distinct DAMP, not histone H3) reducing inflammation-induced HMGB1 release/neutrophil recruitment in mouse bronchoalveolar lavage fluid.</td>
 <td>PMID 27362237 / DOI 10.1038/nature18317 (Avgousti et al. 2016, Nature)</td>
@@ -844,7 +528,7 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>H3C15</td>
+<td class="gene">H3C15</td>
 <td>General background (thromboinflammation/DAMP reviews; no COPD-specific claim, not H3C15-specific)</td>
 <td>General reviews of extracellular histones/DAMPs in coagulation, SARS-CoV-2 immunothrombosis, cancer-associated NETosis, and eosinophil ETosis — cited for completeness of the family-level NETosis/DAMP literature search, no COPD- or H3C15-specific content.</td>
 <td>PMID 38815754 (Yong &amp; Toh 2024, J Thromb Haemost); PMID 34827548 (Hernández-Huerta et al. 2021, Biomolecules); PMID 37479035 (Rosell et al. 2023, J Thromb Haemost — adjusts for COPD as covariate only); PMID 34386406 (Miyabe et al. 2021, Asia Pac Allergy)</td>
@@ -852,10 +536,10 @@ across all four originally-listed candidate genes and is not resolved by the cur
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not">Open Targets summary (structured database lookup — NOT a verified literature citation; not</h2>
 <p>routed through citation-verifier or red-team-skeptic)</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -867,61 +551,61 @@ across all four originally-listed candidate genes and is not resolved by the cur
 </thead>
 <tbody>
 <tr>
-<td>MTMR11</td>
+<td class="gene">MTMR11</td>
 <td>0.235 (rank 12/283; entirely driven by <code>genetic_association</code> datatype, score 0.387)</td>
 <td><strong>0.636 (top gene)</strong></td>
 <td>0.156–0.750 (top gene in both FEV1 and FVC credible sets found)</td>
 <td>0.833 (0.697–0.999) — LoF-tolerant</td>
 </tr>
 <tr>
-<td>SF3B4</td>
+<td class="gene">SF3B4</td>
 <td>&lt;0.046 (not in top 100 of 1,312 associated diseases)</td>
 <td>0.068</td>
 <td>0.067–0.068</td>
 <td>0.100 (0.045–0.259) — highly LoF-constrained (haploinsufficient; Nager syndrome gene)</td>
 </tr>
 <tr>
-<td>OTUD7B</td>
+<td class="gene">OTUD7B</td>
 <td>0.00665 (rank ~59/107)</td>
 <td>not reported (gene absent from L2G rows at this credible set)</td>
 <td>not reported</td>
 <td>0.374 (0.270–0.526) — moderately constrained</td>
 </tr>
 <tr>
-<td>SV2A</td>
-<td>not in top 100 of 254 associated diseases (dominant signal is epilepsy/seizure/botulism); &quot;smoking behavior&quot; appears in SV2A's own top-100 list at score 0.107, rank 37</td>
+<td class="gene">SV2A</td>
+<td>not in top 100 of 254 associated diseases (dominant signal is epilepsy/seizure/botulism); "smoking behavior" appears in SV2A's own top-100 list at score 0.107, rank 37</td>
 <td>not reported</td>
 <td>not reported</td>
 <td>0.307 (0.223–0.429) — constrained</td>
 </tr>
 <tr>
-<td>VPS45</td>
+<td class="gene">VPS45</td>
 <td>not queried (added post hoc by researcher; outside original candidate-gene list; boundary-adjacent to locus)</td>
 <td>not reported in the ~175/194 credible sets inspected for this variant</td>
 <td>not reported</td>
 <td>not queried</td>
 </tr>
 <tr>
-<td>BOLA1</td>
+<td class="gene">BOLA1</td>
 <td>not queried (added post hoc by researcher; no disease-association literature of any kind)</td>
 <td>not reported</td>
 <td>not reported</td>
 <td>not queried</td>
 </tr>
 <tr>
-<td><strong>H3C15</strong> (added 2026-09-11 addendum)</td>
+<td class="gene"><strong>H3C15</strong> (added 2026-09-11 addendum)</td>
 <td><strong>Only 11 total disease associations of any kind</strong> (vs. 283 for MTMR11, 107 for OTUD7B) — none is COPD/respiratory/smoking; all 11 are <code>affected_pathway</code>-datatype (viral/infectious disease 0.503; cancer/melanoma/breast carcinoma/dengue 0.370) or <code>literature</code>-datatype (neoplasm, Parkinson disease, alcohol dependence/drinking, SLE, 0.004–0.007). <strong>Zero <code>genetic_association</code>-datatype contribution to any disease score.</strong></td>
-<td><strong>Zero (0) credible sets assigned to H3C15 anywhere in Open Targets, for any trait, genome-wide</strong> — a stronger, qualitatively different null than OTUD7B's locus-specific absence (see red-team-skeptic critique: this is &quot;a true statistical-genetics null, not a redirection to another phenotype&quot;).</td>
+<td><strong>Zero (0) credible sets assigned to H3C15 anywhere in Open Targets, for any trait, genome-wide</strong> — a stronger, qualitatively different null than OTUD7B's locus-specific absence (see red-team-skeptic critique: this is "a true statistical-genetics null, not a redirection to another phenotype").</td>
 <td>none (see above — no credible-set assignment of any kind)</td>
 <td>not reported (no gnomAD constraint metrics available — likely a general limitation of short, ~517bp, intronless replication-dependent histone genes, not H3C15-specific evidence)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Additional locus-level Open Targets context: MTMR11 is the top L2G gene at &gt;150 of the ~175
 credible sets inspected for the lead variant rs11205303 across the variant's 194 total associated
 studies, spanning overwhelmingly anthropometric traits (height, weight, waist/hip circumference,
 body fat, lean mass) plus open-angle glaucoma, carpal tunnel syndrome, spinal stenosis, varicose
-veins, coronary artery disease, and breast cancer — i.e., MTMR11 &quot;wins&quot; L2G assignment across a
+veins, coronary artery disease, and breast cancer — i.e., MTMR11 "wins" L2G assignment across a
 biologically incoherent range of traits, not selectively for COPD/lung traits (see red-team-skeptic
 critique in the audit appendix regarding this as a possible positional/technical L2G artifact rather
 than trait-specific biology). No standalone smoking-initiation/cessation/pack-years GWAS credible set
@@ -930,8 +614,8 @@ was found among the credible sets inspected for this variant.</p>
 fall genuinely inside this locus's window, ~68-170 kb from the three credible-set variants — this is
 a real physical overlap, not an artifact of the genome-build error that originally surfaced the gene
 as a candidate. However, per red-team-skeptic's critique (full text in audit appendix), genuine
-physical presence in a densely-packed locus is &quot;a necessary, not sufficient, condition for
-candidacy — plenty of genes in a 250kb window will be true bystanders,&quot; and H3C15's total
+physical presence in a densely-packed locus is "a necessary, not sufficient, condition for
+candidacy — plenty of genes in a 250kb window will be true bystanders," and H3C15's total
 genome-wide statistical-genetics null (no L2G/credible-set assignment for any trait, not just COPD)
 is qualitatively weaker evidence than any of the other six candidates at this locus.</p>
 <h2 id="prioritized-gene">Prioritized gene</h2>
@@ -944,7 +628,7 @@ itself (L2G=0.636) <em>and</em> the FEV1/FVC spirometry credible sets at the sam
 satisfying this pipeline's Prior 2 (COPD/spirometry concordance strengthens prioritization) better
 than any other gene here — SF3B4, OTUD7B, SV2A, and now H3C15 all have L2G scores at or near zero
 (H3C15: exactly zero, genome-wide) for the COPD/FEV1/FVC credible sets specifically. However, as
-red-team-skeptic states directly in the audit appendix, MTMR11 also &quot;wins&quot; L2G at the overwhelming
+red-team-skeptic states directly in the audit appendix, MTMR11 also "wins" L2G at the overwhelming
 majority (&gt;150) of ~175 other, biologically unrelated credible sets tagged by this same variant
 (height, weight, glaucoma, coronary disease, breast cancer, etc.) — a pattern more consistent with
 a positional/technical L2G artifact at this densely-packed 1q21.2 locus (MTMR11/SF3B4/OTUD7B/SV2A
@@ -983,9 +667,9 @@ H3C15 is markedly weaker than every other candidate at this locus, including the
 INSUFFICIENT-EVIDENCE genes: it has zero credible-set/L2G assignments in Open Targets for <em>any</em>
 trait, genome-wide (not merely absent at this locus's COPD/FEV1/FVC rows, as with OTUD7B) and zero
 <code>genetic_association</code>-datatype contribution to any of its disease scores. Red-team-skeptic
-explicitly judged this a &quot;qualitatively different, and worse&quot; pattern than SV2A's (SV2A at least has
-a real, if wrong-domain, neurological GWAS signal) and concluded H3C15 &quot;does not become a credible
-third contender&quot; and &quot;should not disturb the existing tie.&quot; This synthesis concurs: H3C15 is filed
+explicitly judged this a "qualitatively different, and worse" pattern than SV2A's (SV2A at least has
+a real, if wrong-domain, neurological GWAS signal) and concluded H3C15 "does not become a credible
+third contender" and "should not disturb the existing tie." This synthesis concurs: H3C15 is filed
 alongside SV2A/BOLA1/VPS45 at the INSUFFICIENT EVIDENCE tier, materially below both MTMR11 and
 OTUD7B.</p>
 <p><strong>What would resolve the tie:</strong> a lung-tissue-specific eQTL/colocalization analysis (e.g., GTEx lung
@@ -998,9 +682,11 @@ also resolve this. For H3C15 specifically, the missing piece is any H3C15-paralo
 (as opposed to pooled-H3) eQTL, expression, or functional evidence in lung/immune tissue — absent
 that, its candidacy rests on physical proximity and generic pathway plausibility alone, which this
 pipeline's gene-as-unit-of-evidence framework does not treat as sufficient. Until such data exist,
-this locus should be read as &quot;probably real (given COPD/FEV1/FVC concordance), gene assignment
-unresolved among MTMR11 and OTUD7B&quot; rather than either &quot;artifact&quot; or &quot;solved,&quot; with H3C15 considered
+this locus should be read as "probably real (given COPD/FEV1/FVC concordance), gene assignment
+unresolved among MTMR11 and OTUD7B" rather than either "artifact" or "solved," with H3C15 considered
 and set aside rather than left unexamined.</p>
 
+        </div>
+    </div>
 </body>
 </html>

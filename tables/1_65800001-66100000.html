@@ -1,379 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>1_65800001-66100000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 1:65,800,001-66,100,000 (GRCh38)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-165800001-66100000-grch38">Evidence table — Locus 1:65,800,001-66,100,000 (GRCh38)</h1>
-<p><strong>Nearest gene:</strong> PDE4B. <strong>Lead variant:</strong> rs12068439 (1:65,909,865, intron_variant,
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-165800001-66100000-grch38">Evidence table — Locus 1:65,800,001-66,100,000 (GRCh38)</h1><div class="summary"><p><strong>Nearest gene:</strong> PDE4B. <strong>Lead variant:</strong> rs12068439 (1:65,909,865, intron_variant,
 PIP=0.208). <strong>Credible set:</strong> 60+ variants, all intronic to PDE4B (impact=MODIFIER; no
 missense/splice variants). <strong>Statistically prioritized neighboring gene:</strong> LEPR
-(FLAMES, MAGMA, PoPS all agree); ABC = NA.</p>
-<p>Only citations with verifier verdict VERIFIED are included below. See
+(FLAMES, MAGMA, PoPS all agree); ABC = NA.</p><p>Only citations with verifier verdict VERIFIED are included below. See
 <code>audits/1_65800001-66100000_audit.md</code> for excluded (RETRACTED/NOT_FOUND/CLAIM_MISMATCH)
-citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
-<table>
+citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -386,7 +70,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 </thead>
 <tbody>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Immune/structural (mouse, acute lung injury)</td>
 <td>Pde4b-/- and Pde4d-/- (not Pde4a-/-) mice show markedly reduced neutrophil recruitment to BAL after LPS inhalation</td>
 <td>PMID 15585880 / DOI 10.4049/jimmunol.173.12.7531</td>
@@ -394,7 +78,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Immune/structural (mouse, acute lung injury)</td>
 <td>PDE4B is top LPS-responsive cAMP gene in alveolar macrophages; PDE4 inhibition (rolipram) promotes reparative macrophage reprogramming and resolves lung injury</td>
 <td>PMID 34318714 / DOI 10.1152/ajplung.00145.2021</td>
@@ -402,7 +86,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Immune/structural (mouse, acute lung injury)</td>
 <td>Pde4b knockout mice show blunted LPS-induced acute lung inflammation via reduced NF-kB p65 activation in alveolar macrophages</td>
 <td>PMID 39956855 / DOI 10.1007/s00408-025-00787-6</td>
@@ -410,7 +94,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Immune (review)</td>
 <td>PDE4B is a major cAMP-metabolizing enzyme in inflammatory cells (macrophages, neutrophils) linked to chronic inflammation including chronic bronchitis</td>
 <td>PMID 36278172 / DOI 10.3389/fphar.2022.982130</td>
@@ -418,7 +102,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Structural (mouse, IPF)</td>
 <td>PDE4B-selective inhibitor BI 1015550 (nerandomilast) shows antifibrotic activity in bleomycin/silica lung fibrosis models; inhibits TGF-beta-driven myofibroblast transformation in human IPF fibroblasts</td>
 <td>PMID 35517783 / DOI 10.3389/fphar.2022.838449</td>
@@ -426,7 +110,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Structural (review, IPF)</td>
 <td>Nerandomilast (PDE4B-selective) has received regulatory approval for clinical use (IPF)</td>
 <td>PMID 42705427 / DOI 10.1016/j.phrs.2026.108437</td>
@@ -434,7 +118,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Structural/immune (mouse, cigarette smoke)</td>
 <td>In a cigarette-smoke mouse COPD model, PDE4B expression increases with smoke exposure and correlates with inflammatory cytokine/MMP-9 upregulation and reduced cAMP; reversible by melatonin or roflumilast</td>
 <td>PMID 34771000 / DOI 10.3390/molecules26216588</td>
@@ -442,7 +126,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Immune (in vitro, human epithelial cells)</td>
 <td>Roflumilast and nontypeable H. influenzae (a COPD exacerbation pathogen) synergistically upregulate PDE4B expression in human lung epithelial cells and in vivo</td>
 <td>PMID 30413022 / DOI 10.3390/ijms19113511</td>
@@ -450,7 +134,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Immune/structural (review)</td>
 <td>PDE4B is the anti-inflammatory-relevant PDE4 isoform underlying roflumilast's COPD drug-class efficacy, contrasted with PDE4D's emetic/GI liability</td>
 <td>PMID 39839967 / DOI 10.2174/0118743064340418241021095046</td>
@@ -458,7 +142,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Immune (review/computational)</td>
 <td>PDE4B is expressed in immune, inflammatory, and airway smooth muscle cells; PDE4D is expressed in the area postrema/nucleus tractus solitarius (emetic center)</td>
 <td>PMID 32984588 / DOI 10.1016/j.heliyon.2020.e04856</td>
@@ -466,7 +150,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Immune (review)</td>
 <td>PDE4B is highly expressed in inflammatory disorders (as well as cancers, cognitive and metabolic disorders)</td>
 <td>PMID 40654275 / DOI 10.1002/ardp.70030</td>
@@ -474,7 +158,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Behavioral/CNS biology</td>
 <td>PDE4 signaling (incl. PDE4B) is elevated in cortical neurons from a schizophrenia-associated DISC1 mutation; PDE4 inhibition rescues synaptic/cognitive/social deficits in mice</td>
 <td>PMID 33658519 / DOI 10.1038/s41467-021-21713-3</td>
@@ -482,7 +166,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Behavioral/CNS biology</td>
 <td>PDE4B and PDE4D (not PDE4A/C) expression upregulated in hippocampus of hypertensive rats with cognitive deficits, reversible by PDE4 inhibitors via cAMP/CREB/BDNF</td>
 <td>PMID 26168894 / DOI 10.1016/j.brainres.2015.07.003</td>
@@ -490,7 +174,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Behavioral/CNS biology</td>
 <td>Same research group/model: PDE4B and PDE4D upregulated in hippocampus of hypertensive rats with memory deficits</td>
 <td>PMID 25446433 / DOI 10.1016/j.ejphar.2014.10.039</td>
@@ -498,7 +182,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Behavioral/CNS biology (review)</td>
 <td>Roflumilast's cognitive-enhancing effects operate via PDE4B/PDE4D reduction and pCREB/BDNF increase</td>
 <td>PMID 32735939 / DOI 10.1016/j.neulet.2020.135281</td>
@@ -506,7 +190,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Behavioral/CNS biology</td>
 <td>PDE4B modulates IRE1alpha/JNK phosphorylation in neurons; roflumilast protects against ischemic-stroke-induced neuronal damage via this pathway</td>
 <td>PMID 33359910 / DOI 10.1016/j.freeradbiomed.2020.12.018</td>
@@ -514,7 +198,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE4B</td>
+<td class="gene">PDE4B</td>
 <td>Behavioral/immune biology</td>
 <td>PDE4B (specifically PDE4B2) regulates cAMP in neutrophils, macrophages, and microglia; PDE4B-selective inhibitor A33 reduces microglial activation/neutrophil infiltration and improves cognitive outcomes after TBI in rats</td>
 <td>PMID 28542295 / DOI 10.1371/journal.pone.0178013</td>
@@ -522,7 +206,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR</td>
+<td class="gene">LEPR</td>
 <td>Statgen (obesity GWAS)</td>
 <td>LEPR (with PRKCH, PACS1, RMST) identified as new locus for severe early-onset obesity in &gt;1,500 severely obese children</td>
 <td>PMID 23563609 / DOI 10.1038/ng.2607</td>
@@ -530,7 +214,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR</td>
+<td class="gene">LEPR</td>
 <td>Statgen (obesity GWAS)</td>
 <td>LEPR (with CTNNBL1, PPARG) showed nominal association with obesity phenotypes (BMI, fat mass) in ~11,000 diverse-ancestry individuals</td>
 <td>PMID 24879436 / DOI 10.1371/journal.pone.0096149</td>
@@ -538,7 +222,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR</td>
+<td class="gene">LEPR</td>
 <td>Statgen (obesity GWAS)</td>
 <td>Common noncoding LEPR/LEPROT variants associated with higher BMI and lower 24-h energy expenditure in Pima Indians, replicated in two independent samples</td>
 <td>PMID 22810975 / DOI 10.1038/oby.2012.159</td>
@@ -546,7 +230,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR</td>
+<td class="gene">LEPR</td>
 <td>Statgen (linkage, pre-GWAS)</td>
 <td>Chromosome 1 region flanking LEPR linked to plasma leptin levels (LOD 3.4) and BMI in Dutch families with familial combined hyperlipidemia</td>
 <td>PMID 11126332 / DOI 10.1038/sj.ijo.0801412</td>
@@ -554,7 +238,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR</td>
+<td class="gene">LEPR</td>
 <td>Statgen (mQTL)</td>
 <td>LEPR is among reported obesity/lipid/T2D loci with characterized methylation QTLs in adipose tissue</td>
 <td>PMID 27322064 / DOI 10.1371/journal.pone.0157776</td>
@@ -562,7 +246,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR</td>
+<td class="gene">LEPR</td>
 <td>Statgen/structural (twin study)</td>
 <td>LEP (not LEPR) 19G&gt;A SNP was associated with lower FEV1/FVC; LEPR K109R and Q223R SNPs showed NO significant association with maximally attained lung function</td>
 <td>PMID 22056234 / DOI 10.1016/j.rmed.2011.08.001</td>
@@ -570,7 +254,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR</td>
+<td class="gene">LEPR</td>
 <td>Statgen/structural (candidate-gene study)</td>
 <td>In 429 European-American smokers, 21 of 36 genotyped LEPR SNPs significantly associated (uncorrected p&lt;0.05) with FEV1% predicted decline over 5 years; LEPR protein expression shown in smoke-exposed mouse lung</td>
 <td>PMID 19196818 / DOI 10.1183/09031936.00120408</td>
@@ -578,7 +262,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR</td>
+<td class="gene">LEPR</td>
 <td>Structural/immune (human airway biopsy)</td>
 <td>Leptin/leptin-receptor expression higher in bronchial epithelium of normal subjects vs. smokers/COPD; leptin over-expressed in COPD sub-mucosa, co-localizing mainly with activated CD45RO+/CD8+ T cells; correlates with COPD severity (GOLD stage) and airflow obstruction</td>
 <td>PMID 16135719 / DOI 10.1183/09031936.05.00092404</td>
@@ -586,7 +270,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR</td>
+<td class="gene">LEPR</td>
 <td>Structural (biomarker, preprint, COPD cohorts)</td>
 <td>Across SPIROMICS/COPDGene/MESA-Lung, plasma leptin was the most reproducible COPD-progression biomarker; higher baseline leptin associated with SLOWER FEV1 decline</td>
 <td>PMID 39148837 / DOI 10.1101/2024.08.07.24311507</td>
@@ -594,7 +278,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR</td>
+<td class="gene">LEPR</td>
 <td>Structural (biomarker, general population)</td>
 <td>In Framingham (n=5,777), plasma leptin among proteins most strongly INVERSELY associated with FEV1%/FVC% predicted</td>
 <td>PMID 35390066 / DOI 10.1371/journal.pone.0266523</td>
@@ -602,7 +286,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR</td>
+<td class="gene">LEPR</td>
 <td>Structural/immune (COPD biomarker)</td>
 <td>Emphysema patients have lower BMI, fat mass, and plasma leptin than chronic-bronchitis patients; leptin positively correlates with soluble TNF-receptor-55 (adjusted for fat mass) in emphysema</td>
 <td>PMID 10508810 / DOI 10.1164/ajrccm.160.4.9811033</td>
@@ -610,7 +294,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR</td>
+<td class="gene">LEPR</td>
 <td>Structural (COPD biomarker)</td>
 <td>Serum leptin significantly lower in COPD patients than controls, correlating with lower BMI/body fat, independent of TNF-alpha/soluble TNF receptor levels</td>
 <td>PMID 10194168 / DOI 10.1164/ajrccm.159.4.9806134</td>
@@ -618,7 +302,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR</td>
+<td class="gene">LEPR</td>
 <td>Immune (human T cells)</td>
 <td>Leptin receptor expressed on human CD4+ and CD8+ T lymphocytes; leptin dose-dependently enhances T-cell activation/proliferation and skews CD4+ T cells toward Th1 phenotype</td>
 <td>PMID 10675271 / DOI 10.1006/cimm.1999.1594</td>
@@ -626,7 +310,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR</td>
+<td class="gene">LEPR</td>
 <td>Immune (review)</td>
 <td>Broad review of leptin's pleiotropic roles in antigen-specific immunity and inflammatory effector systems</td>
 <td>PMID 16475934 / DOI 10.2174/092986706775527929</td>
@@ -634,7 +318,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR</td>
+<td class="gene">LEPR</td>
 <td>Immune (non-pulmonary, hepatocellular carcinoma)</td>
 <td>Hepatoma-derived leptin downregulates regulatory T-cell suppressive function to enhance CD8+ T-cell anti-tumor activity</td>
 <td>PMID 26639061 / DOI 10.1038/icb.2015.110</td>
@@ -642,7 +326,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR</td>
+<td class="gene">LEPR</td>
 <td>Immune (non-pulmonary, liver metastasis)</td>
 <td>LEPR-expressing Kupffer cells suppress antitumor immunity in liver metastases via MerTK-dependent efferocytosis</td>
 <td>PMID 41687606 / DOI 10.1016/j.ccell.2026.01.010</td>
@@ -650,7 +334,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR (BMI-mediation context)</td>
+<td class="gene">LEPR (BMI-mediation context)</td>
 <td>Statgen (Mendelian randomization, general)</td>
 <td>Bidirectional MR found BMI genetic instruments causally associated with all lung-function traits studied (FEV1, FVC, FEV1/FVC)</td>
 <td>PMID 34154662 / DOI 10.1186/s13073-021-00914-x</td>
@@ -658,7 +342,7 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LEPR (BMI-mediation context)</td>
+<td class="gene">LEPR (BMI-mediation context)</td>
 <td>Statgen (Mendelian randomization, general)</td>
 <td>MR in SAPALDIA cohort found a causal effect of (particularly childhood-genetically-rooted) BMI on FEV1/FVC and FEF25-75%, attenuating with age</td>
 <td>PMID 34046380 / DOI 10.3389/fpubh.2021.584955</td>
@@ -666,14 +350,14 @@ citations and the full CONTESTED-gene reasoning from red-team-skeptic.</p>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
 <ul>
 <li>
 <p><strong>PDE4B (ENSG00000184588):</strong> Genetic constraint: highly LoF-constrained (gnomAD lof
 score ~0.9999, oe=0.239, 90% CI 0.157-0.374). COPD (MONDO_0005002) overall association
-score 0.604 (ranks ~13th/6,323 targets), driven almost entirely by &quot;clinical&quot;
-datatype (0.985) — no &quot;genetic_association&quot; datatype score for COPD. No measurable
+score 0.604 (ranks ~13th/6,323 targets), driven almost entirely by "clinical"
+datatype (0.985) — no "genetic_association" datatype score for COPD. No measurable
 association (any datatype) with FEV1 (EFO_0004314) or FEV1/FVC ratio (EFO_0004713).
 Strong genetic_association score with smoking initiation (EFO_0005670, 0.758) and
 nicotine dependence (MONDO_0008575, 0.501). The only locus-specific colocalization/L2G
@@ -776,5 +460,7 @@ a modern-cohort replication of Hansel 2009's LEPR-FEV1-decline finding. Until th
 PDE4B and LEPR should be treated by the study team as CONTESTED candidates rather than a
 resolved prioritization.</p>
 
+        </div>
+    </div>
 </body>
 </html>

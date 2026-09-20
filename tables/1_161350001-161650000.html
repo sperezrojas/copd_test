@@ -1,372 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>1_161350001-161650000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 1:161350001-161650000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table-locus-1161350001-161650000-nearest-gene-hspa6">Evidence table: locus 1:161350001-161650000 (nearest gene HSPA6)</h1>
-<p><strong>Lead variant:</strong> rs2099684 (1:161530340, PIP=0.85, downstream_gene_variant/MODIFIER re: HSPA6)
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table-locus-1161350001-161650000-nearest-gene-hspa6">Evidence Table — Locus 1:161350001-161650000</h1><div class="summary"><p><strong>Lead variant:</strong> rs2099684 (1:161530340, PIP=0.85, downstream_gene_variant/MODIFIER re: HSPA6)
 <strong>Second credible-set variant:</strong> rs10919544 (1:161538973, PIP=0.11, downstream_gene_variant/MODIFIER re: FCGR3A)
 <strong>Candidate genes:</strong> HSPA6 (nearest gene, PoPS-prioritized, ABC-prioritized); FCGR3A (MAGMA-prioritized)
 <strong>Locus context:</strong> This locus lies in the FCGR gene cluster on chr1q23.3 (FCGR2A, HSPA6, FCGR3A,
@@ -374,9 +57,10 @@ FCGR2C, FCGR3B all within ~150 kb of each other). FCGR3A/FCGR3B/FCGR2A are highl
 tandemly duplicated paralogs; FCGR3B additionally carries common copy-number variation. Both
 credible-set variants are non-coding (downstream_gene_variant, MODIFIER impact); no missense or
 splice-site variant is present in the credible set, so no dedicated variant-level literature
-search beyond the gene-level evidence below was required.</p>
+search beyond the gene-level evidence below was required.</p></div>
+
 <h2 id="evidence-table">Evidence table</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -389,15 +73,15 @@ search beyond the gene-level evidence below was required.</p>
 </thead>
 <tbody>
 <tr>
-<td>HSPA6</td>
+<td class="gene">HSPA6</td>
 <td>Statistical genetics (eQTL, competing gene)</td>
 <td>rs2099684 (this locus's own lead variant, PIP=0.85) is a published sex-interacting single-cell eQTL for the <em>neighboring</em> gene FCGR3A in NK cells, not for HSPA6 — direct competing-mechanism evidence against HSPA6 as effector gene</td>
 <td>Yazar et al. 2026, Am J Hum Genet, PMID 42102734, DOI 10.1016/j.ajhg.2026.04.003</td>
-<td>VERIFIED (citation); red-team: cites this as the specific basis for marking HSPA6 CONTESTED (a competing finding, not merely absence of evidence)</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED (citation); red-team: cites this as the specific basis for marking HSPA6  (a competing finding, not merely absence of evidence)</td>
 <td>2026-05-07</td>
 </tr>
 <tr>
-<td>HSPA6</td>
+<td class="gene">HSPA6</td>
 <td>Structural/lung biology (cancer context)</td>
 <td>HSPA6 overexpression drives ER-stress-mediated NSCLC progression in cell lines (cancer biology, not COPD/airway remodeling)</td>
 <td>Zhu et al. 2023, Biochim Biophys Acta Mol Cell Res, PMID 37739270, DOI 10.1016/j.bbamcr.2023.119588</td>
@@ -405,7 +89,7 @@ search beyond the gene-level evidence below was required.</p>
 <td>2023-09-20</td>
 </tr>
 <tr>
-<td>HSPA6</td>
+<td class="gene">HSPA6</td>
 <td>Structural/lung biology (cancer context)</td>
 <td>HSPA6 modulates lung cancer cell line sensitivity to a plant extract (acRoots)</td>
 <td>Wang et al. 2020, Clin Transl Med, PMID 32508044, DOI 10.1002/ctm2.46</td>
@@ -413,7 +97,7 @@ search beyond the gene-level evidence below was required.</p>
 <td>2020-06-05</td>
 </tr>
 <tr>
-<td>HSPA6</td>
+<td class="gene">HSPA6</td>
 <td>Structural biology (non-lung cancer context)</td>
 <td>HSPA6 has a tumor-suppressive role in triple-negative breast cancer cells (thymoquinone-induced); unrelated to lung/airway biology</td>
 <td>Shen et al. 2021, Front Oncol, PMID 34017687, DOI 10.3389/fonc.2021.667995</td>
@@ -421,7 +105,7 @@ search beyond the gene-level evidence below was required.</p>
 <td>2021-05-04</td>
 </tr>
 <tr>
-<td>HSPA6</td>
+<td class="gene">HSPA6</td>
 <td>Structural/airway biology (irritant exposure)</td>
 <td>Chronic cigarette-smoke-condensate exposure of human bronchial epithelial (BEAS-2B) cells modulates HSPA6 expression among other genes</td>
 <td>Hudlikar et al. 2023, Food Chem Toxicol, PMID 36758788, DOI 10.1016/j.fct.2023.113656</td>
@@ -429,7 +113,7 @@ search beyond the gene-level evidence below was required.</p>
 <td>2023-02-08</td>
 </tr>
 <tr>
-<td>HSPA6</td>
+<td class="gene">HSPA6</td>
 <td>Structural/airway biology (irritant exposure)</td>
 <td>HSPA6 is induced via TRPA1 activation in human lung epithelial (A549) cells exposed to sulfur mustard</td>
 <td>Lüling et al. 2018, Cells, PMID 30200301, DOI 10.3390/cells7090126</td>
@@ -437,7 +121,7 @@ search beyond the gene-level evidence below was required.</p>
 <td>2018-08-31</td>
 </tr>
 <tr>
-<td>FCGR3A</td>
+<td class="gene">FCGR3A</td>
 <td>Statistical genetics (eQTL at locus lead variant)</td>
 <td>rs2099684 is a sex-interacting single-cell eQTL specifically for FCGR3A expression in NK cells (female-biased), FCGR3A also flagged as SLE-associated sex-DEG</td>
 <td>Yazar et al. 2026, Am J Hum Genet, PMID 42102734, DOI 10.1016/j.ajhg.2026.04.003</td>
@@ -445,15 +129,15 @@ search beyond the gene-level evidence below was required.</p>
 <td>2026-05-07</td>
 </tr>
 <tr>
-<td>FCGR3A</td>
+<td class="gene">FCGR3A</td>
 <td>Immune genetics (autoimmune disease analogy)</td>
-<td>rs2099684 (this locus's lead variant) is a replicated risk factor for Takayasu arteritis (large-vessel autoimmune vasculitis) in Han Chinese, OR~1.77, from a GWAS jointly labeling the signal &quot;FCGR2A/FCGR3A&quot;</td>
+<td>rs2099684 (this locus's lead variant) is a replicated risk factor for Takayasu arteritis (large-vessel autoimmune vasculitis) in Han Chinese, OR~1.77, from a GWAS jointly labeling the signal "FCGR2A/FCGR3A"</td>
 <td>Chen et al. 2017, Oncotarget, PMID 27769046, DOI 10.18632/oncotarget.12738</td>
 <td>VERIFIED; red-team: signal is explicitly joint FCGR2A/FCGR3A, not FCGR3A-specific; Takayasu arteritis is a distinct autoimmune phenotype, not COPD — should be read as evidence the variant is immunologically active in general, not as COPD-supportive</td>
 <td>2017-03-07</td>
 </tr>
 <tr>
-<td>FCGR3A</td>
+<td class="gene">FCGR3A</td>
 <td>Immune genetics (infectious-disease analogy)</td>
 <td>rs2099684, analyzed jointly with rs6700241 as an FCGR-cluster eQTL haplotype, is associated with antimalarial IgG1 antibody levels</td>
 <td>Dieppois et al. 2025, J Infect Dis, PMID 39450553, DOI 10.1093/infdis/jiae528</td>
@@ -461,23 +145,23 @@ search beyond the gene-level evidence below was required.</p>
 <td>2025-04-15</td>
 </tr>
 <tr>
-<td>FCGR3A</td>
+<td class="gene">FCGR3A</td>
 <td>Immune genetics (infectious-disease analogy, weak)</td>
 <td>rs2099684 was one of two FCGR-cluster regulatory variants prioritized and tested for association with malaria infection; the OTHER variant (rs1771575), not rs2099684, reached significance in this study</td>
 <td>Cretin et al. 2023, Int J Mol Sci, PMID 37958695, DOI 10.3390/ijms242115711</td>
-<td>VERIFIED; red-team: flagged as a &quot;soft overclaim&quot; risk — rs2099684 itself was NOT the significant hit here; should not be read as positive evidence for rs2099684/FCGR3A</td>
+<td>VERIFIED; red-team: flagged as a "soft overclaim" risk — rs2099684 itself was NOT the significant hit here; should not be read as positive evidence for rs2099684/FCGR3A</td>
 <td>2023-10-28</td>
 </tr>
 <tr>
-<td>FCGR3A</td>
+<td class="gene">FCGR3A</td>
 <td>Immune (tangential, not substantive)</td>
-<td>Unrelated NDRG1/ferroptosis/gut-microbiome-COPD paper mentions &quot;Monocyte FCGR3A+&quot; only as a single-cell eQTL cell-type label, not a substantive FCGR3A finding</td>
+<td>Unrelated NDRG1/ferroptosis/gut-microbiome-COPD paper mentions "Monocyte FCGR3A+" only as a single-cell eQTL cell-type label, not a substantive FCGR3A finding</td>
 <td>PMID 41559166, DOI 10.1038/s41598-026-36513-2</td>
 <td>VERIFIED as accurately characterized (tangential, no substantive FCGR3A claim)</td>
 <td>2026-01-20</td>
 </tr>
 <tr>
-<td>FCGR3A</td>
+<td class="gene">FCGR3A</td>
 <td>Immune (negative/null finding)</td>
 <td>A different FCGR3A SNP (rs10127939/rs396991, not this locus's credible-set variants) was genotyped in omalizumab-treated severe asthma patients and showed no significant association with treatment response</td>
 <td>PMID 37108192, DOI 10.3390/ijms24087029</td>
@@ -485,9 +169,9 @@ search beyond the gene-level evidence below was required.</p>
 <td>2023-04-10</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Background/reference citations (landmark GWAS, not locus-specific claims):</strong></p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -500,7 +184,7 @@ search beyond the gene-level evidence below was required.</p>
 </thead>
 <tbody>
 <tr>
-<td>(background)</td>
+<td class="gene">(background)</td>
 <td>Statistical genetics (reference GWAS)</td>
 <td>Landmark multi-ancestry lung-function GWAS (used as generic background reference for the trait/region; no locus-specific annotation confirmed)</td>
 <td>Shrine et al. 2019, Nat Genet, PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
@@ -508,7 +192,7 @@ search beyond the gene-level evidence below was required.</p>
 <td>2019-02-25</td>
 </tr>
 <tr>
-<td>(background)</td>
+<td class="gene">(background)</td>
 <td>Statistical genetics (reference GWAS)</td>
 <td>Landmark COPD case-control GWAS meta-analysis (used as generic background reference; no locus-specific annotation confirmed)</td>
 <td>Sakornsakolpat et al. 2019, Nat Genet, PMID 30804561, DOI 10.1038/s41588-018-0342-2</td>
@@ -516,7 +200,7 @@ search beyond the gene-level evidence below was required.</p>
 <td>2019-02-25</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="additional-narrative-findings-not-independent-citations">Additional narrative findings (not independent citations)</h2>
 <ul>
 <li><strong>Smoking-mediation check (prior #1):</strong> No evidence was found that this locus overlaps known smoking-initiation, cigarettes-per-day, nicotine-dependence, or cessation GWAS signals. This argues against a smoking-behavior-neurobiology mechanism for this COPD signal, though it is an absence-of-evidence finding from PubMed-indexed literature rather than a confirmed negative from GWAS Catalog/GSCAN summary statistics directly.</li>
@@ -548,7 +232,7 @@ paralogs. FCGR3B (ENSG00000162747) has the HIGHEST COPD genetic_association data
 any gene queried at this locus (0.433, vs. FCGR3A's 0.167 and HSPA6's 0.067) and is the most
 frequent top L2G gene across the non-COPD studies surveyed. FCGR2A (ENSG00000143226) scored
 COPD association 0.082 (literature 0.322, genetic_association 0.119) but was rarely the top L2G
-gene. See &quot;Caveat on L2G evidence base&quot; below.</li>
+gene. See "Caveat on L2G evidence base" below.</li>
 <li><strong>Caveat on L2G evidence base:</strong> None of the L2G scores above are computed against this
 locus's own internal COPD GWAS credible sets (Open Targets does not index that analysis). They
 are computed from other fine-mapped traits that happen to share a tag variant with this locus,
@@ -558,7 +242,7 @@ evidence.</li>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>FCGR3A — confidence: LOW.</strong></p>
 <p>Neither candidate gene has direct COPD-specific genetic or functional evidence: PubMed searches
-for &quot;HSPA6 COPD&quot; and &quot;FCGR3A COPD&quot; each returned essentially no on-topic hits, and neither gene
+for "HSPA6 COPD" and "FCGR3A COPD" each returned essentially no on-topic hits, and neither gene
 has a published lung-function (FEV1/FEV1-FVC) association. The choice between them therefore
 rests on indirect evidence, and that evidence is genuinely mixed rather than decisive.</p>
 <p>FCGR3A is favored over HSPA6 for three reasons, each individually modest: (1) the locus's own
@@ -577,7 +261,7 @@ substantial reasons for caution that are preserved here rather than smoothed ove
 NK-cell eQTL is a blood/PBMC finding, not lung-tissue evidence; the Takayasu-arteritis and
 malaria-antibody associations cited in support of FCGR3A are both non-COPD, non-lung phenotypes
 used as mechanistic analogy rather than direct corroboration, and the Takayasu signal itself is
-explicitly reported as a joint &quot;FCGR2A/FCGR3A&quot; association, not FCGR3A-specific; and in one of
+explicitly reported as a joint "FCGR2A/FCGR3A" association, not FCGR3A-specific; and in one of
 the two malaria studies cited, rs2099684 itself was not even the variant that reached
 significance. Most importantly, FCGR3A cannot be confidently distinguished from its immediate,
 highly homologous paralogs FCGR3B and FCGR2A at this locus — no cited study isolates FCGR3A's
@@ -605,5 +289,7 @@ signal pointing toward it. Given the number of open questions, this locus's gene
 should be treated as unresolved/low-confidence by the study team pending further evidence, not
 as a settled call between HSPA6 and FCGR3A alone.</p>
 
+        </div>
+    </div>
 </body>
 </html>
