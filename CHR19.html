@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chromosome 20</title>
+    <title>Chromosome 19</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,8 +39,8 @@
     <a class="nav-link" href="CHR16.html">CHR16</a>
     <a class="nav-link" href="CHR17.html">CHR17</a>
     <a class="nav-link" href="CHR18.html">CHR18</a>
-    <a class="nav-link" href="CHR19.html">CHR19</a>
-    <a class="nav-link active" href="CHR20.html">CHR20</a>
+    <a class="nav-link active" href="CHR19.html">CHR19</a>
+    <a class="nav-link" href="CHR20.html">CHR20</a>
     <a class="nav-link" href="CHR21.html">CHR21</a>
     <a class="nav-link" href="CHR22.html">CHR22</a>
   </div>
@@ -48,7 +48,7 @@
 
     <div id="main-content">
         <div id="display-area" class="content-card">
-            <h1>Chromosome 20</h1>
+            <h1>Chromosome 19</h1>
 
             <div class="controls">
 
@@ -68,7 +68,7 @@
             </div>
 
             <div class="image-container">
-                <img id="plotImage" src="" alt="Regional Association plot for Chromosome 1" style="display: none;" onerror="handleImageError()">
+                <img id="plotImage" src="" alt="Regional Association plot for Chromosome 19" style="display: none;" onerror="handleImageError()">
                 <div id="placeholder" class="placeholder-text">
                     Select a locus to view.
                 </div>
@@ -110,11 +110,12 @@
 <script>
     // Configuration of plots available for each item
     const dataset = {
-        "chr20": [
-            { id: 1, name: "20:21000001-21650000", filename: "plots/chr20-21000001-21650000.png" },
-            { id: 2, name: "20:25100001-33050000", filename: "plots/chr20-25100001-33050000.png" },
-            { id: 3, name: "20:52850001-53050000", filename: "plots/chr20-52850001-53050000.png" },
-            { id: 4, name: "20:63100001-64250000", filename: "plots/chr20-63100001-64250000.png" }
+        "chr19": [
+            { id: 1, name: "19:7350001-7550000", filename: "plots/chr19-7350001-7550000.png" },
+            { id: 2, name: "19:33150001-33300000", filename: "plots/chr19-33150001-33300000.png" },
+            { id: 3, name: "19:40700001-41050000", filename: "plots/chr19-40700001-41050000.png" },
+            { id: 4, name: "19:44800001-45000000", filename: "plots/chr19-44800001-45000000.png" },
+            { id: 5, name: "19:54200001-54350000", filename: "plots/chr19-54200001-54350000.png" }
         ]
     };
 
@@ -137,7 +138,7 @@
 
     // Populate plot dropdown based on selected item
     function updatePlotOptions() {
-        const plots = dataset["chr20"] || [];
+        const plots = dataset["chr19"] || [];
         
         plotSelect.innerHTML = '';
         plots.forEach((plot, index) => {
@@ -153,14 +154,14 @@
     // Load and display the current selected plot image
     function displayPlot() {
         const plotIndex = parseInt(plotSelect.value, 10);
-        const plots = dataset["chr20"] || [];
+        const plots = dataset["chr19"] || [];
 
         if (plots && plots[plotIndex]) {
             const currentPlot = plots[plotIndex];
             const plotFileKey = currentPlot.filename
                 .replace(/^plots\//, '')
                 .replace(/\.png$/, '')
-                .replace('chr20-', ''); // Remove "chr20" prefix if present
+                .replace('chr1-', ''); // Remove "chr1" prefix if present
             plotImage.src = currentPlot.filename;
             plotImage.style.display = 'block';
             placeholder.style.display = 'none';
