@@ -49,55 +49,212 @@
 
     <div id="main-content">
         <div class="content-card">
-            <h1>Evidence Table — Locus 1:106,900,001-107,150,000</h1>
+            <h1>Evidence Table — Locus 1:106900001-107150000</h1>
 
-            <p class="summary">
-                The strongest candidate remains <strong>PRMT6</strong> by proximity, but the evidence is still weak and context-dependent.
-                <strong>NTNG1</strong> is a secondary positional candidate with little support for a COPD-specific mechanism.
+            <div class="summary">
+                Candidate genes evaluated: <strong>PRMT6</strong> (nearest gene; sole candidate per internal pipeline — FLAMES/MAGMA/PoPS/ABC all "NA" for this locus) and <strong>NTNG1</strong> 
+                (weak positional secondary candidate identified by the researcher; its 5' end just enters the queried window, ~90 kb from the nearest credible-set variant vs. ~6 kb for PRMT6). 
+                The entire 13-variant credible set (max PIP 0.27, lead variant rs72697623) is intergenic or intronic/non-coding with no gene annotation on any variant.
+            </div>
+
+            <div class="evidence-table-wrapper">
+                <table class="evidence-table">
+                    <thead>
+                        <tr>
+                            <th>Gene</th>
+                            <th>Evidence Type</th>
+                            <th>Claim</th>
+                            <th>Source</th>
+                            <th>Verdict</th>
+                            <th>Verified Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="gene">PRMT6</td>
+                            <td>Statistical genetics (TWAS/MR, smoking)</td>
+                            <td>Two-sample MR + transcriptomic imputation using a lifetime-smoking-index GWAS instrument identified PRMT6 as one of 249 smoking-associated genes ("novel," not in the original smoking GWAS); transcriptome-wide smoking signature inversely associated with longevity. Red-team caveat: this is an independent expression-smoking association, not a demonstrated overlap with this locus's own credible-set variants/LD block — does not by itself establish a smoking-mediated mechanism for this specific GWAS signal.</td>
+                            <td>Rosoff et al. 2024, JAMA Psychiatry, PMID 38888899, DOI 10.1001/jamapsychiatry.2024.1429</td>
+                            <td><span class="tag">Verified</span> (existence/claim); WEAKENED in context (red-team: two independent, non-corroborating facts sharing a gene symbol, not a coherent story)</td>
+                            <td>2026-09-10</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">PRMT6</td>
+                            <td>Structural/mechanistic lung biology</td>
+                            <td>PRMT6 protein is downregulated in pulmonary parenchyma of human smokers with COPD and in CSE-treated mice; PRMT6 overexpression in a CSE-induced murine emphysema model reversed H3R2me2a/H3K4me3 marks and reduced inflammation, apoptosis, and oxidative stress.</td>
+                            <td>He X et al. 2017, Int J Chron Obstruct Pulmon Dis, PMID 29138553, DOI 10.2147/COPD.S144881</td>
+                            <td><span class="tag">Verified</span> (existence/claim); part of WEAKENED gene-level verdict — single-lab evidence line (see audit)</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">PRMT6</td>
+                            <td>Structural/mechanistic lung biology</td>
+                            <td>PRMT6 protein is aberrantly decreased in COPD patient lung tissue and CSE-treated epithelial cells; the E3 ubiquitin ligase FBXW17 binds and degrades PRMT6 in the proteasome, and blocking this degradation lessens CSE-induced pro-apoptotic/pro-inflammatory effects.</td>
+                            <td>Li T et al. 2021, Front Cell Dev Biol, PMID 33959602, DOI 10.3389/fcell.2021.599020</td>
+                            <td><span class="tag">Verified</span> (existence/claim); part of WEAKENED gene-level verdict</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">PRMT6</td>
+                            <td>Structural/mechanistic lung biology</td>
+                            <td>PRMT6 is decreased in CSE-exposed murine lung/emphysema model and CSE-treated bronchial epithelial cells; PRMT6 depletion increases PTEN/p85 and decreases PDK1, causing AKT dephosphorylation and epithelial cell death; PRMT6 overexpression partially rescues cell survival via PI3K/AKT.</td>
+                            <td>Li T et al. 2020, Aging (Albany NY), PMID 33260152, DOI 10.18632/aging.202210</td>
+                            <td><span class="tag">Verified</span> (existence/claim); part of WEAKENED gene-level verdict</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">PRMT6</td>
+                            <td>Structural/mechanistic lung biology</td>
+                            <td>PRMT6 protein is aberrantly decreased in COPD patient lung tissue and CSE-treated epithelial cells; the E3 ubiquitin ligase FBXW17 binds and degrades PRMT6 in the proteasome, and blocking this degradation lessens CSE-induced pro-apoptotic/pro-inflammatory effects.</td>
+                            <td>Li T et al. 2021, Front Cell Dev Biol, PMID 33959602, DOI 10.3389/fcell.2021.599020</td>
+                            <td><span class="tag">Verified</span> (existence/claim); part of WEAKENED gene-level verdict</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">PRMT6</td>
+                            <td>Structural/mechanistic lung biology</td>
+                            <td>PRMT6 is decreased in CSE-exposed murine lung/emphysema model and CSE-treated bronchial epithelial cells; PRMT6 depletion increases PTEN/p85 and decreases PDK1, causing AKT dephosphorylation and epithelial cell death; PRMT6 overexpression partially rescues cell survival via PI3K/AKT.</td>
+                            <td>Li T et al. 2020, Aging (Albany NY), PMID 33260152, DOI 10.18632/aging.202210</td>
+                            <td><span class="tag">Verified</span> (existence/claim); part of WEAKENED gene-level verdict</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">PRMT6</td>
+                            <td>Structural/mechanistic lung biology + immune</td>
+                            <td>PRMT6 overexpression improved lung morphometry/function and suppressed CSE-induced NF-κB/p65 activation and TNFα/IL-1β expression in a murine emphysema model, decreasing H3K4me3.</td>
+                            <td>He X et al. 2020, Tob Induc Dis, PMID 32047419, DOI 10.18332/tid/116413</td>
+                            <td><span class="tag">Verified</span> (existence/claim); part of WEAKENED gene-level verdict</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">PRMT6</td>
+                            <td>Structural/mechanistic biology (vascular endothelial, earliest paper in series)</td>
+                            <td>CSE-induced apoptosis/inflammation in HUVECs coincided with decreased PRMT6; PRMT6 overexpression inhibited, and PRMT6 inhibition promoted, CSE-induced apoptosis/inflammation via H3R2me2a.</td>
+                            <td>Kang N et al. 2014, Int Immunopharmacol, PMID 25481537, DOI 10.1016/j.intimp.2014.10.029</td>
+                            <td><span class="tag">Verified</span> (existence/claim); part of WEAKENED gene-level verdict</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">PRMT6</td>
+                            <td>Structural biology — CONTRADICTING evidence</td>
+                            <td>In an NSCLC cell/xenograft model, CSE exposure INCREASED (not decreased) PRMT6 and its H3R2me2a mark, driving PI3K/Akt/mTOR activation and EMT/invasion; a PRMT6 inhibitor (EPZ020411) abrogated these effects — opposite direction from the COPD/emphysema papers above.</td>
+                            <td>Zhang Y et al. 2026, Thorac Cancer, PMID 42592683, DOI 10.1111/1759-7714.70357</td>
+                            <td><span class="tag">Verified</span> (existence/claim); red-team flags as a direct contradiction of the Xiangya group's direction-of-effect claim, tempered but not eliminated by NSCLC-vs-COPD context difference</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">PRMT6</td>
+                            <td>Immunology/inflammation (non-pulmonary)</td>
+                            <td>PRMT6 in macrophages forms a coactivation complex with NF-κB and deposits H3R17me2a at the Ccl2 promoter, amplifying macrophage chemotactic/inflammatory signaling in a mouse trauma-injury (heterotopic ossification) model.</td>
+                            <td>Chu W et al. 2026, Bone Res, PMID 41803087, DOI 10.1038/s41413-026-00512-w</td>
+                            <td><span class="tag">Verified</span> (existence/claim); non-pulmonary context, generic NF-κB pleiotropy per red-team</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">PRMT6</td>
+                            <td>Immunology/inflammation — CONTESTED (opposite-direction)</td>
+                            <td>In gastric cancer, PRMT6 overexpression upregulated ANXA1, which suppressed CD8+ T-cell proliferation/tumor-killing function, contributing to immune evasion — i.e., PRMT6 suppresses CD8+ T-cell activity, opposite of what would be needed if PRMT6 drove COPD's pathogenic CD8+ T-cell excess.</td>
+                            <td>Xu L et al. 2024, Crit Rev Eukaryot Gene Expr, PMID 38842205, DOI 10.1615/CritRevEukaryotGeneExpr.2024052979</td>
+                            <td><span class="tag">Verified</span> (existence/claim, though source abstract wording internally ambiguous per verifier); explicitly flagged CONTESTED by red-team (direction opposite to COPD CD8+ T-cell pathology)</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">PRMT6</td>
+                            <td>Immunology (non-pulmonary, fibrosis)</td>
+                            <td>PRMT6 is primarily expressed in liver macrophages/endothelial cells; PRMT6 deficiency in macrophages increases profibrotic signaling via reduced integrin α4 methylation; macrophage-specific PRMT6 replacement reduces fibrosis (i.e., PRMT6 is anti-fibrotic here).</td>
+                            <td>Schonfeld M et al. 2022, Cell Mol Gastroenterol Hepatol, PMID 36191854, DOI 10.1016/j.jcmgh.2022.09.013</td>
+                            <td><span class="tag">Verified</span> (existence/claim); non-pulmonary, generic pleiotropy per red-team</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">PRMT6</td>
+                            <td>Immunology (non-pulmonary, innate/microglia)</td>
+                            <td>PRMT6 interacts with and stabilizes HIF-1α, driving glycolysis and inflammation in microglia/macrophage-lineage innate immune cells in a neuropathic pain model.</td>
+                            <td>Chhibbar P et al. 2024, Cell Rep, PMID 39504244, DOI 10.1016/j.celrep.2024.114930</td>
+                            <td><span class="tag">Verified</span> (existence/claim); different variant/disease from this locus's credible set, contextual only</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">PRMT6</td>
+                            <td>Immunology (CD4+ T cell, non-pulmonary/HIV)</td>
+                            <td>Among a panel of chromatin-modifying enzymes profiled in CD4+ T cells, PRMT6 was the one enzyme found downregulated in chronic HIV-1 infection, in contrast to upregulation of most others.</td>
+                            <td>Bogoi RN et al. 2018, Clin Epigenetics, PMID 29449904, DOI 10.1186/s13148-018-0448-5</td>
+                            <td><span class="tag">Verified</span> (existence/claim); part of WEAKENED gene-level verdict</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">PRMT6</td>
+                            <td>Immunology (HIV virology, tangential)</td>
+                            <td>PRMT6-mediated arginine methylation stabilizes HIV-1 Tat protein, potentially enabling Tat functions implicated in AIDS-related cancer, neurodegeneration, and T-cell death.</td>
+                            <td>Sivakumaran H et al. 2009, J Virol, PMID 19726520, DOI 10.1128/JVI.00499-09</td>
+                            <td><span class="tag">Verified</span> (existence/claim); tangential, not COPD-relevant beyond general PRMT6 biology</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">PRMT6</td>
+                            <td>Variant-level (lead variant rs72697623)</td>
+                            <td>No gene annotation, not reported in ClinVar, no publications, and no GWAS Catalog record for rs72697623 — i.e., the lead credible-set variant itself has no independent literature or catalogued trait association.</td>
+                            <td>dbSNP / GWAS Catalog database lookups (researcher), cross-checked independently by citation-verifier via PubMed (0 results)</td>
+                            <td><span class="tag">Verified</span> ("no evidence" finding corroborated independently); red-team notes this is a poorly-resolved fine-mapping signal (PIP 0.27) even before gene assignment</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">NTNG1</td>
+                            <td>Statistical genetics (unrelated neurological trait)</td>
+                            <td>GWAS meta-analysis of restless legs syndrome (15,126 cases/95,725 controls, European ancestry) identified NTNG1 as a gene near/prioritized at a genome-wide-significant RLS risk locus, pathway related to synapse formation.</td>
+                            <td>Schormair B et al. 2017, Lancet Neurol, PMID 29029846, DOI 10.1016/S1474-4422(17)30327-7</td>
+                            <td><span class="tag">Verified</span> (existence/claim); red-team: appropriately not stretched into pulmonary relevance — HOLDS as "no support either way"</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                        <tr>
+                            <td class="gene">NTNG1</td>
+                            <td>Statistical genetics (MR, lung cancer — not COPD)</td>
+                            <td>Two-sample MR using cis-pQTL instruments found plasma NTNG1 protein level causally associated with reduced risk of small-cell lung cancer (OR=0.81, 95% CI 0.74-0.90), replicated in an external cohort.</td>
+                            <td>Wu Y et al. 2023, Front Pharmacol, PMID 37745050, DOI 10.3389/fphar.2023.1266782</td>
+                            <td><span class="tag">Verified</span> (existence/claim); red-team: mechanistically orthogonal to COPD/airway obstruction, correctly not over-extended</td>
+                            <td>2026-09-11</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Open Targets Summary</h2>
+            <p style="margin-bottom: 20px;">
+                <i><small>(structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</small></i>
             </p>
 
-            <table class="evidence-table">
-                <thead>
-                    <tr>
-                        <th>Gene</th>
-                        <th>Evidence type</th>
-                        <th>Core finding</th>
-                        <th>Verdict</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="gene">PRMT6</td>
-                        <td>Mechanistic COPD biology</td>
-                        <td>Cigarette smoke exposure decreases PRMT6 in airway/lung tissue, and restoring PRMT6 reduces inflammation, apoptosis, and emphysema-like injury in mouse models.</td>
-                        <td><span class="tag">Verified</span> but weakened by single-lab bias and conflicting direction-of-effect data.</td>
-                    </tr>
-                    <tr>
-                        <td class="gene">PRMT6</td>
-                        <td>Smoking-linked genetics</td>
-                        <td>TWAS/MR analyses connect PRMT6 to smoking-related gene expression and longevity signals, but not directly to this locus’s credible set.</td>
-                        <td><span class="tag warning">Contextual only</span></td>
-                    </tr>
-                    <tr>
-                        <td class="gene">PRMT6</td>
-                        <td>Contradictory evidence</td>
-                        <td>An independent NSCLC study reported CSE increasing PRMT6 and promoting tumorigenic signaling, directly opposing the COPD/emphysema direction-of-effect story.</td>
-                        <td><span class="tag warning">Contested</span></td>
-                    </tr>
-                    <tr>
-                        <td class="gene">NTNG1</td>
-                        <td>Positional secondary candidate</td>
-                        <td>Identified only as a weaker positional candidate and not as a strong COPD mechanism candidate.</td>
-                        <td><span class="tag">Low priority</span></td>
-                    </tr>
-                </tbody>
-            </table>
+            <ul>
+                <li><b>PRMT6 (ENSG00000198890)</b></li>
+                <ul>
+                    <li>Genetic constraint (gnomAD): synonymous z = -0.716 (o/e 1.084); missense z = 0.280 (o/e 0.967); LoF z ≈ 0 (o/e 0.743, 90% CI 0.533-1.052). Not strongly LoF-intolerant.</li>
+                    <li>L2G score for this COPD locus: no data available — Open Targets returns count: 0 when querying credibleSets for this genomic region directly (with or without a GWAS study-type filter). No GWAS credible set is curated for this region in Open Targets at all.</li>
+                    <li>Colocalization evidence: no data available — not assessable, since there is no disease-side (GWAS) credible set to colocalize against. PRMT6 does have 127 molecular-QTL (eQTL/tuQTL) credible sets across many tissues/cell types (GTEx lung, blood/eQTLGen, monocytes, macrophages, NK cells, CD4 T-cells, BLUEPRINT, CEDAR, TwinsUK, skin, GI tissues), none of which carry L2G predictions (L2G is computed for GWAS-type studies in this dataset, not molQTL studies).</li>
+                    <li>Target-disease evidence (COPD, MONDO_0005002): 6 hits, all from europepmc text-mining datasource only, scores 0.02-0.28 (low); zero genetic-association evidence.</li>
+                    <li>Target-disease evidence (FEV1, EFO_0004314; FEV1/FVC, EFO_0004713): zero evidence of any kind for both traits.</li>
+                </ul>
+                <li><b>NTNG1:</b> not separately queried in Open Targets (identified only at the researcher stage, after the orchestrator's Open Targets lookup, as a weak positional candidate outside the primary candidate-gene list supplied in the locus input file).</li>
+            </ul>
 
-            <h2>Overall assessment</h2>
+            <h2>Prioritized Gene</h2>
+
+            <p style="margin-bottom: 20px;"><b>PRMT6 — Confidence: LOW</b></p>
+            
             <p>
-                <strong>PRMT6</strong> is the best-supported candidate by proximity, but the locus lacks direct genetic resolution and the mechanistic literature is mixed.
-                The evidence is plausible but not definitive, so this should be treated as a <strong>low-confidence candidate</strong> rather than a confirmed COPD gene.
+               PRMT6 is named as the best-supported single candidate at this locus, but with low confidence, for the following reasons drawn directly from the evidence table and Open Targets summary above:
             </p>
+
+            <ul style="margin-bottom: 20px;">
+                <li>It is the only candidate gene supplied by the internal pipeline (nearest gene; no FLAMES/MAGMA/PoPS/ABC support was available to cross-check), and it sits ~6 kb from the credible-set variants versus NTNG1's ~90 kb — proximity favors PRMT6 if a single nearby gene is being sought.</li>
+                <li>However, the statistical-genetics case for PRMT6 at this specific locus is essentially null: Open Targets has zero GWAS credible sets for this region at all (no L2G, no colocalization, for or against any gene), the credible set itself is entirely non-coding/intergenic-intronic with a modest top PIP (0.27), and there is zero COPD, FEV1, or FEV1/FVC evidence for PRMT6 in Open Targets or the published literature. This is a "nearest-gene by default" call, not a genetically resolved one.</li>
+                <li>The best mechanistic evidence — a coherent, repeated finding that cigarette-smoke exposure downregulates PRMT6 in airway epithelium/lung tissue, that PRMT6 is reduced in human COPD lung parenchyma, and that restoring PRMT6 is protective against CSE-induced inflammation, apoptosis, and emphysema in mouse models — is real (5 verified papers) but comes from a single overlapping-authorship research group and is directly contradicted on direction of effect by an independent group's NSCLC study (PMID 42592683), where CSE instead increases PRMT6. This was assessed by red-team-skeptic as WEAKENED, not confirmed.</li>
+                <li>The one statistical-genetics link to smoking behavior (Rosoff et al. 2024 TWAS/MR) is consistent with prior #1 (a possible smoking-mediated pathway rather than direct pulmonary biology) but is an independent expression-smoking association that does not demonstrably share the same causal variants as this locus's credible set — it should not be read as confirming a smoking-mediated mechanism specifically for this GWAS signal.</li>
+                <li>PRMT6's immune biology is broad but non-lung-specific pleiotropy (macrophage NF-κB amplification in unrelated tissues, HIF-1α/glycolysis in microglia, anti-fibrotic role in liver macrophages), and where COPD-relevant CD8+ T-cell biology is directly examined (gastric cancer), the direction is opposite to what COPD's pathogenic CD8+ T-cell excess would predict — explicitly CONTESTED, per prior #3's call to distinguish specific from nonspecific/contested immune evidence.</li>
+            </ul>
+
+            <p><b>Runner-up: NTNG1 (LOW priority) —</b> weaker positionally (90 kb from the credible set) and with no structural-lung or immune-inflammation literature at all; its two verified associations (restless legs syndrome GWAS; small-cell lung cancer MR) are both plausibly unrelated to COPD pathophysiology and were not stretched into a COPD story by the researcher.</p>
+
+            <p><b>What would resolve this call:</b> (1) independent replication (or refutation) of the Xiangya-group PRMT6-CSE-emphysema mechanistic story by an unrelated laboratory; (2) a genuinely replicated genome-wide-significant COPD or spirometry (FEV1/FEV1-FVC) signal at this locus in an external GWAS resource (UK Biobank, SpiroMeta, FinnGen) — the complete absence of any Open Targets credible set for this region is itself unusual and worth independently sanity-checking; (3) lung-specific or constitutive Prmt6-knockout mouse phenotyping to establish a causal (not just correlative/ overexpression-rescue) role in emphysema; (4) any COPD-specific immune-cell (airway neutrophil, lung macrophage, Th1/Th17/Tc17) study of PRMT6, since none currently exists. Given the near-total absence of statistical genetic support and the single-group, directionally-contested mechanistic literature, this locus should be treated as a plausible-but-unresolved candidate rather than a confirmed COPD gene, and the study team should weigh independently whether to prioritize follow-up here.</p>
+
         </div>
     </div>
 </body>
