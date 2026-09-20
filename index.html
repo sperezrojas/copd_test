@@ -8,305 +8,104 @@
 </head>
 
 <body>
-<div id="sidebar">
-    <div class="sidebar-header">
-        🧬 Agentic Gene Prioritization Dashboard
-    </div>
-    <div class="sidebar-section">
-        <div class="sidebar-title">Overview</div>
-
-        <!-- FIX #1 & #2: use href="#" and pass 'this' instead of 'event' -->
-        <a class="nav-link active"
-           href="#home"
-           onclick="loadPage('home', this)">
-        🏠 Home
-        </a>
-
-        <a class="nav-link"
-           href="methods.html"
-           onclick="loadPage('methods', this)">
-        🔬Methods
-        </a>
-
-    </div>
-
-    <div class="sidebar-section">
-        <div class="sidebar-title">Chromosomes</div>
-
-        <a class="nav-link"
-           href="CHR1.html">
-           CHR1
-        </a>
-
-        <a class="nav-link"
-           href="CHR2.html">
-           CHR2
-        </a>
-
-        <a class="nav-link"
-           href="CHR3.html">
-           CHR3
-        </a>
-
-        <a class="nav-link"
-           href="CHR4.html">
-           CHR4
-        </a>
-
-        <a class="nav-link"
-           href="CHR5.html">
-           CHR5
-        </a>
-
-        <a class="nav-link"
-           href="CHR6.html">
-           CHR6
-        </a>
-
-        <a class="nav-link"
-           href="CHR7.html">
-           CHR7
-        </a>
-
-        <a class="nav-link"
-           href="CHR8.html">
-           CHR8
-        </a>
-
-        <a class="nav-link"
-           href="CHR9.html">
-           CHR9
-        </a>
-
-        <a class="nav-link"
-           href="CHR10.html">
-           CHR10
-        </a>
-
-        <a class="nav-link"
-           href="CHR11.html">
-           CHR11
-        </a>
-
-        <a class="nav-link"
-           href="CHR12.html">
-           CHR12
-        </a>
-
-        <a class="nav-link"
-           href="CHR13.html">
-           CHR13
-        </a>
-
-        <a class="nav-link"
-           href="CHR14.html">
-           CHR14
-        </a>
-
-        <a class="nav-link"
-           href="CHR15.html">
-           CHR15
-        </a>
-
-        <a class="nav-link"
-           href="CHR16.html">
-           CHR16
-        </a>
-
-        <a class="nav-link"
-           href="CHR17.html">
-           CHR17
-        </a>
-
-        <a class="nav-link"
-           href="CHR18.html">
-           CHR18
-        </a>
-
-        <a class="nav-link"
-           href="CHR19.html">
-           CHR19
-        </a>
-
-        <a class="nav-link"
-           href="CHR20.html">
-           CHR20
-        </a>
-
-        <a class="nav-link"
-           href="CHR21.html">
-           CHR21
-        </a>
-
-        <a class="nav-link"
-           href="CHR22.html">
-           CHR22
-        </a>
-
-    </div>
-
-</div>
-
-<div id="main-content">
-
-    <div id="display-area" class="content-card">
-        Loading...
-    </div>
-
-</div>
-
-<script>
-
-const pages = {
-
-home: `
-<h1>COPD GWAS Locus Prioritization Browser</h1>
-
-<p>
-This website hosts the outputs generated from the agentic COPD locus
-review workflow. Each locus undergoes literature review, citation
-verification, adversarial review, and final evidence synthesis.
-</p>
-
-<img class="workflow-image"
-     src="assets/agentic-gene-prioritization.png"
-     alt="Agentic Review Workflow">
-
-<h2>Workflow Overview</h2>
-
-<p>
-Candidate genes are collected from locus definitions and prioritization
-methods. Literature evidence is gathered, verified, stress-tested, and
-combined with Open Targets evidence before creating final rankings.
-</p>
-
-<div class="info-grid">
-
-    <div class="info-card">
-        <h3>Researcher</h3>
-        <p>Searches PubMed, bioRxiv, medRxiv, and web resources.</p>
-    </div>
-
-    <div class="info-card">
-        <h3>Citation Verifier</h3>
-        <p>Confirms publication existence and validates claims.</p>
-    </div>
-
-    <div class="info-card">
-        <h3>Red-Team Skeptic</h3>
-        <p>Evaluates contradictory findings and possible biases.</p>
-    </div>
-
-    <div class="info-card">
-        <h3>Synthesis Lead</h3>
-        <p>Produces final evidence tables and gene prioritization.</p>
-    </div>
-
-</div>
-
-<h2>Available Outputs</h2>
-
-<ul>
-<li>Evidence Tables</li>
-<li>Audit Reports</li>
-<li>Locus Definitions</li>
-<li>Locus Plots</li>
-<li>Pipeline Logs</li>
-<li>Methods Documentation</li>
-</ul>
-`,
-
-methods: `
-<h1>Methods</h1>
-
-<p>
-A multi-agent literature review framework was used to prioritize
-candidate genes at COPD GWAS loci.
-</p>
-
-<h2>Review Stages</h2>
-
-<ol>
-<li>Literature collection</li>
-<li>Citation verification</li>
-<li>Red-team challenge process</li>
-<li>Final synthesis and prioritization</li>
-</ol>
-
-<h2>Data Sources</h2>
-
-<ul>
-<li>PubMed</li>
-<li>bioRxiv</li>
-<li>medRxiv</li>
-<li>Open Targets</li>
-</ul>
-
-<p>
-All accepted citations undergo verification prior to inclusion
-in evidence tables.
-</p>
-
-<p>
-See README_METHODS.md for complete methodological details.
-</p>
-`,
-
-repository: `
-<h1>Repository Structure</h1>
-
-<h2>copd-locus-review</h2>
-
-<ul>
-<li><strong>loci/</strong> – locus definitions</li>
-<li><strong>evidence_tables/</strong> – final evidence summaries</li>
-<li><strong>audits/</strong> – rejected and contested citations</li>
-<li><strong>logs/</strong> – pipeline provenance</li>
-<li><strong>scripts/</strong> – review utilities</li>
-<li><strong>README.md</strong> – project documentation</li>
-<li><strong>README_METHODS.md</strong> – manuscript methods</li>
-</ul>
-
-<h2>locus-plots</h2>
-
-<p>
-Regional association plots and locus visualizations used during review.
-</p>
-
-<h2>Downloads</h2>
-
-<p>Replace these links with your actual files.</p>
-
-<a class="download-link" href="data/README.md">README.md</a><br>
-<a class="download-link" href="data/README_METHODS.md">README_METHODS.md</a>
-`,
-
-CHR2: `
-<h1>Chromosome 2</h1>
-<p>Placeholder for locus review results.</p>
-`,
-
-CHR3: `
-<h1>Chromosome 3</h1>
-<p>Placeholder for locus review results.</p>
-`
-
-};
-
-function loadPage(pageKey, el) {
-    document.querySelectorAll('.nav-link')
-        .forEach(link => link.classList.remove('active'));
-
-    el.classList.add('active');
-
-    document.getElementById('display-area').innerHTML =
-        pages[pageKey] || "<h1>Error</h1><p>Page not found.</p>";
-}
-
-// Render home page on initial load
-document.getElementById('display-area').innerHTML = pages.home;
-
-</script>
-
+   <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link active" href="index.html">🏠 Home</a>
+            <a class="nav-link" href="methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link" href="CHR1.html">CHR1</a>
+            <a class="nav-link" href="CHR2.html">CHR2</a>
+            <a class="nav-link" href="CHR3.html">CHR3</a>
+            <a class="nav-link" href="CHR4.html">CHR4</a>
+            <a class="nav-link" href="CHR5.html">CHR5</a>
+            <a class="nav-link" href="CHR6.html">CHR6</a>
+            <a class="nav-link" href="CHR7.html">CHR7</a>
+            <a class="nav-link" href="CHR8.html">CHR8</a>
+            <a class="nav-link" href="CHR9.html">CHR9</a>
+            <a class="nav-link" href="CHR10.html">CHR10</a>
+            <a class="nav-link" href="CHR11.html">CHR11</a>
+            <a class="nav-link" href="CHR12.html">CHR12</a>
+            <a class="nav-link" href="CHR13.html">CHR13</a>
+            <a class="nav-link" href="CHR14.html">CHR14</a>
+            <a class="nav-link" href="CHR15.html">CHR15</a>
+            <a class="nav-link" href="CHR16.html">CHR16</a>
+            <a class="nav-link" href="CHR17.html">CHR17</a>
+            <a class="nav-link" href="CHR18.html">CHR18</a>
+            <a class="nav-link" href="CHR19.html">CHR19</a>
+            <a class="nav-link" href="CHR20.html">CHR20</a>
+            <a class="nav-link" href="CHR21.html">CHR21</a>
+            <a class="nav-link" href="CHR22.html">CHR22</a>
+        </div>
+   </div>
+
+   <div id="main-content">
+
+      <div id="display-area" class="content-card">
+         <h1>COPD GWAS Locus Prioritization Browser</h1>
+
+         <p>
+         This website hosts the outputs generated from the agentic COPD locus
+         review workflow. Each locus undergoes literature review, citation
+         verification, adversarial review, and final evidence synthesis.
+         </p>
+
+         <img class="workflow-image"
+            src="assets/agentic-gene-prioritization.png"
+            alt="Agentic Review Workflow">
+
+         <h2>Workflow Overview</h2>
+
+         <p>
+         Candidate genes are collected from locus definitions and prioritization
+         methods. Literature evidence is gathered, verified, stress-tested, and
+         combined with Open Targets evidence before creating final rankings.
+         </p>
+
+         <div class="info-grid">
+
+            <div class="info-card">
+               <h3>Researcher</h3>
+               <p>Searches PubMed, bioRxiv, medRxiv, and web resources.</p>
+            </div>
+
+            <div class="info-card">
+               <h3>Citation Verifier</h3>
+               <p>Confirms publication existence and validates claims.</p>
+            </div>
+
+            <div class="info-card">
+               <h3>Red-Team Skeptic</h3>
+               <p>Evaluates contradictory findings and possible biases.</p>
+            </div>
+
+            <div class="info-card">
+               <h3>Synthesis Lead</h3>
+               <p>Produces final evidence tables and gene prioritization.</p>
+            </div>
+
+         </div>
+
+         <h2>Available Outputs</h2>
+
+         <ul>
+         <li>Evidence Tables</li>
+            <ul>
+               <li>Evidence Table</li>
+               <li>Open Targets</li>
+               <li>Final Summary</li>
+            </ul>
+         <li>Audit Reports</li>
+         </ul>
+
+      </div>
+   </div>
 </body>
 </html>
