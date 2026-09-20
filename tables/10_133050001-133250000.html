@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>10_133050001-133250000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-10133050001-133250000-grch38">Evidence table — locus 10:133,050,001-133,250,000 (GRCh38)</h1>
+<p><strong>Lead variant:</strong> rs2748432 (10:133,125,086, intron_variant in ADGRA1, PIP=0.462). Second-highest
+credible-set variant: rs761777 (PIP=0.117, intron_variant, ADGRA1). Candidate genes from internal
+pipeline: nearest = ADGRA1; PoPS = TCERG1L; ABC = KNDC1; FLAMES/MAGMA = NA. The researcher
+additionally identified VENTX and UTF1 via its own gene-region lookup (neither flagged by any
+prioritization method, neither has an assigned credible-set variant). RPL5P28 (pseudogene),
+ADGRA1-AS1 (antisense lncRNA), and MIR202/MIR202HG (microRNA/host gene) are also physically present
+in the region but have no dedicated literature and are not treated as independent candidates (see
+audit appendix).</p>
+<p><strong>Positional note:</strong> ADGRA1 and KNDC1 both physically overlap the analyzed region. TCERG1L, despite
+being PoPS-prioritized, sits ~1.74 Mb outside/telomeric of the region entirely (confirmed by direct
+Open Targets genomic-coordinate lookup). No credible-set variant is missense, splice-donor, or
+splice-acceptor — all are intronic/upstream/downstream/non-coding, so per pipeline scope no
+dedicated per-variant literature search beyond the lead variant was required.</p>
+<p>Pipeline stages completed: Open Targets structured lookup -&gt; researcher -&gt; citation-verifier (14
+citations checked: 11 VERIFIED, 1 NOT_FOUND, 2 CLAIM_MISMATCH) -&gt; red-team-skeptic -&gt; this synthesis.
+Full stage-by-stage checkpoints are preserved in <code>evidence_tables/_status/10_133050001-133250000/</code>
+(opentargets.md, researcher.md, verified_citations.md, critique.md).</p>
+<p>Only VERIFIED citations appear in the table below. The excluded citations and the full skeptic
+critique are preserved in <code>audits/10_133050001-133250000_audit.md</code>.</p>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADGRA1</td>
+<td>Structural/neurobiology (mouse knockout, non-pulmonary)</td>
+<td>Adgra1-knockout male mice show altered sympathetic nervous system activity, hypothalamic PI3K/AKT/GSK3β and MEK/ERK signaling, and thermogenic/metabolic phenotypes; Adgra1 is predominantly expressed in the CNS (hypothalamus), not lung.</td>
+<td>PMID 33824276 / DOI 10.1038/s41419-021-03634-7</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRA1</td>
+<td>Structural/neurobiology (mouse model, non-pulmonary)</td>
+<td>ADGRA1 is selectively enriched in hippocampal PV and SST inhibitory interneurons, required for their inhibitory synaptic strength onto dentate gyrus granule cells (via Gα13 signaling); its loss produces learning/memory deficits.</td>
+<td>PMID 41961591 / DOI 10.1016/j.celrep.2026.117255</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRA1</td>
+<td>Structural/neurobiology (preprint, non-pulmonary)</td>
+<td>Preprint version of the above Cell Reports finding (same core claim: ADGRA1 required for hippocampal PV/SST interneuron inhibitory synaptic function).</td>
+<td>PMID 40766348 / DOI 10.1101/2025.07.30.667713</td>
+<td>WEAKENED (preprint, not peer-reviewed at time of posting; since published as PMID 41961591)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KNDC1</td>
+<td>Statistical genetics (different disease, non-pulmonary)</td>
+<td>Rare KNDC1 variants show suggestive linkage with age-at-onset of late-onset Alzheimer's disease in family-based sequencing data (reported LOD=2.4, not independently confirmed from the abstract by citation-verifier).</td>
+<td>PMID 32740652 / DOI 10.1038/s41431-020-0703-z</td>
+<td>WEAKENED (quantitative claim unconfirmed)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KNDC1</td>
+<td>Structural/neurobiology (mouse model, non-pulmonary)</td>
+<td>v-KIND/Kndc1 is predominantly expressed in cerebellar granule cells and is a brain-specific RasGEF required for restraining dendritic growth in mouse cerebellum; knockout affects motor coordination.</td>
+<td>PMID 28264072 / DOI 10.1371/journal.pone.0173175</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>VENTX</td>
+<td>Immune (human cell culture, not locus-specific)</td>
+<td>VentX expression is upregulated during human monocyte-to-macrophage differentiation; knockdown impairs differentiation while ectopic expression drives it; VentX controls the proinflammatory activation program of macrophages and correlates with proinflammatory cytokine levels in autoimmune-disease patient leukocytes.</td>
+<td>PMID 21670496 / DOI 10.1172/JCI45556</td>
+<td>WEAKENED (real, on-prior biology, but zero fine-mapping support at this locus — see gene note below)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>UTF1</td>
+<td>Structural (non-specific expression survey)</td>
+<td>UTF1 protein is detectable by immunohistochemistry in normal and tumor epithelium from several organs including lung, with tissue-dependent expression and a possible dual oncogene/tumor-suppressor role.</td>
+<td>PMID 24738751 / DOI 10.1111/iep.12077</td>
+<td>WEAKENED (effectively a weak-evidence HOLDS — not COPD- or airway-remodeling-specific)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCERG1L</td>
+<td>Not COPD-relevant (GI oncology epigenetics)</td>
+<td>TCERG1L promoter hypermethylation is a candidate risk marker distinguishing ulcerative colitis patients at risk of colorectal cancer.</td>
+<td>PMID 23546389 / DOI 10.3892/ijmm.2013.1317</td>
+<td>HOLDS (correctly characterized as not COPD-relevant)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCERG1L</td>
+<td>Not COPD-relevant (stem-cell epigenetics)</td>
+<td>TCERG1L is a DNMT3B-dependent hypermethylation/silencing target distinguishing induced pluripotent stem cells from embryonic stem cells.</td>
+<td>PMID 24511466 / DOI 10.1016/j.stemcr.2013.11.003</td>
+<td>HOLDS (correctly characterized as not COPD-relevant)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCERG1L</td>
+<td>Not COPD-relevant (male-infertility epigenetics)</td>
+<td>TCERG1L is among genes with validated differential sperm-DNA methylation in infertile versus fertile men.</td>
+<td>PMID 30358834 / DOI 10.1093/humrep/dey319</td>
+<td>HOLDS (correctly characterized as not COPD-relevant)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Locus-level context (not gene-specific, not in table above):</strong> Saunders GRB et al., &quot;Genetic
+diversity fuels gene discovery for tobacco and alcohol use,&quot; Nature 2022 (PMID 36477530, DOI
+10.1038/s41586-022-05477-4, VERIFIED — multi-ancestry, 3.4M-individual GSCAN follow-up GWAS of
+tobacco/alcohol-use traits) is retained as general background on the smoking-behavior GWAS
+literature landscape, not as locus-specific confirmation. <strong>Neither this paper nor any other
+smoking-initiation GWAS paper was found, by the researcher or independently by the red-team-skeptic,
+to actually report this exact 10:133.05-133.25 Mb locus as genome-wide significant.</strong> The
+researcher's attempt to cite the original 2019 GSCAN discovery paper (Liu et al., Nature Genetics)
+failed citation verification — see audit appendix — so the smoking-behavior-mediation hypothesis for
+this locus (motivated by Open Targets' database-level colocalization between this locus's indexed
+GWAS traits and smoking-initiation credible sets) currently rests entirely on that structured
+database signal, not on any verified literature. See Open Targets summary and Prioritized-gene
+sections below.</p>
+<p><strong>Gene note on VENTX (WEAKENED — not a competing candidate):</strong> VENTX has the single most
+mechanistically COPD-relevant paper found at this locus (macrophage terminal differentiation and
+proinflammatory activation, directly on Prior #3) but carries <strong>zero fine-mapping support</strong> — no
+credible-set variant lies within ~77 kb of VENTX. Per red-team-skeptic: &quot;the inference that this is
+a 'biologically interesting alternative' for <em>this locus</em> overreaches given zero fine-mapping
+support at any credible-set variant... should be reported to synthesis-lead as a flagged
+non-candidate (interesting gene, wrong locus-evidence), not as a live alternative to ADGRA1/KNDC1.&quot;
+This table preserves that distinction rather than letting VENTX's biology imply locus-level support
+it does not have.</p>
+<hr>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-pass-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not pass through citation-verifier or red-team-skeptic)</h2>
+<p>Full detail in <code>evidence_tables/_status/10_133050001-133250000/opentargets.md</code>. Queried against
+chronic obstructive pulmonary disease (MONDO_0005002) and via the lead/second-highest-PIP
+credible-set variants (rs2748432, rs761777) and one KNDC1-upstream credible-set variant.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>Positional overlap with locus</th>
+<th>Aggregate COPD association score</th>
+<th>Locus-specific L2G (top traits at this locus's indexed credible sets)</th>
+<th>Colocalization</th>
+<th>gnomAD LOF constraint (oe / bin)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ADGRA1</strong></td>
+<td>Inside region (133,087,924-133,131,675)</td>
+<td>0 (no data at all)</td>
+<td>Top gene for systolic blood pressure (0.479), GERD (0.745), back pain (0.465); near-tie 2nd for insomnia (0.261 vs KNDC1's 0.284)</td>
+<td>Credible sets at rs2748432/rs761777 colocalize strongly (h4=0.84-0.99) with each other and with <strong>smoking initiation</strong> (h4=0.96-0.98); no COPD/lung-function credible set indexed at all</td>
+<td>oe=0.633 (90% CI 0.405-1.025), &quot;low&quot; constraint bin</td>
+</tr>
+<tr>
+<td><strong>KNDC1</strong></td>
+<td>Inside region (133,160,034-133,226,412)</td>
+<td>0 (no data at all)</td>
+<td>Top gene for insomnia (0.284) and a separate &quot;sodium measurement&quot; credible set (0.522); 2nd for SBP (0.350) and back pain (0.275)</td>
+<td>Same shared credible-set colocalization pattern as ADGRA1 (smoking initiation h4=0.84-0.99 across the credible sets where KNDC1 is scored)</td>
+<td>oe=0.693 (90% CI 0.590-0.815), &quot;medium&quot; constraint bin</td>
+</tr>
+<tr>
+<td><strong>TCERG1L</strong></td>
+<td><strong>Outside region</strong> — ~1.74 Mb telomeric (131,092,391-131,311,736)</td>
+<td>0.0022 (negligible; literature-only, no genetic_association datatype score)</td>
+<td>Not a top-scoring gene in any credible set found at this locus</td>
+<td>Not applicable (gene lies outside the locus; no locus-specific credible set)</td>
+<td>oe=0.876 (90% CI 0.675-1.148), &quot;very low&quot; constraint bin (least constrained of the three)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>No GWAS credible set indexed by Open Targets anywhere at this locus is labeled COPD, lung
+function/spirometry, or any other respiratory-disease phenotype.</strong> The indexed GWAS traits are
+systolic blood pressure, insomnia, gastroesophageal reflux disease, back pain, and sodium
+measurement — all colocalizing strongly with each other and with smoking-initiation GWAS signals.
+This absence of any directly-indexed pulmonary trait at this exact locus is itself informative (see
+Prioritized-gene section) but does not prove no such association exists, since Open Targets' study
+index is necessarily incomplete relative to this pipeline's own internal COPD GWAS. VENTX and UTF1
+were not separately queried against Open Targets (they were identified by the researcher's own
+region lookup, not flagged by any prioritization method, and — per the researcher's coordinate
+lookup — lie outside the credible-set-implicated portion of the locus).</p>
+<hr>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>ADGRA1 — Confidence: LOW.</strong></p>
+<p>ADGRA1 is the best-supported single candidate at this locus by statistical/fine-mapping criteria: it
+contains the dominant share of credible-set PIP mass (the lead variant rs2748432, PIP=0.462, plus
+the second-highest variant rs761777, PIP=0.117, and several lower-PIP variants are all ADGRA1
+intronic/downstream), and it is the top-scoring Open Targets L2G gene for 3 of the 4 GWAS traits
+indexed at this locus's credible sets (systolic blood pressure 0.479, GERD 0.745, back pain 0.465),
+narrowly losing only the insomnia trait to KNDC1 (0.261 vs 0.284). Per red-team-skeptic, this
+statistical dominance is genuine and not simply an LD/nearest-gene-bias artifact shared with KNDC1,
+since the two genes' credible-set variant clusters are largely non-overlapping.</p>
+<p>However, the confidence is LOW, not higher, for reasons the evidence table above and the audit
+appendix document explicitly: <strong>no COPD, lung-function, spirometry, or any other respiratory-disease
+GWAS signal is indexed for this locus anywhere in Open Targets, and no PubMed/bioRxiv literature
+search (by either the researcher or the red-team-skeptic, independently) found any pulmonary or
+immune-relevant biology for ADGRA1 at all.</strong> Every VERIFIED functional citation for ADGRA1 places it
+exclusively in CNS/neuroendocrine biology — hypothalamic sympathetic/thermogenic regulation (PMID
+33824276) and hippocampal inhibitory-interneuron synaptic function (PMID 41961591/40766348). Per
+Prior #2 (spirometry concordance), this is exactly the pattern that &quot;warrants consideration of
+alternative pathways,&quot; and the red-team-skeptic explicitly argued this pattern should be read as
+<strong>active evidence against</strong> a lung-intrinsic mechanism, not merely a neutral evidentiary gap: &quot;given
+... dominant fine-mapping mass ... exhaustive functional literature in only two organ systems
+(hypothalamus, hippocampus) with a clear, mechanistically dense, unrelated biology ... zero
+COPD/lung-function GWAS or coloc signal indexed anywhere ... this pattern is more consistent with a
+locus that is pleiotropic for neurobehavioral/autonomic traits and reaches COPD via smoking-behavior
+or another indirect route than with an unresolved-but-plausible lung mechanism.&quot;</p>
+<p>The most plausible alternative explanation raised by both the researcher and red-team-skeptic —
+Prior #1, smoking-behavior mediation — is itself only a hypothesis, not established evidence: it
+rests entirely on an Open Targets database colocalization field (this locus's indexed GWAS credible
+sets colocalize strongly, h4=0.84-0.99, with smoking-initiation GWAS signals), which neither agent
+was able to confirm against the primary smoking-GWAS literature. The one citation submitted to
+ground this hypothesis in primary literature (intended to be Liu et al. 2019 GSCAN) was <strong>NOT_FOUND</strong>
+by citation-verifier — the researcher cited the wrong PMID, which resolves to an unrelated
+Eucalyptus GWAS paper — so as things stand, the smoking-mediation hypothesis for this specific locus
+is unconfirmed in the literature, not verified.</p>
+<p><strong>Runner-up: KNDC1.</strong> KNDC1 carries materially less fine-mapping mass (~0.07 combined PIP vs
+ADGRA1's ~0.58+) and is the ABC-prioritized (enhancer-based, not fine-mapping-based) candidate. It
+shares ADGRA1's pattern exactly: purely neuronal functional literature (cerebellar dendritic-growth
+regulation, PMID 28264072), no pulmonary/immune biology, no COPD/lung-function GWAS signal, and the
+same unconfirmed smoking-mediation hypothesis. Per red-team-skeptic, KNDC1's case is &quot;thin on both
+sides&quot; and its statistical support is weaker and more susceptible to ordinary LD/nearest-gene
+uncertainty than ADGRA1's.</p>
+<p><strong>Not escalated: VENTX.</strong> VENTX has the single most COPD-mechanistically-relevant biology at this
+locus (macrophage terminal differentiation and proinflammatory activation, PMID 21670496, directly
+on Prior #3) but zero credible-set variant lies within ~77 kb of it. Per red-team-skeptic, this
+should be treated as a flagged hypothesis-generating aside, not a competing prioritized candidate —
+escalating it would mean letting biological plausibility override the complete absence of
+locus-specific statistical support, which this synthesis declines to do.</p>
+<p><strong>Not competitive: TCERG1L, UTF1.</strong> TCERG1L (PoPS-prioritized) sits ~1.74 Mb outside the analyzed
+region entirely — a materially weaker positional case than even a distant-but-in-region gene — and
+all three of its VERIFIED citations are unrelated-tissue epigenetic/cancer-biomarker findings with
+no lung or immune relevance. UTF1 has only a non-specific multi-organ epithelial expression survey
+mentioning lung tissue among many others, no credible-set variant assigned, and no COPD-specific
+finding.</p>
+<p><strong>What would resolve this call:</strong> (1) confirmation, using the correct GSCAN GWAS Catalog accession/
+PMID (per red-team-skeptic, the correct paper is Liu et al. 2019, PMID 30643251 — not independently
+re-verified in this run, flagged for a follow-up citation-verifier pass if this locus is
+prioritized further), of whether this exact 10:133.05-133.25 Mb interval is genome-wide significant
+for smoking initiation, cessation, or heaviness; (2) any lung-tissue eQTL/pQTL colocalization for
+ADGRA1 or KNDC1 with the COPD signal at this locus (none found in Open Targets as queried); (3) a
+direct FEV1/FEV1-FVC spirometry GWAS association at this interval, which is currently entirely
+absent from both the literature and the Open Targets database as reviewed. Absent that, this locus
+should be treated by the study team as a statistically dominant but mechanistically unresolved (and
+plausibly indirect/smoking-behavior-mediated rather than lung-intrinsic) candidate-gene call, not a
+biologically confirmed pulmonary COPD gene.</p>
+
+</body>
+</html>

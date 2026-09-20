@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>10_112900001-113150000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-10112900001-113150000-nearest-gene-tcf7l2">Evidence table — locus 10:112,900,001-113,150,000 (nearest gene TCF7L2)</h1>
+<p><strong>Lead variant:</strong> rs35198068 (PIP 0.458). <strong>Credible set:</strong> 12 variants, all intron_variant/MODIFIER annotations to TCF7L2 (rs35198068, rs34872471, rs7903146 [PIP 0.204 — the single most replicated type 2 diabetes GWAS variant in human genetics], rs36090025, rs12255372, rs4575195, rs56087297, rs7074440, rs11196211, rs4132670, rs12260037, rs10659211). No missense/splice-donor/splice-acceptor variants in the credible set. <strong>Only one candidate gene exists at this locus:</strong> TCF7L2 — confirmed as the sole protein-coding gene overlapping the region via a live Ensembl REST API query; the nearest neighboring protein-coding gene, VTI1A, ends ~80 kb outside the locus boundary with no credible-set variant nearby, and was not pursued as a serious alternative candidate. No FLAMES/MAGMA/PoPS/ABC prioritized genes were listed for this locus.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TCF7L2</td>
+<td>Negative/statgen</td>
+<td>No literature found directly linking TCF7L2/rs7903146 or any credible-set LD partner to COPD, lung function (FEV1/FEV1-FVC), or smoking-behavior GWAS (negative PubMed + WebSearch/GWAS-Catalog-style search); independently corroborated by red-team-skeptic's own cross-check.</td>
+<td>Negative search result (no PMID/DOI — absence of evidence)</td>
+<td>Corroborated by red-team-skeptic (independent negative check)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCF7L2</td>
+<td>Statgen/epigenetics (T2D context, not COPD)</td>
+<td>In PBMCs from T2D+atherosclerosis patients, TCF7L2 rs7903146 showed among the most dramatic H3K9ac (active-enhancer mark) changes; pathway analysis of T2D-associated H3K9ac changes implicated immune pathways including type 1 diabetes.</td>
+<td>Bompada et al. 2021, Biomedicines. PMID 34944721, DOI 10.3390/biomedicines9121908</td>
+<td>VERIFIED (citation-verifier); CONTESTED overall gene verdict — see audit</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCF7L2</td>
+<td>Structural/airway epithelial (epigenetics, different disease — asthma)</td>
+<td>A TCF7L2-annotated CpG (cg24788483, chr10) was associated with asthma &quot;complete remission&quot; in whole blood, replicated in independent cohorts, and its methylation level was associated with TCF7L2 expression.</td>
+<td>Qi et al. 2020, Clin Transl Allergy. PMID 33303027, DOI 10.1186/s13601-020-00365-4</td>
+<td>VERIFIED (citation-verifier); red-team judged this weak circumstantial pattern-matching, not evidence the credible-set variants do anything — see audit</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCF7L2</td>
+<td>Structural/alveolar epithelial (computational, not experimentally validated)</td>
+<td>Single-cell transcriptomic analysis of 28 healthy human lungs across ages identifies TCF7L2 (with FOXJ3, TCF7) as a transcription factor regulating a gene-expression module that declines with alveolar type II (AT2) cell aging, enriched for mitochondrial-respiration genes.</td>
+<td>Chen et al. 2026, Front Cell Dev Biol. PMID 42368450, DOI 10.3389/fcell.2026.1740661</td>
+<td>VERIFIED (citation-verifier); red-team: bioinformatic only, should carry very little weight — see audit</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCF7L2</td>
+<td>Structural/airway epithelial (mouse, contradicting evidence)</td>
+<td>Genetic deletion of beta-catenin (TCF7L2's principal Wnt-signaling partner) in mouse airway epithelium did NOT impair Clara cell differentiation, mitotic index, or naphthalene-injury repair of the bronchiolar epithelium — evidence against an essential Wnt/beta-catenin role in airway epithelial maintenance/repair.</td>
+<td>Zemke et al. 2009, Am J Respir Cell Mol Biol. PMID 19213872, DOI 10.1165/rcmb.2008-0407OC</td>
+<td>VERIFIED (citation-verifier); red-team: useful contradicting/null data point, argues against a Wnt-pathway mechanism for TCF7L2 in airway repair</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCF7L2</td>
+<td>Structural/vascular remodeling (mouse/rat, different disease — pulmonary hypertension)</td>
+<td>In hypoxic pulmonary hypertension models, a tRNA-derived fragment (i-tRF-Asp) drives hnRNPU-dependent alternative splicing of TCF7L2 pre-mRNA toward a pro-proliferative isoform, promoting pulmonary arterial smooth muscle cell proliferation/vascular remodeling.</td>
+<td>Yuan et al. 2026, Arterioscler Thromb Vasc Biol. PMID 42206368, DOI 10.1161/ATVBAHA.126.324681</td>
+<td>VERIFIED (citation-verifier); red-team: splicing-isoform effect unrelated to the common noncoding credible-set variants; disease model is PH, not COPD — see audit</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCF7L2</td>
+<td>Immune/alveolar macrophage (mouse, preprint)</td>
+<td>TCF7L2 (confirmed by citation-verifier to be the gene meant despite the paper's &quot;TCF4&quot; nomenclature, not the unrelated bHLH TCF4/E2-2 gene) governs alveolar macrophage self-renewal/stemness in mice; loss shifts macrophages toward a pro-inflammatory phenotype and worsens post-viral (influenza/SARS-CoV-2) outcomes; TCF7L2 antagonizes beta-catenin-driven inflammatory transcription.</td>
+<td>Arish et al. 2025, bioRxiv preprint. PMID 41256693, DOI 10.1101/2025.10.03.680366</td>
+<td>VERIFIED as gene-correct (citation-verifier), but remains an unreviewed, non-peer-reviewed preprint; red-team flags as the most COPD-adjacent but still indirect/unvalidated finding</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCF7L2</td>
+<td>Immune background (paralog, not TCF7L2-specific)</td>
+<td>Establishes that Wnt/TCF-beta-catenin signaling is active in T lymphocytes generally (paper is about TCF-1/TCF7, a paralog of TCF7L2, not TCF7L2 itself — general pathway background only).</td>
+<td>Staal et al. 1999, Int Immunol. PMID 10221643, DOI 10.1093/intimm/11.3.317</td>
+<td>VERIFIED (citation-verifier); explicitly not TCF7L2-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCF7L2 (locus-level, not gene-specific)</td>
+<td>Statgen/epidemiology (T2D-COPD comorbidity, genome-wide, not locus-specific)</td>
+<td>Meta-analysis of 31 studies finds bidirectional COPD-diabetes association (COPD→DM OR 1.56 unadjusted, 1.39 adjusted; DM→COPD OR 1.29 unadjusted, not significant when adjusted), with very-low certainty of evidence.</td>
+<td>He et al. 2026, Front Endocrinol. PMID 42614200, DOI 10.3389/fendo.2026.1912659</td>
+<td>VERIFIED (citation-verifier); red-team: does not examine this locus/TCF7L2 specifically — supports general comorbidity context only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCF7L2 (locus-level, not gene-specific)</td>
+<td>Statgen/MR (T2D-COPD causality, genome-wide, not locus-specific)</td>
+<td>Two-sample MR found a marginal causal association of T1DM on COPD risk in Europeans, but no significant causal relationship between COPD and T2DM in either direction.</td>
+<td>Wu et al. 2025, Medicine (Baltimore). PMID 41327645, DOI 10.1097/MD.0000000000045935</td>
+<td>VERIFIED (citation-verifier); red-team: genome-wide MR, not locus-specific — argues against genetically causal T2D→COPD pathway generally</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCF7L2 (locus-level, not gene-specific)</td>
+<td>Statgen/MR + structural (T2D-COPD/spirometry causality, genome-wide, not locus-specific)</td>
+<td>MR found T1DM causally associated with COPD and lower FEV1/FVC; T2DM causally associated with lower FVC and paradoxically higher FEV1/FVC ratio; NHANES regression found no significant association between diabetes/glycemic traits and COPD after adjustment.</td>
+<td>Wang et al. 2025, Int J Chron Obstruct Pulmon Dis. PMID 41211194, DOI 10.2147/COPD.S551945</td>
+<td>VERIFIED (citation-verifier); red-team: mixed/inconsistent evidence, not locus-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCF7L2 (locus-level, not gene-specific)</td>
+<td>Statgen/MR (T2D genetic architecture, genome-wide, not locus-specific)</td>
+<td>Using MR across multiple ancestries and mechanistic-cluster-stratified T2D genetic risk, authors find opposing effect directions across different genetic ancestries for the causal effect of T2D genetic predisposition on COPD (and asthma, depression).</td>
+<td>Arruda et al. 2025, Nat Commun. PMID 41073432, DOI 10.1038/s41467-025-64927-5</td>
+<td>VERIFIED (citation-verifier); red-team: most mechanistically relevant comorbidity paper found, but still genome-wide/cluster-level, not locus-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TCF7L2 (locus-level, not gene-specific)</td>
+<td>Immune/structural (narrative review, not locus-specific)</td>
+<td>Narrative review proposing COPD-T2D comorbidity is driven by shared risk factors (smoking, obesity, physical inactivity) and interconnected inflammatory signaling (IL-6/NF-κB, NLRP3/IL-1β), oxidative stress, and metabolic dysregulation.</td>
+<td>Yang &amp; Fu 2026, Curr Med Res Opin. PMID 42090374, DOI 10.1080/03007995.2026.2667497</td>
+<td>VERIFIED (citation-verifier); red-team: supports general biological plausibility of shared-risk-factor confounding, not TCF7L2/locus-specific</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not reviewed by citation-verifier or red-team-skeptic)</h2>
+<p><strong>TCF7L2</strong> (ENSG00000148737):</p>
+<ul>
+<li><strong>Overall Open Targets association score with COPD (MONDO_0005002):</strong> 0.134, ranked ~586th of 6,323 targets with any COPD evidence in Open Targets. Datatype breakdown: literature = 0.070, genetic_association = 0.217. For comparison, top COPD-associated targets in Open Targets: SCNN1B (0.806), SCNN1A (0.792), CFTR (0.760), SCNN1G (0.760), NR3C1 (0.707), SERPINA1 (0.703), FAM13A (0.631).</li>
+<li><strong>Overall Open Targets association score with type 2 diabetes mellitus:</strong> 0.665 — the single highest-scoring disease association for TCF7L2 across all diseases in Open Targets (genetic_association = 0.773, literature = 0.980).</li>
+<li><strong>Colocalization:</strong> No COPD-GWAS-to-TCF7L2-molecular-QTL colocalization surfaced via <code>target.credibleSets</code> query. TCF7L2 does have a GTEx lung exon eQTL (rs7094871), a GTEx lung transcript-usage QTL (rs7094463), a BLUEPRINT neutrophil eQTL (rs10885396), and a BLUEPRINT neutrophil exon-usage QTL (rs2104598) on record — but these have different lead variants than this locus's COPD credible set, so no direct colocalization with the COPD signal is demonstrated by this query path.</li>
+<li><strong>Genetic constraint (gnomAD, via Open Targets <code>geneticConstraint</code>):</strong> Synonymous z = -2.51 (o/e 1.254); Missense z = 1.42 (o/e 0.859, mild constraint); pLoF z = 1.00 (o/e 0.334, moderate constraint but z-score not in the extreme/pLI-style haploinsufficiency range).</li>
+<li><strong>No FLAMES/MAGMA/PoPS/ABC data applicable</strong> — locus input file lists no prioritized genes from these pipelines; TCF7L2 is nominated only as nearest gene, and is also the only protein-coding gene physically overlapping the locus.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>TCF7L2 — Confidence: LOW.</strong></p>
+<p>TCF7L2 is named as the prioritized gene for this locus by default, since it is the only protein-coding gene overlapping the region (all 12 credible-set variants are intronic to TCF7L2; the nearest neighboring protein-coding gene, VTI1A, lies ~80 kb outside the locus with no credible-set variant nearby). However, this naming should not be read as an endorsement of a genuine pulmonary or COPD-specific mechanism for TCF7L2 at this locus. The verified evidence base points strongly toward this locus being the well-known, extremely well-replicated TCF7L2 type 2 diabetes locus (rs7903146, the single most replicated T2D GWAS variant in human genetics) rather than a locus with independent COPD-relevant biology:</p>
+<ul>
+<li>No literature (PubMed or GWAS-Catalog-style search) links TCF7L2, rs7903146, or any LD partner in this credible set to COPD, lung function (FEV1/FEV1-FVC), or smoking-behavior traits — a negative finding independently corroborated by red-team-skeptic.</li>
+<li>Open Targets' own aggregate score for TCF7L2-COPD is low (0.134, rank ~586/6,323) and dominated by a modest genetic_association component (0.217), versus an overwhelming T2D association score (0.665, genetic_association 0.773) — TCF7L2 is unambiguously better characterized as a T2D gene than a COPD gene in aggregated evidence.</li>
+<li>No colocalization was found between the COPD GWAS credible set and any TCF7L2 molecular QTL (lung eQTL/tuQTL or neutrophil eQTL), despite TCF7L2 expression being under genetic control in both tissues — the COPD-associated variants and the QTL-associated variants at this locus are simply different SNPs.</li>
+<li>The tangential lung/immune literature offered (asthma-remission methylation, AT2-aging bioinformatics, hypoxic pulmonary-hypertension splicing, and an alveolar-macrophage preprint) spans different diseases, tissues, species, and mechanisms with no connection to this locus's actual noncoding credible-set variants; red-team-skeptic judged this pattern-matching rather than converging support, and one piece of evidence (Zemke et al., mouse beta-catenin knockout) directly argues against an essential Wnt/beta-catenin role in airway epithelial maintenance/repair.</li>
+<li>Per red-team-skeptic, the researcher's &quot;shared-risk-factor confounding&quot; hypothesis (that the apparent COPD signal reflects T2D/obesity/smoking comorbidity in an unadjusted COPD GWAS rather than direct pulmonary biology) is a reasonable, biologically plausible inference given the totality of evidence, but is not itself literature-established — none of the T2D-COPD MR/epidemiology papers cited examine this locus specifically, and this hypothesis should be treated as the researcher's own interpretive synthesis, not a verified finding.</li>
+</ul>
+<p><strong>Runner-up:</strong> None — TCF7L2 is the only candidate gene physically at this locus, so there is no gene-level alternative to weigh it against. The real alternative hypothesis is not a different gene but a different <em>interpretation</em>: that this is a T2D-pleiotropy/case-ascertainment artifact in the COPD GWAS (via comorbidity-driven collider bias or shared risk factors) rather than a locus requiring gene-level biological interpretation at all. What would resolve this: (1) a direct colocalization analysis between this specific COPD credible set and TCF7L2 lung/neutrophil eQTLs (not available through the Open Targets query path used here); (2) conditional/sensitivity analysis of the COPD GWAS adjusting for T2D/BMI/metabolic syndrome to see if the signal attenuates; (3) a locus-specific (not genome-wide) MR analysis of this variant's effect on COPD independent of T2D. Confidence is marked LOW rather than INSUFFICIENT because the evidence, while largely negative/indirect, is reasonably thorough and consistently points in one direction (T2D-locus, not lung-biology locus) rather than being genuinely balanced or absent.</p>
+
+</body>
+</html>

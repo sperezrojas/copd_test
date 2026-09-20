@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>10_21300001-22050000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-gwas-locus-evidence-table--1021300001-22050000-nearest-gene-skida1">COPD GWAS locus evidence table — 10:21,300,001-22,050,000 (nearest gene SKIDA1)</h1>
+<p>Lead variant: rs12770228 (10:21,494,705, GRCh38; PIP=0.341; annotated gene = MIR1915HG,
+intron_variant/non_coding_transcript_variant). Internal gene-prioritization methods
+disagree: nearest gene = SKIDA1; FLAMES = MLLT10; PoPS = MLLT10; MAGMA = NA; ABC = CASC10
+(an alias for MIR1915HG — same Ensembl gene, ENSG00000204682, confirmed via Open Targets
+<code>search_entities</code>). An Ensembl REST overlap query of the region confirmed only three
+protein-coding genes exist in/near this locus (SKIDA1, MLLT10, DNAJC1); MIR1915HG/CASC10 is
+a non-coding lncRNA host gene. No missense, splice-donor, or splice-acceptor variants exist
+anywhere in the ~90-variant credible set (confirmed against the full list) — only one
+synonymous variant (rs1802669, MLLT10, PIP=0.0022) and one 5'UTR variant (rs946711, SKIDA1,
+PIP=0.0045), both low-PIP, so no dedicated variant-level literature search was warranted
+beyond gene-level evidence, per pipeline scope rules.</p>
+<p>All rows below carry a Skeptic verdict of HOLDS or WEAKENED (see per-gene reasoning) — no
+citation below is disqualified, but several inferences are explicitly downgraded; read the
+&quot;Skeptic verdict&quot; column and the Prioritized-gene synthesis section, not the raw citation
+count, when weighing each gene.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SKIDA1</td>
+<td>Statgen (pleiotropy)</td>
+<td>SKIDA1 flagged among several novel obesity-associated genes in a UK Biobank sparse factor analysis integrating body-composition/diet/activity traits — a metabolic pleiotropy signal, not COPD/lung-function evidence.</td>
+<td>Gulisija et al. 2025, Obesity (Silver Spring). PMID 40415527, DOI 10.1002/oby.24291</td>
+<td>HOLDS (claim appropriately scoped as pleiotropy, not lung evidence)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SKIDA1</td>
+<td>Immune/hematologic</td>
+<td>SKIDA1 is a target gene of MLL(KMT2A)::ENL fusion proteins in fetal/neonatal hematopoietic progenitors; conditional deletion impairs B-lineage priming from neonatal MLL::ENL-expressing HSCs but has no effect on normal adult hematopoiesis. Leukemia biology, not COPD-relevant immune function.</td>
+<td>Mendoza-Castrejon et al. 2025, Blood Neoplasia. PMID 41574310, DOI 10.1016/j.bneo.2025.100185</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SKIDA1</td>
+<td>Immune/hematologic</td>
+<td>SKIDA1 upregulated (alongside HOXA9/HOXA10/BMI1) by ACIN1::NUTM1 fusion in infant leukemia models.</td>
+<td>Tamai et al. 2025, Br J Haematol. PMID 40884014, DOI 10.1111/bjh.70130</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SKIDA1</td>
+<td>Immune/hematologic</td>
+<td>SKIDA1 (with LAMP5) usable as a machine-learning transcriptomic biomarker for KMT2A-rearrangement status in AML.</td>
+<td>Zehtabcheh et al. 2025, Biomark Res. PMID 40361241, DOI 10.1186/s40364-025-00786-y</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SKIDA1</td>
+<td>Immune/hematologic</td>
+<td>SKIDA1 and LAMP5 overexpression are markers associated with KMT2A-rearrangement across leukemia subtypes.</td>
+<td>Lopes et al. 2022, Front Pharmacol. PMID 35734412, DOI 10.3389/fphar.2022.749472</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MLLT10</td>
+<td>Statgen (pleiotropy/comorbidity)</td>
+<td>A large endometriosis GWAS meta-analysis (60,674 cases/701,926 controls) identified MLLT10 as a candidate gene at a pain-perception-associated locus, and reported significant genetic correlation between endometriosis and several pain/inflammatory conditions including asthma — the likely source of MLLT10's &quot;asthma&quot; association in Open Targets' broader profile, not a direct lung-function GWAS hit.</td>
+<td>Rahmioglu et al. 2023, Nat Genet. PMID 36914876, DOI 10.1038/s41588-023-01323-z</td>
+<td>HOLDS (appropriately downgraded to comorbidity pleiotropy by researcher; skeptic agrees, found no independent MLLT10-lung-function or MLLT10-asthma GWAS hit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MLLT10</td>
+<td>Immune/hematologic (genomic adjacency, not shared mechanism)</td>
+<td>A novel MLLT10-DNAJC1 gene fusion transcript was identified in one pediatric AML case — reflects physical proximity of the two genes on chr10p12, not a shared COPD-relevant biological pathway.</td>
+<td>Shiba et al. 2019, Blood Advances. PMID 31648321, DOI 10.1182/bloodadvances.2019000404</td>
+<td>HOLDS (researcher explicitly frames this as adjacency, not mechanism; skeptic agrees)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CASC10 / MIR1915HG</td>
+<td>Statgen (cancer prognosis signature, lung-adjacent)</td>
+<td>MIR1915HG is one of 9 lncRNAs in a disulfidptosis-related prognostic signature for lung adenocarcinoma (TCGA-based cancer prognosis/therapy-response model), establishing lung-tissue expression/regulation but no COPD or airway-biology mechanism.</td>
+<td>Sun et al. 2024, Oncology Letters. PMID 38855504, DOI 10.3892/ol.2024.14476</td>
+<td>WEAKENED (see gene-level note below — PIP-mass headline for this gene needs the neighbor-regulation caveat attached)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CASC10 / MIR1915HG</td>
+<td>Statgen (unrelated cancer context)</td>
+<td>MIR1915HG identified among lncRNAs with highest m6A methylation frequency in glioblastoma profiling — unrelated to lung/COPD biology.</td>
+<td>Krusnauskas et al. 2023, Epigenetics. PMID 36597408, DOI 10.1080/15592294.2022.2163365</td>
+<td>WEAKENED (same gene-level caveat)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CASC10 / MIR1915HG</td>
+<td>Immune (tumor-immune context, not COPD)</td>
+<td>MIR1915HG is among hub lncRNAs distinguishing tumor immune-microenvironment subtypes (differing immune-checkpoint/chemokine expression) in gastric adenocarcinoma — a tumor-immunology context, not airway/COPD-relevant inflammation.</td>
+<td>Fan et al. 2022, Funct Integr Genomics. PMID 35665866, DOI 10.1007/s10142-022-00867-3</td>
+<td>WEAKENED (same gene-level caveat)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DNAJC1</td>
+<td>Immune (cross-tissue, non-lung)</td>
+<td>A COMMD3/DNAJC1 regulatory variant is associated with helper T-cell infiltration in thyroid tissue (GTEx deconvolution across 46 tissues) and with thyroiditis risk in independent cohorts — documents an immune-regulatory consequence of regulatory variation at this locus, but in thyroid, not lung, tissue.</td>
+<td>Marderstein et al. 2020, Nat Commun. PMID 32371927, DOI 10.1038/s41467-020-16097-9</td>
+<td>WEAKENED (real finding, but cross-tissue; do not extend to lung immune biology without direct evidence)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DNAJC1</td>
+<td>Immune/oncologic (cross-tissue, non-lung)</td>
+<td>DNAJC1 knockdown reduces immunosuppressive macrophage infiltration and ECM reorganization in glioblastoma cell/co-culture models — a macrophage/ECM-remodeling mechanism conceptually similar to COPD pathophysiology, but demonstrated only in brain tumor biology.</td>
+<td>Zhang et al. 2024, J Cancer Res Clin Oncol. PMID 38909166, DOI 10.1007/s00432-024-05823-1</td>
+<td>WEAKENED (cross-tissue, tumor-context; conceptual analogy only)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DNAJC1</td>
+<td>Immune (mucosal, non-lung)</td>
+<td>DNAJC1 is differentially methylated between inflamed and uninflamed periodontal (gingival) mucosa, clustering with other innate-immune-response genes (CCL26, BPI) — a mucosal innate-immune context distinct from airway epithelium.</td>
+<td>Richter et al. 2021, Clin Epigenetics. PMID 34732256, DOI 10.1186/s13148-021-01190-7</td>
+<td>WEAKENED (mucosal-immune analogy, not lung-specific)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DNAJC1</td>
+<td>Cellular biology (non-lung)</td>
+<td>DNAJC1 highly expressed in hepatocellular carcinoma and associated with patient prognosis — general cellular-stress/cancer biology context, not lung-specific.</td>
+<td>Fan et al. 2023, PeerJ. PMID 37520264, DOI 10.7717/peerj.15700</td>
+<td>HOLDS (background biology only, not weighted toward COPD claim)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DNAJC1</td>
+<td>Cellular biology (non-lung)</td>
+<td>Dnajc1 activation is implicated in a pathway alleviating pancreatic tissue damage via inhibition of apoptosis/ER stress in a rodent model — general cellular-stress biology, not lung-specific.</td>
+<td>Wang et al. 2025, World J Diabetes. PMID 39959264, DOI 10.4239/wjd.v16.i2.99053</td>
+<td>HOLDS (background biology only)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DNAJC1</td>
+<td>Statgen, lung-relevant but low evidentiary tier</td>
+<td>Genome-wide analysis of sepsis-associated ARDS (acute respiratory distress syndrome) identified SNP rs10764330 in DNAJC1 as the top hit for ARDS risk (OR 0.66, 95% CI 0.55-0.79, p=9.24x10^-6) across European- and African-ancestry subgroups — a genuinely lung-relevant genetic-association signal, distinct from the unverified OT FEV1 score, but from an ARDS (acute lung injury) rather than COPD (chronic airflow obstruction) phenotype.</td>
+<td>Meyer et al. 2017, Am J Respir Crit Care Med, ATS conference abstract A6750. DOI 10.1164/ajrccm-conference.2017.195.1_MeetingAbstracts.A6750 (no PMID; conference abstract, never confirmed published as a full peer-reviewed manuscript under this finding)</td>
+<td>WEAKENED — VERIFIED as existing and as accurately quoted, but (a) abstract-only, lower evidentiary tier; (b) a full peer-reviewed follow-up GWAS from an overlapping author group on the same ARDS phenotype (Guillen-Guio et al. 2020, Lancet Respir Med, PMID 31982041) instead prioritized FLT1/VEGFR-1 as the primary ARDS-associated gene, not DNAJC1 — suggesting this 2017 preliminary finding may not have replicated; (c) ARDS is acute lung injury, mechanistically distinct from chronic COPD airflow obstruction. See audit appendix for full reasoning.</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p>Queried directly by synthesis-lead via the Open Targets Platform GraphQL API
+(<code>mcp__open-targets__*</code>), 2026-09-11. Disease/trait IDs used: COPD = MONDO_0005002; FEV1 =
+EFO_0004314; FEV1/FVC = EFO_0004713.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>L2G / genetic-association evidence (COPD, FEV1, FEV1/FVC)</th>
+<th>Colocalization</th>
+<th>Genetic constraint (gnomAD LoF oe, 90% CI)</th>
+<th>Notable broader OT disease associations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SKIDA1 (nearest)</td>
+<td>None (<code>evidences</code>/<code>associatedDiseases</code> filtered to these 3 traits both returned 0 rows)</td>
+<td>None</td>
+<td>0.404 (0.278-0.599) — mildly constrained</td>
+<td>asthma (top-20, score 0.212) and smoking initiation (top-20, score 0.191) — neither in top disease overall</td>
+</tr>
+<tr>
+<td>MLLT10 (FLAMES/PoPS)</td>
+<td>None (same 0-row result)</td>
+<td>None</td>
+<td>0.198 (0.137-0.291) — strongly constrained, dosage-sensitive</td>
+<td>leukemia (fusion-partner gene, dominant signal); asthma is the single highest genetic_association-datatype score of any disease (0.642) in its top-15</td>
+</tr>
+<tr>
+<td>CASC10 / MIR1915HG (ABC; carries lead variant)</td>
+<td>None; in fact ZERO genetic_association-datatype evidence for ANY disease in Open Targets (only 22 total disease associations, all literature-mention or RNA-expression-based)</td>
+<td>None</td>
+<td>Not available (non-coding gene)</td>
+<td>None genetic; only cancer-transcriptomic literature/expression associations</td>
+</tr>
+<tr>
+<td>DNAJC1 (recurs in 11 low-PIP credible-set variants, ~300-400kb from lead variant)</td>
+<td><strong>YES — the only positive hit at this locus: FEV1 genetic-association score 0.811</strong> (gwas_credible_sets datasource); no evidence for COPD case-control or FEV1/FVC specifically</td>
+<td>None retrievable beyond the composite score (no separate PP4/H4-style statistic exposed in schema explored)</td>
+<td>0.725 (0.552-0.961) — only weakly constrained</td>
+<td>smoking initiation is the 4th-highest-scored disease overall (score 0.352); a Blueprint neutrophil gene-expression eQTL (lead variant rs11013060) also exists among its molecular-QTL credible sets, with no L2G predictions attached</td>
+</tr>
+</tbody>
+</table>
+<p>Caveat carried from the checkpoint file: an absence of Open Targets evidence for a
+gene/trait pair is an absence of evidence in their integrated pipeline, not proof of no
+biological effect — this is especially relevant for CASC10/MIR1915HG, a non-coding RNA
+locus systematically under-annotated relative to protein-coding genes in most of these
+source datasets. Full detail: <code>evidence_tables/_status/10_21300001-22050000/opentargets.md</code>.</p>
+<h2 id="prioritized-gene-synthesis">Prioritized-gene synthesis</h2>
+<p><strong>Prioritized gene: MLLT10 — Confidence: LOW</strong></p>
+<p>This locus does not resolve cleanly, and I want to be explicit that this call is close
+rather than manufacture false certainty. Four internal prioritization methods point in
+four different directions (nearest=SKIDA1, FLAMES/PoPS=MLLT10, ABC=CASC10/MIR1915HG,
+MAGMA=NA), the single highest-PIP credible-set variant (rs12770228, PIP=0.34) sits in a
+non-coding lncRNA host gene with essentially zero disease-genetics literature of its own,
+and none of the four candidate genes has a COPD or FEV1/FVC-specific genetic-association
+hit in Open Targets — only DNAJC1 has any positive quantitative pulmonary-trait signal
+(FEV1, score 0.811), and the red-team-skeptic's critique (see <code>audits/</code> appendix)
+persuasively argues that signal is currently too provisional (unverified primary GWAS
+source, ~300-400kb physical/statistical disconnection from the credible-set mass, and — per
+the newly verified Meyer et al. 2017 ARDS abstract — a plausible non-replication precedent
+from a related acute-lung-injury phenotype where a follow-up full study prioritized a
+different gene, FLT1) to be weighted as a serious competing candidate rather than a flagged
+open question.</p>
+<p>I am naming <strong>MLLT10</strong> as the single best-supported pick for the following reasons, while
+explicitly flagging why this is not a high-confidence call:</p>
+<ul>
+<li>It is the only candidate gene supported by <em>two independent</em> internal
+gene-prioritization methods (FLAMES and PoPS) that integrate GWAS signal genome-wide,
+rather than by proximity or a single regulatory-linkage method.</li>
+<li>It physically spans (in intron/regulatory sequence) the largest number of credible-set
+variants of any gene at this locus, even though — per the skeptic's valid caveat — this
+partly reflects MLLT10's large genomic footprint rather than concentrated causal signal,
+and no single MLLT10-annotated variant individually exceeds PIP=0.041.</li>
+<li>It is strongly LoF-constrained (gnomAD oe=0.20, 90% CI 0.14-0.29), consistent with
+PoPS/FLAMES tending to favor broadly important, dosage-sensitive genes — this is a
+double-edged observation (it could reflect either true biological importance at this
+locus, or simply that constrained/essential genes are systematically favored by these
+network/expression-based prioritization methods regardless of tissue specificity, as the
+skeptic notes).</li>
+<li>Its only disease-association signal of note (asthma, in Open Targets' broader profile)
+is, per both researcher and skeptic, most plausibly a comorbidity/genetic-correlation
+artifact inherited from an unrelated endometriosis GWAS (Rahmioglu et al. 2023) rather
+than a direct lung-function hit — this is a genuine weakness of the MLLT10 case, not a
+strength, and is reported here rather than concealed.</li>
+</ul>
+<p><strong>Explicit runner-up and what would resolve the tie:</strong> CASC10/MIR1915HG is a real
+competitor and arguably has the strongest raw statistical claim to primacy — it carries the
+dominant share of fine-mapped PIP (~0.40, driven by the lead variant itself) and is the
+ABC-prioritized (enhancer/promoter regulatory-linkage) gene. It was not selected as the
+top pick because it has literally zero genetic-association-datatype evidence for any
+disease in Open Targets and no COPD/lung-relevant functional literature — a lncRNA host
+gene this thinly characterized cannot currently be distinguished from the alternative,
+self-flagged-by-the-researcher hypothesis that its ABC-assigned regulatory element may
+actually act on a neighboring gene (SKIDA1 or MLLT10) rather than on MIR1915HG itself.
+<strong>What would resolve this tie:</strong> a chromatin-conformation (Hi-C/ABC-validating) or
+CRISPRi-based enhancer-target study at this specific locus showing which gene's promoter
+the lead-variant-containing regulatory element actually contacts/activates, or a direct
+COPD/FEV1 colocalization or TWAS hit for either MLLT10 or MIR1915HG specifically (neither
+currently exists in Open Targets or the literature reviewed here). DNAJC1 remains a
+third, weaker possibility pending independent replication of its FEV1/ARDS signals in a
+peer-reviewed, COPD- or chronic-airflow-obstruction-specific study — see audit appendix.</p>
+<p>Given the absence of any gene-specific COPD/FEV1/FEV1-FVC colocalization or fine-mapping
+evidence distinguishing MLLT10 from CASC10/MIR1915HG (or, less plausibly, DNAJC1) at this
+locus, <strong>confidence is LOW</strong>, not MODERATE or HIGH, and this recommendation should be
+weighed by the study team alongside the runner-up case above, not treated as settled.</p>
+
+</body>
+</html>

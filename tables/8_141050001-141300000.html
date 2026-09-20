@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>8_141050001-141300000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-8141050001-141300000-nearest-gene-dennd3">Evidence table — Locus 8:141050001-141300000 (nearest gene DENND3)</h1>
+<p><strong>Lead variant:</strong> rs4961255 (8:141198149, GRCh38, downstream_gene_variant/MODIFIER, PIP=0.501)
+<strong>Candidate genes:</strong> DENND3 (nearest gene), TRAPPC9 (FLAMES/MAGMA/PoPS-prioritized), SLC45A4 (ABC-prioritized; also hosts the sole missense [rs3739238] and sole splice-region [rs3739235] credible-set variants)</p>
+<p>Only citations with verifier verdict <strong>VERIFIED</strong> are included below. One citation returned
+CLAIM_MISMATCH and is excluded here — see <code>audits/8_141050001-141300000_audit.md</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DENND3</td>
+<td>Statgen (absence check)</td>
+<td>DENND3 is the nearest gene to the lead credible-set variant (rs4961255, PIP=0.501, highest PIP in the set); no independent COPD/lung-function GWAS, TWAS, MR, or colocalization study names DENND3 — confirmed directly against two major published COPD genetic-association studies, neither of which names DENND3 or SLC45A4 among their reported loci</td>
+<td>PMID 30804561 (DOI 10.1038/s41588-018-0342-2); PMID 33057025 (DOI 10.1038/s41467-020-18334-7)</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND3</td>
+<td>Structural</td>
+<td>ULK-mediated phosphorylation of DENND3 activates its Rab12 GEF activity, driving autophagosome trafficking in starvation-induced autophagy (HEK293 cells; no lung tissue tested)</td>
+<td>PMID 25925668 / DOI 10.15252/embr.201440006</td>
+<td>WEAKENED (off-target-tissue evidence only; general cell-biology mechanism, not lung-tested)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND3</td>
+<td>Structural</td>
+<td>DENND3 p.L708V activating variant drives RAB12/TFR2 signaling causing hereditary hemochromatosis via lysosomal TFR2 degradation and hepcidin downregulation (liver, not lung)</td>
+<td>PMID 36729283 / DOI 10.1007/s12072-022-10474-w (note: verifier corrected publication year 2022→2023)</td>
+<td>WEAKENED (off-target-tissue)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND3</td>
+<td>Structural</td>
+<td>DENND3 p.R534S disrupts cardiac dyadic membrane microdomain architecture via Rab11b/BIN1, causing arrhythmia in iPSC-cardiomyocytes (heart, not lung)</td>
+<td>PMID 42639838 / DOI 10.1093/europace/euag193</td>
+<td>WEAKENED (off-target-tissue; a companion paper claimed to show the same mechanism was found CLAIM_MISMATCH and is excluded — see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND3</td>
+<td>Immune</td>
+<td>DENND3 is one of 8 genes causally (Mendelian randomization) and negatively associated with Alzheimer's disease risk, and is &quot;the sole gene significantly correlated with monocyte abundance&quot; among those 8 in a perivascular-macrophage single-cell analysis (brain immune cells, Alzheimer's context, not lung/COPD)</td>
+<td>PMID 40976895 / DOI 10.2174/011570159X417328250908080404</td>
+<td>WEAKENED (nonspecific, cross-disease bioinformatic association)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND3</td>
+<td>Immune</td>
+<td>DENND3 (with CBFA2T3) associated with M2-macrophage-infiltration/cancer-stemness signature in lung adenocarcinoma; upregulated in A549/H2122 cell lines by qRT-PCR</td>
+<td>PMID 37662825 / DOI 10.1016/j.heliyon.2023.e19114</td>
+<td>WEAKENED (lung tissue, but cancer biology, not COPD/airway inflammation)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND3</td>
+<td>Immune</td>
+<td>DENND3 surfaces as a &quot;hub gene&quot; in a gastric-cancer lymph-node-metastasis DEG/bioinformatics analysis</td>
+<td>PMID 40272615 / DOI 10.1007/s12672-025-02360-2</td>
+<td>WEAKENED (nonspecific bioinformatic hit, unrelated disease)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND3</td>
+<td>Immune</td>
+<td>DENND3 surfaces as a lysosome-related biomarker gene with a T-lymphocyte/neutrophil/NK-cell immune-infiltration signature in moyamoya disease</td>
+<td>PMID 39104482 / DOI 10.1016/j.heliyon.2024.e34432</td>
+<td>WEAKENED (nonspecific, unrelated disease)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND3</td>
+<td>Immune</td>
+<td>DENND3 is upregulated in a Treg-related gene screen in a primary-sclerosing-cholangitis mouse model</td>
+<td>PMID 39496776 / DOI 10.1038/s41435-024-00304-4</td>
+<td>WEAKENED (nonspecific, unrelated disease)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SLC45A4</td>
+<td>Statgen (cross-species)</td>
+<td>SLC45A4 (and DENND3) are listed among ~20 candidate genes near a bovine milk-lactation-curve GWAS locus</td>
+<td>PMID 42092548 / DOI 10.3168/jds.2026-28386</td>
+<td>WEAKENED (cross-species, uninformative for human lung biology)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TRAPPC9</td>
+<td>Statgen</td>
+<td>A genome-wide-significant locus &quot;near TRAPPC9&quot; was identified in a multi-cohort (COPDGene/ECLIPSE/GenKOLS, n=11,532) GWAS of CT-based emphysema spatial distribution (a COPD subphenotype), alongside HHIP, CHRNA5, SOWAHB, KIAA1462</td>
+<td>PMID 27669027 / DOI 10.1164/rccm.201605-0997OC</td>
+<td>CONTESTED — genomic identity/overlap of this reported TRAPPC9-region signal with this locus's lead variant (rs4961255) could not be confirmed from the abstract; TRAPPC9's gene body sits ~590kb outside this locus window with no credible-set variant annotated to it, so this may be an independent, non-overlapping association (see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TRAPPC9</td>
+<td>Statgen/Immune</td>
+<td>A TRAPPC9 gene-body CpG site (cg18989722) was among 22 replicated CpG sites where BMI × metabolic-health-score interaction associated with DNA methylation, in genes related to NF-κB signaling</td>
+<td>PMID 34937574 / DOI 10.1186/s13148-021-01194-3</td>
+<td>CONTESTED (metabolic/epigenetic evidence, not lung; see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TRAPPC9</td>
+<td>Structural</td>
+<td>Loss-of-function TRAPPC9 mutations cause autosomal-recessive intellectual disability with postnatal microcephaly via disrupted cortical neuronal development (&quot;NIBP syndrome&quot;)</td>
+<td>PMID 20004763 / DOI 10.1016/j.ajhg.2009.10.027</td>
+<td>CONTESTED (establishes TRAPPC9 CNS developmental biology; not lung-relevant; see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TRAPPC9</td>
+<td>Structural/Immune</td>
+<td>Review: TRAPPC9/NIBP is an NF-κB-pathway scaffold protein (NIK/IKK2-binding protein) and TRAPP-complex trafficking-protein member, expressed in central/enteric nervous system; &quot;NIBP syndrome&quot; features intellectual disability, obesity, microcephaly, facial dysmorphia</td>
+<td>PMID 32434006 / DOI 10.1016/j.trsl.2020.05.001</td>
+<td>CONTESTED (mechanistically plausible NF-κB/inflammation link per general COPD biology priors, but never demonstrated in airway/lung immune cells; see audit)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — NOT a verified literature citation)</h2>
+<p>This section is a structured database lookup from the Open Targets Platform GraphQL API
+(queried 2026-09-11). It did <strong>not</strong> go through citation-verifier or red-team-skeptic and
+must not be read as a verified literature claim. Full detail in
+<code>evidence_tables/_status/8_141050001-141300000/opentargets.md</code>.</p>
+<ul>
+<li><strong>No COPD or lung-function (FEV1, FEV1/FVC) GWAS credible set exists anywhere in this
+region (8:141,050,001-141,300,000) in Open Targets' own database</strong> — its own external
+COPD GWAS study (GCST007692, 67 genome-wide credible sets) has zero credible sets here.</li>
+<li>Of ~129 other-trait GWAS credible sets from other studies that DO overlap this region,
+traits are dominated by blood biomarkers/electrolytes, blood-cell counts, cardiovascular
+traits, anthropometric traits, brain-imaging phenotypes, pain intensity, educational
+attainment, and <strong>smoking initiation</strong> (GCST90243985, n=3,382,012, tagged by a variant in
+near-perfect LD with the lead variant).</li>
+<li><strong>DENND3</strong>: L2G score at the two AST-trait credible sets keyed to the lead variant itself
+0.63 and 0.30 (top-ranked there); L2G at nearly all other regional credible sets
+(including smoking initiation, 0.18) ranks below SLC45A4. Overall (non-locus-specific)
+Open Targets COPD association score: 0.0187 (driven by genetic_association datatype
+0.031). gnomAD LOEUF≈0.805 (moderate constraint). Not annotated as a membrane protein.</li>
+<li><strong>TRAPPC9</strong>: Never tops L2G at any of the ~129 regional credible sets for any trait.
+Overall COPD association score: 0.00394, driven <strong>only</strong> by the literature/text-mining
+datatype (0.032) — zero genetic_association datatype score for COPD. gnomAD
+LOEUF≈0.786.</li>
+<li><strong>SLC45A4</strong>: Tops L2G at the large majority of regional credible sets (typically 0.45–0.75),
+including smoking initiation (0.58). Overall COPD association score: <strong>0 (no data at
+all)</strong> — zero genetic-association or literature evidence linking SLC45A4 to COPD in Open
+Targets' curated pipeline. gnomAD LOEUF≈0.684 (most constrained of the three candidates,
+though none reach the conventional &lt;0.35 high-constraint threshold). The only one of the
+three candidates annotated as a membrane protein (consistent with its solute-carrier
+transporter annotation).</li>
+</ul>
+<h2 id="prioritized-gene-synthesis">Prioritized-gene synthesis</h2>
+<p><strong>Prioritized gene: DENND3 — Confidence: LOW</strong></p>
+<p>This locus does not yield a confident causal-gene call, and the study team should weigh
+this recommendation accordingly. No candidate gene has any COPD- or spirometry-specific
+GWAS, colocalization, or fine-mapping evidence anywhere in the literature or in Open
+Targets' own database at this exact locus — an unusual and important gap given the
+strength of the fine-mapped signal (lead PIP 0.501). All three genes' evidence was rated
+WEAKENED or CONTESTED by red-team-skeptic; none reached an unqualified positive verdict.</p>
+<p>I name <strong>DENND3</strong> as the best-supported single pick, on the basis of (a) it is the nearest
+gene and hosts the single highest-PIP variant in the credible set (rs4961255, PIP=0.501,
+row 1 above), (b) it is the only one of the three candidates with any plausible, if
+untested, mechanistic link to a COPD-relevant general biological process — its role as a
+Rab12 GEF driving autophagy induction (row 2) is mechanistically the kind of pathway
+implicated elsewhere in COPD alveolar-epithelial and macrophage biology, even though this
+specific paper never tests lung tissue, and (c) at the two credible sets keyed to the lead
+variant itself, Open Targets' L2G model actually favors DENND3 over SLC45A4 (Open Targets
+summary above), unlike at nearly every other regional signal.</p>
+<p>This call is close, and I want to be explicit about why. <strong>SLC45A4</strong> is a credible
+runner-up: it physically hosts the majority of the credible set including the locus's only
+missense (rs3739238) and only splice-region (rs3739235) variants, and Open Targets' L2G
+model (a variant-to-gene model, distinct from simple physical proximity) favors it over
+DENND3 at nearly every other regional GWAS signal captured here, including the
+smoking-initiation credible set. Against this, SLC45A4 is completely functionally
+uncharacterized in the literature (row 10 above is the only non-locus SLC45A4 citation
+found, and it is cross-species and uninformative) and has zero COPD-association evidence
+anywhere, including in Open Targets. Neither gene has any spirometric (FEV1/FEV1-FVC)
+concordance to break the tie — the single strongest form of evidence under this pipeline's
+priors is entirely absent for both.</p>
+<p><strong>TRAPPC9</strong>, despite being the FLAMES/MAGMA/PoPS-prioritized gene (i.e., the pipeline's own
+statistical gene-level methods' top pick), is my explicit <strong>lowest</strong>-confidence candidate
+of the three and was marked CONTESTED by red-team-skeptic. It does not physically overlap
+this locus (its gene body sits ~590kb outside the window), never tops Open Targets' L2G
+model for any trait here, and its one COPD-subphenotype genetic-association finding
+(Boueiz et al. 2017, emphysema distribution, row 12) has an unresolved and load-bearing
+ambiguity: neither the researcher nor citation-verifier could confirm from the abstract
+whether that reported TRAPPC9-region signal is the same LD block as this locus's lead
+variant, or a distinct, non-overlapping association elsewhere near TRAPPC9's own gene body.
+I flag this explicitly rather than defer to the statistical prioritization: FLAMES/MAGMA/PoPS
+methods can implicate genes via genome-wide expression/functional priors independent of a
+locus's actual fine-mapped, physically-linked causal gene, and every piece of
+locus-specific evidence here (physical overlap, credible-set annotation, L2G) points away
+from TRAPPC9, not toward it.</p>
+<p>There is also a genuine alternative, non-pulmonary hypothesis that applies regardless of
+which of the three genes is named: this locus co-localizes (per Open Targets, not
+independently corroborated in primary literature since rs4961255 is not PubMed-indexed)
+with a large smoking-initiation GWAS signal in near-perfect LD with the lead variant, and
+the region's GWAS credible sets are otherwise dominated by blood-biomarker, blood-cell-count,
+and cardiovascular traits rather than any lung-function signal. Per this pipeline's own
+prior on smoking-mediated effects, a smoking-behavior-mediated (neurobiological) or
+non-pulmonary hematologic/biomarker mechanism is at least as well supported by the
+available evidence as any lung-structural or airway-immune mechanism for DENND3, SLC45A4,
+or TRAPPC9.</p>
+<p><strong>What would resolve this tie / raise confidence:</strong> (1) a COPD- or FEV1/FEV1-FVC-specific
+fine-mapped GWAS or colocalization result at this exact locus (currently absent from both
+the literature and Open Targets); (2) full-text confirmation of the Boueiz et al. 2017
+emphysema-distribution lead-variant position relative to rs4961255, to determine whether
+TRAPPC9's COPD-subphenotype evidence is genuinely locus-specific or an independent signal;
+(3) any functional characterization of SLC45A4 (currently a complete literature gap) or of
+its missense variant rs3739238; (4) lung-tissue-specific eQTL colocalization for DENND3 or
+SLC45A4 at this locus; (5) independent confirmation (beyond the structured Open Targets
+attribution) of the smoking-initiation co-localization claim.</p>
+
+</body>
+</html>

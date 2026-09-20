@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>12_49150001-49650000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1249150001-49650000-grch38">Evidence table — locus 12:49150001-49650000 (GRCh38)</h1>
+<p>Lead variant: rs933738 (12:49549339, intron of KCNH3, PIP=0.358). Candidate genes from
+internal pipeline: nearest gene KCNH3; MAGMA-prioritized KMT2D; PoPS-prioritized PRKAG1;
+ABC-prioritized PRPF40B; plus credible-set genes DNAJC22, SPATS2, TUBA1C, PRPH, MCRS1,
+FAM186B, TROAP-AS1, HIGD1AP9. <strong>TARGETED ADDENDUM (2026-09-11):</strong> after the study team
+corrected a genome-build error in the MAGMA/PoPS gene-location merge file, <strong>TUBA1A</strong> was
+surfaced as an additional candidate gene at this locus and has now been researched,
+verified, and critiqued using the same pipeline rigor as the original 12 genes; its rows
+are appended below and clearly marked. All citations below carry a citation-verifier
+verdict of VERIFIED (45/45 verified across both the original and addendum passes; 0
+retracted, not-found, or claim-mismatched — see
+<code>evidence_tables/_status/12_49150001-49650000/verified_citations.md</code> for full detail,
+including a dedicated follow-up pass on a gene-identity question raised for TUBA1A).
+&quot;Skeptic verdict&quot; reflects red-team-skeptic's judgment of whether the <em>interpretation</em> of
+each citation (not just its existence, which citation-verifier already confirmed) holds up
+— see <code>audits/12_49150001-49650000_audit.md</code> for full critique text.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KCNH3</td>
+<td>Statistical genetics (background, smoking)</td>
+<td>GSCAN GWAS of tobacco/alcohol use (406 loci, ~1.2M individuals); specific 12q13/KCNH3 smoking-initiation locus-level hit could NOT be confirmed from supplementary tables</td>
+<td>Liu et al. 2019, PMID:30643251, DOI:10.1038/s41588-018-0307-5</td>
+<td>WEAKENED — smoking-mediation inference relies on an unconfirmed locus-level link; possible circularity with OT's own aggregate score (see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNH3</td>
+<td>Statistical genetics (background, COPD)</td>
+<td>Large COPD GWAS (UK Biobank + ICGC, 82 loci), general background reference only, no locus-specific claim</td>
+<td>Sakornsakolpat et al. 2019, PMID:30804561, DOI:10.1038/s41588-018-0342-2</td>
+<td>HOLDS (background reference only)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNH3</td>
+<td>Structural/developmental (mouse knockout, neuro)</td>
+<td>Kcnh3-/- mice show hippocampal hyperexcitability and spontaneous seizures</td>
+<td>Zhang et al. 2010, PMID:20676103, DOI:10.1038/nn.2610</td>
+<td>WEAKENED (gene-level) — accurate citation, but contributes to a CNS-only evidence pattern used to infer smoking-mediation, which the skeptic judged is one of two live hypotheses, not the favored one (see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNH3</td>
+<td>Structural/developmental (human neurodevelopmental disease)</td>
+<td>De novo KCNH3 missense variant causes global developmental delay, autistic behavior, insomnia, nocturnal seizures; KCNH3 stated to be &quot;primarily expressed in the nervous system&quot;</td>
+<td>Bauer et al. 2025, PMID:40157307, DOI:10.1016/j.seizure.2025.03.014</td>
+<td>WEAKENED (gene-level, see above)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNH3</td>
+<td>Structural (channel biophysics)</td>
+<td>Functional/biophysical characterization of the same KCNH3 neurodevelopmental variant, altered channel inactivation</td>
+<td>Bauer et al. 2025, PMID:40429775, DOI:10.3390/ijms26104631</td>
+<td>WEAKENED (gene-level, see above)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNH3</td>
+<td>Structural/developmental (mouse, circadian)</td>
+<td>Kcnh3 knockout mice show altered suprachiasmatic-nucleus neuron firing rhythms</td>
+<td>Hermanstyne et al. 2023, PMID:37516908, DOI:10.1085/jgp.202213310</td>
+<td>WEAKENED (gene-level, see above)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNH3</td>
+<td>Structural (basic channel biology)</td>
+<td>Kv12.2/KCNH3 highly expressed in brain and cultured neurons; channel trafficking/glycosylation biology</td>
+<td>Noma et al. 2009, PMID:19808681, DOI:10.1074/jbc.M109.021519</td>
+<td>WEAKENED (gene-level, see above)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNH3</td>
+<td>Structural (basic channel biology)</td>
+<td>Kv12.2/KCNH3 highly expressed in cerebral cortex and hippocampus</td>
+<td>Clancy et al. 2009, PMID:19623261, DOI:10.1371/journal.pone.0006330</td>
+<td>WEAKENED (gene-level, see above)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNH3</td>
+<td>Behavioral pharmacology</td>
+<td>Pharmacological Kv12.2 inhibition (ASP2905) is psychoactive/antipsychotic-like in mice</td>
+<td>Takahashi et al. 2019, PMID:31654662, DOI:10.1016/j.bbr.2019.112315</td>
+<td>WEAKENED (gene-level) — supports a neurobehavioral mechanism hypothesis but does not establish smoking-specific pharmacology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KMT2D</td>
+<td>Structural/developmental (mouse knock-in, UNREVIEWED PREPRINT)</td>
+<td>Catalytically-dead Kmt2d knock-in mice show impaired lung sacculation, thickened intersaccular septa, abnormal alveolar differentiation, narrowed Sox2+ airways, reduced Cc10+ club cells, expanded Pdgfra+ mesenchymal progenitors</td>
+<td>Mehta et al. 2026, bioRxiv preprint, PMID:41889833, PMC:PMC13015287, DOI:10.64898/2026.03.18.712755</td>
+<td>WEAKENED — NOT peer-reviewed; near-null homozygous mouse perturbation; KMT2D lies OUTSIDE the ABF credible set (MAGMA-only signal, vulnerable to LD/gene-density inflation); see audit for &quot;Mendelian gene ≠ GWAS gene&quot; concern</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KMT2D</td>
+<td>Structural (human case report/review)</td>
+<td>Kabuki syndrome (KMT2D-mutant) patients can present with pulmonary hypertension</td>
+<td>Deng et al. 2023, PMID:37641008, DOI:10.1186/s12887-023-04273-x</td>
+<td>WEAKENED — rare monogenic-syndrome (large-effect LoF) phenotype, not evidence for common noncoding variant effect; single case report</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KMT2D</td>
+<td>Structural (human case series)</td>
+<td>De novo KMT2D missense variants clustered in a specific protein region associated with severe interstitial lung disease in 2 of 4 patients</td>
+<td>Baldridge et al. 2020, PMID:32083401, DOI:10.1002/ajmg.a.61518</td>
+<td>WEAKENED — same rare-variant/monogenic-syndrome caveat as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KMT2D</td>
+<td>Structural/immune (single human case report)</td>
+<td>KMT2D missense variant case with pulmonary hemorrhage and anti-GBM-positive Goodpasture's syndrome</td>
+<td>Li et al. 2022, PMID:36090579, DOI:10.3389/fped.2022.933693</td>
+<td>WEAKENED — single case, not generalizable, same monogenic-syndrome caveat</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRKAG1</td>
+<td>Structural (skeletal-muscle physiology, non-pulmonary; negative-evidence citation)</td>
+<td>AMPK subunit expression/activity studied in exercise-trained human skeletal muscle — not lung-relevant; used only to document absence of lung-specific PRKAG1 literature</td>
+<td>Nielsen et al. 2002, PMID:12391032, DOI:10.1152/japplphysiol.00642.2002</td>
+<td>HOLDS (honest null result; no overclaiming)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRPF40B</td>
+<td>Structural (neuronal splicing, non-pulmonary)</td>
+<td>PRPF40B regulates NTRK2/TRKB alternative splicing during neuronal differentiation</td>
+<td>Duarte-Ruiz et al. 2025, PMID:41360765, DOI:10.1038/s41419-025-08301-9</td>
+<td>HOLDS (honest null result for lung relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRPF40B</td>
+<td>Structural (myeloid/hypoxia biology, non-pulmonary)</td>
+<td>PRPF40B represses a hypoxia (HIF1A-related) transcriptional signature in K562 myeloid cells; implicated in myelodysplastic syndrome</td>
+<td>Lorenzini et al. 2019, PMID:31088860, DOI:10.1261/rna.069534.118</td>
+<td>HOLDS (honest null result for lung relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRPF40B</td>
+<td>Structural (basic splicing biology)</td>
+<td>Basic characterization of PRPF40B as a core alternative-splicing regulator (SF1/U2AF65 interaction)</td>
+<td>Becerra et al. 2015, PMID:25605964, DOI:10.1261/rna.047258.114</td>
+<td>HOLDS (general biology, no lung relevance claimed)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DNAJC22</td>
+<td>Structural (basic gene regulation)</td>
+<td>DNAJC22 explicitly described as &quot;so far unstudied&quot;; Hnf4a identified as its major transcriptional regulator, no organ-specificity established</td>
+<td>Aschenbrenner et al. 2017, PMID:28642491, DOI:10.1038/s41598-017-04370-9</td>
+<td>HOLDS — accurately characterizes an evidence gap; skeptic flags this as a &quot;known unknown&quot; that should NOT be treated as negative evidence, given DNAJC22 carries the second-highest-PIP variant locus-wide (rs11168988, PIP=0.055)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DNAJC22</td>
+<td>Structural (comparative evolutionary biology, non-disease)</td>
+<td>DNAJC22 shows positive selection signal for cold-temperature adaptation in Chinese rhesus macaques (published title contains a journal-side typo, &quot;Melocular&quot; for &quot;Molecular&quot; — confirmed by citation-verifier as the journal's own error, not a citation error)</td>
+<td>Wang et al. 2024, PMID:39911280, DOI:10.2174/0113892029301969240708094053</td>
+<td>HOLDS (tangential, correctly characterized as non-disease-relevant)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DNAJC22</td>
+<td>Structural (rare-variant burden, neurodegenerative, non-pulmonary)</td>
+<td>DNAJC22 shows a suggestive rare-variant burden association with sporadic late-onset Parkinson's disease</td>
+<td>Zhang et al. 2022, PMID:35715682, DOI:10.1007/s12035-022-02920-5</td>
+<td>HOLDS (tangential, correctly characterized)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2</td>
+<td>Immune (tumor microenvironment, non-pulmonary)</td>
+<td>SPATS2 transcriptionally activated by ZNF544, mediates immunosuppressive (M2 macrophage/Treg) tumor microenvironment effects in hepatocellular carcinoma</td>
+<td>Tang et al. 2026, PMID:41935629, DOI:10.1016/j.jhepr.2026.101845</td>
+<td>HOLDS — but skeptic notes tumor-immune &quot;infiltration&quot; language should not be conflated with COPD-relevant pulmonary immunology despite shared vocabulary</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2</td>
+<td>Immune (tumor-immune correlation, non-pulmonary)</td>
+<td>SPATS2 expression correlates with immune-cell infiltration signatures in hepatocellular carcinoma</td>
+<td>Lin et al. 2023, PMID:36631750, DOI:10.1186/s12876-022-02633-y</td>
+<td>HOLDS (same caveat as above)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2</td>
+<td>Structural (cancer epigenetics, non-pulmonary)</td>
+<td>lncRNA SNHG5/DNMT3a-mediated epigenetic regulation of SPATS2 in hepatocellular carcinoma progression</td>
+<td>Yan et al. 2022, PMID:35077478, DOI:10.1371/journal.pone.0262262</td>
+<td>HOLDS (honest null result for lung relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TUBA1C</td>
+<td>Structural (non-respiratory ependymal cilia)</td>
+<td>TUBA1C is one of several alpha-tubulin isotypes in mouse ependymal (brain-ventricular, NOT airway) cilia; TUBB4B (not TUBA1C) is functionally dominant for ciliary polarity</td>
+<td>Liu et al. 2026, PMID:41459724, DOI:10.1093/jmcb/mjaf057</td>
+<td>HOLDS — correctly distinguishes brain ependymal cilia from airway cilia rather than conflating &quot;cilia gene&quot; with &quot;airway cilia gene&quot;</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MCRS1</td>
+<td>Statistical genetics/structural (small exploratory data-mining study)</td>
+<td>Mouse-to-human RNA-seq data-mining flagged MCRS1 (with HJURP, TLR8) as a &quot;novel&quot; COPD candidate gene in a small Korean cohort (GSE57148); exploratory, unreplicated, not a GWAS</td>
+<td>Vishweswaraiah et al. 2018, PMID:29871630, DOI:10.1186/s12931-018-0795-y</td>
+<td>HOLDS — correctly downweighted by researcher as weak, single-study, unreplicated evidence; not a well-supported mechanistic case despite MCRS1's high LoF-constraint statistic (see OT summary)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MCRS1</td>
+<td>Structural (gastric cancer cell biology, non-pulmonary)</td>
+<td>MCRS1 modulates EMT, proliferation, invasion in gastric cancer cells</td>
+<td>Wang et al. 2019, PMID:30953699, DOI:10.1016/j.cellsig.2019.04.002</td>
+<td>HOLDS (general cell biology, no lung relevance claimed)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MCRS1</td>
+<td>Structural (telomerase/cell-proliferation biology, non-pulmonary)</td>
+<td>MCRS1/MSP58 represses hTERT transcription and telomerase activity</td>
+<td>Hsu et al. 2014, PMID:24361335, DOI:10.1016/j.bbamcr.2013.12.004</td>
+<td>HOLDS (general cell biology, no lung relevance claimed)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MCRS1</td>
+<td>Structural (paralog, NOT MCRS1 itself)</td>
+<td>MCRS2 (a distinct paralog, not MCRS1) negatively regulates oxidative-stress-induced ASK1 activation</td>
+<td>Xu et al. 2012, PMID:22609355, DOI:10.1016/j.febslet.2012.04.051</td>
+<td>HOLDS — researcher and citation-verifier both correctly flagged this paper is about the paralog MCRS2, not MCRS1; retained here only as explicitly-labeled non-evidence for MCRS1</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FAM186B</td>
+<td>Structural (renal ciliopathy candidate-gene screen, non-pulmonary)</td>
+<td>FAM186B identified as one of five novel candidate genes (with RBM48, PIAS1, INCENP, RCOR1) for renal ciliopathy in a WES cohort; speculative, unconfirmed, kidney not lung</td>
+<td>Braun et al. 2016, PMID:26489029, DOI:10.1038/ki.2015.317</td>
+<td>HOLDS — correctly characterized as a speculative, unconfirmed lead, not established causative evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FAM186B</td>
+<td>Structural (incidental cancer expression profiling, non-pulmonary)</td>
+<td>FAM186B differentially expressed (downregulated, qRT-PCR confirmed) between HPV+ and HPV- oropharyngeal cancer samples</td>
+<td>Suárez et al. 2016, PMID:26932277 (no DOI available)</td>
+<td>HOLDS (incidental finding, correctly characterized as unrelated to lung/airway biology)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TUBA1A <strong>(addendum — see note above)</strong></td>
+<td>Statistical genetics (positional/build-correction only; no citation, structural fact)</td>
+<td>No credible-set variant is annotated to TUBA1A (nearest is ~17.5kb away, in TUBA1C); zero GWAS/TWAS/MR/coloc literature and zero Open Targets association data (COPD, FEV1, FEV1/FVC, smoking initiation, nicotine dependence); candidacy rests entirely on the corrected MAGMA/PoPS positional re-merge</td>
+<td>(structural/statistical fact, not a literature citation)</td>
+<td>WEAKENED — the weakest statistical-genetics case of any candidate gene reviewed at this locus; a genuinely null profile, not merely an unremarkable one</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TUBA1A</td>
+<td>Structural/developmental (rare monogenic neurodevelopmental disease)</td>
+<td>De novo TUBA1A missense variant causes fatal tubulinopathy/lissencephaly with hypotonia-induced respiratory insufficiency requiring ventilator support (a secondary neurological/brainstem complication, not a primary lung/airway structural defect) and hypoplastic genitalia</td>
+<td>Saidin et al. 2024, PMID:39202391, DOI:10.3390/genes15081031</td>
+<td>WEAKENED — rare, highly-penetrant dominant-negative disease architecture (mis z=8.75, oe=0.031; lof pLI-like 0.9998) mismatched to a common noncoding GWAS signal; respiratory finding is neurologically, not pulmonary-structurally, mediated</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TUBA1A</td>
+<td>Structural/developmental (multi-gene lissencephaly cohort)</td>
+<td>Recurrent respiratory infections frequent across genotypes (37% LIS1/PAFAH1B1, 25% DCX) in a cohort including 1 TUBA1A patient</td>
+<td>Proepper et al. 2026, PMID:42177523, DOI:10.1186/s13023-026-04398-z</td>
+<td>WEAKENED — TUBA1A subgroup was n=1; cited percentages are for other genotype subgroups; secondary aspiration/neurodevelopmental-disability complication, not TUBA1A-specific airway pathology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TUBA1A</td>
+<td>Structural/developmental (neurological phenotyping)</td>
+<td>Epilepsy phenotype/antiseizure-medication response characterized across a 5-gene lissencephaly cohort including TUBA1A; purely neurological scope</td>
+<td>Proepper et al. 2024, PMID:39214127, DOI:10.1055/s-0044-1789014</td>
+<td>HOLDS (honest null result for lung relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TUBA1A</td>
+<td>Structural/developmental (single case report)</td>
+<td>Dandy-Walker malformation plus persistent fetal vasculature possibly linked to TUBA1A mutation; infant had general perinatal respiratory distress</td>
+<td>Nisa et al. 2024, PMID:39307028, DOI:10.1016/j.ijscr.2024.110270</td>
+<td>WEAKENED — single case, general perinatal complication, not an airway/lung-structural finding</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TUBA1A</td>
+<td>Structural (non-respiratory ependymal cilia)</td>
+<td>TUBA1A is one of several alpha-tubulin isotypes incorporated into mouse ependymal (brain-ventricular, NOT airway) motile cilia; TUBB4B is functionally dominant/non-redundant, no distinct role shown for TUBA1A</td>
+<td>Liu et al. 2026, PMID:41459724, DOI:10.1093/jmcb/mjaf057</td>
+<td>HOLDS — correctly distinguishes brain ependymal cilia from airway cilia; mirrors the same finding already reported for paralog TUBA1C</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TUBA1A</td>
+<td>Structural (cortical neurodevelopment, ciliary-gene-network adjacent)</td>
+<td>Tuba1a is downregulated upon UPF2/NMD-pathway deletion in mouse radial glial cells; paper links NMD to cortical neuronal migration AND ciliary gene regulatory networks, but this is a cortical-neurodevelopment paper, not an airway-cilia study</td>
+<td>Lin et al. 2026, PMID:41746809, DOI:10.1016/j.celrep.2026.117027</td>
+<td>HOLDS — correctly framed as pathway-adjacent, not functionally interchangeable with airway ciliary genes</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TUBA1A</td>
+<td>Structural/developmental (rodent multi-organ proteomics, includes lung tissue)</td>
+<td>TUBA1A one of three shared differentially-expressed proteins (with MDH1, H2AZ1) across adrenal, kidney, and LUNG tissue in a rat maternal-protein-restriction developmental-programming proteomic/epigenetic screen</td>
+<td>Fioretto et al. 2026, PMID:42025250, DOI:10.1016/j.clnu.2026.106656</td>
+<td>HOLDS as characterized — but non-mechanistic, non-COPD, and confounded by TUBA1A's near-ubiquitous cytoskeletal expression (researcher's and skeptic's shared caveat)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TUBA1A</td>
+<td>Immune (lung-transplant Th17 autoimmunity — <strong>gene identity UNCONFIRMED</strong>)</td>
+<td>Alloimmune (anti-HLA) responses in lung-transplant recipients induce secondary Th17-mediated autoantibody responses against the airway self-antigen &quot;K-alpha1-tubulin&quot; and collagen V, correlating with bronchiolitis obliterans syndrome (BOS)</td>
+<td>Saini et al. 2011, PMID:21414808, DOI:10.1016/j.healun.2011.01.708</td>
+<td><strong>CONTESTED</strong> — two independent citation-verifier passes could NOT confirm that &quot;K-alpha1-tubulin&quot; is the TUBA1A gene product specifically (vs. a different alpha-tubulin paralog); red-team-skeptic specifically raised, but could not confirm, that this historical antigen name may instead correspond to TUBA1B. Treat as generic alpha-tubulin evidence, not TUBA1A-specific, pending resolution</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TUBA1A</td>
+<td>Immune (same gene-identity caveat)</td>
+<td>RAAS inhibition reduces anti-&quot;K-alpha1-tubulin&quot;/collagen-V antibody titers and IL-17/TNF-alpha pathway activity in a mouse obliterative-airways-disease model</td>
+<td>Weber et al. 2012, PMID:22289485, DOI:10.1016/j.healun.2011.12.012</td>
+<td><strong>CONTESTED</strong> — same unresolved gene-identity caveat as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TUBA1A</td>
+<td>Immune (same gene-identity caveat)</td>
+<td>BATF-dependent Th17 responses to lung self-antigens (&quot;K-alpha1-tubulin,&quot; collagen V) drive anti-MHC-antibody-induced obliterative airway disease in mice</td>
+<td>Xu et al. 2016, PMID:26844425, DOI:10.1111/ajt.13595</td>
+<td><strong>CONTESTED</strong> — same unresolved gene-identity caveat</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TUBA1A</td>
+<td>Immune (same gene-identity caveat)</td>
+<td>Extracorporeal photopheresis reduces circulating anti-&quot;K-alpha1-tubulin&quot; antibodies and is associated with reduced rate of FEV1 decline in lung-transplant recipients with bronchiolitis obliterans</td>
+<td>Baskaran et al. 2014, PMID:24906794, DOI:10.1016/j.healun.2014.04.020</td>
+<td><strong>CONTESTED</strong> — the single citation in the whole TUBA1A packet directly linking to an FEV1 outcome, which makes the unresolved gene-identity question especially consequential; same caveat as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TUBA1A</td>
+<td>Immune (airway transcriptomics, asthma not COPD)</td>
+<td>TUBA1A one of nine &quot;key regulatory genes&quot; differentially expressed across airway epithelial/immune cell subpopulations in asthma exacerbation, qRT-PCR validated</td>
+<td>Liu et al. 2025, PMID:39917297, DOI:10.3389/fimmu.2025.1512053</td>
+<td>WEAKENED — correlative marker-gene finding in asthma (a distinct airway disease, not COPD); TUBA1A's near-ubiquitous cytoskeletal expression means recurrence across disease transcriptomic screens may reflect generic proliferation/turnover signal rather than TUBA1A-specific biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TUBA1A</td>
+<td>Immune (T-cell transcriptomics, pneumonia not COPD)</td>
+<td>TUBA1A (with CD8B, GZMM, MYL12B) identified as a candidate peripheral-blood T-cell biomarker gene, upregulated in community-acquired pneumonia vs controls, qRT-PCR confirmed</td>
+<td>Jiang et al. 2026, PMID:42694836, DOI:10.7150/ijms.136006</td>
+<td>WEAKENED — same ubiquitous-gene caveat as above; acute infection, not COPD, context</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TUBA1A</td>
+<td>Immune (tumor immunology, lung cancer not COPD)</td>
+<td>A &quot;TUBA1A+CD8+ T-cell&quot; aggrephagy-defined immune subtype identified as a prognostic factor in lung adenocarcinoma tumor microenvironment</td>
+<td>Sun et al. 2023, PMID:38095634, DOI:10.18632/aging.205306</td>
+<td>WEAKENED — same ubiquitous-gene caveat; cancer, not COPD, context</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PRPH, TROAP-AS1, HIGD1AP9:</strong> no citations meeting inclusion (no locus-relevant or
+gene-specific literature was found for these three candidate genes beyond the negative
+findings already summarized in the researcher's checkpoint; see
+<code>evidence_tables/_status/12_49150001-49650000/researcher.md</code> for the documented literature
+searches and their null results). This is treated as a genuine absence of evidence, not
+force-fit into the table.</p>
+<hr>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p>This locus's GWAS meta-analysis is a custom, non-Open-Targets-ingested study, so <strong>no
+direct L2G score or colocalization result could be retrieved</strong> for this specific
+locus/study. The figures below are Open Targets' own aggregate association scores
+(across its ingested literature/genetics/clinical datasources) and genetic constraint
+metrics — general triangulating context, not locus-specific fine-mapping evidence.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>COPD assoc. (MONDO_0005002)</th>
+<th>FEV1 assoc. (EFO_0004314)</th>
+<th>FEV1/FVC assoc. (EFO_0004713)</th>
+<th>Smoking-initiation assoc. (EFO_0005670)</th>
+<th>Nicotine dependence assoc. (MONDO_0008575)</th>
+<th>Genetic constraint (lof pLI-like score, oe)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KCNH3</td>
+<td>no data</td>
+<td>0.182 (genetic_association 0.299) — highest of the 12 original genes</td>
+<td>no data</td>
+<td>0.336 (genetic_association 0.553) — highest of the 12 original genes</td>
+<td>no data</td>
+<td>0.708 (oe=0.393) — moderately constrained</td>
+</tr>
+<tr>
+<td>KMT2D</td>
+<td>0.0046 (literature-only 0.038)</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>1.0 (oe=0.112) — maximally constrained</td>
+</tr>
+<tr>
+<td>PRKAG1</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>0.0002 (oe=0.533) — not constrained</td>
+</tr>
+<tr>
+<td>PRPF40B</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>0.020 (genetic_association 0.034)</td>
+<td>0.016 (oe=0.430) — not constrained</td>
+</tr>
+<tr>
+<td>DNAJC22</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>~0 (oe=0.990) — not constrained</td>
+</tr>
+<tr>
+<td>SPATS2</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>0.188 (genetic_association 0.310) — 2nd highest</td>
+<td>no data</td>
+<td>~0 (oe=0.577) — not constrained</td>
+</tr>
+<tr>
+<td>TUBA1C</td>
+<td>0.0015 (literature-only 0.012)</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>0.063 (oe=0.453) — not strongly constrained</td>
+</tr>
+<tr>
+<td>PRPH</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>~0 (oe=0.913) — not constrained</td>
+</tr>
+<tr>
+<td>MCRS1</td>
+<td>0.0177 (literature-only 0.146) — highest of the 12 original genes</td>
+<td>0.043 (genetic_association 0.071)</td>
+<td>no data</td>
+<td>0.024 (genetic_association 0.040)</td>
+<td>no data</td>
+<td>0.969 (oe=0.353) — highly constrained (2nd overall until TUBA1A added)</td>
+</tr>
+<tr>
+<td>FAM186B</td>
+<td>no data</td>
+<td>0.027 (genetic_association 0.045)</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>~0 (oe=0.792) — not constrained</td>
+</tr>
+<tr>
+<td>TROAP-AS1</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data available (non-coding gene)</td>
+</tr>
+<tr>
+<td>HIGD1AP9</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data</td>
+<td>no data available (pseudogene)</td>
+</tr>
+<tr>
+<td><strong>TUBA1A (addendum)</strong></td>
+<td><strong>no data (0 rows)</strong></td>
+<td><strong>no data (0 rows)</strong></td>
+<td><strong>no data (0 rows)</strong></td>
+<td><strong>no data (0 rows)</strong></td>
+<td><strong>no data (0 rows)</strong></td>
+<td><strong>lof pLI-like 0.9998 (oe=0.197) — most constrained gene at this locus; mis z=8.75 (oe=0.031), missense-depleted far beyond any other gene queried here</strong></td>
+</tr>
+</tbody>
+</table>
+<p>FEV1/FVC ratio (EFO_0004713) returned 0 rows for all genes — no Open Targets evidence
+at all for that trait for any candidate at this locus, including TUBA1A.</p>
+<p><strong>TUBA1A note:</strong> TUBA1A's complete absence of COPD/spirometric/smoking association data in
+Open Targets is a genuine null (zero rows across all five traits queried), not merely a
+low score — the sharpest such null of any gene reviewed at this locus. Its single
+highest-scoring disease association anywhere in Open Targets (out of 2,633 disease rows)
+is &quot;lissencephaly due to TUBA1A mutation&quot; (score 0.825), followed by &quot;tubulinopathy&quot;
+(0.707), &quot;tubulinopathy-associated dysgyria&quot; (0.621), &quot;lissencephaly type 3&quot; (0.614), and
+&quot;intellectual disability&quot; (0.614) — an overwhelmingly rare, monogenic neurodevelopmental
+disease profile with no detectable pulmonary signal.</p>
+<p>Full narrative detail (including method notes, per-gene role-at-locus context, and the
+TUBA1A coordinate-check addendum) is in
+<code>evidence_tables/_status/12_49150001-49650000/opentargets.md</code>.</p>
+<hr>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>KCNH3 — confidence: LOW. (Unchanged by the TUBA1A addendum.)</strong></p>
+<p>KCNH3 is the strongest statistical-genetics candidate at this locus by a wide margin: it
+is the nearest gene, and &gt;85% of the credible-set posterior inclusion probability mass
+(lead variant rs933738, PIP=0.358, plus rs7132792, PIP=0.020) sits in its introns — an
+order of magnitude more concentrated than any other gene at this locus (DNAJC22's single
+best variant reaches only PIP=0.055; SPATS2's dozens of variants each stay below
+PIP=0.028; TUBA1A carries zero credible-set PIP mass at all). On fine-mapping alone, this
+is a clear statistical winner, and red-team critique explicitly affirms that PIP
+concentration of this kind is exactly the sort of signal fine-mapping is designed to
+surface.</p>
+<p>However, the literature evidence is genuinely two-sided on <em>mechanism</em>, not confirmatory
+of a pulmonary role. All nine verified KCNH3 citations describe an essentially exclusively
+neuronal/CNS biology (hippocampal excitability and epilepsy, suprachiasmatic-nucleus
+circadian firing, human neurodevelopmental disease explicitly described as
+&quot;primarily expressed in the nervous system,&quot; and psychoactive/behavioral effects of
+pharmacological channel inhibition) — no lung, airway, or COPD-specific literature exists
+for KCNH3 anywhere in the search performed. Open Targets' own aggregate association scores
+put KCNH3 highest of all candidate genes for <em>both</em> FEV1 (0.30) and smoking initiation
+(0.55), with smoking modestly higher — an ambiguous signal, not a resolving one. Red-team
+critique specifically flagged that &quot;absence of pulmonary literature is not evidence <em>for</em>
+a smoking mechanism&quot; and that the smoking-mediation narrative and an unstudied
+peripheral/airway role for this ion channel are two live, currently indistinguishable
+hypotheses.</p>
+<p><strong>TARGETED ADDENDUM FINDING: TUBA1A does not change this call.</strong> TUBA1A (an alpha-tubulin
+gene surfaced by a corrected MAGMA/PoPS genome-build re-merge) was researched, verified,
+and critiqued with the same rigor as the original candidates. Red-team-skeptic's explicit
+verdict: TUBA1A carries zero credible-set PIP mass and zero Open Targets association data
+across all five queried traits — a null profile even more complete than KMT2D's. Its
+dominant biology (dominant-negative, highly constrained, rare monogenic
+lissencephaly/tubulinopathy) shares KMT2D's &quot;Mendelian gene ≠ GWAS gene&quot; architecture
+mismatch, but sharper: TUBA1A lacks even KMT2D's positional/credible-set-adjacent anchor
+or its repeated engagement by an independent human disease literature. TUBA1A has no
+smoking-behavior literature at all (unlike KCNH3), so it cannot serve as a tie-breaker on
+the one axis that actually drives KCNH3's LOW confidence rating. Its most COPD-adjacent
+evidence — four papers describing Th17-mediated autoimmunity against a lung self-antigen
+called &quot;K-alpha1-tubulin&quot; in post-transplant bronchiolitis obliterans, including a direct
+association with FEV1 decline — was investigated at length by two independent
+citation-verifier passes, both of which concluded that the mapping of this antigen name to
+the TUBA1A gene specifically (as opposed to a different alpha-tubulin paralog) <strong>could not
+be confirmed from the literature searched</strong>, and is marked CONTESTED in the evidence table
+above pending that resolution. Net: TUBA1A is added as a third, weaker positional
+runner-up (ranked below both KMT2D and DNAJC22 in evidentiary strength per red-team
+critique) and does not shift the locus-level prioritization or confidence level.</p>
+<p><strong>Runner-up: KMT2D (MAGMA-prioritized).</strong> KMT2D has genuinely interesting developmental
+lung-biology support — a mouse knock-in model (catalytically-dead Kmt2d) with impaired
+alveolar/airway sacculation, plus human case reports of pulmonary hypertension and
+interstitial lung disease in Kabuki syndrome (KMT2D loss-of-function) patients — and is
+the single most LoF-constrained gene among the original 12 candidates queried in Open
+Targets (though TUBA1A, added in this addendum, is now more constrained still). But
+red-team critique identifies this as the packet's most important overreach risk: KMT2D
+lies entirely OUTSIDE the ABF credible set (its candidacy rests solely on MAGMA's
+gene-based test); its strongest mechanistic evidence is an unreviewed 2026 bioRxiv preprint
+in a near-null homozygous mouse perturbation; and its human evidence is case reports in a
+rare, highly penetrant monogenic syndrome — a genetic architecture qualitatively different
+from a common noncoding GWAS variant of modest effect (the &quot;Mendelian gene ≠ GWAS gene&quot;
+fallacy).</p>
+<p><strong>Second runner-up: DNAJC22.</strong> Carries the second-highest-PIP credible-set variant
+locus-wide (rs11168988, PIP=0.055) but is explicitly described in its own primary
+literature as &quot;so far unstudied.&quot; Red-team critique explicitly cautions against treating
+this literature vacuum as evidence against DNAJC22 — it is a &quot;known unknown,&quot; and on a
+like-for-like basis this gene arguably deserves comparable or greater weight than
+SPATS2 or MCRS1 (or now TUBA1A), which have more literature but literature that is either
+irrelevant, non-replicated, or of unconfirmed gene-specificity.</p>
+<p><strong>Third runner-up (new, this addendum): TUBA1A.</strong> A MAGMA/PoPS-positional-only candidate
+surfaced by the study team's genome-build correction. Weakest statistical-genetics case at
+this locus (zero credible-set PIP, zero Open Targets association data across all traits
+queried); dominant biology is a rare, highly constrained, dominant-negative Mendelian
+neurodevelopmental disease (lissencephaly/tubulinopathy) poorly suited to explain a
+common-variant signal; its single most COPD-adjacent evidentiary thread (Th17-mediated
+anti-&quot;K-alpha1-tubulin&quot; autoimmunity in lung-transplant rejection, including an FEV1-decline
+association) carries an unresolved and potentially disqualifying gene-identity risk (see
+CONTESTED rows above). Per red-team-skeptic's explicit ranking, this is the weakest
+candidate gene reviewed at this locus, weaker than KMT2D.</p>
+<p><strong>What would resolve this call:</strong> (1) direct confirmation of whether rs933738 (or an LD
+proxy) is genome-wide significant in the GSCAN or a later smoking-initiation GWAS,
+independent of Open Targets' aggregate score; (2) any airway-tissue, lung
+single-cell/scRNA-seq, or pulmonary-eQTL expression data for KCNH3 and DNAJC22
+specifically, which no source consulted here provided; (3) confirmation of whether the
+COPD GWAS association at this locus attenuates after adjustment for smoking behavior
+(pack-years/smoking status), which would directly test the smoking-mediation hypothesis;
+(4) a functional or genetic study connecting KMT2D common variation (not rare LoF) to
+lung phenotypes, and ideally a locus-specific colocalization analysis between this COPD
+signal and a KMT2D-region eQTL, given KMT2D's exclusion from the credible set; (5) <strong>new,
+from this addendum:</strong> definitive resolution — via NCBI Gene/HGNC alias records, UniProt
+cross-references, or direct confirmation from the original research group — of whether the
+&quot;K-alpha1-tubulin&quot; self-antigen used throughout the lung-transplant Th17-autoimmunity
+literature is in fact encoded by TUBA1A, or by a different alpha-tubulin paralog (e.g.
+TUBA1B, hypothesized but not confirmed by red-team-skeptic); this single fact materially
+determines whether TUBA1A's immune-domain evidence carries any weight at all; (6) a
+systematic check of whether the genome-build correction that surfaced TUBA1A also shifted
+positional scores for other candidate genes at this locus, to confirm TUBA1A was not
+reviewed in isolation while other build-affected genes went unchecked.</p>
+<p>Given the unresolved mechanistic ambiguity (pulmonary vs. smoking-behavior) for the
+statistically-favored gene, the credible-set/MAGMA discordance for the mechanistically
+most compelling gene, and the addition of a third, even weaker positional candidate whose
+strongest evidence carries an unresolved gene-identity risk, this call remains marked LOW
+confidence — it should not be read as a settled causal-gene assignment.</p>
+
+</body>
+</html>

@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>12_89250001-89450000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-locus-evidence-table--1289250001-89450000-dusp6-poc1b-evaluated-and-ruled-out">COPD locus evidence table — 12:89250001-89450000 (DUSP6; POC1B evaluated and ruled out)</h1>
+<p><strong>Lead variant:</strong> rs704074 (12:89348954, PIP=0.20, 3' UTR variant in DUSP6)
+<strong>Candidate gene(s):</strong> DUSP6 (nearest gene, ABC-prioritized gene; ~28/30 credible-set
+variants annotate to it) and POC1B (added by a genome-build correction to the study team's
+MAGMA/PoPS gene-location merge — see &quot;Targeted re-opening&quot; note below). ~2 of 30
+credible-set variants are non-coding/intergenic (gene=-) and are not separately assessed,
+per pipeline scope.</p>
+<h2 id="targeted-re-opening-note-2026-09-11">Targeted re-opening note (2026-09-11)</h2>
+<p>This locus was originally reviewed as a single-candidate-gene locus (DUSP6 only, final
+call DUSP6/LOW confidence). A genome-build error in the MAGMA/PoPS gene-location merge used
+to generate <code>loci/copd-all-gene-prioritization.txt</code> was subsequently discovered, and a
+corrected re-merge surfaced POC1B as a second candidate gene at this locus. An independent
+physical-overlap check (Ensembl/Open Targets coordinates, same GRCh38 build) confirmed
+POC1B (chr12:89,419,718-89,526,135, minus strand) does physically overlap the broad locus
+window (12:89,250,001-89,450,000) at its extreme 3' edge (~30kb, 89,419,718-89,450,000),
+but does <strong>not</strong> overlap the actual fine-mapped credible-set span (12:89,327,388-
+89,382,708); the nearest credible-set variant is &gt;35kb from POC1B's boundary, and no
+credible-set variant annotates to POC1B. Because POC1B does physically enter the locus
+window (unlike a clean &quot;doesn't overlap at all&quot; case), it was carried forward for full
+literature research per the re-opening instructions. That research (below) found no
+COPD/lung-relevant evidence for POC1B; DUSP6 remains the sole defensible candidate. See the
+audit appendix for the full reasoning trail, including the red-team-skeptic's explicit
+verdict that POC1B is &quot;a statistical/positional artifact of a gene-location merge, not a
+biological rival.&quot;</p>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DUSP6</td>
+<td>Variant-level (lead variant, non-pulmonary)</td>
+<td>rs704074 minor allele associated with ~48% decreased necrotizing enterocolitis (NEC) risk and ~78% decreased surgical-NEC risk in a pilot case-control study (n=88) of premature infants — demonstrates the lead variant has a documented functional/clinical association outside the lung, not itself lung/COPD evidence</td>
+<td>PMID 31985475</td>
+<td>Tangential — non-pulmonary phenotype, small pilot sample; part of overall WEAKENED verdict</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Variant-level (missense, functional)</td>
+<td>Credible-set missense variants rs770087 (Ser144Ala) and rs2279574 (Leu114Val) both reduce lithium-induced ERK1/2 phosphorylation in vitro (gain-of-function phosphatase alleles); a 5-SNP DUSP6 haplotype including both variants associated with bipolar disorder in Korean women only (sex-specific), not a pulmonary phenotype</td>
+<td>PMID 22155192</td>
+<td>Key functional-mechanism paper for the two missense variants, but non-pulmonary disease context; direction of effect (ERK-reducing) is in tension with PMID 31557398 below</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Variant-level (tangential, lung cancer)</td>
+<td>rs2279574 A allele associated with increased lung squamous cell carcinoma risk and more advanced NSCLC stage in Han Chinese cohort</td>
+<td>PMID 29578153</td>
+<td>Tangential — smoking-related cancer, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Variant-level (tangential, lung cancer)</td>
+<td>rs2279574 not associated with chemoradiotherapy response in NSCLC; cigarette smoking was an independent prognostic factor for survival (smoking noted as covariate, not linked to the SNP)</td>
+<td>PMID 28231233</td>
+<td>Tangential — cancer therapy response, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Variant-level (tangential, lung cancer)</td>
+<td>rs2279574 A/A genotype associated with worse overall survival in inoperable stage IV NSCLC after chemoradiotherapy</td>
+<td>PMID 27156317</td>
+<td>Tangential — cancer prognosis, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Variant-level (tangential, craniofacial)</td>
+<td>In silico structural-prediction analysis flags a DUSP6 missense SNP as potentially destabilizing, in a mandibular-prognathism (craniofacial) screen</td>
+<td>PMID 37228872</td>
+<td>Tangential — non-pulmonary developmental phenotype</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Statistical genetics (negative/non-corroborating)</td>
+<td>2014 COPD GWAS/meta-analysis (COPDGene, ECLIPSE, NETT/NAS, GenKOLS, ICGN) identified CHRNA3, FAM13A, HHIP, RIN3, MMP12, TGFB2 as genome-wide-significant loci; DUSP6/12q23 was NOT among them</td>
+<td>PMID 24621683</td>
+<td>Cited by skeptic as evidence against overclaiming DUSP6 as an established COPD gene</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Statistical genetics (negative/non-corroborating)</td>
+<td>Largest multi-ancestry lung-function GWAS to date (n≈580,869-588,452; 1,020 independent signals; 559 putative causal genes via 8-criteria variant-to-gene mapping) does not name DUSP6 among the ~20 genes supported by ≥4 criteria nor among exemplar genes discussed in the main text (SFTPC, GATA5, CLDN18, NFKB1, FGFR1, CACNA1S, etc.); full supplementary gene list (all 559 genes) was not independently checked by researcher or verifier, so this is an absence-among-highlighted-genes finding, not a confirmed absence from the full gene set. The paper also excluded 8 signals genome-wide judged &quot;primarily smoking-driven&quot;; DUSP6/rs704074 was not named as one of these 8 in the main text (supplement not checked)</td>
+<td>PMID 36914875</td>
+<td>Skeptic: &quot;a very low bar to clear if DUSP6 had real spirometric support&quot; — treated as weak-to-moderate evidence against a direct pulmonary-function mechanism, not neutral</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Statistical genetics (negative/non-corroborating)</td>
+<td>COPDGene whole-blood sQTL/eQTL colocalization study of COPD GWAS loci found colocalized splicing signal at 7 of 21 tested loci (FBXO38, CDK11A, SULT1A2); DUSP6/12q23 was not among the loci with colocalized blood sQTL</td>
+<td>PMID 31269066</td>
+<td>Skeptic: &quot;a direct, COPD-cohort-specific null result that argues against a peripheral-blood regulatory mechanism&quot; — should be weighted as contradicting evidence, not merely neutral</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Statistical genetics (smoking-behavior context)</td>
+<td>Primary GSCAN consortium GWAS of smoking initiation/cessation/heaviness (n up to ~1.2 million) — cited as the background source study for smoking-behavior genetic architecture generally. Neither researcher nor citation-verifier could confirm, within available tool budget, whether rs704074/DUSP6 itself reaches genome-wide significance for smoking initiation in GSCAN/GWAS Catalog</td>
+<td>PMID 30643251</td>
+<td>UNRESOLVED — skeptic identifies this as &quot;the single most important missing fact,&quot; a key open item that should be resolved before treating DUSP6 as a confirmed direct-pulmonary gene</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Statistical genetics (pleiotropy)</td>
+<td>The same 12q22-23 DUSP6 haplotype block (including credible-set missense variants rs770087, rs2279574) is independently associated with bipolar disorder in a separate Korean cohort, in a locus the original authors describe as a known candidate region for bipolar-disorder susceptibility</td>
+<td>PMID 22155192</td>
+<td>Supports broad neuropsychiatric/behavioral pleiotropy at this locus, relevant to Prior 1</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Structural/pulmonary (COPD-specific, most directly relevant)</td>
+<td>In human COPD sputum/lung tissue (DUSP6/TUG1 expression inversely correlated with %predicted FEV1) and in cigarette-smoke-exposed mice/bronchial epithelial cells/lung fibroblasts, lncRNA TUG1 promotes DUSP6 expression by sponging miR-145-5p; DUSP6 overexpression reverses the protective effect of TUG1 knockdown on cigarette-smoke-induced inflammation, collagen deposition, and airway remodeling — i.e. increased DUSP6 expression/pathway activity is pro-remodeling in this model</td>
+<td>PMID 31557398</td>
+<td>Single most on-topic paper found, but skeptic flags real limitations: single research group/unreplicated; lncRNA-miRNA-sponge mechanism class has a documented history of irreproducibility; DUSP6 is a downstream rescue target in an epistasis experiment, not itself the perturbed GWAS allele; direction of effect (more DUSP6 = harmful) is in tension with the ERK-activity-REDUCING missense variants in PMID 22155192 — treat as hypothesis-generating, not confirmatory</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Immunology/inflammation (non-lung, mixed direction)</td>
+<td>Using Dusp6-knockout mice, DUSP6 is required for TNF-α/LPS-induced ICAM-1 expression in vascular endothelium; Dusp6 knockout protects mice from neutrophil-recruitment-driven acute lung injury in a sepsis model, via an ERK-independent, NF-κB-mediated mechanism (DUSP6 is pro-inflammatory/pro-injury here)</td>
+<td>PMID 29493888 (+ commentary PMID 29682902)</td>
+<td>Skeptic: systemic vascular-endothelial sepsis-model phenomenon, not airway/alveolar-specific biology; should not be read as COPD-neutrophil-specific evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Immunology/inflammation (non-lung)</td>
+<td>In a mouse K/BxN serum-transfer arthritis model, Dusp6 knockout protects against arthritis; protection is reversed by adoptive transfer of DUSP6-sufficient CD11b+Gr1+ myeloid cells, which show higher oxidative burst/glycolytic activity and MAPK-signaling/leukocyte-differentiation/neutrophil-degranulation transcriptional signatures than DUSP6-deficient cells</td>
+<td>PMID 41217493</td>
+<td>Skeptic: joint-specific autoimmune model, not lung or COPD; establishes DUSP6 is functionally required for pathogenic myeloid/neutrophil-lineage activity in principle, but not demonstrated in airway tissue</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Immunology/inflammation (correlative, mixed cells)</td>
+<td>In human PBMCs from healthy volunteers given a vitamin D3 bolus, DUSP6 is identified among 61 in vivo vitamin-D target genes central to 8 innate-immunity KEGG pathways, including neutrophil extracellular trap formation, TLR signaling, and IL-17 signaling</td>
+<td>PMID 39042613</td>
+<td>Skeptic: correlative, mixed-cell-population (PBMC), not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Immunology/inflammation (inconclusive)</td>
+<td>In mouse/human T and B lymphocytes, immunoproteasome inhibition leads to DUSP6 protein accumulation (impaired proteasomal degradation), but the study explicitly found this accumulation was NOT the non-redundant cause of the accompanying reduction in ERK phosphorylation</td>
+<td>PMID 30416500</td>
+<td>Skeptic: the paper's own conclusion is that DUSP6's role here is non-essential/inconclusive — weaker than initially framed</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Immunology/inflammation (review, tangential)</td>
+<td>Review/model paper proposing that in BRAF-V600E-mutant Langerhans cell histiocytosis, MyD88 binds phosphorylated ERK and prevents its dephosphorylation by DUSP6, sustaining ERK signaling and IL-1/IL-17-driven inflammation</td>
+<td>PMID 25889448</td>
+<td>Tangential — review/model, not primary data, rare neoplastic disease, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DUSP6</td>
+<td>Developmental/neuroendocrine (alternative-pathway context)</td>
+<td>Two independent congenital hypogonadotropic hypogonadism / Kallmann syndrome candidate-gene screening studies list DUSP6 among ~44-46 candidate/causal genes for GnRH-neuron migration disorders via the FGFR1 signaling pathway</td>
+<td>PMID 40508017; PMID 38593951</td>
+<td>Supports DUSP6's well-established primary tissue-of-action plausibly being neuroendocrine/CNS rather than lung — relevant alternative-pathway evidence for Prior 1</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>POC1B</td>
+<td>Structural (established cell biology, non-pulmonary)</td>
+<td>POC1B is a core, evolutionarily conserved centriole-lumen/&quot;inner scaffold&quot; structural protein required for centriole integrity and primary (non-motile, signaling) ciliogenesis, across Tetrahymena, zebrafish, and human cultured cells; interacts with/is recruited by CEP44, CCDC15, CEP295, and co-localizes with POC5/FAM161A/Centrin-2 in the inner scaffold</td>
+<td>PMID 20008567; 23015594; 32110738; 32060285; 37934472; 27185865; 35309908</td>
+<td>NOT SUPPORTED (as COPD evidence) — skeptic: solid, well-replicated cell biology, but a dedicated search for &quot;POC1B airway epithelium&quot; returned zero hits; none of these papers mention multiciliated airway epithelium, bronchial cilia, or mucociliary clearance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>POC1B</td>
+<td>Structural/clinical (disease phenotype, non-pulmonary)</td>
+<td>POC1B loss-of-function causes autosomal-recessive cone-rod dystrophy (photoreceptor primary-cilium disease) in humans; in rarer genetic backgrounds, a more severe syndromic ciliopathy with Leber congenital amaurosis + Joubert syndrome + polycystic kidney disease. No respiratory/airway phenotype (bronchiectasis, recurrent respiratory infections, chronic sinusitis, situs abnormalities) is reported in any POC1B family, including the multi-organ syndromic case</td>
+<td>PMID 25018096; 24945461; 25044745; 26188096; 31390656; 34065499; 33657974; 36094084; 29555955</td>
+<td>NOT SUPPORTED — skeptic: &quot;absence of evidence was actively tested, not just assumed&quot;; this is a defensible, well-established human disease spectrum that is mechanistically distinct from airway/motile-cilia biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>POC1B</td>
+<td>Structural (alternative-hypothesis test: PCD/airway ciliopathy)</td>
+<td>Dedicated PubMed search for &quot;POC1B primary ciliary dyskinesia airway cilia&quot; returned zero hits; POC1B's ciliopathy phenotype spectrum (photoreceptor/primary-cilium disease) is mechanistically and phenotypically distinct from the axonemal-dynein/motile-cilia defects that cause primary ciliary dyskinesia (canonical PCD genes: DNAH5, DNAI1, CCDC39/40, RSPH-family)</td>
+<td>(negative finding; no positive citation)</td>
+<td>Skeptic: &quot;genuinely tested and rejected on mechanistic grounds... exactly the right way to establish a negative&quot;</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>POC1B</td>
+<td>Statistical genetics (negative/non-corroborating)</td>
+<td>Zero PubMed hits for POC1B combined with COPD, spirometry, lung function, or smoking (initiation/cessation/heaviness); no paper anywhere proposes POC1B as an alternative causal gene to DUSP6 at this 12q22-23 locus</td>
+<td>(negative finding; no positive citation)</td>
+<td>Skeptic: &quot;no L2G signal at the lead variant in any of 47 credible sets, vs DUSP6's 0.78-0.86 including a direct COPD GWAS hit... zero PubMed literature... three-for-three negative dedicated searches&quot;</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>POC1B</td>
+<td>Statistical genetics (tangential, non-pulmonary)</td>
+<td>An intronic SNP near/within the POC1B/GALNT4 locus was associated with circulating NT-proBNP levels in acute-coronary-syndrome patients but NOT with any clinical cardiovascular endpoint</td>
+<td>PMID 26908625</td>
+<td>Tangential — cardiovascular biomarker, not COPD; likely eQTL pleiotropy at a gene-dense locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>POC1B</td>
+<td>Statistical genetics (tangential, non-pulmonary)</td>
+<td>An eQTL-based Mendelian-randomization/multi-omics screen identifies POC1B as one of 5 causally-associated hub genes (with CTSC, SMYD3, MFGE8, IGFBP7) for pancreatic ductal adenocarcinoma risk</td>
+<td>PMID 41415264</td>
+<td>Tangential — oncology biomarker, not COPD; likely eQTL pleiotropy at a gene-dense locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>POC1B</td>
+<td>Structural (tangential, reproductive biology)</td>
+<td>POC1B is a conserved centriole-luminal marker in the atypical distal sperm centriole and sperm neck, in mouse, human, and bovine tissue</td>
+<td>PMID 29880810; 38351906; 42668900</td>
+<td>Tangential — sperm-centriole biology, not pulmonary; consistent with the &quot;spermatogenic failure&quot; tail in POC1B's Open Targets disease profile</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="excluded-from-table-see-audit-appendix-for-full-detail">Excluded from table (see audit appendix for full detail)</h2>
+<ul>
+<li>PMID 25017204 (Yang W et al., Mol Med Rep 2014) — <strong>CLAIM_MISMATCH</strong> (DUSP6): paper reports DUSP6 is upregulated, not downregulated as originally claimed. Excluded from all use.</li>
+<li>PMID 29237677 (Salo PP et al., Circ Cardiovasc Genet 2017) — <strong>CLAIM_MISMATCH</strong> (POC1B): paper's three named loci are NPPA/NPPB, CAND2, and GALNT4; POC1B is not actually named as a locus gene in this paper. Excluded from all use.</li>
+</ul>
+<hr>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<h3 id="dusp6-ensg00000139318">DUSP6 (ENSG00000139318)</h3>
+<ul>
+<li><strong>Genetic constraint (gnomAD):</strong> LoF oe ≈ 0.23 (95% CI 0.12-0.45) — strongly constrained
+against loss-of-function variation, consistent with dosage sensitivity/haploinsufficiency
+intolerance. Missense oe ≈ 0.88 (mild depletion). Synonymous oe ≈ 1.13 (as expected,
+neutral).</li>
+<li><strong>Overall Open Targets association score for COPD (MONDO_0005002):</strong> 0.371 (rank ~10th
+of 540 diseases associated with DUSP6 genome-wide); genetic_association sub-score 0.603,
+literature sub-score 0.143. For comparison: DUSP6's single highest-scoring disease
+association is Kallmann syndrome/hypogonadotropic hypogonadism (0.71). &quot;Smoking
+initiation&quot; scores 0.387 (genetic_association 0.636) — essentially tied with, and
+ranking immediately above, COPD. Other top associations: ADHD/cannabis use, substance
+abuse, insomnia, atrial fibrillation, coronary artery disease, body composition/lean
+mass, hernia, creatinine/eGFR — a broad, pleiotropic, largely non-pulmonary profile.</li>
+<li><strong>Locus-to-gene (L2G) at lead variant rs704074:</strong> Across 47 fine-mapped credible sets
+from independent GWAS/QTL studies overlapping this variant, DUSP6 is the top (and
+essentially only) L2G-predicted gene in every study with a computed L2G score
+(~0.78-0.86), including a DIRECT hit in an independent COPD-diagnosis GWAS
+(GCST90476027, &quot;Chronic airway obstruction&quot; PheCode 496): <strong>L2G = 0.807</strong>. No competing
+gene scores comparably in any of the 47 studies (spanning lean body mass, creatinine/
+eGFR, hernia, atrial fibrillation, ADHD/cannabis-use, insomnia, body composition, basal
+metabolic rate, and COPD). This consistency is a double-edged finding (see Prioritized
+gene section below): it strongly ties this variant's regulatory/functional effect to
+DUSP6 specifically, but the same consistency across dozens of unrelated traits means the
+L2G signal alone does not distinguish a COPD-specific mechanism from a generic,
+trait-agnostic regulatory/proximity signal.</li>
+<li><strong>Lung-function trait gap:</strong> No FEV1, FEV1/FVC, or other spirometric-trait credible set
+was found among the 47 studies overlapping rs704074 in Open Targets' current index. This
+is an absence in this specific database snapshot, not confirmed absence in all primary
+literature — the researcher searched PubMed directly for this and also did not find a
+qualifying paper (see evidence table above).</li>
+<li><strong>Molecular QTL colocalization</strong> at this variant/window (12:89349561-89351640, ~DUSP6's
+3' UTR/downstream region): splicing QTL (leafcutter) for DUSP6 in <strong>neutrophils</strong> and
+<strong>monocytes</strong> (BLUEPRINT); splicing QTL in <strong>adipose subcutaneous</strong> (GTEx) and <strong>iPSCs</strong>
+(HipSci); gene-expression QTL for DUSP6 in <strong>lymphoblastoid cell lines</strong> (TwinsUK). No
+lung-tissue or airway-epithelium eQTL/sQTL for DUSP6 was found in this snapshot (nor in
+the researcher's separate PubMed search for GTEx-lung/bronchial-epithelium literature).</li>
+</ul>
+<h3 id="poc1b-ensg00000139323--added-in-this-targeted-re-opening">POC1B (ENSG00000139323) — added in this targeted re-opening</h3>
+<ul>
+<li><strong>Physical overlap:</strong> confirmed coordinates chr12:89,419,718-89,526,135 (minus strand).
+Overlaps the broad locus window (12:89,250,001-89,450,000) only at its extreme 3' edge
+(~30kb, 89,419,718-89,450,000; excludes the promoter/TSS at the high-coordinate end).
+Does <strong>not</strong> overlap the fine-mapped credible-set span (12:89,327,388-89,382,708); nearest
+credible-set variant is &gt;35kb from POC1B's boundary. No credible-set variant annotates to
+POC1B.</li>
+<li><strong>Genetic constraint (gnomAD):</strong> LoF oe ≈ 0.705 (95% CI 0.522-0.967) — mildly
+constrained, substantially less constrained than DUSP6 (oe 0.23). Missense oe ≈ 0.96
+(essentially unconstrained). Synonymous oe ≈ 0.92 (neutral).</li>
+<li><strong>Overall Open Targets association profile:</strong> full list of all 221 diseases associated
+with POC1B genome-wide was retrieved. <strong>COPD, smoking initiation, lung function, and
+asthma do not appear anywhere in this list — not even at a score of 0.</strong> Top association:
+cone-rod dystrophy (0.77). Other notable associations: retinal dystrophy (0.51), Hodgkin
+lymphoma (0.34), Joubert syndrome (0.26), Senior-Loken syndrome (0.18), a long tail
+(~100 terms) of &quot;spermatogenic failure N&quot; (0.04-0.09), primary ciliary dyskinesia
+(0.034), ciliopathy (0.015) — a coherent retinal/centriole/ciliopathy-gene profile, with
+no lung-relevant signal at any strength.</li>
+<li><strong>Locus-to-gene (L2G) at lead variant rs704074:</strong> POC1B does <strong>not</strong> appear as an
+L2G-predicted gene in any of the same 47 independent GWAS/QTL credible sets where DUSP6
+scores 0.78-0.86 (including the direct COPD study, L2G=0.807 for DUSP6). POC1B simply
+does not surface as a candidate gene in Open Targets' L2G output at this variant.</li>
+<li><strong>Molecular QTL note:</strong> a BLUEPRINT neutrophil splicing-QTL cluster exists within the
+POC1B gene body at 12:89,459,718-89,466,770 — but this is downstream of both the locus
+window boundary (89,450,000) and the credible-set span (max 89,382,708), i.e. it does
+not overlap this locus's actual fine-mapped variants. The red-team-skeptic flagged this
+as a &quot;loose thread&quot; (a hypothetical long-range regulatory link was not formally excluded
+via Hi-C/TAD-boundary analysis) but assessed it as speculative and unsupported by any
+COPD/lung phenotype linkage in POC1B's own disease-association data.</li>
+</ul>
+<hr>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Gene: DUSP6</strong>
+<strong>Confidence: LOW</strong></p>
+<p>DUSP6 is named by every locus-definition criterion available (nearest gene, ABC-prioritized
+gene, and the annotation of ~28/30 credible-set variants), and Open Targets' L2G analysis
+gives it the strongest, most consistent gene-level score of any gene at this locus (0.78-
+0.86 across 47 independent studies, including L2G=0.807 in a direct COPD-diagnosis GWAS).</p>
+<p><strong>This targeted re-opening evaluated POC1B, a second candidate gene surfaced by a
+genome-build correction to the MAGMA/PoPS gene-location merge, and found it does not
+change this call.</strong> POC1B physically enters the broad locus-prioritization window only at
+its extreme 3' edge (~30kb) and does not overlap the fine-mapped credible-set span at all
+(nearest credible-set variant &gt;35kb away); it is not L2G-predicted at the lead variant in
+any of the same 47 studies where DUSP6 dominates; and a full literature search (22
+citations, 21 VERIFIED) found zero COPD, lung-function, or smoking-behavior evidence for
+POC1B anywhere, plus an explicitly-tested and rejected PCD/airway-ciliopathy alternative
+hypothesis. The red-team-skeptic's verdict for POC1B was <strong>NOT SUPPORTED</strong>, characterizing
+it as &quot;a statistical/positional artifact of a gene-location merge, not a biological
+rival&quot; — this is not a close call or a tie requiring a runner-up designation; POC1B fails
+to clear even a minimal bar for consideration. DUSP6 remains the sole defensible candidate
+gene at this locus, and — per the skeptic's fresh critique — this re-opening exercise
+modestly <em>increases</em> confidence in DUSP6 as the correct gene at this locus specifically
+(since the one plausible rival gene tested does not compete for L2G at this variant at
+all, arguing against pure nearest-gene-default behavior), even though it does not resolve
+the separate, still-open question of mechanism.</p>
+<p>The confidence in DUSP6 as reflecting a genuine, COPD-specific pulmonary or immune
+mechanism (rather than a generic locus effect) remains LOW, for reasons the red-team
+critique lays out concretely (unchanged from the original review):</p>
+<ol>
+<li><strong>Absence from spirometry GWAS.</strong> DUSP6 is absent from the genome-wide-significant loci
+of the 2014 COPD GWAS (PMID 24621683) and is not named among the discussed/exemplar
+genes of the 2023 definitive multi-ancestry lung-function GWAS (PMID 36914875), which
+named 559 causal genes — a low bar DUSP6 apparently did not clear among the highlighted
+set. No FEV1/FEV1-FVC signal was found at this variant in Open Targets' L2G index or in
+direct literature search. This directly engages Prior 2 (spirometric concordance):
+its absence here is a real gap, not just a search-thoroughness artifact, given how
+comprehensive the Shrine et al. resource is.</li>
+<li><strong>Undifferentiated L2G — plausible &quot;nearest constrained gene&quot; artifact, only partially
+addressed by ruling out POC1B.</strong> DUSP6 tops L2G for essentially every trait fine-mapped
+near this variant, from hernia to atrial fibrillation to insomnia to COPD, with no
+trait-specific differentiation. The fresh critique notes that POC1B's total absence from
+L2G at this variant is modest evidence against a purely indiscriminate nearest-gene
+default (if L2G just picked &quot;whatever's closest,&quot; POC1B might occasionally surface), but
+this does not fully resolve whether DUSP6 wins on true causal biology versus winning by
+default against a regulatory-poor neighborhood on the other side.</li>
+<li><strong>Smoking-initiation/neurobehavioral pleiotropy is essentially tied with COPD.</strong> Open
+Targets' own aggregate score for smoking initiation (0.387) narrowly exceeds and ranks
+immediately above COPD (0.371) for this gene, and DUSP6's single strongest disease
+association by far is Kallmann syndrome/GnRH-neuron biology (0.71), independently
+corroborated by two hypogonadotropic-hypogonadism candidate-gene screens (PMID
+40508017, PMID 38593951) and by an independent bipolar-disorder genetic association at
+the same haplotype block (PMID 22155192). This directly engages Prior 1: a
+smoking-initiation/neurobehavioral mechanism is at least as plausible, on current
+evidence, as a direct pulmonary mechanism, and the single fact that would help resolve
+this — whether rs704074/DUSP6 reaches genome-wide significance for smoking initiation in
+GSCAN (PMID 30643251) — could not be confirmed by either the researcher or the
+citation-verifier within this session's tool budget. This is the single highest-value
+follow-up before this call can be strengthened or weakened further.</li>
+<li><strong>Immune evidence is real but not lung/COPD-specific.</strong> DUSP6 clearly modulates
+inflammation in multiple systems (endothelial ICAM-1/neutrophil recruitment in a
+sepsis-model lung injury; myeloid-cell arthritogenicity; vitamin-D/PBMC innate-immune
+hub gene), engaging Prior 3, but none of this evidence is airway tissue or COPD-specific,
+and one paper (PMID 30416500) explicitly found DUSP6's role non-essential in its system.
+The one closest-to-relevant structured signal — neutrophil/monocyte splicing QTL at this
+exact variant — is Open Targets database evidence, not verified literature.</li>
+<li><strong>The one clearly on-topic mechanistic paper (PMID 31557398, TUG1/miR-145-5p/DUSP6 in
+cigarette-smoke-induced airway remodeling) is genuinely the best direct pulmonary
+evidence found</strong>, but it is single-group, unreplicated, uses an lncRNA-sponge mechanism
+class with a documented reproducibility history, and its direction of effect (more
+DUSP6 = harmful) sits in tension with the ERK-activity-reducing missense variants
+characterized in PMID 22155192 — a coherence problem, not just a footnote.</li>
+</ol>
+<p><strong>Runner-up:</strong> none. POC1B was formally evaluated in this re-opening as a build-correction
+candidate and rejected (NOT SUPPORTED) — it is not carried forward as a runner-up because
+it has no non-trivial independent support (0/30 credible-set variants, 0/47 L2G studies,
+0/22 literature citations connecting it to COPD/lung/smoking). This remains a single-gene
+locus where the open question is not &quot;which gene&quot; (now doubly confirmed) but &quot;which
+biological pathway&quot; (direct pulmonary/immune vs. smoking-behavioral/neurodevelopmental)
+explains why this variant associates with COPD risk at all.</p>
+<p><strong>What would resolve this:</strong> (a) direct confirmation of whether rs704074/the DUSP6 region
+reaches genome-wide significance for smoking initiation in GSCAN/GWAS Catalog (the single
+highest-value follow-up per the red-team critique); (b) a direct check of the Shrine et al.
+2023 full supplementary gene table (559 genes) for DUSP6's presence/absence and its
+variant-to-gene mapping criteria score, which was not accessible in this session; (c) an
+independent replication of the TUG1/DUSP6 airway-remodeling mechanism, or any lung-tissue/
+airway-epithelium eQTL/sQTL data for DUSP6, to corroborate a lung-autonomous mechanism
+distinguishable from the smoking-behavior/neurodevelopmental explanation. POC1B does not
+require further follow-up absent new fine-mapping or functional data specifically
+implicating it.</p>
+<p>The study team should weigh this recommendation accordingly: DUSP6 is the correct gene to
+carry forward for this locus (POC1B, the only rival candidate ever surfaced, has been
+formally evaluated and ruled out), but DUSP6 should not yet be presented as a confirmed
+COPD-pulmonary-mechanism gene without the above follow-up.</p>
+
+</body>
+</html>

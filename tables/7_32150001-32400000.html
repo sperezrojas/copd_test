@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>7_32150001-32400000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-732150001-32400000-pde1c">Evidence table — Locus 7:32,150,001-32,400,000 (PDE1C)</h1>
+<p>Lead variant: rs12701207 (7:32,251,979, GRCh38, intron_variant, PIP=0.075). All high-PIP
+credible-set variants annotate to PDE1C as intronic; no missense/splice-donor/acceptor
+variant is present in the credible set. Candidate gene (nearest/FLAMES/MAGMA/PoPS,
+ABC=NA): <strong>PDE1C</strong> — the only candidate gene at this locus.</p>
+<p>Only citations with a VERIFIED verdict from citation-verifier are included below. One
+citation (Schuit et al. 2017, Cochrane, PMID 28884473) was found to be RETRACTED and is
+excluded — see <code>audits/7_32150001-32400000_audit.md</code>. One citation (Shrine et al. 2019,
+PMID 30804560) is VERIFIED as a real, non-retracted paper but its specific locus-level
+sub-claim could not be confirmed (CLAIM_MISMATCH on that sub-claim); it is included below
+only for its general, verified scope statement, not for any claim about this locus's
+presence/absence in that GWAS.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PDE1C</td>
+<td>Statistical genetics (context)</td>
+<td>Major multi-ancestry lung-function GWAS (~400,102 individuals, 279 signals) — general scope only; whether this locus is among the 279 significant FEV1/FEV1-FVC signals could not be confirmed from the accessible abstract/supplement</td>
+<td>Shrine et al. 2019, PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
+<td>WEAKENED — locus-specific sub-claim unconfirmed; use only for general scope, not as evidence this locus has (or lacks) an independent lung-function signal</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PDE1C</td>
+<td>Statistical genetics (smoking behavior)</td>
+<td>GSCAN meta-analysis of tobacco/alcohol use identified 566 variants/406 loci for smoking initiation, cessation, and heaviness; PDE1C's specific membership in this paper's loci table is NOT confirmed — its relevance here is inferred only from Open Targets credible-set overlap at the lead variant, not from the source paper directly</td>
+<td>Liu et al. 2019 (GSCAN), PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
+<td>WEAKENED — treat as general background on the trait category, not as a locus-specific citation</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PDE1C</td>
+<td>Statistical genetics (smoking-gene interaction, different variant)</td>
+<td>rs215605 in PDE1C (NOT the lead variant rs12701207 of this locus) significantly interacted with smoking status on melanoma risk (interaction P=0.005) in a candidate-SNP study (2,298 cases/6,654 controls)</td>
+<td>Wu et al. 2016, PMID 27344179, DOI 10.18632/oncotarget.10144</td>
+<td>WEAKENED/downweighted — different variant than the locus lead; shows a SNP×smoking interaction on melanoma risk, not an association between PDE1C and a smoking-behavior phenotype itself; should not be counted as an independent smoking-behavior pillar</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PDE1C</td>
+<td>Structural/vascular biology</td>
+<td>PDE1C is selectively induced in proliferating (&quot;synthetic phenotype&quot;) human arterial smooth muscle cells and absent in quiescent aorta</td>
+<td>Rybalkin et al. 1997, PMID 9366577, DOI 10.1172/JCI119805</td>
+<td>Not separately contested; part of a coherent, verified mechanistic literature bucket flagged by skeptic as real but distinct from airway/alveolar COPD biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PDE1C</td>
+<td>Structural/vascular biology</td>
+<td>Antisense/pharmacologic PDE1C inhibition suppresses human arterial SMC proliferation; PDE1C expressed in fetal but not newborn aorta</td>
+<td>Rybalkin et al. 2002, PMID 11834707, DOI 10.1161/hh0202.104108</td>
+<td>Same as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PDE1C</td>
+<td>Structural/vascular biology (review)</td>
+<td>Review of cGMP/cAMP phosphodiesterases in smooth muscle; PDE1C induction described as a permissive step for SMC proliferation after vessel injury</td>
+<td>Rybalkin et al. 2003, PMID 12933699, DOI 10.1161/01.RES.0000087541.15600.2B</td>
+<td>Same as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PDE1C</td>
+<td>Structural/vascular biology (pulmonary)</td>
+<td>PDE1A/PDE1C/PDE3B/PDE5A expression enhanced in pulmonary artery smooth muscle cells (PASMC) from idiopathic/secondary pulmonary hypertension patients vs. controls; PDE1C-targeted siRNA enhances cAMP and preferentially inhibits proliferation in PHT PASMC</td>
+<td>Murray et al. 2006, PMID 16980375, DOI 10.1152/ajplung.00190.2006</td>
+<td>Verified and mechanistically coherent, but skeptic flags: PAH-type pulmonary vascular remodeling in COPD is generally a downstream consequence of chronic hypoxia in advanced disease, not an established upstream driver of airflow obstruction — treat as hypothesis-generating for a COPD/PH-comorbidity subgroup mechanism, not as direct COPD-causal evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PDE1C</td>
+<td>Structural/vascular biology (pulmonary, human tissue)</td>
+<td>Strong PDE1C upregulation (mRNA + protein) specifically in pulmonary arterial vessels of explanted idiopathic PAH human lungs vs. healthy donor lungs; PDE1 inhibition reverses structural pulmonary vascular remodeling and right-heart hypertrophy in hypoxic/monocrotaline rodent PAH models</td>
+<td>Schermuly et al. 2007, PMID 17438150, DOI 10.1161/CIRCULATIONAHA.106.676809</td>
+<td>Most direct human-lung-tissue evidence located; same PAH-vs-COPD caveat as above — this is pulmonary vascular biology, not classic airway-obstruction/emphysema biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PDE1C</td>
+<td>Structural/vascular biology</td>
+<td>PDE1C regulates PDGFRβ receptor stability/degradation via LRP1, driving SMC proliferation/migration/neointimal hyperplasia; PDE1C-knockout mice show attenuated injury-induced neointimal formation</td>
+<td>Cai et al. 2015, PMID 25608528, DOI 10.1161/CIRCRESAHA.116.304408</td>
+<td>Verified; general vascular mechanism, not lung/COPD-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PDE1C</td>
+<td>Structural/vascular biology (editorial)</td>
+<td>Editorial commentary on Cai et al. 2015 (PDGFR/PDE1C mechanism)</td>
+<td>Satoh et al. 2015, PMID 25814676, DOI 10.1161/CIRCRESAHA.115.306139 (note: originally cited with an incorrect CIRCULATIONAHA-prefixed DOI; corrected here to the CIRCRESAHA-prefixed DOI per citation-verifier)</td>
+<td>Verified (with DOI correction)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PDE1C</td>
+<td>Structural/vascular biology (isoform specificity)</td>
+<td>The beta-catenin/TCF-signaling effect in proliferating VSMCs is mediated specifically by PDE1A, NOT PDE1C, in this pathway</td>
+<td>Jeon et al. 2010, PMID 21078118, DOI 10.1111/j.1742-4658.2010.07908.x</td>
+<td>Verified; included for completeness/isoform specificity — this citation argues AGAINST a PDE1C role in this particular signaling axis</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PDE1C</td>
+<td>Structural/vascular biology (aging)</td>
+<td>PDE1C levels increased in lung and aorta of a mouse model of genomic instability/premature aging (Ercc1(d/-)); senescent human VSMCs show elevated PDE1C mRNA. (Note: this same paper's own human GWAS analysis links PDE1A, not PDE1C, to diastolic blood pressure and carotid intima-media thickness.)</td>
+<td>Bautista Niño et al. 2015, PMID 26464516, DOI 10.1042/CS20140753</td>
+<td>Verified, including the PDE1A (not PDE1C) GWAS attribution — direct evidence of PDE1C expression/regulation in mouse lung tissue in an aging/senescence context, but not a COPD or human-GWAS-confirmed lung-function link</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PDE1C</td>
+<td>Structural/vascular biology (editorial)</td>
+<td>Editorial commentary on Bautista Niño et al. 2015 (PDE1/vascular aging)</td>
+<td>Yan 2015, PMID 26374857, DOI 10.1042/CS20150605</td>
+<td>Verified</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PDE1C</td>
+<td>Structural/cardiac biology (non-pulmonary, general context)</td>
+<td>PDE1C upregulated in failing human/mouse myocardium; PDE1C-knockout mice protected from pressure-overload-induced cardiac remodeling/dysfunction</td>
+<td>Knight et al. 2016, PMID 27791092, DOI 10.1073/pnas.1607728113</td>
+<td>Verified; cardiac, not pulmonary — included only as general organ-level PDE1C biology context, not COPD-relevant evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PDE1C</td>
+<td>Structural/vascular biology (review)</td>
+<td>Review noting PDE4/PDE1C upregulation during VSMC proliferation; proposes selective PDE1C inhibition as a potential therapy for vascular-proliferation disorders including pulmonary hypertension and post-angioplasty restenosis</td>
+<td>Li et al. 2010, PMID 21416994 (Chinese-language review)</td>
+<td>Verified</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Immunology/inflammation:</strong> No verified (or even unverified) citations were produced for
+this domain. The researcher found zero PubMed literature connecting PDE1C to T-cell,
+neutrophil, macrophage, or cytokine/chemokine biology across multiple search combinations,
+and explicitly declined to manufacture a speculative immune narrative. The one
+immune-adjacent signal (an Open Targets lymphocyte-count GWAS L2G association, score
+0.729, at this locus) has no supporting mechanistic literature and is reported only in the
+Open Targets summary below, not as a literature finding.</p>
+<p><strong>Excluded citation:</strong> Schuit et al. 2017 (Cochrane Database Syst Rev, PMID 28884473) was
+found by citation-verifier to be <strong>RETRACTED</strong> (retraction notice PMID 34847240, Nov 2021)
+and is excluded from this table entirely — see the audit appendix.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p><strong>PDE1C</strong> (Ensembl ENSG00000154678):</p>
+<ul>
+<li><strong>Genetic constraint (gnomAD):</strong> moderate, not extreme — pLoF oe≈0.65 (0.51-0.84),
+missense oe≈0.78 (0.73-0.84), synonymous oe≈0.98 (0.88-1.09). Not a classic
+haploinsufficient/highly-constrained gene.</li>
+<li><strong>COPD association (aggregate, Open Targets):</strong> overall score 0.0074 (near the bottom of
+~249 associated diseases/traits for this gene), driven ONLY by the literature datatype
+(score 0.061) — <strong>no genetic_association (GWAS/L2G) datatype score is registered for
+PDE1C-COPD at all.</strong></li>
+<li><strong>FEV1 / FEV1-FVC association:</strong> <strong>none found of any kind</strong> — neither trait appears
+anywhere in PDE1C's ~249-entry Open Targets disease-association list.</li>
+<li><strong>Smoking/nicotine trait associations (aggregate, Open Targets), genetics-driven:</strong>
+smoking cessation (overall score 0.358, genetic_association sub-score 0.589), nicotine
+dependence (0.237, sub-score 0.390), smoking initiation (0.157, sub-score 0.259) — all
+substantially higher than the COPD score, and unlike COPD, these carry a genuine
+genetic_association sub-score.</li>
+<li><strong>Locus-to-gene (L2G) at the lead variant rs12701207:</strong> 86 overlapping GWAS credible
+sets found across the platform. PDE1C is the top-L2G-scoring gene in the large majority
+(score ~0.35-0.79), consistently outscoring flanking genes AVL9 (~0.13-0.56; wins only
+for adiposity/body-composition traits such as BMI, body fat %, fat-pad mass, hip
+circumference) and LSM5 (~0.09-0.36; never wins). Traits represented across these 86
+credible sets cluster into: smoking/tobacco behavior (cigarettes/day, smoking cessation,
+lifetime smoking index, pack-years, maternal smoking around birth, nicotine dependence —
+many independent GWAS), cognitive/behavioral traits (educational attainment,
+intelligence, chronotype, math ability, occupational prestige, externalizing behavior/
+ADHD/substance abuse, age at first sex, frailty), lipid/adiposity traits (numerous
+lipoprotein sub-fraction measures, triglycerides, BMI, fat mass), and one immune trait
+(lymphocyte count, L2G 0.729, no supporting mechanistic literature located). <strong>No COPD-
+specific and no FEV1/FEV1-FVC study locus appeared among these 86 credible sets.</strong></li>
+<li><strong>Colocalization:</strong> not separately queried beyond the L2G/credible-set data above (no
+dedicated Open Targets colocalization field was found distinct from the L2G predictions
+reported here).</li>
+</ul>
+<p>AVL9 and LSM5 were not independently queried for constraint or COPD/disease association —
+they are not candidate genes at this locus per the internal pipeline (nearest/FLAMES/MAGMA/
+PoPS all point to PDE1C only); they are reported above only as L2G comparators at the lead
+variant.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>PDE1C</strong> — Confidence: <strong>LOW</strong></p>
+<p>PDE1C is the only candidate gene nominated at this locus by every internal method (nearest
+gene, FLAMES, MAGMA, PoPS), all high-PIP credible-set variants are intronic within PDE1C,
+and it is consistently the top-L2G gene at the lead variant across the large majority of
+the 86 GWAS traits that overlap this variant in Open Targets — so by elimination and by
+regional fine-mapping, PDE1C is the best-supported gene at this locus. There is no
+credible rival gene in the record: AVL9 only out-competes PDE1C on L2G for adiposity/
+body-composition traits (not smoking or lung traits), and LSM5 never wins.</p>
+<p>However, confidence in PDE1C specifically for <strong>COPD</strong> (as opposed to merely being the
+correctly fine-mapped gene at this position) must be rated LOW, for reasons the red-team
+critique makes explicit and that this synthesis will not paper over:</p>
+<ol>
+<li><strong>There is no independent COPD or FEV1/FEV1-FVC genetic-association evidence for
+PDE1C anywhere in this review</strong> — not in Open Targets (COPD score driven only by
+literature datatype, no genetic_association sub-score at all; FEV1/FEV1-FVC absent
+entirely) and not in the verified literature (zero PubMed hits for PDE1C+COPD or
+PDE1C+lung function). Prior #2 (concordance with spirometric traits strengthens
+prioritization) is not met at all at this locus — this is a real gap, not a
+forced-fit absence.</li>
+<li><strong>The literature case for smoking-mediation (prior #1), while directionally the best-
+supported hypothesis, is thinner than the researcher's original framing suggested.</strong>
+Of three literature pillars offered, one (Cochrane/Schuit) is retracted and excluded
+entirely; one (Wu et al., melanoma) uses a different variant (rs215605, not the lead
+rs12701207) and shows a SNP×smoking-status interaction on melanoma risk — not a
+PDE1C-smoking-phenotype association — and should not be counted as an independent
+smoking-behavior pillar; and one (GSCAN) is only inferred to involve this locus via
+Open Targets credible-set overlap, with PDE1C's actual membership in that paper's own
+loci table unconfirmed. The genuinely strong evidence for smoking-mediation is the
+<strong>Open Targets L2G/credible-set data itself</strong> (86 credible sets, dominated by smoking/
+behavioral traits, PDE1C consistently top-L2G) — which is structured database evidence,
+not verified literature, and is reported as such above.</li>
+<li><strong>The pulmonary-vascular-remodeling/PAH literature (Rybalkin/Schermuly/Cai/Murray/
+Knight) is real, well-replicated, and the most direct human-lung-tissue evidence found
+for PDE1C</strong> — but per the red-team critique, this is mechanistically distinct from
+airway-obstruction/emphysema biology, and PAH-type remodeling in COPD is generally
+understood as a downstream consequence of advanced disease/chronic hypoxia rather than
+an established upstream cause of airflow obstruction. This is hypothesis-generating
+(e.g., for a COPD-with-pulmonary-hypertension subgroup) rather than direct evidence for
+the core COPD phenotype.</li>
+<li><strong>No immune/inflammatory mechanism was found</strong> connecting PDE1C to any COPD-relevant
+inflammatory program (T-cell, neutrophil, macrophage) — this domain does not appear to
+apply here based on current literature, beyond one unexplained Open Targets lymphocyte-
+count L2G association with no mechanistic support.</li>
+<li><strong>A real, unresolved alternative-tissue gap:</strong> given that smoking-behavior/cognitive
+pleiotropy is the dominant signal at this locus, the more mechanistically apt biology to
+search would have been PDE1C's CNS/neuronal expression and any role in reward/
+dopaminergic or nicotine-response pathways (by analogy to PDE1B's established striatal/
+addiction biology) — this was not searched in this review round and is flagged as a
+follow-up rather than resolved.</li>
+<li><strong>Population-stratification/pure pleiotropy was not tested as a null alternative.</strong> The
+locus's broad multi-domain trait promiscuity (smoking, cognition, lipids/adiposity,
+lymphocyte count) with no single unifying mechanism leaves this as a live, unexamined
+possibility.</li>
+<li>The red-team-skeptic disclosed that its own independent contradiction-search pass could
+not be executed this round (search budget exhausted) — so the absence of contradicting
+evidence found here should be read as <strong>untested</strong>, not as a clean bill of health.</li>
+</ol>
+<p><strong>Runner-up:</strong> none credible — AVL9 and LSM5 are the only other genes competing at L2G at
+this variant, and neither has any support for the smoking- or lung-relevant trait
+categories that dominate this locus's association profile.</p>
+<p><strong>What would resolve this:</strong> (a) direct confirmation (full-text/supplementary-table check)
+of whether PDE1C/this exact locus appears among the 279 signals in Shrine et al. 2019 or
+any other independent lung-function GWAS, which would materially raise or lower
+confidence; (b) a genuine smoking-behavior GWAS hit at the lead variant itself (rather than
+a different PDE1C variant in a melanoma gene-environment study), ideally with Mendelian-
+randomization or multivariable adjustment for smoking showing whether the COPD association
+at this locus attenuates once smoking behavior is accounted for; (c) any airway epithelial,
+alveolar, or COPD-relevant immune-cell PDE1C expression/functional data, which is entirely
+absent from the current record; (d) a search of PDE1C's CNS/neuronal/reward-pathway
+biology, given the locus's dominant behavioral-trait profile.</p>
+
+</body>
+</html>

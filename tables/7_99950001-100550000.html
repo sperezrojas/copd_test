@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>7_99950001-100550000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-gwas-locus-evidence-table--799950001-100550000-nearest-gene-stag3">COPD GWAS locus evidence table — 7:99950001-100550000 (nearest gene STAG3)</h1>
+<p>Lead variant: rs33977858 (7:100216365, downstream_gene_variant of STAG3, PIP=0.204). This locus sits in the well-known pleiotropic 7q22.1 gene cluster (STAG3/CNPY4/PILRA/PVRIG/GPC2/ZCWPW1 and neighbors), previously best known for Alzheimer's disease GWAS signals and now also implicated in this COPD GWAS credible set. All rows below use only citations with citation-verifier verdict VERIFIED. See <code>audits/7_99950001-100550000_audit.md</code> for excluded citations and full CONTESTED/WEAKENED reasoning.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Locus-level (7q22.1)</td>
+<td>Statistical genetics</td>
+<td>7q22.1 was tied (with 17q21.1) for the max number of implicated candidate genes (17) of any locus in this 82-locus COPD GWAS meta-analysis; lead variant tested for FEV1/FEV1-FVC replication in SpiroMeta (79,055 individuals)</td>
+<td>PMID 30804561 (Sakornsakolpat et al. 2019, Nat Genet, DOI 10.1038/s41588-018-0342-2)</td>
+<td>Supported — confirms this is a genuine, replicated COPD/lung-function locus, not a chance overlap with the AD-associated region</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>Locus-level (7q22.1)</td>
+<td>Statistical genetics</td>
+<td>Paper states &quot;None of the novel loci appeared to be explained by cigarette smoking, and variant effect sizes in ever- and never-smokers ... were similar&quot; (applies to the paper's overall novel-loci set; NOT confirmed specific to 7q22.1 — whether 7q22.1 was classified &quot;novel&quot; vs. &quot;previously described&quot; in that paper is unresolved)</td>
+<td>PMID 30804561 (same as above)</td>
+<td>Supported with caveat — smoking-independence claim not confirmed locus-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>Locus-level (7q22.1)</td>
+<td>Statistical genetics (background only)</td>
+<td>Reference description of the GSCAN smoking-behavior GWAS (smoking initiation, cigarettes/day, cessation), used as background; no locus-specific smoking lookup was performed for this locus (open question, not evidence of absence)</td>
+<td>PMID 30643251 (Liu et al. 2019, Nat Genet, DOI 10.1038/s41588-018-0307-5)</td>
+<td>Supported (existence only); locus-specific smoking association remains unresolved</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STAG3</td>
+<td>Structural/developmental</td>
+<td>STAG3 encodes a meiosis-specific cohesin subunit; mutations cause premature ovarian insufficiency</td>
+<td>PMID 24608227 (Llano et al. 2014, Hum Mol Genet)</td>
+<td>HOLDS — supports STAG3 as biologically implausible for COPD (bystander nearest-gene)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STAG3</td>
+<td>Structural/developmental</td>
+<td>STAG3 in premature ovarian failure</td>
+<td>PMID 25744256 (Caburet &amp; Vilain 2015, Med Sci)</td>
+<td>HOLDS — same as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STAG3</td>
+<td>Structural/developmental</td>
+<td>STAG3 mutations cause male infertility via meiotic arrest/non-obstructive azoospermia</td>
+<td>PMID 31682730 (van der Bijl et al. 2019, Hum Reprod)</td>
+<td>HOLDS — same as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STAG3</td>
+<td>Structural/developmental</td>
+<td>Novel STAG3 variant causes oligoasthenoteratozoospermia and premature ovarian insufficiency</td>
+<td>PMID 39932630 (Tsabai et al. 2025, J Assist Reprod Genet)</td>
+<td>HOLDS — same as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CNPY4</td>
+<td>Immune/inflammatory</td>
+<td>PRAT4B (CNPY4) is an ER-resident chaperone required for TLR4 cell-surface expression; knockdown reduces TLR4 surface levels</td>
+<td>PMID 16338228 (Konno et al. 2005, Biochem Biophys Res Commun)</td>
+<td>WEAKENED — general immune-cell biology, not lung-tissue-tested; plausible but unproven innate-immune candidate</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CNPY4</td>
+<td>Immune/inflammatory</td>
+<td>PRAT4A and PRAT4B differentially regulate TLR1 cell-surface trafficking in monocytes; IFN-gamma rescues trafficking via PRAT4A</td>
+<td>PMID 22447933 (Hart &amp; Tapping 2012, J Biol Chem)</td>
+<td>WEAKENED — same caveat as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CNPY4</td>
+<td>Structural/developmental (preprint, not peer-reviewed)</td>
+<td>CNPY4 is a Saposin-like (SAPLIP) sphingolipid-binding chaperone regulating ceramide/sphingomyelin/cholesterol homeostasis (no lung/COPD content in the source itself)</td>
+<td>PMID 41279395 / bioRxiv DOI 10.1101/2025.10.13.682155 (Paul et al. 2025, preprint)</td>
+<td>WEAKENED — the &quot;alveolar/surfactant biology&quot; link researcher drew from this is the researcher's own speculative bridge, NOT stated in this preprint; treat as speculative</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PILRA</td>
+<td>Statistical genetics (MR/colocalization)</td>
+<td>Proteome-wide MR (7,847 pQTLs) found PILRA had a significant mediation effect in the early-onset-asthma-to-COPD pathway; &quot;PILRA strongly colocalized at shared genetic loci between the two diseases and was significantly downregulated in macrophages from COPD patients&quot;</td>
+<td>PMID 42089751 (Jiang et al. 2026, Briefings Bioinform)</td>
+<td>CONTESTED — directly contradicts the Open Targets colocalization pipeline, which found NO coloc support for PILRA at this locus (only for PVRIG); treat with skepticism pending reconciliation</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PILRA</td>
+<td>Statistical genetics (MR)</td>
+<td>Two-sample plasma-proteome MR found PILRA among 11 proteins nominally risk-enhancing for COPD at discovery stage, but NOT among the robustly replicated hits (IL27RA, TIE1 were)</td>
+<td>PMID 41286868 (Jia et al. 2025, BMC Pulm Med)</td>
+<td>CONTESTED — this non-replication itself undercuts the &quot;strongest candidate&quot; framing for PILRA</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PILRA</td>
+<td>Immune/inflammatory</td>
+<td>Pilra-/- mice show increased neutrophil recruitment, enhanced beta2-integrin adhesion/transmigration, increased susceptibility to endotoxin shock; PILRA is a negative regulator of neutrophilic inflammation</td>
+<td>PMID 23142774 (Wang et al. 2012, Nat Immunol)</td>
+<td>Supported but non-lung — general immune mouse-model biology, never tested in airway/lung tissue</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PILRA</td>
+<td>Immune/inflammatory</td>
+<td>PILRα inhibits monocyte-to-macrophage tissue infiltration; Pilra-/- mice develop tissue fibrosis with macrophage accumulation (obesity/liver model)</td>
+<td>PMID 26840635 (Kohyama et al. 2016, Eur J Immunol)</td>
+<td>Supported but non-lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PILRA</td>
+<td>Immune/inflammatory (correlational, non-lung)</td>
+<td>PILRA expression correlates with neutrophil/macrophage/monocyte/T-cell infiltration signatures in an atrial fibrillation bioinformatics study</td>
+<td>PMID 37396579 (Shi et al. 2023, Front Cardiovasc Med)</td>
+<td>Mixed/nonspecific — correlational only, non-lung disease context; weak supporting evidence at best</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PILRA</td>
+<td>Variant-level (missense rs1859788)</td>
+<td>PILRA G78R (rs1859788) reduces ligand binding (ceramide, complement C4A, HSV-1 glycoprotein B) by &gt;50%</td>
+<td>PMID 30388101 (Rathore et al. 2018, PLoS Genet)</td>
+<td>Supported — functional variant characterization, but demonstrated ligand-binding context is not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PILRA</td>
+<td>Variant-level (missense rs1859788, preprint)</td>
+<td>PILRA rs1859788 associated with reduced Alzheimer's disease risk in ApoE e4/e4 homozygous men</td>
+<td>PMID 39149451 (Lehrer &amp; Rheinstein 2024, Research Square preprint)</td>
+<td>Supported (as preprint) — reinforces that this exact coding variant is primarily characterized in the AD literature, a pleiotropy/LD confound for the COPD signal</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PVRIG</td>
+<td>Statistical genetics (Open Targets database lookup — NOT a literature citation)</td>
+<td>See Open Targets summary section below; PVRIG is the only gene at this locus with direct L2G/colocalization support for COPD and FEV1/FVC</td>
+<td>N/A — structured database lookup, not independently verified via literature search</td>
+<td>WEAKENED — genetic case is strongest at this locus but rests on an unverified database output, not peer-reviewed literature; single-causal-variant colocalization assumptions may be misleading in this dense, multi-gene LD block</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PVRIG</td>
+<td>Immune/inflammatory (oncology context)</td>
+<td>PVRIG (CD112R) is highly expressed on exhausted tumor-infiltrating NK cells and CD8+ T cells (including in a murine Lewis lung carcinoma tumor model); PVRIG blockade reduces exhaustion and slows tumor growth</td>
+<td>PMID 34174928 (Li et al. 2021, J Hematol Oncol)</td>
+<td>WEAKENED — TIGIT-family checkpoint/exhaustion mechanism from tumor immunology, not tested in COPD/airway inflammation; the &quot;lung&quot; model here is a carcinoma model, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PVRIG</td>
+<td>Immune/inflammatory (oncology context)</td>
+<td>PVRIG coexpressed with TIGIT, KIR2DL5, CD39 on CD103+ T cells in a tumor/bone-metastasis microenvironment study</td>
+<td>PMID 41485718 (Brauneck et al. 2026, Immunol Lett)</td>
+<td>WEAKENED — same caveat, oncology-context only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GPC2</td>
+<td>Structural (oncology target, tangential)</td>
+<td>D3-GPC2-directed CAR T cells safe/efficacious in preclinical neuroblastoma and small cell lung cancer models</td>
+<td>PMID 41026583 (Giudice et al. 2025, Clin Cancer Res)</td>
+<td>HOLDS (weak candidate) — oncology target biology, no COPD/airway-disease relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GPC2</td>
+<td>Structural (oncology target, tangential)</td>
+<td>GD2+GPC2 CAR-T combination enhances anti-tumor activity in high-risk neuroblastoma</td>
+<td>PMID 38904586 (Wu et al. 2024, Cytotherapy)</td>
+<td>HOLDS — same as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MBLAC1</td>
+<td>Structural/other (non-lung)</td>
+<td>MBLAC1 (ortholog of C. elegans swip-10) is an Alzheimer's disease risk-modifying gene, with risk specific to cardiovascular comorbidity</td>
+<td>PMID 38410184 (Ceyhan et al. 2024, IEEE J Transl Eng Health Med)</td>
+<td>HOLDS (weak candidate) — AD/cardiovascular comorbidity biology, no lung/immune relevance found</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MBLAC1</td>
+<td>Structural/other (non-lung)</td>
+<td>Same MBLAC1/AD/cardiovascular domain; elesclomol reverses redox imbalance in Mblac1 knockout mice</td>
+<td>PMID 41548934 (Neghabi et al. 2026, J Biophotonics)</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MBLAC1</td>
+<td>Structural/other (non-lung)</td>
+<td>MBLAC1 involved in glial copper homeostasis (C. elegans swip-10 ortholog); knockout mice show disrupted mitochondrial redox state</td>
+<td>PMID 39288174 (Rodriguez et al. 2024, PNAS)</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZCWPW1</td>
+<td>Statistical genetics (non-lung)</td>
+<td>ZCWPW1-PILRB confirmed as an Alzheimer's disease risk locus with protein QTLs at genome-wide significance in CSF proteomics</td>
+<td>PMID 38527854 (Reus et al. 2024, Brain)</td>
+<td>HOLDS (weak COPD candidate) — reinforces that part of this locus's pleiotropy is AD/neuro-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZNF3</td>
+<td>Structural (oncology, non-lung)</td>
+<td>ZNF3 regulates proliferation/migration/invasion via MMP1 and TWIST in colorectal cancer</td>
+<td>PMID 36789689 (Du et al. 2022, Acta Biochim Biophys Sin)</td>
+<td>HOLDS (weak candidate)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZNF3</td>
+<td>Structural (oncology, non-lung)</td>
+<td>ZNF3 implicated in endometriosis/endometrioid adenocarcinoma gene regulation</td>
+<td>PMID 40128272 (Spakova et al. 2025, Sci Rep)</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NYAP1</td>
+<td>Statistical genetics (non-lung)</td>
+<td>NYAP1 (specifically variant rs12539172, the same low-PIP credible-set variant at this locus) is one of 48 likely-causal genes with colocalized AD-GWAS and cis-RNA-editing-QTL signals in human brain tissue</td>
+<td>PMID 40631452 (Gupta et al. 2025, Alzheimers Dement)</td>
+<td>HOLDS (weak COPD candidate) — reinforces AD/neuronal pleiotropy hypothesis for this variant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NYAP1</td>
+<td>Structural/developmental (CNS-specific, non-lung)</td>
+<td>NYAP1 links Fyn/PI3K signaling to WAVE1-mediated actin remodeling; governs neurite outgrowth/neuronal morphogenesis</td>
+<td>PMID 21946561 (Yokoyama et al. 2011, EMBO J)</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NYAP1</td>
+<td>Structural/developmental (CNS-specific, non-lung)</td>
+<td>NYAP1 regulates neuronal migration morphology via Fyn phosphorylation during corticogenesis</td>
+<td>PMID 31609430 (Wang et al. 2020, Cereb Cortex)</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NYAP1</td>
+<td>Structural/developmental (CNS-specific, non-lung)</td>
+<td>NYAP1 couples neuroprotection with circuit regeneration after spinal cord injury via JNK signaling</td>
+<td>PMID 42176223 (Li et al. 2026, Cell Mol Neurobiol)</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FBXO24</td>
+<td>Structural (oncology/germline, non-lung)</td>
+<td>FBXO24 mediates PRMT6 ubiquitination/degradation, regulating proliferation/migration/invasion in H1299 lung cancer cells (cell-line model, not COPD)</td>
+<td>PMID 32828318 (Chen et al. 2020, Biochem Biophys Res Commun)</td>
+<td>HOLDS (likely LD/statistical artifact)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FBXO24</td>
+<td>Structural (oncology/germline, non-lung)</td>
+<td>FBXO24 candidate germline gastric-cancer-predisposition gene</td>
+<td>PMID 27899187 (Petrovchich &amp; Ford 2016, Semin Oncol)</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FBXO24</td>
+<td>Structural (oncology/germline, non-lung)</td>
+<td>FBXO24 candidate gene for hereditary gastric cancer (Brazilian WES cohort)</td>
+<td>PMID 42446611 (de Souza et al. 2026, Gastric Cancer)</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FBXO24</td>
+<td>Structural (germline, non-lung)</td>
+<td>FBXO24 downregulated in non-obstructive azoospermia</td>
+<td>PMID 42168344 (Babakhanzadeh et al. 2026, Sci Rep)</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TFR2</td>
+<td>Structural/developmental (disease-context mismatch)</td>
+<td>Tfr2 mutant (iron-overloaded) mice show increased pulmonary iron, airway fibrosis, reduced lung function (pulmonary FIBROSIS model, not COPD/emphysema); human IPF lung tissue shows similar iron accumulation; deferoxamine prevents the phenotype; implicates Tfr1+ macrophages</td>
+<td>PMID 32083318 (Ali et al. 2020, J Pathol)</td>
+<td>HOLDS (low-confidence candidate) — genuine gene-specific mechanism but wrong disease model (restrictive fibrosis, not obstructive COPD) and no genetic-association support; directionality uncertain</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-verified-literature-citations">Open Targets summary (structured database lookup — NOT verified literature citations)</h2>
+<p>Queried 2026-09-11 against the Open Targets Platform GraphQL API for chronic obstructive pulmonary disease (MONDO_0005002). This section did not go through citation-verifier or red-team-skeptic; it is a structured database output, presented separately from the evidence table above.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>L2G score (COPD)</th>
+<th>Colocalization evidence</th>
+<th>Genetic constraint (gnomAD LOEUF/oeUpper)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STAG3</td>
+<td>No genetic-association evidence (associatedDiseases score driven only by literature/text-mining, 0.0056)</td>
+<td>None found</td>
+<td>LOF LOEUF=0.765 (moderately constrained)</td>
+</tr>
+<tr>
+<td>FBXO24</td>
+<td>No genetic-association evidence (literature-only score 0.0050)</td>
+<td>None found</td>
+<td>LOF LOEUF=0.641 (moderately constrained)</td>
+</tr>
+<tr>
+<td>TFR2</td>
+<td>No association at all (count=0)</td>
+<td>None found</td>
+<td>LOF LOEUF=0.907 (weakly-moderately constrained)</td>
+</tr>
+<tr>
+<td>PILRA</td>
+<td>No genetic-association evidence (literature-only score 0.0117)</td>
+<td>None found</td>
+<td>LOF LOEUF=1.425 (tolerant, not constrained)</td>
+</tr>
+<tr>
+<td>CNPY4</td>
+<td>No association at all (count=0)</td>
+<td>None found</td>
+<td>LOF LOEUF=1.330 (not constrained)</td>
+</tr>
+<tr>
+<td><strong>PVRIG</strong></td>
+<td><strong>0.269</strong> (only gene at this locus with a nonzero gwas_credible_sets L2G hit for COPD); associatedDiseases score 0.0993, the only gene with a nonzero genetic_association datatype score (0.163)</td>
+<td><strong>h4=0.923 with FEV1/FVC (GCST90054785); h4=0.910 with &quot;Chronic lung diseases including COPD, Emphysema and Bronchitis&quot; (GCST90479593)</strong>; h3-dominant (non-colocalizing) with several Alzheimer's disease GWAS studies (h3=0.615-0.988)</td>
+<td>LOF LOEUF=1.254 (not strongly constrained)</td>
+</tr>
+<tr>
+<td>GPC2</td>
+<td>No genetic-association evidence (literature-only score 0.0103)</td>
+<td>None found</td>
+<td>LOF LOEUF=1.083 (weakly constrained)</td>
+</tr>
+<tr>
+<td>MBLAC1</td>
+<td>No association at all (count=0)</td>
+<td>None found</td>
+<td>LOF LOEUF=1.892 (very tolerant)</td>
+</tr>
+<tr>
+<td>ZCWPW1</td>
+<td>No association at all (count=0)</td>
+<td>None found</td>
+<td>LOF LOEUF=0.814 (moderately constrained)</td>
+</tr>
+<tr>
+<td>ZNF3</td>
+<td>No association at all (count=0)</td>
+<td>None found</td>
+<td>LOF LOEUF=0.656 (constrained)</td>
+</tr>
+<tr>
+<td>TAF6</td>
+<td>No association at all (count=0)</td>
+<td>None found</td>
+<td>LOF LOEUF=0.827 (moderately constrained)</td>
+</tr>
+<tr>
+<td>NYAP1</td>
+<td>No association at all (count=0)</td>
+<td>None found</td>
+<td>LOF LOEUF=0.665 (constrained)</td>
+</tr>
+<tr>
+<td>CASTOR3P (pseudogene)</td>
+<td>No association at all (count=0)</td>
+<td>None found</td>
+<td>No data available (pseudogene, no gnomAD constraint metrics)</td>
+</tr>
+</tbody>
+</table>
+<p>Full detail, including all TargetPrioritisation factors and the complete 25-row PVRIG colocalization list (spanning Alzheimer's disease, rheumatoid arthritis, blood pressure, lipid, and cortical-thickness traits at this pleiotropic locus), is in <code>evidence_tables/_status/7_99950001-100550000/opentargets.md</code>.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>PVRIG — confidence LOW.</strong></p>
+<p>This call is close, and the evidence genuinely does not cleanly distinguish PVRIG from PILRA or CNPY4; here is the reasoning and what would resolve it.</p>
+<p>PVRIG has the only direct genetic-association/colocalization evidence for COPD and FEV1/FVC of any gene at this locus (Open Targets: L2G=0.269, h4=0.92 with FEV1/FVC, h4=0.91 with a COPD/emphysema/bronchitis GWAS — see Open Targets summary above), and — notably — this same credible set is h3-dominant (i.e., NOT colocalizing) against several Alzheimer's disease GWAS studies at the identical locus, which is a meaningful piece of evidence against the alternative &quot;this is just AD-locus LD bleed-through&quot; explanation. PVRIG also has a biologically coherent, if not lung-tissue-proven, mechanism: it is a TIGIT-family inhibitory checkpoint receptor on T/NK cells (PMID 34174928, PMID 41485718, both VERIFIED), directly relevant to prior #3's emphasis on CD8+ T-cell and heterogeneous inflammatory programs in COPD.</p>
+<p>However, this is a LOW-confidence call for four explicit reasons, all preserved from the red-team-skeptic critique in <code>audits/7_99950001-100550000_audit.md</code>: (1) the colocalization evidence supporting PVRIG is an Open Targets database output that neither the researcher nor citation-verifier could locate as an independent peer-reviewed publication — it has not been verified as a citable literature claim, only reported as a structured database signal; (2) all verified PVRIG mechanistic literature is drawn from tumor immunology/immune-checkpoint-exhaustion research, not lung or airway-inflammation studies, so &quot;PVRIG immune-checkpoint biology operates in the COPD-relevant lung immune compartment&quot; is a plausible extrapolation, not something directly demonstrated; (3) 7q22.1 was tied for the most candidate genes (17) of any locus in the source COPD GWAS (PMID 30804561, VERIFIED) and is known to harbor at least one genuinely distinct, independently-signaled AD locus (ZCWPW1) plus an AD-relevant missense variant in PILRA — in such a gene-dense, multi-signal LD block, single-causal-variant colocalization methods (as used by Open Targets) can be unreliable; and (4) the red-team-skeptic's search budget was exhausted before it could independently confirm or refute the PVRIG colocalization claim in the literature — this is a genuine, disclosed gap, not a resolved question.</p>
+<p>The runner-up is <strong>PILRA</strong>: it has the most literature of any gene at this locus and a well-characterized, gene-specific immune mechanism (neutrophil/monocyte inhibitory receptor, PMID 23142774 and PMID 26840635, both VERIFIED), plus a specific COPD-MR/colocalization claim (PMID 42089751, VERIFIED as existing) — but that specific claim directly contradicts the Open Targets pipeline (which shows coloc support only for PVRIG, not PILRA) and was not robustly replicated in a related independent MR study (PMID 41286868, VERIFIED). Per the red-team-skeptic, PILRA is CONTESTED rather than confirmed as the top candidate, largely because its strongest literature is anchored to the missense variant rs1859788 that is independently and extensively characterized as an Alzheimer's disease risk variant — a textbook shared-variant pleiotropy/LD confound that the evidence here cannot cleanly resolve. <strong>CNPY4</strong> (the gene overlapping the second-highest-PIP credible-set variant, PIP=0.153) is a distant third: it has a real, verified innate-immune mechanism (TLR1/TLR4 surface-trafficking chaperone, PMID 16338228 and PMID 22447933, both VERIFIED) that is plausible for COPD's innate/neutrophilic axis, but no COPD-specific genetic or functional evidence, and its one apparently lung-relevant citation (sphingolipid homeostasis, PMID 41279395) is a preprint whose &quot;alveolar/surfactant&quot; relevance was the researcher's own speculative extrapolation, not a finding in the source itself.</p>
+<p><strong>What would resolve the tie:</strong> (a) an independent, peer-reviewed colocalization or fine-mapping analysis of PVRIG vs. PILRA vs. CNPY4 at this exact locus using multi-causal-variant methods (e.g., SuSiE-coloc) rather than single-causal-variant assumptions; (b) a direct test of whether PVRIG, PILRA, or CNPY4 expression/function is altered in COPD-relevant lung tissue (airway epithelium, alveolar macrophages, or lung-infiltrating T/NK cells) rather than tumor, blood, or non-lung tissue; (c) resolution of the direct contradiction between PMID 42089751 (PILRA COPD-asthma colocalization) and the Open Targets pipeline (no PILRA coloc, PVRIG coloc only); and (d) a locus-specific check of whether this signal (or component parts of the credible set) associates with smoking-initiation/cessation GWAS traits, which neither the researcher nor red-team-skeptic could confirm or rule out here. STAG3 (the nearest gene and lead-variant host), TFR2, FBXO24, GPC2, MBLAC1, ZCWPW1, ZNF3, TAF6, NYAP1, and CASTOR3P are all judged weak candidates on the current evidence (see table above and audit appendix) and are not competitive with PVRIG/PILRA/CNPY4 for this call.</p>
+
+</body>
+</html>

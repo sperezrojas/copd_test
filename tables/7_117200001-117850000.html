@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>7_117200001-117850000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-7117200001-117850000-nearest-gene-wnt2">Evidence table — locus 7:117,200,001-117,850,000 (nearest gene WNT2)</h1>
+<p>Region: 7:117,200,001-117,850,000 (GRCh38). Lead credible-set variant rs147678978
+(PIP=0.98667603, 7:117,269,518, upstream_gene_variant, MODIFIER, gene=-). Candidate genes
+per locus input file: nearest gene <strong>WNT2</strong>; PoPS-prioritized gene <strong>CTTNBP2</strong>.
+FLAMES/MAGMA/ABC: NA.</p>
+<p>Only citations with a citation-verifier verdict of VERIFIED are included below (all 31
+citations returned by the researcher were VERIFIED, three with an explicit caveat noted in
+the Claim column). See <code>audits/7_117200001-117850000_audit.md</code> for excluded/contested
+material and full skeptic reasoning.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WNT2</td>
+<td>Statistical genetics (GWAS, general background — locus-specific gene-naming NOT confirmed)</td>
+<td>Multi-ancestry lung-function GWAS meta-analysis (~400,102 individuals) defining 279 signals (139 novel) that combine to strongly predict COPD; whether WNT2/7q31.3 is among the named signals was not confirmed from abstract/metadata</td>
+<td>Shrine et al. 2019, PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
+<td>WEAKENED — gene-locus attribution unconfirmed; paper has 2 errata (Jun 2019, May 2024) not affecting main findings</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Statistical genetics (GWAS, general background — locus-specific gene-naming NOT confirmed)</td>
+<td>Companion COPD case-control GWAS (35,735 cases/222,076 controls, UK Biobank+ICGC) identifying 82 COPD loci with lung-tissue/smooth-muscle functional enrichment; WNT2/7q31.3 naming among the 82 loci not confirmed</td>
+<td>Sakornsakolpat et al. 2019, PMID 30804561, DOI 10.1038/s41588-018-0342-2</td>
+<td>WEAKENED — gene-locus attribution unconfirmed</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Statistical genetics (GWAS, general background — WNT2 explicitly NOT among named loci in this paper)</td>
+<td>UK BiLEVE GWAS identifies novel FEV1-extreme/COPD loci (KANSL1, TSEN54, TET2, RBM19/TBX5, NPNT, HLA-DQB1/HLA-DQA2) and shows shared genetic architecture of low FEV1 in heavy smokers vs. never-smokers</td>
+<td>Wain et al. 2015, PMID 26423011, DOI 10.1016/S2213-2600(15)00283-0</td>
+<td>WEAKENED — background only; WNT2 not named here</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Statistical genetics (GWAS, general background — locus-specific gene-naming NOT confirmed)</td>
+<td>Expands independent lung-function signals from 54 to 97, with enrichment in developmental/elastic-fiber/epigenetic pathways relevant to COPD; WNT2/7q31.3 naming among the 97 signals not confirmed</td>
+<td>Wain et al. 2017, PMID 28166213, DOI 10.1038/ng.3787</td>
+<td>WEAKENED — gene-locus attribution unconfirmed</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Structural/developmental lung biology</td>
+<td>Wnt2/Wnt2b-null mouse embryos show complete lung agenesis and fail to express Nkx2.1 (earliest lung endoderm marker)</td>
+<td>Goss et al. 2009, PMID 19686689, DOI 10.1016/j.devcel.2009.06.005</td>
+<td>WEAKENED (gene overall) — strong mouse mechanism, but embryonic-null phenotype is a different biological regime than a common regulatory variant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Structural/developmental lung biology</td>
+<td>Wnt2 necessary/sufficient to activate airway smooth muscle program via myocardin/Mrtf-B and Fgf10</td>
+<td>Goss et al. 2011, PMID 21704027, DOI 10.1016/j.ydbio.2011.06.011</td>
+<td>WEAKENED (gene overall)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Structural/developmental lung biology</td>
+<td>Fgf9-Nolz1-Wnt2 axis: Nolz1 activates Wnt2/beta-catenin to control mesenchymal proliferation/epithelial branching; exogenous Wnt2 rescues Nolz1-null branching defects</td>
+<td>Chen &amp; Liu 2023, PMID 37497597, DOI 10.1242/dev.201827</td>
+<td>WEAKENED (gene overall)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Structural/developmental lung biology</td>
+<td>Hox5 (a5/b5/c5) triple mutants show hypoplastic lungs with loss of mesenchymal Wnt2/2b and downstream Lef1/Axin2/Bmp4; Wnt2/2b-enriched media rescues patterning</td>
+<td>Hrycaj et al. 2015, PMID 26235626, DOI 10.1016/j.celrep.2015.07.020</td>
+<td>WEAKENED (gene overall)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Structural/developmental lung biology</td>
+<td>Tbx4/Tbx5 double-deficient lungs show reduced branching with downregulated mesenchymal Wnt2/Fgf10</td>
+<td>Arora et al. 2012, PMID 22876201, DOI 10.1371/journal.pgen.1002866</td>
+<td>WEAKENED (gene overall)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Structural/developmental lung biology</td>
+<td>Mesenchymal Wnt2a and mesothelial FGF9 sustain a feed-forward FGF-WNT/beta-catenin loop required for mesenchymal proliferation</td>
+<td>Yin, Wang &amp; Ornitz 2011, PMID 21750028, DOI 10.1242/dev.065110</td>
+<td>WEAKENED (gene overall)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Structural/developmental lung biology</td>
+<td>FOXF1 directly activates Wnt2 in lung mesenchyme; mesenchymal Foxf1 deletion delays branching morphogenesis</td>
+<td>Ustiyan et al. 2018, PMID 30153454, DOI 10.1016/j.ydbio.2018.08.011</td>
+<td>WEAKENED (gene overall)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Structural/developmental lung biology</td>
+<td>Wnt2/Wnt7b expression reduced early in nitrofen rat model of congenital diaphragmatic hernia/pulmonary hypoplasia</td>
+<td>Takayasu et al. 2007, PMID 17270562, DOI 10.1016/j.jpedsurg.2006.10.018</td>
+<td>WEAKENED (gene overall)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Structural/developmental lung biology</td>
+<td>Single-cell/3D classification of adult mouse lung mesenchyme identifies a Wnt2-marked alveolar-interstitial fibroblast population as a distinct axis from vascular/myofibroblast populations</td>
+<td>Narvaez Del Pilar et al. 2022, PMID 35302583, DOI 10.1242/dev.200081</td>
+<td>WEAKENED (gene overall)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Structural/developmental lung biology</td>
+<td>Fzd2 loss in mesenchyme after bleomycin injury suppresses Wnt2, impairing AT2 expansion/alveolar regeneration (fibrosis model, not COPD/emphysema)</td>
+<td>Zhou et al. 2025, PMID 41257888, DOI 10.1186/s12964-025-02501-8</td>
+<td>WEAKENED (gene overall); model is fibrosis, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Structural/developmental lung biology (review, most direct COPD-specific link found)</td>
+<td>Review states COPD involves deficient canonical Wnt responsiveness in the alveolar compartment, and mesenchymal Wnt2/2b-beta-catenin signaling specifies pulmonary endoderm and maintains the adult AT2 progenitor niche</td>
+<td>Ren et al. 2026, PMID 42719019, DOI 10.3389/fcell.2026.1914253</td>
+<td>WEAKENED — secondary/review-level source, not primary human tissue data; in directional tension with IPF finding below</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Structural/developmental lung biology</td>
+<td>ITGA8+ alveolar lipofibroblasts show higher Wnt2 (with Fgf10/Fgf7) among AT2-supportive factors</td>
+<td>Fukada et al. 2025, PMID 39806390, DOI 10.1186/s12931-025-03103-1</td>
+<td>WEAKENED (gene overall)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Structural/developmental lung biology</td>
+<td>Sod3-/- mice (Sod3 independently linked to human pulmonary function/COPD risk) show increased Hoxa5/b5 and downstream Wnt2/Wnt5a during alveogenesis</td>
+<td>Thimraj et al. 2017, PMID 28220305, DOI 10.1007/s00408-017-9980-x</td>
+<td>WEAKENED (gene overall)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Structural/developmental lung biology</td>
+<td>Wnt2 among angiogenesis-related genes upregulated by FGF18 during postnatal alveolar septation</td>
+<td>Franco-Montoya et al. 2011, PMID 21878612, DOI 10.1152/physiolgenomics.00034.2011</td>
+<td>WEAKENED (gene overall)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Fibrotic/adjacent-disease context (not COPD)</td>
+<td>WNT-2 significantly upregulated in peripheral blood of IPF patients vs. controls; WNT inhibition reduces fibrotic markers/IL-6 in patient fibroblasts</td>
+<td>Kaya et al. 2026, PMID 41822191, DOI 10.3892/etm.2026.13101</td>
+<td>WEAKENED — directionally opposite (&quot;upregulated&quot;) to the &quot;deficient Wnt&quot; COPD framing above; different disease</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Fibrotic/adjacent-disease context (not COPD)</td>
+<td>Wnt1/Wnt2 blood expression elevated in systemic sclerosis, higher still with pulmonary arterial hypertension</td>
+<td>Koçak et al. 2020, PMID 32996251, DOI 10.1111/1756-185X.13973</td>
+<td>WEAKENED — non-COPD autoimmune/fibrotic context</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Fibrotic/adjacent-disease context (not COPD)</td>
+<td>Bleomycin and high-dose adenoviral vector lung injury both induce Wnt2/2b/5b/Lrp6 mRNA alongside inflammatory cytokines/MMPs</td>
+<td>Zhou et al. 2014, PMID 25551570, DOI 10.1371/journal.pone.0116142</td>
+<td>WEAKENED — acute injury/fibrosis model, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Fibrotic/adjacent-disease context (not COPD)</td>
+<td>Anti-Wnt1/anti-Wnt2 antibodies attenuate MSC-conditioned-media-induced lung fibroblast proliferation</td>
+<td>Salazar, Lankford &amp; Brody 2009, PMID 19734317, DOI 10.1152/ajplung.90347.2008</td>
+<td>WEAKENED — in vitro fibroblast model, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Immunology/inflammation (weak/circumstantial per researcher)</td>
+<td>Macrophages in injured mouse submandibular gland signal through Wnt/beta-catenin and secrete Wnt2/Wnt2b; Wnt depletion increases CD206+ macrophages, reduces fibrosis (non-pulmonary organ)</td>
+<td>Ahmed et al. 2026, PMID 41813710, DOI 10.1038/s41598-026-38873-1</td>
+<td>WEAKENED — non-pulmonary organ, indirect relevance only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WNT2</td>
+<td>Immunology/inflammation (weak/circumstantial per researcher)</td>
+<td>TNF-alpha reduces WNT2 (with FOXF2/SPRY1) mRNA in human preterm lung mesenchymal stromal cells in a neonatal LPS/bronchopulmonary-dysplasia model</td>
+<td>Cui et al. 2020, PMID 33117383, DOI 10.3389/fimmu.2020.579628</td>
+<td>WEAKENED — WNT2 shown as target/output of inflammation, not an immune effector gene itself</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CTTNBP2</td>
+<td>Structural (weak/incidental, asthma not COPD)</td>
+<td>Cttnbp2 expression decreased in airway epithelium of both mice and asthma patients (pediatric/adult) under extreme-temperature exposure; no mechanism proposed</td>
+<td>Makrufardi et al. 2025, PMID 40313552, DOI 10.3389/fmed.2025.1531154</td>
+<td>CONTESTED — incidental exploratory finding, wrong disease (asthma), no mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CTTNBP2</td>
+<td>Established (non-lung) biology — neurodevelopmental/ASD</td>
+<td>CTTNBP2 undergoes zinc-induced phase separation at dendritic spines, regulating synaptic SHANK3 distribution; ASD-linked mutations impair this and mouse social behavior</td>
+<td>Shih et al. 2022, PMID 35562389, DOI 10.1038/s41467-022-30353-0</td>
+<td>CONTESTED — accurate for CTTNBP2's known biology, but that biology is neuronal, not pulmonary</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CTTNBP2</td>
+<td>Established (non-lung) biology — neurodevelopmental/ASD</td>
+<td>ASD-linked CTTNBP2 mutations (M120I, R533*, D570Y) impair CTTNBP2-cortactin interactions and dendritic spine density via distinct mechanisms in knock-in mice</td>
+<td>Shih et al. 2020 (Acta Neuropathol Commun), PMID 33168105, DOI 10.1186/s40478-020-01053-x</td>
+<td>CONTESTED — neuronal biology, not pulmonary</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CTTNBP2</td>
+<td>Established (non-lung) biology — neurodevelopmental/ASD</td>
+<td>Cttnbp2-knockout mice show reduced brain zinc, impaired dendritic spine formation/ultrastructure and autism-like behavior, rescued by zinc/D-cycloserine</td>
+<td>Shih et al. 2020 (Cell Reports), PMID 32492416, DOI 10.1016/j.celrep.2020.107700</td>
+<td>CONTESTED — neuronal biology, not pulmonary</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CTTNBP2</td>
+<td>Established (non-lung) biology — clinical genetics/ASD</td>
+<td>De novo CTTNBP2 missense variant (p.M115T) identified in a simplex ASD family by trio/quad whole-exome sequencing</td>
+<td>Xie et al. 2022, PMID 36670631, DOI 10.3390/children10010080</td>
+<td>CONTESTED — neuronal/clinical-genetics finding, not pulmonary</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary">Open Targets summary</h2>
+<p>Structured database lookup (Open Targets Platform GraphQL API, queried 2026-09-11) — <strong>not
+verified literature citations</strong>, not checked by citation-verifier or red-team-skeptic.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>L2G score (this locus)</th>
+<th>Colocalization (this locus)</th>
+<th>COPD assoc. rank/score (aggregate, target-level)</th>
+<th>Genetic constraint (LoF o/e, ≈LOEUF)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WNT2 (ENSG00000105989)</td>
+<td>0.394-0.412 — sole gene returned by L2G across 3 COPD GWAS study loci (GCST90399694/95/96) at the lead variant rs147678978</td>
+<td>H4=1 across the 3 study loci with each other; these are very likely overlapping/non-independent analyses of the same underlying signal, not independent replications; <strong>no molecular QTL (eQTL/pQTL) colocalization found</strong></td>
+<td>~15th of 501 diseases, score 0.208 (genetic_association sub-score 0.340); no smoking-related trait in top ~120</td>
+<td>0.316 (upper bound 0.511) — moderately constrained</td>
+</tr>
+<tr>
+<td>CTTNBP2 (ENSG00000077063)</td>
+<td>Not returned by L2G model at this locus (no data)</td>
+<td>No colocalization data at this locus</td>
+<td>Not associated — COPD absent from all 114 diseases with any recorded evidence; top associations are smoking initiation, smoking cessation, nicotine dependence, major depressive disorder, ADHD, PTSD, substance abuse</td>
+<td>0.641 (upper bound 0.774) — more tolerant of LoF than WNT2</td>
+</tr>
+</tbody>
+</table>
+<p>CFTR (GRCh38 chr7:117,480,025-117,668,665) falls physically within the queried region but
+is not a nearest/FLAMES/MAGMA/PoPS/ABC candidate per the locus input file and was not
+queried in Open Targets; flagged only as regional context (see audit for detail).</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>WNT2 — confidence LOW.</strong></p>
+<p>WNT2 is the best-supported candidate at this locus, but the call is not a confident one, and
+the study team should weigh it accordingly. The case for WNT2 rests on two legs, both of
+which the skeptic critique weakened rather than eliminated:</p>
+<ol>
+<li>
+<p><strong>Developmental/mechanistic biology (strong but indirect).</strong> Fourteen VERIFIED citations
+from multiple independent labs across two decades converge on WNT2/Wnt2b as necessary and
+sufficient for lung endoderm specification, branching morphogenesis, airway smooth muscle
+differentiation, and maintenance of the adult alveolar fibroblast/AT2 progenitor niche
+(rows 5-18 above). This is genuine, reproducible mouse-genetics biology. However, as the
+red-team-skeptic noted, complete embryonic Wnt2/Wnt2b loss (lung agenesis) is a
+categorically different biological regime from what a common noncoding regulatory variant
+plausibly does in adult COPD risk, and the single most COPD-specific claim in the
+dossier — &quot;deficient canonical Wnt responsiveness in COPD&quot; — comes from one 2026 review
+(Ren et al., PMID 42719019), not primary human COPD tissue data, and sits in direct
+tension with a VERIFIED primary finding that WNT2 is <em>upregulated</em> in IPF (Kaya et al.,
+PMID 41822191) and in scleroderma-associated pulmonary hypertension (Koçak et al., PMID
+32996251) — i.e., the pathway's direction of effect in human chronic lung disease is not
+consistently &quot;deficient,&quot; undercutting mechanistic coherence for COPD specifically.</p>
+</li>
+<li>
+<p><strong>Locus-specific statistical genetics (modest, unconfirmed by primary literature).</strong> Open
+Targets' L2G analysis names WNT2 as the sole gene at this locus (L2G 0.39-0.41) across
+three COPD GWAS study loci — but this is a structured-database result, not a verified
+literature citation, the three &quot;colocalizing&quot; study loci are almost certainly the same
+underlying signal observed in overlapping cohorts rather than independent replications,
+and there is no supporting molecular-QTL (eQTL/pQTL) colocalization. Critically, <strong>none of
+the four verified primary GWAS papers cited (Shrine 2019, Sakornsakolpat 2019, Wain 2015,
+Wain 2017) could be confirmed — even by the citation-verifier — to name WNT2 or 7q31.3
+among their reported signals from abstract/metadata alone</strong>, and the lead credible-set
+variant itself (PIP=0.987) is an upstream_gene_variant with no gene assignment. This is
+the textbook profile of a nearest-gene call that has not been mechanistically resolved.</p>
+</li>
+</ol>
+<p><strong>Why this isn't a clean call:</strong> CTTNBP2, the PoPS-prioritized alternative, is fairly
+characterized as CONTESTED as a direct pulmonary-biology gene — it has zero L2G support at
+this locus, zero recorded COPD association in Open Targets' aggregate data, and its entire
+verified literature is neurodevelopmental/ASD biology with no plausible lung mechanism.
+CTTNBP2 is not a serious competing causal candidate for direct pulmonary pathophysiology.
+However, per the red-team-skeptic, CTTNBP2's own aggregate disease-association profile
+(dominated by smoking initiation, smoking cessation, nicotine dependence, and psychiatric
+traits) raises a distinct, unresolved possibility: that this locus's COPD GWAS signal
+(uncorrected for smoking, per this pipeline's biological priors) is substantially
+smoking-mediated at the <em>locus</em> level, independent of which physical gene is the operative
+effector. If so, WNT2's strong lung-developmental biology, while real, could be
+biologically true yet causally irrelevant to why this specific SNP appears in the COPD GWAS.
+CFTR, which sits physically within this region (though ~210 kb from the lead variant) and
+has well-established obstructive/bronchiectatic lung biology, was outside this review's
+formal candidate-gene scope (not nearest/FLAMES/MAGMA/PoPS/ABC-prioritized) and was not
+independently evaluated — its distance from the PIP-0.987 lead variant argues against it,
+but this was asserted rather than demonstrated against the actual credible-set LD span.</p>
+<p><strong>What would resolve this:</strong> (a) direct confirmation from the Shrine 2019 / Sakornsakolpat
+2019 / Wain 2017 supplementary tables of whether WNT2/7q31.3 is actually named as a
+lung-function/COPD signal; (b) eQTL or pQTL colocalization data for WNT2 (or CFTR, or ST7)
+specifically at this credible set, which Open Targets did not return; (c) a dedicated search
+of the smoking-initiation/cessation GWAS literature (e.g., GSCAN consortium) for a signal at
+this exact position, to test the smoking-mediation hypothesis directly rather than infer it
+from aggregate association scores; (d) the actual physical span of the credible set relative
+to CFTR and ST7, to rule those genes in or out on LD grounds rather than distance alone.</p>
+<p>Given all of this, WNT2 is named as the best-supported single candidate, but confidence is
+LOW, not MODERATE — the mechanistic case is strong in isolation but not yet tied to this
+locus by any verified primary-literature GWAS text, and an unresolved smoking-mediation
+alternative for the locus as a whole has not been excluded.</p>
+
+</body>
+</html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>13_35500001-35750000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1335500001-35750000-grch38">Evidence table — locus 13:35,500,001-35,750,000 (GRCh38)</h1>
+<p>Lead variant: rs403904 (PIP=0.52, 13:35,672,096, 3' UTR). Credible set also includes
+rs374452 (PIP=0.46, 3' UTR), rs9530859 (PIP=0.004), rs9530857 (PIP=0.003). All four
+internal prioritization methods (nearest gene, FLAMES, MAGMA, PoPS) converge on <strong>NBEA</strong>;
+ABC not applicable. Ensembl confirms NBEA is the only protein-coding gene overlapping this
+locus window (other features are lncRNAs).</p>
+<h2 id="evidence-table-verified-citations-only">Evidence table (VERIFIED citations only)</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NBEA</td>
+<td>Human genetics (rare variant, neurodevelopmental disease)</td>
+<td>24 de novo NBEA variants identified in patients with neurodevelopmental disease establish NBEA as a neurodevelopmental-disorder gene; most patients had epilepsy with onset in early childhood (generalized seizure types including myoclonic and atonic seizures)</td>
+<td>Mulhern et al. 2018, Ann Neurol. PMID 30269351 / DOI 10.1002/ana.25350</td>
+<td>VERIFIED (citation exists, claim accurately characterized); CONTESTED as support for a COPD/pulmonary mechanism — red-team-skeptic flags this as rare, large-effect LoF variant biology, a different variant class/effect-size regime from the common noncoding 3'UTR credible-set variant at this locus; background/plausibility evidence for &quot;NBEA is a real, biologically important gene,&quot; not COPD-specific evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NBEA</td>
+<td>Functional biology (model organism, LoF mechanism)</td>
+<td>C. elegans (sel-2, NBEA ortholog) functional modeling of a de novo NBEA missense variant found in a child with neurodevelopmental delay/seizures shows the variant is damaging in vivo (altered cell fate determination and neuronal potassium-channel trafficking), supporting a haploinsufficiency/LoF disease mechanism</td>
+<td>Boulin et al. 2021, Mol Genet Metab. PMID 34412939 / DOI 10.1016/j.ymgme.2021.07.013</td>
+<td>VERIFIED (citation exists, claim accurately characterized); CONTESTED as support for a COPD/pulmonary mechanism — same class-mismatch caveat as above; supports LoF-intolerance/constraint findings (see Open Targets summary) but is neuronal-trafficking biology, not pulmonary or immune biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NBEA</td>
+<td>Human genetics (case report)</td>
+<td>Case report of a novel NBEA nonsense variant (c.4715C&gt;A, p.Ser1572Ter) in a child with global developmental delay and febrile-sensitive seizures, further supporting NBEA LoF as a cause of neurodevelopmental disorder with epilepsy</td>
+<td>Huang et al. 2025, Front Neurosci. PMID 41113443 / DOI 10.3389/fnins.2025.1662363</td>
+<td>VERIFIED (citation exists, claim accurately characterized); incremental confirmatory case report, same class-mismatch caveat as above; not COPD-relevant on its own</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p>No dedicated NBEA-specific COPD GWAS, colocalization, TWAS, Mendelian randomization, or
+pulmonary functional-biology study was found in PubMed (researcher's search returned zero
+hits for NBEA combined with COPD or lung function). No structural/developmental pulmonary
+biology or immunology/inflammation literature connecting NBEA to airway/lung disease was
+found; both of those evidence domains are judged by the researcher not to apply to NBEA
+based on current literature.</p>
+<h2 id="excluded--non-supporting-citations-verified-to-exist-but-do-not-support-the-claim-attributed-to-them">Excluded / non-supporting citations (verified to exist, but do not support the claim attributed to them)</h2>
+<p>Five large reference GWAS papers were cited by the researcher as general background context
+for COPD/lung-function/smoking genetics, explicitly flagged by the researcher as unconfirmed
+with respect to whether NBEA specifically appears in them. The citation-verifier checked all
+five directly and confirmed <strong>NBEA is not a reported locus/gene in any of them</strong> — see
+<code>audits/13_35500001-35750000_audit.md</code> for full detail and verdicts. These are excluded from
+the evidence table above because, although the papers themselves exist and are not
+retracted, they do not support any NBEA-specific claim.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — NOT a verified literature citation)</h2>
+<p>This section reports results from Open Targets Platform GraphQL queries performed directly
+by the orchestrator (<code>mcp__open-targets__*</code> tools). It did <strong>not</strong> go through
+citation-verifier or red-team-skeptic and should be weighed as database-derived structured
+evidence, not peer-reviewed literature.</p>
+<p><strong>NBEA (ENSG00000172915):</strong></p>
+<ul>
+<li><strong>Genetic constraint (gnomAD):</strong> LOF constraint score = 1.0 (maximally constrained),
+observed/expected = 0.095 (95% CI 0.066-0.137; 21 observed LoF variants vs. 220.8
+expected) — extremely LoF-intolerant. Missense constraint score = 5.46 (oe = 0.721).
+Synonymous constraint near-neutral (score 0.974, oe = 0.943), as expected.</li>
+<li><strong>L2G score / colocalization for COPD (this GWAS):</strong> No data available. This GWAS is not
+indexed in Open Targets' study catalog. The only credible sets overlapping the lead
+variant rs403904 in Open Targets are two brain molecular-QTL studies (see below), not
+COPD/disease studies; their L2G prediction arrays are empty (L2G is not computed for
+QTL-type studies).</li>
+<li><strong>Molecular QTL evidence at the lead variant (rs403904, 13:35,672,096):</strong> Fine-mapped
+(SuSiE) exon-usage/splicing QTL for NBEA (exon 35,672,232-35,672,263) in two independent
+brain cohorts: CommonMind Consortium DLPFC (beta = -0.280, p = 1.13e-15) and ROSMAP brain
+(beta = -0.252, p = 7.10e-15). No lung or immune-cell eQTL/sQTL credible set in Open
+Targets' QTL catalogue for NBEA is fine-mapped to rs403904 or rs374452 specifically — see
+follow-up below.</li>
+<li><strong>Follow-up lung/immune QTL check (prompted by red-team-skeptic critique):</strong> Open
+Targets' full QTL credible-set catalogue for NBEA (104 credible sets across all
+tissues/cell types) does include a bulk lung eQTL (GTEx, &quot;upper lobe of left lung&quot;; lead
+variant rs562861, 13:35,106,321, ~566 kb from this locus's credible-set variants) and
+multiple immune-cell eQTLs (BLUEPRINT monocytes; Schmiedel 2018 Th1/Th2/Th17/Tfh/naive
+Treg memory CD4 subsets; Nathan 2022 and OneK1K single-cell CD4/NK eQTLs). None of the
+spot-checked lung/immune eQTL signals' fine-mapped lead variants (rs562861, rs73489543,
+rs77090515, rs1903610, rs2798337, rs7320655/rs7339118) are within the fine-mapped credible
+set for, or plausibly overlap, this locus's high-PIP variants (rs403904/rs374452; closest
+is ~74 kb away). This indicates NBEA does have lung and immune-cell expression/QTL data
+available and queried (i.e., &quot;brain-only&quot; is not simply an artifact of unconsulted
+resources) — but the specific credible-set variants at this locus coincide with a
+fine-mapped molecular QTL signal only in brain, not lung or the immune cell types
+surveyed. This does not prove the absence of a pulmonary/immune-tissue effect at this
+exact variant (QTL study power varies by tissue/cell type and sample size), but it does
+not provide positive support for one either.</li>
+<li><strong>Overall target-disease association (Open Targets aggregated cross-source evidence, all
+data types, not restricted to this GWAS):</strong> NBEA does not appear in the top 25 targets
+associated with &quot;chronic obstructive pulmonary disease&quot; (MONDO_0005002); top hits for
+COPD are NR3C1, SERPINA1, CHRM3, ADRB2, FAM13A, PDE4A/B/C/D, CHRM1/2/4/5, CHRNA4, NPNT,
+PDE3A/B, ADORA1, CHRNA3, TET2, ADGRG6, GC, ADORA2B. NBEA's own top-25 associated
+disease/trait list is dominated by neurodevelopmental disorders/epilepsy (top hit:
+&quot;neurodevelopmental disorder with/without early-onset generalized epilepsy,&quot; score 0.649)
+plus intellectual disability, autism spectrum disorder, and other neurodevelopmental HPO
+terms. Notably, &quot;smoking initiation&quot; (EFO_0005670) appears at score 0.323
+(genetic_association component 0.570) in NBEA's own list — but the citation-verifier
+could not confirm this association against the primary literature (see excluded citations
+above); it exists only as an unsourced Open Targets aggregate score. No lung-function
+trait (FEV1, FEV1/FVC) appears in NBEA's top-25 list.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Prioritized gene: NBEA</strong>
+<strong>Confidence: LOW</strong></p>
+<p>NBEA is not really in competition with another gene at this locus — all four internal
+prioritization methods (nearest gene, FLAMES, MAGMA, PoPS) converge on it, and Ensembl
+confirms it is the only protein-coding gene physically in this ~250 kb window. So as a
+matter of &quot;which gene does this locus most likely act through,&quot; NBEA is the only credible
+candidate and there is no runner-up gene to weigh it against.</p>
+<p>The low confidence rating reflects a different problem: whether this locus's association
+with COPD in this GWAS reflects genuine NBEA pulmonary or smoking-behavior biology at all,
+versus a statistical/winner's-curse artifact. The evidence assembled here is a genuine
+double-edged pattern that the study team should weigh carefully:</p>
+<ul>
+<li>
+<p><em>For a real, brain/smoking-mediated mechanism (prior #1):</em> the lead credible-set variant
+rs403904 is a strong, fine-mapped (SuSiE), doubly-replicated (CommonMind + ROSMAP) brain
+exon-usage/splicing QTL for NBEA — real molecular evidence the variant regulates NBEA, in
+brain tissue specifically. NBEA is an extremely LoF-constrained (gnomAD score 1.0),
+well-established neurodevelopmental/epilepsy gene (VERIFIED: Mulhern 2018, Boulin 2021,
+Huang 2025) acting via synaptic vesicle trafficking. Open Targets' own aggregate evidence
+flags a nontrivial NBEA-&quot;smoking initiation&quot; association. Together this is a plausible
+profile for a locus acting on COPD risk through smoking-initiation/nicotine-dependence
+neurobiology rather than lung-intrinsic biology (per prior #1), consistent with no
+structural/developmental or immune/inflammatory pulmonary biology being found for NBEA in
+the literature.</p>
+</li>
+<li>
+<p><em>Against treating that as established (per red-team-skeptic, CONTESTED):</em> the citation-
+verifier independently checked the three most relevant, best-powered prior GWAS — the
+ICGC/UKB COPD case-control GWAS (82 loci, Sakornsakolpat 2019), the 2019 lung-function
+GWAS (279 signals, Shrine 2019), and the 2023 multi-ancestry lung-function GWAS (559
+genes, Shrine 2023) — and <strong>NBEA appears in none of them.</strong> The two large smoking/tobacco-
+use GWAS (GSCAN 2019, 406 loci; Saunders 2022, 2,143 loci) also do not name NBEA, so the
+Open-Targets-flagged &quot;smoking initiation&quot; association could not be traced to, or confirmed
+in, primary literature. The credible-set PIP is modest and split across two variants (0.52
+and 0.46), consistent with either a real but weak/diffuse signal or an unresolved/noisy
+fine-mapping result. The follow-up Open Targets QTL check further shows that NBEA's own
+lung and immune-cell eQTL signals (which do exist and were queried) are led by different
+variants tens-to-hundreds of kb away, not by this locus's credible-set variants — so there
+is no positive lung- or immune-tissue molecular evidence tying rs403904/rs374452
+specifically to NBEA regulation in those tissues. The three verified neurodevelopmental-
+disease citations describe rare, large-effect LoF variants — a different variant class and
+effect-size regime from the common noncoding 3'UTR variants in this credible set — so they
+establish that NBEA <em>can</em> cause severe neurodevelopmental disease via haploinsufficiency,
+but do not directly establish that a common 3'UTR variant produces a COPD-relevant
+phenotype through the same or a different (e.g., smoking-behavior) pathway.</p>
+</li>
+</ul>
+<p><strong>What would resolve this:</strong> (1) direct confirmation (or refutation) of an NBEA-region
+signal for smoking initiation/cessation/pack-years in GWAS Catalog or GSCAN/Saunders
+supplementary tables (not just abstract-level search, which was the limit of this review's
+literature access); (2) a colocalization analysis between this COPD GWAS credible set and
+the CommonMind/ROSMAP brain exon-usage QTL (or a lung/blood eQTL/sQTL specific to
+rs403904/rs374452, were adequately powered data to become available) to test whether they
+share a causal variant, rather than only observing that both fall in the same gene; (3)
+replication of this locus in an independent COPD or lung-function cohort, given its absence
+from three major prior GWAS of directly overlapping phenotypes. Until then, NBEA is the
+best (and only) candidate gene at this locus, but the study team should treat the COPD
+association itself, and any smoking-mediated interpretation of it, as unresolved rather than
+established.</p>
+
+</body>
+</html>

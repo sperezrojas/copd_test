@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>11_64050001-64300000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-locus-evidence-table--11_64050001-64300000-nearest-genes-flrt1-macrod1">COPD locus evidence table — 11_64050001-64300000 (nearest genes: FLRT1, MACROD1)</h1>
+<p>Lead variant: rs592271 (11:64104557, intronic, FLRT1, PIP=0.112). Credible set spans FLRT1
+(highest cumulative PIP mass, ~0.65), MACROD1 (~0.18), and lower-PIP variants in/near PLCB3,
+FERMT3, NUDT22, PPP1R14B, FKBP2, STIP1 (all MODIFIER-impact regulatory variants; no
+missense/splice variants anywhere in the credible set). MAGMA and PoPS both independently
+prioritize RPS6KA4, which carries no credible-set variant of its own. All citations below
+carry a VERIFIED verdict from citation-verifier; no RETRACTED/NOT_FOUND/CLAIM_MISMATCH
+citations were returned for this locus (see <code>audits/11_64050001-64300000_audit.md</code> for the
+full verification record and the red-team-skeptic's gene-level critique verbatim).</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FLRT1</td>
+<td>Structural (basic biology)</td>
+<td>FLRT1 is a novel LRR/fibronectin-domain transmembrane protein expressed predominantly in kidney and brain, not lung</td>
+<td>PMID 10644439 / DOI 10.1006/geno.1999.6033</td>
+<td>WEAKENED — see note below</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FLRT1</td>
+<td>Structural (developmental)</td>
+<td>FLRT1 is an FGFR1 tyrosine-phosphorylation substrate that potentiates FGFR1/MAPK signaling and neurite outgrowth</td>
+<td>PMID 20421966 / DOI 10.1371/journal.pone.0010264</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FLRT1</td>
+<td>Structural</td>
+<td>FLRT FnIII domains (FLRT1/2/3) bind FGFR1 (biophysical characterization)</td>
+<td>PMID 28698826 / DOI 10.7717/peerj.3550</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FLRT1</td>
+<td>Structural (developmental, paralog)</td>
+<td>FLRT2/FLRT3 act as Unc5-receptor chemorepellents guiding cortical neuron migration</td>
+<td>PMID 21673655 / DOI 10.1038/emboj.2011.189</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FLRT1</td>
+<td>Structural (developmental, paralog)</td>
+<td>FLRT3 knockout mice show ventral-closure/definitive-endoderm-migration defects</td>
+<td>PMID 18448090 / DOI 10.1016/j.ydbio.2008.03.021</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MACROD1</td>
+<td>Structural (basic biology)</td>
+<td>MacroD1 is a mitochondrially localized mono-ADP-ribosylhydrolase, highly expressed in skeletal muscle</td>
+<td>PMID 29410655 / DOI 10.3389/fmicb.2018.00020</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RPS6KA4</td>
+<td>Immune/inflammatory</td>
+<td>MSK1/2 (incl. MSK2/RPS6KA4) suppress LPS-induced IFN-β and inflammatory cytokine output in macrophages via DUSP1/p38-JNK inactivation</td>
+<td>PMID 27795299 / DOI 10.1128/MCB.00454-16</td>
+<td>CONTESTED — see note below</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RPS6KA4</td>
+<td>Structural/developmental (non-lung)</td>
+<td>MSK1/2 phosphorylate H3S28 and regulate chromatin state during pancreatic progenitor differentiation</td>
+<td>PMID 27973548 / DOI 10.1371/journal.pone.0166703</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RPS6KA4</td>
+<td>Non-lung disease model</td>
+<td>miR-93 regulates Msk2-mediated chromatin remodeling in diabetic nephropathy (podocytes)</td>
+<td>PMID 27350436 / DOI 10.1038/ncomms12076</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RPS6KA4</td>
+<td>Cancer biology (background)</td>
+<td>RSK1/MSK2 aberrantly expressed and drive proliferation in colon cancer</td>
+<td>PMID 32963350 / DOI 10.1038/s41388-020-01467-w</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RPS6KA4</td>
+<td>Cancer biology (background)</td>
+<td>RSK1/MSK2 are major phosphorylated kinases in a breast-cancer signaling context</td>
+<td>PMID 28816616 / DOI 10.1080/15476286.2017.1356563</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PLCB3</td>
+<td>Statistical genetics (negative result)</td>
+<td>COPD linkage study (Dutch isolate, ERF cohort): rare PLCB3 missense variant rs35169799 NOT significantly associated with COPD in 9,888 cases/27,060 controls (OR=1.05, P=0.247), despite the locus reaching linkage significance (HLOD=3.71)</td>
+<td>PMID 29725345 / DOI 10.3389/fgene.2018.00133</td>
+<td>WEAKENED — see note below</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PLCB3</td>
+<td>Structural + immune</td>
+<td>PLCB3 loss-of-function reduces P. aeruginosa-driven IL-8 release from cystic fibrosis bronchial epithelium (distinct disease context)</td>
+<td>PMID 29668297 / DOI 10.1165/rcmb.2017-0267OC</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PLCB3</td>
+<td>Structural (mucociliary)</td>
+<td>PLCβ3 mediates ATP/P2Y2-induced IL-1ra regulation of MUC5AC mucin overproduction in airway epithelium</td>
+<td>PMID 27034593 / DOI 10.1155/2016/7984853</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PLCB3</td>
+<td>Structural (mucociliary)</td>
+<td>PLCβ3 mediates ATP-induced MUC5AC mucin gene expression via ERK/CREB/c-Ets1</td>
+<td>PMID 18676374 / DOI 10.1074/jbc.M802507200</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PLCB3</td>
+<td>Immune (allergic/Th2 axis)</td>
+<td>Plcb3-knockout mice show blunted FcɛRI-dependent mast-cell/airway allergic inflammation</td>
+<td>PMID 21683628 / DOI 10.1016/j.immuni.2011.04.010</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FERMT3</td>
+<td>Immune (monogenic disease)</td>
+<td>Homozygous FERMT3 mutation causes LAD-III with recurrent pulmonary infections (case report, Iran)</td>
+<td>PMID 40263987 / DOI 10.1186/s12887-025-05674-w</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FERMT3</td>
+<td>Immune (monogenic disease)</td>
+<td>Homozygous FERMT3 nonsense mutation causes neonatal LAD-III with impaired leukocyte/platelet integrin function</td>
+<td>PMID 40123666 / DOI 10.3389/fped.2025.1550643</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FERMT3</td>
+<td>Structural (protein biology)</td>
+<td>LAD-III missense mutations destabilize kindlin-3 FERM-domain binding to integrin β-subunit cytoplasmic tails</td>
+<td>PMID 42362029 / DOI 10.1016/j.jtha.2026.06.021</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FERMT3</td>
+<td>Immune (neutrophil biology)</td>
+<td>Alternatively spliced kindlin-3-IPRR isoform is upregulated in mature neutrophils during stress myelopoiesis and enhances β2-integrin-mediated neutrophil adhesion</td>
+<td>PMID 42574321 / DOI 10.1182/blood.2026034274</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NUDT22</td>
+<td>Cancer/metabolism (non-lung)</td>
+<td>NUDT22 hydrolyzes UDP-glucose to support p53-regulated pyrimidine salvage/DNA replication in cancer cells</td>
+<td>PMID 36871087 / DOI 10.1038/s41388-023-02643-4</td>
+<td>HOLDS (bystander conclusion)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PPP1R14B</td>
+<td>Structural (lung tissue, malignant context)</td>
+<td>PPP1R14B overexpressed in lung adenocarcinoma, associated with poor prognosis, negatively correlated with mast cell/eosinophil tumor infiltration</td>
+<td>PMID 36915775</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PPP1R14B</td>
+<td>Cancer biology (non-lung)</td>
+<td>PPP1R14B stabilizes STMN1 to promote triple-negative breast cancer progression</td>
+<td>PMID 36484700 / DOI 10.1158/0008-5472.CAN-22-2709</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FKBP2</td>
+<td>Structural (basic biology)</td>
+<td>FKBP2/FKBP13 (ER chaperone) protects against Bax-induced apoptosis in a heterologous yeast system</td>
+<td>PMID 34342774 / DOI 10.1007/s10565-021-09633-w</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FKBP2</td>
+<td>Structural (ECM/collagen adjacency)</td>
+<td>FKBP13 is an ER-resident peptidyl-prolyl isomerase involved in collagen folding, with lower activity than other FKBP paralogs tested</td>
+<td>PMID 28385890 / DOI 10.1074/jbc.M116.772657</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STIP1</td>
+<td>Statistical genetics (immune, pediatric)</td>
+<td>STIP1 SNP rs2236647 (CC genotype) associated with increased childhood asthma risk (OR=1.858), not with inhaled-corticosteroid response, in a Chinese cohort</td>
+<td>PMID 33208131 / DOI 10.1186/s12890-020-01332-2</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>VEGFB (no fine-mapping/MAGMA/PoPS support — background only)</td>
+<td>Structural (vascular)</td>
+<td>VEGFB/PlGF dynamically regulated in hypoxic rat lung; VEGFB antagonizes VEGFA-driven pulmonary endothelial wound-healing responses</td>
+<td>PMID 21266048 / DOI 10.1186/1465-9921-12-17</td>
+<td>BACKGROUND ONLY — flagged as scope creep by skeptic</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>VEGFB (background only)</td>
+<td>Structural (review)</td>
+<td>PlGF disease-association review listing pulmonary emphysema among associated conditions</td>
+<td>PMID 22908198 / DOI 10.1101/cshperspect.a011056</td>
+<td>BACKGROUND ONLY</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNK4 (no fine-mapping/MAGMA/PoPS support — background only)</td>
+<td>Structural (airway neurobiology)</td>
+<td>TRAAK (KCNK4) expressed on myelinated vagal afferents in mouse airway mechanosensory receptors</td>
+<td>PMID 21822716 / DOI 10.1007/s00418-011-0837-8</td>
+<td>BACKGROUND ONLY — flagged as scope creep by skeptic</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-literature-citation-not-verified-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a literature citation; not verified by citation-verifier or red-team-skeptic)</h2>
+<p>Disease term used: <code>MONDO_0005002</code> (chronic obstructive pulmonary disease — the only
+resolvable COPD term in this Open Targets instance).</p>
+<p><strong>Key finding across all 9 pipeline-flagged genes: no GWAS credible-set/L2G or
+colocalization evidence links any of them to COPD in Open Targets currently.</strong> This likely
+reflects that this specific COPD GWAS has not been ingested into this Open Targets release
+(or the locus doesn't reach genome-wide significance in ingested studies) — it is an absence
+of corroborating data, not evidence against the locus.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>L2G / evidence for COPD</th>
+<th>Colocalization</th>
+<th>Constraint (LOF o/e, score)</th>
+<th>Notable structured-DB context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FLRT1</td>
+<td>No data (0 evidence rows)</td>
+<td>None found</td>
+<td>0.436, 0.136 (not strongly constrained)</td>
+<td>Top disease hits: spastic paraplegia-optic atrophy-neuropathy, peripheral neuropathy, gout — no COPD/spirometry/smoking signal</td>
+</tr>
+<tr>
+<td>MACROD1</td>
+<td>No data (0 evidence rows)</td>
+<td>None found</td>
+<td>0.983, ~0 (LoF-tolerant)</td>
+<td>Top hits dominated by animal-model cataract/retinal phenotypes; no COPD/spirometry/smoking signal</td>
+</tr>
+<tr>
+<td>RPS6KA4</td>
+<td>No data (0 evidence rows for COPD specifically)</td>
+<td>None found</td>
+<td>0.479, 0.0005 (not constrained)</td>
+<td>Genetic_association evidence for <strong>smoking initiation</strong> (score 0.27) and <strong>smoking cessation</strong> (score 0.13), plus autoimmune/inflammatory diseases (SLE, Crohn's, UC, ankylosing spondylitis, psoriasis, hypothyroidism) — structured-DB only, NOT independently verified as a literature claim (researcher could not confirm via PubMed/GWAS Catalog in this session)</td>
+</tr>
+<tr>
+<td>PLCB3</td>
+<td>Literature (text-mining) only, score 0.1</td>
+<td>None found</td>
+<td>0.373, 0.995 (highly constrained)</td>
+<td>Top hits: spondylometaphyseal dysplasia w/ corneal dystrophy, neurodegenerative disease, T2D; no COPD genetic association</td>
+</tr>
+<tr>
+<td>FERMT3</td>
+<td>Literature (text-mining) only, score 0.062 (driven by literature datatype 0.51, no genetic_association)</td>
+<td>None found</td>
+<td>0.416, 0.171 (moderate)</td>
+<td>Dominant association is leukocyte adhesion deficiency III (score 0.78, strongly genetic_association-supported) — FERMT3's well-established monogenic disease</td>
+</tr>
+<tr>
+<td>NUDT22</td>
+<td>No data (0 evidence rows)</td>
+<td>None found</td>
+<td>0.876, ~0 (LoF-tolerant)</td>
+<td>Mostly generic cancer/literature hits; weak smoking-cessation genetic_association signal (score 0.035)</td>
+</tr>
+<tr>
+<td>PPP1R14B</td>
+<td>No data (0 evidence rows)</td>
+<td>None found</td>
+<td>0.286, 0.798 (fairly constrained)</td>
+<td>Skin cancer/melanoma, bipolar disorder, psoriasis, weak smoking-initiation signal (score 0.023) — all genetic_association, low scores</td>
+</tr>
+<tr>
+<td>FKBP2</td>
+<td>No data (0 evidence rows)</td>
+<td>None found</td>
+<td>0.792, 0.0000549 (LoF-tolerant)</td>
+<td>Bipolar disorder (literature+genetic), low-score literature-only hits for pulmonary fibrosis/ILD/NSCLC; no COPD entry</td>
+</tr>
+<tr>
+<td>STIP1</td>
+<td>Literature (text-mining) only, score 0.07/0.05</td>
+<td>None found</td>
+<td>0.201, 1.0 (most constrained gene at locus)</td>
+<td>Neurodegenerative disease (affected_pathway), cancer literature hits; no COPD genetic association</td>
+</tr>
+</tbody>
+</table>
+<h2 id="prioritized-gene-synthesis">Prioritized-gene synthesis</h2>
+<p><strong>Prioritized gene: FLRT1 — Confidence: LOW</strong></p>
+<p>FLRT1 carries by far the largest share of credible-set posterior probability at this locus
+(~0.65 of total PIP mass across its intronic/5'UTR variants, including the lead variant
+rs592271 itself, PIP=0.112) and is the nearest gene — the strongest purely statistical-
+genetic signal in the evidence table. However, this pick is genuinely weak and should not be
+read as a confident call. The verified literature (rows 1-5 above) describes FLRT1 almost
+exclusively in neurodevelopmental contexts (axon guidance, cortical neuron migration, FGFR1
+signaling potentiation) with reported expression in kidney and brain, not lung, and no
+COPD/spirometry/smoking-trait literature or Open Targets genetic evidence exists for this
+gene. The red-team-skeptic explicitly flagged (critique verbatim in
+<code>audits/11_64050001-64300000_audit.md</code>) that this &quot;no biology found&quot; framing is being used
+to implicitly deprioritize the top-PIP gene without ruling out the alternative that these
+intronic/regulatory credible-set variants are actually a distal eQTL for a neighboring gene
+(RPS6KA4, PLCB3, FERMT3, or STIP1 are all within the same ~250kb window) — no GTEx lung-eQTL
+or colocalization data was retrieved for FLRT1 or any other gene at this locus in this
+review, which is the single largest unresolved gap.</p>
+<p><strong>Runner-up 1 — PLCB3 (mechanistically the best-supported gene, but statistically weak and
+carrying a negative COPD genetic result):</strong> PLCB3 has the most diverse mechanistic evidence
+at this locus — airway epithelial IL-8/TLR signaling in cystic fibrosis, MUC5AC mucin
+regulation, and FcɛRI/mast-cell-driven airway inflammation — and is one of the two most
+LoF-constrained genes at the locus (o/e=0.37). However, a rare PLCB3 missense variant tested
+directly in a COPD case-control meta-analysis (9,888 cases/27,060 controls) was <strong>not</strong>
+significantly associated with COPD (OR=1.05, P=0.247), and the skeptic flagged that this
+negative result deserves more weight than the researcher's framing gave it, and that the
+mechanistic evidence spans distinct disease contexts (CF, allergic/Th2 mast-cell biology)
+not cleanly reconciled with COPD's typically non-allergic, neutrophilic phenotype. PLCB3's
+credible-set PIP mass (~0.04) is far smaller than FLRT1's.</p>
+<p><strong>Runner-up 2 — RPS6KA4 (independently prioritized by both MAGMA and PoPS, but its case is
+explicitly CONTESTED by the skeptic):</strong> RPS6KA4 has a genuine, verified mechanistic role in
+macrophage innate-immune cytokine/interferon regulation (MSK2 via p38/DUSP1), directly
+relevant to prior #3 (inflammatory complexity), and an Open Targets-flagged (but NOT
+literature-verified) genetic association with smoking initiation/cessation traits relevant
+to prior #1. The skeptic explicitly contested the researcher's &quot;strong dual-pathway
+candidate&quot; characterization: RPS6KA4 has zero credible-set variant support of its own (a
+gene-level MAGMA/PoPS signal only), the smoking-trait claim remains unconfirmed after
+attempted independent verification, and the macrophage mechanism, while real, is not
+lung/COPD-specific.</p>
+<p><strong>What would resolve this tie:</strong> (1) GTEx or other lung-tissue eQTL/colocalization data for
+the credible-set variants against FLRT1, MACROD1, RPS6KA4, PLCB3, FERMT3, and STIP1 — the
+single most important missing piece, since it would directly test the distal-eQTL
+alternative hypothesis the skeptic raised for FLRT1; (2) independent confirmation (via GWAS
+Catalog or PhenoScanner, not PubMed) of the RPS6KA4-smoking-initiation/cessation
+association; (3) an FEV1/FEV1-FVC spirometry-trait GWAS lookup for all candidate genes,
+which is currently absent for every gene at this locus and, per the skeptic, should push
+overall locus confidence down regardless of which single gene is favored. Given all of the
+above, this locus is best characterized as <strong>weakly resolved</strong> overall, and the FLRT1 pick
+here should be weighed by the study team as a tentative, PIP-driven default rather than a
+biologically confirmed causal call.</p>
+
+</body>
+</html>

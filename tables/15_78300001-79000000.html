@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>15_78300001-79000000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1578300001-79000000-grch38">Evidence table — Locus 15:78,300,001-79,000,000 (GRCh38)</h1>
+<p>Nearest gene: CHRNA5. Lead variant: rs17486278 (15:78,575,140, PIP=0.958, intron_variant of
+CHRNA5, MODIFIER impact) — sole credible-set variant. MAGMA/PoPS prioritized gene: ACSBG1.
+FLAMES/ABC: NA.</p>
+<p>This is the canonical, extremely well-replicated 15q25.1 nicotinic acetylcholine receptor
+gene cluster (CHRNA5-CHRNA3-CHRNB4), one of the most pleiotropic loci in human genetics for
+smoking behavior, lung cancer, and COPD. Because the input file's candidate-gene list
+(CHRNA5, ACSBG1) does not capture the well-established multi-gene LD block at this locus,
+the orchestrator directed the researcher to also cover CHRNA3, CHRNB4, IREB2, PSMA4, and
+HYKK as secondary/comparison candidates, since a fair judgment about the causal gene here
+requires being able to distinguish CHRNA5 from its neighbors. Only VERIFIED citations are
+included below.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHRNA5</td>
+<td>Statistical genetics (smoking-behavior)</td>
+<td>15q25.1 region genome-wide significant for airflow obstruction in ever-smokers, &quot;also modestly associated among never smokers&quot;; region &quot;may be independent of smoking&quot;; CHRNA5/CHRNA3 expressed in lung tissue, airway smooth muscle, bronchial epithelium</td>
+<td>Wilk et al. 2012, Am J Respir Crit Care Med. PMID 22837378 / DOI 10.1164/rccm.201202-0366OC</td>
+<td>WEAKENED (locus-level, not gene-specific; LD-block ambiguity)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNA5</td>
+<td>Statistical genetics (smoking quantity)</td>
+<td>CHRNA5 rs16969968 associated with smoking quantity (p&lt;10^-35); after adjusting for cigarettes-per-day, remained strongly associated with lung cancer (p&lt;10^-20) and nominally with COPD (p=0.01)</td>
+<td>Saccone et al. 2010, PLoS Genet. PMID 20700436 / DOI 10.1371/journal.pgen.1001053</td>
+<td>WEAKENED (lung cancer endpoint, not COPD; COPD signal only nominal after adjustment)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNA5</td>
+<td>Statistical genetics (exact lead variant)</td>
+<td>rs17486278 (this locus's lead variant) associated with lung cancer in African-Americans (OR=1.28, p=0.008), remained significant after pack-year adjustment</td>
+<td>Hansen et al. 2010, Hum Mol Genet. PMID 20587604 / DOI 10.1093/hmg/ddq268</td>
+<td>WEAKENED (lung cancer, not COPD/spirometry endpoint)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNA5 / CHRNA3</td>
+<td>Statistical genetics + spirometry</td>
+<td>CHRNA3/5 SNPs associated with FEV1%predicted, FEV1/FVC, and pack-years in Chinese Han COPD cases</td>
+<td>Zhou et al. 2012, J Hum Genet. PMID 22914670 / DOI 10.1038/jhg.2012.104</td>
+<td>WEAKENED (also correlates with pack-years — does not establish smoking-independence)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNA5</td>
+<td>Statistical genetics (gene-environment interaction)</td>
+<td>CHRNA5 risk alleles (rs16969968, rs17486278) synergized with smoking exposure measures (gene x environment interaction) for COPD risk in a Mongolian cohort</td>
+<td>Ganbold et al. 2021, Int J Chron Obstruct Pulmon Dis. PMID 34707353 / DOI 10.2147/COPD.S320841</td>
+<td>Evidence FOR smoking-mediation, not independence (per skeptic)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNA5</td>
+<td>Statistical genetics (pleiotropy)</td>
+<td>Exact lead variant rs17486278 also associated with schizophrenia risk (recessive, females) in a Chinese case-control sample</td>
+<td>Zhan et al. 2019, Mol Genet Genomic Med. PMID 31342675 / DOI 10.1002/mgg3.869</td>
+<td>Illustrates cross-phenotype pleiotropy, not COPD-specific evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNA5</td>
+<td>Statistical genetics (interaction only)</td>
+<td>No main effect of rs17486278 on lung cancer; only a smoking-dose x genotype interaction observed</td>
+<td>Li Q et al. 2015, Zhonghua Liu Xing Bing Xue Za Zhi. PMID 25876869</td>
+<td>Evidence FOR smoking-mediation, not independence (per skeptic; inverts researcher's framing)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNA5 (vs. PSMA4/others)</td>
+<td>Statistical genetics (modern eQTL colocalization)</td>
+<td>Large multi-ancestry WGS lung-function/COPD study; eQTL colocalization at 15q25.1 highlighted ADAM19, THSD4, C4B, PSMA4 — NOT CHRNA5</td>
+<td>Kim et al. 2026, Genome Biol. PMID 41535900 / DOI 10.1186/s13059-025-03921-y</td>
+<td>Direct contradicting evidence against CHRNA5-specificity</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNA5</td>
+<td>Structural/developmental pulmonary biology</td>
+<td>α5 (CHRNA5) subunit protein expressed in distal lung epithelial cells (AT1/AT2), Clara cells, ciliated cells during mouse lung morphogenesis, transcriptionally regulated by FoxA2 (non-smoking-exposed mice)</td>
+<td>Porter et al. 2011, Respir Res. PMID 21682884 / DOI 10.1186/1465-9921-12-82</td>
+<td>Plausible smoking-independent expression; not a functional/causal demonstration</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNA5</td>
+<td>Structural/developmental pulmonary biology</td>
+<td>α5 (CHRNA5) expression in mouse/human lung epithelium transcriptionally controlled by TTF-1/NKX2-1; authors speculate misexpression correlates with tobacco-related lung disease</td>
+<td>Reynolds et al. 2010, Respir Res. PMID 21143907 / DOI 10.1186/1465-9921-11-175</td>
+<td>Same as above — developmental regulation shown, causal link to disease not tested</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ACSBG1</td>
+<td>Statistical genetics (tangential — lung adenocarcinoma)</td>
+<td>ACSBG1 overexpression suppressed LUAD proliferation/migration/invasion; low expression associated with advanced stage/poor survival; positively correlated with CD4+/CD8+ T-cell and B-cell tumor infiltration</td>
+<td>Hu &amp; Li 2026, Oncol Rep. PMID 41789655 / DOI 10.3892/or.2026.9087</td>
+<td>Cancer-metabolism finding, not COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ACSBG1</td>
+<td>Statistical genetics (tangential — lung cancer)</td>
+<td>Low ACSBG1 expression associated with poor prognosis in lung cancer (TCGA)</td>
+<td>Ye et al. 2021, Oxid Med Cell Longev. PMID 34970420 / DOI 10.1155/2021/9259297</td>
+<td>Cancer-metabolism finding, not COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ACSBG1</td>
+<td>Immune/inflammatory biology (mechanistic, mouse)</td>
+<td>Acsbg1-dependent mitochondrial fitness required for regulatory T (Treg) cell homeostasis; Acsbg1 deletion causes Treg mitochondrial dysfunction; pathway in ST2+ effector Tregs &quot;enhances immunosuppressive capacity in airway inflammation&quot; and governs &quot;resolution of lung inflammation&quot; in a mouse airway-inflammation model</td>
+<td>Kanno et al. 2021, Cell Rep. PMID 34758300 / DOI 10.1016/j.celrep.2021.109921</td>
+<td>WEAKENED — real mechanism but general allergic-airway model, not COPD; no eQTL/regulatory link shown to this variant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNA3</td>
+<td>Statistical genetics (never-smokers)</td>
+<td>In never-smoking Chinese NSCLC cases/controls, CHRNA3 rs578776 and CHRNA5 rs17486278 NOT significantly associated with NSCLC (CHRNB4 was)</td>
+<td>Li Z et al. 2012, Transl Oncol. PMID 23397474 / DOI 10.1593/tlo.12304</td>
+<td>Argues against strong smoking-independent effect for CHRNA3/CHRNA5 in this study</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNA3 / CHRNB4</td>
+<td>Statistical genetics (lung cancer, behavioral confound)</td>
+<td>CHRNA3 rs938682 GG genotype associated with decreased lung cancer risk, especially among areca-nut chewers; CHRNA5 rs17486278 CC genotype associated with higher risk in males/smokers/drinkers; CHRNB4 rs7178270 GG genotype associated with increased risk with areca-nut interaction</td>
+<td>Li Y et al. 2025, BMC Cancer. PMID 40197297 / DOI 10.1186/s12885-025-14020-3</td>
+<td>Confounded by distinct areca-nut behavioral exposure; population-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNB4</td>
+<td>Statistical genetics (never-smokers, direction conflict)</td>
+<td>CHRNB4 rs7178270 G/G genotype associated with REDUCED NSCLC risk (OR=0.553; squamous OR=0.344) in never-smokers</td>
+<td>Li Z et al. 2012, Transl Oncol. PMID 23397474 / DOI 10.1593/tlo.12304</td>
+<td>CONTESTED — direction of effect conflicts with Li Y 2025 below</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNB4</td>
+<td>Statistical genetics (direction conflict)</td>
+<td>CHRNB4 rs7178270 G allele associated with DECREASED lung cancer risk (OR=0.78) in African-American women; survived pack-year adjustment</td>
+<td>Hansen et al. 2010, Hum Mol Genet. PMID 20587604 / DOI 10.1093/hmg/ddq268</td>
+<td>CONTESTED — direction of effect conflicts with Li Y 2025</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>IREB2</td>
+<td>Statistical genetics + lung expression (foundational)</td>
+<td>Seven IREB2 SNPs significantly associated with COPD across case-control and two family-based cohorts (combined p 1.6e-7 to 6.4e-4); IREB2 mRNA/protein increased in COPD lung tissue vs. controls</td>
+<td>DeMeo et al. 2009, Am J Hum Genet. PMID 19800047 / DOI 10.1016/j.ajhg.2009.09.004</td>
+<td>Foundational candidate-gene evidence; not replicated as top gene in modern colocalization/L2G</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>IREB2</td>
+<td>Statistical genetics (non-smoker subgroup)</td>
+<td>Two IREB2 SNPs associated with COPD specifically in non-smokers; authors conclude IREB2 effect &quot;may be independent from smoking and independent from CHRNA3/5 gene cluster&quot;</td>
+<td>Zhou et al. 2012, J Hum Genet. PMID 22914670 / DOI 10.1038/jhg.2012.104</td>
+<td>WEAKENED — small non-smoker subgroup p-value, prone to false positive/winner's curse per skeptic</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>IREB2 / CHRNA3 / PSMA4</td>
+<td>Statistical genetics (methylation/eQTL)</td>
+<td>Four 15q25.1 COPD variants associated with blood methylation of IREB2/CHRNA3/PSMA4 and with IREB2 3'UTR lung expression (p&lt;5.4e-6); &quot;no significant effect of smoking&quot; on this relationship; concludes association &quot;largely independent of smoking&quot;</td>
+<td>Nedeljkovic et al. 2018, Eur J Hum Genet. PMID 29422661 / DOI 10.1038/s41431-017-0089-8</td>
+<td>WEAKENED — &quot;independent of smoking&quot; claim vulnerable to residual EWAS confounding per skeptic</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>IREB2</td>
+<td>Statistical genetics (systems eQTL, joint gene set)</td>
+<td>Lung-tissue systems-genetics eQTL analysis (1,111 samples) identifies 15q25 lung eQTLs affecting IREB2/CHRNA3/CHRNA5 jointly as COPD eSNPs; does not discriminate a single functional target gene</td>
+<td>Obeidat et al. 2015, Lancet Respir Med. PMID 26404118 / DOI 10.1016/S2213-2600(15)00380-X</td>
+<td>Joint gene-set evidence; does not resolve IREB2 vs. CHRNA3/5</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>IREB2</td>
+<td>Structural biology (review)</td>
+<td>IREB2/IRP2 role in cellular iron homeostasis; inhaled cigarette-smoke iron deposits in lung, alters iron homeostasis, contributes to emphysema/lung cancer tissue damage (upper-lobe-predominant diseases)</td>
+<td>Khiroya &amp; Turner 2015, Multidiscip Respir Med. PMID 26629341 / DOI 10.1186/s40248-015-0031-2</td>
+<td>Mechanistic rationale (review), not primary data</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>IREB2</td>
+<td>Structural/mechanistic biology (cigarette-smoke mouse model)</td>
+<td>m6A-modified circSAV1 recruits YTHDF1 to promote IREB2 translation; elevated IREB2 protein causes iron dysregulation, lipid peroxidation, ferroptosis of lung epithelial cells; silencing circSAV1 or iron chelation blocked cigarette-smoke-induced ferroptosis and attenuated COPD in mice</td>
+<td>Xia et al. 2023, Cell Death Differ. PMID 36828914 / DOI 10.1038/s41418-023-01138-9</td>
+<td>Smoke-exposure-dependent toxicological mechanism (requires smoke exposure to manifest)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>IREB2</td>
+<td>Structural/mechanistic biology (causal knockout mouse model)</td>
+<td>Irp2 (IREB2)-deficient mice PROTECTED from cigarette-smoke-induced experimental COPD (bronchitis and emphysema); Irp2 drives mitochondrial iron loading in lung upon smoke exposure; mitochondrial iron chelation or low-iron diet also protective</td>
+<td>Cloonan et al. 2016, Nat Med. PMID 26752519 / DOI 10.1038/nm.4021</td>
+<td>STRONGEST causal evidence at this locus for any gene; smoke-exposure-dependent toxicological mechanism, distinct from nicotine-receptor/behavioral pathway</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PSMA4</td>
+<td>Statistical genetics (TWAS/colocalization)</td>
+<td>TWAS + multi-variant colocalization confirmed PSMA4 (with EGLN2, WNT3, DCBLD1, LILRA3) for severe COPD/quantitative emphysema</td>
+<td>Sakornsakolpat et al. 2018, Respir Res. PMID 29566699 / DOI 10.1186/s12931-018-0744-9</td>
+<td>SUPPORTED — modern colocalization, disease-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PSMA4</td>
+<td>Statistical genetics (methylation)</td>
+<td>PSMA4 methylation differed by COPD case/control status, linked to same 15q25.1 risk variants, &quot;largely independent of smoking&quot;</td>
+<td>Nedeljkovic et al. 2018, Eur J Hum Genet. PMID 29422661 / DOI 10.1038/s41431-017-0089-8</td>
+<td>Same EWAS-confounding caveat as IREB2 methylation claim</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PSMA4</td>
+<td>Statistical genetics (Mendelian randomization)</td>
+<td>SMR+HEIDI+colocalization on cis-eQTL vs. COPD/FEV1 GWAS identifies PSMA4 as one of 22 druggable genes; proteasome inhibitor marizomib flagged as drug-repurposing candidate</td>
+<td>Wang et al. 2024, Front Cell Infect Microbiol. PMID 38660492 / DOI 10.3389/fcimb.2024.1386506</td>
+<td>SUPPORTED — independent modern MR/coloc line of evidence, lung-function-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PSMA4</td>
+<td>Statistical genetics (modern eQTL colocalization)</td>
+<td>Large multi-ancestry WGS study; lung-tissue eQTL colocalization highlighted PSMA4 (with ADAM19, THSD4, C4B) as a known candidate &quot;not identified through other eQTL sources&quot;</td>
+<td>Kim et al. 2026, Genome Biol. PMID 41535900 / DOI 10.1186/s13059-025-03921-y</td>
+<td>SUPPORTED — most contemporary analysis available</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HYKK</td>
+<td>Statistical genetics (methylation/eQTL — points away from HYKK)</td>
+<td>HYKK-tagging variant rs8034191's downstream regulatory (methylation/expression) effects converge on IREB2/CHRNA3/PSMA4 expression, not on HYKK itself</td>
+<td>Nedeljkovic et al. 2018, Eur J Hum Genet. PMID 29422661 / DOI 10.1038/s41431-017-0089-8</td>
+<td>CONTESTED — directly undercuts HYKK's own L2G &quot;top gene&quot; status as reflecting HYKK-specific mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNA5-CHRNA3-CHRNB4 (locus-wide) / HHIP (comparator locus, not this locus's gene)</td>
+<td>Statistical genetics (original COPD GWAS discovery)</td>
+<td>GWAS of 823 COPD cases/810 smoking controls identified two SNPs at CHRNA3/5 (15q25) genome-wide significant for COPD case-control status; also consistently replicated HHIP (4q31) association</td>
+<td>Pillai et al. 2009, PLoS Genet. PMID 19300482 / DOI 10.1371/journal.pgen.1000421</td>
+<td>Original COPD-specific (not lung-cancer/smoking-quantity) discovery evidence for the cluster as a whole</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CRABP1 (caveat — NOT evidence for this gene)</td>
+<td>N/A — excluded from candidacy</td>
+<td>Elastin-induction/retinoic-acid-signaling finding in emphysema fibroblasts is about the paralog gene CRABP2 (different chromosome), NOT CRABP1 (the chr15-locus gene)</td>
+<td>Plantier et al. 2008, Thorax. PMID 18621984 / DOI 10.1136/thx.2007.093302</td>
+<td>Citation verified but gene-identity mismatch confirmed — excluded from CRABP1 evidence (see audit)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
+<p>Lead variant used for locus-specific queries: rs17486278 = 15_78575140_A_C (GRCh38). 231
+total credible sets across many independent GWAS hit this single variant (extreme
+pleiotropy spanning smoking-related, oncologic, cardiovascular, and even purely
+behavioral phenotypes such as &quot;Dentures&quot;).</p>
+<ul>
+<li><strong>CHRNA5</strong> (ENSG00000169684): LoF-tolerant (gnomAD o/e=0.643, not constrained). COPD
+aggregate association score 0.465; nicotine-dependence aggregate 0.363 (genetic_association
+sub-score 0.581, the highest of any gene at this locus); smoking-initiation aggregate only
+0.155. Top L2G gene at the lead variant in most GWAS sampled (COPD GCST004147 n=58,918,
+L2G=0.691; &quot;Chronic airway obstruction&quot; n=593,956, L2G=0.708; several lung-cancer GWAS),
+but NOT top in COPD GCST90162551 (n=10,461, CHRNA3 leads 0.342 vs. 0.201), NOT top in the
+largest COPD GWAS sampled GCST90018807 (n=635,145, HYKK leads 0.386 vs. 0.361), and NOT top
+in &quot;Airflow obstruction&quot; GCST001621 (n=32,875, PSMA4 leads 0.364 vs. 0.317).</li>
+<li><strong>CHRNA3</strong> (ENSG00000080644): LoF-tolerant. Highest raw COPD aggregate score of the
+cluster (0.538). Nicotine-dependence 0.283. Top L2G in the smallest sampled COPD GWAS and
+several lung-cancer/&quot;Dentures&quot; GWAS.</li>
+<li><strong>CHRNB4</strong> (ENSG00000117971): More constrained than CHRNA5/CHRNA3 (LoF o/e=0.549). COPD
+aggregate 0.427, nicotine-dependence 0.294. Never top L2G in any GWAS sampled — minor
+tertiary contributor only.</li>
+<li><strong>IREB2</strong> (ENSG00000136381): HIGHLY LoF-constrained (o/e=0.256, most constrained gene at
+locus). Highest literature aggregate score of any gene here (0.932) but weakest
+genetic_association sub-score (0.418) and essentially null nicotine-dependence score
+(0.0054). Never top L2G in any GWAS sampled.</li>
+<li><strong>PSMA4</strong> (ENSG00000041357): Highly constrained (proteasome subunit, LoF o/e=0.194). COPD
+aggregate 0.318. Only non-CHRNA5 gene at this locus with any smoking-initiation genetic
+signal (0.272). Top L2G specifically in the &quot;Airflow obstruction&quot; GWAS (GCST001621).</li>
+<li><strong>HYKK</strong> (ENSG00000188266): LoF-tolerant. COPD aggregate 0.320, nicotine-dependence 0.294,
+very low smoking-initiation (0.042). Top L2G gene in the single largest-sample COPD GWAS
+hit by this variant (GCST90018807, n=635,145).</li>
+<li><strong>ACSBG1</strong> (ENSG00000103740, the MAGMA/PoPS pick): COPD aggregate essentially null
+(0.0042, no genetic_association sub-score at all). No smoking-initiation or
+nicotine-dependence data. Did not appear among the top-4 L2G genes in any GWAS credible
+set sampled, including direct COPD/airflow-obstruction studies. Sits ~55kb outside the
+strict locus boundary per Ensembl coordinates.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Prioritized gene: CHRNA5</strong> (confidence: LOW)</p>
+<p>This call is close, and the evidence genuinely does not cleanly resolve a single causal
+gene at this locus — that ambiguity is itself the headline finding, not a caveat to bury.
+Four genes have real, independent claims to causality, each resting on a different
+evidentiary pillar:</p>
+<ul>
+<li><strong>CHRNA5</strong> remains the single most consistent top-L2G gene across the largest number of
+independent GWAS at the exact lead variant, and has by far the strongest
+nicotine-dependence genetic signal (0.581) and plausible smoking-independent
+developmental lung-epithelial expression (Porter 2011, Reynolds 2010 — both VERIFIED).
+But per red-team-skeptic, the &quot;smoking-independent COPD&quot; framing for CHRNA5 is
+overclaimed: two of the researcher's own supporting citations (Li Q 2015, Ganbold 2021)
+are interaction-only findings that actually argue FOR smoking-mediation, not against it,
+and the single most contemporary multi-ancestry eQTL colocalization study (Kim et al.
+2026) does not implicate CHRNA5 at all, favoring PSMA4 instead. CHRNA5 is also not top
+L2G in either the largest (HYKK) or smallest (CHRNA3) COPD-labeled GWAS sampled.</li>
+<li><strong>PSMA4</strong> is the runner-up and, on a strict &quot;modern colocalization/MR&quot; reading, arguably
+the better-supported gene: it has the most consistent 2018-2026 TWAS/colocalization/MR
+evidence specifically for lung-function/COPD traits (Sakornsakolpat 2018, Wang 2024, Kim
+2026 — all VERIFIED, SUPPORTED per skeptic), is the only non-CHRNA5 gene with any
+smoking-initiation signal, and is comparatively less entangled in the locus's broader
+smoking-behavior pleiotropy. Its weakness is the complete absence of an established
+structural or immune mechanistic story — its case rests on statistics alone.</li>
+<li><strong>IREB2</strong> has the deepest historical mechanistic literature and, critically, the single
+strongest PIECE of causal evidence at this entire locus: Cloonan et al. 2016 (Nat Med,
+VERIFIED) shows Irp2(IREB2)-knockout mice are protected from cigarette-smoke-induced
+emphysema/bronchitis — a true loss-of-function causal experiment, a higher evidentiary
+tier than any association or colocalization data for any other gene here. However, this
+mechanism is explicitly smoke-exposure-dependent (a distinct claim from
+behavior/nicotine-dependence-independence per Prior 1), and IREB2 is never the top L2G
+gene in modern statistical fine-mapping, creating a genuine, unresolved tension between
+mechanistic depth and statistical fine-mapping support.</li>
+<li><strong>HYKK</strong> is CONTESTED and should not be treated as a serious independent candidate: its
+one &quot;top L2G&quot; result is directly undercut by Nedeljkovic 2018's own finding that the
+HYKK-tagging variant's regulatory effects act on IREB2/CHRNA3/PSMA4, not HYKK.</li>
+<li><strong>CHRNA3</strong> is essentially indistinguishable from CHRNA5 by any evidence gathered
+(comparable magnitude, always co-reported, no distinguishing mechanism) — a real
+alternative/co-causal candidate but not separately actionable.</li>
+<li><strong>CHRNB4</strong> is CONTESTED (directionally conflicting effect estimates across populations)
+and is the weakest of the nicotinic subunit genes.</li>
+<li><strong>ACSBG1</strong>, the pipeline's own MAGMA/PoPS pick, has essentially no direct
+genetic-association or colocalization support at this locus in any dataset queried, and
+its one specific immune mechanism (Kanno 2021, Treg mitochondrial fitness in airway
+inflammation, VERIFIED but WEAKENED per skeptic) is in a general allergic-airway model,
+not COPD, with no eQTL/regulatory bridge to this variant. It should not be prioritized
+over the LD-block genes on current evidence, though the Treg mechanism is real biology
+worth independent follow-up regardless of this locus's genetics.</li>
+</ul>
+<p>CHRNA5 is named the top pick because it has the broadest base of convergent evidence
+(replicated statistical association at the exact lead variant, the strongest
+nicotine-dependence genetic signal, plausible non-neuronal lung developmental biology, and
+top L2G status in the plurality of GWAS sampled), but this is explicitly a plurality, not a
+majority or consensus, call. <strong>What would resolve the tie:</strong> a COPD or lung-function GWAS
+formally adjusted for a rich smoking-heaviness/nicotine-dependence covariate (not merely
+pack-years) that shows whether the CHRNA5/PSMA4/IREB2 signals persist, attenuate, or
+disappear; a lung-tissue-specific (not blood) colocalization/fine-mapping analysis with
+enough independent GWAS samples to stop the top-L2G gene from flipping across studies; and
+resolution of whether the Cloonan 2016 Irp2-knockout phenotype is replicated in a model
+that can distinguish nicotine-receptor-independent smoke toxicology from nicotine-receptor
+pharmacology. Given all of this, confidence is marked LOW rather than MODERATE or HIGH —
+the study team should treat CHRNA5, PSMA4, and IREB2 as three live hypotheses, not a
+settled call.</p>
+
+</body>
+</html>

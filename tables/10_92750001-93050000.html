@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>10_92750001-93050000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1092750001-93050000-nearest-gene-exoc6">Evidence table — locus 10:92,750,001-93,050,000 (nearest gene EXOC6)</h1>
+<p>Lead variant: rs10786057 (PIP=0.183, intronic in EXOC6). Candidate genes: EXOC6 (nearest
+gene, FLAMES-prioritized, ABC-prioritized), PCGF5 (PoPS-prioritized). Region GRCh38.</p>
+<p>All rows below use only citations verdict VERIFIED by citation-verifier. Citations marked
+CLAIM_MISMATCH, and the gene marked with a bordering-CONTESTED critique by red-team-skeptic,
+are documented in the companion audit file, not here.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EXOC6</td>
+<td>Statistical genetics (discovery GWAS context)</td>
+<td>UK Biobank + International COPD Genetics Consortium COPD GWAS (82 loci) plausibly underlies this locus's summary statistics; does not name EXOC6 or 10q23.33 specifically</td>
+<td>Sakornsakolpat et al., Nat Genet 2019, PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
+<td>WEAKENED (locus-level, not gene-specific)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>EXOC6</td>
+<td>Structural (developmental, non-pulmonary)</td>
+<td>A 249-363 kb microdeletion of 10q23.33 including EXOC6, CYP26A1, CYP26C1 causes optic nerve aplasia/microphthalmia</td>
+<td>Meire et al., Mol Vis 2011, PMID 21850183</td>
+<td>WEAKENED (non-lung phenotype)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>EXOC6</td>
+<td>Structural (developmental, non-pulmonary)</td>
+<td>A 3.1 Mb de novo deletion at 10q23.31q23.33 spanning EXOC6 (and GPR120/KIF11/CYP26A1/CYP26C1/LGI1) is associated with syndromic obesity, intellectual disability, and microcephaly; no lung phenotype reported</td>
+<td>Turkyilmaz et al., Mol Syndromol 2021, PMID 34421505 / DOI 10.1159/000515400</td>
+<td>WEAKENED (non-lung phenotype)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>EXOC6</td>
+<td>Structural (general epithelial trafficking, kidney)</td>
+<td>The exocyst, including Sec15A/EXOC6, is required for basolateral recycling, apical recycling, and basolateral-to-apical transcytosis in polarized kidney (MDCK) epithelial cells</td>
+<td>Oztan et al., Mol Biol Cell 2007, PMID 17686995 / DOI 10.1091/mbc.e07-02-0097</td>
+<td>WEAKENED (mechanistic plausibility only; not lung tissue)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>EXOC6</td>
+<td>Structural (ciliogenesis, kidney; review)</td>
+<td>EXOC6, via RAB8 binding, is part of the exocyst complex controlling primary ciliogenesis and tubulogenesis in the kidney</td>
+<td>Lipschutz, Kidney Res Clin Pract 2019 (review), PMID 31284362 / DOI 10.23876/j.krcp.19.050</td>
+<td>WEAKENED (renal-focused, indirect analogy to airway cilia)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>EXOC6</td>
+<td>Structural (epithelial signaling, general)</td>
+<td>siRNA knockdown of EXOC6 (Sec15) in epithelial cells impairs EGFR-driven PI3K/AKT activation</td>
+<td>An et al., PNAS 2022, PMID 36417441 / DOI 10.1073/pnas.2208947119</td>
+<td>WEAKENED (not lung-tissue-specific)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>EXOC6</td>
+<td>Structural (tangential, T2D/pancreatic; secondary citing claim)</td>
+<td>Introduction states EXOC6/EXOC6B have been &quot;anticipated as a molecular link between dysfunctional pancreatic islets and ciliated lung epithelium,&quot; relevant to diabetic COVID-19 severity</td>
+<td>Sulaiman et al., Biology (Basel) 2022, PMID 35336762 / DOI 10.3390/biology11030388</td>
+<td>WEAKENED (secondary/citing claim, not primary lung data)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>EXOC6</td>
+<td>Structural (ciliogenesis mechanism)</td>
+<td>EXOC6A interacts with myosin-Va during ciliogenesis, colocalizing at preciliary/ciliary vesicle and transition-zone stages; EXOC6A knockout arrests ciliogenesis at the ciliary-vesicle stage and prevents transition-zone component recruitment</td>
+<td>Lin, Wu &amp; Tang, eLife 2026, PMID 42159049 / DOI 10.7554/eLife.108271</td>
+<td>WEAKENED (mechanistically on-topic for mucociliary-clearance biology per prior #2/#3, but not airway-epithelium-specific; surfaced by red-team-skeptic, not the original researcher pass)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>EXOC6</td>
+<td>Statistical genetics (non-pulmonary trait, incidental)</td>
+<td>rs1112718 in the combined &quot;HHEX/EXOC6&quot; locus (10q23) is associated with fasting/1-hr/2-hr plasma glucose in a Chinese gestational-diabetes-mellitus GWAS — a different variant/signal and a different phenotype than this locus's COPD credible set</td>
+<td>Yue et al. (Chinese GDM GWAS), 2023, PMID 38087213</td>
+<td>WEAKENED (non-pulmonary trait, different signal)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PCGF5</td>
+<td>Statistical genetics (plausible source study, not gene-confirmed)</td>
+<td>GSCAN consortium GWAS of tobacco/alcohol use identified 406 loci for smoking initiation/cessation/heaviness and alcohol use; plausible source of the smoking-initiation L2G signal Open Targets reports for PCGF5, but abstract does not name PCGF5 and this could not be independently confirmed as one of the 406 loci</td>
+<td>Liu et al., Nat Genet 2019 (GSCAN), PMID 30643251 / DOI 10.1038/s41588-018-0307-5</td>
+<td>WEAKENED/bordering CONTESTED (see audit — PCGF5 coordinate mismatch)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PCGF5</td>
+<td>Structural (developmental, non-pulmonary)</td>
+<td>A variant PRC1 complex incorporating PCGF3 and PCGF5 represses Meis2 in the mouse distal forelimb bud, antagonizing retinoic-acid signaling during limb patterning</td>
+<td>Yakushiji-Kaminatsui et al., Development 2018, PMID 30190278 / DOI 10.1242/dev.166348</td>
+<td>WEAKENED/bordering CONTESTED (limb, not lung; see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PCGF5</td>
+<td>Immune (non-COPD-relevant, hematologic malignancy)</td>
+<td>Deregulated PCGF5 (with AUTS2) promotes aberrant NKX6-3 homeobox gene activation in B-cell lymphoma cell lines</td>
+<td>Nagel et al., PLoS ONE 2018, PMID 30308041 / DOI 10.1371/journal.pone.0205537</td>
+<td>WEAKENED/bordering CONTESTED (lymphoid malignancy, not COPD-relevant inflammation; see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CYP26A1 (contextual — not a prioritized candidate at this locus; no credible-set variant, ~23 kb outside the locus 3' boundary)</td>
+<td>Structural (direct disease-tissue finding)</td>
+<td>CYP26A1 mRNA and protein are increased in human emphysema lung tissue and localize to pulmonary microvasculature; retinoic-acid signaling drives angiogenesis in human lung microvascular endothelial cells</td>
+<td>Ng-Blichfeldt et al., Thorax 2017, PMID 28087752 / DOI 10.1136/thoraxjnl-2016-208846</td>
+<td>HOLDS (per skeptic: &quot;the strongest single piece of gene-specific, disease-tissue biology found anywhere in or near this locus,&quot; documented for transparency, not as a locus candidate)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CYP26A1/CYP26C1 (contextual, paralog evidence)</td>
+<td>Structural (developmental, paralog)</td>
+<td>The paralogous retinoic-acid-degrading enzyme Cyp26b1 (not Cyp26a1/Cyp26c1 themselves) is essential for distal airway/alveolar epithelial differentiation in mouse lung development</td>
+<td>Daniel et al., Development 2020, PMID 32001436 / DOI 10.1242/dev.181560</td>
+<td>HOLDS (paralog-family plausibility only, not gene-identical)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p>Ensembl target IDs: EXOC6 = ENSG00000138190; PCGF5 = ENSG00000180628. Disease/trait IDs
+queried: COPD = MONDO_0005002; FEV1/FVC = EFO_0004713; lung function = EFO_0003892; Chronic
+Obstructive Asthma = EFO_0009759; smoking initiation = EFO_0005670; pack years =
+EFO_0006526; nicotine dependence = MONDO_0008575; smoking cessation = EFO_0004319.</p>
+<p><strong>EXOC6:</strong></p>
+<ul>
+<li>L2G / genetic-association evidence (<code>gwas_credible_sets</code> datasource): one record only —
+Chronic Obstructive Asthma (EFO_0009759), L2G score <strong>0.330</strong>. No evidence record for
+COPD, FEV1/FVC, or general lung function individually. No evidence for any
+smoking-related trait (count = 0).</li>
+<li>Overall target-disease association profile (321 total associated diseases, all
+datasources): dominated by non-pulmonary traits (hypothyroidism 0.356, type 2 diabetes
+0.349, pituitary gland disorder 0.343, glaucoma 0.342, etc.); pulmonary/airway-adjacent
+entries present but subordinate — asthma (0.236), lower respiratory tract disorder
+(0.122), Chronic Obstructive Asthma (0.122). No direct COPD or FEV1/FVC entry in the
+top 25.</li>
+<li>Genetic constraint (gnomAD): LoF oe=0.556 (oeLower 0.399, oeUpper 0.788; some LoF
+intolerance), missense oe=0.953 (near-neutral), synonymous oe=1.058 (neutral, as
+expected).</li>
+<li>Colocalization: not resolved in this session (would require a study-locus-specific query
+not attempted given tool-call budget; treat as &quot;not queried,&quot; not &quot;no colocalization
+exists&quot;).</li>
+</ul>
+<p><strong>PCGF5:</strong></p>
+<ul>
+<li>L2G / genetic-association evidence (<code>gwas_credible_sets</code> datasource): no evidence record
+for COPD, FEV1/FVC, lung function, or Chronic Obstructive Asthma (count = 0). One record
+for smoking initiation (EFO_0005670), L2G score <strong>0.676</strong> — notably higher than any
+pulmonary-trait score found for either candidate gene at this locus.</li>
+<li>Overall target-disease association profile (53 total associated diseases, all
+datasources): topped by skeletal abnormality (0.411), facial pain (0.334), alcohol
+drinking (0.259), smoking initiation (0.250); lung adenocarcinoma (0.011) and lung cancer
+(0.004) appear only near the bottom of the list at very low scores. No COPD or FEV1/FVC
+entry.</li>
+<li>Genetic constraint (gnomAD): LoF oe=0.255 (oeLower 0.144, oeUpper 0.479; strongly
+LoF-constrained — more constrained than EXOC6), missense oe=0.557 (constrained),
+synonymous oe=0.869 (roughly neutral).</li>
+<li>Colocalization: not resolved in this session, same caveat as EXOC6.</li>
+</ul>
+<p><strong>Orchestrator follow-up Ensembl REST lookup (also a structured database lookup, not
+literature):</strong> PCGF5 = ENSG00000180628, chromosome 10, 91,162,339-91,284,337 (GRCh38),
+protein_coding. This independently confirms PCGF5 sits ~1.47 Mb centromeric of this
+locus's window start (10:92,750,001) and outside the locus's credible-set boundaries
+entirely — this was done specifically to close a thoroughness gap the red-team-skeptic
+flagged regarding the researcher's UNVERIFIED WebSearch-derived coordinate for PCGF5.</p>
+<p><strong>Locus-architecture fact (from the locus input file and researcher's Ensembl REST
+query, not itself a literature citation):</strong> EXOC6 is the only protein-coding gene
+physically within the strict locus boundary (10:92,826,831-93,059,493); 51 of 54
+credible-set variants, including the lead variant rs10786057 (PIP=0.183) and the
+second-ranked variant rs1033976 (PIP=0.101), map to EXOC6 introns or immediately flanking
+regions. The sole missense credible-set variant, rs1326331 (PIP=0.0127), has no dedicated
+functional-genetics literature identified for it specifically.</p>
+<hr>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>EXOC6 — confidence: LOW.</strong></p>
+<p>EXOC6 is named the top pick, but this is a close call that should not be read as strong
+confidence. The case for EXOC6 rests almost entirely on physical/positional evidence: it is
+the only protein-coding gene inside the strict locus boundary, and 51 of 54 credible-set
+variants — including the lead variant rs10786057 (PIP=0.183) and the second-ranked variant
+(PIP=0.101) — sit in its introns or immediately flanking sequence (see locus-architecture
+fact above). Red-team-skeptic confirmed this is one of the cleaner nearest-gene cases in
+this pipeline precisely because there is no competing protein-coding gene physically in the
+window. Against that, no dedicated GWAS/TWAS/colocalization/MR study linking EXOC6 to COPD
+or lung function was found in the literature search, no lung-tissue-specific or
+COPD-specific functional study exists for EXOC6, and the Open Targets structured lookup
+shows only a weak L2G signal (0.330) for the composite &quot;Chronic Obstructive Asthma&quot;
+phenotype and nothing for COPD, FEV1/FVC, or lung function directly. The general
+exocyst-biology literature (Oztan 2007, Lipschutz 2019 review, An et al. 2022 PNAS, Lin/Wu/
+Tang 2026 eLife on ciliogenesis) establishes plausible epithelial-trafficking and
+ciliogenesis mechanisms per priors #2/#3, but every one of these studies is in kidney,
+generic epithelial, or non-lung ciliogenesis models — none is airway- or lung-tissue-
+specific, and red-team-skeptic marked the gene-level inference WEAKENED on exactly this
+basis. Two researcher-identified citations directly claimed to support EXOC6 (Tanaka 2016,
+Mukerji 2012) were downgraded to CLAIM_MISMATCH by citation-verifier because their actual
+experiments targeted a different exocyst subunit (EXOC4/Sec8) or did not functionally
+validate EXOC6 specifically (see audit file) — removing two pieces of evidence the
+researcher had flagged as only indirect to begin with. No smoking-related-trait evidence
+exists for EXOC6 in Open Targets, so a smoking-mediated (prior #1) explanation is not
+supported for this gene either — the evidence is simply silent on mechanism, not
+adjudicating between direct-lung and smoking-mediated pathways.</p>
+<p><strong>Runner-up: PCGF5 — not favored, and the case against it is substantial.</strong> PCGF5's
+candidacy rests entirely on a PoPS score, with zero credible-set variants annotated to it.
+The orchestrator's independent Ensembl REST lookup confirms PCGF5 sits at
+10:91,162,339-91,284,337 — approximately 1.47 Mb centromeric of this locus's window and
+outside even a widened Ensembl gene-overlap query performed by the researcher. Red-team-
+skeptic rated this gene's evidence WEAKENED, &quot;bordering on CONTESTED,&quot; specifically because
+this coordinate mismatch functions as de facto contradicting evidence that PCGF5 is the
+gene &quot;at&quot; this locus at all — not because any single paper argues against it directly. If
+PCGF5's association is real, the Open Targets pattern (L2G 0.676 for smoking initiation,
+0 for all pulmonary traits) is internally consistent with a smoking-mediated pathway per
+prior #1, and none of PCGF5's verified literature (limb-bud development, B-cell lymphoma
+chromatin biology) connects to COPD-relevant pulmonary or immune pathways. But given the
+physical-distance problem, PCGF5 more plausibly reflects a distinct, more centromeric
+genetic signal (plausibly the GSCAN smoking-initiation locus) than the gene regulated by
+this locus's fine-mapped COPD credible set.</p>
+<p><strong>What would resolve this:</strong> a lung-tissue (ideally airway epithelial or ciliated-cell)
+eQTL/sQTL colocalization analysis of the credible-set variants against EXOC6 expression
+would substantially strengthen or weaken the EXOC6 call — the current evidence never rises
+above positional dominance plus non-lung mechanistic plausibility. For PCGF5, confirming or
+ruling out whether it is genuinely among the GSCAN GWAS's 406 smoking-related loci (the
+Open Targets L2G signal implies it might be, but this was not independently confirmed in
+the literature) would clarify whether it belongs to this locus's biology at all or is an
+artifact of PoPS's genome-wide similarity scoring picking up a nearby-but-distinct locus.
+Given the LOW confidence in EXOC6 and the substantive, unresolved positional problem with
+PCGF5, the study team should treat this locus as needing functional follow-up (lung eQTL/
+coloc at minimum) before either gene is treated as established.</p>
+
+</body>
+</html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>11_107100001-107550000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-11107100001-107550000-grch38">Evidence table — locus 11:107,100,001-107,550,000 (GRCh38)</h1>
+<p>Lead variant: rs1388168 (11:107267191, intergenic_variant, PIP=0.584). Credible set is
+entirely intergenic/intronic (no missense or splice-donor/acceptor variants); high-PIP mass
+(rs1388168, rs12224337, rs10789590, rs7931436; combined PIP ~0.97) clusters ~50-60 kb
+upstream (telomeric) of CWF19L2's 5' end. Internal pipeline candidates: nearest/FLAMES/MAGMA
+= CWF19L2; PoPS = ALKBH8; ABC = NA. An Ensembl region overlap lookup confirmed these are the
+only two protein-coding genes physically in the region (plus two pseudogenes and one lncRNA,
+not pursued as candidates).</p>
+<p>Only citations with verifier verdict <strong>VERIFIED</strong> are included below. Citations marked
+CLAIM_MISMATCH, RETRACTED, or NOT_FOUND are listed in the audit appendix
+(<code>audits/11_107100001-107550000_audit.md</code>), not here.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CWF19L2</td>
+<td>Statistical genetics (background/consortium context, not locus-specific)</td>
+<td>Established ~82 reference COPD GWAS loci from UK Biobank + ICGC COPD Genetics Consortium (35,735 cases / 222,076 controls), summary statistics not adjusted for smoking; abstract does not confirm this specific 11q22.3 locus was among the 82 reported</td>
+<td>Sakornsakolpat et al., Nat Genet 2019, PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
+<td>WEAKENED (gene-level)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CWF19L2</td>
+<td>Structural/molecular mechanism (non-pulmonary)</td>
+<td>CWF19L2 is a spliceosome-associated protein loaded into the intron lariat spliceosome (ILS) late in the splicing cycle and required, as potently as DBR1, for debranching intron-derived lariat RNAs</td>
+<td>Oshima et al., Biochem Biophys Res Commun 2025, PMID 41422678 / DOI 10.1016/j.bbrc.2025.153160</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CWF19L2</td>
+<td>Structural/developmental (non-pulmonary — testis)</td>
+<td>Germline-conditional Cwf19l2 knockout mice show male sterility and impaired spermatogenesis (increased apoptosis, decreased differentiated spermatogonia/spermatocytes) via dysregulated alternative splicing of spermatogenesis/splicing-factor genes</td>
+<td>Wang et al., Advanced Science 2024, PMID 38889293 / DOI 10.1002/advs.202403866</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CWF19L2</td>
+<td>Structural/mechanistic (non-pulmonary — retina, incidental finding)</td>
+<td>Rod-photoreceptor-specific splicing dysregulation of CWF19L2 occurs downstream of Muller glia CLRN1 loss in a retinal degeneration (Usher syndrome type 3A) model</td>
+<td>Lee et al., Invest Ophthalmol Vis Sci 2026, PMID 42390169 / DOI 10.1167/iovs.67.8.9</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CWF19L2</td>
+<td>Disambiguation (rules out an alternative rationale, not supporting evidence)</td>
+<td>The SCAR17 autosomal-recessive spinocerebellar ataxia/intellectual-disability/cerebellar-atrophy syndrome is caused by variants in the paralogous gene CWF19L1, NOT CWF19L2 — cited to explicitly rule out a neurodevelopmental-syndrome rationale being mistakenly applied to CWF19L2 at this locus</td>
+<td>Phulpagar et al., J Hum Genet 2023, PMID 37752213 / DOI 10.1038/s10038-023-01195-5</td>
+<td>WEAKENED (context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CWF19L2</td>
+<td>Disambiguation (rules out an alternative rationale, not supporting evidence)</td>
+<td>Same disambiguation — CWF19L1-related disorder (developmental delay, ataxia, cerebellar atrophy, early-onset epilepsy), not CWF19L2</td>
+<td>Alvarez et al., Clin Genet 2023, PMID 36453471 / DOI 10.1111/cge.14275</td>
+<td>WEAKENED (context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CWF19L2</td>
+<td>Disambiguation (rules out an alternative rationale, not supporting evidence)</td>
+<td>Same disambiguation — exome sequencing identifies a CWF19L1 (not CWF19L2) mutation associated with intellectual disability and cerebellar atrophy</td>
+<td>Evers et al., Am J Med Genet A 2016, PMID 27016154 / DOI 10.1002/ajmg.a.37632</td>
+<td>WEAKENED (context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ALKBH8</td>
+<td>Structural/lung biology (mouse, most directly lung-relevant finding for either candidate gene at this locus)</td>
+<td>Alkbh8-deficient mouse lungs show increased basal oxidative stress markers, decreased thioredoxin reductase (a selenoprotein) protein levels, reprogrammed stress-response transcription, increased susceptibility to naphthalene (a tobacco-smoke-relevant PAH)-induced lung damage/death, and failure to develop the tolerance to repeated naphthalene exposure seen in wild-type mice</td>
+<td>Leonardi et al., Epigenetics 2020, PMID 32303148 / DOI 10.1080/15592294.2020.1750213</td>
+<td>WEAKENED, bordering CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ALKBH8</td>
+<td>Structural/mechanistic review (non-lung-specific)</td>
+<td>ALKBH8 is a tRNA-modifying &quot;writer&quot; required for selenoprotein synthesis; ALKBH8 deficiency, by lowering antioxidant selenoprotein levels, is proposed to drive oxidative-stress-associated cellular senescence</td>
+<td>Lee et al., Exp Biol Med 2022 (review), PMID 36036467 / DOI 10.1177/15353702221116592</td>
+<td>WEAKENED, bordering CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ALKBH8</td>
+<td>Immune/inflammatory (non-pulmonary, bioinformatic/correlative)</td>
+<td>ALKBH8 is among differentially expressed RNA-modification genes correlated with immune-cell infiltration in osteoarthritis (a nonspecific, cross-disease bioinformatic pattern, not a lung- or COPD-specific immune role)</td>
+<td>Chen et al., Front Immunol 2023, PMID 37006267 / DOI 10.3389/fimmu.2023.1019445</td>
+<td>WEAKENED, bordering CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ALKBH8</td>
+<td>Structural/developmental (non-pulmonary Mendelian disease association)</td>
+<td>Biallelic truncating/missense ALKBH8 variants cause autosomal-recessive neurodevelopmental disorder (MRT71 syndrome); a third kindred with a truncating variant &quot;firmly establishes ALKBH8 as a novel neurodevelopmental disease gene&quot;</td>
+<td>Saad et al., Am J Med Genet A 2021, PMID 33544954 / DOI 10.1002/ajmg.a.62100</td>
+<td>WEAKENED, bordering CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ALKBH8</td>
+<td>Structural/developmental (non-pulmonary Mendelian disease association)</td>
+<td>A novel biallelic missense ALKBH8 variant is associated with syndromic intellectual disability, developmental delay, dysmorphic features, and postaxial polydactyly</td>
+<td>Waqas et al., Front Genet 2022, PMID 35571055 / DOI 10.3389/fgene.2022.878274</td>
+<td>WEAKENED, bordering CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — NOT a verified literature citation)</h2>
+<p>Source: Open Targets Platform GraphQL API, queried directly by synthesis-lead. Disease
+context: chronic obstructive pulmonary disease, MONDO_0005002. This section did not pass
+through citation-verifier or red-team-skeptic; it is a structured database query result,
+reported here for context alongside — not merged into — the verified literature table above.
+Full detail in <code>evidence_tables/_status/11_107100001-107550000/opentargets.md</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>L2G / genetic-association score (COPD)</th>
+<th>Colocalization evidence</th>
+<th>Genetic constraint (gnomAD LOEUF/oe)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CWF19L2 (ENSG00000152404)</td>
+<td>0.190 overall (0.313 via <code>gwas_credible_sets</code> datasource — only contributing datasource)</td>
+<td>Two CWF19L2 exon-usage QTLs (GTEx adipose-visceral, GEUVADIS LCL) colocalize with COPD GWAS study GCST90476027 (&quot;Chronic airway obstruction,&quot; PheCode 496), H4 = 0.995 (GTEx) and 0.906 (GEUVADIS); both credible sets also show weaker/mixed colocalization with unrelated traits (pulse pressure, diastolic BP, hypertension, physical activity)</td>
+<td>LOEUF (oe) = 0.792, 90% CI 0.612-1.035, bin 3 (&quot;low&quot; constraint — not strongly LoF-intolerant)</td>
+</tr>
+<tr>
+<td>ALKBH8 (ENSG00000137760)</td>
+<td>0.0202 overall (0.0332 via <code>gwas_credible_sets</code>) — roughly 10x weaker than CWF19L2</td>
+<td>None found. All 26 target-linked credible sets (molQTLs) for ALKBH8 returned <code>colocalisation.count = 0</code></td>
+<td>LOEUF (oe) = 0.578, 90% CI 0.425-0.797, bin 2 (&quot;medium&quot; constraint — somewhat more LoF-constrained than CWF19L2, but neither gene is highly constrained, i.e. LOEUF &lt; 0.35)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>CWF19L2 — Confidence: LOW</strong></p>
+<p>CWF19L2 is the best-supported candidate at this locus, but the support is thin and the
+confidence level should not be overstated. The case rests almost entirely on the Open
+Targets structured database evidence above, not on the verified literature table: CWF19L2
+is simultaneously the nearest gene, the FLAMES-prioritized gene, and the MAGMA-prioritized
+gene, and its exon-usage QTLs in two independent datasets (GTEx adipose, GEUVADIS LCL)
+colocalize with a COPD GWAS signal at high posterior probability (H4 up to 0.995) — while
+Open Targets found precisely zero colocalizing molecular QTLs for the only other
+protein-coding gene physically in the region, ALKBH8, whose L2G score is ~10x weaker and
+which is only PoPS-prioritized (a genome-wide, non-locus-specific method). The red-team
+critique concurred that this differential (coloc present vs. absent; L2G 0.190 vs. 0.020;
+three-method convergence vs. one) is genuinely gene-discriminating and not simply LD/
+nearest-gene bias, since ALKBH8 sits even farther from the credible set and still shows no
+molecular QTL signal of its own.</p>
+<p>However, every verified literature citation for CWF19L2 is non-pulmonary (spliceosome
+lariat-RNA debranching, mouse spermatogenesis, an incidental retinal-splicing finding), and
+no PubMed/bioRxiv/WebSearch query by either the researcher or the red-team-skeptic found
+any COPD-, spirometry-, or smoking-specific publication naming CWF19L2. The colocalizing
+QTLs themselves are in adipose and lymphoblastoid tissue, not lung, so tissue relevance to
+COPD biology is inferred, not demonstrated. The red-team-skeptic's verdict for CWF19L2 was
+WEAKENED specifically on these grounds: &quot;statistically prioritized, mechanistically
+unconfirmed in lung.&quot; Smoking-mediation could not be ruled in or out — GSCAN smoking-GWAS
+summary statistics were never directly queried by researcher or skeptic (both flagged this
+as an unresolved gap), and GWAS Catalog lookups for the lead variant returned no trait
+associations at all (though this specific negative result could not be independently
+confirmed by the skeptic due to an API error).</p>
+<p>The runner-up, ALKBH8, is weaker on every statistical-genetics axis (no colocalization,
+~10x lower L2G, not nearest/FLAMES/MAGMA-prioritized, farther from the credible set) but
+contributes the single most directly lung-relevant mechanistic finding of either candidate:
+Alkbh8-deficient mouse lungs show oxidative stress, reduced selenoprotein levels, and
+heightened susceptibility to naphthalene (a tobacco-smoke-relevant PAH)-induced lung
+injury. This is a mouse toxicology study with no human genetic or COPD-specific
+corroboration, and the red-team-skeptic rated ALKBH8 WEAKENED bordering CONTESTED — not
+because a rival gene was found to independently implicate ALKBH8 by name, but because the
+statistical-genetics evidence actively argues against it relative to its neighbor.</p>
+<p><strong>What would resolve this call:</strong> a lung-tissue-specific eQTL/sQTL colocalization for
+CWF19L2 (the existing colocalizations are adipose/LCL, not airway or lung parenchyma); any
+direct COPD case-control, spirometry (FEV1/FEV1-FVC), or smoking-behavior GWAS/TWAS/MR
+publication naming either gene; and a direct query of GSCAN smoking-initiation/cessation/
+heaviness summary statistics at this locus to assess smoking-mediation, none of which were
+available within this review's tool access. Given the total absence of COPD-specific human
+literature for the top candidate and the reliance on cross-tissue statistical colocalization
+alone, confidence is marked LOW rather than MODERATE or HIGH despite the clear statistical
+edge over the only other gene physically in the region.</p>
+
+</body>
+</html>

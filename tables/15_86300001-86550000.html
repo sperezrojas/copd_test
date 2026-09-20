@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>15_86300001-86550000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1586300001-86550000-grch38">Evidence table — Locus 15:86,300,001-86,550,000 (GRCh38)</h1>
+<p>Lead variant: rs1431229 (15:86,440,548, intron_variant, AGBL1, MODIFIER impact). Candidate
+genes: AGBL1 (nearest gene; sole gene overlapping all 89 ABF fine-mapping credible-set
+variants, all intronic/MODIFIER, none missense/splice); KLHL25 (MAGMA-prioritized,
+PoPS-prioritized; gene body ~505-645 kb outside the stated locus window/credible set).</p>
+<p>Only citations with verifier verdict VERIFIED are included below. See
+<code>audits/15_86300001-86550000_audit.md</code> for excluded citations and full red-team critique.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AGBL1</td>
+<td>Statistical genetics (off-target disease link)</td>
+<td>Nonsense AGBL1 mutation reported to cause dominant Fuchs endothelial corneal dystrophy (FECD) via linkage+sequencing in a 3-generation family; AGBL1 protein reported to interact with TCF4; AGBL1 expression in corneal endothelium claimed by IHC. Unrelated to lung/COPD; this founding claim was subsequently contradicted (see next 4 rows).</td>
+<td>PMID 24094747 / DOI 10.1016/j.ajhg.2013.08.010</td>
+<td>WEAKENED (bordering CONTESTED) — founding &quot;disease gene&quot; claim later rebutted</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AGBL1</td>
+<td>Statistical genetics (rebuttal)</td>
+<td>Systematic review found no AGBL1 variant meets pathogenic criteria for FECD; per transcriptome data AGBL1 is NOT expressed in corneal endothelium, contradicting the founding 2013 claim's premise.</td>
+<td>PMID 37441688 / DOI 10.3389/fmed.2023.1153122</td>
+<td>WEAKENED (bordering CONTESTED)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AGBL1</td>
+<td>Statistical genetics (rebuttal, follow-up)</td>
+<td>Carriers of previously-reported AGBL1 variants and first-degree relatives &gt;50yo showed no FECD phenotype on exam; AGBL1 not expressed in corneal endothelium/progenitor cells in reanalyzed datasets; &quot;do not support a causal role for AGBL1 ... in FECD.&quot;</td>
+<td>PMID 40244234 / DOI 10.3390/ijms26073343</td>
+<td>WEAKENED (bordering CONTESTED)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AGBL1</td>
+<td>Structural (rebuttal)</td>
+<td>AGBL1 transcript &quot;not detected by RNA-seq or qPCR&quot; in cultured corneal endothelial cells.</td>
+<td>PMID 26337789</td>
+<td>WEAKENED (bordering CONTESTED)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AGBL1</td>
+<td>Statistical genetics (consolidated, largely null/unreplicated FECD screens)</td>
+<td>Multiple independent FECD cohort/candidate-variant screens found largely null, singleton, or unreplicated AGBL1 variants, further undermining the corneal-dystrophy causal claim (unrelated to COPD; included only for context on AGBL1's track record as a repeatedly-nominated-then-walked-back candidate gene).</td>
+<td>PMIDs 31555324, 30973406, 30267097, 26310151, 33063975, 34130750, 42010886, 42180433</td>
+<td>WEAKENED (bordering CONTESTED) — context only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AGBL1</td>
+<td>Statistical genetics (cross-trait pleiotropy)</td>
+<td>AGBL1-region SNP (rs2469184, p=3.6e-8; different variant than this locus's lead SNP) associated with activated partial thromboplastin time (aPTT), a coagulation trait, in a GWAS meta-analysis.</td>
+<td>PMID 22703881 / DOI 10.1016/j.ajhg.2012.05.009</td>
+<td>WEAKENED (bordering CONTESTED) — supports pleiotropy/vascular-confound concern</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AGBL1</td>
+<td>Statistical genetics (cross-trait pleiotropy)</td>
+<td>AGBL1 SNPs associated with carotid plaque presence/area in a family-based study, with partial replication in an independent Dominican subcohort.</td>
+<td>PMID 22503546 / DOI 10.1016/j.atherosclerosis.2012.03.025</td>
+<td>WEAKENED (bordering CONTESTED) — supports pleiotropy/vascular-confound concern</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AGBL1</td>
+<td>Statistical genetics (lung disease, not COPD)</td>
+<td>AGBL1 SNP rs4513061 (not in this locus's credible set) associated with reduced lung cancer risk in nonsmoking Chinese women; no significant smoking-interaction effect detected.</td>
+<td>PMID 31603707 / DOI 10.1089/dna.2019.4851</td>
+<td>NONSPECIFIC — different variant, different disease (lung cancer, not COPD)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AGBL1</td>
+<td>Statistical genetics (lung disease, exploratory bioinformatics)</td>
+<td>Bioinformatic ceRNA network analysis of TCGA data nominates AGBL1 mRNA as differentially expressed/prognostic between smoking- and nonsmoking-associated lung squamous cell carcinoma.</td>
+<td>PMID 31885738 / DOI 10.1155/2019/5292787</td>
+<td>NONSPECIFIC — correlative, exploratory, lung cancer not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AGBL1</td>
+<td>Structural / lung-tissue expression</td>
+<td>Single-cell RNA-seq of mouse lung (air-pollution acute-lung-injury study) identifies Agbl1 as one of six marker genes (with Sftpc, Sftpa1, Mzb1, B3gnt5, Cacna1e) of a type-II alveolar epithelial cell (AECII) cluster in control-group mice.</td>
+<td>PMID 40437524 / DOI 10.1186/s12931-025-03256-z</td>
+<td>WEAKENED — only lung-tissue-expression evidence found; incidental marker-gene finding, not a functional study of AGBL1 in this cell type</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AGBL1</td>
+<td>Statistical genetics (low-relevance, non-lung pleiotropy, consolidated)</td>
+<td>AGBL1-region signals also reported (mostly non-genome-wide-significant or unreplicated) in learning-performance/specific-learning-disorder GWAS, autism case-parent-triad GWAS (non-GWS), unreplicated schizophrenia candidate-gene study, suggestive (non-GWS) anti-CMV antibody titer association, and cattle/sheep agricultural GWAS/eQTL — cross-species/non-specific findings of minimal relevance to human COPD.</td>
+<td>PMIDs 27859682, 31647196, 29372809, 21993531, 41227413, 34002409, 37628647</td>
+<td>NONSPECIFIC</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLHL25</td>
+<td>Structural / molecular mechanism</td>
+<td>CUL3-KLHL25 complex ubiquitinates and degrades ACLY (ATP-citrate lyase) in cells including the lung adenocarcinoma line A549; low CUL3 expression (implying reduced KLHL25-mediated ACLY turnover) associated with high ACLY expression and poor prognosis in human lung cancer.</td>
+<td>PMID 27664236 / DOI 10.1101/gad.283283.116</td>
+<td>WEAKENED / NONSPECIFIC — foundational biochemistry using lung-derived cells, but disease context is lung cancer, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLHL25</td>
+<td>Immunology/inflammation</td>
+<td>TGFβ1 stimulation of naive T cells induces CUL3-KLHL25-mediated ACLY ubiquitination/degradation, lowering malonyl-CoA and de-repressing fatty-acid oxidation, required for induced Treg (iTreg) differentiation; proposes a TGFβ1-CUL3-KLHL25-ACLY axis regulating iTreg differentiation and immune homeostasis.</td>
+<td>PMID 34491895 / DOI 10.7554/eLife.62394</td>
+<td>WEAKENED (bordering NONSPECIFIC) — real, mechanistically detailed T-cell biology relevant to Prior #3, but not COPD-specific and done in mouse/in-vitro systems, not lung tissue or COPD patients</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLHL25</td>
+<td>Immunology/inflammation</td>
+<td>Follow-up: TGFβ1-activated JNK (recruited to Klhl25 promoter by NF-YA) transcriptionally induces Klhl25 driving a fatty-acid-synthesis-to-oxidation metabolic switch for iTreg differentiation; IL-6/ERK-mediated NF-YA phosphorylation shuts off Klhl25 transcription, favoring Th17 differentiation instead — KLHL25 proposed as an iTreg/Th17 fate-determination molecular switch.</td>
+<td>PMID 40119138 / DOI 10.1038/s42003-025-07917-z</td>
+<td>WEAKENED (bordering NONSPECIFIC) — same caveats as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLHL25</td>
+<td>Immunology/inflammation (correlative)</td>
+<td>Reanalysis of a small (n=10 total samples) public microarray dataset of allergic-asthmatic vs. control alveolar macrophage transcriptomes identifies KLHL25 as one of 14 &quot;core&quot; upregulated differentially expressed genes in a protein-interaction-network module distinguishing asthmatic from control macrophages.</td>
+<td>PMID 34895422 / DOI 10.3760/cma.j.cn112137-20210607-01293</td>
+<td>WEAKENED (bordering NONSPECIFIC) — allergic asthma (Th2-skewed), not COPD; small n; purely correlative bioinformatics</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLHL25</td>
+<td>Immunology/inflammation (correlative, epigenetic)</td>
+<td>Epigenome-wide meta-analysis across 3 pediatric cohorts (EVA-PR, Project Viva, PIAMA) finds a CpG site annotated to KLHL25 (1 of 12 genes/CpGs total) associated with atopic asthma at FDR p&lt;0.05 in nasal epithelial DNA methylation.</td>
+<td>PMID 33751861 / DOI 10.1002/ppul.25372 (preprint: PMID 33173928 / DOI 10.1101/2020.11.03.20225250)</td>
+<td>WEAKENED (bordering NONSPECIFIC) — pediatric atopic asthma, not COPD; correlative methylation-disease association only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLHL25</td>
+<td>Structural/molecular (specificity caveat)</td>
+<td>KLHL25-CUL3 also targets hypophosphorylated 4E-BP1 for degradation, establishing a second substrate beyond ACLY and a general (non-immune-lineage-restricted) role in translational/metabolic homeostasis.</td>
+<td>PMID 22578813 / DOI 10.1016/j.molcel.2012.04.004</td>
+<td>NONSPECIFIC — undermines claim of immune-lineage-specific function</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLHL25</td>
+<td>Statistical genetics (low-relevance, consolidated)</td>
+<td>KLHL25 appears incidentally across multiple unrelated cancer/disease exome-sequencing and bioinformatics gene-panel studies (glioma neddylation prognostic signature, NSCLC EMT prognostic panel, gastric cancer interactome analysis, medullary thyroid cancer exome sequencing, tick-borne encephalitis susceptibility exome screen) without functional follow-up in any of them.</td>
+<td>PMIDs 39127414, 34827193, 35600357, 30120715, 31122248</td>
+<td>NONSPECIFIC</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>Ensembl ID</th>
+<th>gnomAD constraint</th>
+<th>COPD association (MONDO_0005002)</th>
+<th>L2G at this locus's own credible set</th>
+<th>FEV1/FVC (EFO_0004713) L2G</th>
+<th>FEV1 (EFO_0004314) L2G</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AGBL1</td>
+<td>ENSG00000273540</td>
+<td>LoF-tolerant (z=0, oe~1.13); missense z=-2.63</td>
+<td>Association score 0.25 (genetic_association datatype 0.41) — only candidate gene with any COPD-term evidence</td>
+<td>0.68 (top L2G gene at credible set for &quot;Chronic airway obstruction&quot; GWAS GCST90476027, anchored at lead variant rs1431229). <strong>Caveat: the identical credible set/variant is also the top L2G hit, same score 0.68, for a diastolic blood pressure GWAS (GCST90475252) — an unresolved cross-trait/pleiotropy signal.</strong></td>
+<td>No evidence (0 rows)</td>
+<td>No evidence (0 rows)</td>
+</tr>
+<tr>
+<td>KLHL25</td>
+<td>ENSG00000183655</td>
+<td>LoF-tolerant (z~0, oe~1.34); missense z=-1.43</td>
+<td>No evidence (0 rows) for this disease term</td>
+<td>Not applicable — gene body sits ~505-645 kb outside this locus's window/credible set; not confirmed to share this locus's causal variant(s)</td>
+<td>0.88 (gwas_credible_sets datasource; specific underlying variant/study could not be resolved via available tooling)</td>
+<td>0.17</td>
+</tr>
+</tbody>
+</table>
+<p>Both genes are located on chromosome 15. AGBL1's gene body and all 89 ABF-fine-mapped
+credible-set variants fall within/near the stated locus window; KLHL25 does not physically
+overlap the window and its prioritization (MAGMA, PoPS) is a genome-wide statistical/
+functional-similarity signal, not direct positional overlap.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>AGBL1 — LOW confidence.</strong></p>
+<p>This is a close call between two genes whose evidence sets point in different directions,
+and neither one clears a high bar. AGBL1 has the only positional/fine-mapping claim to this
+locus's actual credible set (all 89 variants are AGBL1 introns) and the only Open Targets
+COPD-disease-term evidence at this locus (L2G 0.68, association score 0.25). But that
+statistical case is weakened by several independent lines in the evidence table above: (1)
+the identical fine-mapped variant is equally the top L2G hit for diastolic blood pressure
+(Open Targets summary, unresolved cross-trait signal that no literature source could
+corroborate or refute — see researcher's rs1431229 lookup, zero PubMed/GWAS-Catalog hits);
+(2) AGBL1 has zero Open Targets evidence for FEV1 or FEV1/FVC, meaning no spirometric
+concordance despite Prior #2's expectation that a genuine pulmonary-biology signal should
+show this; (3) AGBL1's only prior track record as a nominated &quot;disease gene&quot; (Fuchs
+corneal dystrophy) was built on statistical/linkage evidence and has since been
+independently and repeatedly walked back on both genetic and expression grounds (PMIDs
+37441688, 40244234, 26337789), which the red-team-skeptic explicitly flagged as relevant
+context for weighing a similarly statistical (fine-mapping/L2G) causal claim at a new
+disease; (4) no immune/inflammatory mechanism (Prior #3) and no airway/mucociliary
+mechanism has been established for AGBL1 despite biochemical plausibility (tubulin
+deglutamylation) — this remains an unsupported hypothesis, not a finding; (5) AGBL1-region
+variants (albeit different specific SNPs than this locus's credible set) recur across
+several vascular/hematologic trait associations (aPTT, carotid plaque), reinforcing a
+pattern of pleiotropy rather than lung-specific biology.</p>
+<p>KLHL25 is the runner-up and cannot be ruled out: it has the strongest single quantitative
+signal in this locus's whole evidence base (FEV1/FVC L2G = 0.88, exceeding AGBL1's COPD
+L2G of 0.68) and a mechanistically well-supported immune function (CUL3-KLHL25-ACLY axis
+switching CD4+ T cells between iTreg and Th17 fates, PMID 34491895, PMID 40119138) that is
+thematically consonant with Prior #3's emphasis on T-cell program heterogeneity in COPD.
+But KLHL25's gene body sits 505-645 kb outside this locus's stated window and credible
+set, and it has zero Open Targets evidence for the COPD disease term itself — its
+prioritization rests entirely on MAGMA/PoPS (genome-wide statistical/similarity methods
+that can reach outside the fine-mapped interval) plus an FEV1/FVC signal whose underlying
+variant could not be confirmed (by either Open Targets or literature search) to be the
+same causal variant(s) as this locus's own credible set. Its immune mechanism, while real,
+was established in generic T-cell systems and lung-adenocarcinoma cell lines, never in
+COPD lung tissue or patients, and its only airway-correlative data are in allergic/atopic
+asthma (a distinct, largely Th2-skewed program) rather than COPD's more typical
+neutrophilic/Tc1/Tc17-dominated inflammation. KLHL25 is also demonstrably not
+immune-lineage-restricted (PMID 22578813, general translational-control role via 4E-BP1),
+further diluting the specificity of its immune story.</p>
+<p><strong>What would resolve this tie:</strong> (a) direct confirmation — e.g., colocalization analysis
+or shared credible-set membership — of whether KLHL25's FEV1/FVC association and this
+locus's COPD credible set share the same causal variant(s), rather than being two
+independent nearby signals; (b) an eQTL/chromatin-interaction (e.g., GTEx lung, Hi-C) check
+of whether this locus's credible-set variants regulate AGBL1, KLHL25, or a different gene
+entirely (per red-team-skeptic's alternative hypothesis that a large intronic region like
+AGBL1's could harbor a distal regulatory element acting on a non-adjacent gene, as seen at
+other GWAS loci); (c) a direct check of this locus's credible-set variants against smoking-
+initiation/cessation/heaviness GWAS summary statistics (not just published literature,
+which found nothing) to more rigorously exclude Prior #1; (d) COPD-specific (not
+FEV1/FVC-only) functional or expression evidence for KLHL25, or spirometry-specific
+evidence for AGBL1, to break the current spirometry/credible-set-overlap mismatch that is
+this locus's central finding. Given all of this, confidence is marked LOW rather than
+MODERATE or HIGH, and the study team should treat this as an open call between AGBL1 and
+KLHL25 (with a live possibility that neither is the true effector gene) rather than a
+settled recommendation.</p>
+
+</body>
+</html>

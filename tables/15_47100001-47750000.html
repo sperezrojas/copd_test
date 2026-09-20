@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>15_47100001-47750000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-locus-evidence-table--1547100001-47750000-sema6d">COPD locus evidence table — 15:47,100,001-47,750,000 (SEMA6D)</h1>
+<p><strong>Lead variant:</strong> rs59321834 (PIP=0.52, intronic/non-coding-transcript variant, 15:47,392,528)
+<strong>Candidate genes (all internal methods converge on one gene):</strong> SEMA6D (nearest gene, FLAMES, MAGMA, PoPS). ABC = NA.
+<strong>Note on locus structure:</strong> SEMA6D is the only protein-coding gene in this ~650kb region (confirmed by researcher via Ensembl region query); all other overlapping features are lncRNAs, a processed pseudogene, and a misc_RNA. No competing protein-coding candidate exists at this locus.</p>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SEMA6D</td>
+<td>Statistical genetics (COPD GWAS, background)</td>
+<td>Major prior COPD GWAS (82 loci; UKB+ICGC, 35,735 cases/222,076 controls; SpiroMeta lung-function replication). Whether SEMA6D/15q21 is among the 82 reported loci is UNCONFIRMED by researcher or verifier.</td>
+<td>Sakornsakolpat et al. 2019, Nat Genet, PMID 30804561, DOI 10.1038/s41588-018-0342-2</td>
+<td>UNRESOLVED / open gap — do not assume this locus was a discovery hit in this paper</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SEMA6D</td>
+<td>Statistical genetics (smoking, background only — SEMA6D not itself named in this paper)</td>
+<td>GSCAN consortium smoking/alcohol GWAS (up to 1.2M individuals); genes in nicotinic/dopaminergic/glutamatergic neurotransmission implicated for tobacco initiation/cessation/heaviness.</td>
+<td>Liu et al. 2019, Nat Genet, PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
+<td>SUPPORTED as background context only; verifier confirmed SEMA6D is NOT named in this paper's abstract</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SEMA6D</td>
+<td>Statistical genetics (smoking)</td>
+<td>Gene-prioritization strategy in an independent African-ancestry cohort (n=10,558) explicitly highlighted SEMA6D, &quot;previously described as associated with several smoking behaviour traits,&quot; among smoking initiation/cessation genes.</td>
+<td>Piga et al. 2022, Sci Rep, PMID 36335192, DOI 10.1038/s41598-022-22218-9</td>
+<td>SUPPORTED — cross-ancestry replication of smoking-behavior link</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SEMA6D</td>
+<td>Statistical genetics / MR (smoking neurobiology)</td>
+<td>UK Biobank Mendelian randomization: causal pathway from smoking to striatal iron content via genes involved in synaptogenesis/plasticity including SEMA6D (also BAI3, TENM2).</td>
+<td>Trofimova et al. 2026, Addiction, PMID 41619226, DOI 10.1111/add.70311</td>
+<td>SUPPORTED — direct mechanistic link to smoking-related neuroadaptation, not lung biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SEMA6D</td>
+<td>Statistical genetics (smoking/psychiatric)</td>
+<td>Shared cannabis+cigarette-smoking+schizophrenia genetic factor gene-level/fine-mapping analysis highlights SEMA6D (with NCAM1, PHC2) as a risk gene enriched in cortex/neuron/dendritic-spine gene sets.</td>
+<td>Song et al. 2022, Psychiatry Research, PMID 35235886, DOI 10.1016/j.psychres.2022.114453</td>
+<td>SUPPORTED as neurobehavioral pleiotropy evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SEMA6D</td>
+<td>Statistical genetics (externalizing/substance use)</td>
+<td>SEMA6D among top-5 genes (with CADM2) in an &quot;externalizing dimension&quot; (ADHD, conduct disorder, antisocial personality, substance use disorders) GWAS, also top-10 in an independent externalizing consortium GWAS.</td>
+<td>Konzok et al. 2024, Mol Psychiatry, PMID 39174650, DOI 10.1038/s41380-024-02700-8</td>
+<td>SUPPORTED as broad behavioral-pleiotropy evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SEMA6D</td>
+<td>Statistical genetics (neurological, non-smoking)</td>
+<td>Large restless legs syndrome GWAS/meta-analysis (&gt;15,000 cases) highlights axon-guidance pathway genes &quot;(associated with SEMA6D)&quot; among newly implicated genes. RLS is the single highest disease-association score for SEMA6D in Open Targets (0.440).</td>
+<td>Schormair et al. 2017, Lancet Neurology, PMID 29029846, DOI 10.1016/S1474-4422(17)30327-7</td>
+<td>SUPPORTED as further neurobiological-pleiotropy evidence, unrelated to COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SEMA6D</td>
+<td>Statistical genetics (autoinflammatory disease)</td>
+<td>Korean/Turkish/Japanese GWAS identifies SEMA6D (lead SNP rs4143322) as a novel genome-wide-significant susceptibility locus for Behcet's disease.</td>
+<td>Jung et al. 2023, Dig Liver Dis, PMID 37977914, DOI 10.1016/j.dld.2023.10.021</td>
+<td>CONTESTED / caution flag — lead SNP rs4143322 is a DIFFERENT variant from this locus's lead rs59321834; LD between the two was NOT established (red-team and citation-verifier both ran out of search budget attempting this). Do not treat as corroborating evidence for this locus without an LD check.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SEMA6D</td>
+<td>Statistical genetics (cognitive/neurodegenerative)</td>
+<td>Genome-wide-significant executive-function locus linked to SEMA6D (with GRIN3A) via expression/methylation database integration in APOE-e4 carriers.</td>
+<td>Contreras et al. 2026, Nat Commun, PMID 41720779, DOI 10.1038/s41467-026-68933-z</td>
+<td>SUPPORTED as further CNS-trait pleiotropy evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SEMA6D</td>
+<td>Variant-level (lead variant)</td>
+<td>rs59321834: zero PubMed hits, GWAS Catalog REST API 404 — no independent functional, eQTL, or disease-association literature found outside this pipeline's own fine-mapping input. Pure statistical fine-mapping signal.</td>
+<td>Researcher's dedicated PubMed + GWAS Catalog search (no citation to verify — absence of literature)</td>
+<td>Unresolved by red-team due to search-budget exhaustion; not contradicted</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SEMA6D</td>
+<td>Structural/developmental (lung expression)</td>
+<td>Original murine Sema6d cloning/characterization: expressed mainly in brain and lung; five splice-variant isoforms with tissue-dependent expression; proposed axon-guidance/neuronal-plasticity role.</td>
+<td>Taniguchi &amp; Shimizu 2004, BBRC, PMID 14715272, DOI 10.1016/j.bbrc.2003.12.083</td>
+<td>SUPPORTED — establishes genuine lung-tissue expression, does not establish COPD-relevant function</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SEMA6D</td>
+<td>Structural + immune (lung mechanistic)</td>
+<td>Sema6d-deficient mice show reduced ILC2s in lung/adipose/mesentery; loss of Sema6d suppresses alarmin-driven type-2 cytokine production but increases IL-10 production by lung ILC2s; Sema6d-KO mice resistant to allergic lung inflammation; lung mesenchymal cells express Sema6d acting via Plexin A1 on ILC2s.</td>
+<td>Naito et al. 2022, Life Science Alliance, PMID 36038260, DOI 10.26508/lsa.202201486</td>
+<td>WEAKENED — genuine, verified lung mechanistic finding, but this is Th2/ILC2/allergic-inflammation biology, mechanistically distinct from COPD's typically neutrophilic/CD8+ Tc1-Tc17/macrophage/protease-antiprotease-driven pathology. Should be read as biological plausibility for lung-relevant SEMA6D function in general, NOT as COPD-mechanism evidence. No emphysema/airway-remodeling model evidence exists for SEMA6D.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SEMA6D</td>
+<td>Immune (T-cell biology)</td>
+<td>T-cell stimulation enhances Sema6d expression; Sema6d expressed by T cells during late activation phase; disrupting Sema6d receptor-ligand interactions inhibits late-phase (not early) T-cell proliferation, associated with reduced LAT phosphorylation and reduced CD127 expression.</td>
+<td>O'Connor et al. 2008, PNAS, PMID 18728195, DOI 10.1073/pnas.0803386105</td>
+<td>SUPPORTED as general T-cell immunoregulatory mechanism; not COPD-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SEMA6D</td>
+<td>Immune (cancer model, CD8+ T cell — immunosuppressive direction)</td>
+<td>In head and neck squamous cell carcinoma, Sema6d forward signaling via Plexin-A4 impairs CD8+ T-cell infiltration/activation/proliferation; Sema6d-KO restores anti-PD-1 responsiveness; SEMA6D expression negatively correlates with CD8A/PDCD1/IFNG/GZMB.</td>
+<td>Hirai et al. 2024, JCI Insight, PMID 38329122, DOI 10.1172/jci.insight.166349</td>
+<td>CONTESTED when generalized to COPD — directly contradicted in direction of effect by Shi et al. 2026 below (same Plexin-A4 axis, opposite immune outcome in a different cancer). Cancer-model only, no COPD tissue data.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SEMA6D</td>
+<td>Immune (cancer model, CD4+/CD8+ T cell — immune-activating direction)</td>
+<td>In colorectal cancer, SEMA6D via Plexin A4/IRF9 promotes type I interferon signaling, enhances CD4+/CD8+ T-cell tumor infiltration, acts as a tumor suppressor — opposite immune direction to the HNSCC finding above.</td>
+<td>Shi et al. 2026, Cell Death &amp; Disease, PMID 41735257, DOI 10.1038/s41419-026-08478-7</td>
+<td>CONTESTED when generalized to COPD — see above; illustrates SEMA6D immune effect direction is highly context/tissue-dependent and cannot be used to build a single coherent COPD-immune hypothesis in either direction.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SEMA6D</td>
+<td>Immune (neuroimmune/autoimmune)</td>
+<td>Endothelial-specific Sema6d controls sympathetic nerve distribution in lymphoid organs; endothelial Sema6d-KO mice show cold-specific attenuation of experimental autoimmune encephalomyelitis via altered sympathetic innervation/norepinephrine signaling.</td>
+<td>Mizuno et al. 2026, J Immunol, PMID 41729164, DOI 10.1093/jimmun/vkaf362</td>
+<td>SUPPORTED as further evidence of broad, context-dependent immune biology; not COPD-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SEMA6D</td>
+<td>Structural (expression, cancer context)</td>
+<td>SEMA6D downregulated in lung adenocarcinoma tumor tissue vs. normal lung among genes with SNP-mutation/expression correlation.</td>
+<td>Wang et al. 2020, J Clin Lab Anal, PMID 32672359, DOI 10.1002/jcla.23450</td>
+<td>SUPPORTED as confirmation of adult lung-tissue expression only; cancer context, not COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="excluded-from-evidence-table-see-audit-file-for-full-detail">Excluded from evidence table (see audit file for full detail)</h2>
+<ul>
+<li>PMID 32426239 (toxicology/microRNA review) — excluded: incidental glossary-only mention of SEMA6D, not substantive.</li>
+<li>PMIDs 39061999, 35605459, 42605754 (bladder, renal, pancreatic cancer biomarker papers) — noted as existing but excluded from the table as low-relevance to COPD; see audit file.</li>
+</ul>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p><strong>Gene: SEMA6D (ENSG00000137872)</strong></p>
+<ul>
+<li><strong>Genetic constraint:</strong> pLoF strongly constrained, LOEUF (oe) = 0.287 (oeLower 0.211, oeUpper 0.396; observed 27 LoF variants vs. 94 expected) — behaves like a dosage-sensitive/essential gene. Missense oe = 0.837 (mild constraint). Synonymous oe = 0.972 (unremarkable, as expected).</li>
+<li><strong>COPD association (L2G/overall association score):</strong> 0.268 overall (MONDO_0005002), driven entirely by the <code>gwas_credible_sets</code> datasource (score 0.441). Two independent evidence records contribute, with resourceScore (L2G-like) values of 0.583 and 0.569 — moderate, not high-confidence single-source L2G scores. Underlying variant/study identifiers were not resolvable through the Evidence schema in this API version, so it is unconfirmed whether both evidence records derive from this same locus or from a second, independent COPD-associated signal near SEMA6D.</li>
+<li><strong>Colocalization:</strong> not resolvable through available Evidence schema fields in this API version — a data-source/schema limitation, not evidence of absence.</li>
+<li><strong>Lung-function traits (FEV1, FEV1/FVC):</strong> SEMA6D has NO detectable association with either trait — absent entirely from its full 126-trait Open Targets association list.</li>
+<li><strong>Relative ranking:</strong> COPD (0.268) ranks ~24th of 126 diseases/traits associated with SEMA6D, well below a long list of smoking/nicotine/substance-use/behavioral/neuropsychiatric traits: restless legs syndrome (0.440), ADHD (0.439), substance-related disorder (0.370), smoking initiation (0.368), risk-taking behaviour (0.358), smoking cessation (0.357), cannabis dependence (0.354), insomnia (0.348), cannabis use (0.347), nicotine dependence (0.342), major depressive disorder (0.335), intelligence (0.328), alcohol drinking (0.323), schizophrenia (0.309), autism spectrum disorder (0.275) all score above COPD.</li>
+<li><strong>Full detail:</strong> see <code>evidence_tables/_status/15_47100001-47750000/opentargets.md</code>.</li>
+</ul>
+<h2 id="prioritized-gene-synthesis">Prioritized-gene synthesis</h2>
+<p><strong>Prioritized gene: SEMA6D</strong>
+<strong>Confidence: LOW</strong></p>
+<p>SEMA6D is named by every internal prioritization method (nearest gene, FLAMES, MAGMA, PoPS) and is the only protein-coding gene in this ~650kb interval, so there is no competing candidate to weigh it against — this is a &quot;gene desert&quot; locus in the sense that gene identity is not in question, but the mechanism and even the strength of the causal case are. That distinction matters for the confidence call.</p>
+<p>The verified literature converges strongly and repeatedly on SEMA6D as a smoking-behavior/neurobehavioral pleiotropy gene: independent, cross-ancestry replication in smoking initiation/cessation GWAS (Piga et al. 2022), a direct MR link from smoking to SEMA6D-implicated striatal neurobiology (Trofimova et al. 2026), and further convergent signal across externalizing/substance-use traits (Konzok et al. 2024), restless legs syndrome (Schormair et al. 2017, the single highest-scoring trait for SEMA6D in Open Targets), schizophrenia/cannabis-smoking shared architecture (Song et al. 2022), and cognitive decline (Contreras et al. 2026). This pattern is corroborated independently by Open Targets, where SEMA6D's COPD association score (0.268) ranks well below nearly every smoking- and behavior-related trait score (0.34-0.44), and where SEMA6D shows zero detectable association with FEV1 or FEV1/FVC at all — a direct application of biological prior #2 (absence of spirometric concordance for a COPD-only signal warrants considering alternative pathways).</p>
+<p>However, per the red-team critique, this smoking-mediation story should not be overstated as proven: the smoking-trait GWAS and the (smoking-unadjusted) COPD GWAS draw on overlapping biobank cohorts, so the co-occurrence of signals is not fully independent evidence, and an equally parsimonious alternative is that SEMA6D is a broadly pleiotropic neurodevelopmental/behavioral gene (it is strongly LoF-constrained, LOEUF ~0.29, and shows genome-wide signal across ADHD, RLS, insomnia, MDD, schizophrenia, and cognitive decline) that MAGMA/PoPS gene-set methods enrich for regardless of any specific causal role in lung or smoking biology. Neither the researcher nor the red-team was able to confirm (due to search-budget limits) whether SEMA6D/15q21 is even among the 82 loci reported in the primary COPD GWAS (Sakornsakolpat et al. 2019) — a foundational open gap for this locus.</p>
+<p>The direct lung/immune literature is real but does not resolve the mechanism question: Naito et al. 2022 establishes that lung-mesenchymal-derived SEMA6D regulates ILC2 biology and susceptibility to allergic lung inflammation via Plexin A1, but this is Th2/allergic-endotype biology, distinct from COPD's typically neutrophilic/CD8+ Tc1-Tc17/macrophage-driven pathology (per prior #3, and as the red-team explicitly flagged) — it should be read as general biological plausibility for lung-expressed SEMA6D function, not COPD-mechanism evidence. The broader immune literature (T-cell regulation, cancer-context CD8+ T-cell effects) is genuine but directly contradictory in direction of effect across tissue contexts (immunosuppressive in HNSCC vs. immune-activating in colorectal cancer via the same Plexin-A4 axis) and entirely non-COPD, so it cannot be used to build a coherent COPD-specific immune hypothesis in either direction. A cited Behcet's-disease GWAS association (Jung et al. 2023) uses a different lead variant (rs4143322) than this locus's lead (rs59321834), and LD between the two was not established — this should not be treated as corroborating evidence for this locus.</p>
+<p><strong>Bottom line:</strong> SEMA6D is the only plausible gene at this locus, so there is little value in naming a &quot;runner-up&quot; — but the causal mechanism (smoking-behavior-mediated versus direct pulmonary/immune biology versus generic neurobehavioral pleiotropy unrelated to COPD at all) remains genuinely unresolved, and the case for a direct pulmonary mechanism is specifically weak (no FEV1/FEV1FVC signal, no emphysema/airway-remodeling model data, contradictory immune-direction evidence, wrong immune endotype in the one strong lung mechanistic paper). What would resolve this: (1) confirmation of whether this locus/SEMA6D is among the discovery loci in Sakornsakolpat et al. 2019 or a more recent COPD GWAS meta-analysis; (2) a smoking-adjusted or MR-based sensitivity analysis of the COPD association at this specific locus to test whether it attenuates after accounting for smoking behavior; (3) an LD check between rs4143322 and rs59321834; (4) any COPD/emphysema-specific animal or human-tissue functional data for SEMA6D, which does not currently exist in the literature found. Given all of this, confidence is rated LOW rather than MODERATE or HIGH — the gene identity is essentially undisputed, but the causal-pathway story is not, and the pipeline's own priors point toward this being a plausible case of a smoking/behavior-mediated signal rather than direct COPD lung pathology.</p>
+
+</body>
+</html>

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>15_67050001-67900000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-locus-evidence-table--1567050001-67900000-nearest-gene-smad3">COPD locus evidence table — 15:67,050,001-67,900,000 (nearest gene SMAD3)</h1>
+<p>Lead variant: rs7181543 (15:67184418 C&gt;T, GRCh38; PIP=0.369, intronic in SMAD3).
+Candidate genes from internal pipeline: SMAD3 (nearest/FLAMES/MAGMA/PoPS-prioritized),
+AAGAB (ABC-prioritized). IQCH recurs in the credible set at low PIP but is not
+independently prioritized by any method. All credible-set variants are intronic, 3'UTR, or
+downstream_gene_variant (no missense/splice variants), so no dedicated variant-level
+literature search was required beyond the lead variant per pipeline scope rules.</p>
+<p>Only citations verified VERIFIED by citation-verifier are included below. See
+<code>audits/15_67050001-67900000_audit.md</code> for excluded citations and the red-team-skeptic's
+full CONTESTED/WEAKENED reasoning.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMAD3</td>
+<td>Statgen (lung-function GWAS, negative)</td>
+<td>Hypothesis-free CHARGE lung-function meta-analysis (FEV1, FEV1/FVC) identified HHIP, GPR126, ADAM19, AGER-PPT2, FAM13A, PTCH1, PID1, HTR4, INTS12-GSTCD-NPNT; SMAD3 was NOT among the genome-wide-significant loci</td>
+<td>PMID 20010835 / DOI 10.1038/ng.500</td>
+<td>WEAKENED (context: absence from major spirometry GWAS undercuts locus-specific human genetic support)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMAD3</td>
+<td>Statgen (lung-function GWAS, negative)</td>
+<td>Follow-up GWAS identified 16 new lung-function loci (MFAP2, TGFB2, HDAC4, RARB, MECOM, SPATA9, ARMC2, NCR3, ZKSCAN3, CDC123, C10orf11, LRP1, CCDC38, MMP15, CFDP1, KCNE2); SMAD3 not named</td>
+<td>PMID 21946350 / DOI 10.1038/ng.941</td>
+<td>WEAKENED (same reasoning)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMAD3</td>
+<td>Statgen (large lung-function GWAS, unconfirmed presence)</td>
+<td>279-signal lung-function GWAS (n=400,102) predicting COPD; SMAD3/15q22 presence among signals not confirmable from abstract alone</td>
+<td>PMID 30804560 / DOI 10.1038/s41588-018-0321-7</td>
+<td>WEAKENED (cited for scale/context only, not as confirmed SMAD3 evidence)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMAD3</td>
+<td>Statgen (gene-network analysis)</td>
+<td>Framingham Offspring dmGWAS network analysis of longitudinal FEV1/FEV1-FVC identified SMAD3 (with TGFBR2, CD44, CTGF, VCAN, CTNNB1, SCGB1A1, PDE4D, NRG1, EPHB1, LYN) acting via TGF-beta-SMAD and Wnt/beta-catenin pathways</td>
+<td>PMID 25044411 / DOI 10.1002/gepi.21841</td>
+<td>WEAKENED (supports gene-general plausibility, not this locus's causal variant)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMAD3</td>
+<td>Statgen (epistasis, asthma cohort)</td>
+<td>GMDR 2-locus epistatic model between SLC22A5 and SMAD3 modulates FEV1/FVC in preschool children and adults (asthma, not COPD, cohort)</td>
+<td>PMID 26534891 / DOI 10.1111/pai.12505</td>
+<td>WEAKENED (different disease context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMAD3</td>
+<td>Statgen (candidate-gene case-control)</td>
+<td>SMAD3 rs36221701 (different variant from this locus's lead SNP) associated with COPD specifically among non-smokers (541 cases/534 controls, Chinese Uyghur population)</td>
+<td>PMID 34547372 / DOI 10.1016/j.gene.2021.145970</td>
+<td>WEAKENED (different variant than credible-set lead SNP; do not treat as locus-specific confirmation)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMAD3</td>
+<td>Statgen (candidate-gene case-control)</td>
+<td>SMAD3 intronic SNP rs28683050 (different variant) associated with COPD in Chinese population (TT genotype OR=3.76, T allele OR=1.77); small pre-GWAS-era study, no stated multiple-testing correction/replication</td>
+<td>PMID 20463300 / DOI 10.1258/ebm.2010.009268</td>
+<td>WEAKENED (methodologically weak, different variant)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMAD3</td>
+<td>Statgen/immune (cross-disease latent factor)</td>
+<td>Genomic-SEM shared &quot;gAirwayDisease&quot; factor (COPD+asthma+bronchiectasis+CRSsNP) PoPS-prioritized SMAD3 alongside GATA3, IL1R1, RUNX3, STAT6; MAGMA enrichment for B-cell/T-cell activation pathways</td>
+<td>PMID 42653451 / DOI 10.3390/ijms27167450</td>
+<td>WEAKENED (shared cross-disease factor, not COPD-specific structural biology; should not be conflated with the emphysema-specific mouse mechanism)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMAD3</td>
+<td>Statgen (cross-trait pleiotropy)</td>
+<td>Cross-trait pleiotropy analysis (LDSC/eQTL/MR) between COPD/asthma and esophageal cancer identified SMAD3 as 1 of 6 shared pleiotropic genes alongside CHRNA4 (nicotinic receptor/smoking-behavior gene) and ERBB3</td>
+<td>PMID 38817868 / DOI 10.7150/jca.95437</td>
+<td>CONTESTED-adjacent (raises a plausible, unconfirmed smoking-pleiotropy alternative via the co-listed CHRNA4)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMAD3</td>
+<td>Statgen (lung eQTL/COPD GWAS integration, unconfirmed presence)</td>
+<td>Lung eQTL (n=1038) integrated with ICGC COPD GWAS across 129 known risk loci mapped ~60 candidate causal genes; SMAD3's specific inclusion among these could not be confirmed from abstract alone</td>
+<td>PMID 29547942 / DOI 10.1093/hmg/ddy091</td>
+<td>WEAKENED (cited for study existence/scope only)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMAD3</td>
+<td>Structural/developmental (mouse knockout)</td>
+<td>Smad3-null mice show retarded alveolarization, reduced tropoelastin mRNA, increased MMP-9, and centrilobular emphysema from postnatal day 28 onward</td>
+<td>PMID 15591413 / DOI 10.1152/ajplung.00298.2004</td>
+<td>WEAKENED overall (strong mechanism, but establishes gene-general plausibility, not locus-specific regulation)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMAD3</td>
+<td>Structural/developmental (mouse knockout)</td>
+<td>Smad3 KO mice develop age-related airspace enlargement with elevated MMP-9/MMP-12, but are resistant to TGF-beta1-induced pulmonary fibrosis</td>
+<td>PMID 15265946 / DOI 10.4049/jimmunol.173.3.2099</td>
+<td>WEAKENED overall (same reasoning)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMAD3</td>
+<td>Structural/developmental (mouse knockout + smoke exposure)</td>
+<td>Smad3-/- mice have spontaneous air-space enlargement/apoptosis/reduced VEGF; cigarette smoke exposure significantly aggravates this versus smoke-exposed wild-type controls</td>
+<td>PMID 21743024 / DOI 10.1152/ajplung.00369.2010</td>
+<td>WEAKENED overall, but flagged by skeptic as the most locus-relevant single mouse paper (gene-by-smoke interaction)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMAD3</td>
+<td>Structural/developmental (review)</td>
+<td>Smad3 cooperates with c-Jun to transactivate SIRT1, deacetylating NF-kB/histones at the MMP9 promoter; Smad3 loss disinhibits MMP9, linking Smad3 to both emphysema and pulmonary fibrosis</td>
+<td>PMID 23161884 / DOI 10.1152/ajplung.00258.2012</td>
+<td>WEAKENED overall (mechanistic review)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMAD3</td>
+<td>Structural/developmental (review)</td>
+<td>Smad3-null mutation causes failure to organize alveolar matrix antecedent to early-onset emphysema via MMP-9; side-stream smoke exposure exacerbates alveolar destruction in young Smad3-null mice</td>
+<td>PMID 17065371 / DOI 10.1513/pats.200605-122SF</td>
+<td>WEAKENED overall (mechanistic review)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMAD3</td>
+<td>Structural (indirect/analogical, different locus)</td>
+<td>At the distinct HHIP/4q31 COPD locus, a distal enhancer regulates HHIP transcription in a SMAD3-dependent, Hedgehog-independent manner in human bronchial epithelial cells upon TGF-beta treatment; reduced HHIP increases TGF-beta-induced EMT</td>
+<td>PMID 38417378 / DOI 10.1016/j.ebiom.2024.105026</td>
+<td>WEAKENED (explicitly indirect — evidence about a different locus/gene, not about the SMAD3 15q22 locus itself; included only as biological-plausibility context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMAD3</td>
+<td>Structural/immune (pathway-analogy, different gene)</td>
+<td>Emphysema-distribution GWAS loci show strongest regulatory enrichment in CD4/CD8/Treg cells; ACVR1B (a different TGF-beta-superfamily receptor gene) functionally validated as causal</td>
+<td>PMID 30335480 / DOI 10.1165/rcmb.2018-0110OC</td>
+<td>WEAKENED (pathway-analogy only; not evidence about SMAD3 itself)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AAGAB</td>
+<td>Gene function / disease biology (non-lung)</td>
+<td>AAGAB encodes p34 (alpha/gamma-adaptin-binding protein), involved in AP-1/AP-2 clathrin adaptor complex assembly in keratinocytes; heterozygous LOF mutations cause autosomal-dominant punctate palmoplantar keratoderma type 1</td>
+<td>PMID 28239884 / DOI 10.1111/ced.13049</td>
+<td>WEAKENED (skin-specific mechanism, no pulmonary connection; AAGAB not held up as a genuine COPD candidate)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AAGAB</td>
+<td>Gene function / disease biology (non-lung)</td>
+<td>Novel AAGAB missense mutation p.Glu282Lys associated with mild plantar-only PPKP1 phenotype</td>
+<td>PMID 34535911 / DOI 10.1111/1346-8138.16162</td>
+<td>WEAKENED (same reasoning)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AAGAB</td>
+<td>Gene function / disease biology (non-lung)</td>
+<td>AAGAB founder/recurrent mutations described in Tunisian PPKP1 families; no homozygous AAGAB mutation carriers observed</td>
+<td>PMID 27400994 / DOI 10.1111/jdv.13787</td>
+<td>WEAKENED (same reasoning)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>IQCH</td>
+<td>Gene function / disease biology (non-lung)</td>
+<td>IQCH deficiency linked to azoospermia via Ca2+ signaling, cytoskeletal dynamics, and RNA splicing regulation in spermatogenesis (testis-specific gene)</td>
+<td>PMID 41602861 / DOI 10.3389/frph.2025.1719934</td>
+<td>WEAKENED to near-exclusion (no plausible lung mechanism; not independently prioritized by any method)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAP2K5 (region-enumeration only; not credible-set-overlapped)</td>
+<td>Statgen (non-lung, distinct locus)</td>
+<td>MAP2K5/SKOR1 genotyped among known restless-legs-syndrome loci in ESRD-RLS cohorts; only non-significant trend (P≤0.08) in one of two cohorts; BTBD9 was the only locus surviving multiple-testing correction</td>
+<td>PMID 21572129 / DOI 10.1136/jmg.2010.087858</td>
+<td>Not applicable / effectively excluded (distinct RLS locus, no credible-set overlap)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SKOR1 (region-enumeration only; not credible-set-overlapped)</td>
+<td>Statgen (non-lung, distinct locus)</td>
+<td>Whole-exome sequencing of RLS families found two SKOR1 coding variants (p.W200R, p.A672V) that did not co-segregate with RLS</td>
+<td>PMID 26298793 / DOI 10.1016/j.sleep.2015.06.002</td>
+<td>Not applicable / effectively excluded</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>C15orf61 (region-enumeration only; not credible-set-overlapped)</td>
+<td>Gene function (non-lung, preprint)</td>
+<td>Complexome profiling identified C15orf61 as newly associated with mitochondrial respiratory Complex V</td>
+<td>PMID 41728289 / DOI 10.64898/2026.02.06.26345691 (medRxiv preprint, not peer-reviewed)</td>
+<td>Not applicable / effectively excluded (no lung relevance; unpublished preprint)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="smoking-behavior-context-applies-across-genes">Smoking-behavior context (applies across genes)</h2>
+<p>A targeted (PubMed/bioRxiv only, not a formal full-summary-statistics lookup) search found
+no evidence that this locus (rs7181543/SMAD3/AAGAB region) is a named signal in the two
+largest smoking-behavior GWAS reviewed: Quach et al. 2020 nicotine-dependence GWAS (PMID
+33144568 / DOI 10.1038/s41467-020-19265-z, VERIFIED) and the GSCAN/MVP smoking-initiation/
+cessation meta-analysis (Xu et al. 2020, PMID 33082346 / DOI 10.1038/s41467-020-18489-3,
+VERIFIED; 99 initiation loci, 13 cessation loci, neither naming this region). This is
+<strong>provisional, not conclusive</strong> — a formal locus lookup in full GSCAN/nicotine-dependence
+summary statistics was not performed. The red-team-skeptic additionally notes that the
+Zhang 2024 pleiotropy paper (PMID 38817868) places SMAD3 alongside CHRNA4, a canonical
+smoking-behavior/nicotinic-receptor gene, in a shared pleiotropic-gene list for a different
+trait pair (lung disease/esophageal cancer) — raising an unconfirmed but plausible
+smoking-pleiotropy alternative that should not be dismissed solely on the basis of the
+provisional negative GSCAN/nicotine-dependence lookup above.</p>
+<h2 id="excluded-citation">Excluded citation</h2>
+<ul>
+<li>Liao CC et al., Int J Mol Sci 2026, PMID 42589600 / DOI 10.3390/ijms27156946 — verifier
+verdict CLAIM_MISMATCH (corrupted/truncated abstract; SMAD3's claimed inclusion among &quot;21
+candidate genes&quot; could not be confirmed). Excluded from the table above. See audit file
+for detail.</li>
+</ul>
+<hr>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — NOT a verified literature citation;</h2>
+<p>did not go through citation-verifier or red-team-skeptic)</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>Genetic constraint (gnomAD)</th>
+<th>Genome-wide COPD association score (aggregate, not locus-specific)</th>
+<th>Locus-specific L2G at rs7181543 credible set: COPD / chronic airway obstruction / FEV1-FVC ratio</th>
+<th>Colocalization at this credible set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMAD3</td>
+<td>Strongly LoF-constrained (oe=0.230, 90% CI 0.146-0.373) and missense-constrained (oe=0.505); consistent with known haploinsufficient Mendelian disease gene (Loeys-Dietz syndrome type 3)</td>
+<td>0.320 overall (genetic_association 0.505, literature 0.412)</td>
+<td>0.366 / 0.345 / 0.304 — <strong>lowest of the three genes on all three traits</strong></td>
+<td>COPD credible set colocalizes strongly (h4&gt;0.87) with FEV1/FVC ratio, chronic airway obstruction, wheeze, and broadly with non-respiratory traits (waist-hip ratio, body fat %, eGFR, albumin); no eQTL/molecular-QTL colocalization found for SMAD3 expression</td>
+</tr>
+<tr>
+<td>AAGAB</td>
+<td>Not significantly LoF-constrained (oe=0.839, 90% CI 0.617-1.156, wide CI due to small gene); missense-tolerant (oe=1.158). Note: AAGAB haploinsufficiency is nonetheless the established mechanism for autosomal-dominant PPKP1 in clinical genetics, despite the non-significant gnomAD signal</td>
+<td>0.286 overall (genetic_association 0.470)</td>
+<td>0.431 / 0.438 / 0.485 — <strong>highest of the three genes on all three traits</strong>, and also highest for asthma (0.47-0.71) and most other unrelated traits tested at this variant</td>
+<td>Same locus-level colocalization pattern as above (not gene-specific); no eQTL colocalization found for AAGAB</td>
+</tr>
+<tr>
+<td>IQCH</td>
+<td>Modestly LoF-constrained but not significant (oe=0.685, 90% CI 0.549-0.861); mildly missense-constrained (oe=0.842)</td>
+<td>0.191 overall (genetic_association 0.314) — lowest aggregate score of the three</td>
+<td>0.379 / 0.346 / 0.381 — intermediate of the three genes</td>
+<td>Same locus-level colocalization pattern; no eQTL colocalization found for IQCH</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation flag (orchestrator, carried through researcher and red-team-skeptic):</strong>
+across a wide range of biologically unrelated traits queried at this identical variant
+(adiposity, renal function, asthma, neuroticism), the same three genes reshuffle by similar
+small margins, and none crosses ~0.5 for any COPD-relevant trait. This pattern is more
+consistent with Open Targets' L2G model being driven substantially by non-trait-specific
+features (e.g., genomic distance) at this locus than by trait-specific functional genomic
+evidence. <strong>These L2G scores should be read as weak/non-discriminating between SMAD3,
+AAGAB, and IQCH, not as strong gene-prioritization evidence for any one of them</strong> — in
+particular, AAGAB's numerically highest score should not be read as biological support for
+AAGAB, which has zero literature-supported connection to lung/airway biology.</p>
+<hr>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>SMAD3 — confidence: LOW.</strong></p>
+<p>This is a close call and the pipeline's own statistical evidence (Open Targets L2G and
+colocalization) does not favor SMAD3 at this specific credible set — SMAD3 has the
+<em>lowest</em> locus-specific L2G score of the three candidate genes (0.366 for COPD, 0.345 for
+chronic airway obstruction, 0.304 for FEV1/FVC ratio, versus AAGAB's 0.431/0.438/0.485),
+and no eQTL/molecular-QTL colocalization was found for SMAD3 expression at this locus.
+Two major hypothesis-free lung-function GWAS (Hancock 2010, Soler Artigas 2011) do not
+name SMAD3 among their genome-wide-significant loci, and its inclusion in a third, larger
+lung-function GWAS (Shrine 2019) could not be confirmed. The red-team-skeptic explicitly
+flagged this locus as having an &quot;unresolved/close-call gene assignment&quot; rather than a
+confidently confirmed SMAD3 call.</p>
+<p>Despite this, SMAD3 is the best-supported single pick for three reasons that together
+outweigh AAGAB and IQCH, though not decisively: (1) <strong>Convergent, mechanistically detailed,
+multi-decade mouse-knockout evidence</strong> (Chen 2004 PMID 15591413, Bonniaud 2004 PMID
+15265946, Farkas 2011 PMID 21743024) directly demonstrates that Smad3 loss impairs
+alveolarization, reduces tropoelastin, increases MMP-9-driven matrix destruction, and
+causes emphysema-like pathology that is <em>aggravated by cigarette smoke exposure</em> — this is
+gene-general biological plausibility, not locus-specific confirmation, but it is
+substantially stronger and more specific to COPD-relevant lung pathophysiology than
+anything found for AAGAB or IQCH, both of which have zero literature connecting them to
+lung/airway biology of any kind. (2) SMAD3 is strongly LoF- and missense-constrained in
+gnomAD, consistent with it being a dosage-sensitive gene where regulatory dysregulation
+(as opposed to coding loss-of-function, which causes the distinct Mendelian Loeys-Dietz
+syndrome) is a biologically coherent, if unconfirmed, mechanism for a common noncoding
+GWAS variant. (3) AAGAB's numerically superior L2G score is very likely an artifact: it
+recurs as the top-ranked gene across a wide range of biologically unrelated traits queried
+at this same variant (adiposity, renal function, asthma, neuroticism), which is the
+signature of a non-trait-specific (likely distance-based) L2G feature rather than genuine
+AAGAB-specific regulatory evidence — and AAGAB's only established human disease mechanism
+(keratinocyte AP-1/AP-2 clathrin-adaptor trafficking, causing palmoplantar keratoderma) has
+no plausible route to pulmonary biology. IQCH is weaker still: not independently
+prioritized by any of FLAMES/MAGMA/PoPS/ABC, appearing only via LD-tagged low-PIP
+variants, with an established testis-specific biological role (spermatogenesis) that has
+no plausible lung connection.</p>
+<p><strong>Runner-up: AAGAB</strong> (by L2G score alone, but with no supporting biological literature —
+see caveats above). <strong>What would resolve the tie:</strong> a direct lung-tissue eQTL/sQTL
+colocalization analysis (e.g., GTEx lung, or a dedicated lung eQTL catalog such as
+Lamontagne et al.'s lung eQTL resource) at this exact credible set, since Open Targets
+found no molecular-QTL colocalization for any of the three genes and its L2G scores appear
+to be non-discriminating at this locus; and/or a formal locus-level lookup in full
+GSCAN/nicotine-dependence summary statistics to rule out (or confirm) the smoking-behavior-
+mediated alternative raised by the CHRNA4-adjacent pleiotropy finding (Zhang 2024, PMID
+38817868). Confidence is marked LOW rather than MODERATE or HIGH because the strongest
+evidence for SMAD3 (mouse knockouts) answers a different question than the one this
+locus-specific analysis needs answered (does <em>this</em> variant regulate SMAD3 in human lung),
+and the pipeline's own locus-anchored statistical evidence does not currently support that
+link.</p>
+
+</body>
+</html>

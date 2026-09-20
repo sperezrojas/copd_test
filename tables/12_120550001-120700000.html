@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>12_120550001-120700000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-gwas-locus-evidence-table-12120550001-120700000-nearest-gene-cabp1">COPD GWAS locus evidence table: 12:120,550,001-120,700,000 (nearest gene CABP1)</h1>
+<ul>
+<li><strong>Lead variant:</strong> rs2859263 (PIP=0.615, 12:120,634,996, intronic to CABP1-DT)</li>
+<li><strong>Candidate genes assessed:</strong> CABP1 (nearest gene), CABP1-DT (lncRNA hosting lead variant), RPLP0 (MAGMA-prioritized), GCN1/GCN1L1 (PoPS-prioritized), plus RNF10, POP5, MLEC (identified independently via region enumeration; not flagged by any prioritization method, not overlapped by the credible set)</li>
+<li>All rows below use only citations with a citation-verifier verdict of VERIFIED. See <code>audits/12_120550001-120700000_audit.md</code> for excluded citations and full skeptic critique.</li>
+</ul>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CABP1</td>
+<td>Statistical genetics (background)</td>
+<td>Large-scale (up to 1.2M individuals) GSCAN consortium GWAS establishing the genetic architecture of smoking initiation/cessation/heaviness (glutamatergic, dopaminergic, nicotinic-receptor genes); cited as background for the smoking-GWAS literature this locus sits within, not a locus-specific claim</td>
+<td>Liu M et al. 2019, Nat Genet, PMID 30643251</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CABP1</td>
+<td>Structural/mechanistic (non-lung)</td>
+<td>CaBP1 binds and activates IP3 receptor Ca2+-release channels independent of IP3, colocalizing with IP3R in cerebellar Purkinje neurons</td>
+<td>Yang J et al. 2002, PNAS, PMID 12032348</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CABP1</td>
+<td>Structural/mechanistic (non-lung)</td>
+<td>CaBP1 inhibits InsP3 receptor gating by restricting intersubunit movements (structural/biophysical characterization)</td>
+<td>Li C et al. 2013, PNAS, PMID 23650371</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CABP1</td>
+<td>Structural/mechanistic (non-lung)</td>
+<td>CaBP1 blunts Ca2+-dependent inactivation of Cav1.3 channels at the auditory inner hair cell ribbon synapse</td>
+<td>Cui G et al. 2007, J Physiol, PMID 17947313</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CABP1</td>
+<td>Structural/mechanistic (tangential lung connection)</td>
+<td>CaBP1-family calcium sensors regulate a Ca2+-induced Ca2+ release (CICR) mechanism found in vascular smooth muscle (A7r5) cells and also in 16HBE14o- human bronchial epithelial cells; generic mechanism paper, not COPD/airway-disease-focused</td>
+<td>Kasri NN et al. 2003, J Biol Chem, PMID 12746431</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CABP1</td>
+<td>Structural/mechanistic (review, non-lung)</td>
+<td>Review of calmodulin/CaBP1 regulation of TRP channel family</td>
+<td>Zhu MX 2005, Pflugers Arch, PMID 15924238</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CABP1</td>
+<td>Structural/mechanistic (paralog/family context only, not direct CABP1 evidence)</td>
+<td>CaBP4 (a CABP1 paralog) is essential for photoreceptor synaptic transmission (Cav1.4 channel regulator); implicated in congenital stationary night blindness</td>
+<td>Haeseleer F et al. 2004, Nat Neurosci, PMID 15452577</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RPLP0</td>
+<td>Oncology (lung, not COPD)</td>
+<td>RPLP0/RPLP1/RPLP2 overexpression correlates with worse prognosis in lung adenocarcinoma and with immune-cell infiltration patterns in tumor tissue</td>
+<td>Xu C et al. 2024, J Mol Histol, PMID 39207634</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RPLP0</td>
+<td>Oncology (lung, not COPD)</td>
+<td>RPLP0 acts downstream of a circRNA/miRNA (circATP9A/miR-582-3p) axis promoting non-small-cell lung cancer proliferation/EMT/invasion</td>
+<td>Wang D et al. 2025, Appl Biochem Biotechnol, PMID 39832103</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RPLP0</td>
+<td>Pharmacology/bioinformatics (indirect, asthma not COPD)</td>
+<td>RPLP0 listed among ~18 candidate protein targets bound by anti-asthmatic Traditional Chinese Medicine compounds in an in-silico target-mining study; two selected compounds shown to relax airway smooth muscle in vitro/in vivo (not RPLP0-specific validation)</td>
+<td>Wang Y et al. 2020, J Ethnopharmacol, PMID 32004629</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RPLP0</td>
+<td>Structural/mechanistic (non-lung, non-COPD)</td>
+<td>RPLP1/RPLP2 are essential flavivirus host factors promoting viral protein accumulation; RPLP0 serves only as the ribosomal-stalk-anchoring partner in this mechanism, not the direct subject</td>
+<td>Campos RK et al. 2017, J Virol, PMID 27974556</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCN1 (GCN1L1)</td>
+<td>Statistical genetics (tangential, psychiatric not respiratory)</td>
+<td>GCN1L1 missense variant (p.S2506T) flagged as one of several candidate de novo mutations shared by monozygotic twins discordant for schizophrenia in a small (8-family) whole-genome-sequencing study</td>
+<td>Tang J et al. 2017, J Genet Genomics, PMID 28645778</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCN1 (GCN1L1)</td>
+<td>Structural/mechanistic (non-lung)</td>
+<td>GCN1 forms a complex with LARP1 on stalled ribosomes, participating in GCN2-ATF4-LARP1-mediated translational control</td>
+<td>Farooq Z et al. 2022, J Biol Chem, PMID 35863436</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCN1 (GCN1L1)</td>
+<td>Structural/mechanistic (yeast, non-lung)</td>
+<td>Disome/trisome ribosome profiling characterizes the Gcn1/Gcn2/Hel2 ribosome-collision-sensing pathway broadly</td>
+<td>Meydan S, Guydosh NR 2020, Mol Cell, PMID 32615089</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCN1 (GCN1L1)</td>
+<td>Structural/mechanistic (yeast structural biology, non-lung)</td>
+<td>Cryo-EM structure of Gcn2 dimer in complex with the ribosomal 60S subunit and its relationship to Gcn1/Gcn20 coactivators in the integrated stress response</td>
+<td>Paternoga H et al. 2025, PNAS, PMID 40198700</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCN1 (GCN1L1)</td>
+<td>Developmental/structural lung biology (mouse, near-complete loss-of-function alleles)</td>
+<td>Complete Gcn1 knockout mice die at mid-embryonic development from severe growth retardation; a hypomorphic allele (Gcn1(Delta)RWDBD) causes perinatal lethality &quot;most likely due to respiratory failure,&quot; and extending gestation via progesterone rescued expression of lung differentiation markers and prevented perinatal lethality</td>
+<td>Yamazaki H et al. 2020, PLoS Genetics, PMID 32324833</td>
+<td>WEAKENED (allele-severity and phenotype mismatch with a common-variant adult COPD signal; gene lies 360-500kb outside the credible-set window)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RNF10</td>
+<td>Structural/mechanistic (general cell biology, non-lung, non-disease)</td>
+<td>RNF10 is an E3 ubiquitin ligase that monoubiquitinates 40S ribosomal proteins (RPS2/RPS3) on translationally compromised ribosomes, part of the ribosome-associated quality control (RQC) pathway</td>
+<td>Garzia A et al. 2021, Cell Reports, PMID 34348161</td>
+<td>WEAKENED (effectively background; no credible-set overlap, no prioritization-method support)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>POP5</td>
+<td>Structural/mechanistic (general RNA biology, non-lung, non-disease)</td>
+<td>POP5 is a shared protein subunit of the RNase P and RNase MRP ribonucleoprotein complexes involved in tRNA/rRNA processing; modular architecture characterized by electron microscopy</td>
+<td>Hipp K et al. 2012 (cited as 2011), Nucleic Acids Res, PMID 22167472</td>
+<td>WEAKENED (effectively background)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>POP5</td>
+<td>Structural/mechanistic (general RNA biology, non-lung, non-disease)</td>
+<td>Comparative-genomics inventory of RNase P/MRP protein subunits, including POP5</td>
+<td>Rosenblad MA et al. 2006, Nucleic Acids Res, PMID 16998185</td>
+<td>WEAKENED (effectively background)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MLEC</td>
+<td>Structural/mechanistic (ER proteostasis; speculative COPD tangent)</td>
+<td>Malectin (MLEC) participates in a backup glycoprotein quality-control pathway in the ER, activated under ER stress; its client glycoproteins include alpha-1-antitrypsin (alpha1AT), and malectin interferes with secretion of misfolded/facultative clients including alpha1AT under ER stress. Not a COPD-focused study; does not test lung tissue/airway cells; does not establish that common MLEC variation affects alpha1AT secretion or COPD risk</td>
+<td>Galli C et al. 2011, PLoS ONE, PMID 21298103</td>
+<td>WEAKENED (effectively background; speculative mechanistic tangent, not direct evidence)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="locus-level-note-on-smoking-mediation-not-a-citation-table-row-synthesized-from-structured-data--critique">Locus-level note on smoking mediation (not a citation-table row; synthesized from structured data + critique)</h2>
+<p>The researcher's two literature citations intended to directly link this locus's top credible-set variants (rs2859263, rs1168067) to smoking-initiation/lifetime-smoking GWAS were found CLAIM_MISMATCH by the citation-verifier (see audit appendix) — the specific variant/p-value claims were not confirmed in the cited papers' abstracts. Independent of those two disputed citations, the Open Targets structured lookup (see below; not a literature citation, not subject to verification) shows Open Targets' own GWAS-catalog credible-set holdings at these exact variant positions are overwhelmingly for smoking-behavior traits (not COPD or lung function), with CABP1 consistently the L2G-prioritized gene. The red-team-skeptic noted this OT evidence is not fully independent in provenance from the disputed citations (likely same underlying summary statistics, viewed via database rather than abstract), and recommended the smoking-mediation hypothesis be treated as a leading but weakly triangulated hypothesis at low-to-moderate confidence, not an established finding.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>COPD association score (Open Targets)</th>
+<th>Datatype driving it</th>
+<th>Genetic constraint (gnomAD)</th>
+<th>L2G at lead credible-set variants (rs2859263, rs1168067)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CABP1 (ENSG00000157782)</td>
+<td>0 (no association record)</td>
+<td>none</td>
+<td>missense z=0.14, oe=0.98; LoF score=0.0008, oe=0.62 (0.41-0.96) — not strongly constrained</td>
+<td>Consistently the sole L2G-prioritized gene (scores ~0.43-0.69) across 13-14 credible sets at these variants, nearly all for smoking-initiation/smoking-status/lifetime-smoking GWAS; no COPD or FEV1/FEV1-FVC credible set found at either variant</td>
+</tr>
+<tr>
+<td>CABP1-DT (ENSG00000256008, lncRNA hosting the lead variant)</td>
+<td>0 (no association record)</td>
+<td>none</td>
+<td>not applicable (lncRNA; no constraint data)</td>
+<td>Despite hosting the lead variant, Open Targets' own L2G model attributes the signal to CABP1, not CABP1-DT, at every credible set queried</td>
+</tr>
+<tr>
+<td>RPLP0 (ENSG00000089157, MAGMA-prioritized)</td>
+<td>0.0074</td>
+<td>literature (text-mining) only; no genetic-association datatype contributes</td>
+<td>pLI=1, oe=0 (0-0.10) — strongly constrained against LoF (essential ribosomal protein)</td>
+<td>Not an L2G target at either variant queried</td>
+</tr>
+<tr>
+<td>GCN1 / GCN1L1 (ENSG00000089154, PoPS-prioritized)</td>
+<td>0.034</td>
+<td>animal_model only; no genetic-association datatype contributes</td>
+<td>pLI=1, oe=0.28 (0.23-0.35) — strongly constrained against LoF</td>
+<td>Not an L2G target at either variant queried</td>
+</tr>
+</tbody>
+</table>
+<p>Gene body coordinates (GRCh38, via researcher's independent Ensembl lookup): CABP1 120,640,563-120,667,327; CABP1-DT 120,628,830-120,641,922 (within locus window); RPLP0 120,196,698-120,201,235 (~350kb centromeric of, outside the 12:120,550,001-120,700,000 window); GCN1 120,127,202-120,194,976 (~360-500kb centromeric of, outside the window). RNF10 (120,533,480-120,577,592), POP5 (120,573,578-120,581,411), and MLEC (120,686,800-120,704,285) fall within or adjacent to the window but are not overlapped by any credible-set variant and are not flagged by any prioritization method.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>CABP1 — Confidence: LOW.</strong></p>
+<p>CABP1 is the single best-supported candidate at this locus, but the support is almost entirely positional/statistical rather than functional. It is the nearest gene to the lead variant, hosts the second-highest-PIP credible-set variant (rs1168067, PIP=0.284, intronic), and is the consistent Open Targets locus-to-gene (L2G)-prioritized target (scores ~0.43-0.69) at both of the two highest-PIP credible-set variants, specifically for smoking-behavior GWAS credible sets (Open Targets summary above). However: (1) the two literature citations meant to directly confirm this locus's variant-level association with smoking-initiation/lifetime-smoking traits were CLAIM_MISMATCH on verification (audit appendix) and cannot be relied on as stated; (2) CABP1's own established molecular biology (neuronal/retinal/cochlear Ca2+-channel and IP3-receptor modulation; evidence table rows above, all WEAKENED by the skeptic) has no genuine COPD- or airway-specific functional literature — the single bronchial-epithelial-cell-line connection (Kasri et al., PMID 12746431) is a generic mechanism paper, not airway-pathology-specific evidence; and (3) CABP1 shows no COPD association record at all in Open Targets' curated evidence (score 0).</p>
+<p>The runner-up is <strong>CABP1-DT</strong>, the lncRNA that physically hosts the single highest-PIP credible-set variant (rs2859263, PIP=0.615) — a fact the red-team-skeptic flagged as creating real tension with CABP1's L2G-based prioritization (highest-PIP variant sits in one gene, but statistical/L2G prioritization points to the neighboring gene) that should not be resolved silently in CABP1's favor. CABP1-DT has no independent functional literature at all, so this tension cannot currently be broken with available evidence.</p>
+<p>RPLP0 and GCN1/GCN1L1 are not competitive: both lie 350-500kb outside the locus/credible-set window, have no genetic (GWAS/TWAS/coloc) evidence tying them to this specific signal, and their Open Targets COPD association is driven only by text-mining (RPLP0) or animal-model matching (GCN1), not human genetics. GCN1's mouse perinatal-respiratory-failure phenotype (Yamazaki et al., PMID 32324833, VERIFIED) is a genuine and striking developmental-lung finding, but it arises from near-complete loss-of-function alleles and a phenotype (perinatal respiratory failure) that is mechanistically distant from adult, chronic, smoking-associated airflow obstruction — the skeptic explicitly cautioned against letting this finding move GCN1 up the prioritization list.</p>
+<p><strong>What would resolve this call:</strong> (a) direct confirmation, against the Saunders et al. and Pasman et al. papers' supplementary loci tables (not abstracts), of whether rs2859263/rs1168067 are genuinely genome-wide significant for smoking initiation/lifetime smoking as claimed; (b) lung-tissue eQTL/colocalization data for CABP1 and CABP1-DT specifically (not reported by the researcher and flagged by the skeptic as a notable gap); and (c) any direct COPD or FEV1/FEV1-FVC GWAS evidence at this locus, none of which was found in this review round. Given the citation problems, the functional-biology vacuum, and the skeptic's WEAKENED verdict on every candidate gene at this locus, this call should be treated as the best available lead, not an established finding — the study team should weigh it accordingly.</p>
+
+</body>
+</html>

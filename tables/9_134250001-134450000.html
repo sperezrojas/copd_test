@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>9_134250001-134450000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-9134250001-134450000-nearest-gene-rxra">Evidence table — Locus 9:134,250,001-134,450,000 (nearest gene RXRA)</h1>
+<p><strong>Lead variant:</strong> rs10881580 (9:134,342,825, GRCh38). <strong>Credible set:</strong> 45 variants
+(ABF fine-mapping), all intron_variant or upstream_gene_variant (MODIFIER impact),
+all annotated to RXRA, spanning chr9:134,323,982-134,360,914. No missense or
+splice-donor/acceptor variants in the credible set.</p>
+<p><strong>Candidate genes:</strong> RXRA (nearest gene, ABC-prioritized), PRRC2B (MAGMA-prioritized),
+POMT1 (PoPS-prioritized).</p>
+<p>Only citations with verifier verdict VERIFIED are included below. See
+<code>audits/9_134250001-134450000_audit.md</code> for excluded citations and the full
+red-team-skeptic CONTESTED reasoning.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RXRA</td>
+<td>Statistical genetics (COPD colocalization, negative)</td>
+<td>Integrative TWAS/colocalization study of severe COPD/emphysema-related traits identified PSMA4, EGLN2, WNT3, DCBLD1, LILRA3 as colocalized genes; did NOT implicate RXRA.</td>
+<td>Sakornsakolpat et al. 2018, Respir Research, PMID 29566699, DOI 10.1186/s12931-018-0744-9</td>
+<td>Considered as part of CONTESTED verdict (locus-level absence of COPD colocalization)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RXRA</td>
+<td>Statistical genetics (COPD colocalization, negative/contrast)</td>
+<td>Same COPDGene-based emphysema-distribution integrative-genomics pipeline identified ACVR1B (not RXRA) as the colocalization-supported causal gene for emphysema distribution, enriched in CD4/CD8/regulatory T-cell regulatory elements.</td>
+<td>Boueiz et al. 2019, Am J Respir Cell Mol Biol, PMID 30335480, DOI 10.1165/rcmb.2018-0110OC</td>
+<td>Considered as part of CONTESTED verdict</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RXRA</td>
+<td>Statistical genetics (COPD exome, negative)</td>
+<td>Large COPD exome-array meta-analysis (~33,851 cases) found coding-variant signals only in previously known GWAS regions (GSDMB/5q, CCHCR1/6p, 15q); RXRA/this locus not among them, consistent with this locus's variants being intronic/regulatory rather than coding.</td>
+<td>Moll et al. 2021, Am J Physiol Lung Cell Mol Physiol, PMID 33909500, DOI 10.1152/ajplung.00009.2021</td>
+<td>Considered as part of CONTESTED verdict</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RXRA</td>
+<td>Statistical genetics (lung-function GWAS, unresolved)</td>
+<td>Largest published lung-function GWAS (400,102 individuals, 279 signals); whether a 9q34.2/RXRA signal is among the 279 could not be confirmed from the abstract alone — flagged as needing a direct supplementary-table check rather than asserted either way.</td>
+<td>Shrine et al. 2019, Nature Genetics, PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
+<td>VERIFIED (existence/scope only; RXRA-locus-specific claim unresolved)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RXRA</td>
+<td>Statistical genetics (candidate-variant, tangential)</td>
+<td>Genotyped RXRA polymorphisms including credible-set variant rs10881578 in hemodialysis patients; minor-allele carriers show altered circulating adropin levels. Not COPD-relevant; included only because it directly genotypes a credible-set variant.</td>
+<td>Grzegorzewska et al. 2016, Life Sciences, PMID 27449397, DOI 10.1016/j.lfs.2016.07.009</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RXRA</td>
+<td>Statistical genetics (candidate-gene COPD study, direct NULL result)</td>
+<td>Genotyped RXRA (rs10881578, a credible-set variant, and others) among 11 vitamin-D-pathway genes in 278 COPD patients; after multiple-testing correction, RXRA variants were NOT associated with vitamin D status or COPD severity measures (FEV1, FEV1/FVC, quality of life, sputum eosinophils/neutrophils).</td>
+<td>Jolliffe et al. 2017, J Steroid Biochem Mol Biol, PMID 28161533, DOI 10.1016/j.jsbmb.2017.01.019</td>
+<td>VERIFIED — weighted heavily by skeptic as a direct targeted contradiction of a lung/COPD-specific effect for this locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RXRA</td>
+<td>Structural/developmental lung biology</td>
+<td>All-trans retinoic acid (RA) treatment increases septation in newborn rats, induces alveolar formation and increases alveolar surface area in adult rats with elastase-induced emphysema, and partially rescues failed septation in tight-skin mice.</td>
+<td>Massaro &amp; Massaro 2001, Novartis Foundation Symposium, PMID 11199098, DOI 10.1002/0470868678.ch14</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RXRA</td>
+<td>Structural/developmental lung biology</td>
+<td>RA treatment induces post-hoc alveolar septation in two independent models of failed septation (dexamethasone-treated neonatal rats; tight-skin mice).</td>
+<td>Massaro &amp; Massaro 2000, Am J Physiol Lung Cell Mol Physiol, PMID 10781425, DOI 10.1152/ajplung.2000.278.5.L955</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RXRA</td>
+<td>Structural/developmental lung biology (most direct mechanistic link)</td>
+<td>RARγ-null mice show decreased tropoelastin mRNA, decreased whole-lung elastic tissue and alveolar number, and increased mean linear intercept; additional deletion of one RXRA allele (RARγ-null; RXRA+/- compound mutant) further decreases alveolar surface area and alveolar number and increases mean linear intercept — directly demonstrating RXRA allele dosage affects elastin-dependent alveolar architecture.</td>
+<td>McGowan et al. 2000, Am J Respir Cell Mol Biol, PMID 10919981, DOI 10.1165/ajrcmb.23.2.3904</td>
+<td>VERIFIED — cited by skeptic as the genuinely strong part of RXRA's biological case, independent of this GWAS signal</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RXRA</td>
+<td>Structural/developmental lung biology</td>
+<td>Retinoic acid has biphasic transcriptional effects on Lgl1 (alveolarization-relevant gene) in developing lung; RA/vitamin-D/glucocorticoid receptor binding sites cluster near a disproportionate fraction of lung-development gene promoters.</td>
+<td>Nadeau et al. 2010, Pediatric Research, PMID 20057335, DOI 10.1203/PDR.0b013e3181d23656</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RXRA</td>
+<td>Structural/mechanistic (COPD mouse model) — WEAKENED, see audit</td>
+<td>RXRA transcriptionally activates PLA2G2A in cigarette-smoke-exposed COPD mice; a compound (zhebeiresinol) suppresses RXRA nuclear translocation/phosphorylation and PLA2G2A transcription, reducing airway remodeling, inflammation, ER stress, and lung-function injury.</td>
+<td>Zhang et al. 2025, Am J Transl Res, PMID 40950286, DOI 10.62347/DGOC8275</td>
+<td>VERIFIED (existence/claim match) but flagged WEAKENED by skeptic: single group, quality-control-flagged journal, unreplicated mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RXRA</td>
+<td>Structural/mechanistic (COPD mouse model, non-lung phenotype) — WEAKENED, see audit</td>
+<td>RXRA is upregulated in brain tissue of COPD mice with delirium-like behavior; RXRA/PLA2G2A axis inhibition reduces ER stress/apoptosis and delirium-like behavior. Primary phenotype is neurobehavioral, not pulmonary.</td>
+<td>Zhang et al. 2024, Cellular and Molecular Biology (Noisy-le-Grand), PMID 38372090, DOI 10.14715/cmb/2024.70.1.31</td>
+<td>VERIFIED (existence/claim match) but flagged WEAKENED by skeptic: same group as above, quality-control-flagged journal, non-lung phenotype</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RXRA</td>
+<td>Immune/inflammatory biology (cross-tissue, non-lung)</td>
+<td>RXRA in CD11c+ antigen-presenting cells (dendritic cells/macrophages) is required to suppress Th1/Th17 differentiation and intestinal inflammation in a mouse colitis model; RXRA deletion in APCs increases proinflammatory cytokine production and Th1/Th17 responses; pharmacologic RXRA activation reduces colitis severity. Gut/colitis model, not lung — cross-tissue mechanistic plausibility only.</td>
+<td>Manoharan et al. 2023, Journal of Immunology, PMID 37477694, DOI 10.4049/jimmunol.2200909</td>
+<td>VERIFIED (claim match); explicitly not direct COPD evidence per researcher and skeptic</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRRC2B</td>
+<td>Structural/developmental biology (non-pulmonary)</td>
+<td>PRRC2B protein is highly expressed in developing rat brain (E18-P7), localizing to neuronal processes, with declining expression into adulthood; function unknown. Neurodevelopmental, not pulmonary.</td>
+<td>Mei et al. 2013, Neuroscience Letters, PMID 24466597</td>
+<td>VERIFIED; no lung/COPD relevance — supports &quot;essentially no biology&quot; conclusion</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRRC2B</td>
+<td>Incidental (not COPD-relevant)</td>
+<td>Describes a PRRC2B-ALK gene fusion driving a pediatric sarcoma.</td>
+<td>Gupta et al. 2021, PMID 34666310, DOI 10.6004/jnccn.2021.7056</td>
+<td>VERIFIED; not COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRRC2B</td>
+<td>Incidental (not COPD-relevant)</td>
+<td>First-trimester preeclampsia serum proteomics screen listing PRRC2B as one of several differentially abundant proteins.</td>
+<td>Jacobo-Baca et al. 2020, PMID 32957816, DOI 10.1080/14767058.2020.1820980</td>
+<td>VERIFIED; not COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>POMT1</td>
+<td>Disease-mechanism background (non-pulmonary)</td>
+<td>POMT1 is one of several genes (with FKRP, POMT2, POMGNT1, ISPD, FKTN, GMPPB, B3GALNT2, DPM3, DAG1) causing dystroglycanopathy in a 143-patient cohort; POMT1 mutations associated with intellectual disability among other features. No pulmonary phenotype reported.</td>
+<td>Song et al. 2021, Clinical Genetics, PMID 33200426, DOI 10.1111/cge.13886</td>
+<td>VERIFIED; supports &quot;no COPD/lung biology&quot; conclusion</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>POMT1</td>
+<td>Disease-mechanism background (general dystroglycanopathy family; NOT POMT1-specific)</td>
+<td>Describes Walker-Warburg syndrome phenotypic spectrum (brain, eye, kidney anomalies) in a case with a POMT2 (not POMT1) mutation; included for general disease-mechanism context only.</td>
+<td>Nabhan et al. 2017, Am J Med Genet A, PMID 28815891, DOI 10.1002/ajmg.a.38393</td>
+<td>VERIFIED but note: this citation is about POMT2, not POMT1 — included only as family background, not gene-specific evidence</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — not a verified literature citation)</h2>
+<p>This section is a direct Open Targets Platform GraphQL API lookup performed by
+the orchestrator. It did <strong>not</strong> go through citation-verifier or
+red-team-skeptic and should not be read as a literature claim.</p>
+<p><strong>RXRA (ENSG00000186350):</strong></p>
+<ul>
+<li>Direct COPD association score: 0.0185 (literature datatype only, 0.1525; no
+<code>genetic_association</code> datatype scored at all for this target-disease pair).</li>
+<li>Genetic constraint: strongly LoF-constrained (pLoF obs=5 vs exp=39.5,
+oe=0.127, 90% CI 0.065-0.266); missense-constrained (oe=0.612); synonymous
+near-neutral (oe=1.051). Consistent with a dosage-sensitive nuclear receptor.</li>
+<li>L2G/colocalization: <strong>zero</strong> indexed COPD or FEV1/FEV1-FVC fine-mapped
+credible set at this locus (checked FinnGen R12 COPD credible sets
+genome-wide — none on chromosome 9 at all; checked the lead variant and 5
+other high-PIP credible-set variants directly). This same variant set is
+instead the lead signal in <strong>19 independent GWAS credible sets for other
+traits</strong> (hematocrit, hemoglobin, height, free androgen index, SHBG,
+testosterone, bilirubin, body fat %, appendicular lean mass), and in every
+one where L2G produced a prediction, RXRA is the top gene (L2G score
+0.65-0.83). No credible set anywhere nominated PRRC2B or POMT1. A minor
+secondary L2G hit for VAV2 (score ~0.05) appeared in two of these
+credible sets (bilirubin, body fat %) — VAV2 was not evaluated by the
+researcher or skeptic (see audit) and is flagged as an unevaluated
+alternative candidate.</li>
+</ul>
+<p><strong>PRRC2B (ENSG00000288701):</strong></p>
+<ul>
+<li>Direct COPD association score: 0.0506 (literature datatype only, 0.416; no
+<code>genetic_association</code> datatype scored).</li>
+<li>Genetic constraint: moderately LoF-constrained (oe=0.273); missense
+near-neutral (oe=0.941).</li>
+<li>L2G/colocalization: no data available — not the top L2G gene at any
+credible set identified in the region-wide sweep.</li>
+</ul>
+<p><strong>POMT1 (ENSG00000130714):</strong></p>
+<ul>
+<li>Direct COPD association score: no data available (associatedDiseases query
+returned zero rows — no literature or genetic-association evidence on file
+connecting POMT1 to COPD at all).</li>
+<li>Genetic constraint: not LoF-constrained (oe=0.841, 90% CI 0.708-1.002),
+consistent with POMT1's known role as a recessive disease gene tolerant of
+heterozygous loss-of-function.</li>
+<li>L2G/colocalization: no data available.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Prioritized gene: RXRA. Confidence: LOW.</strong></p>
+<p>RXRA is the best-supported single candidate at this locus, but the call is
+close and rests on a genuine tension that the evidence does not resolve. On
+one side: RXRA has strong, independent, decades-old mechanistic literature
+establishing that RAR/RXR heterodimer signaling — and RXRA allele dosage
+specifically (McGowan et al. 2000, PMID 10919981, a compound RARγ-null;
+RXRA+/- mouse) — is required for normal postnatal alveolar septation and
+elastin-dependent alveolar architecture, a textbook structural mechanism
+directly relevant to COPD/emphysema pathogenesis. RXRA is also the only gene
+at this locus with any positive biological narrative at all (PRRC2B and
+POMT1 both &quot;HOLD&quot; as essentially artifactual per the red-team-skeptic — see
+Open Targets summary and audit). RXRA is also strongly pLoF-constrained,
+consistent with being a dosage-sensitive gene of the kind common variant
+regulatory signals can plausibly perturb.</p>
+<p>On the other side, and why confidence is capped at LOW rather than higher:
+the red-team-skeptic explicitly marked <strong>RXRA CONTESTED</strong> as the causal gene
+for <em>this specific COPD GWAS signal</em> (see
+<code>audits/9_134250001-134450000_audit.md</code> for full reasoning). The Open
+Targets structured lookup shows a complete absence of any COPD or
+FEV1/FEV1-FVC credible-set or L2G evidence at this exact locus, despite the
+same variants being confidently (L2G 0.65-0.83) linked to RXRA for 19 other,
+non-pulmonary traits (hematologic, endocrine, anthropometric) — and despite
+large, well-powered lung-function/COPD colocalization studies (Shrine et al.
+2019; Sakornsakolpat et al. 2018; Boueiz et al. 2019) that successfully find
+colocalized causal genes at other loci not finding one here. Most directly,
+Jolliffe et al. 2017 (PMID 28161533) genotyped a credible-set variant
+(rs10881578) in 278 COPD patients and found a <strong>null</strong> result for FEV1,
+FEV1/FVC, COPD severity, and sputum inflammatory-cell counts — a direct,
+targeted contradiction of a lung-specific effect for this exact signal. The
+only mechanistic papers proposing a direct RXRA-COPD lung axis (Zhang et al.
+2025/2024, RXRA-PLA2G2A) come from a single group in journals flagged for
+quality-control concerns and are unreplicated; one of the two is not even a
+lung phenotype. The skeptic also raised a live, arguably more parsimonious
+alternative hypothesis: this locus's genetic signal may act on hematologic,
+endocrine, or body-composition biology, with the COPD case-control
+association arising as a pleiotropic/confounded echo of that biology rather
+than a direct pulmonary mechanism — a hypothesis this evidence base cannot
+rule out. Smoking-mediation could also not be excluded (GSCAN smoking-GWAS
+loci were not confirmed to overlap or not overlap this locus).</p>
+<p><strong>Runner-up:</strong> No other candidate gene at this locus has any positive
+evidence — PRRC2B and POMT1 both hold as very likely statistical/positional
+artifacts of MAGMA/PoPS respectively, with no genetic, structural, or immune
+literature connecting either to lung or COPD biology. The nearest thing to a
+genuine alternative is <strong>VAV2</strong>, which appeared as a minor secondary L2G hit
+(score ~0.05) in two Open Targets credible sets at this locus but was never
+independently searched or evaluated by either the researcher or the
+red-team-skeptic (WebSearch budget was exhausted before the skeptic could
+attempt this) — this is a real gap, not a ruled-out alternative.</p>
+<p><strong>What would resolve the tie/raise confidence:</strong> (1) a direct COPD-specific
+or FEV1/FEV1-FVC-specific colocalization or fine-mapping analysis at this
+exact locus (not currently available in Open Targets or in the literature
+reviewed); (2) independent replication of the RXRA-PLA2G2A axis in cigarette
+smoke-exposed lung tissue outside the single reporting group; (3) a targeted
+search of VAV2's biology and any GWAS/colocalization support at this locus;
+(4) direct confirmation of whether this locus overlaps a genome-wide
+significant smoking-behavior (GSCAN) signal. Absent that additional
+evidence, this is the pipeline's best-supported recommendation, not a
+high-confidence causal-gene call, and the study team should weigh the
+CONTESTED status accordingly.</p>
+
+</body>
+</html>

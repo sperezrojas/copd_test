@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>11_35050001-35250000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table-locus-1135050001-35250000-cd44">Evidence table: locus 11:35050001-35250000 (CD44)</h1>
+<p>Region: 11:35,050,001-35,250,000 (GRCh38). Lead variant: rs353642 (11:35,161,113, intron_variant,
+MODIFIER). Credible set: 12 variants (ABF finemapping), all intronic to CD44, top PIP 0.262.
+Candidate genes from internal pipeline: CD44 only (nearest gene, FLAMES, MAGMA, PoPS, and ABC
+prioritized all unanimously agree). Independently confirmed via Ensembl region query (by the
+researcher) to be the sole protein-coding gene physically in this region; the only other genes
+overlapping/flanking the region are lncRNAs (CD44-AS1, CD44-DT, and several unnamed Ensembl
+lncRNA IDs), which were not separately researched as candidate genes per pipeline scoping rules.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CD44</td>
+<td>Statistical genetics — network-level (Framingham Heart Study)</td>
+<td>Combined SNP-level + dmGWAS network analysis of longitudinal FEV1/FEV1-FVC identified CD44 alongside SMAD3, TGFBR2, CTGF, VCAN, CTNNB1, SCGB1A1, PDE4D, NRG1, EPHB1, LYN as a network-level (not single-SNP) contributor to lung function; novel relative to SNP-level analysis alone.</td>
+<td>PMID 25044411 (DOI 10.1002/gepi.21841)</td>
+<td>VERIFIED, but flagged by skeptic as soft evidence — network-propagation methods pull in genes via PPI proximity to a phenotype network, not because of a CD44-specific genetic signal. Should not be read as gene-specific statistical-genetics support.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CD44</td>
+<td>Statistical genetics — negative/background (UK BiLEVE)</td>
+<td>Extreme-phenotype UK Biobank scan identified novel FEV1-extreme loci (KANSL1, TSEN54, TET2, RBM19/TBX5, NPNT, HLA-DQB1/HLA-DQA2) and smoking-behavior loci (NCAM1, TEX41/PABPC1P2); CD44 is NOT among the loci reported.</td>
+<td>PMID 26423011 (DOI 10.1016/S2213-2600(15)00283-0)</td>
+<td>VERIFIED as a real, accurately-summarized paper; correctly included only as negative/background context — this UK Biobank extreme-phenotype scan did not flag CD44 (does not rule out signal in larger/different GWAS).</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CD44</td>
+<td>Statistical genetics — negative/background (UK BiLEVE exome resequencing)</td>
+<td>Exome resequencing of &quot;resistant smokers&quot; implicated CCDC38 and ciliary-gene enrichment in smoking-resistant lung function; CD44 is not mentioned.</td>
+<td>PMID 24786987 (DOI 10.1371/journal.pgen.1004314)</td>
+<td>VERIFIED as a real, accurately-summarized paper; negative/background context only, not CD44 evidence.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CD44</td>
+<td>Structural/developmental lung biology — review</td>
+<td>Hyaluronan (HA) is the major glycosaminoglycan of lung tissue; CD44 is a principal HA-binding protein regulating HA-degradation-product signaling implicated in acute lung injury, asthma, COPD, and pulmonary hypertension.</td>
+<td>PMID 21571904 (DOI 10.1152/ajplung.00071.2010)</td>
+<td>VERIFIED. General mechanistic-plausibility review, not locus-specific or COPD-exclusive evidence.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CD44</td>
+<td>Structural — COPD airway smooth muscle (human tissue)</td>
+<td>Primary airway smooth muscle cells (ASMC) from COPD and asthma patients show significantly DECREASED hyaluronan secretion vs. healthy controls, with reduced HA-synthase-1/2, increased hyaluronidase-1, and significantly DECREASED CD44 receptor expression (RHAMM not expressed).</td>
+<td>PMID 19282346 (DOI 10.1183/09031936.00070808)</td>
+<td>VERIFIED. COPD- and ASMC-specific. Skeptic notes this is directionally opposite to the increased-CD44+-neutrophil finding below (Di Stefano 2009) — plausible as cell-type-specific biology, not a fatal contradiction, but the discordance is not resolved by any single mechanistic thread and is not yet tied to the GWAS risk-allele direction of effect (no eQTL data available).</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CD44</td>
+<td>Structural — COPD, adjacent/background</td>
+<td>Combination inhaled corticosteroid + LABA treatment normalized pathologic hyaluronic-acid metabolism (increased HA synthase-1, decreased hyaluronidase-1) in COPD patient ASMC/BAL samples; CD44 itself was not the directly measured outcome in this paper.</td>
+<td>PMID 28823949 (DOI 10.1016/j.pupt.2017.08.007)</td>
+<td>VERIFIED. Adjacent/background HA-pathway context; not direct CD44 outcome data.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CD44</td>
+<td>Structural — non-COPD mechanistic (viral lung injury model)</td>
+<td>Post-influenza lung matrix injury involves HAS2-driven hyaluronan accumulation that sequesters CD44-expressing macrophages, contributing to defective lung function; hyaluronidase treatment restored lung function.</td>
+<td>PMID 29933044 (DOI 10.1016/j.matbio.2018.06.006)</td>
+<td>VERIFIED. Mechanistic CD44+macrophage-matrix biology, but a viral-injury model, not COPD-specific.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CD44</td>
+<td>Structural/immune — COPD alveolar macrophage (human tissue)</td>
+<td>COPD patients show reduced macrophage surface expression of CD44 (&quot;a key efferocytosis receptor&quot;) vs. smokers with normal spirometry and non-smokers, alongside higher MMP-9 expression, suggesting impaired CD44-dependent efferocytosis contributes to defective inflammation resolution in COPD.</td>
+<td>PMID 23148928 (DOI 10.1186/1465-9921-13-101)</td>
+<td>VERIFIED. COPD- and macrophage-specific. Same directional-inconsistency caveat as Klagas 2009 above (decreased CD44 vs. Di Stefano 2009's increased CD44+ neutrophils) — plausible cell-type-specific biology per skeptic, but unreconciled and not anchored to GWAS risk-allele direction.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CD44</td>
+<td>Structural — mechanistic (human AECII cells + mouse emphysema model)</td>
+<td>Recombinant HAPLN1 increased TGF-beta receptor I levels in a CD44-DEPENDENT manner in human alveolar epithelial type 2 cells and mouse emphysema models, reducing cellular senescence and alveolar space enlargement.</td>
+<td>PMID 37587649 (DOI 10.14348/molcells.2023.0097)</td>
+<td>VERIFIED. Direct mechanistic evidence CD44 is required for this anti-emphysema signaling axis; correctly scoped by researcher as a mouse/cell mechanism, not extended to claim GWAS causality.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CD44</td>
+<td>Immune — COPD-specific, neutrophil (human bronchial biopsy)</td>
+<td>Percentage of neutrophils co-expressing CD11b and CD44 was significantly INCREASED in bronchial submucosa of COPD patients (GOLD I-IV) vs. control smokers.</td>
+<td>PMID 19703829 (DOI 10.1136/thx.2009.113647)</td>
+<td>VERIFIED. COPD-specific, neutrophil-specific, directly relevant to the neutrophilic-inflammation prior. Directionally opposite to the decreased-CD44 findings in ASMC/macrophages above — see caveat there.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CD44</td>
+<td>Immune — asthma model, NOT COPD</td>
+<td>CD44-hyaluronan interactions are required for airway accumulation of antigen-specific Th2 cells (but not Th1 or Th17 cells) in a mouse model of acute allergic asthma; anti-CD44 blockade or CD44 deficiency reduced Th2 cytokines and airway hyperresponsiveness.</td>
+<td>PMID 35069598 (DOI 10.3389/fimmu.2021.811600)</td>
+<td>VERIFIED as an asthma-model paper, confirming researcher's caveat. Must be read as general CD44-leukocyte-trafficking mechanism evidence, explicitly NOT COPD-specific Th2 biology — should not be extended to COPD's more CD8+/Th1/Th17/neutrophilic-dominant inflammatory profile without further COPD-specific confirmation.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CD44</td>
+<td>Immune — COPD rat model (lower evidentiary weight)</td>
+<td>In an LPS + cigarette-smoke rat COPD model, electroacupuncture reduced pulmonary MIF/CD74-CD44/p38 MAPK signaling alongside improved spirometric parameters and reduced inflammatory cytokines.</td>
+<td>PMID 30585452 (DOI 10.13702/j.1000-0607.180494)</td>
+<td>VERIFIED (Chinese-language, PubMed-indexed journal). Lower evidentiary weight given the non-standard intervention (acupuncture) and journal, as flagged by both researcher and verifier.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CD44</td>
+<td>Immune — COPD bioinformatics + herbal drug mechanism (lower evidentiary weight)</td>
+<td>WGCNA/machine-learning analysis of COPD lung tissue identified osteopontin (OPN/SPP1) as elevated, proposed to signal via CD44-mediated PI3K/AKT activation in a positive-feedback loop; a Chinese herbal compound reduced this signaling and improved outcomes in mouse/cell COPD models.</td>
+<td>PMID 39577218 (DOI 10.1016/j.intimp.2024.113624)</td>
+<td>VERIFIED. Lower evidentiary weight — primary contribution is herbal-drug-mechanism validation, not de novo CD44 human genetics/immunology, as flagged by researcher and verifier.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CD44</td>
+<td>Immune/structural — PREPRINT, NOT PEER-REVIEWED</td>
+<td>In mouse post-viral airway injury models and human lung tissue from long-COVID, asthma, and COPD patients, a GPNMB-expressing myeloid (monocyte-derived dendritic cell/macrophage) niche signals to basal epithelial stem cells via CD44, reprogramming them toward chronic lung disease.</td>
+<td>medRxiv preprint, DOI 10.1101/2024.08.27.24312640</td>
+<td>VERIFIED to exist and accurately summarized, but CONFIRMED STILL UNPUBLISHED/NOT PEER-REVIEWED at time of verification — must remain flagged as preprint-only evidence, not held to the same evidentiary standard as peer-reviewed findings.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CD44</td>
+<td>Structural — mouse emphysema model, marker use only</td>
+<td>CD90+CD73+CD106+CD44+ multipotent mesenchymal stromal cells markedly increased in elastase-induced murine emphysema alongside inflammatory cytokine changes and extracellular matrix protein overexpression.</td>
+<td>PMID 27591877 (DOI 10.1007/s10517-016-3462-7)</td>
+<td>VERIFIED. CD44 used here as a mesenchymal-stromal-cell surface marker, not as a study of CD44 function — lower direct mechanistic weight, included for completeness.</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="overall-skeptic-assessment-gene-level-from-red-team-skeptic-critique">Overall skeptic assessment (gene-level, from red-team-skeptic critique)</h2>
+<p><strong>Verdict: WEAKENED.</strong> The gene-elimination logic (CD44 is the sole protein-coding gene physically
+present at this locus; the 12-variant credible set is tight and entirely intronic to CD44;
+nearest-gene/FLAMES/MAGMA/PoPS/ABC unanimously agree) is sound, and CD44 should remain the
+prioritized candidate at this locus. However:</p>
+<ul>
+<li>There is <strong>zero gene-specific statistical-genetics support</strong> — no TWAS, colocalization, MR, or
+eQTL finding names CD44 as causal at this locus.</li>
+<li>CD44 is <strong>confirmed absent</strong> from both major consortium papers covering this trait space (Shrine
+et al. 2019 Nat Genet, 279 lung-function signals; Sakornsakolpat et al. 2019 Nat Genet, 82 COPD
+loci) — see excluded/audit appendix.</li>
+<li>Open Targets' own COPD association score for CD44 is driven entirely by text-mined literature,
+with no curated genetic-association, L2G, or colocalization data resolvable for this variant.</li>
+<li>The structural and immune mechanistic literature is real and substantial but establishes CD44 as
+a biologically plausible COPD-pathway gene <em>in general</em>, not that <em>this specific locus</em> acts
+through those mechanisms — no eQTL or other data ties the risk-allele direction of effect at
+rs353642 to any of the observed CD44 expression/functional changes.</li>
+<li>A genuine, unreconciled directional inconsistency exists across cell types (CD44 decreased in
+COPD airway smooth muscle and alveolar macrophages; increased on COPD submucosal neutrophils).
+Plausible as cell-type-specific biology, but not resolved by current evidence.</li>
+<li>Not marked CONTESTED in the strong sense: no competing positive claim for an alternative causal
+gene exists at this locus (there is no other protein-coding gene present), and the &quot;contesting&quot;
+evidence is an absence/negative finding, not a rival hypothesis.</li>
+</ul>
+<p>Full critique preserved verbatim in <code>evidence_tables/_status/11_35050001-35250000/critique.md</code>
+and <code>audits/11_35050001-35250000_audit.md</code>.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — not a verified literature citation)</h2>
+<p>Source: Open Targets Platform GraphQL API (queried directly by the orchestrator via
+<code>mcp__open-targets__*</code> tools). This section did <strong>not</strong> go through citation-verifier or
+red-team-skeptic and must not be read as verified literature evidence.</p>
+<p><strong>CD44 (ENSG00000026508):</strong></p>
+<ul>
+<li><strong>Target-disease association score (MONDO_0005002, COPD):</strong> 0.0746 overall, driven entirely by
+the &quot;literature&quot; datatype score (0.613). No <code>genetic_association</code>, <code>known_drug</code>,
+<code>affected_pathway</code>, or <code>animal_model</code> datatype score present — i.e., no curated
+GWAS/genetic-association evidence contributes to this score in Open Targets' own pipeline.</li>
+<li><strong>L2G score / colocalization for this credible set:</strong> NOT RESOLVABLE. Lead variant rs353642 did
+not resolve to a matching chr11 variant in Open Targets' search/variant index (returned
+unrelated variants on other chromosomes); no credibleSet record was retrievable. No
+Open-Targets-curated fine-mapping/colocalization evidence exists to corroborate or refute CD44
+at this locus.</li>
+<li><strong>Genetic constraint (gnomAD, via Open Targets):</strong>
+<ul>
+<li>Synonymous: score 0.169, oe 0.981 (0.888-1.085)</li>
+<li>Missense: score 0.905, oe 0.912 (0.857-0.970)</li>
+<li>Loss-of-function: pLI-like score 0.0016 (NOT LoF-constrained), oe 0.482, LOEUF (oeUpper) =
+0.654, upperBin6 = 1 (moderately constrained gnomAD LOEUF percentile bin). Note the tension
+between very low pLI and moderately-constrained LOEUF bin — both reported without resolving
+the discrepancy.</li>
+</ul>
+</li>
+<li><strong>Target prioritisation factors</strong> (general tractability/druggability heuristics, not
+disease-specific): geneticConstraint -0.499, hasLigand 0, hasPocket 0, hasSmallMoleculeBinder 1,
+isInMembrane 1, isSecreted 1, maxClinicalStage 0.1, mouseKOScore -0.953,
+mouseOrthologMaxIdentityPercentage 0, paralogMaxIdentityPercentage 0, tissueDistribution -1,
+tissueSpecificity -0.133, celltypeSpecificity -0.485, celltypeDistribution 0.059,
+geneEssentiality 0.</li>
+</ul>
+<p>Full detail in <code>evidence_tables/_status/11_35050001-35250000/opentargets.md</code>.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>CD44 — Confidence: LOW.</strong></p>
+<p>CD44 is the only reasonable pick at this locus: it is the unanimous choice of all four internal
+prioritization methods (nearest gene, FLAMES, MAGMA, PoPS) plus ABC, and — per the researcher's
+independent Ensembl region query — it is the <em>only</em> protein-coding gene physically present in the
+11:35.05-35.25 Mb region (the only other overlapping features are lncRNAs CD44-AS1/CD44-DT and
+several unnamed lncRNA IDs, which are out of scope for this gene-level review). There is no
+competing protein-coding gene to weigh against it, so this is not a close call between two
+candidates in LD — it is a single-candidate locus.</p>
+<p>Despite that structural clarity, confidence is capped at LOW rather than MODERATE or HIGH because,
+per the red-team-skeptic's WEAKENED verdict above, the case for CD44 rests entirely on (a)
+elimination (no other protein-coding gene to consider) and (b) general mechanistic plausibility
+from the hyaluronan/CD44 axis in airway biology and inflammation — and not on any gene-specific
+statistical-genetics finding. Open Targets shows no curated genetic-association or colocalization
+evidence for this variant, and this locus/CD44 is confirmed absent from both major published
+consortium GWAS papers for lung function (Shrine et al. 2019) and COPD case-control status
+(Sakornsakolpat et al. 2019) — a nontrivial negative signal from two large, well-powered studies of
+essentially the same trait space, not merely an absence of evidence. No eQTL, TWAS, colocalization,
+or Mendelian-randomization evidence ties the direction of effect of the COPD risk allele at
+rs353642 to any specific direction of CD44 expression or function, which matters because the
+verified mechanistic literature itself shows an unreconciled directional split (CD44 decreased in
+COPD airway smooth muscle [PMID 19282346] and alveolar macrophages [PMID 23148928], but increased
+on COPD submucosal neutrophils [PMID 19703829]) — plausible as cell-type-specific biology, but not
+resolved by current evidence, and not anchored to the GWAS signal itself.</p>
+<p>What would resolve this and raise confidence: (1) an eQTL or colocalization analysis tying
+rs353642 (or its credible-set proxies) to CD44 expression in a COPD-relevant tissue/cell type, with
+a defined direction of effect; (2) direct confirmation (e.g., via GWAS Catalog / supplementary
+tables) of whether this exact locus/lead variant appears in Shrine et al. 2019 or Sakornsakolpat et
+al. 2019 under a different lead SNP in LD with rs353642, since the citation-verifier confirmed CD44
+is absent from the named loci/signal lists of both papers; (3) a PheWAS/GWAS-Catalog pleiotropy
+lookup for rs353642 to rule out that this signal is primarily a blood-cell-count or
+osteoarthritis-related pleiotropic effect rather than a lung-specific one (flagged by red-team as
+an unresolved follow-up). There is no runner-up gene to name at this locus given the clean
+single-protein-coding-gene structure — the open question is mechanism and causal confirmation, not
+gene identity.</p>
+
+</body>
+</html>

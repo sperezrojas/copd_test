@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>9_133400001-133700000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-9133400001-133700000-grch38">Evidence table — Locus 9:133,400,001-133,700,000 (GRCh38)</h1>
+<p>Lead variant: rs3025343 (9:133,613,233). Nearest gene: FAM163B. MAGMA/PoPS-prioritized gene: ABL1
+(physically ~2.7-3.0 Mb outside this interval). No FLAMES or ABC prioritization available for this
+locus. Credible set (9 variants, ABF fine-mapping) is entirely noncoding (upstream_gene_variant,
+intron_variant, non_coding_transcript_variant, 5_prime_UTR_variant) — no missense/splice variants, so
+per pipeline scope this table rolls credible-set evidence into gene-level evidence rather than
+variant-by-variant analysis.</p>
+<p>Only citations with verifier verdict <strong>VERIFIED</strong> are included below. One citation (PMID 14991826)
+returned CLAIM_MISMATCH and is excluded here — see the audit appendix
+(<code>audits/9_133400001-133700000_audit.md</code>) for details. &quot;Skeptic verdict&quot; reflects the red-team-skeptic's
+gene-level judgment (CONTESTED / WEAKENED / HOLDS), applied to every row for that gene; see the audit
+appendix for the skeptic's full reasoning, including an important disclosure that the skeptic's web
+search budget was exhausted before this locus, so no independent adversarial searches were run — the
+critique below is re-reasoning over the assembled evidence only, not independently confirmed.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FAM163B</td>
+<td>Functional biology (brain)</td>
+<td>FAM163B is a single-transmembrane protein exclusively expressed in mouse brain; localizes to neuronal membrane; downregulates synaptic scaffolding protein SAP97 (DLG1); interacts with VAPA; modulates neuronal endocytosis. No lung/airway/immune connection reported — this is the only dedicated functional characterization of FAM163B identified.</td>
+<td>PMID 40999800 / DOI 10.1111/jnc.70244</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FAM163B</td>
+<td>Expression/regulatory (skeletal muscle)</td>
+<td>A GPSM1 regulatory variant (rs28539249) is associated with skeletal-muscle co-expression of a gene set including FAM163B, CACFD1, SARDH, and GTF3C5, via a CTCF-binding mechanism, enriched for ER-stress/unfolded-protein-response pathways — a muscle, not lung, tissue context.</td>
+<td>PMID 31959871 / DOI 10.1038/s10038-019-0720-3</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FAM163B</td>
+<td>Computational/exploratory (cancer)</td>
+<td>FAM163B was one of several genes flagged as a top-scoring &quot;metastasis marker&quot; by an XGBoost feature-importance model trained on TCGA breast cancer expression data; purely computational, no mechanistic follow-up, no COPD relevance.</td>
+<td>PMID 37761960 / DOI 10.3390/genes14091820</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DBH</td>
+<td>GWAS / statistical genetics (smoking behavior)</td>
+<td>rs3025343[G] — this locus's own GWAS lead variant — is genome-wide significant for smoking CESSATION (OR=1.12, 95% CI 1.08-1.18, P=3.6x10^-8) at the DBH locus.</td>
+<td>PMID 20418890 / DOI 10.1038/ng.571</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DBH</td>
+<td>GWAS replication (smoking behavior)</td>
+<td>Replicates the rs3025343-smoking-cessation association (matching TAG effect size) in ~11,926 Finnish adults (FINRISK); notes COPD showed a phenotypic (not genotype-interacting) association with smoking cessation in this cohort.</td>
+<td>PMID 28371857 / DOI 10.1093/ntx066</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DBH</td>
+<td>Pharmacogenetics (smoking-cessation treatment)</td>
+<td>A haplotype of 6 DBH-locus SNPs predicted smoking-cessation-treatment abstinence specifically in smokers with high nicotine dependence, in a clinical-trial pharmacogenetic sub-analysis.</td>
+<td>PMID 24667010 / DOI 10.1016/j.drugalcdep.2014.02.016</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DBH</td>
+<td>GWAS / statistical genetics (smoking behavior, longitudinal)</td>
+<td>A different DBH SNP (rs6479643) was associated with lower odds of smoking cessation over up to 38 years of follow-up in the Nurses' Health Study cohorts.</td>
+<td>PMID 39673390 / DOI 10.1093/ntr/ntae284</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DBH</td>
+<td>GWAS within COPD cases (smoking behavior)</td>
+<td>In 3,441 COPD patients (GOLD II+, 4 cohorts), rs3025343 in DBH was nominally associated (p=0.015) with smoking cessation specifically within a COPD population — the smoking-behavior mechanism operates within, not just outside, COPD cases. Skeptic notes this could also reflect a disease-course/behavioral-modifier effect rather than a lung-pathobiology mechanism.</td>
+<td>PMID 21685187 / DOI 10.1136/thoraxjnl-2011-200154</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DBH</td>
+<td>GWAS (spirometry / lung function)</td>
+<td>Independent genome-wide-significant association with post-bronchodilator FEV1 (not FEV1/FVC) at the DBH locus in a meta-analysis of COPDGene, ECLIPSE, and GenKOLS smokers (n=13,532; p=9.69x10^-9), described by the original authors as a novel locus distinct from 15q25/CHRNA3-5 and 4q31/HHIP. Skeptic notes this is suggestive of a non-cessation-mediated component but was found entirely within smoker cohorts, so residual smoking-dose confounding is not excluded.</td>
+<td>PMID 26634245 / DOI 10.1186/s12863-015-0299-4</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DBH</td>
+<td>Rare-variant exome sequencing</td>
+<td>A rare DBH missense variant (p.Val26Met, MAF 0.0034) was found in 2 of 48 sporadic lung-cancer patients with heavy smoking histories (37 of whom also had severe COPD), in a study pre-specifying 9q34/DBH as one of 107 GWAS loci for lung cancer/COPD/smoking behavior/pulmonary function. Weak, exploratory (n=2 carriers).</td>
+<td>PMID 26762739 / DOI 10.1016/j.jtho.2015.09.015</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DBH</td>
+<td>Functional/mechanistic (mouse knockout)</td>
+<td>DBH-null mice show embryonic lethality without transgenic rescue and profound impairment of sympathetic/noradrenergic physiology — establishes DBH as essential for systemic catecholamine physiology; background/systemic evidence, not lung-specific.</td>
+<td>PMID 27148966 / DOI 10.1371/journal.pone.0154864</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ABL1</td>
+<td>Mendelian randomization + network toxicology (drug exposure)</td>
+<td>Methotrexate exposure shows a significant positive MR association with COPD risk; ABL1 is flagged as a predicted high-affinity methotrexate-binding target via network toxicology. This is evidence about a drug exposure and an incidental target-prediction node, not evidence that ABL1 genetic variation itself causes COPD.</td>
+<td>PMID 42328420 / DOI 10.2147/COPD.S615799</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ABL1</td>
+<td>Mechanistic (mouse pulmonary fibrosis model)</td>
+<td>TGF-beta signaling activates c-Abl and Src kinases in a profibrotic cascade; the c-Abl/Src inhibitor bosutinib reduced cutaneous and pulmonary fibrosis in a TGF-beta-receptor-constitutively-active transgenic mouse model. Multi-kinase inhibitor (not ABL1-selective); fibrosis model, not COPD/emphysema.</td>
+<td>PMID 29718973 / DOI 10.1371/journal.pone.0196559</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ABL1</td>
+<td>Mechanistic (mouse pulmonary fibrosis model)</td>
+<td>Bleomycin lung injury increased phospho-c-Abl (and phospho-PDGFR-alpha, phospho-Src) in mouse lungs; the multi-target inhibitor dasatinib reduced myofibroblast activation and collagen-1 accumulation.</td>
+<td>PMID 26607773 / DOI 10.3109/08977194.2015.1109511</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ABL1</td>
+<td>Mechanistic (mouse pulmonary fibrosis model)</td>
+<td>Id2 overexpression in alveolar epithelial cells inhibits a retinoblastoma-protein/c-Abl interaction and blocks TGF-beta1-mediated collagen expression via Twist, protecting mice from bleomycin-induced lung fibrosis.</td>
+<td>PMID 25661109 / DOI 10.1016/j.ajpath.2014.12.008</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ABL1</td>
+<td>Review (contextual)</td>
+<td>Review positioning Egr-1-driven fibrotic gene expression in emphysema/pulmonary-fibrosis models, with c-Abl noted in the same fibrotic signaling network; background/contextual, not ABL1-specific primary data.</td>
+<td>PMID 23132749 / DOI 10.1002/path.4131</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ABL1</td>
+<td>Mechanistic (mouse acute lung injury model)</td>
+<td>Imatinib and nilotinib (BCR-ABL/PDGFR tyrosine kinase inhibitors) reduced bleomycin-induced acute lung injury, inflammatory cytokines (IL-6, IL-1beta, TNF-alpha), and pulmonary fibrosis in mice, in part via reduced PDGFR-beta/TGF-beta1 signaling. Nonspecific innate-inflammatory-marker reduction, not a COPD-specific or cell-type-specific immune mechanism.</td>
+<td>PMID 21659722 / DOI 10.1159/000327719</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ABL1</td>
+<td>Drug-toxicity case report (directional tension)</td>
+<td>Tyrosine kinase inhibitor (imatinib) therapy caused hypersensitivity pneumonitis / drug-induced interstitial lung disease — i.e., pharmacologically inhibiting ABL1 (among other kinases) causes lung injury, a directional tension for any argument that ABL1 loss-of-function is COPD-protective or that ABL1 activity is straightforwardly pathogenic in lung.</td>
+<td>PMID 33375903 / DOI 10.1177/1078155220984239</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ABL1</td>
+<td>Review (drug toxicity, directional tension)</td>
+<td>Review of pulmonary toxicities (mostly interstitial lung disease) caused by tyrosine kinase inhibitors, including ABL1-targeting agents.</td>
+<td>PMID 22252615 (no DOI found in PubMed record)</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADAMTS13</td>
+<td>Biomarker/mechanism (COPD cohort, not genetic)</td>
+<td>In the ECLIPSE cohort (n=984, GOLD 2-4), von Willebrand factor (VWF) fragments generated by ADAMTS13 processing (VWF-A) and by formation (VWF-N) were elevated in symptomatic vs. asymptomatic/mild COPD; VWF-N was associated with emphysema, VWF-A (ADAMTS13-processed) with exacerbations, and both with increased all-cause mortality. Plasma-biomarker/pathophysiology study, not a genetic-association study; ADAMTS13 is not implicated by any credible-set variant or prioritization method at this locus.</td>
+<td>PMID 32210548 / DOI 10.2147/COPD.S235673</td>
+<td>HOLDS (low priority)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADAMTSL2</td>
+<td>Functional biology (connective tissue, not lung)</td>
+<td>ADAMTSL2 interacts with fibrillin-1 microfibrils and accelerates microfibril biogenesis; disruption of this axis causes connective-tissue disorders (geleophysic dysplasia, Weill-Marchesani syndrome, ectopia lentis). No lung-specific literature identified.</td>
+<td>PMID 21858451 / DOI 10.1007/s00018-011-0780-9</td>
+<td>HOLDS (low priority)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADAMTSL2</td>
+<td>Molecular mechanism (connective tissue, not lung)</td>
+<td>Disease-causing ADAMTSL2 mutations impair an O-fucosylation-dependent glycosylation step required for ADAMTSL2 secretion, mechanistically explaining loss-of-function in geleophysic dysplasia.</td>
+<td>PMID 32913123 / DOI 10.1074/jbc.RA120.014557</td>
+<td>HOLDS (low priority)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SLC2A6</td>
+<td>Functional biology (cancer cell line, not lung)</td>
+<td>GLUT6/SLC2A6 expression is transcriptionally regulated by canonical NF-kB signaling (via RELA) and induced by TNF-alpha in endometrial cancer cells — inflammatory-signaling-responsive in one non-pulmonary cell context; not studied in airway epithelium or lung immune cells.</td>
+<td>PMID 32512041 / DOI 10.1016/j.cellsig.2020.109688</td>
+<td>HOLDS (low priority)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SLC2A6</td>
+<td>Functional biology (metabolic, not lung)</td>
+<td>GLUT6 is upregulated in pancreatic islets of obese/leptin-mutant mice and correlates with BMI in human T2DM patients; Slc2a6 knockout mice show increased glucose-stimulated insulin secretion but no whole-body metabolic phenotype — establishes a metabolic, not lung, role.</td>
+<td>PMID 36077188 / DOI 10.3390/ijms23179798</td>
+<td>HOLDS (low priority)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MYMK</td>
+<td>Functional biology (skeletal muscle, not lung)</td>
+<td>GRP94 chaperone facilitates myomaker (MYMK) trafficking and protects it from degradation during skeletal-muscle myoblast fusion / regeneration — biology specific to skeletal-muscle development, no documented airway or respiratory-muscle-in-COPD role.</td>
+<td>PMID 42057593 / DOI 10.1111/apha.70236</td>
+<td>HOLDS (low priority)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STKLD1</td>
+<td>Genetics (limb patterning, not lung)</td>
+<td>STKLD1 is listed among several known genes for non-syndromic postaxial polydactyly, in a paper primarily about a different gene (FAM92A/CIBAR1); no lung, COPD, or immune-relevant literature identified for STKLD1.</td>
+<td>PMID 38853702 / DOI 10.1111/cge.14572</td>
+<td>HOLDS (low priority)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CACFD1</td>
+<td>Expression/regulatory (skeletal muscle, not lung)</td>
+<td>CACFD1 is co-regulated with FAM163B and SARDH in human skeletal muscle via the same CTCF-dependent regulatory element / ER-stress-UPR pathway; no lung, COPD, or immune-relevant literature identified for CACFD1 specifically.</td>
+<td>PMID 31959871 / DOI 10.1038/s10038-019-0720-3</td>
+<td>HOLDS (low priority)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SARDH</td>
+<td>Disease phenotype (benign metabolic, not lung)</td>
+<td>SARDH loss-of-function causes sarcosinemia, a benign metabolic condition (elevated sarcosine) with no established pulmonary phenotype reported across case-report and molecular-cloning literature.</td>
+<td>PMIDs 36810603, 31815201, 23430553, 22825317, 10876657, 10444331, 9839943, 9590030, 1372986</td>
+<td>HOLDS (low priority)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<ul>
+<li><strong>FAM163B (ENSG00000196990):</strong> L2G score 0.700 and 0.680 across two indexed COPD GWAS credible-set
+records anchored at rs113927489 (adjacent to this locus's lead variant) — the clear top gene by L2G
+at this locus. Aggregated COPD association score 0.322 (gwas_credible_sets datasource 0.529;
+europepmc literature-mining datasource only 0.012 — almost no independent literature signal). No
+FEV1 (EFO_0004314) association data available. Genetic constraint: not constrained against LoF
+(gnomAD oe=0.81, &quot;very low constraint&quot; bin). No safety liabilities recorded. Molecular QTLs span
+brain, testis, liver, nerve, heart, and iPSC tissues — no lung-tissue QTL found for FAM163B.</li>
+<li><strong>DBH (ENSG00000123454):</strong> L2G score 0.064 and 0.090 in the same two COPD credible-set records where
+FAM163B scored 0.700/0.680 — the L2G runner-up/minority gene. Aggregated COPD association score
+0.040 (gwas_credible_sets 0.064, europepmc 0.027). No FEV1 association data available. Genetic
+constraint: not strongly constrained (LoF oe=0.74, &quot;medium&quot; bin). Safety/tractability not queried
+(ad hoc addition, out of formal candidate scope).</li>
+<li><strong>ABL1 (ENSG00000097007):</strong> Physically ~2.7-3.0 Mb outside this locus's defined interval. Zero GWAS
+credible-set/L2G evidence for COPD (count=0). Aggregated COPD association score 0.075, 100%
+literature-mining (europepmc 0.616), 0% genetic-association datatype contribution. No FEV1
+association data available. Genetic constraint: highly constrained against LoF (gnomAD oe=0.115,
+most-constrained bin) and missense-constrained (z=4.29) — an essential gene. Safety liabilities:
+&quot;heart disease&quot; (cardiotoxicity, Force et al. 2011) and a ToxCast catalytic-activity flag.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>DBH — confidence: LOW.</strong></p>
+<p>This is a close call between DBH and FAM163B, and the pipeline's own statistical evidence and the
+independent mechanistic literature point in different directions — that tension, not a clean win, is
+the honest summary of this locus.</p>
+<p>By locus-to-gene (L2G) score, the credible-set/positional evidence favors <strong>FAM163B</strong>: it is the
+nearest gene, hosts 7 of 9 credible-set variants, and is the clear L2G leader in Open Targets' own
+analysis of the adjacent COPD credible set (0.70/0.68 vs. DBH's 0.06-0.09). But the red-team-skeptic
+marked FAM163B <strong>CONTESTED</strong>, and I agree with that call: the only dedicated functional characterization
+of FAM163B (PMID 40999800, VERIFIED) describes a brain-restricted neuronal membrane protein with no
+lung, airway, or immune connection, and its other two citations (skeletal-muscle co-expression, PMID
+31959871; a computational breast-cancer marker, PMID 37761960) are equally non-pulmonary. FAM163B's
+aggregated Open Targets COPD score is almost entirely genetic/positional (europepmc score 0.012) —
+there is essentially no independent literature bridging the statistical signal to a plausible lung
+mechanism.</p>
+<p><strong>DBH</strong>, by contrast, has a comparatively weak L2G/positional case (it is the minority gene at the same
+credible sets) but a genuinely compelling, independently-assembled mechanistic case that ties directly
+to this locus's own lead variant: rs3025343 is itself DBH's well-replicated smoking-cessation SNP
+(PMIDs 20418890, 28371857, 24667010, 39673390, all VERIFIED), and this same variant is nominally
+associated with smoking cessation specifically within a COPD patient population (PMID 21685187,
+VERIFIED) — directly instantiating this review's prior #1 (smoking-mediated signal) at this exact
+locus. There is also one independent, genome-wide-significant association between the DBH locus and
+post-bronchodilator FEV1 in smoker cohorts (PMID 26634245, VERIFIED), which is suggestive of prior #2
+(a lung-function-specific component) though it does not rule out residual smoking-dose confounding and
+has not been replicated. The red-team-skeptic marked DBH <strong>WEAKENED</strong>, not CONTESTED — chiefly for
+overstating &quot;best genetically supported gene in cluster&quot; against the L2G picture — but characterized it
+as &quot;the more interesting candidate&quot; with a mechanism that is real and lead-variant-specific.</p>
+<p><strong>Runner-up: FAM163B</strong> (statistically/positionally favored, but its L2G lead is undermined by a credible
+mechanistic alternative at the same lead variant, and its own functional literature argues against a
+lung role). <strong>ABL1 is explicitly deprioritized</strong>: it sits ~2.7-3.0 Mb outside the locus interval, has
+zero GWAS/L2G genetic evidence for COPD in Open Targets, and its only mechanistic support comes from
+nonspecific multi-kinase-inhibitor pulmonary-fibrosis models (not COPD/emphysema biology) plus a
+directional tension (pharmacologically inhibiting ABL1 causes drug-induced interstitial lung disease).
+The skeptic rated ABL1 &quot;WEAKENED, bordering on exclusion&quot; and recommended treating it as a
+low-confidence, likely-noise candidate rather than a co-equal contender.</p>
+<p><strong>What would resolve this tie:</strong> (1) a formal statistical fine-mapping/colocalization analysis testing
+whether rs3025343 (or its correlated credible-set variants) acts as a cis-eQTL/enhancer for DBH
+expression/activity specifically (versus FAM163B) in a relevant tissue (adrenal medulla, sympathetic
+neurons, or — if a lung mechanism is to be tested — airway/lung tissue, where neither gene currently
+has QTL data in Open Targets); (2) a mediation analysis partitioning this locus's COPD association
+through a smoking-behavior GWAS (initiation/cessation/heaviness) versus a lung-function GWAS (FEV1,
+FEV1/FVC) adjusted for smoking, to determine whether the DBH mechanism is necessary and sufficient or
+whether an independent lung-structural effect remains; and (3) replication of the Lutz et al. 2015 FEV1
+signal in an independent smoker cohort. Given the genuine, unresolved tension between L2G/positional
+evidence (FAM163B) and mechanistic/smoking-behavior evidence tied to the exact lead variant (DBH),
+confidence in DBH as the top pick is <strong>LOW</strong>, and the study team should weigh this call carefully rather
+than treat it as settled.</p>
+
+</body>
+</html>

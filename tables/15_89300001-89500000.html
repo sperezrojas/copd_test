@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>15_89300001-89500000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1589300001-89500000-grch38">Evidence table — Locus 15:89,300,001-89,500,000 (GRCh38)</h1>
+<p><strong>Nearest gene:</strong> POLG. <strong>MAGMA-prioritized:</strong> ACAN. <strong>PoPS-prioritized:</strong> ACAN.
+<strong>Lead variant:</strong> rs182317 (PIP=0.677, 15:89,400,370, splice_region_variant /
+non_coding_transcript_exon_variant, LOW impact). Credible-set variants also include
+rs150351 (PIP=0.167, 15:89,387,357) and rs208829 (PIP=0.093, 15:89,403,811).</p>
+<p><strong>Locus structure note (from researcher's Ensembl lookup, not literature):</strong> all three
+credible-set variants fall in a ~115 kb intergenic gap between POLG-DT (lncRNA) and RHCG —
+none is within the coding sequence of POLG, FANCI, or RHCG. ACAN's own gene body
+(15:88,803,427-88,875,353) lies ~430-500 kb outside this stated locus window entirely.
+Protein-coding genes physically in/overlapping the window: POLGARF, FANCI, POLG, RHCG.</p>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POLG</td>
+<td>Statistical genetics (background)</td>
+<td>Major prior COPD GWAS (Sakornsakolpat et al. 2019) identified 82 loci (UK Biobank + ICGC); whether this specific 15q26.1/POLG locus is among the 82 is UNCONFIRMED (not stated in abstract; supplementary tables not accessible to verifier)</td>
+<td>PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
+<td>WEAKENED (cite only as general background; do not treat as locus-specific confirmation)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>POLG</td>
+<td>Statistical genetics / MR / colocalization</td>
+<td>Two-sample MR (FinnGen + mQTL/eQTL/pQTL) classifies POLG &quot;Grade 1&quot; (highest-confidence) for a causal association with idiopathic pulmonary fibrosis (IPF) — a different, restrictive/fibrotic lung disease from obstructive COPD</td>
+<td>PMID 39952317 / DOI 10.1016/j.trsl.2025.02.002</td>
+<td>WEAKENED (bounded strictly to IPF; must not be extended to COPD causality)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>POLG</td>
+<td>Structural/mechanistic (non-pulmonary)</td>
+<td>Biallelic POLG variants cause Alpers' syndrome, a neurodegenerative mitochondrial DNA depletion disorder (epilepsy, developmental regression, liver failure) — POLG's dominant, well-replicated monogenic biology is neuro-hepatic, not pulmonary</td>
+<td>PMID 30021052 / DOI 10.1111/bpa.12640</td>
+<td>WEAKENED (supports discordance with a lung mechanism)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>POLG</td>
+<td>Structural (general plausibility, not gene-specific)</td>
+<td>Review: mtDNA mutations/variation/haplogroups proposed as contributors to COPD susceptibility/severity (general mitochondrial-dysfunction-in-COPD framing, not a POLG-specific finding)</td>
+<td>PMID 38672169 / DOI 10.3390/biomedicines12040814</td>
+<td>HOLDS (as general background only, not POLG-specific evidence)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>POLG</td>
+<td>Structural (general plausibility, not gene-specific)</td>
+<td>Review: mitochondrial DNA damage/ROS implicated in COPD pathogenesis generally (no POLG-specific claim)</td>
+<td>PMID 35002373 / DOI 10.1016/j.jsps.2021.10.008</td>
+<td>HOLDS (general background only)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>POLG / POLGARF</td>
+<td>Molecular biology (structural complication)</td>
+<td>POLG mRNA also encodes a second, distinct protein (POLGARF) via an overlapping CUG-initiated reading frame; POLGARF localizes to nucleoli (via C1QBP) and undergoes serum-stimulated cleavage/secretion — a function distinct from POLG's mitochondrial DNA replication role. No lung/COPD/immune phenotype reported for POLGARF</td>
+<td>PMID 32958672 / DOI 10.1073/pnas.2001433117</td>
+<td>WEAKENED for POLG-as-sole-candidate (raises POLGARF as an uncharacterized alternative at the same locus)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ACAN</td>
+<td>Structural (non-pulmonary)</td>
+<td>Biallelic ACAN loss-of-function variants cause spondylo-epimetaphyseal dysplasia (short stature, skeletal abnormalities)</td>
+<td>PMID 39295451 / DOI 10.1515/jpem-2024-0255</td>
+<td>HOLDS (establishes ACAN's core biology as skeletal, not pulmonary)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ACAN</td>
+<td>Structural (non-pulmonary)</td>
+<td>Heterozygous ACAN frameshift variant causes familial osteochondritis dissecans</td>
+<td>PMID 34894100 / DOI 10.1002/mgg3.1773</td>
+<td>HOLDS (skeletal, not pulmonary)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FANCI</td>
+<td>Immune/inflammatory (indirect)</td>
+<td>In a PM2.5-induced airway-inflammation mouse/cell model, ATM-pathway perturbation reduced neutrophilic inflammation and cytokine expression (CXCL-1, TNF-alpha), accompanied by decreased FANCD2/FANCI expression; FANCI used as a downstream DNA-damage-response marker, not tested as a causal driver, and no FANCI genetic variation or COPD tested directly</td>
+<td>PMID 37483094 / DOI 10.1002/tox.23901</td>
+<td>HOLDS (as an honestly-labeled weak, indirect, non-causal marker association)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p>No PubMed record was found under lead variant rs182317 itself (zero hits) — no dedicated
+variant-level functional/association literature exists for this SNP. No GWAS/TWAS/MR/
+colocalization literature was found connecting ACAN, RHCG, or POLGARF to COPD or
+spirometric traits (FEV1/FEV1-FVC) at all; this absence is itself recorded as evidence
+(see audit appendix and Prioritized-gene synthesis below).</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not reviewed by citation-verifier or red-team-skeptic)</h2>
+<p>Queried via Open Targets Platform GraphQL API on 2026-09-11. Full detail in
+<code>evidence_tables/_status/15_89300001-89500000/opentargets.md</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>L2G / genetic-association evidence for COPD</th>
+<th>Colocalization</th>
+<th>Constraint (gnomAD)</th>
+<th>Top disease associations overall</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POLG</td>
+<td>1 <code>gwas_credible_sets</code> evidence record, aggregate score 0.406; no per-variant/study/component breakdown exposed by the API</td>
+<td>Not separately exposed via this query path</td>
+<td>LoF oe=0.72 (109 obs/151 exp, CI 0.62-0.85); missense oe=1.03 (not constrained)</td>
+<td>Monogenic mitochondrial disorders (mtDNA depletion syndrome 4a 0.85, sensory ataxic neuropathy/dysarthria/ophthalmoparesis 0.84, PEO with mtDNA deletions 0.83, MNGIE 0.83, Alpers syndrome 0.77) — COPD (0.406) is comparatively weak</td>
+</tr>
+<tr>
+<td>ACAN</td>
+<td>ZERO <code>gwas_credible_sets</code>/L2G evidence records for COPD; only literature text-mining scores (0.14, 0.05, 0.02)</td>
+<td>None found</td>
+<td>LoF oe=0.295 (46 obs/156 exp, CI 0.23-0.38) — strongly constrained</td>
+<td>Skeletal/cartilage phenotypes (spondyloepimetaphyseal dysplasia 0.75, familial osteochondritis dissecans 0.75, osteochondritis dissecans 0.71, osteoarthritis 0.44-0.52)</td>
+</tr>
+</tbody>
+</table>
+<p>FANCI, RHCG, and POLGARF were not queried against Open Targets in step 1 (they were not
+listed as candidate genes in the locus input file; they were added later by the researcher
+based on physical overlap with the locus window). This is noted as a gap rather than
+silently omitted.</p>
+<h2 id="prioritized-gene-synthesis">Prioritized-gene synthesis</h2>
+<p><strong>Prioritized gene: POLG. Confidence: LOW.</strong></p>
+<p>This is a genuinely difficult, low-confidence locus, and the call is close. No candidate
+gene at this locus has both a strong statistical/positional case and supporting mechanistic
+literature — the red-team-skeptic's locus-level assessment (&quot;no candidate gene has both a
+strong physical/statistical case and supporting mechanistic literature... present this as
+an unresolved candidate-gene locus with multiple weak positional candidates&quot;) is accurate
+and is not contradicted by anything below.</p>
+<p>POLG is named as the best single pick, by elimination rather than by strong positive
+evidence, for the following reasons:</p>
+<ul>
+<li>It is the only candidate with any Open Targets genetic-association evidence for COPD at
+all (aggregate score 0.406 from <code>gwas_credible_sets</code>), even though this likely just
+reflects the credible set's genomic proximity to POLG rather than an independent line of
+support (red-team-skeptic's caveat, preserved above).</li>
+<li>It is the conventional &quot;nearest gene&quot; call, though the skeptic correctly notes this is
+weak on its own: none of the three credible-set variants sits within POLG's coding
+sequence — they fall in an intergenic gap ~65+ kb away, more consistent with hitting an
+unannotated lncRNA transcript than any protein-coding gene directly.</li>
+<li>ACAN — despite carrying the more prominent MAGMA/PoPS prioritization scores — is
+CONTESTED (see audit appendix): its gene body lies ~430-500 kb outside the stated locus
+window, Open Targets shows zero L2G/credible-set evidence for ACAN-COPD (actively failing
+to reproduce the MAGMA/PoPS signal), and no literature of any kind connects ACAN to lung
+or airway biology. The skeptic's assessment that this looks like &quot;a locus-definition/
+pipeline artifact&quot; rather than genuine gene-level evidence is well-reasoned given the
+physical-distance mismatch, and ACAN is therefore ranked below POLG here.</li>
+<li>RHCG is a legitimate positional runner-up (it is the only protein-coding gene fully
+inside the stated window, and the credible-set variants are roughly as close to RHCG as
+to POLG's coding sequence), but it has zero supporting or refuting literature — this is a
+real evidence gap that neither the researcher nor the red-team-skeptic could close
+(WebSearch budgets were exhausted before a dedicated RHCG-airway-biology check could be
+completed by either agent). This is flagged explicitly as unresolved, not decided against
+RHCG.</li>
+<li>FANCI is a weaker runner-up: one indirect, non-causal marker association in a PM2.5
+airway-inflammation model (FANCI as a DNA-damage-response readout, not itself tested).</li>
+</ul>
+<p><strong>What would resolve this tie:</strong> (1) a dedicated, unexhausted literature/database search for
+RHCG in airway epithelium (e.g., RHCG knockout mouse airway phenotypes, RHCG lung eQTL/
+sQTL data, single-cell airway expression atlases) — this was not completed in this run and
+is the single most likely evidence gap to change the ranking; (2) direct confirmation of
+whether Sakornsakolpat et al. 2019's 82 COPD loci include this specific 15q26.1 region
+(would upgrade or further weaken the &quot;nearest gene&quot; framing for POLG); (3) a targeted check
+of whether this locus overlaps any smoking-initiation/cessation/heaviness GWAS signal (per
+this pipeline's smoking-mediation prior) — neither the researcher nor the skeptic could
+complete this check; (4) tissue-specific eQTL/sQTL/chromatin-interaction data (e.g., GTEx
+lung, ABC model) for the intergenic credible-set region, to determine which flanking gene
+(POLG, RHCG, or the unannotated lncRNA itself) is regulatorily linked to the lead variant;
+(5) an explanation from the internal pipeline for why MAGMA/PoPS assigned ACAN to this
+window despite its physical distance, which would either rehabilitate or further discredit
+ACAN as a candidate.</p>
+<p>Given the physical location of the credible set outside POLG's coding sequence, the absence
+of any COPD- or spirometry-specific literature for any candidate gene, and the unresolved
+RHCG and smoking-locus questions, this locus's causal gene assignment should be treated as
+provisional. POLG is the best-supported single pick available from current evidence, but
+only marginally ahead of RHCG, and confidence is LOW — not MODERATE — because the
+supporting evidence is proximity-based rather than mechanism-based.</p>
+
+</body>
+</html>

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>10_29850001-30050000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1029850001-30050000-grch38">Evidence table — locus 10:29,850,001-30,050,000 (GRCh38)</h1>
+<p>Nearest gene: JCAD. FLAMES/MAGMA/PoPS-prioritized gene: SVIL. ABC-prioritized: NA.
+Lead variant: rs4747692 (10:29,978,155, intergenic, PIP=0.23). Credible set: ~55 variants
+(PIP up to 0.23, no single dominant variant), all intergenic/downstream/non-coding-transcript-exon
+(no missense or splice-donor/acceptor variants).</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JCAD</td>
+<td>Statistical genetics (GWAS, cardiovascular)</td>
+<td>Original GWAS discovery of the KIAA1462/JCAD locus (rs3739998, missense p.S1002T) as genome-wide significant for coronary artery disease/myocardial infarction (P=1.27x10^-11, OR=1.15)</td>
+<td>PMID 21088011, DOI 10.1093/eurheartj/ehq405</td>
+<td>SUPPORTED (as CAD evidence; not COPD-specific)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JCAD</td>
+<td>Statistical genetics (replication, cardiovascular)</td>
+<td>Pakistani replication of JCAD/KIAA1462 CAD association (rs2505083, LD with rs3739998)</td>
+<td>PMID 32685059, DOI 10.1155/2020/9738567</td>
+<td>SUPPORTED (CAD context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JCAD</td>
+<td>Statistical genetics (cardiovascular)</td>
+<td>JCAD rs3739998 tested in Slovenian T2DM cohort; nominal MI association lost after adjustment</td>
+<td>PMID 41300830, DOI 10.3390/genes16111378</td>
+<td>SUPPORTED (CAD context; notes signal attenuates after adjustment)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JCAD</td>
+<td>Statistical genetics (review, cardiovascular)</td>
+<td>Review naming JCAD/KIAA1462 among key CAD genetic markers</td>
+<td>PMID 39858645, DOI 10.3390/genes16010098</td>
+<td>SUPPORTED (CAD context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JCAD / SVIL</td>
+<td>Statistical genetics (lung function, general context)</td>
+<td>Landmark multi-ancestry lung-function GWAS (400,102 individuals, 279 signals); explicitly tested signals for smoking-driven association and excluded only specific named signals (e.g. CHRNA5, PDE4C region) -- this locus was not among those excluded</td>
+<td>PMID 30804560, PMC PMC6397078, DOI 10.1038/s41588-018-0321-7</td>
+<td>VERIFIED for general claims; gene-level causal call at this specific locus in supplementary tables could not be confirmed from available full text -- treat as general supporting context only, not a direct per-gene citation</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JCAD</td>
+<td>Statistical genetics (COPD-relevant imaging GWAS, human)</td>
+<td>GWAS of CT-quantified emphysema distribution in 11,532 smokers (COPDGene/ECLIPSE/GenKOLS); genome-wide-significant association (rs35374984, P=3.83x10^-8) with upper-to-lower-lobe emphysema ratio, annotated to KIAA1462/JCAD; rs35374984 (chr10:29,945,261 GRCh38) sits ~2.2 kb immediately upstream of this locus's credible-set span -- effectively the same signal</td>
+<td>PMID 27669027, DOI 10.1164/rccm.201605-0997OC, PMC PMC5363968 (Boueiz A et al. 2017; note Castaldi PJ is a co-author, not first author -- corrected from an initial mis-citation)</td>
+<td>SUPPORTED -- independent human genetic evidence directly tying this exact locus to a COPD-relevant imaging phenotype (emphysema distribution), in a cohort of smokers</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JCAD</td>
+<td>Structural/mechanistic (direct COPD functional model)</td>
+<td>Global Jcad/Kiaa1462 knockout mice protected from elastase-induced emphysema and acute lung inflammation (preserved parenchymal structure/vasculature after 3 weeks elastase); KIAA1462 silencing in human pulmonary microvascular endothelial cells and A549 lung epithelial cells altered TNF-alpha-induced pro-inflammatory gene expression; paper proposes KIAA1462/JCAD as a candidate COPD therapeutic target</td>
+<td>PMID 39273437, PMC PMC11394678, DOI 10.3390/ijms25179492</td>
+<td>SUPPORTED but caveated: this is the single most load-bearing citation for JCAD, and it is directionally unconfirmed -- a knockout/silencing study shows JCAD LOSS is protective, but does NOT establish which allele of rs4747692 raises vs. lowers JCAD activity in humans, so it should not be described as &quot;validating&quot; the GWAS signal, only as mechanistically supportive</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JCAD</td>
+<td>Structural (endothelial biology, cardiovascular)</td>
+<td>JCAD/KIAA1462 localizes to VE-cadherin-based endothelial cell-cell junctions</td>
+<td>PMID 21884682, DOI 10.1016/j.bbrc.2011.08.073</td>
+<td>SUPPORTED (establishes normal biological role, cardiovascular context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JCAD</td>
+<td>Structural (vascular, cardiovascular)</td>
+<td>Jcad-/- ApoE-/- mice developed less atherosclerosis; JCAD knockdown reduced endothelial flow response (NF-kB, eNOS, Akt)</td>
+<td>PMID 31584065, PMC PMC7449560, DOI 10.1093/cvr/cvz263</td>
+<td>SUPPORTED (cardiovascular mechanotransduction context, not pulmonary)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JCAD</td>
+<td>Structural + immune (endothelial, cardiovascular)</td>
+<td>JCAD risk variants associated with increased JCAD expression in human arteries (GTEx); JCAD regulates Hippo/YAP-TAZ signaling via TRIOBP; JCAD-deficient endothelial cells recruit fewer monocytes in response to LPS</td>
+<td>PMID 31539914, PMC PMC6698662, DOI 10.1093/eurheartj/ehz303</td>
+<td>SUPPORTED (monocyte-adhesion mechanism relevant to inflammatory prior, but cardiovascular tissue context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JCAD</td>
+<td>Structural (endothelial, cardiovascular)</td>
+<td>JCAD knockdown affects endothelial proliferation/migration/apoptosis/tube formation/monocyte binding via LATS2/Hippo/YAP; CAD lead variant rs2487928 is an eQTL for JCAD in arteries</td>
+<td>PMID 29794114, PMC PMC6296439, DOI 10.1161/ATVBAHA.118.310976</td>
+<td>SUPPORTED (cardiovascular eQTL and mechanism)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JCAD</td>
+<td>Structural (thrombosis, cardiovascular)</td>
+<td>JCAD-/- mice show reduced arterial thrombogenicity; plasma JCAD elevated in STEMI patients</td>
+<td>PMID 36469488, PMC PMC10200023, DOI 10.1093/eurheartj/ehac641</td>
+<td>SUPPORTED (cardiovascular, tangential to COPD)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JCAD</td>
+<td>Structural (endothelial, cardiovascular)</td>
+<td>miR-19a-3p/JCAD/Hippo-YAP axis in endothelial dysfunction in atherosclerosis</td>
+<td>PMID 39080547, PMC PMC11287888, DOI 10.1186/s12872-024-04063-y</td>
+<td>SUPPORTED (mechanistic detail, cardiovascular)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SVIL</td>
+<td>Statistical genetics (cardiac, not pulmonary)</td>
+<td>Common-variant GWAS + rare-variant burden testing identify SVIL as a novel hypertrophic cardiomyopathy gene; rare truncating SVIL variants confer ~10-fold increased HCM risk</td>
+<td>PMID 39966646 (Nat Genet 2025, PMC PMC11906354, DOI 10.1038/s41588-025-02087-4); preprint PMID 36778260 (medRxiv, PMC PMC9915807, DOI 10.1101/2023.01.28.23285147)</td>
+<td>SUPPORTED as evidence SVIL is a genuine dosage-sensitive disease gene, but in cardiac striated muscle, not lung -- does not directly support a COPD mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SVIL</td>
+<td>Structural (expression, tangential)</td>
+<td>SVIL mRNA expressed in all tissues tested, most abundant in muscle/bone marrow/thyroid/salivary gland; &quot;especially abundant&quot; in A549 lung adenocarcinoma cell line; supervillin &quot;originally isolated from bovine neutrophils&quot;</td>
+<td>PMID 9867483, DOI 10.1006/geno.1998.5466</td>
+<td>WEAKENED -- expression in a cancer cell line and a historical isolation note are weak, indirect evidence; not a functional lung or immune study</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SVIL</td>
+<td>Structural (skeletal muscle, not lung)</td>
+<td>Muscle-specific supervillin isoform &quot;archvillin&quot; localizes to costameres, essential for early myogenic membrane structure/differentiation</td>
+<td>PMID 12711699, DOI 10.1242/jcs.00422</td>
+<td>WEAKENED -- skeletal myogenesis, not airway/vascular smooth muscle or lung tissue</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SVIL</td>
+<td>Structural (rare lung disease, tangential)</td>
+<td>In a single LAM (lymphangioleiomyomatosis) patient-derived cell line, SVIL expression markedly decreased vs. controls, associated with high-motility phenotype</td>
+<td>PMID 26026094</td>
+<td>WEAKENED -- single-patient cell line, mechanistically distinct rare disease (mTOR-driven smooth-muscle proliferation), not generalizable to COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SVIL</td>
+<td>Structural (skeletal muscle in COPD, different SNP)</td>
+<td>In n=152 smokers with/without COPD, SVIL SNP rs6481619 (NOT in this locus's credible set) nominally associated (beta=0.152, P=0.013, uncorrected) with skeletal muscle oxidative capacity in moderate-to-severe COPD subgroup</td>
+<td>PMID 29799805, PMC PMC6172613, DOI 10.1152/physiolgenomics.00140.2017</td>
+<td>WEAKENED -- small sample, nominal/uncorrected P-value, different SNP than any in this locus's credible set, peripheral skeletal-muscle comorbidity phenotype not lung parenchyma</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SVIL</td>
+<td>Structural (cancer biology, not lung-specific)</td>
+<td>SVIL regulates tight-junction protein ZO-1 and cell migration/metastasis in colorectal cancer cells</td>
+<td>PMID 39745006, DOI 10.1002/jcb.30699</td>
+<td>WEAKENED -- general epithelial-junction biology in a cancer context, not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SVIL</td>
+<td>Immune (bioinformatics screen, exploratory)</td>
+<td>SVIL among &quot;top ten genes with the greatest transcriptional differences&quot; in alveolar macrophages between COPD-smokers and non-COPD smokers, in a signature dominated by upregulated ribosomal housekeeping genes; SVIL's own direction/function not further elaborated</td>
+<td>PMID 34588774, PMC PMC8473850, DOI 10.2147/COPD.S313252</td>
+<td>WEAKENED -- exploratory bioinformatics reanalysis, SVIL is one of many differentially expressed genes with no dedicated mechanistic follow-up in the paper</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="notes-on-rows-above">Notes on rows above</h2>
+<ul>
+<li>Skeptic verdicts of &quot;SUPPORTED&quot; here are qualified per-citation judgments about whether that
+individual citation is being used honestly (not overclaimed), not a statement that the citation
+alone proves JCAD causal for COPD. See the gene-level CONTESTED/SUPPORTED calls in the
+Prioritized-gene section below for the overall per-gene verdict.</li>
+<li>All rows above carry citations verified VERIFIED by citation-verifier (see
+<code>evidence_tables/_status/10_29850001-30050000/verified_citations.md</code> for full verbatim
+verification text), except the Shrine et al. 2019 row, which is verified for its general
+claims only, with the specific per-gene supplementary-table claim unconfirmed (noted explicitly
+in the claim column).</li>
+</ul>
+<h2 id="open-targets-summary-structured-database-lookup----not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup -- NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p>Disease resolved: chronic obstructive pulmonary disease -&gt; MONDO_0005002. Lead variant rs4747692
+-&gt; 10_29978155_C_T (GRCh38).</p>
+<p><strong>JCAD (ENSG00000165757):</strong></p>
+<ul>
+<li>Disease-level association score for COPD (MONDO_0005002): 0.0673, entirely literature/text-mining-datatype
+(score 0.554); no GWAS/genetic-association datasource evidence indexed for COPD specifically.</li>
+<li>L2G scores at the lead variant's overlapping credible sets (none are COPD case-control studies;
+all are related quantitative traits): FEV1/FVC ratio (GCST004185) L2G=0.595; peak expiratory flow
+(3 GWAS) L2G=0.618-0.640; white blood cell count (max) L2G=0.595; non-albumin serum protein
+L2G=0.556. JCAD is the top/only reported L2G gene at every credible set Open Targets indexes for
+this locus.</li>
+<li>Colocalization (from the FEV1/FVC-ratio credible set, COLOC_PIP_ECAVIAR): peak expiratory flow
+h4=0.979-0.980; white blood cell count h4=0.894-0.906; monocyte count h4=0.754; platelet count
+h4=0.757; non-albumin protein h4=0.508-0.531; heart rate h4=0.132-0.253 (weak). No COPD
+case-control study locus appears among indexed colocalizing loci.</li>
+<li>Genetic constraint (gnomAD): LoF oe=0.380 (upperBin=1, top constrained decile); missense oe=0.931
+(not notably constrained).</li>
+</ul>
+<p><strong>SVIL (ENSG00000197321):</strong></p>
+<ul>
+<li>Disease-level association score for COPD (MONDO_0005002): 0.0130 (~5x lower than JCAD), entirely
+literature/text-mining-datatype (score 0.107); no GWAS/genetic-association datasource evidence
+indexed.</li>
+<li>L2G scores at the same credible sets: peak expiratory flow L2G=0.0596; white blood cell count
+L2G=0.0514; non-albumin protein L2G=0.085-0.093; SVIL is entirely absent from the reported L2G
+rows for the FEV1/FVC-ratio credible set.</li>
+<li>Colocalization: not gene-specific (see JCAD entry; locus-level pattern applies regardless of
+which gene L2G assigns it to).</li>
+<li>Genetic constraint (gnomAD): LoF oe=0.411 (upperBin=1, top constrained decile, similar tier to
+JCAD); missense oe=0.865.</li>
+</ul>
+<p>Full detail: <code>evidence_tables/_status/10_29850001-30050000/opentargets.md</code>.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>JCAD -- MODERATE confidence.</strong></p>
+<p>The weight of independently-gathered, verified evidence favors JCAD over SVIL at this locus, on
+several converging lines: (1) JCAD physically sits adjacent to the credible-set span (several
+credible-set variants annotated <code>downstream_gene_variant</code> relative to JCAD), whereas SVIL's gene
+body does not physically overlap the stated locus window at all -- its nearest edge is &gt;112 kb
+before the window starts and &gt;210 kb from the credible-set variant span, a fact the researcher
+established independently via Ensembl REST and that the skeptic agreed raises a real possibility
+that SVIL's FLAMES/MAGMA/PoPS prioritization is a statistical/window artifact rather than a
+genuine gene call, with no chromatin-interaction (Hi-C/ABC-model) evidence found to rescue a
+long-range-regulation explanation; (2) Open Targets' L2G algorithm consistently and substantially
+favors JCAD (L2G 0.56-0.64) over SVIL (L2G 0.05-0.09, or absent) across every overlapping credible
+set for quantitative pulmonary and blood-cell traits; (3) a same-locus, human, smoker-cohort GWAS
+of CT-quantified emphysema distribution (Boueiz et al. 2017, PMID 27669027) independently
+implicates KIAA1462/JCAD via a variant (rs35374984) effectively coincident with this locus's
+credible set; and (4) a direct functional COPD paper (Suraya et al. 2024, PMID 39273437) shows
+Jcad/Kiaa1462 knockout mice are protected from elastase-induced emphysema and lung inflammation,
+with altered TNF-alpha-driven inflammatory gene expression in pulmonary endothelial and epithelial
+cells, spanning both the structural (prior #2, pulmonary-function/imaging concordance) and immune
+(prior #3) domains laid out in this pipeline's biological priors.</p>
+<p>Confidence is capped at MODERATE, not HIGH, for several reasons the red-team-skeptic raised and
+that are not resolved by the evidence gathered: (a) no COPD case-control genetic association is
+indexed for JCAD anywhere (Open Targets or the literature found) -- the genetic case rests entirely
+on quantitative pulmonary-function/imaging traits and colocalization, not a direct COPD
+diagnosis-based GWAS hit; (b) directionality is unconfirmed -- the Suraya et al. knockout/silencing
+study establishes that JCAD loss is protective in mice, but no eQTL/pQTL evidence ties the human
+COPD-risk allele at this locus to reduced (rather than increased) JCAD activity, so this citation
+is mechanistically supportive, not confirmatory of the GWAS direction; (c) the large majority of
+JCAD's mechanistic literature (7 of the 12 JCAD-specific citations above) is drawn from
+cardiovascular/coronary-artery-disease contexts, not pulmonary tissue, so the extrapolation to lung
+endothelial biology, while biologically plausible and partly corroborated by Suraya et al., is an
+extrapolation; and (d) strong locus-level colocalization with white blood cell count, monocyte
+count, and platelet count (h4 up to 0.98, same credible set as the FEV1/FVC-ratio signal) suggests
+this locus's biology may be a broadly pleiotropic vascular/inflammatory mechanism rather than a
+COPD- or lung-specific one -- consistent with, but not proof of, JCAD's known role in
+endothelial-monocyte adhesion.</p>
+<p><strong>Runner-up: SVIL, CONTESTED</strong> (see audit appendix) -- retained as the internal pipeline's
+statistical call, but its candidacy is substantially undercut by the physical-overlap discrepancy
+and consistently weak L2G/disease-association scores, and its literature support is uniformly
+off-tissue (cardiac muscle, skeletal muscle, colorectal cancer, one rare-disease cell line) or
+underpowered/off-target for this specific locus (nominal, uncorrected, different SNP; and a
+platelet-thrombosis SNP pair ~420 kb away from this credible set, excluded entirely -- see audit).</p>
+<p><strong>What would resolve the tie / raise confidence:</strong> (i) an eQTL or pQTL study establishing that the
+COPD-GWAS risk allele at rs4747692 (or its high-LD proxies) is associated with reduced JCAD
+expression/activity in lung tissue, matching the direction implied by the Suraya et al. knockout
+phenotype; (ii) a directly indexed COPD case-control GWAS/L2G call at this locus (currently absent
+from Open Targets); (iii) chromatin-interaction data (Hi-C, ABC model, or eQTL) specifically testing
+whether the credible-set region contacts the SVIL promoter despite the physical gap, to either
+rescue or further undercut SVIL's candidacy. Absent that, this is the orchestrator's best-supported
+recommendation for the study team to weigh, not a final determination.</p>
+
+</body>
+</html>

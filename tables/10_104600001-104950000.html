@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>10_104600001-104950000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-locus-evidence-table--10104600001-104950000-10q2432-nearest-gene-sorcs3">COPD locus evidence table — 10:104,600,001-104,950,000 (10q24.32; nearest gene SORCS3)</h1>
+<p>Region 10:104,600,001-104,950,000 (GRCh38). Lead variant rs4537697 (10:104659211, intronic,
+MODIFIER). All 19 credible-set variants (PIP 0.001-0.178) are intronic in SORCS3, none
+missense/splice. Nearest gene: SORCS3. MAGMA-prioritized: CNNM2. PoPS-prioritized: CNNM2. No
+FLAMES/ABC hit. The researcher independently enumerated additional 10q24.32-block candidates
+(WBP1L, AS3MT, CYP17A1, NT5C2, C10orf32/BORCS7) via Ensembl region lookup.</p>
+<p>Pipeline stages completed: Open Targets lookup -&gt; researcher -&gt; citation-verifier -&gt;
+red-team-skeptic -&gt; synthesis (this document). Full stage-by-stage checkpoints:
+<code>evidence_tables/_status/10_104600001-104950000/{opentargets,researcher,verified_citations,critique}.md</code>.</p>
+<p><strong>Build-coordinate flag (applies throughout this table):</strong> the researcher independently found
+that SORCS3 physically overlaps this locus window under GRCh38 (the build the credible-set
+variants use), but CNNM2 only overlaps this window under GRCh37 — under GRCh38, CNNM2 sits
+~1.5 Mb away. This means CNNM2's status as a &quot;physically overlapping&quot; MAGMA/PoPS candidate at
+this specific locus may be a build-mismatch artifact in the input pipeline rather than a
+genuine positional signal. See the CNNM2 rows below and the Prioritized-gene section.</p>
+<h2 id="evidence-table">Evidence table</h2>
+<p>Only VERIFIED citations are included below (per pipeline rule). One CLAIM_MISMATCH citation
+(Kamran et al. 2023) and one non-substantive incidental citation are excluded and documented
+in <code>audits/10_104600001-104950000_audit.md</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SORCS3</td>
+<td>Statgen</td>
+<td>Depression GWAS meta-analysis (807,553 individuals) identifies genome-wide-significant depression association in the SORCS3 region</td>
+<td>PMID 30718901</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SORCS3</td>
+<td>Statgen</td>
+<td>Cross-trait MTAG meta-analysis of 5 psychiatric disorders (SCZ, bipolar, ASD, ADHD, depression) highlights SORCS3 as the only gene associated with all five</td>
+<td>PMID 32606422</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SORCS3</td>
+<td>Statgen (context, not SORCS3-specific)</td>
+<td>Two-sample MR: lifetime smoking/smoking initiation causally increases risk of depression (OR 1.99) and schizophrenia (OR 2.27)</td>
+<td>PMID 31689377</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SORCS3</td>
+<td>Statgen (locus tagged per Open Targets, not independently gene-named in source abstract)</td>
+<td>UK Biobank lifetime-smoking GWAS (N=394,718); Open Targets structured lookup cites this study as tagging this locus's credible-set variants</td>
+<td>PMID 34855049</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SORCS3</td>
+<td>Statgen (locus tagged per Open Targets)</td>
+<td>GSCAN mega-GWAS of smoking initiation/cessation/heaviness (up to 1.2M individuals), 566 variants/406 loci; Open Targets cites as tagging this locus</td>
+<td>PMID 30643251</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SORCS3</td>
+<td>Statgen (locus tagged per Open Targets)</td>
+<td>Multi-ancestry (3.4M individuals) tobacco/alcohol-use GWAS/fine-mapping/TWAS; Open Targets cites as tagging this locus</td>
+<td>PMID 36477530</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SORCS3</td>
+<td>Statgen methods (locus tagged per Open Targets for &quot;smoking status&quot;)</td>
+<td>GWAS functional-enrichment method (FINDOR) applied across 27 UK Biobank traits incl. smoking status; not a dedicated smoking-discovery study</td>
+<td>PMID 30595370</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SORCS3</td>
+<td>Statgen methods (locus tagged per Open Targets for &quot;smoking status&quot;)</td>
+<td>BOLT-LMM mixed-model association method paper, applied to 23 UK Biobank traits; not a dedicated smoking-discovery study</td>
+<td>PMID 29892013</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SORCS3</td>
+<td>Structural (neuro, non-pulmonary)</td>
+<td>sorCS3 expressed in developing/mature CNS, activity-regulated in hippocampus</td>
+<td>PMID 15009648</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SORCS3</td>
+<td>Structural (neuro, non-pulmonary)</td>
+<td>SORCS3-knockout mice show loss of NMDA-receptor-dependent/independent long-term depression and accelerated fear-memory extinction</td>
+<td>PMID 24069373</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SORCS3</td>
+<td>Structural (neuro, non-pulmonary)</td>
+<td>SorCS3-deficient mice show impaired CA1 basal synaptic transmission, supporting a postsynaptic AMPA-receptor trafficking role</td>
+<td>PMID 27935149</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SORCS3</td>
+<td>Structural (neuro review, non-pulmonary)</td>
+<td>Systematic review of VPS10p-domain receptor family (incl. SORCS3) in Alzheimer's disease pathways</td>
+<td>PMID 36397124</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SORCS3</td>
+<td>Immune/statgen (existence verified only, full claim not independently confirmed)</td>
+<td>SORCS3 is one of four genes whose peripheral-blood-leukocyte expression predicts MDD status; no significant brain-expression change, &quot;suggesting a predominantly peripheral role&quot;</td>
+<td>PMID 41315193</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SORCS3</td>
+<td>Statgen (preprint, NOT peer-reviewed)</td>
+<td>FinnGen GWAS (3,549 cases): SORCS3 locus (rs902306, OR 1.22) significantly associated with panic disorder</td>
+<td>medRxiv 10.1101/2025.07.03.25330813</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CNNM2</td>
+<td>Structural/statgen (renal, non-pulmonary)</td>
+<td>CNNM2 mutations cause dominant familial hypomagnesemia via impaired basolateral renal Mg2+ transport</td>
+<td>PMID 21397062</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CNNM2</td>
+<td>Statgen (blood pressure/cardiovascular, non-pulmonary)</td>
+<td>Zebrafish knockdown identifies CNNM2 (with NT5C2) as most-likely-causal gene for the 10q24.32 blood-pressure GWAS locus</td>
+<td>PMID 32984406</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CNNM2</td>
+<td>Statgen (commentary)</td>
+<td>Companion commentary on the CNNM2/NT5C2 zebrafish blood-pressure causal-gene finding</td>
+<td>PMID 33195469</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CNNM2</td>
+<td>Statgen (direct, gene-specific smoking-behavior GWAS hit)</td>
+<td>SNP rs12780116 in CNNM2 replicated at Bonferroni significance for smoking-behavior traits</td>
+<td>PMID 30617275</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CNNM2</td>
+<td>Statgen + structural (schizophrenia/neuro, non-pulmonary)</td>
+<td>CNNM2 is a robust schizophrenia risk gene; Cnnm2 knockdown in mouse prefrontal cortex impairs cognition/sensorimotor gating and alters dendritic spine morphogenesis</td>
+<td>PMID 37715107</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CNNM2</td>
+<td>Statgen (cross-trait, speculative, authors' own caveat)</td>
+<td>Cross-trait schizophrenia-pulmonary GWAS/TWAS: significant positive genetic correlation of schizophrenia with COPD (rg=0.286); CNNM2 TWAS-prioritized for schizophrenia (not COPD directly); authors state direct CNNM2-pulmonary evidence &quot;remains limited&quot;</td>
+<td>PMID 42444093</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WBP1L</td>
+<td>Statgen (cross-trait, speculative, authors' own caveat)</td>
+<td>Same 2026 cross-trait paper: WBP1L is top TWAS gene for schizophrenia in thyroid tissue (Z=7.76); same &quot;direct pulmonary evidence remains limited&quot; caveat applies</td>
+<td>PMID 42444093</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>WBP1L</td>
+<td>Statgen (schizophrenia, non-pulmonary)</td>
+<td>WBP1L SNPs rs4147157/rs284854 associated with schizophrenia case status and symptom severity (PANSS); both are significant brain eQTLs for neighboring genes ARL3 and AS3MT</td>
+<td>PMID 31840934</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p>No verified citations were produced for AS3MT, CYP17A1, NT5C2, or C10orf32/BORCS7 — the
+researcher deprioritized full citation-backed search for these given resource constraints and
+the total absence of any pulmonary signal; the red-team-skeptic flagged this as a thoroughness
+gap and recommended (not requiring a full re-run) a quick structured-data cross-check, which
+synthesis-lead performed via Open Targets (see summary below) and which returned null/near-null
+COPD association for all four. See <code>audits/10_104600001-104950000_audit.md</code> for the full
+skeptic reasoning on this point.</p>
+<h2 id="open-targets-summary">Open Targets summary</h2>
+<p><strong>Structured database lookup only (Open Targets Platform GraphQL API) — NOT a verified
+literature citation. Did not pass through citation-verifier or red-team-skeptic.</strong> Full detail
+in <code>evidence_tables/_status/10_104600001-104950000/opentargets.md</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>OT aggregate COPD association score</th>
+<th><code>genetic_association</code> sub-score</th>
+<th>Locus-specific L2G/coloc (COPD)</th>
+<th>LoF genetic constraint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SORCS3</td>
+<td>0.359</td>
+<td>0.590</td>
+<td>Not available — this locus is not in Open Targets' indexed credible sets for the one COPD GWAS study (GCST007692, Sakornsakolpat 2019, PMID 30804561) it has</td>
+<td>Moderate (score 0.544, oe=0.40)</td>
+</tr>
+<tr>
+<td>CNNM2</td>
+<td>0.00275</td>
+<td>none (only a weak <code>literature</code> sub-score, 0.023)</td>
+<td>Not available; no CNNM2 variant handle at this locus in OT, consistent with the GRCh38 build-mismatch noted above</td>
+<td>Strong (score 1.0, oe=0.19)</td>
+</tr>
+<tr>
+<td>WBP1L</td>
+<td>not queried directly (not a locus-input candidate; added by researcher)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>AS3MT</td>
+<td>0 (no rows)</td>
+<td>—</td>
+<td>—</td>
+<td>Essentially unconstrained (oe≈0.97)</td>
+</tr>
+<tr>
+<td>CYP17A1</td>
+<td>0 (no rows)</td>
+<td>—</td>
+<td>—</td>
+<td>Essentially unconstrained (oe≈0.88)</td>
+</tr>
+<tr>
+<td>NT5C2</td>
+<td>0.0037</td>
+<td>none (only <code>literature</code>, 0.030)</td>
+<td>—</td>
+<td>Essentially unconstrained (oe≈0.81)</td>
+</tr>
+<tr>
+<td>C10orf32/BORCS7</td>
+<td>0 (no rows)</td>
+<td>—</td>
+<td>—</td>
+<td>Essentially unconstrained (oe≈0.88)</td>
+</tr>
+</tbody>
+</table>
+<p>Additionally: when Open Targets' variant index was queried against these exact SORCS3-intronic
+credible-set variants, all 53 GWAS credible sets returned were for psychiatric/behavioral/
+neurocognitive or smoking-behavior traits (depression, neuroticism, mood instability, ADHD,
+cognitive performance, risk-taking, insomnia, frailty, lifetime smoking, smoking initiation,
+smoking status) — zero were for FEV1/FEV1-FVC/spirometry or any lung-function trait.</p>
+<h2 id="prioritized-gene-synthesis">Prioritized-gene synthesis</h2>
+<p><strong>Prioritized gene: SORCS3. Confidence: MODERATE (on gene identity), but the mechanism by
+which this locus associates with COPD is best characterized as LOW-confidence /
+smoking-neurobehaviorally-mediated rather than a direct pulmonary mechanism — these are two
+separate questions and should not be conflated into a single confidence label.</strong></p>
+<p><strong>Why SORCS3 over CNNM2 (runner-up) on gene identity:</strong> All 19 credible-set variants at this
+locus are intronic within SORCS3 under GRCh38 — the same build used for fine-mapping — so
+SORCS3 is the gene the statistical fine-mapping signal physically sits inside, not an
+LD/nearest-gene inference (red-team-skeptic explicitly confirmed this is not an artifact).
+CNNM2, by contrast, was flagged as MAGMA/PoPS-prioritized based on apparent physical overlap,
+but the researcher's independent Ensembl check found CNNM2 only overlaps this window under
+GRCh37 — under GRCh38 it sits ~1.5 Mb away. The red-team-skeptic agreed this is a &quot;legitimate,
+likely-disqualifying flaw in CNNM2's positional evidence specifically for this locus.&quot; Open
+Targets' own aggregate COPD-association score independently corroborates this asymmetry:
+SORCS3 scores 0.359 (with a substantial genetic_association sub-score of 0.590), while CNNM2
+scores a near-null 0.00275 with no genetic_association contribution at all. Combined, the
+positional (build-correct fine-mapping) and structured-database evidence both point to SORCS3,
+not CNNM2, as the better-supported candidate gene at this specific locus.</p>
+<p><strong>Why confidence on mechanism is LOW, not HIGH, despite this:</strong> No spirometry, FEV1, FEV1/FVC,
+or any lung-function GWAS/TWAS/colocalization evidence exists for SORCS3 anywhere in the
+verified literature — a targeted search returned zero hits, and a comprehensive GWAS-catalog
+review of 25 SORCS3-associated phenotypes found none pulmonary (Kamran et al., though its exact
+&quot;72/25&quot; figures are unconfirmed by the verifier — see audit). SORCS3 shows near-exclusive
+neuronal expression and a well-established synaptic/neurodevelopmental mechanism (Hermey 2004,
+Breiderhoff 2013, Christiansen 2017) with no lung expression reported anywhere. What SORCS3 does
+have is a very strong, repeatedly replicated psychiatric-genetics signal (depression, the only
+gene shared across 5 psychiatric-disorder GWAS, and — per Open Targets' structured variant-level
+lookup, not yet independently gene-confirmed in any smoking-GWAS paper's own text — this exact
+locus is tagged by multiple large smoking-behavior GWAS). Per this pipeline's smoking-mediation
+prior, this pattern is consistent with a COPD association driven by a
+neurobehavioral/smoking-propensity pathway rather than direct pulmonary biology. However, the
+red-team-skeptic explicitly cautioned that this is an argument from absence on both sides —
+nobody has run a SORCS3-specific lung-function GWAS/TWAS to test a pulmonary mechanism directly,
+and no smoking-GWAS paper's own abstract independently names SORCS3 (the locus-tagging claim
+rests on the Open Targets structured lookup alone) — so &quot;smoking-mediated&quot; should be read as the
+best-supported current hypothesis, not an established mechanism.</p>
+<p><strong>CNNM2 as runner-up:</strong> Its case, if the build-coordinate concern is set aside, rests on
+well-established but pulmonary-unrelated biology (Mg2+ transport/hypomagnesemia, a likely
+causal role in a 10q24.32 blood-pressure locus, and a robust, functionally validated
+schizophrenia risk-gene role), plus one independent, gene-specific smoking-behavior GWAS hit
+(rs12780116) that does not depend on the build question. A very recent (2026) cross-trait
+schizophrenia-pulmonary TWAS flags CNNM2 as a candidate bridging psychiatric and pulmonary
+comorbidity, but its own authors state direct pulmonary evidence &quot;remains limited&quot; — this
+should be read as suggestive shared-genetic-architecture evidence, not a CNNM2-lung-function
+hit.</p>
+<p><strong>What would resolve this / raise or lower confidence:</strong> (1) confirming which genome build the
+internal MAGMA/PoPS pipeline used for CNNM2's &quot;physical overlap&quot; call, to settle whether its
+candidacy at this exact locus is a build artifact or genuine; (2) a smoking-adjusted COPD or
+lung-function GWAS at this locus, to test directly whether the association attenuates after
+conditioning on smoking exposure (the most direct test of prior #1 here); (3) a SORCS3- or
+CNNM2-specific lung-tissue eQTL/pQTL colocalization or lung-function (FEV1/FEV1-FVC) GWAS hit,
+which does not currently exist for either gene; (4) independent confirmation, in a smoking-GWAS
+paper's own text (not just Open Targets' structured tagging), that SORCS3 specifically (not
+just the surrounding LD block) is the smoking-associated gene. Until then, this should be
+treated as SORCS3 being the best-supported gene at this locus with LOW confidence in a specific
+disease mechanism (most likely smoking-mediated, pulmonary mechanism not excluded), CNNM2 as a
+weaker runner-up whose positional case is now in question, and WBP1L/AS3MT/CYP17A1/NT5C2/BORCS7
+as low-priority candidates with no meaningful evidence found.</p>
+
+</body>
+</html>

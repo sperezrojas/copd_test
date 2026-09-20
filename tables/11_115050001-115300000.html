@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>11_115050001-115300000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-11115050001-115300000-cadm1">Evidence table — Locus 11:115050001-115300000 (CADM1)</h1>
+<ul>
+<li><strong>Lead variant:</strong> rs3793957 (11:115224934, GRCh38, intron_variant in CADM1, PIP=0.186 — top-PIP variant in a 17-variant credible set)</li>
+<li><strong>Candidate genes:</strong> CADM1 only (nearest gene, FLAMES, MAGMA, and PoPS all nominate CADM1; ABC = NA). CADM1 spans ~1.1 Mb and physically fills essentially the entire locus window — no other protein-coding gene body overlaps this interval. Single-gene locus.</li>
+<li><strong>Credible set:</strong> 17 variants, all intronic or 3'UTR within CADM1 (one low-impact splice-polypyrimidine-tract variant, rs11607928, PIP=0.056, not a canonical donor/acceptor site).</li>
+</ul>
+<p>All citations below carry citation-verifier verdict <strong>VERIFIED</strong> (existence, non-retraction, and claim accuracy all confirmed). The &quot;Skeptic verdict&quot; column reflects red-team-skeptic's critique of how each finding should be weighted for gene-prioritization purposes — WEAKENED/OVERCLAIMED does not mean the citation is false, only that the researcher's or an intuitive reading's evidentiary weight for causal-gene prioritization is lower than face value.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CADM1</td>
+<td>Structural/developmental (human tissue, mechanistic)</td>
+<td>CADM1 ectodomain shedding (via ADAM10/γ-secretase) generates a C-terminal fragment (αCTF) that localizes to mitochondria and drives alveolar epithelial cell apoptosis; CADM1-CTFs increased in human emphysematous lungs vs. controls</td>
+<td>PMID 24092566 / DOI 10.1136/thoraxjnl-2013-203867</td>
+<td>WEAKENED — real but unreplicated (13+ years, single research group), human n small, post-translational shedding not connected to germline GWAS variant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CADM1</td>
+<td>Structural/developmental (human tissue, mechanistic)</td>
+<td>The further-cleaved intracellular domain (ICD) of CADM1 was detected specifically in emphysematous human lungs (4/4) but not control lungs (0/4, P=0.029), and induces lung epithelial cell apoptosis in cell lines</td>
+<td>PMID 26259600 / DOI 10.1186/s12929-015-0173-8</td>
+<td>WEAKENED — same limitations as above, smaller n, same research group</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CADM1</td>
+<td>Structural/developmental (mouse model)</td>
+<td>In a mouse cigarette-smoke exposure/cessation model, CADM1 ectodomain shedding and its proapoptotic CTF continued increasing even after smoke cessation, correlating with continued alveolar enlargement and septal remodeling</td>
+<td>PMID 29892598 / DOI 10.3389/fcell.2018.00052</td>
+<td>WEAKENED — mouse-only, same research group, does not bridge to germline variant biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CADM1</td>
+<td>Structural/developmental (cross-tissue, same group)</td>
+<td>The same CADM1 ectodomain-shedding/apoptosis mechanism extends to pancreatic islet beta cells in type 2 diabetes (correlated with HbA1c)</td>
+<td>PMID 24964098 / DOI 10.1371/journal.pone.0100988</td>
+<td>OVERCLAIMED as corroborating evidence — same group generalizing its own hypothesis to an unrelated organ; arguably undercuts rather than reinforces lung-specificity</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CADM1</td>
+<td>Epigenetics / cancer biology</td>
+<td>CADM1 (TSLC1/IGSF4) promoter hypermethylation in NSCLC tumors is significantly associated with heavy smoking, pack-years, and cigarettes/day</td>
+<td>PMID 16534787 / DOI 10.1002/cncr.21800</td>
+<td>OVERCLAIMED / mischaracterized if bundled with the emphysema-shedding mechanism — measures a different CADM1 biology (epigenetic tumor-suppressor silencing in cancer, not proteolytic shedding in emphysema)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CADM1</td>
+<td>Immunology (general, non-pulmonary)</td>
+<td>CADM1 (Necl2/TSLC1) is expressed on a dendritic cell subset and is the ligand for CRTAM, a receptor on activated CD8+ T cells; the Necl2-CRTAM interaction regulates IL-22 expression by activated CD8+ T cells</td>
+<td>PMID 15781451 / DOI 10.1074/jbc.M502095200</td>
+<td>SUPPORTED AS STATED but low relevance — general immune-adhesion biology, not lung- or COPD-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CADM1</td>
+<td>Immunology (general, non-pulmonary)</td>
+<td>CADM1 (Necl2) heterotypic binding to CRTAM mediates adhesion of activated NK cells and CD8+ T cells to CADM1-expressing target cells</td>
+<td>PMID 16091383 / DOI 10.1093/intimm/dxh299</td>
+<td>SUPPORTED AS STATED but low relevance — general immune-adhesion biology shown in non-lung systems</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CADM1</td>
+<td>Immunology (skin autoimmunity model, analogy only)</td>
+<td>Epidermal Cadm1 overexpression increases adhesion/cytotoxicity of CRTAM-expressing CD8+ T cells and susceptibility to autoimmune alopecia in mice</td>
+<td>PMID 22210910 / DOI 10.4049/jimmunol.1003342</td>
+<td>OVERCLAIMED — a skin-autoimmunity mouse model offered only as an analogy for airway epithelium; not direct evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CADM1</td>
+<td>Immunology/neuroimmune (review)</td>
+<td>CADM1 (with N-cadherin) mediates mast cell-nerve adhesion in coculture, proposed as relevant to neurogenic inflammation and asthma</td>
+<td>PMID 18761812 / DOI 10.1038/cmi.2008.31</td>
+<td>WEAKENED — general review, mentions asthma (not COPD), not primary COPD data</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CADM1</td>
+<td>Immunology/neuroimmune (fatal asthma tissue, not COPD)</td>
+<td>CADM1+ cells found significantly closer to airway nerve bundles in fatal asthma tissue than controls; note the specific gene upregulated in mast cell-sensory-neuron coculture was CADM4 (a CADM1 paralog), not CADM1 itself</td>
+<td>PMID 39484998 / DOI 10.1111/all.16373</td>
+<td>WEAKENED — fatal asthma (not COPD) tissue; paralog-confusion risk (CADM4 vs CADM1) flagged explicitly</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CADM1</td>
+<td>Immunology (review, background only)</td>
+<td>Broad review of mast cell biology in respiratory disease (asthma, COPD, pulmonary fibrosis, pulmonary hypertension); &quot;Cell Adhesion Molecule-1&quot; appears among MeSH terms</td>
+<td>PMID 27316557 / DOI 10.1016/j.chest.2016.06.009</td>
+<td>OVERCLAIMED — CADM1 appears only as a MeSH term, not a specific finding; negligible evidentiary content</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CADM1</td>
+<td>Statistical genetics (smoking GWAS, background)</td>
+<td>GSCAN consortium discovered 566 genetic variants in 406 loci associated with tobacco/alcohol use stages (initiation, cessation, heaviness) in up to 1.2M individuals</td>
+<td>PMID 30643251 / DOI 10.1038/s41588-018-0307-5</td>
+<td>SUPPORTED AS STATED — general background; CADM1/rs3793957-specific locus membership NOT confirmed</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CADM1</td>
+<td>Statistical genetics (smoking GWAS, substantive negative finding)</td>
+<td>MVP+GSCAN meta-analysis (N=842,717) identified 99 loci for smoking initiation and 13 for smoking cessation; <strong>CADM1/rs3793957 does not appear among these loci</strong> (confirmed by citation-verifier via full-text review)</td>
+<td>PMID 33082346 / DOI 10.1038/s41467-020-18489-3</td>
+<td>Evidence AGAINST a confirmed smoking-initiation-GWAS mechanism at this locus — should be weighted as a substantive negative finding, not merely &quot;contested&quot;</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CADM1</td>
+<td>Statistical genetics (smoking TWAS, weak negative background)</td>
+<td>Multi-ancestry cerebral cortex TWAS of GSCAN smoking traits identified 719 genes (249 high-confidence); named high-confidence genes (PSMA4, IREB2, CHRNA3, TSPAN3, ANK2) do not include CADM1</td>
+<td>PMID 38816585 / DOI 10.1038/s41380-024-02605-6</td>
+<td>Weak negative background — CADM1 not a headline TWAS hit for smoking behavior in cerebral cortex</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CADM1</td>
+<td>Statistical genetics (background, non-specific)</td>
+<td>GSCAN-derived smoking-initiation polygenic risk score is associated with liability to licit/illicit substance use in young Australian adults; does not mention CADM1 specifically</td>
+<td>PMID 30875648 / DOI 10.1016/j.drugalcdep.2019.01.015</td>
+<td>Background only, non-specific</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>Ensembl ID</th>
+<th>COPD assoc. score (OT)</th>
+<th>COPD genetic_association evidence</th>
+<th>FEV1/FEV1FVC evidence</th>
+<th>Smoking-initiation evidence</th>
+<th>L2G at lead variant (any trait, OT catalog)</th>
+<th>pLoF constraint (o/e, 90% CI)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CADM1</td>
+<td>ENSG00000182985</td>
+<td>0.0015 (literature co-mention only)</td>
+<td>None</td>
+<td>None (zero rows for either FEV1 or FEV1/FVC)</td>
+<td>Yes — score 0.50 (genetic_association datatype)</td>
+<td>0.50-0.72 across 22 unrelated GWAS credible sets overlapping rs3793957 (consistently the dominant/near-sole L2G gene); no COPD or lung-function credible set present in OT's catalog for this variant</td>
+<td>0.266 (0.172-0.422) — constrained, intolerant of heterozygous LoF</td>
+</tr>
+</tbody>
+</table>
+<p>Full detail: <code>evidence_tables/_status/11_115050001-115300000/opentargets.md</code>. Key points: CADM1 is a robust, highly reproducible L2G &quot;gene assignment&quot; at this variant across many unrelated traits (metabolic, hematologic, neurological/behavioral, skeletal) — evidence that CADM1, not some other gene, is very likely the functional target of variation at this locus in general — but none of those 22 credible sets are COPD or spirometry, and CADM1 shows zero curated genetic-association evidence for COPD or FEV1/FEV1FVC specifically. CADM1 does show a real (GWAS-based) genetic-association score for smoking initiation in Open Targets, though the citation-verifier's direct check of the largest smoking-initiation GWAS (Xu et al. 2020, PMID 33082346) found CADM1/rs3793957 is NOT among its named significant loci — so this Open Targets smoking-initiation signal likely derives from a different/broader analysis and should not be read as a confirmed, independently-replicated smoking-initiation-GWAS hit for this exact locus.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>CADM1 — Confidence: LOW</strong></p>
+<p>CADM1 is named here as the best-supported candidate gene at this locus, but with a confidence level of LOW, for these reasons:</p>
+<ol>
+<li><strong>Uniqueness in the interval, not competitive strength, drives the pick.</strong> CADM1 is the only gene physically present across nearly the entire ~1.1 Mb locus window, and all four prioritization methods (nearest-gene, FLAMES, MAGMA, PoPS) converge on it, with no competing gene body to weigh against. The Open Targets L2G analysis independently and consistently nominates CADM1 as the dominant gene at the lead variant across 22 unrelated GWAS traits (L2G 0.50-0.72). There is no serious alternative-gene hypothesis to consider here — this is a genuinely different situation from typical LD-ambiguous loci with two or more plausible genes.</li>
+<li><strong>But the evidence tying CADM1 specifically to COPD or lung function is weak.</strong> Open Targets shows zero genetic-association evidence for COPD and zero evidence of any kind for FEV1 or FEV1/FVC. No PubMed-indexed COPD or spirometry GWAS paper names CADM1. The mechanistic literature (rows 1-5 in the evidence table above) is real and internally consistent but, per red-team-skeptic, rests on an unreplicated single-research-group hypothesis (human tissue n=4 in one key experiment) studying post-translational ectodomain shedding in already-diseased tissue — a mechanism that has never been connected back to the germline noncoding credible-set variants themselves, to CADM1 expression/eQTL direction, or to any population-scale genetic association. This is the central, unresolved gap: &quot;CADM1 protein biology plausibly contributes to emphysema pathology once smoke-exposed&quot; is not the same claim as &quot;the common noncoding GWAS variants in this credible set act through CADM1 to cause COPD,&quot; and no evidence in this dossier bridges that gap.</li>
+<li><strong>The smoking-mediation hypothesis (prior #1) is also not well supported on close inspection.</strong> Open Targets shows a smoking-initiation genetic-association signal for CADM1, but citation-verifier's direct check of the largest smoking-initiation GWAS (Xu et al. 2020, N=842,717) found CADM1/rs3793957 is NOT among its 99 confirmed smoking-initiation loci or 13 cessation loci — a substantive negative finding, not just an open question. So this locus does not have a clean story under either the &quot;intrinsic pulmonary biology&quot; framework (prior #2) or the &quot;smoking-behavior-mediated&quot; framework (prior #1) at the level of human statistical genetics; the strongest positive evidence anywhere in this dossier is cell/mouse mechanistic biology, not human genetics of any kind.</li>
+<li><strong>Immune evidence is present but should be weighted as tangential</strong>, per red-team-skeptic: general lymphocyte-adhesion biology (not lung-specific), a skin-autoimmunity mouse model offered only as an analogy, and a fatal-asthma (not COPD) tissue study where the specific coculture-upregulated gene was the paralog CADM4, not CADM1 itself.</li>
+</ol>
+<p><strong>What would resolve this and raise confidence:</strong> (a) independent replication of the CADM1 ectodomain-shedding/emphysema mechanism by a group other than Ito/Hagiyama/Mimae/Ri et al., ideally in a larger, non-Japan-only cohort; (b) a CADM1 lung-tissue eQTL or splice-QTL colocalizing with the credible-set variants (none was identified in this search, and Open Targets shows no COPD/lung-function credible set overlapping this variant at all); (c) direct confirmation (or refutation) of whether CADM1/rs3793957 is a genome-wide-significant hit in the largest smoking-initiation/cessation GWAS supplementary tables (spot-checked negative for the one paper directly reviewed; not exhaustively checked against all consortium papers' full loci lists). Because there is no competing candidate gene at this locus, &quot;runner-up&quot; in the usual LD-ambiguity sense does not apply — the open question is not &quot;CADM1 vs. gene X&quot; but &quot;is CADM1's role here established, or is it simply the only gene available to blame.&quot;</p>
+
+</body>
+</html>

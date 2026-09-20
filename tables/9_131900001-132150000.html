@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>9_131900001-132150000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-locus-evidence-table--9131900001-132150000-grch38">COPD locus evidence table — 9:131,900,001-132,150,000 (GRCh38)</h1>
+<p>Lead/credible-set variant: rs9411339 (9:132,053,270, GRCh38; PIP=0.99234559; intron_variant,
+MODIFIER impact; annotated gene=MED27). Candidate genes evaluated: <strong>MED27</strong> (nearest gene;
+sole credible-set gene annotation) and <strong>PPP2R4</strong> (approved symbol PTPA; PoPS-prioritized).</p>
+<p>All rows below use only citations verified by citation-verifier (verdict VERIFIED). See
+<code>audits/9_131900001-132150000_audit.md</code> for excluded/contested material and full reasoning.</p>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MED27</td>
+<td>Statistical genetics (cross-trait pleiotropy/colocalization)</td>
+<td>MED27 identified as a pleiotropic gene shared between GSCAN smoking-behavior traits (smoking initiation, ever/never-smoking, age of initiation) and GERD via colocalization at three SNPs; identity/LD of those SNPs to lead variant rs9411339 is unconfirmed</td>
+<td>Yan Z et al. 2024, BMC Genomics 25:642; PMID 38937676; DOI 10.1186/s12864-024-10536-3</td>
+<td>WEAKENED — real finding, but LD to this locus's lead SNP unconfirmed; do not treat as confirming the exact credible-set signal</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MED27</td>
+<td>Statistical genetics (background/context)</td>
+<td>Primary GSCAN discovery GWAS establishing smoking-initiation/cigarettes-per-day/cessation trait genetics (background reference; no MED27-specific claim)</td>
+<td>Liu M et al. 2019, Nature Genetics; PMID 30643251</td>
+<td>Context only, not gene-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MED27</td>
+<td>Statistical genetics (background/context)</td>
+<td>Multi-ancestry GSCAN follow-up GWAS of tobacco/alcohol traits; plausible (unconfirmed) source of the &quot;age of smoking initiation&quot; credible-set dataset Open Targets flags at rs9411339</td>
+<td>Saunders GRB et al. 2022, Nature; PMID 36477530</td>
+<td>Context only — abstract does not name MED27 or this SNP specifically</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MED27</td>
+<td>Statistical genetics (background/context)</td>
+<td>GSCAN-affiliated exome-chip fine-mapping across smoking/alcohol phenotypes incl. age of smoking initiation (background reference)</td>
+<td>Brazel DM et al. 2019, Biological Psychiatry; PMID 30679032; DOI 10.1016/j.biopsych.2018.11.024</td>
+<td>Context only, not gene-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MED27</td>
+<td>Structural/developmental biology (human genetics)</td>
+<td>Biallelic partial-LoF MED27 variants destabilize the Mediator complex, impair chromatin occupancy, and cause an autosomal-recessive neurodevelopmental disorder with cerebellar atrophy; no lung phenotype reported</td>
+<td>Yiliyaer N et al. 2025, Advanced Science; PMID 41017421; DOI 10.1002/advs.202505535</td>
+<td>WEAKENED (as COPD evidence) — establishes MED27 is essential/dosage-relevant biology but with no pulmonary phenotype; argues against simple dosage mechanism at this GWAS locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MED27</td>
+<td>Structural/developmental biology (model organism)</td>
+<td>Zebrafish med27 loss-of-function recapitulates the neurodevelopmental-disorder phenotype (motor deficits, cerebellar atrophy) via foxo3a/fosab dysregulation; no pulmonary phenotype assessed</td>
+<td>Li X et al. 2025, Cell &amp; Bioscience 15:83; PMID 40524219; DOI 10.1186/s13578-025-01425-7</td>
+<td>WEAKENED (as COPD evidence) — same caveat as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MED27</td>
+<td>Structural/developmental biology (review)</td>
+<td>Review of MED-subunit &quot;MEDopathies&quot; including MED27; neurological/craniofacial/cardiac phenotypes described, no respiratory phenotype mentioned</td>
+<td>Fazio A et al. 2025, Genes (Basel) 16(12):1444; PMID 41465117; DOI 10.3390/genes16121444</td>
+<td>Context/negative evidence for pulmonary mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MED27</td>
+<td>Structural biology (lung tissue, unreviewed preprint)</td>
+<td>MED27 named among 24 genes exhibiting &quot;multi-omic switch&quot; differential-methylation behavior distinguishing COPD from idiopathic pulmonary fibrosis in lung tissue</td>
+<td>Shutta KH et al. 2025, medRxiv preprint; PMID 41445629; DOI 10.1101/2025.12.18.25342312 (corrected from researcher's malformed DOI)</td>
+<td>WEAKENED — not peer-reviewed; MED27 is 1-of-24 genes in an exploratory multi-omic panel, not established as causally important; label as hypothesis-generating only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MED27</td>
+<td>Off-topic (not COPD-relevant; included for completeness)</td>
+<td>MED27 found among proteins in HPV-driven head-and-neck-cancer extracellular vesicles</td>
+<td>Qin TX et al. 2025, J Proteome Res; PMID 40705947; DOI 10.1021/acs.jproteome.5c00373</td>
+<td>Not applicable to COPD; oncology context only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MED27</td>
+<td>Off-topic (not COPD-relevant; included for completeness)</td>
+<td>MED27 prioritized as a diabetic-nephropathy-associated risk gene in a multi-omics Mendelian randomization study</td>
+<td>Liu S et al. 2026, Renal Failure; PMID 42219961; DOI 10.1080/0886022X.2026.2671460</td>
+<td>Not applicable to COPD; renal context only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PPP2R4 (PTPA)</td>
+<td>Structural biology (lung epithelial/cancer)</td>
+<td>PPP2R4 heterozygous loss/LoF mutation is common in NSCLC and worsens survival in KRAS-mutant lung adenocarcinoma; Ppp2r4 gene-trapped mice show accelerated KrasG12D-driven lung tumorigenesis (tumor-suppressor role)</td>
+<td>Meeusen B et al. 2021, Cancer Letters 520:57-67; PMID 34216687; DOI 10.1016/j.canlet.2021.06.022</td>
+<td>CONTESTED (gene candidacy at this locus) — genuine lung-epithelial biology, but oncology context, not COPD; see audit re: likely genome-build mismatch placing PPP2R4 outside this GRCh38 locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PPP2R4 (PTPA)</td>
+<td>Structural biology (lung epithelial/cancer)</td>
+<td>Pharmacologic PP2A activation (PTPA's pathway) suppresses PI3K/MAPK signaling and tumor growth in TKI-resistant EGFR-mutant lung adenocarcinoma</td>
+<td>Tohmé R et al. 2019, JCI Insight 4(4); PMID 30830869; DOI 10.1172/jci.insight.125693</td>
+<td>CONTESTED — oncology context, not COPD; see build-mismatch flag</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PPP2R4 (PTPA)</td>
+<td>Structural biology (pleural/lung-adjacent cancer)</td>
+<td>Heterozygous PTPA loss occurs in ~26% of mesothelioma patients and correlates with worse survival; restoration induces oncogene-induced senescence</td>
+<td>Nigliato E et al. 2026, Cellular Oncology (Dordrecht) 49(4); PMID 42258127; DOI 10.1007/s13402-026-01230-5</td>
+<td>CONTESTED — oncology/mesothelioma context, not COPD; see build-mismatch flag</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PPP2R4 (PTPA)</td>
+<td>Statistical genetics + structural (disease-modifier)</td>
+<td>A SNP in PPP2R4 (a CFTR-interactome member) was associated with lung clearance index (p≤0.01), specific effective airway resistance (p≤0.005), and FEV1 (p≤0.005) in p.Phe508del-homozygous cystic fibrosis patients</td>
+<td>Gisler FM et al. 2013, European Journal of Human Genetics 21(4):397-403; PMID 22892532; DOI 10.1038/ejhg.2012.181</td>
+<td>CONTESTED — the single most concrete lung-function-trait finding for either gene at this locus, but in a cystic-fibrosis genetic-modifier context (not general-population COPD/spirometry GWAS), with unconfirmed SNP identity/LD to rs9411339, and against the backdrop of an independently-confirmed likely genome-build mismatch placing PPP2R4 ~2.76 Mb outside this GRCh38 locus</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-verified-literature-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not verified literature; not reviewed by citation-verifier or red-team-skeptic)</h2>
+<p>Source: Open Targets Platform GraphQL API, queried 2026-09-11 directly by the orchestrator.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>L2G at lead variant rs9411339 (across 43 credible-set studies)</th>
+<th>Aggregated COPD association</th>
+<th>Aggregated FEV1/FEV1-FVC association</th>
+<th>gnomAD constraint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MED27</td>
+<td>Consistently the <strong>top-ranked gene</strong>, L2G ≈ 0.73–0.79, across all 43 studies with a credible set at this exact variant. <strong>None of the 43 studies is COPD or spirometry</strong> — traits are anthropometric/behavioral (BMI, waist-hip ratio, body fat, educational attainment, insomnia, alcohol, diet, GGT) plus notably &quot;age of smoking initiation&quot; (GCST90243972, L2G=0.786). A few neutrophil expression/splicing QTL studies for MED27 are also credible-set members (no L2G computed for these).</td>
+<td>None (count=0)</td>
+<td>None (count=0, both FEV1 and FEV1/FVC)</td>
+<td>NOT LoF-constrained (o/e 0.758, 90% CI 0.540–1.082) — tolerant of loss-of-function</td>
+</tr>
+<tr>
+<td>PPP2R4 (PTPA)</td>
+<td><strong>Never</strong> ranked among top L2G genes at rs9411339 in any of the 43 studies (only MED27, NTNG2, TTF1, CFAP77 ever appear)</td>
+<td>Weak (score 0.081), driven <strong>entirely</strong> by literature/text-mining datatype; zero genetic-association contribution</td>
+<td>None (count=0, both)</td>
+<td>LoF-constrained (o/e 0.327, 90% CI 0.209–0.530) — intolerant of loss-of-function</td>
+</tr>
+<tr>
+<td>TTF1 (ENSG00000125482; NOT NKX2-1 — this is &quot;transcription termination factor 1,&quot; an RNA Pol I termination factor, a distinct gene from the lung-developmental transcription factor sometimes confusingly also called &quot;TTF-1&quot;)</td>
+<td>Occasionally ranked top gene for a small number of the 43 non-COPD studies at this variant (~0.05 typical score, far below MED27)</td>
+<td>Negligible (score 0.0098), literature-only</td>
+<td>None (count=0, both)</td>
+<td>Not queried (not a pursued candidate; outside stated locus window and not prioritized by any of the four internal pipeline methods)</td>
+</tr>
+<tr>
+<td>CFAP77 (ENSG00000188523)</td>
+<td>Occasionally ranked among top genes for a small number of the 43 non-COPD studies (~0.05 typical score)</td>
+<td>None (count=0)</td>
+<td>None (count=0, both)</td>
+<td>Not queried (same rationale as TTF1)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Additional flag (structured lookup, independently corroborated by both the researcher via
+mygene.info and the red-team-skeptic via the Ensembl REST API):</strong> PPP2R4/PTPA's actual GRCh38
+coordinates (chr9:129,110,550-129,148,946) place it ~2.76 Mb away from this locus
+(9:131,900,001-132,150,000) — it does <strong>not</strong> physically overlap this GRCh38 locus. Its hg19
+coordinates (chr9:131,873,229-131,911,225) fall almost exactly inside the stated GRCh38
+boundaries, strongly suggesting the internal pipeline's PoPS &quot;physical overlap&quot; criterion used
+mismatched genome builds (hg19 gene coordinates checked against a GRCh38-defined locus
+window). This is independently consistent with PPP2R4 never appearing among Open Targets' own
+L2G top genes at this locus. Recommend flagging the upstream PoPS/physical-overlap pipeline
+step for a build-consistency audit, as this could affect other loci beyond this one.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>MED27 — confidence LOW.</strong></p>
+<p>MED27 is the only protein-coding gene whose body contains the PIP=0.99 credible-set variant
+rs9411339, and it is independently the top-ranked gene by Open Targets' own locus-to-gene
+(L2G) fine-mapping across all 43 GWAS/molecular-QTL studies with a credible set at this exact
+position — a strong, consistent statistical-genetics/positional case that MED27, specifically,
+is the gene this variant regulates. However, that is as far as the strong evidence goes.
+Neither Open Targets nor the researcher's targeted PubMed searches found any COPD or
+FEV1/FEV1-FVC association for MED27 (evidence table above, Open Targets summary), and no
+COPD/emphysema/airway-remodeling literature exists for this gene. The one piece of
+COPD-lung-tissue evidence (Shutta et al. 2025, PMID 41445629) is an unreviewed preprint in
+which MED27 is one of 24 exploratory differential-methylation genes, not a validated,
+gene-specific mechanism (see evidence table, &quot;WEAKENED&quot; verdict). MED27's only well-established
+human disease phenotype is an unrelated, recessive neurodevelopmental disorder with no
+pulmonary involvement (Yiliyaer 2025, Li 2025, Fazio 2025), and gnomAD shows MED27 is tolerant
+of loss-of-function (o/e 0.758) — arguing against a simple dosage-sensitivity mechanism at this
+common-variant GWAS locus.</p>
+<p>The best-supported hypothesis for <em>why</em> this locus associates with COPD is that it acts
+through smoking-behavior biology rather than intrinsic pulmonary structure/immune biology
+(prior #1): the exact lead SNP is a credible-set member for &quot;age of smoking initiation&quot; in
+Open Targets, and an independent paper (Yan et al. 2024, PMID 38937676) names MED27 as a
+cross-trait pleiotropic gene linking GSCAN smoking-behavior traits to GERD. But per the
+red-team critique, this chain is circumstantial: the direct GWAS Catalog lookup for rs9411339
+itself returns no smoking-trait association (only PUFA% and insomnia), and Yan et al.'s
+pleiotropic SNPs are not confirmed to be in LD with rs9411339. So the smoking-mediation
+explanation is plausible and consistent with the data pattern, but not proven.</p>
+<p>The competing candidate, PPP2R4/PTPA (PoPS-prioritized), is CONTESTED and I do not recommend
+it: two independent coordinate lookups (mygene.info, Ensembl REST) agree its true GRCh38
+location is ~2.76 Mb outside this locus, its hg19 coordinates suspiciously fall inside the
+stated GRCh38 window (a build-mismatch signature), it never ranks among Open Targets' top L2G
+genes here, and its only COPD &quot;association&quot; is a literature text-mining artifact with zero
+genetic support. Its real lung-epithelial biology (KRAS-mutant lung adenocarcinoma, TKI-resistant
+adenocarcinoma, mesothelioma, and a cystic-fibrosis FEV1-modifier signal) is either
+oncology-specific or from a different monogenic-disease context, and does not overcome the
+positional/L2G case against it belonging at this locus at all.</p>
+<p><strong>What would resolve this:</strong> (1) an LD check of Yan et al.'s pleiotropic SNPs (rs4382592,
+rs200968, rs1510719) against rs9411339 to confirm or refute the smoking-mediation chain; (2) a
+direct COPD or spirometry GWAS/colocalization analysis at this variant (none currently exists
+in Open Targets or the literature found); (3) confirmation/correction of the PPP2R4 genome-build
+issue in the upstream pipeline; (4) full-text confirmation of MED27's causal weight (versus
+incidental panel membership) in the Shutta et al. 2025 preprint once/if it is peer-reviewed.
+Given the strength of the positional/fine-mapping case for MED27 but the near-total absence of
+COPD- or lung-function-specific mechanistic support, and the circumstantial nature of the
+smoking-mediation explanation, confidence is <strong>LOW</strong>, not moderate or high.</p>
+
+</body>
+</html>

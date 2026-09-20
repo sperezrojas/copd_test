@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>14_46700001-47000000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1446700001-47000000-grch38">Evidence table — Locus 14:46,700,001-47,000,000 (GRCh38)</h1>
+<p><strong>Lead variant:</strong> rs12889080 (PIP=0.086, intergenic, 14:46,822,678)
+<strong>Candidate genes (internal pipeline):</strong> MDGA2 (nearest gene; FLAMES-prioritized). No MAGMA/PoPS/ABC prioritized genes. MDGA2 is a ~430 kb gene that spans essentially the entire locus window (~14:46,691,000-47,036,000); all gene-annotated credible-set variants (intron_variant, 3_prime_UTR_variant, downstream_gene_variant; all impact=MODIFIER) map to MDGA2, and no other protein-coding gene overlaps the credible set. No missense/splice-donor/splice-acceptor variants are present in the credible set.</p>
+<p>Only citations with a citation-verifier verdict of VERIFIED are included below. Excluded (CLAIM_MISMATCH / NOT_FOUND) citations and the full red-team critique are preserved in the audit trail: <code>audits/14_46700001-47000000_audit.md</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MDGA2</td>
+<td>Statistical genetics — variant-level, cross-phenotype GWAS (prior #1 relevant)</td>
+<td>Locus lead credible-set variant rs12889080 shows a <strong>suggestive, sub-genome-wide-significant</strong> association (P=4.52x10⁻⁷, i.e. ~9-fold short of the conventional 5x10⁻⁸ threshold) with a pooled cross-substance-use-disorder trait (alcohol/cannabis/opioid/tobacco use disorders combined — not tobacco-specific) in a large multi-ancestry GWAS meta-analysis; the study's gene-level prioritization of 785 SUD-shared genes found them enriched in neuronal cell types across amygdala/cortex/hippocampus/hypothalamus/thalamus.</td>
+<td>Lai et al. 2025, <em>Mol Psychiatry</em>, PMID 41057643, DOI 10.1038/s41380-025-03294-5</td>
+<td>VERIFIED (paper exists, reports rs12889080 at P=4.52x10⁻⁷ and the 785-gene neuronal-enrichment finding); red-team WEAKENED the researcher's original framing — this is marginal, not genome-wide-significant, and is a pooled addiction-liability signal, not a tobacco/nicotine-specific one. Should not be read as confirmed smoking-mediation.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MDGA2</td>
+<td>Statistical genetics — GWAS in a distinct lung disease</td>
+<td>An MDGA2 intronic SNP (rs7144383, 14q21.3) reached genome-wide significance in an idiopathic pulmonary fibrosis (IPF — not COPD) GWAS discovery+stage-2 meta-analysis, but <strong>failed to replicate</strong> in the independent stage-3 cohort (unlike TOLLIP and MUC5B, which did replicate).</td>
+<td>Noth et al. 2013, <em>Lancet Respir Med</em>, PMID 24429156, DOI 10.1016/S2213-2600(13)70045-6</td>
+<td>VERIFIED (failed-replication finding confirmed as reported); red-team notes this is evidentially weak on two counts — non-replication, and IPF is mechanistically distinct fibrotic disease, not COPD/emphysema.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MDGA2</td>
+<td>Statistical genetics — GWAS in an unrelated chronic-pain trait</td>
+<td>Large multi-ancestry fibromyalgia GWAS gene-prioritization implicated MDGA2 among &quot;diverse genes with neural roles&quot; (with DCC, DRD2/NCAM1, CELF4); fibromyalgia heritability was exclusively enriched in brain tissues/neural cell types.</td>
+<td>Kerrebijn et al. 2026, <em>Nat Med</em>, PMID 42521817, DOI 10.1038/s41591-026-04492-6</td>
+<td>VERIFIED; not lung-relevant — underscores MDGA2's dominant, reproducible CNS/neural biology rather than any pulmonary role.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MDGA2</td>
+<td>Statistical genetics — mQTL, unrelated cancer trait</td>
+<td>A novel MDGA2 methylation-QTL region was newly associated with colorectal cancer risk, not previously reported in prior CRC meta-GWAS.</td>
+<td>Mesa-Eguiagaray et al. 2025, <em>Br J Cancer</em>, PMID 40506516, DOI 10.1038/s41416-025-03064-8</td>
+<td>VERIFIED; not lung/COPD-relevant.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MDGA2</td>
+<td>Statistical genetics — rare-variant burden, metabolomic trait</td>
+<td>Rare-variant burden analysis (ARIC cohort, n=1,456) found MDGA2 significantly associated with a serum carnitine-pathway metabolite (cis-4-decenoylcarnitine level).</td>
+<td>Yazdani et al. 2016, <em>Genet Epidemiol</em>, PMID 27256581, DOI 10.1002/gepi.21980</td>
+<td>VERIFIED; unrelated to lung/COPD biology, illustrates broad pleiotropic/multi-trait footprint of this large gene.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MDGA2</td>
+<td>Mechanistic/functional — cancer biology, not lung</td>
+<td>MDGA2 promoter is commonly hypermethylated/silenced in gastric cancer (62.4% of 218 tumors); functions as a tumor suppressor via DMAP1 stabilization activating p53/p21 signaling.</td>
+<td>Wang et al. 2015, <em>Gut</em>, PMID 26206665, DOI 10.1136/gutjnl-2015-309276</td>
+<td>VERIFIED; not lung/COPD-relevant.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MDGA2</td>
+<td>Immunology/autoimmune genetics (prior #3 relevant)</td>
+<td>MAMDC1 (=MDGA2) intronic SNPs rs961616 (p=0.001, OR=1.29) and rs2297926 (p=0.003, OR=1.35) were associated with systemic lupus erythematosus (SLE) susceptibility in Finnish/UK/Swedish cohorts; MAMDC1 mRNA was upregulated by TNF-alpha and IFN-gamma in THP-1 monocytes (2.5x and 2.4x induction).</td>
+<td>Hellquist et al. 2009, <em>PLoS One</em>, PMID 19997561, DOI 10.1371/journal.pone.0008037</td>
+<td>VERIFIED but modest effect sizes from a single family/case-control study; red-team notes no evidence links this to any COPD-relevant airway inflammatory program (neutrophilic, CD8+ T-cell, Th1, Th17/Tc17, macrophage) or to lung tissue/cell-type specificity — this is a generic systemic-autoimmunity signal only.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MDGA2</td>
+<td>Human genetics — rare disease, CNS phenotype</td>
+<td>Seven distinct homozygous loss-of-function MDGA2 variants in 9 individuals from 7 consanguineous families cause autosomal-recessive developmental and epileptic encephalopathy.</td>
+<td>Morsy et al. 2026, <em>Am J Hum Genet</em>, PMID 41570816, DOI 10.1016/j.ajhg.2025.12.015</td>
+<td>VERIFIED; confirms MDGA2 is a genuine dosage-sensitive human disease gene (consistent with its strong gnomAD LoF constraint, see Open Targets summary below), but for a CNS/epilepsy phenotype, not a lung phenotype.</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not reviewed by citation-verifier or red-team-skeptic)</h2>
+<p><strong>MDGA2 (ENSG00000139915):</strong></p>
+<ul>
+<li><strong>Genetic constraint (gnomAD):</strong> LoF observed/expected (oe) = 0.257 (95% CI 0.185-0.362; expected 93.4, observed 24) — strongly constrained against loss-of-function variation, a dosage-sensitivity signal consistent with the Morsy et al. 2026 human LoF-disease finding above. Missense oe = 0.828 (mild constraint); synonymous oe = 1.009 (as expected, no constraint).</li>
+<li><strong>Aggregate COPD association score:</strong> MDGA2 does not rank in the top 500 of 6,323 targets Open Targets associates with chronic obstructive pulmonary disease (MONDO_0005002) — its score is below 0.19, versus established COPD genes such as SCNN1B (0.806), CFTR (0.760), SERPINA1 (0.703), FAM13A (0.631), HHIP (0.485), IREB2 (0.293). This is a weak aggregate genetic-association signal for MDGA2-COPD specifically.</li>
+<li><strong>MDGA2's own top-scored disease/trait associations</strong> (out of 2,927 total): (1) skeletal system abnormality (0.341), (2) alcohol drinking (0.337), (3) <strong>smoking initiation (0.323)</strong>, (4) ADHD (0.315), (5) obesity disorder (0.314), (6) mathematical ability (0.311). COPD does not appear in this top-25 list (score &lt;0.247).</li>
+<li><strong>Lead variant (rs12889080) credible-set/colocalization survey:</strong> this variant is a fine-mapped credible-set member in 122 separate GWAS study-loci in Open Targets (all 122 inspected). The overwhelming majority (&gt;100/122) are anthropometric/body-composition traits (BMI in 15+ cohorts, body weight, fat mass, lean mass, body fat percentage, waist circumference, basal metabolic rate). A minority are type 2 diabetes, HbA1c, sleep apnea, PTSD, pain, blood pressure, and psychiatric/ADHD-obesity composite traits. <strong>None of the 122 credible sets at this exact variant are COPD, lung function (FEV1/FEV1-FVC), or a direct smoking-behavior trait</strong> in Open Targets' own GWAS ingestion.</li>
+<li><strong>Colocalization:</strong> no COPD- or lung-function-specific study locus was found colocalizing with this variant; this absence is itself informative and is noted rather than omitted.</li>
+<li>Interpretation flag (from the orchestrator's step-1 lookup, echoed and investigated in the researcher/skeptic stages): the lead variant's dominant cross-trait signature in Open Targets is adiposity/body-composition, not smoking or lung function directly — an alternative pathway hypothesis not covered by this pipeline's three standard priors. The researcher searched PubMed specifically for MDGA2 + obesity/BMI/adiposity literature and found <strong>zero results</strong>, so this remains an open, literature-unaddressed structured-database observation, not a corroborated mechanism.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Gene: MDGA2 — Confidence: LOW</strong></p>
+<p>MDGA2 is named as the prioritized gene at this locus by default, not because the evidence is strong, but because it is the <em>only</em> candidate: it is both the nearest gene and the FLAMES-prioritized gene, no MAGMA/PoPS/ABC gene competes with it, MDGA2 physically spans essentially the entire ~300kb locus window, and every gene-annotated credible-set variant sits within MDGA2 itself. There is no gene-identity ambiguity to resolve (unlike loci with multiple genes in LD) — the open question is entirely about <em>mechanism</em>, not <em>which gene</em>.</p>
+<p>The verified evidence, however, does not support a COPD-specific or lung-specific mechanism with any confidence. As the red-team-skeptic's critique concludes (see <code>audits/14_46700001-47000000_audit.md</code> for the full critique), all three of this pipeline's standard priors are, at best, weakly and indirectly touched:</p>
+<ul>
+<li><strong>Prior #1 (smoking-mediation):</strong> the only variant-level evidence (Lai et al. 2025, row 1 above) is a <em>sub-genome-wide-significant</em> (P=4.52x10⁻⁷) association with a <em>pooled, non-tobacco-specific</em> substance-use-disorder trait — weaker than &quot;smoking-mediated&quot; implies, and no smoking-initiation/cessation/heaviness GWAS hit exists for this variant.</li>
+<li><strong>Prior #2 (spirometry):</strong> a clean, genuine absence — no FEV1/FEV1-FVC or COPD literature exists for MDGA2 at all, and the one lung-disease-adjacent finding (Noth et al. 2013 IPF signal) failed replication and concerns a mechanistically distinct fibrotic disease.</li>
+<li><strong>Prior #3 (inflammation):</strong> a modest, single-population SLE/monocyte-cytokine-inducibility signal (Hellquist et al. 2009) with no COPD-relevant airway inflammatory-program specificity (no neutrophilic/CD8+/Th1/Th17/macrophage evidence).</li>
+</ul>
+<p>Two additional, non-prior alternative hypotheses were raised and remain unresolved: (a) an Open Targets-flagged but literature-uncorroborated <strong>adiposity/body-composition mediation pathway</strong> (122/122 of the lead variant's other GWAS credible-set memberships are anthropometric traits), and (b) a <strong>gene-size/pleiotropy artifact</strong> — MDGA2 is one of the largest genes in the genome (~430kb) and its promiscuous appearance across unrelated GWAS (SLE, IPF, depression, fibromyalgia, neuroticism, carnitine metabolites, colorectal cancer, anthropometric traits, substance use) may partly reflect its size rather than true shared biology.</p>
+<p>MDGA2's best-replicated, most robust biology by far is CNS-synaptic/neurodevelopmental (a dosage-sensitive gene whose human loss-of-function causes epileptic encephalopathy, and whose common variants are linked to autism, neuroticism, and fibromyalgia) — mechanistically disconnected from lung pathophysiology as currently understood. The red-team-skeptic explicitly declined to call this locus CONTESTED (there is no competing gene to contest against) but rated the overall evidence base WEAKENED relative to the researcher's original framing.</p>
+<p><strong>What would resolve this:</strong> a direct FEV1/FEV1-FVC or COPD GWAS/fine-mapping hit at this variant or gene; a tobacco/nicotine-specific (not pooled-substance) GWAS association at rs12889080; airway/lung single-cell expression or functional data for MDGA2; or a literature-confirmed adiposity/BMI association for MDGA2 that could be tested for mediation of the COPD signal. Absent any of these, this locus should be treated as low-confidence and mechanistically unresolved — MDGA2 is reported here as the best (and only) candidate gene, not as a well-supported causal mechanism.</p>
+
+</body>
+</html>

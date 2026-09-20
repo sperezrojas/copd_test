@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>13_74250001-74450000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1374250001-74450000-nearestpops-prioritized-gene-klf12">Evidence table — locus 13:74,250,001-74,450,000 (nearest/PoPS-prioritized gene: KLF12)</h1>
+<p><strong>Lead variant:</strong> rs1331781 (13:74,353,776, PIP=0.497). <strong>Credible set:</strong> 39 variants, all
+intronic/non-coding-transcript, all MODIFIER impact, all annotated to LINC00402 (spans the
+entire locus). No missense/splice-donor/splice-acceptor variants in the credible set.
+KLF12 (protein-coding, minus strand) lies ~82-282 kb away, immediately 3' of the credible
+set region relative to its promoter.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KLF12</td>
+<td>Statistical genetics (negative)</td>
+<td>A dedicated COPD gene-prioritization study integrating multiple population datasets does NOT list KLF12 among its highlighted genes (highlights DDAH2, AGER, TNXB, MHC-region immune genes instead)</td>
+<td>PMID 39509417 / DOI 10.1371/journal.pone.0305803</td>
+<td>Weighted by skeptic as contributing to CONTESTED status — a COPD-focused pipeline scanning this region did not surface KLF12</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLF12</td>
+<td>Statistical genetics (regional precedent)</td>
+<td>In the same chr13q22.1 gene desert, the nearest candidate genes (KLF5, KLF12, PIBF1, BORA; 265-586 kb away) to an unrelated pancreatic-cancer GWAS signal were NOT the functionally validated target — the true regulated gene was DIS3, reached via a 570 kb long-range chromatin loop</td>
+<td>PMID 28172817 / DOI 10.1093/hmg/ddw300</td>
+<td>Central reason for CONTESTED — affirmative regional precedent that nearest-gene reasoning fails in this exact desert, not merely absence of evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLF12</td>
+<td>Statistical genetics (negative)</td>
+<td>A major multiethnic pulmonary-function (FEV1/FEV1-FVC) GWAS meta-analysis does not name KLF12 among its highlighted novel genes (highlights KCNK2, CDK12 instead)</td>
+<td>PMID 30061609 / DOI 10.1038/s41467-018-05369-0</td>
+<td>Skeptic: this non-circular literature negative check should be weighted more heavily than the Open Targets FEV1/FVC database score (see Open Targets summary below, which is circularly derived from the same credible set)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLF12</td>
+<td>Structural/developmental (general, non-lung)</td>
+<td>KLF12 (=AP-2rep) is a zinc-finger transcriptional repressor of AP-2alpha/TFAP2A, with developmental relevance shown in kidney</td>
+<td>PMID 9858544 / DOI 10.1128/MCB.19.1.194</td>
+<td>Not lung-specific; general developmental biology only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLF12</td>
+<td>Structural/developmental (general, non-lung)</td>
+<td>KLF12/AP-2rep represses AP-2alpha via CtBP1 corepressor recruitment (PVDLS motif)</td>
+<td>PMID 11373277 / DOI 10.1074/jbc.M100070200</td>
+<td>Tangential — mechanistic corepressor biology, no lung/COPD context</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLF12</td>
+<td>Structural (lung cell line, mechanistic)</td>
+<td>The AP-2rep (KLF12) binding site in the AP-2alpha promoter shows distinct cytosine-methylation patterns in normal vs. SV40-transformed human lung fibroblast cell lines (WI38/MRC-5)</td>
+<td>PMID 11406275 / DOI 10.1016/s0167-4781(01)00227-5</td>
+<td>Uses lung fibroblast lines as a convenient promoter-methylation model system, not evidence of KLF12 role in lung physiology/disease</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLF12</td>
+<td>Structural (non-pulmonary epithelium)</td>
+<td>KLF12 transcript is detected by RT-PCR in normal human corneal and conjunctival epithelium, among 12 KLF-family members tested</td>
+<td>PMID 15570219 (no DOI located)</td>
+<td>Non-pulmonary; shows only that KLF12 is broadly expressed across epithelial tissue types in general</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLF12</td>
+<td>Structural/oncology</td>
+<td>In lung cancer cell lines (e.g., A549), KLF12 knockdown reduces anoikis (detachment-induced apoptosis), increases in vivo tumor formation, and low KLF12 is associated with poorer lung cancer patient survival</td>
+<td>PMID 26455320 / DOI 10.1038/onc.2015.394</td>
+<td>Lung-cancer cell biology (anoikis/metastasis-suppression), not COPD-relevant structural/remodeling biology (airway remodeling, emphysema, protease-antiprotease balance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLF12</td>
+<td>Structural/oncology</td>
+<td>Low KLF12 expression is associated with necrosis, positive nodal status, and shorter disease-free survival in lung carcinoid tumors</td>
+<td>PMID 32040954 / DOI 10.1159/000506401</td>
+<td>Oncologic, not COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLF12</td>
+<td>Immune/inflammatory (tumor context)</td>
+<td>KLF12 transcriptionally activates PD-L1 (with STAT1/STAT3/P300) in NSCLC cells; KLF12 knockout in immunocompetent mice reduces tumor growth and increases CD8+ T-cell tumor infiltration</td>
+<td>PMID 37606530 / DOI 10.1002/1878-0261.13512</td>
+<td>Tumor-immune-evasion context only. Skeptic flags the mechanism direction as arguably opposite to COPD-relevant biology: here KLF12/PD-L1 activity <em>suppresses</em> CD8+ T-cell infiltration (an immune-evasion, anti-host-response effect), whereas in COPD, CD8+ T-cell activity is generally a pathogenic effector process — bridging this to &quot;KLF12 modulates COPD's CD8+ program&quot; should be resisted</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLF12</td>
+<td>Immune/inflammatory (tumor context)</td>
+<td>A circRNA (circ_0007432) stabilizes KLF12 via SRSF1; KLF12 then drives IL-8 (CXCL8) transcription, promoting M2 macrophage polarization and malignant NSCLC behavior</td>
+<td>PMID 38799570 / DOI 10.1016/j.isci.2024.109861</td>
+<td>Tumor-context only, no smoking/COPD model tested; IL-8/M2-macrophage link is mechanistically plausible cross-relevant biology but unconfirmed in airway/alveolar tissue</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC00402</td>
+<td>Immune/inflammatory</td>
+<td>LINC00402 is a conserved lncRNA ~88-fold enriched in human T cells (FANTOM5), differentially expressed after MHC-mismatched hematopoietic stem cell transplantation, reduced in patients who develop acute GVHD, enhances ERK1/2 activity and FOS nuclear accumulation, augments IL-2 expression after TCR engagement, and increases T-cell proliferation specifically to an allogeneic (not nominal-antigen or polyclonal) stimulus</td>
+<td>PMID 33731431 / DOI 10.1126/scitranslmed.aaz0316</td>
+<td>Skeptic: the single most substantive functional-biology finding at this locus for either gene. Genuine T-cell-intrinsic immunomodulatory mechanism (IL-2/TCR signaling), directionally compatible (not inverted) with COPD's CD8+/T-cell inflammatory programs, unlike the KLF12 tumor-immune-evasion evidence above — but set in transplant-alloimmunity/GVHD, not airway inflammation, and no data connect it to COPD, smoking, or lung immune-cell atlases. Status: WEAKENED, not dismissible</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC00402</td>
+<td>Oncology biomarker (tangential)</td>
+<td>LINC00402 is one of 8 programmed-cell-death-related lncRNAs in a TCGA-derived prognostic/immune-infiltration signature for esophageal carcinoma</td>
+<td>PMID 41510073 / DOI 10.21037/tcr-2025-1598</td>
+<td>No COPD/pulmonary relevance; listed for completeness</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC00402</td>
+<td>Infectious-disease biomarker (tangential)</td>
+<td>LINC00402 is one of a 10-gene blood transcriptomic signature (with BATF2, FAM20A, FBLN2, AK5, VAMP5, MMP8, KLHDC8B, DEFA3, GBP6) discriminating active tuberculosis from controls</td>
+<td>PMID 40491837 / DOI 10.3389/fmicb.2025.1546770</td>
+<td>No COPD/pulmonary relevance; distinct infectious-disease process; listed for completeness</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC00402</td>
+<td>Oncology biomarker (tangential)</td>
+<td>LINC00402 is included in a lactate-metabolism-related lncRNA prognostic subtyping analysis of hepatocellular carcinoma</td>
+<td>PMID 36147735 / DOI 10.3389/fcell.2022.960277</td>
+<td>No COPD/pulmonary relevance; listed for completeness</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC00402</td>
+<td>Oncology biomarker (tangential)</td>
+<td>LINC00402 acts as a ceRNA of PHLPP2 (via miR-141/miR-424) in colon cancer</td>
+<td>PMID 32633726 / DOI 10.18632/aging.103246</td>
+<td>No COPD/pulmonary relevance; listed for completeness</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC00402</td>
+<td>Oncology biomarker (tangential)</td>
+<td>LINC00402 is one of six differentially expressed lncRNAs in a ceRNA network for metastatic melanoma</td>
+<td>PMID 31004080 / DOI 10.12659/MSM.913881</td>
+<td>No COPD/pulmonary relevance; listed for completeness</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<ul>
+<li>
+<p><strong>KLF12 (ENSG00000118922):</strong></p>
+<ul>
+<li>Genetic constraint (gnomAD): LOF-constrained — observed 6 vs. expected 29.74 LoF
+variants (oe = 0.202, 90% CI 0.109–0.398, constraint score 0.999); missense oe = 0.714;
+synonymous oe = 0.977 (neutral, as expected).</li>
+<li>COPD (MONDO_0005002) direct association score: 0.0015 — driven entirely by
+<code>europepmc</code> text-mining, zero contribution from <code>gwas_credible_sets</code>.</li>
+<li>FEV1/FVC ratio (EFO_0004713): score 0.356, driven entirely by <code>gwas_credible_sets</code>
+(0.586). Note: this is a database-internal L2G-style assignment of this same credible
+set to KLF12, not an independent replication — see skeptic critique above regarding
+circularity.</li>
+<li>&quot;Respiratory system disorder&quot; (broad term): score 0.356 (<code>gwas_credible_sets</code> 0.585).</li>
+<li>&quot;Chronic Obstructive Asthma&quot; (EFO_0009759): score 0.248.</li>
+<li>Smoking initiation / nicotine dependence: no association found (count = 0 for both).</li>
+<li>Highest overall disease associations genome-wide (top 10 of 507 total): atrial
+fibrillation (0.527), restless legs syndrome (0.488), hypothyroidism (0.467),
+mathematical ability (0.411), COVID-19 (0.384), Hashimoto thyroiditis (0.368),
+respiratory system disorder (0.356), schizophrenia (0.354), GI abnormality/HPO
+(0.346), asthma (0.338) — pattern consistent with broad pleiotropy across many
+GWAS loci rather than COPD-specific biology.</li>
+<li>Colocalization evidence: not retrieved (query attempts did not resolve cleanly).</li>
+</ul>
+</li>
+<li>
+<p><strong>LINC00402 (ENSG00000235532, lncRNA):</strong></p>
+<ul>
+<li>Genetic constraint: no data (expected — constraint metrics are computed for
+protein-coding genes).</li>
+<li>COPD (MONDO_0005002) and FEV1/FVC ratio (EFO_0004713): zero association score for
+both — no rows returned by either query.</li>
+<li>13 total disease associations genome-wide, none respiratory: neoplasm (0.027),
+psoriasis (0.024), colonic neoplasm (0.014), malignant colon neoplasm (0.014), sepsis
+(0.010), metastatic melanoma (0.008), GVHD (0.004), acute GVHD (0.004), hepatocellular
+carcinoma (0.004), colorectal cancer (0.004), tuberculosis (0.002), cancer (0.0015),
+pachyonychia congenita (0.0015).</li>
+<li>Colocalization evidence: not retrieved (same caveat as above).</li>
+</ul>
+</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Gene: KLF12</strong> — <strong>Confidence: LOW</strong></p>
+<p>This call is close, and the evidence genuinely does not cleanly distinguish KLF12 from
+LINC00402 as the causal gene at this locus — the red-team-skeptic explicitly marked KLF12
+<strong>CONTESTED</strong> and recommended LINC00402 be treated as a live alternative, not a footnote.
+I am naming KLF12 as the best single pick because it is the only gene here with any
+positive genetic-association signal connecting it to a pulmonary-function trait (the
+Open Targets FEV1/FVC score, entirely <code>gwas_credible_sets</code>-driven) and it is the
+PoPS-prioritized nearest gene, which — absent a resolving eQTL/chromatin-interaction
+study — remains the default prioritization heuristic this pipeline otherwise relies on.
+However, that same FEV1/FVC signal is not independently corroborated by a named
+peer-reviewed lung-function GWAS (Wyss et al. 2018, PMID 30061609, does not list KLF12),
+and the skeptic correctly notes it is close to circular (Open Targets' own L2G-style
+<code>gwas_credible_sets</code> score is likely just re-encoding the same proximity/regulatory
+assumption being evaluated). Working against KLF12: it sits 82-282 kb from the actual
+credible set (which lies entirely within LINC00402), it has essentially no
+literature-documented lung-specific biology outside of lung-cancer cell lines (anoikis,
+PD-L1/CD8+ T-cell suppression, IL-8/M2-macrophage polarization — all tumor-context,
+and in the PD-L1 case arguably direction-inverted relative to COPD's pathogenic CD8+
+T-cell biology), and there is a directly on-point regional precedent (Hoskins et al.
+2016, PMID 28172817) in this exact chr13q22.1 KLF-family gene desert where the nearest
+genes (KLF5/KLF12) were demonstrably NOT the causal target of a different GWAS signal —
+the true target (DIS3) was reached via a 570 kb chromatin loop. A COPD-specific
+gene-prioritization study (Zainab/Anzawa/Kinoshita 2024, PMID 39509417) also does not
+name KLF12.</p>
+<p><strong>Runner-up: LINC00402</strong> — physically contains all 39 credible-set variants and has the
+single most substantive, mechanistically coherent piece of immune biology found at this
+locus (Peltier et al. 2021, PMID 33731431): a T-cell-enriched, TCR-responsive lncRNA that
+augments IL-2 signaling and allo-specific T-cell proliferation — directionally compatible
+with (not inverted relative to) COPD's CD8+/T-cell inflammatory programs, unlike the
+KLF12 tumor-immune-evasion evidence. Its case is weakened by the fact that this mechanism
+was shown in a transplant-alloimmunity/GVHD context, not airway inflammation, and Open
+Targets shows zero COPD/FEV1-FVC association score for LINC00402 — but the skeptic notes
+that absence of COPD literature is close to the base rate for any lncRNA (a systematically
+understudied gene class) and should not be read as strongly as the equivalent absence
+would be for a well-studied protein-coding gene.</p>
+<p><strong>What would resolve the tie:</strong> a lung-tissue (or sorted lung-immune-cell, e.g., CD8+ T
+cells or alveolar macrophages) eQTL or chromatin-conformation study (Hi-C/HiChIP/
+promoter-capture Hi-C) specifically naming either KLF12 or LINC00402 as the regulatory
+target of this credible-set region — the direct analog of the DIS3 chromatin-loop
+evidence that resolved the equivalent ambiguity in the Hoskins 2016 locus. Neither the
+researcher nor the red-team-skeptic was able to complete this specific check in this pass
+(GTEx/lung-eQTL lookup and GWAS Catalog smoking-trait lookup for rs1331781 were both
+attempted and left incomplete due to search-tool budget exhaustion — see audit appendix).
+Given this, confidence is marked LOW rather than MODERATE or HIGH, and the study team
+should treat this locus as substantively unresolved pending a dedicated eQTL/colocalization
+follow-up, not as a settled KLF12 finding.</p>
+
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>9_15450001-16150000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-915450001-16150000-grch38">Evidence table — Locus 9:15,450,001-16,150,000 (GRCh38)</h1>
+<p><strong>Lead variant:</strong> rs10962142 (9:15,756,096, intron_variant, PIP=0.038 — a low-PIP lead in a very
+flat, diffuse 384-variant credible set)
+<strong>Nearest gene:</strong> CCDC171 · <strong>MAGMA-prioritized:</strong> CCDC171 · <strong>PoPS-prioritized:</strong> CCDC171 ·
+<strong>FLAMES-prioritized:</strong> PSIP1 · <strong>ABC-prioritized:</strong> PSIP1</p>
+<p><strong>Credible-set scope note:</strong> the 384-variant credible set is essentially entirely intronic to
+CCDC171 (plus a handful of very-low-PIP hits in the pseudogene/ncRNA RNU6-246P and FTH1P12, and a
+few intergenic variants), all MODIFIER impact. There is no missense, splice-donor, or
+splice-acceptor variant anywhere in the credible set, so per this pipeline's scope rules, variant-
+level literature search was performed only for the lead variant rs10962142; all other evidence
+below is gene-level.</p>
+<p><strong>In-region genes considered:</strong> Ensembl overlap of the 9:15,450,001-16,150,000 window confirms
+three protein-coding genes: PSIP1, CCDC171, and SNAPC3. SNAPC3 (general RNA Pol II/III
+snRNA-transcription housekeeping complex subunit) has no prioritization support from any of the
+five methods and no disease-specific literature; it is not carried into the table below beyond
+this note. BNC2, mentioned only as a minor Open Targets L2G contributor (0.066) at one FEV1/FVC
+credible set, lies outside this exact locus window and was not treated as a primary candidate.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CCDC171</td>
+<td>Statistical genetics (behavioral pleiotropy)</td>
+<td>Cross-trait GWAS meta-analysis of ADHD and risk-taking behavior found CCDC171 plays a significant role in both traits at the mRNA/TWAS level.</td>
+<td>Chen et al. 2024, J Affect Disord, PMID 38565336, DOI 10.1016/j.jad.2024.03.107</td>
+<td>VERIFIED; per red-team critique, part of a behavioral/metabolic pleiotropy cluster that is a live alternative explanation to a pulmonary-structural mechanism (see Prioritized-gene section)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCDC171</td>
+<td>Statistical genetics / functional validation (metabolic pleiotropy)</td>
+<td>A CCDC171 3'UTR variant, rs3008747 (a BMI-associated GWAS SNP), was functionally shown in vitro to disrupt allele-specific miRNA binding.</td>
+<td>Kumar, Traurig, Baier 2019, Int J Obes, PMID 31745258, DOI 10.1038/s41366-019-0488-8</td>
+<td>VERIFIED; demonstrates the gene's expression is under genetic/regulatory control relevant to metabolic (not lung) traits</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCDC171</td>
+<td>Statistical genetics (metabolic pleiotropy)</td>
+<td>A CCDC171 intronic variant, rs4740619, interacted with dietary cholesterol intake to affect BMI in a Singaporean Chinese cohort.</td>
+<td>Chang et al. 2018, Nutrition Journal, PMID 29477148, DOI 10.1186/s12937-018-0340-3</td>
+<td>VERIFIED; further metabolic-trait pleiotropy, independent of lung biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCDC171</td>
+<td>Proteomics (nonspecific)</td>
+<td>CCDC171 detected as one of many serum proteins elevated in chronic kidney disease patients by MRM proteomics; not mechanistically linked to CKD or lung disease.</td>
+<td>Romanova et al. 2020, Biomolecules, PMID 32046176, DOI 10.3390/biom10020257</td>
+<td>VERIFIED; incidental detection, low evidentiary weight for COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCDC171</td>
+<td>Cross-species genetics (nonspecific)</td>
+<td>CCDC171 listed as 1 of 22 candidate genes from a selective-sweep/multi-omics analysis of chicken egg-weight traits; not functionally validated.</td>
+<td>Ding et al. 2025, Poultry Science, PMID 40961765, DOI 10.1016/j.psj.2025.105813</td>
+<td>VERIFIED; species/trait irrelevant to COPD, included only to show breadth (and thinness) of the CCDC171 literature</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCDC171 / PSIP1</td>
+<td>Regulatory chromatin architecture</td>
+<td>A regulatory enhancer at this exact 9p22 locus (harboring ovarian-cancer-PFS-associated SNPs rs7874043 and rs72700653) physically loops, by chromosome conformation capture, to the promoters of PSIP1, CCDC171, AND an alternative TTC39B promoter simultaneously — establishing a shared, multi-gene regulatory neighborhood. The paper's own functional follow-up (silencing, Rad51 DNA-repair-foci assay, cell viability, Sp1-binding allele-specific effect) validated <strong>PSIP1</strong>, not CCDC171, as the effector in ovarian cancer cell lines.</td>
+<td>French et al. 2016, Oncotarget, PMID 26840454, DOI 10.18632/oncotarget.7047</td>
+<td>VERIFIED; per red-team critique this is a direct illustration of LD/nearest-gene-bias risk — the one wet-lab functional test available at this locus validated PSIP1, not CCDC171, though in an unrelated tissue/trait (ovarian cancer, not lung)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCDC171</td>
+<td>Pulmonary-function GWAS, pathway-level enrichment (gene-specific link to this locus NOT confirmed)</td>
+<td>Landmark lung-function GWAS (UK Biobank + SpiroMeta, n up to 400,102) defines 279 signals and a GRS predictive of COPD across ancestries; explicitly reports enrichment of ciliogenesis and centriolar-replication/duplication genes among newly implicated causal genes, stating &quot;reduced airway motile cilia function impacting mucus clearance is a feature of COPD&quot; and &quot;impaired ciliary function might be a driver of the disease process.&quot;</td>
+<td>Shrine et al. 2019, Nature Genetics, PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
+<td>VERIFIED (this pathway-level statement); <strong>whether CCDC171 or PSIP1 is explicitly named as the candidate/nearest gene for the chr9:15.5-16.1 Mb signal in this paper's full 279-signal list (Supplementary Table 3) could NOT be confirmed</strong> by citation-verifier (table inaccessible) — per red-team critique, using this pathway-level theme as support for a &quot;CCDC171 = ciliary gene&quot; narrative is overclaiming; see excluded-appendix</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCDC171 (locus-wide)</td>
+<td>Methodological / smoking-screening context</td>
+<td>In this same lung-function GWAS, only 1 of 139 new signals (rs193686) was associated with smoking behavior, and 2 other named signals were excluded from analysis due to cigarettes-per-day association — i.e., most new lung-function signals in this study were not smoking-confounded.</td>
+<td>Shrine et al. 2019, Nature Genetics, PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
+<td>VERIFIED; general methodological point about the GWAS as a whole — does not resolve whether this specific 9p22 signal was smoking-associated, since gene-naming at this locus in the paper is unconfirmed</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PSIP1</td>
+<td>Cancer genetics (nonspecific to COPD)</td>
+<td>Confirms NUP98-LEDGF/PSIP1 gene fusion as a recurrent t(9;11)(p22;p15) translocation in acute myeloid leukemia.</td>
+<td>Hussey et al. 2001, BMC Genetics, PMID 11737860, DOI 10.1186/1471-2156-2-20</td>
+<td>VERIFIED; not lung/COPD-relevant, included to characterize PSIP1's known biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PSIP1</td>
+<td>Developmental/structural (mouse knockout) — negative for lung phenotype</td>
+<td>Psip1-null mice show perinatal mortality, low fertility, absence of epididymal fat pads, blepharitis, motor/behavioral defects, and craniofacial/skeletal homeotic transformations; the lens epithelium was explicitly reported as normal (despite the gene's &quot;lens epithelium-derived growth factor&quot; name); <strong>no pulmonary/airway phenotype was reported</strong> in this extensive knockout characterization.</td>
+<td>Sutherland et al. 2006, Mol Cell Biol, PMID 16980622, DOI 10.1128/MCB.00459-06</td>
+<td>VERIFIED; per red-team critique this is direct, citable negative evidence against a lung-structural role for PSIP1</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PSIP1</td>
+<td>Immune (nonspecific autoantigen)</td>
+<td>DFS70 (=PSIP1/LEDGF) is a recognized autoantigen target of antinuclear antibodies (ANA) found in ~0.8% of an ANA-testing-referred cohort, with variable further reactivity against lens/cornea tissue; in modern clinical practice, anti-DFS70 positivity is more often used to help exclude connective-tissue disease than to support one.</td>
+<td>Bizzaro et al. 2007, Ann N Y Acad Sci, PMID 17804545, DOI 10.1196/annals.1381.019</td>
+<td>VERIFIED; a contested/nonspecific immune finding, not COPD- or lung-relevant — should not be built into a COPD immune-mechanism narrative for this gene</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — not a verified literature citation)</h2>
+<p>This section did not go through citation-verifier or red-team-skeptic; it is a structured
+database summary, queried directly from the Open Targets Platform GraphQL API on 2026-09-11.
+Full detail in <code>evidence_tables/_status/9_15450001-16150000/opentargets.md</code>.</p>
+<p><strong>CCDC171 (ENSG00000164989):</strong></p>
+<ul>
+<li>L2G scores at every fine-mapped pulmonary-function GWAS credible set overlapping this locus
+consistently and strongly favor CCDC171: FEV1 (GCST90310160, GCST90565844) = 0.672 each; FEV1
+(GCST90691840, GCST90692680, SuSiE fine-mapped) = 0.628 each; FEV1/FVC (GCST007080) = 0.540
+(vs. BNC2 = 0.066, PSIP1 = 0.063 at the same credible set).</li>
+<li>No Open Targets evidence record is directly tagged to COPD (MONDO_0005002) itself at this locus
+— all locus-specific genetic-association evidence found is tagged to FEV1/FEV1-FVC.</li>
+<li>GTEx lung eQTL/exon-usage colocalization present (h4 ≈ 0.945), plus broad eQTL/sQTL
+colocalization across many other tissues (not lung-specific in breadth).</li>
+<li>gnomAD constraint: NOT LoF-constrained (o/e ≈ 1.06, 90% CI 0.90–1.25) — tolerant of
+loss-of-function variation.</li>
+<li>Overall (genome-wide, not locus-specific) Open Targets disease-association profile (76 total
+diseases): top hits are atrial fibrillation, &quot;respiratory system disorder,&quot; risk-taking
+behaviour, shortness of breath/dyspnea, alcohol drinking, morbid obesity, dyslexia, several
+cancers, stroke, heart failure, and further down smoking initiation (score 0.183). <strong>COPD itself
+is absent from all 76 rows.</strong></li>
+</ul>
+<p><strong>PSIP1 (ENSG00000164985):</strong></p>
+<ul>
+<li>L2G scores at the same pulmonary-function credible sets are minor/secondary throughout: 0.053
+(FEV1 studies), 0.063 (FEV1/FVC study) — roughly 10x lower than CCDC171 at every one.</li>
+<li>PSIP1's own cis-pQTL credible sets are NOT at this locus (its plasma-protein QTL hits are
+trans, on other chromosomes).</li>
+<li>gnomAD constraint: STRONGLY LoF-constrained (o/e ≈ 0.23, 90% CI 0.14–0.40, pLI-like ≈ 1.0) —
+a general essentiality signal, not a disease-specificity signal.</li>
+<li>Overall (genome-wide) Open Targets disease-association profile (3,262 total diseases —a much
+broader/more pleiotropic gene than CCDC171): dominated by HIV infectious disease and a long
+tail of somatic-mutation-driven cancer associations. No COPD/FEV1/FEV1-FVC signal appears among
+its broad top-40 rows.</li>
+</ul>
+<p><strong>SNAPC3:</strong> no Open Targets query performed (no prioritization support from any method; general
+housekeeping transcription-complex subunit with no plausible COPD mechanism).</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>CCDC171 — confidence: LOW.</strong></p>
+<p>CCDC171 is the best-supported single candidate at this locus, but the case is narrower than it
+first appears and should not be overstated. The strongest evidence is genuinely locus-specific and
+convergent: Open Targets' L2G scoring favors CCDC171 over PSIP1 by roughly 10-fold at every one of
+four independently fine-mapped FEV1/FEV1-FVC GWAS credible sets overlapping this region (a
+structured-database signal, not itself a verified literature citation, but consistent across
+independent datasets), and CCDC171 shows GTEx lung eQTL/exon-usage colocalization (h4 ≈ 0.945).
+Under this pipeline's priors, concordant pulmonary-function-trait evidence is treated as strong,
+disease-relevant support, and here it consistently and specifically favors CCDC171 over PSIP1
+(whose own credible sets at this exact locus are minor/secondary, and whose only mouse-knockout
+structural data explicitly reports no pulmonary/airway phenotype — see the PSIP1 rows above).</p>
+<p>However, per the red-team critique, the case for CCDC171 stops well short of an established
+mechanism. CCDC171 has <strong>zero dedicated primary functional/mechanistic literature</strong> — its entire
+evidentiary basis in the table above is either (a) statistical/regulatory prioritization
+(Open Targets L2G, eQTL colocalization — not literature), (b) incidental cross-trait
+GWAS/proteomics hits in unrelated traits (ADHD/risk-taking, BMI, CKD proteomics, chicken egg
+weight), or (c) a pathway-level (not gene-specific) thematic enrichment for ciliogenesis/centriole
+genes reported in the Shrine et al. 2019 lung-function GWAS — and citation-verifier could <strong>not
+confirm</strong> that CCDC171 (or PSIP1) is actually named as the candidate gene for this specific
+chr9:15.5–16.1 Mb signal in that paper's full signal list (Supplementary Table 3 was
+inaccessible). Describing CCDC171 as &quot;a ciliary gene&quot; would be overclaiming; the honest
+characterization is &quot;statistically and regulatorily prioritized for a pulmonary-function
+mechanism at this locus, with the specific mechanism unknown.&quot;</p>
+<p>A second complication, also raised by the red team, is that CCDC171's own broad
+(genome-wide, not locus-specific) Open Targets disease profile is topped by a
+behavioral/metabolic-impulsivity cluster (atrial fibrillation, risk-taking behaviour, alcohol
+drinking, morbid obesity, dyslexia) with only a weak smoking-initiation signal (0.183) — and
+<strong>COPD itself does not appear at all</strong> among CCDC171's 76 genome-wide disease associations. This
+is independently corroborated by real (verified) literature: CCDC171 shows TWAS-level association
+with ADHD and risk-taking behavior, and independent GWAS associations with BMI (both via
+gene-diet interaction and a functionally validated 3'UTR miRNA-binding variant). Per Prior #1
+(smoking-mediated effects), this raises a genuine, unresolved alternative hypothesis: some or all
+of this locus's COPD association could be mediated through smoking-related behavior/impulsivity
+biology rather than (or in addition to) direct pulmonary-structural biology. The evidence
+assembled here cannot distinguish between &quot;CCDC171 acts on lung function directly&quot; and
+&quot;CCDC171/this locus is a behavioral-pleiotropy locus that elevates COPD risk via smoking&quot; — both
+remain live.</p>
+<p><strong>Runner-up: PSIP1</strong>, favored by the FLAMES and ABC prioritization methods, but with converging
+evidence against a pulmonary role at this locus specifically: minor/secondary L2G scores at every
+FEV1/FEV1-FVC credible set here, no COPD/lung-function literature naming it as causal anywhere,
+and a knockout-mouse study that explicitly found no pulmonary phenotype despite extensive
+phenotyping. Its one directly-relevant piece of primary literature (French et al. 2016) does show
+this locus's regulatory architecture is genuinely capable of driving PSIP1 expression via a shared
+enhancer — but the demonstrated functional context is ovarian cancer cell lines, not lung, and the
+implicated variant differs from this locus's COPD lead variant.</p>
+<p><strong>What would resolve the tie:</strong> (1) direct confirmation (e.g., by checking Shrine et al. 2019's
+Supplementary Table 3, or a follow-up lung-function/COPD fine-mapping paper) of which gene, if
+either, is explicitly named at this exact signal; (2) lung/airway-specific single-cell or
+bulk-tissue eQTL/functional data for CCDC171 (currently only broad, multi-tissue, non-lung-specific
+colocalization is available, aside from one GTEx lung exon-usage credible set); (3) a direct test
+of whether this locus reaches genome-wide significance in a primary smoking-initiation/cigarettes-
+per-day GWAS (GSCAN), which was not established here — only unrelated downstream PRS-application
+papers were found; (4) any primary functional study of CCDC171 in airway epithelium, cilia, or
+lung development, which does not currently exist in PubMed. Given the combination of a
+functionally uncharacterized top candidate, an unresolved dual-mechanism (behavioral vs.
+pulmonary) possibility, and an unconfirmed gene-naming link to the one relevant landmark GWAS
+paper, confidence is marked LOW rather than MODERATE or HIGH despite CCDC171's clear numerical
+edge over PSIP1 in the locus-specific statistical evidence.</p>
+
+</body>
+</html>

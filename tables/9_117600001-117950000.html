@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>9_117600001-117950000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-9117600001-117950000-grch38">Evidence table — Locus 9:117,600,001-117,950,000 (GRCh38)</h1>
+<p><strong>Lead variant:</strong> rs1887781 (PIP=0.658, 9:117,755,277, upstream_gene_variant, MODIFIER)
+<strong>Candidate genes:</strong> TLR4 (nearest gene), TNC (MAGMA + PoPS statistical prioritization)
+<strong>Credible set:</strong> 14 variants, all upstream_gene_variant or intron_variant/non_coding_transcript_variant, MODIFIER impact — no missense/splice variant in the credible set. Per pipeline scope rules, only the lead variant required dedicated variant-level search; all other credible-set evidence is rolled into gene-level evidence below.</p>
+<p>Only citations verified VERIFIED by citation-verifier are included below. All 33 citations returned by the researcher were VERIFIED (see <code>evidence_tables/_status/9_117600001-117950000/verified_citations.md</code> for full verbatim verifier output). None were RETRACTED / NOT_FOUND / CLAIM_MISMATCH.</p>
+<h2 id="gene-tlr4">GENE: TLR4</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TLR4</td>
+<td>Positional/physical</td>
+<td>TLR4 is the only named protein-coding gene physically located in the GRCh38 interval 9:117,600,001-117,950,000 (chr9:117,704,175-117,724,735); all other overlapping features are lncRNAs, one processed pseudogene, one snRNA, and one uncharacterized &quot;novel protein&quot; annotation with no gene symbol.</td>
+<td>Ensembl REST region-overlap query (researcher, annotation lookup, not a citable paper)</td>
+<td>Not disputed by skeptic</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Candidate-gene association (background — NOT credible-set variant)</td>
+<td>TLR4 Asp299Gly (rs4986790) minor allele frequency significantly DECREASED in COPD cases vs. controls (protective direction).</td>
+<td>Rohde et al. 2005, Respir Med, PMID 16219455, DOI 10.1016/j.rmed.2005.08.018</td>
+<td>WEAKENED (background only; direction contradicted by citation below)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Candidate-gene association (background)</td>
+<td>TLR4 Thr399Ile (rs4986791) associated with 2.4-fold increased COPD risk specifically among heavy smokers.</td>
+<td>Speletas et al. 2010, Clin Dev Immunol, PMID 20169003, DOI 10.1155/2009/260286</td>
+<td>WEAKENED (background only)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Candidate-gene association (background)</td>
+<td>TLR4 rs11536889 emphysema association lost significance after adjusting for age/smoking; no association with FEV1 or CT emphysema score.</td>
+<td>Ito et al. 2012, BMC Res Notes, PMID 22251849, DOI 10.1186/1756-0500-5-36</td>
+<td>WEAKENED (null/negative once adjusted)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Candidate-gene association (background)</td>
+<td>None of 17 TLR4 tagging SNPs associated with baseline FEV1, but 11/17 associated with FEV1 decline over time and sputum inflammatory cell counts (Dutch longitudinal COPD cohort).</td>
+<td>Budulac et al. 2012, PLoS One, PMID 22952638, DOI 10.1371/journal.pone.0043124</td>
+<td>WEAKENED (background only, not credible-set SNPs)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Candidate-gene association (background)</td>
+<td>TLR4-D299G/T399I SNPs associated with milder COPD stage; absence of TLR SNPs associated with more severe/exacerbation-prone phenotype.</td>
+<td>Apostolou et al. 2016, Herz, PMID 27909766, DOI 10.1007/s00059-016-4510-9</td>
+<td>WEAKENED (background only)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Candidate-gene association (background)</td>
+<td>TLR4 rs1927907 associated with COPD risk among chronic-periodontitis patients (Han Chinese); note — proximity of rs1927907 to the credible-set SNP cluster (rs1927901/rs1927895/rs1927892/rs1927893/rs1927894) is suggested by naming convention but UNCONFIRMED by citation-verifier (web-search budget exhausted).</td>
+<td>Yu et al. 2016, J Oral Sci, PMID 28025440, DOI 10.2334/josnusd.16-0187</td>
+<td>WEAKENED; relationship to credible set unresolved</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Candidate-gene association (background)</td>
+<td>TLR4 rs10759932/rs2737190 significantly associated with altered COPD risk, Chinese Han case-control study.</td>
+<td>Dai et al. 2018, Mutat Res, PMID 29704988, DOI 10.1016/j.mrgentox.2018.03.005</td>
+<td>WEAKENED (background only)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Candidate-gene association + functional (background)</td>
+<td>TLR4 rs10759932/rs2737190 associated with COPD and pulmonary TB with OPPOSITE direction of effect between the two diseases; luciferase assay shows altered transcriptional activity.</td>
+<td>Li et al. 2019, BMC Pulm Med, PMID 31640653, DOI 10.1186/s12890-019-0939-y</td>
+<td>WEAKENED (background only; direction inconsistency flagged)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Functional/mechanistic (background)</td>
+<td>TLR4 3'UTR SNP rs11536889 modulates miR-1236 binding and LPS-induced cytokine response in bronchial epithelial cells from COPD patients — for ventilator-associated pneumonia risk in COPD patients, not COPD susceptibility itself.</td>
+<td>Zhao et al. 2019, J Cell Physiol, PMID 30972742, DOI 10.1002/jcp.28526</td>
+<td>WEAKENED (different phenotype, not COPD susceptibility)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Expression + candidate-gene association (background)</td>
+<td>Increased TLR2/TLR4 blood gene expression in COPD regardless of severity/smoking status; an HSP70-pathway SNP (not TLR4 itself) was associated with COPD risk.</td>
+<td>Hlapčić et al. 2021, Diagnostics, PMID 34441346, DOI 10.3390/diagnostics11081412</td>
+<td>WEAKENED (TLR4 genetic signal itself null)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Candidate-gene association + cytokine (background)</td>
+<td>TLR4 rs4986790 (Asp299Gly) AA genotype associated with higher COPD risk (OR=3.53) specifically in tobacco-smoking-associated COPD, Mexican mestizo cohort, with elevated Th2/mixed cytokine profile — OPPOSITE direction from Rohde et al. 2005 for the same SNP.</td>
+<td>Gutiérrez-Romero et al. 2024, Front Immunol, PMID 39139567, DOI 10.3389/fimmu.2024.1411408</td>
+<td>WEAKENED (cross-population direction inconsistency)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Commentary (background)</td>
+<td>Early letter/commentary on TLR4 polymorphisms and COPD susceptibility, no primary data.</td>
+<td>Sabroe et al. 2004, Thorax, PMID 14694256 (letter, no DOI found)</td>
+<td>Not weighted (letter, no data)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Mechanistic — mouse knockout (general plausibility, NOT locus-specific)</td>
+<td>Tlr4-/- mice spontaneously develop age-related emphysema (unchallenged aging) via Nox3-driven oxidant/elastolytic activity — TLR4 LOSS causes emphysema in this model.</td>
+<td>Zhang et al. 2006, J Clin Invest, PMID 17053835, DOI 10.1172/JCI28139</td>
+<td>CONTESTED — directly contradicted by Haw 2017 below (opposite direction)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Mechanistic — mouse (background)</td>
+<td>NADPH-oxidase-deficient mice show enhanced TLR4-NF-κB pathway activation and worse cigarette-smoke-induced inflammation/emphysema.</td>
+<td>Yao et al. 2008, Am J Pathol, PMID 18403597, DOI 10.2353/ajpath.2008.070765</td>
+<td>Background plausibility only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Mechanistic — mouse knockout, CS model (general plausibility, NOT locus-specific)</td>
+<td>In a cigarette-smoke-induced COPD mouse model, Tlr4-/- mice have ATTENUATED CS-induced airway fibrosis and reduced emphysema/impaired lung function vs WT — TLR4 signaling PROMOTES CS-induced damage; paper states TLR2/TLR4 roles in COPD are &quot;controversial and conflicting.&quot;</td>
+<td>Haw et al. 2017, Am J Physiol Lung Cell Mol Physiol, PMID 29025711, DOI 10.1152/ajplung.00154.2017</td>
+<td>CONTESTED — directly contradicts Zhang 2006 (opposite direction); paper itself admits contested biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Pathway/systems-biology (background)</td>
+<td>TLR4 signaling nominated as a predicted key driver among CS-induced emphysema pathways across 5 mouse strains (pathway-level, not gene-specific validation).</td>
+<td>Cabanski et al. 2015, Inflamm Res, PMID 25962837, DOI 10.1007/s00011-015-0820-2</td>
+<td>Background plausibility only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Mechanistic — macrophage (background)</td>
+<td>Cigarette smoke downregulates macrophage ABCA1 cholesterol efflux, upregulating TLR4/MyD88 signaling and downstream MMP-9/MMP-13 (protease) expression.</td>
+<td>Sonett et al. 2018, FASEB J, PMID 29906247, DOI 10.1096/fj.201701381</td>
+<td>Background plausibility only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Mechanistic — epithelial/lymphocyte (background)</td>
+<td>Cigarette smoke extract and LPS (TLR4 ligand) enhance IL-33 expression in bronchial epithelial cells and peripheral blood lymphocytes in COPD.</td>
+<td>Xia et al. 2015, Am J Physiol Lung Cell Mol Physiol, PMID 25595648, DOI 10.1152/ajplung.00305.2014</td>
+<td>Background plausibility only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Candidate-gene association — negative finding (background)</td>
+<td>No significant TLR4 (Thr399Ile/Asp299Gly) frequency differences in COPD alveolar macrophage responses to pathogens (TLR9 variant was the significant finding).</td>
+<td>Berenson et al. 2015, PLoS One, PMID 26361369, DOI 10.1371/journal.pone.0134209</td>
+<td>Negative finding for TLR4 specifically</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Mechanistic — macrophage/exosome (background)</td>
+<td>Fibroblast-derived exosomal S100A9 signals through TLR4/AGER on lung macrophages to drive inflammation in a CS-COPD mouse model and human scRNA-seq data; incidental MR analysis is for a DIFFERENT gene (IL6-AS1), not TLR4.</td>
+<td>Yi et al. 2025, MedComm, PMID 40487749, DOI 10.1002/mco2.70204</td>
+<td>Background plausibility only; MR result not about TLR4</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Systematic lung-eQTL/GWAS integration — NEGATIVE for TLR4</td>
+<td>Integrates lung eQTL (n=1038) with ICGC COPD GWAS across 129 known COPD loci; maps candidate causal genes for 60 of them (23 replicated in GTEx); TLR4 is NOT reported among the recovered candidate causal genes.</td>
+<td>Lamontagne et al. 2018, Hum Mol Genet, PMID 29547942, DOI 10.1093/hmg/ddy091</td>
+<td>WEAKENED — direct negative evidence against locus-specific eQTL support for TLR4</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Reference GWAS (background, locus status unconfirmed)</td>
+<td>General systems-genetics integration of SpiroMeta-CHARGE lung-function GWAS with lung eQTL data; no TLR4-specific finding identified.</td>
+<td>Obeidat et al. 2015, Lancet Respir Med, PMID 26404118, DOI 10.1016/S2213-2600(15)00380-X</td>
+<td>Background reference only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Reference GWAS (background, locus status unconfirmed)</td>
+<td>Major reference lung-function GWAS (279 signals); whether this chr9:117.6-117.95Mb/TLR4 locus is among the reported loci could NOT be confirmed from abstract alone (gap).</td>
+<td>Shrine et al. 2019, Nat Genet, PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
+<td>Background reference only; locus replication unconfirmed</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Reference GWAS (background, locus status unconfirmed)</td>
+<td>Major reference COPD GWAS (82 loci); whether this chr9 region/rs1887781 is among the reported loci could NOT be confirmed from abstract alone (gap).</td>
+<td>Sakornsakolpat et al. 2019, Nat Genet, PMID 30804561, DOI 10.1038/s41588-018-0342-2</td>
+<td>Background reference only; locus replication unconfirmed</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TLR4</td>
+<td>Candidate-gene, smoking-behavior (tangential)</td>
+<td>TLR4 SNP rs10759932 (not in this credible set) associated with lifetime cigarette smoking specifically in bipolar disorder patients — small candidate-gene study, not a genome-wide smoking-behavior signal.</td>
+<td>Zerdazi et al. 2017, J Neuroimmunol, PMID 28284355, DOI 10.1016/j.jneuroim.2017.01.021</td>
+<td>Background/tangential only</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gene-tnc">GENE: TNC</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TNC</td>
+<td>Positional/physical — CRITICAL CAVEAT</td>
+<td>Under GRCh38 (the build stated for this locus), TNC's gene coordinates (chr9:115,019,575-115,118,257, confirmed independently by both Ensembl REST and Open Targets genomicLocation) are ~2.6-2.7 Mb OUTSIDE the stated locus interval and do NOT physically overlap it. TNC's GRCh37 coordinates (chr9:117,782,806-117,880,536) DO numerically fall inside the locus's stated range, suggesting the MAGMA/PoPS &quot;TNC prioritized&quot; annotation may be a genome-build coordinate mismatch artifact.</td>
+<td>Ensembl REST + Open Targets genomicLocation query (researcher + orchestrator, annotation lookup, not a citable paper)</td>
+<td>CONTESTED — near-disqualifying</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TNC</td>
+<td>Tissue expression (background, general airway remodeling, not locus-specific)</td>
+<td>Tenascin-C and α-SMA-positive (myofibroblast) cell numbers increased in large-airway bronchial biopsies of COPD patients vs. smoking and non-smoking controls; correlated with airway obstruction.</td>
+<td>Löfdahl et al. 2011, Respir Res, PMID 21496259, DOI 10.1186/1465-9921-12-48</td>
+<td>Background only; contradicted by Muñoz-Esquerre 2015 below</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TNC</td>
+<td>Tissue expression — negative finding</td>
+<td>Fibronectin (not TNC) gene expression elevated in COPD vs. non-COPD lung tissue; TNC gene/protein expression showed NO significant difference between groups.</td>
+<td>Muñoz-Esquerre et al. 2015, Lung, PMID 25794567, DOI 10.1007/s00408-015-9717-7</td>
+<td>Direct negative finding for TNC as COPD tissue marker</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TNC</td>
+<td>Tissue expression (background)</td>
+<td>Tenascin staining stronger in COPD controls than in asthma controls of similar age (asthma &gt; healthy); comparisons are disease-vs-matched-control, not a clean COPD-vs-healthy contrast.</td>
+<td>Liesker et al. 2009, Int J Chron Obstruct Pulmon Dis, PMID 19436691, DOI 10.2147/copd.s4639</td>
+<td>Background only; weak COPD-specificity</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TNC</td>
+<td>Pharmacology, in vitro (background)</td>
+<td>Inhaled fluticasone decreases tenascin-C synthesis in primary human lung fibroblasts in vitro (opposite effect to its increase of fibronectin).</td>
+<td>Degen et al. 2009, Clin Exp Allergy, PMID 19309351, DOI 10.1111/j.1365-2222.2009.03220.x</td>
+<td>Background only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TNC</td>
+<td>Mechanistic — mouse model, different causal gene (background)</td>
+<td>Fibulin-1 genetic/therapeutic inhibition disrupts collagen organization and interactions with fibronectin, periostin, and tenascin-C in a CS mouse COPD model, reducing airway fibrosis/emphysema; TNC is an interaction partner of Fibulin-1, not itself the causal focus.</td>
+<td>Liu et al. 2016, JCI Insight, PMID 27398409, DOI 10.1172/jci.insight.86380</td>
+<td>Background only; TNC not the causal gene under study</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TNC</td>
+<td>Tissue expression, vascular remodeling (background)</td>
+<td>TNC among top differentially-regulated ECM-receptor-pathway genes distinguishing pulmonary-artery vascular remodeling in PH-COPD vs. PH-IPF.</td>
+<td>Hoffmann et al. 2014, Am J Respir Crit Care Med, PMID 24918967, DOI 10.1164/rccm.201401-0037OC</td>
+<td>Background only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TNC</td>
+<td>Mechanistic — environmental exposure model (background)</td>
+<td>PM2.5-induced mouse/in-vitro COPD-like airway remodeling shows increased Tenascin-C protein alongside Wnt5a/β-catenin/PDGFRβ; TNC is a downstream marker, not the driver gene under study.</td>
+<td>Zou et al. 2021, Int J Chron Obstruct Pulmon Dis, PMID 34887658, DOI 10.2147/COPD.S334439</td>
+<td>Background only; TNC downstream marker</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TNC</td>
+<td>Mechanistic — different regulatory gene (background/tangential)</td>
+<td>RPS4Y1-containing ribosomes specifically translate IL6 and tenascin-C mRNA in an asthma-relevant CRISPR knockout model; RPS4Y1-centric signature correlates with lung function in male asthma patients — TNC is a translational target of RPS4Y1 (a different, Y-chromosome-linked gene), not evidence for TNC as a GWAS effector gene.</td>
+<td>Reddy et al. 2025, Int J Mol Sci, PMID 40649992, DOI 10.3390/ijms26136213</td>
+<td>Background/tangential only</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p>No GWAS, TWAS, colocalization, or Mendelian-randomization study was identified anywhere in the literature search directly linking TNC to COPD or lung-function traits.</p>
+<hr>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
+<p><strong>TLR4 (ENSG00000136869):</strong></p>
+<ul>
+<li>Locus-specific L2G: sole gene nominated by Open Targets' L2G model at rs1887781's credible sets (score 0.53-0.59) across 5 credible sets: COPD/&quot;chronic airway obstruction&quot; (GCST90480254, L2G=0.587), subjective well-being (GCST005325, L2G=0.587), hip osteoarthritis (GCST90034522, L2G=0.587), frailty general factor (GCST90624046, L2G=0.577), shortness of breath (GCST90476040, L2G=0.529).</li>
+<li>Colocalization (COLOC_PIP_ECAVIAR, anchored on the COPD credible set): H4 = 0.980 with chronic airway obstruction, 0.983 with hip OA, 0.983 with frailty, 0.985 with subjective well-being, 0.921 with shortness of breath, 0.957-0.981 with mood swings (5 separate UKB releases). No colocalization found with FEV1/FEV1-FVC or with any smoking-behavior trait.</li>
+<li>Overall (locus-agnostic) COPD association score: 0.303 (literature datatype = 0.960, genetic_association = 0.441, animal_model = 0.463).</li>
+<li>Genetic constraint: LoF oe 90% CI 0.407-0.858 (moderately tolerant of LoF); missense oe 0.864-0.964; synonymous z = 0.677.</li>
+</ul>
+<p><strong>TNC (ENSG00000041982):</strong></p>
+<ul>
+<li>Not nominated by L2G at this locus in any credible set (TLR4 was the sole gene returned in each). No colocalization evidence retrieved for TNC at this locus.</li>
+<li>GRCh38 genomic location (chr9:115,019,575-115,118,257) does NOT physically overlap this locus's stated GRCh38 interval (117,600,001-117,950,000) — confirmed independently via both Ensembl REST and Open Targets genomicLocation queries. TNC's GRCh37 coordinates (chr9:117,782,806-117,880,536) do fall within the locus's numeric range, suggesting a possible genome-build coordinate mismatch underlying the MAGMA/PoPS prioritization call.</li>
+<li>Overall (locus-agnostic) COPD association score: 0.059 (literature = 0.483 only; no genetic_association component at all).</li>
+<li>Top disease associations overall (locus-agnostic): autosomal-dominant non-syndromic hearing loss (0.619), deafness (0.552), hip osteoarthritis (0.515), Dupuytren contracture (0.442), skeletal abnormality (0.433), total hip arthroplasty (0.431) — connective-tissue/skeletal phenotypes dominate; COPD does not appear in TNC's top 10 disease associations.</li>
+<li>Genetic constraint: LoF score 5.93e-13 (far more extreme/constrained than TLR4); missense z = 1.375; synonymous z = 2.356.</li>
+</ul>
+<p>Full detail: <code>evidence_tables/_status/9_117600001-117950000/opentargets.md</code>.</p>
+<hr>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Prioritized gene: TLR4</strong>
+<strong>Confidence: LOW</strong></p>
+<p>TLR4 is the best-supported single candidate at this locus, but the case is far weaker than TLR4's general reputation would suggest, and confidence should be marked LOW rather than MODERATE or HIGH. In favor of TLR4: it is the sole protein-coding gene physically located within the GRCh38-defined interval (Ensembl REST confirms no other named gene overlaps the region), and it is the sole gene nominated by Open Targets' own L2G model applied directly to this locus's credible sets (L2G ~0.53-0.59, corroborated by very high colocalization H4 0.92-0.99 between the COPD signal and several other traits at this locus). Against strong confidence: no eQTL, sQTL, pQTL, or expression-colocalization evidence was found anywhere in the literature tying the credible-set variants themselves (rs1887781 or its 13 LD partners) to TLR4 expression or function; a systematic, purpose-built lung-eQTL/COPD-GWAS integration study (Lamontagne et al. 2018) that mapped causal genes for 60/129 known COPD loci did NOT recover TLR4; the extensive TLR4-COPD candidate-gene literature (21 citations) concerns entirely different SNPs (Asp299Gly, Thr399Ile, rs11536889, rs10759932, etc.) not in this credible set, and is itself directionally inconsistent across populations and across mouse models (Zhang 2006 vs. Haw 2017 report opposite effects of TLR4 loss-of-function on emphysema; Rohde 2005 vs. Gutiérrez-Romero 2024 report opposite risk/protective alleles for the same SNP); and Open Targets' own literature-vs-genetics score breakdown (0.96 literature vs. 0.44 genetic_association) suggests TLR4's COPD association in the database is substantially inflated by general reputation. Critically, the colocalizing trait set at this exact locus (subjective well-being, hip osteoarthritis, frailty, shortness of breath, mood swings) includes no spirometric lung-function trait and no smoking-behavior trait, raising a genuine, unresolved alternative hypothesis that this locus acts through a general health/frailty/behavioral-symptom pathway rather than TLR4-specific pulmonary or innate-immune biology — an alternative the pipeline's own biological priors flag as worth taking seriously rather than defaulting to &quot;TLR4 = inflammation = COPD&quot; by reputation.</p>
+<p>TNC is not a viable competing candidate: independent confirmation via both Ensembl REST and Open Targets shows TNC's actual GRCh38 coordinates lie ~2.6-2.7 Mb outside this locus, most likely reflecting a genome-build coordinate mismatch in the upstream MAGMA/PoPS pipeline (its GRCh37 coordinates coincidentally fall within this locus's numeric range). TNC is absent from Open Targets L2G at this locus, has a near-zero genetic_association score, and has no GWAS/eQTL/colocalization literature connecting it to COPD at all; its general airway-remodeling tissue-expression literature is itself mixed (Löfdahl 2011 positive vs. Muñoz-Esquerre 2015 null). TNC should be treated as CONTESTED/likely spurious at this locus, and this build-mismatch finding should be escalated to whoever maintains the MAGMA/PoPS input pipeline, since it may affect other loci.</p>
+<p>What would resolve the tie/raise confidence in TLR4: (1) a direct eQTL/sQTL colocalization analysis of rs1887781 (or LD partners) against TLR4 expression in lung tissue, whole blood, or relevant immune-cell types (e.g. GTEx, eQTLGen, or a lung-specific eQTL dataset not captured in Lamontagne 2018); (2) confirmation (via supplementary-table lookup, not accessible to the researcher via PubMed/bioRxiv alone) of whether this exact chr9 region appears among the loci reported in Shrine et al. 2019 (279 lung-function signals) or Sakornsakolpat et al. 2019 (82 COPD loci); (3) a colocalization or Mendelian-randomization analysis of this locus against FEV1/FEV1-FVC specifically, which is currently absent from Open Targets' data at this locus. Until then, TLR4 should be reported as the best-supported positional/statistical candidate at this locus, not as a mechanistically confirmed COPD effector gene.</p>
+
+</body>
+</html>

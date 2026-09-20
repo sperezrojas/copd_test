@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>11_95700001-96000000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-gwas-locus-gene-prioritization-evidence-table">COPD GWAS locus gene-prioritization evidence table</h1>
+<p><strong>Locus:</strong> 11_95700001-96000000 (11:95,700,001-96,000,000, GRCh38)
+<strong>Lead variant:</strong> rs10765776 (11:95,923,200, intron_variant in MTMR2, PIP=0.1078)
+<strong>Candidate genes from internal pipeline:</strong> Nearest gene = MTMR2; ABC-prioritized = MTMR2;
+FLAMES/MAGMA/PoPS-prioritized = MAML2. CEP57 and FAM76B are also evaluated below because a
+sizeable minority of lower-PIP credible-set variants are annotated to them, even though
+neither is flagged by any of the four internal prioritization methods.
+<strong>Credible set:</strong> ~100 variants; one missense variant, rs3824874 (MTMR2, PIP=0.0376); all
+other non-lead variants are intronic/intergenic/UTR/upstream/downstream/synonymous.</p>
+<p>All rows below use only citations the citation-verifier marked VERIFIED (existence
+confirmed, not retracted, claim matches the paper). One citation returned by the
+researcher — Lee JJ et al. 2018 (PMID 30038396) — was marked RETRACTED by the
+citation-verifier and is excluded from this table; see <code>audits/11_95700001-96000000_audit.md</code>
+for why that specific verdict is flagged as likely erroneous and worth independent human
+re-checking.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MTMR2</td>
+<td>Statistical genetics (behavioral GWAS, gene-unconfirmed)</td>
+<td>GSCAN meta-analysis of tobacco initiation/cessation/heaviness and alcohol use in up to 1.2M individuals (566 variants, 406 loci); cited as the plausible, but not gene-confirmed at this locus, source of the Open Targets-reported &quot;smoking initiation&quot; credible-set association at this variant</td>
+<td>Liu M et al. 2019, Nat Genet, PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
+<td>WEAKENED — locus signal is smoking-behavior-mediated, not lung-intrinsic; this citation does not confirm gene-level significance at this specific locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MTMR2</td>
+<td>Statistical genetics (behavioral GWAS, gene-unconfirmed)</td>
+<td>Multi-ancestry tobacco use disorder GWAS (898,680 individuals via EHR-derived phenotype), 88 loci, 461 candidate risk genes; plausible, not gene-confirmed, contributor to the smoking-related signal at this locus</td>
+<td>Toikumo S et al. 2024, Nat Hum Behav, PMID 38632388, DOI 10.1038/s41562-024-01851-6</td>
+<td>WEAKENED — same caveat as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MTMR2 / CEP57 / FAM76B</td>
+<td>Statistical genetics (independent, non-Open-Targets confirmation)</td>
+<td>GWAS of sun-seeking behavior (n=261,915) identifies the FAM76B/MTMR2/CEP57 gene block as genome-wide significant (P=3.70×10⁻⁹), explicitly noting overlap with previously reported addiction, behavioral/personality-trait, cognitive-function, and educational-attainment loci</td>
+<td>Sanna M et al. 2020, J Invest Dermatol, PMID 32920024, DOI 10.1016/j.jid.2020.08.014</td>
+<td>WEAKENED (as pulmonary evidence) / supports smoking-and-behavior-mediation reading of the locus — independently corroborates that this exact 3-gene block is a known pleiotropic addiction/behavioral hub</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MTMR2</td>
+<td>Statistical genetics (lung cancer, tangential)</td>
+<td>Lung-cancer histology GWAS fine-mapping/prioritization (6,756 adenocarcinoma, 5,061 squamous-cell, 2,216 small-cell cases) identifies MTMR2 at 11q21 (rs10501831 — a different SNP from this locus's lead variant) as a suggestive (P=3.1×10⁻⁶, sub-genome-wide) locus for squamous-cell lung cancer risk</td>
+<td>Brenner DR et al. 2015, Carcinogenesis, PMID 26363033, DOI 10.1093/carcin/bgv128</td>
+<td>WEAKENED — different SNP, sub-genome-wide, cancer not COPD; tangential</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MTMR2</td>
+<td>Expression (cancer, tangential)</td>
+<td>Meta-analysis of lung-cancer gene-expression microarray data in smokers; MTMR2 among genes with consistent gender-biased differential expression in smoking-associated lung cancer (male-smoker-specific) across ≥4 studies</td>
+<td>Davuluri S et al. 2020, Life Sci, PMID 33358908, DOI 10.1016/j.lfs.2020.118927</td>
+<td>WEAKENED — expression-only, cancer context, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MTMR2</td>
+<td>Structural/developmental (Mendelian, off-target organ)</td>
+<td>MTMR2 loss-of-function causes autosomal-recessive Charcot-Marie-Tooth disease type 4B1 (CMT4B1), a demyelinating peripheral neuropathy with myelin-outfolding pathology, via its role as a PI(3)P/PI(3,5)P2 phosphatase in Schwann-cell membrane trafficking</td>
+<td>Azzedine H et al. 2003, Am J Hum Genet, PMID 12687498, DOI 10.1086/375034</td>
+<td>HOLDS as background gene biology; not lung-relevant — a different organ system entirely</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MTMR2</td>
+<td>Structural/developmental (paralog, NOT MTMR2 itself)</td>
+<td>MTMR4 (a different myotubularin-family paralog) regulates autophagy/endosome-lysosome trafficking via TFEB in A549 lung alveolar epithelial cells</td>
+<td>Pham HQ et al. 2018, Genes Cells, PMID 29962048, DOI 10.1111/gtc.12609</td>
+<td>WEAKENED — this is paralog evidence, not MTMR2 evidence; skeptic states it should carry zero evidentiary weight for MTMR2 specifically</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAML2</td>
+<td>Structural/developmental (pathway-level, NOT MAML2-specific)</td>
+<td>Canonical Notch signaling (via Pofut1/Rbpjk) restricts goblet-cell differentiation and MUC5AC expression in postnatal mouse airway epithelium; loss of Notch pathway components causes goblet-cell metaplasia/mucus overproduction, discussed by the authors as relevant to COPD/asthma pathogenesis</td>
+<td>Tsao PN et al. 2011, Development, PMID 21791528, DOI 10.1242/dev.063727</td>
+<td>WEAKENED further — manipulates Pofut1/Rbpjk (upstream receptor activation/CSL transcription factor), not MAML2 or any MAML paralog; does not test the coactivator step MAML2 performs, and MAML1/2/3 have partially redundant function, so this cannot establish MAML2-specificity even at pathway level</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CEP57</td>
+<td>Structural/developmental (explicit negative finding)</td>
+<td>Studies BubR1 (not CEP57) mouse models of mosaic variegated aneuploidy (MVA) progeria syndrome; mentions lung neoplasms only as one of several cancer types in the broader MVA/progeroid phenotype spectrum — the only &quot;CEP57 + lung&quot; PubMed hit found, and it does not actually support a CEP57-lung mechanistic link</td>
+<td>Sieben CJ et al. 2020, J Clin Invest, PMID 31738183, DOI 10.1172/JCI126863</td>
+<td>HOLDS as negative evidence — an explicit, actively-searched-for null result supporting CEP57's &quot;passenger gene&quot; characterization at this locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FAM76B</td>
+<td>Structural/developmental (basic characterization only)</td>
+<td>FAM76B is a nuclear-speckle-localized ~39 kDa protein broadly expressed across normal human tissues; paper provides research antibodies but no functional or disease data</td>
+<td>Zheng X et al. 2016, PLoS One, PMID 27018871, DOI 10.1371/journal.pone.0152237</td>
+<td>HOLDS — background molecular characterization only, no disease relevance shown</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FAM76B</td>
+<td>Immune/infectious lung disease (tangential)</td>
+<td>A long non-coding RNA in the FAM76B genomic locus (lnc-FAM76B-4:1, not the FAM76B protein-coding gene itself) was the most downregulated lncRNA in pulmonary tuberculosis patients vs. healthy controls in a transcriptome-wide screen</td>
+<td>Zhang X et al. 2019, Genomics, PMID 31756428, DOI 10.1016/j.ygeno.2019.11.009</td>
+<td>HOLDS as weak, tangential evidence — locus-adjacent lncRNA (not the gene itself), infectious (not COPD) disease, single exploratory screen</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="locus-level-notes-variant-level-searches">Locus-level notes (variant-level searches)</h2>
+<ul>
+<li><strong>rs10765776 (lead variant):</strong> No dedicated PubMed literature found under this rsID. Trait
+associations are known only via the Open Targets structured lookup (see below) —
+unconfirmed against primary GWAS literature at the variant level.</li>
+<li><strong>rs3824874 (missense, MTMR2, PIP=0.0376):</strong> No dedicated PubMed literature or functional
+characterization found under this rsID. Its posterior support (PIP=0.038) is low; the
+red-team-skeptic specifically cautioned against over-weighting this variant as strong
+causal-variant evidence merely because it is protein-altering.</li>
+</ul>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
+<p>Queried 2026-09-11 via the Open Targets Platform GraphQL API (<code>mcp__open-targets__*</code>).</p>
+<ul>
+<li><strong>MTMR2 (ENSG00000087053):</strong> No COPD association in Open Targets' filtered
+<code>associatedTargets</code> query at all (target absent from results). Unfiltered top
+associated-disease list dominated by Charcot-Marie-Tooth disease type 4B1 (score 0.756,
+driven by genetic_association 0.839 — the established Mendelian association), with
+smoking initiation (score 0.324, genetic_association 0.534) and nicotine dependence
+(score 0.260, genetic_association 0.427) present at lower scores. No lung-function or
+COPD term appears at all. At the lead variant (11_95923200_C_A), 165 fine-mapped credible
+sets exist genome-wide; none is a COPD or lung-function GWAS study, and none is a lung
+eQTL/sQTL. MTMR2 has the highest L2G score of the three physically-overlapping genes
+(MTMR2/CEP57/FAM76B) specifically for smoking-initiation (L2G 0.64-0.72) and
+nicotine/tobacco-dependence (L2G 0.70) credible sets, and for several red-cell-index and
+diet-preference traits. Constraint: LoF oe=0.706 (obs=47/exp=66.6), not strongly
+LoF-constrained; missense oe=0.831; synonymous oe=0.886.</li>
+<li><strong>MAML2 (ENSG00000184384):</strong> COPD association score 0.017 (negligible), driven entirely
+by a literature datatype score (0.140) with zero genetic_association component. MAML2
+does not appear as an L2G target in any of the 165 credible sets fine-mapped at this
+locus's lead variant — Open Targets' own L2G pipeline nominates no phenotype for MAML2
+here at all, despite MAML2 being the internal pipeline's FLAMES/MAGMA/PoPS-prioritized
+gene. Constraint: LoF oe=0.216 (obs=22/exp=101.9, score=1) — MAML2 is substantially more
+LoF-constrained than MTMR2, CEP57, or FAM76B.</li>
+<li><strong>CEP57 (ENSG00000166037):</strong> COPD association score 0.0015 (negligible), literature-only
+(score 0.012), no genetic_association evidence. CEP57 is the most consistent top-L2G gene
+of the three for cognitive-performance/educational-attainment credible sets (L2G
+0.62-0.70), lower than MTMR2 for smoking-related credible sets specifically (e.g. smoking
+initiation GCST90243985: CEP57 L2G=0.354 vs MTMR2 0.717). Constraint: LoF oe=0.556
+(obs=34/exp=61.1), moderately LoF-constrained.</li>
+<li><strong>FAM76B (ENSG00000077458):</strong> Absent from the filtered COPD associatedTargets query
+entirely (no COPD evidence of any kind). Consistently the lowest-L2G gene of the three
+across nearly every fine-mapped credible set inspected at this locus, never the top-scoring
+gene in any credible set. Constraint: LoF oe=0.335 (obs=15/exp=44.8, score=0.963),
+moderately-to-highly LoF-constrained.</li>
+<li><strong>Overall:</strong> Open Targets has no direct COPD or lung-function genetic-association or
+colocalization evidence for any of the four candidate genes at this locus. The only
+genome-wide-significant, fine-mapped phenotypes represented at the lead variant are
+behavioral/neuropsychiatric (educational attainment, cognitive performance, smoking
+initiation, nicotine/tobacco dependence, substance use disorder) and hematological
+(red-cell indices), plus diet-preference and brain-morphology traits.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>MTMR2 — confidence: LOW.</strong></p>
+<p>MTMR2 is the best-supported single gene call at this locus on structural grounds: it
+carries the lead variant (rs10765776, PIP=0.108) and the great majority of the credible
+set's posterior probability, including the locus's one missense variant (rs3824874, low
+PIP=0.038), is the ABC-prioritized gene, and has the most consistent top Open Targets L2G
+score among the three physically-overlapping genes specifically for the phenotype class
+(smoking initiation, nicotine/tobacco dependence) that this locus's fine-mapped signal is
+most robustly tied to. This is corroborated by independent literature (Sanna et al. 2020,
+VERIFIED, PMID 32920024) confirming the FAM76B/MTMR2/CEP57 block as a known pleiotropic
+addiction/behavioral-trait locus outside of Open Targets.</p>
+<p>However, confidence is explicitly LOW, not higher, for several reasons that the evidence
+table and red-team critique above make unavoidable:</p>
+<ol>
+<li><strong>No gene-specific evidence ties MTMR2, individually, to smoking behavior at this exact
+locus in primary literature</strong> — the supporting tobacco/nicotine GWAS papers (Liu 2019,
+Toikumo 2024) are cited only as plausible sources of the Open-Targets-reported signal;
+neither confirms genome-wide significance at this locus at the gene level from what was
+checked. The strongest direct evidence for MTMR2 specifically is a database L2G score
+(unverified literature claim, by pipeline design).</li>
+<li><strong>The credible set is diffuse</strong> (max PIP 0.108), and CEP57 is a real runner-up — CEP57
+has comparable or higher L2G for cognitive/educational-attainment phenotypes and cannot
+be cleanly excluded as contributing to, or even driving, part of this same pleiotropic
+signal; the researcher and skeptic both describe CEP57 as more likely a passenger, but
+that conclusion rests on the same imperfect L2G/credible-set data that supports MTMR2.</li>
+<li><strong>MTMR2's own established biology (Schwann-cell myelin phosphoinositide phosphatase,
+causing CMT4B1) has no documented connection to airway, alveolar, or immune biology,</strong>
+and no lung eQTL/sQTL or COPD/spirometric GWAS association exists for MTMR2 in Open
+Targets or in any citation the researcher or verifier found.</li>
+<li><strong>Most importantly, if MTMR2 (or this locus generally) is truly driving the COPD GWAS
+signal, the best-evidenced mechanism is smoking/nicotine-dependence-behavior mediation
+(per biological prior #1), not direct pulmonary structural or immune biology.</strong> No
+positive evidence of a lung-intrinsic mechanism exists for any of the four genes
+evaluated at this locus.</li>
+</ol>
+<p><strong>Runner-up: CEP57</strong> (behavioral/cognitive-trait L2G signal, LD/credible-set overlap, no
+prioritization by any internal method, no pulmonary biology) and <strong>MAML2</strong> (the internal
+pipeline's FLAMES/MAGMA/PoPS consensus pick, with a biologically plausible but
+gene-unconfirmed Notch/goblet-cell-metaplasia hypothesis — its sole supporting citation,
+Tsao et al. 2011, does not test MAML2 or any MAML paralog, only upstream Notch pathway
+components, so this should be read as a hypothesis worth testing directly, not as
+evidenced). <strong>FAM76B</strong> is confidently the weakest candidate of the four (lowest L2G,
+minimal characterization, only tangential lncRNA/locus-adjacent evidence) and is not a
+serious contender.</p>
+<p><strong>What would resolve this call:</strong> (a) direct locus-level lookup of whether this exact
+region reaches genome-wide significance for smoking initiation/nicotine dependence in the
+GSCAN (Liu 2019) or TUD (Toikumo 2024) GWAS supplementary tables, confirming the gene-level
+association rather than relying on Open Targets' L2G; (b) a lung-tissue or brain-tissue
+eQTL/sQTL colocalization analysis specifically for MTMR2 vs. CEP57 vs. FAM76B vs. MAML2 at
+this variant, since none currently exists in Open Targets; (c) any COPD case-control or
+spirometric (FEV1/FEV1-FVC) GWAS/TWAS/MR result for this locus, which is entirely absent
+from both the Open Targets lookup and the literature search performed here; (d) functional
+testing of MAML2 itself (not just upstream Notch pathway components) in airway
+goblet-cell/mucous-metaplasia models, to determine whether its statistical-prioritization
+consensus (FLAMES/MAGMA/PoPS) reflects real biology or shared method bias, as the
+red-team-skeptic raised.</p>
+
+</body>
+</html>

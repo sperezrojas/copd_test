@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>12_31600001-31750000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1231600001-31750000-nearest-gene-amn1">Evidence table — locus 12:31,600,001-31,750,000 (nearest gene AMN1)</h1>
+<p><strong>Lead variant:</strong> rs144301505 (12:31685273, intron_variant in AMN1, PIP=0.662)
+<strong>Credible set:</strong> rs144301505 (AMN1 intron, PIP=0.662); rs76930395 (12:31673844, AMN1 intron, PIP=0.119); rs75048934 (12:31666328, ETFBKMT intron, PIP=0.091); rs2086777 (12:31668434, ETFBKMT 3' UTR, PIP=0.088). All four variants are MODIFIER-impact (intronic/UTR); none is missense or splice-donor/acceptor, so no individual variant-level literature search beyond the lead variant was required per pipeline scope — all variant evidence below is rolled into gene-level evidence.
+<strong>Candidate genes:</strong> AMN1 (nearest gene; combined credible-set PIP ≈0.78 across its two intronic variants), DENND5B (PoPS-prioritized; gene body lies ~9kb outside the locus boundary — only its antisense lncRNA DENND5B-AS1 physically overlaps the locus), ETFBKMT (combined credible-set PIP ≈0.18 across its two variants). No FLAMES/MAGMA/ABC prioritization at this locus.</p>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AMN1</td>
+<td>Structural/mechanistic (non-human, yeast)</td>
+<td><em>S. cerevisiae</em> Amn1 inhibits the mitotic-exit GTPase Tem1 via nuclear sequestration and SCF-mediated degradation — establishes the ancestral biochemical function of the Amn1 protein family; no human or lung-tissue data</td>
+<td>PMID 34518877 / DOI 10.1242/jcs.258972 (Devault &amp; Piatti, J Cell Sci 2021)</td>
+<td>WEAKENED — case for AMN1 overall; this citation adds no mammalian/lung mechanistic support</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AMN1</td>
+<td>Structural/mechanistic (non-human, fungal)</td>
+<td><em>Candida albicans</em> Amn1, via the Cbk1-Ace2 axis, regulates the yeast-to-hyphae morphogenetic transition</td>
+<td>PMID 33433733 / DOI 10.1007/s00294-020-01152-1 (Wakade &amp; Krysan, Curr Genet 2021)</td>
+<td>WEAKENED — fungal system only, no human/lung relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AMN1</td>
+<td>Structural/mechanistic (non-human, evolutionary)</td>
+<td>Mutations in yeast AMN1 distinguish unicellular from clump-forming multicellular yeast strains</td>
+<td>PMID 31410258 / DOI 10.1002/ece3.5322 (Kuzdzal-Fick et al., Ecol Evol 2019)</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AMN1</td>
+<td>Structural/mechanistic (non-human)</td>
+<td>AMN1 is among yeast cell-cycle-regulated genes affected by the anti-cancer drug 5-fluorouracil, alongside regulatory antisense lncRNAs</td>
+<td>PMID 30760080 / DOI 10.1080/15476286.2019.1581596 (Xie et al., RNA Biol 2019)</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AMN1</td>
+<td>Structural/mechanistic (non-human)</td>
+<td>PP2A negatively regulates the yeast mitotic exit network (the pathway in which Amn1 participates) via Tem1 dephosphorylation</td>
+<td>PMID 16079183 / DOI 10.1091/mbc.e04-12-1109 (Wang &amp; Ng, Mol Biol Cell 2005)</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND5B</td>
+<td>Statistical genetics + structural (human/mouse, non-pulmonary — metabolic/BMI)</td>
+<td>A common human DENND5B missense variant (p.R52K) correlates with BMI in two independent human exome-sequencing studies; mouse <em>Dennd5b</em> knockout shows resistance to diet-induced obesity, altered plasma lipids, and reduced atherosclerosis via impaired Golgi-to-plasma-membrane transport of intestinal chylomicron secretory vesicles</td>
+<td>PMID 30837651 / DOI 10.1038/s41598-019-40296-0 (Gordon et al., Sci Rep 2019)</td>
+<td>WEAKENED — real human genetic association, but non-pulmonary trait; gene body sits outside locus boundary</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND5B</td>
+<td>Statistical genetics + structural (human, non-pulmonary — rare/Mendelian neurodevelopmental)</td>
+<td>Five de novo DENND5B variants across five unrelated individuals cause a neurodevelopmental syndrome (cognitive impairment, dysmorphism, variable epilepsy, white-matter/cortical-gyration abnormalities) via disrupted protein folding, decreased protein levels, and defective vesicle-mediated lipid trafficking; DENND5B-RAB39A interaction examined (credible-set-irrelevant de novo variants did not disrupt this interface)</td>
+<td>PMID 38387458 / DOI 10.1016/j.ajhg.2024.02.001 (Scala et al., Am J Hum Genet 2024)</td>
+<td>WEAKENED — confirms DENND5B is dosage-sensitive, but rare de novo coding-variant disease is a different allelic class from a common noncoding COPD-associated variant and is not lung-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ETFBKMT</td>
+<td>Structural/mechanistic (human, biochemically confirmed, non-lung-specific mitochondrial)</td>
+<td>ETFBKMT (formerly METTL20) is a mitochondrial S-adenosylmethionine-dependent lysine methyltransferase that methylates two adjacent lysines (Lys200, Lys203) in the &quot;recognition loop&quot; of ETFB, reducing ETFB's ability to receive electrons from medium-chain acyl-CoA dehydrogenase and glutaryl-CoA dehydrogenase; this paper is the origin of the METTL20-to-ETFBKMT renaming</td>
+<td>PMID 25416781 / DOI 10.1074/jbc.M114.614115 (Małecki et al., J Biol Chem 2014/2015)</td>
+<td>HOLDS — solid biochemistry, but any lung/oxidative-stress/smoking connection is explicitly unestablished extrapolation, not evidenced</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p>No statistical-genetics (GWAS/TWAS/MR/colocalization) publication was found for any of the three candidate genes specifically implicating COPD, lung function, or smoking-related traits; this absence is a narrative finding from the researcher's search (see audit file), not a citable source, and is not represented as a table row.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — not a verified literature citation)</h2>
+<p>Source: Open Targets Platform GraphQL API, queried 2026-09-11 by the orchestrator directly (not researcher/citation-verifier/red-team-skeptic — this section did not go through the verification or critique pipeline and should not be treated as a literature claim).</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>COPD assoc. score (OT)</th>
+<th>COPD genetic_association datatype score</th>
+<th>Smoking-initiation assoc. score</th>
+<th>LoF constraint (pLI-like)</th>
+<th>obs/exp LoF (90% CI)</th>
+<th>Missense z / obs-exp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AMN1</td>
+<td>0.0052 (literature-mining only; ranked 7th of 19 associated diseases)</td>
+<td>none recorded</td>
+<td>not in top associations (not recorded)</td>
+<td>0.0078 (tolerant)</td>
+<td>0.536 (0.353-0.838)</td>
+<td>z=1.58, oe=0.738 (0.657-0.830)</td>
+</tr>
+<tr>
+<td>DENND5B</td>
+<td>not recorded (0 of 221 associated diseases)</td>
+<td>none recorded</td>
+<td>0.0514 (weak)</td>
+<td>1.0 (maximally intolerant)</td>
+<td>0.264 (0.200-0.351)</td>
+<td>z=3.66, oe=0.744 (0.707-0.781)</td>
+</tr>
+<tr>
+<td>ETFBKMT</td>
+<td>not recorded (0 of 22 associated diseases)</td>
+<td>none recorded</td>
+<td>0.0709 (weak; 3rd-highest of ETFBKMT's own associations)</td>
+<td>0.0001 (tolerant)</td>
+<td>0.684 (0.467-1.026, CI crosses 1)</td>
+<td>z=0.57, oe=0.912 (0.828-1.005)</td>
+</tr>
+</tbody>
+</table>
+<p>AMN1's strongest genome-wide disease associations in Open Targets are urinary tract obstruction (genetic_association 0.395) and adrenal gland hyperfunction (genetic_association 0.291) — not lung/respiratory traits. DENND5B's top associations are a broad set of UK-Biobank-scale anthropometric/behavioral traits (skin wound healing, genu valgum/varum, mathematical ability, refraction, heart failure, schizophrenia, intelligence) plus a long tail of likely-nonspecific animal-model associations to unrelated Mendelian metabolic/lipodystrophy conditions. ETFBKMT's strongest association by far is type 2 diabetes/diabetes mellitus.</p>
+<p><strong>No locus-specific L2G score or colocalization evidence for the COPD credible set at this locus was retrievable from Open Targets for any gene</strong> — the credible-set variants only matched an unrelated molecular-QTL study (a synovium exon-usage QTL for an unrelated gene, SNRPF) in Open Targets' database, and the lead variant rs144301505 did not resolve to any Open Targets record at all. This is a data-availability gap in Open Targets, not evidence against any candidate gene. Full detail in <code>evidence_tables/_status/12_31600001-31750000/opentargets.md</code>.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Gene: AMN1</strong>
+<strong>Confidence: LOW</strong></p>
+<p>This call is close, and the case for AMN1 is weaker than a simple &quot;highest PIP&quot; read would suggest — the red-team-skeptic's critique should be weighed heavily here. AMN1 carries the highest combined fine-mapping PIP (~0.78 across its two intronic variants, rows above), but that is positional annotation only: no eQTL, colocalization, chromatin/regulatory annotation, or any human functional/genetics literature supports AMN1 as the causal effector gene (all five verified AMN1 citations are yeast/fungal cell-biology studies of a homologous mitotic-exit-network gene, with no demonstrated relevance to human tissue of any kind, let alone lung). Critically, the skeptic points out that AMN1's higher PIP over ETFBKMT may simply reflect where intron boundaries happen to fall relative to each SNP within a single shared LD block/credible set (all four credible-set variants are one statistical unit), not independent evidence that the regulatory mechanism belongs to AMN1 rather than ETFBKMT. <strong>Runner-up: ETFBKMT</strong> (combined PIP ~0.18, same credible set) — it has a real, biochemically confirmed human mitochondrial function (ETFB lysine methylation regulating fatty-acid-oxidation electron transfer, PMID 25416781) that is mechanistically compatible with an oxidative-stress framework but has zero direct lung, smoking, or COPD literature support, and its strongest Open Targets disease link is type 2 diabetes, not COPD. A second, structurally distinct alternative is <strong>DENND5B</strong> (PoPS-prioritized, strongly LoF-constrained/dosage-sensitive per Open Targets), but its gene body sits outside the locus boundary (only the antisense lncRNA DENND5B-AS1 overlaps), and its only documented human phenotypes — BMI (common variant) and a severe neurodevelopmental disorder (rare de novo variants) — are both non-pulmonary, so this pick requires accepting a long-range regulatory mechanism that is not evidenced here.</p>
+<p>None of the three genes shows lung-function (FEV1/FEV1-FVC) association evidence in the literature searched, and none shows a meaningfully elevated smoking-initiation signal in Open Targets (AMN1 not recorded; DENND5B 0.051; ETFBKMT 0.071, both weak) — so this locus's COPD signal is not well explained by either of the two main mechanistic hypotheses in this pipeline's priors (direct pulmonary biology or smoking-mediated neurobiology). What would resolve the tie: a lung-tissue eQTL/colocalization analysis for AMN1 vs. ETFBKMT vs. DENND5B(-AS1) at this locus (e.g., GTEx lung, or a COPD-relevant airway epithelium/immune-cell eQTL resource), chromatin-contact or ABC-style regulatory-element mapping to determine which gene's promoter the credible-set variants actually contact, and an independent FEV1/FEV1-FVC GWAS lookup for all three genes/variants. Given the near-total absence of gene-specific, lung-relevant, non-positional evidence for any of the three candidates, the study team should treat this locus as unresolved and prioritize functional follow-up (eQTL/coloc, reporter assays) over literature-based prioritization alone.</p>
+
+</body>
+</html>

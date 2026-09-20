@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>12_110800001-112600000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-locus-evidence-table--12110800001-112600000-nearest-gene-aldh2">COPD locus evidence table — 12:110,800,001-112,600,000 (nearest gene ALDH2)</h1>
+<p><strong>Region:</strong> 12:110,800,001-112,600,000 (GRCh38). <strong>Lead variant:</strong> rs671 (12:111803962,
+missense_variant in ALDH2, PIP=0.178 — the well-characterized ALDH2*2/Glu504Lys East Asian
+loss-of-function allele). <strong>Credible set:</strong> 282 variants (ABF fine-mapping). This is the
+well-known, gene-dense 12q24.12 &quot;pleiotropy hotspot&quot; (ALDH2/SH2B3/ATXN2/BRAP region),
+associated with many traits beyond lung disease (alcohol consumption/use disorder, blood
+pressure, platelet/hematopoietic traits, autoimmune disease, lipids, coronary disease, etc.).
+Internal pipeline candidate genes: nearest = ALDH2, MAGMA = ATXN2, PoPS = CUX2, ABC = NAA25.
+The only credible-set variant besides rs671 with missense/splice consequence is rs3752630
+(TMEM116, PIP=0.0039); all other 280 variants are intronic/UTR/intergenic/synonymous/
+upstream/downstream and were rolled into gene-level evidence per pipeline scope rules.</p>
+<p>This table includes ONLY citations with a VERIFIED verdict from citation-verifier. Citations
+marked RETRACTED / NOT_FOUND / CLAIM_MISMATCH, and genes marked CONTESTED by red-team-skeptic,
+are listed with full reasoning in the companion audit file:
+<code>audits/12_110800001-112600000_audit.md</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ALDH2</td>
+<td>Human statgen (spirometry)</td>
+<td>rs671/ALDH2*2 associated with LOWER FEV1/FVC in general population but NOT with clinical diagnosis of asthma or COPD</td>
+<td>PMID 28431562</td>
+<td>WEAKENED — real spirometric effect but explicitly does NOT extend to disease diagnosis; do not overclaim as a &quot;COPD gene&quot; on this basis alone</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ALDH2</td>
+<td>Mouse mechanistic</td>
+<td>Aldh2-KO / Aldh2<em>2-Tg mice: reduced tracheal epithelial thickness/nuclear density/basal stem cells, abnormal mitochondria, higher ROS (&quot;premature lung aging&quot;); Aldh2</em>2-Tg mice RESISTANT to smoke-induced emphysema but MORE damaged by influenza infection than WT</td>
+<td>PMID 28431562</td>
+<td>WEAKENED — genuinely mixed, context-dependent (smoke- vs infection-injury) phenotype, not a single coherent protective-or-harmful direction</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ALDH2</td>
+<td>Human MR / statgen</td>
+<td>China Kadoorie Biobank (n=445,523 obs / n=133,168 genetic): genetically-predicted alcohol intake via rs671+rs1229984 NOT associated with COPD risk; explicit conclusion of no causal alcohol→COPD association</td>
+<td>PMID 42020159</td>
+<td>Key null finding — undercuts a simple &quot;COPD signal = alcohol-mediated&quot; story for this whole locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ALDH2</td>
+<td>Human statgen (spirometry)</td>
+<td>Guangzhou Biobank (n=5,641): inactive ALDH2 alleles inversely associated with %-predicted FEV1 (-1.52%/-2.05%) and FVC; argues ALDH2 genotype confounds prior &quot;moderate alcohol = better lung function&quot; reports</td>
+<td>PMID 25084704</td>
+<td>HOLDS — direct human lung-function dose-response evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ALDH2</td>
+<td>Human statgen (gene-environment interaction)</td>
+<td>n=684 Japanese: ever-smokers with ALDH2*1/*2 or *2/*2 had 2x/3x higher airway-obstruction risk vs never-smoker *1/*1; synergistic gene-by-pack-years interaction</td>
+<td>PMID 25978981</td>
+<td>HOLDS — direct evidence the ALDH2 effect on airway obstruction is smoking-CONDITIONAL, consistent with smoking-mediation prior</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ALDH2 / BRAP</td>
+<td>Human statgen (background pleiotropy)</td>
+<td>This 12q24.12 region (including rs671/ALDH2 and rs3782886/BRAP) is among the most robustly replicated loci for alcohol consumption/alcohol use disorder in East Asians; this paper's own genome-wide-significant hit is at rs3782886/BRAP, not rs671</td>
+<td>PMID 35094024</td>
+<td>HOLDS (with the researcher's own caveat that the GWS hit in this specific paper is BRAP, not ALDH2, preserved)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ALDH2</td>
+<td>Human tissue (COPD-specific)</td>
+<td>Proteomics of bronchoalveolar lavage fluid, moderate/stable COPD patients vs. healthy controls: ALDH2 (with ADH1B, ALDH3A1) significantly ELEVATED in COPD BALF</td>
+<td>PMID 24188068</td>
+<td>HOLDS — direct human COPD-tissue evidence of dysregulated ALDH2 expression</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ALDH2</td>
+<td>Mouse tissue (descriptive)</td>
+<td>ALDH2 among nuclear phosphoproteins identified in mouse lung tissue after short-term tobacco-smoke exposure</td>
+<td>PMID 25349779</td>
+<td>Secondary/descriptive supporting evidence only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ALDH2</td>
+<td>Human cell (mechanistic)</td>
+<td>Cigarette-smoke-extract damage to human bronchial epithelial cells (HBEC2) mitigated partly via INCREASED ALDH2 (and ALDH3A1) levels by a protective plant compound</td>
+<td>PMID 30065307</td>
+<td>HOLDS — supports a protective, detoxifying role for ALDH2 in smoke-exposed human airway epithelium</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ALDH2</td>
+<td>Mouse immune (diabetic wound, not lung)</td>
+<td>ALDH2 deficiency sustains inflammation via excess neutrophil extracellular trap (NET) formation; ALDH2 activation reduces NETs, shifts macrophage M1→M2</td>
+<td>PMID 40364604</td>
+<td>General immune-modulatory evidence outside the lung; relevance to COPD's neutrophilic/macrophage programs is inferential</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ALDH2</td>
+<td>Mouse immune (ITP, not lung)</td>
+<td>ALDH2 mediates reprogramming of IFN-gamma-activated macrophage subsets via chaperone-mediated autophagy in a mouse immune thrombocytopenia model</td>
+<td>PMID 42329073</td>
+<td>General immune-modulatory evidence outside the lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SH2B3</td>
+<td>Human statgen (immune trait)</td>
+<td>GWAS (n=9,392 Icelanders + &gt;17,000 replication): rs3184504/SH2B3 genome-wide significant for eosinophil count (P=6.5e-19) and myocardial infarction (P=8.6e-8); this study's asthma hit mapped to IL1RL1, NOT SH2B3</td>
+<td>PMID 19198610</td>
+<td>WEAKENED — establishes SH2B3/eosinophil-count link but explicitly NOT an asthma/COPD link in this paper</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SH2B3 / ATXN2</td>
+<td>Human statgen (review)</td>
+<td>Review of 12q24 SH2B3/ATXN2 locus disease spectrum: hematopoietic traits, multiple autoimmune disorders (T1D, celiac, JIA, RA, lupus, MS, hypothyroidism, vitiligo), vascular/BP traits, neurodegenerative disease (via ATXN2 polyQ); SH2B3/LNK = repressor of JAK2/ABL1-dependent leukocyte proliferation</td>
+<td>PMID 24936253</td>
+<td>WEAKENED — no lung/COPD discussion in this review at all; entirely non-pulmonary disease spectrum</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SH2B3</td>
+<td>Immune (review)</td>
+<td>SH2B3/Lnk negative regulator of TNF signaling in endothelial cells; modulates platelet/endothelial integrin-cytoskeleton signaling; mutations linked to myeloproliferative and autoimmune/inflammatory disease</td>
+<td>PMID 21723852</td>
+<td>Not lung/COPD-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SH2B3</td>
+<td>Immune (review)</td>
+<td>LNK/SH2B3 negative regulator of cytokine signaling in hematopoiesis; LNK-KO mice show expanded myeloid/lymphoid precursors; human LOF mutations found in myeloproliferative neoplasms</td>
+<td>PMID 23045270</td>
+<td>Not lung/COPD-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SH2B3</td>
+<td>Case report</td>
+<td>Patient with germline SH2B3 mutation developed multiple sclerosis then chronic myelomonocytic leukemia</td>
+<td>PMID 35281324</td>
+<td>Case-level only, not population evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SH2B3</td>
+<td>Case series (n=10)</td>
+<td>Biallelic/LOH germline SH2B3 LOF variants cause neonatal myeloproliferative disease (self-limiting) then childhood thrombocytosis with multisystemic/autoimmune features</td>
+<td>PMID 40481232</td>
+<td>Demonstrates near-complete human LOF phenotype; not lung/COPD-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CUX2</td>
+<td>Mouse structural (not lung)</td>
+<td>Cux1/Cux2 regulate dendrite branching, spine morphology, synapse formation in cortical layer II-III neurons; Cux2-KO mice show reduced synaptic function, working-memory deficits</td>
+<td>PMID 20510857</td>
+<td>WEAKENED — no lung relevance; CUX2's only characterized biology is cortical neurodevelopment</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CUX2</td>
+<td>Mouse structural (not lung)</td>
+<td>220bp enhancer controls cortical layer II-IV CUX2 expression, regulated by Lhx2</td>
+<td>PMID 31708105</td>
+<td>WEAKENED — same limitation; no lung relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HECTD4</td>
+<td>Human statgen + mechanistic (hepatic, not lung)</td>
+<td>Korean cohorts (n=50,028 + n=7,980): 3 HECTD4 SNPs associated with alcohol consumption and, in drinkers, T2D/fasting glucose/triglyceride/GGT; ethanol INCREASES HECTD4 expression in cells/mouse liver; HECTD4 loss REDUCES CYP2E1/lipogenic genes but INCREASES ALDH2 expression</td>
+<td>PMID 35713687</td>
+<td>CONTESTED (HECTD4 vs. PTPN11 vs. RPL6 — share one Open Targets credible set, not distinguishable by literature); mechanism shown is hepatic, not pulmonary</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ATXN2</td>
+<td>Human statgen (review, see also SH2B3 row)</td>
+<td>ATXN2's own 12q24 disease spectrum: obesity, T1D, kidney GFR, BP/hypertension, MI, and via polyQ expansion: SCA2, Parkinson's, ALS, PSP; proposed RNA-processing/receptor-internalization mechanism affecting lipid/glucose metabolism</td>
+<td>PMID 24936253</td>
+<td>CONTESTED (ATXN2 vs. SH2B3 vs. PHETA1 — share one credible set); no lung biology of any kind identified</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ATXN2</td>
+<td>Mouse metabolic (not lung)</td>
+<td>Atxn2-KO mice: downregulated branched-chain amino acid/fatty-acid/citric-acid-cycle pathway proteins in liver, consistent with human GWAS obesity/T1D/hypertension associations</td>
+<td>PMID 26850065</td>
+<td>Not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TRAFD1</td>
+<td>Immune mechanistic (mouse macrophage, not COPD)</td>
+<td>FLN29 (=TRAFD1) is IFN-/LPS-inducible, STAT1-dependent; forced expression SUPPRESSES TLR-mediated NF-kB/MAPK activation downstream of TRAF6 (negative regulator of innate immune signaling)</td>
+<td>PMID 16221674</td>
+<td>WEAKENED — real mechanism but 2005 generic macrophage cell-line study, not COPD/lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TRAFD1</td>
+<td>Immune mechanistic (celiac disease, not COPD)</td>
+<td>4 independent causal-inference methods (MR-IVW, COLOC, LD overlap, DEPICT) identify TRAFD1 as &quot;master regulator&quot; of 41 downstream genes in IFN-gamma signaling and MHC-I antigen processing/presentation; validated in human monocytic cell line</td>
+<td>PMID 33569077</td>
+<td>WEAKENED — rigorous methodology but established in a DIFFERENT disease (celiac); not demonstrated in COPD or lung tissue; researcher's &quot;most directly relevant&quot; framing is an overreach per red-team critique</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ACAD10 / BRAP</td>
+<td>Human statgen (blood pressure, not lung)</td>
+<td>Japanese exome-wide association study: polymorphisms at 12q24.1 in/near ACAD10 (rs11066015) and BRAP/HECTD4 (rs2074356, rs11066280) are novel blood-pressure determinants</td>
+<td>PMID 28562329</td>
+<td>Not lung-specific; cardiometabolic trait only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ACAD10</td>
+<td>Mouse metabolic (not lung)</td>
+<td>Acad10-KO mice: abnormal glucose tolerance, elevated insulin, abdominal adiposity, early inflammatory liver process, fasting rhabdomyolysis, abnormal skeletal-muscle mitochondria</td>
+<td>PMID 28120165</td>
+<td>Not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ACAD10</td>
+<td>Human tissue (expression only)</td>
+<td>ACAD10 protein localizes to mitochondria/peroxisomes in human LUNG tissue by immunohistochemistry (also muscle, kidney, pancreas); Acad10-KO mice show only subtle neurobehavioral changes</td>
+<td>PMID 33301490</td>
+<td>WEAKENED — expression-presence evidence only, no functional/disease lung phenotype examined; do not overclaim as disease evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ACAD10</td>
+<td>Pharmacology (general)</td>
+<td>Metformin enhances ACAD10 expression as part of its mTOR-inhibiting mechanism</td>
+<td>PMID 28122334</td>
+<td>Not disease-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAPKAPK5</td>
+<td>Structural/biophysical (general)</td>
+<td>Reviews MK5 biological roles (tumor suppression/promotion, embryogenesis, anxiety, cell motility, cell-cycle regulation); models MK5-p38alpha interaction</td>
+<td>PMID 24651460</td>
+<td>Not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAPKAPK5</td>
+<td>Immune (review) — evidence AGAINST paralog-based inflammatory rationale</td>
+<td>MK2 and MK3 (explicitly NOT MK5) are the primary drivers of TNF-alpha biosynthesis regulation via tristetraprolin; &quot;no known common function for all three MKs&quot;</td>
+<td>PMID 20599781</td>
+<td>CONTESTED — this is evidence AGAINST assuming MAPKAPK5 shares its paralogs' inflammatory function, not neutral supporting evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAPKAPK5</td>
+<td>Immune (human keratinocyte, sulfur mustard)</td>
+<td>In cytokine regulation by p38-pathway kinases, MK2 (not MK5) knockdown reduced TNF-alpha/IL-6 secretion; MK5/MAPKAPK5 appears only in a keyword list, not as a tested driver</td>
+<td>PMID 23851002</td>
+<td>CONTESTED — again shows MK2, not MK5, as the functional driver in this model</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PTPN11</td>
+<td>Immune (review)</td>
+<td>PTPN11/SHP2 critical downstream effector of KIT signaling in hematopoietic stem cells (HSC self-renewal/survival/quiescence); KIT-PTPN11 axis dysregulation implicated in polycythemia vera</td>
+<td>PMID 24857885</td>
+<td>CONTESTED (PTPN11 vs. HECTD4 vs. RPL6 — share one credible set, never top gene in its own right); hematology-only, not lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PTPN11</td>
+<td>Immune (commentary)</td>
+<td>Src-family-kinase- and Shp2(PTPN11)-regulated tyrosyl phosphorylation of Runx1 relevant to CD8+ T-cell and megakaryocyte differentiation</td>
+<td>PMID 22802526</td>
+<td>CONTESTED (same LD ambiguity); general hematopoietic biology, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PTPN11</td>
+<td>Immune (JMML functional study)</td>
+<td>Activating PTPN11 mutations (with KRAS) frequent in juvenile myelomonocytic leukemia, characterized by GM-CSF hypersensitivity in hematopoietic progenitors</td>
+<td>PMID 17268534</td>
+<td>CONTESTED (same LD ambiguity); hematology/oncology, not lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MYL2</td>
+<td>Mouse cardiac structural (not lung)</td>
+<td>MYL2-encoded ventricular regulatory light chain mutations (D166V-HCM, D94A-DCM) alter myosin super-relaxed state and calcium sensitivity of force generation</td>
+<td>PMID 35177471</td>
+<td>HOLDS (as evidence supporting DOWN-weighting MYL2 — entirely cardiac-restricted biology)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MYL2</td>
+<td>Mouse cardiac structural (not lung)</td>
+<td>Phosphomimetic MYL2 regulatory-light-chain mutants rescue contractile dysfunction in a hypertrophic cardiomyopathy (R58Q) mouse model</td>
+<td>PMID 36204565</td>
+<td>HOLDS (same — supports down-weighting)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>BRAP</td>
+<td>Human statgen (blood pressure, not lung)</td>
+<td>rs3782886/BRAP identified as a novel determinant of systolic/diastolic blood pressure (Japanese exome-wide study)</td>
+<td>PMID 28562329</td>
+<td>Not lung-specific; see pleiotropy note below</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>BRAP</td>
+<td>Human statgen (alcohol use disorder, not lung)</td>
+<td>rs3782886/BRAP was one of only two genome-wide-significant loci for alcohol use disorder in East Asians in this meta-analysis</td>
+<td>PMID 35094024</td>
+<td>HOLDS as strong evidence of horizontal pleiotropy at this locus (same credible-set variant independently hits BP and AUD in separate GWAS) — reinforces that BRAP/ACAD10/HECTD4 likely reflect a shared alcohol-metabolism/cardiometabolic hub rather than independent lung signals</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>BRAP</td>
+<td>Mouse cardiac structural (not lung)</td>
+<td>General and cardiomyocyte-specific Brap knockout in mice causes embryonic/perinatal lethality via cardiomyocyte cell-cycle arrest/apoptosis (p21Cip-mediated)</td>
+<td>PMID 31286143</td>
+<td>Not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RPL6</td>
+<td>Human tissue (lung cancer, not COPD)</td>
+<td>RPL6 highly expressed in lung cancer tissue/cell lines; knockdown inhibits proliferation/migration, promotes apoptosis via reduced AKT/p-S6 signaling</td>
+<td>PMID 35280491</td>
+<td>HOLDS as supporting the down-weighting of RPL6 (oncology-only evidence, no COPD relevance; extreme housekeeping-gene constraint argues against causality)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RPL6</td>
+<td>General cell biology (not lung)</td>
+<td>RPL6 stability regulated by ubiquitin-mediated degradation (via UBE2T); RPL6 loss affects p53 activity in glioblastoma cells</td>
+<td>PMID 36156329</td>
+<td>Not lung/COPD-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADAM1B</td>
+<td>Mouse reproductive biology (not lung, not human)</td>
+<td>Adam1a and Adam1b are testis-specific fertilin-alpha paralogs in mouse, implicated in spermatogenesis/fertilization</td>
+<td>PMID 12095680</td>
+<td>Not lung/human-relevant; ADAM1B likely a non-functional paralog in humans (absent from Ensembl protein-coding overlap and Open Targets constraint data)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ERP29</td>
+<td>General cell biology (not lung)</td>
+<td>ERp29 is an ER-resident protein-folding/secretory chaperone with an emerging tumor-suppressor role in breast cancer via ER stress/EMT modulation</td>
+<td>PMID 20920593</td>
+<td>Not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ERP29</td>
+<td>General cell biology (not lung)</td>
+<td>Original characterization of ERp29 from rat enamel cells; broadly expressed across secretory tissues</td>
+<td>PMID 10727933</td>
+<td>Not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RPH3A</td>
+<td>Neuroscience (not lung, not pipeline-flagged)</td>
+<td>RPH3A (rabphilin 3A) regulates synaptic-vesicle exocytosis/calcium-triggered neurotransmitter release; decreased immunoreactivity in Alzheimer's disease</td>
+<td>PMID 24200817</td>
+<td>Not lung/immune-relevant; included only for regional completeness (confirmed protein-coding gene in the locus, not flagged by internal pipeline)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PHETA1</td>
+<td>Zebrafish developmental (not lung, not pipeline-flagged)</td>
+<td>PHETA1/2 (endocytic adaptors, OCRL-interacting) required for normal endocytosis/ciliogenesis in renal tissue and craniofacial cartilage development; patient R6C missense variant exacerbated craniofacial deficits dominant-negatively</td>
+<td>PMID 32152089</td>
+<td>Speculative-only relevance to airway mucociliary function (researcher's own inference, not literature-demonstrated); not pipeline-flagged but a recurring Open Targets L2G runner-up in both the ATXN2-top and CUX2-top credible sets</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM116</td>
+<td>Literature search (negative finding)</td>
+<td>No PubMed literature identified for TMEM116 gene-level or for the credible-set missense variant rs3752630 (PIP=0.0039) despite dedicated variant-level search</td>
+<td>n/a — no citation to report</td>
+<td>Genuine literature gap; do not over-weight this gene just because it carries the locus's only other missense variant besides rs671 — the PIP is vanishingly small</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCDC63</td>
+<td>Literature search (negative finding)</td>
+<td>No PubMed literature identified for CCDC63; general domain knowledge (unverified, not a retrieved citation) suggests a sperm-flagellar-structure role, not lung-relevant</td>
+<td>n/a — no citation to report</td>
+<td>Not pipeline-flagged; recurring Open Targets runner-up to MYL2, sharing that gene's cardiac-trait-dominated LD block</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NAA25</td>
+<td>Literature (indirect complex-partner only — see audit for exclusion of direct claim)</td>
+<td>NAA25 is the auxiliary subunit of the NatB N-terminal-acetyltransferase complex (catalytic subunit NAA20); pathogenic NAA20 missense variants cause a recessive developmental-delay/ID/microcephaly syndrome</td>
+<td>PMID 34230638 (CLAIM_MISMATCH for NAA25 specifically — see audit)</td>
+<td>Excluded as direct NAA25 evidence; retained here only as indirect complex-biology context, not as validated NAA25-specific literature</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-literature-claim-not-verified-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a literature claim; not verified by citation-verifier or red-team-skeptic)</h2>
+<p>Source: Open Targets Platform GraphQL API, <code>disease.evidences</code> for MONDO_0005002 (chronic
+obstructive pulmonary disease), datasource <code>gwas_credible_sets</code>, plus <code>target.geneticConstraint</code>
+(gnomAD). Full detail in <code>evidence_tables/_status/12_110800001-112600000/opentargets.md</code>.
+Multiple independent Open Targets COPD credible sets exist across this locus; L2G below is the
+maximum score observed for each gene across all credible sets in which it appears.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>Top COPD L2G (max across OT credible sets)</th>
+<th>Colocalization</th>
+<th>gnomAD constraint (LOEUF)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ALDH2</td>
+<td>0.897 (top gene in its own set) + 0.746 (top in a 2nd independent set)</td>
+<td>Strong, h4 up to 1.0 across multiple study loci</td>
+<td>0.989 (not constrained)</td>
+<td>Two independent OT credible sets both point to ALDH2 as top gene</td>
+</tr>
+<tr>
+<td>SH2B3</td>
+<td>0.877 (top gene in its own set); recurring runner-up 0.09-0.23 in 4 other sets (top gene CUX2 or ATXN2)</td>
+<td>Strong, h4 up to ~0.97-1.0</td>
+<td>1.35 (not constrained/tolerant)</td>
+<td>Difficult to resolve from CUX2 by L2G alone at several signals</td>
+</tr>
+<tr>
+<td>HECTD4</td>
+<td>0.803 (top gene in its own set; PTPN11 0.698 and RPL6 0.194 unresolved runners-up in the SAME set)</td>
+<td>Very strong, h4=1.0 in multiple loci</td>
+<td>0.292 (highly constrained)</td>
+<td>Shares one credible set with PTPN11/RPL6 — unresolved</td>
+</tr>
+<tr>
+<td>PTPN11</td>
+<td>0.698 (never top gene in its own right; always 2nd to HECTD4)</td>
+<td>Strong (shared set with HECTD4)</td>
+<td>0.156 (extremely constrained)</td>
+<td>Never top L2G gene in any credible set queried</td>
+</tr>
+<tr>
+<td>TRAFD1</td>
+<td>0.691 (top gene in its own set; NAA25 0.064 distant runner-up)</td>
+<td>Strong, h4 up to 1.0</td>
+<td>0.749 (moderately constrained)</td>
+<td></td>
+</tr>
+<tr>
+<td>ACAD10</td>
+<td>0.687 (top in one set) / 0.448 (top in a 2nd set); BRAP and ALDH2 distant runners-up (0.083 each) in the first set</td>
+<td>Mixed (some h4=1.0, some 0.69-0.84)</td>
+<td>1.05 (not constrained)</td>
+<td></td>
+</tr>
+<tr>
+<td>MAPKAPK5</td>
+<td>0.670 (top gene in its own set) / 0.610 (top, tied with an uncharacterized transcript, in a 2nd set)</td>
+<td>Mixed, some near-perfect (h4=1.0), some weak (h4 as low as 0.06)</td>
+<td>0.604 (moderately constrained)</td>
+<td></td>
+</tr>
+<tr>
+<td>MYL2</td>
+<td>0.612 (top gene in its own set; CCDC63 0.120 runner-up)</td>
+<td>Strong but with 13-21 colocalizing variants in CARDIAC/METABOLIC study loci, not lung</td>
+<td>1.157 (not constrained)</td>
+<td>Colocalization pattern argues against a lung-specific mechanism</td>
+</tr>
+<tr>
+<td>ATXN2</td>
+<td>0.537 (top gene in its own set; PHETA1 0.108 and SH2B3 0.089 runners-up)</td>
+<td>Strong, h4 0.94-0.96</td>
+<td>0.319 (highly constrained)</td>
+<td></td>
+</tr>
+<tr>
+<td>CUX2</td>
+<td>0.483 max, but top gene in FIVE separate OT credible sets (0.42-0.48 each), with SH2B3 (0.21-0.23) a recurring close second in the same sets</td>
+<td>Heterogeneous: strong in several sets (h4 up to 1.0), weak/near-null in others (h4 as low as 0.20, vs. hypertension endpoints)</td>
+<td>0.383 (highly constrained)</td>
+<td>Most STATISTICALLY consistent gene at the locus but essentially no corroborating literature (see main table)</td>
+</tr>
+<tr>
+<td>RPL6</td>
+<td>0.194 (never top gene; runner-up in HECTD4/PTPN11 set)</td>
+<td>Strong (shared set)</td>
+<td>0.176 (extremely constrained, obs=1 vs exp=27)</td>
+<td>Core ribosomal protein; strong prior against causality</td>
+</tr>
+<tr>
+<td>NAA25</td>
+<td>0.064 (never top gene; distant runner-up in TRAFD1 set)</td>
+<td>Strong (shared set)</td>
+<td>0.341 (highly constrained)</td>
+<td></td>
+</tr>
+<tr>
+<td>TMEM116</td>
+<td>0.052 (never top gene; distant runner-up in a MAPKAPK5 set)</td>
+<td>Weak-moderate (shared set)</td>
+<td>1.10 (not constrained)</td>
+<td>Carries the locus's only other missense credible-set variant (rs3752630) besides rs671</td>
+</tr>
+<tr>
+<td>BRAP</td>
+<td>0.083 (never top gene; distant runner-up in ACAD10 set)</td>
+<td>Moderate (shared set)</td>
+<td>0.766 (moderately constrained)</td>
+<td></td>
+</tr>
+<tr>
+<td>ADAM1B</td>
+<td>No Open Targets data available (absent from the 36 COPD evidence rows queried; no gnomAD constraint data at all)</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>Consistent with pseudogene/non-canonical annotation status</td>
+</tr>
+<tr>
+<td>ERP29</td>
+<td>No Open Targets COPD L2G/colocalization data available</td>
+<td>n/a</td>
+<td>0.962 (not constrained)</td>
+<td></td>
+</tr>
+<tr>
+<td>RPH3A, PHETA1, CCDC63</td>
+<td>Not directly queried against Open Targets target endpoints by the orchestrator (identified by researcher via Ensembl overlap, not the original pipeline candidate list); PHETA1's and CCDC63's runner-up L2G status is drawn from the credible-set rows of ATXN2/CUX2 and MYL2 respectively, noted above</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>ALDH2 — MODERATE confidence.</strong></p>
+<p>ALDH2 is the best-supported single gene at this locus, but &quot;best-supported&quot; here means
+best-supported relative to a genuinely crowded, unresolved field at a gene-dense pleiotropy
+hotspot — not a clean, high-confidence call. The case for ALDH2 rests on: (1) it is the nearest
+gene to, and contains, the lead credible-set variant itself (rs671, PIP=0.178, missense,
+the single highest-PIP variant in the entire 282-variant credible set); (2) the highest Open
+Targets L2G score of any gene at the locus, and uniquely, the top gene in TWO independent
+Open Targets COPD credible sets (0.897 and 0.746); (3) the only gene-specific human+mouse lung
+mechanistic literature at the entire locus (Kuroda et al., PMID 28431562); (4) direct human
+COPD-tissue evidence of dysregulated expression (elevated ALDH2 in COPD BALF, PMID 24188068);
+and (5) a smoking-conditional gene-environment interaction directly on airway obstruction
+(PMID 25978981), consistent with this pipeline's smoking-mediation prior.</p>
+<p>However, per red-team-skeptic's critique (preserved in <code>audits/12_110800001-112600000_audit.md</code>),
+this evidence base is weaker than a simple &quot;top gene&quot; label conveys: the flagship Kuroda paper
+explicitly reports NO association with clinical COPD/asthma diagnosis (only a spirometric
+FEV1/FVC effect), its mouse data are directly contradictory depending on the injury model
+(smoke-resistant but infection-susceptible), and a large Chinese-biobank Mendelian-randomization
+analysis (PMID 42020159) found genetically-instrumented alcohol consumption — the most obvious
+causal pathway linking ALDH2 to disease — does NOT cause COPD. The correct reading is that
+ALDH2 has a real, smoking-conditional effect on spirometric lung function (satisfying this
+pipeline's prior #2, concordance with FEV1/FEV1-FVC), but the mechanism connecting that to a
+COPD case-control GWAS hit remains unresolved between smoking-behavior mediation, direct
+pulmonary aldehyde-detoxification biology (independent of alcohol), and residual confounding —
+not a clean, single-mechanism causal story.</p>
+<p>The runner-up field is unusually crowded for a locus this size: SH2B3 (Open Targets L2G 0.877,
+second-highest at the locus, extensive but entirely non-pulmonary immune/hematopoietic
+literature) and CUX2 (PoPS-prioritized, second-highest single-variant PIP, and the most
+<em>consistent</em> top-L2G gene across five independent Open Targets credible sets, yet with zero
+corroborating literature of any kind beyond unrelated cortical-neuron biology) are both
+genuine alternative candidates that the current evidence cannot rule out. HECTD4, PTPN11, and
+RPL6 share one unresolved credible set; TRAFD1 and NAA25 share another; ACAD10, BRAP, and
+ALDH2 itself share a third. Given this degree of unresolved LD/shared-credible-set ambiguity
+across the locus, and given that ALDH2's own literature actively complicates rather than
+simplifies a direct-causation story, confidence is capped at MODERATE rather than HIGH. What
+would resolve this: COPD-specific (not proxy-trait) colocalization or fine-mapping that
+separates ALDH2's signal from SH2B3/CUX2/BRAP/ACAD10 at base-pair resolution; a smoking-
+stratified COPD GWAS or gene-by-smoking interaction analysis at this exact locus (to test
+whether the residual COPD association survives smoking adjustment, as it did not for alcohol
+in the Zeng MR study); and any dedicated CUX2 lung-biology functional study, given its
+statistical consistency remains otherwise unexplained.</p>
+
+</body>
+</html>

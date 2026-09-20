@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>14_78850001-79250000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1478850001-79250000-lead-variant-rs10146180">Evidence table — Locus 14:78850001-79250000 (lead variant rs10146180)</h1>
+<p>Candidate genes from internal pipeline: NRXN3 (nearest gene, FLAMES, MAGMA, and PoPS all prioritize NRXN3; ABC = NA). This is a single-gene locus — NRXN3 physically spans virtually the entire credible-set interval (~70 intronic variants, all annotated to NRXN3, all MODIFIER impact).</p>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NRXN3</td>
+<td>Genetic association (obesity GWAS)</td>
+<td>First GWAS to identify NRXN3 (rs10146997) as genome-wide significant for waist circumference (~70,000 individuals, CHARGE+GIANT), also associated with BMI/obesity risk; notes NRXN3's prior addiction/reward-behavior link, proposes obesity may be partly CNS-mediated</td>
+<td>PMID 19557197 / DOI 10.1371/journal.pgen.1000539</td>
+<td>Not contested; supports non-pulmonary (metabolic/behavioral) mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Genetic association (smoking behavior)</td>
+<td>Candidate-gene case-control study (Spanish Caucasian, discovery+replication) found NRXN3 SNP/haplotype (rs221473, rs221497) associated with lower risk of being a smoker, replicated in both cohorts</td>
+<td>PMID 22716474 / DOI 10.1111/j.1601-183X.2012.00815.x</td>
+<td>Not contested; supports smoking-behavior pathway</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Genetic association + functional (alcohol dependence)</td>
+<td>NRXN3 splice-site SNP rs8019381 associated with alcohol dependence (OR=2.46) and reduced expression of specific transmembrane NRXN3 isoforms in postmortem human cortex</td>
+<td>PMID 17804423 / DOI 10.1093/hmg/ddm247</td>
+<td>Not contested; establishes NRXN3 as cross-substance addiction gene</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Genetic association (rare-variant burden, nicotine dependence)</td>
+<td>Rare-variant burden analysis found NRXN3 (with NRXN1, NRXN2, CHRNA9, CHRNA2, etc.) significantly enriched for rare variants associated with smoking status</td>
+<td>PMID 25450229 / DOI 10.1038/mp.2014.156</td>
+<td>Not contested</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Genetic linkage (opioid dependence)</td>
+<td>Genome-wide linkage in opioid-dependent sibling pairs identified a chromosome 14q peak (NPL up to 5.00) encompassing NRXN3 — same broad cytoband (14q24) as this COPD locus</td>
+<td>PMID 17409192 / DOI 10.1093/hmg/ddm081</td>
+<td>Not contested; corroborates 14q24/NRXN3 as long-standing addiction-genetics region</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Genetic association (extreme obesity GWAS)</td>
+<td>Genome-wide significant association between NRXN3 (rs11624704) and waist-to-hip ratio</td>
+<td>PMID 21552555 / DOI 10.1371/journal.pone.0018939</td>
+<td>Not contested</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Genetic association (metabolic traits, Danish cohort)</td>
+<td>NRXN3 (rs10146997) minor allele associated with increased waist circumference in women; no clear underlying metabolic-trait mechanism identified</td>
+<td>PMID 21674055 / DOI 10.1371/journal.pone.0020640</td>
+<td>Not contested</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Genetic association (childhood obesity)</td>
+<td>NRXN3 among 9 of 32 adult-BMI GIANT-consortium loci also showing nominal association with common childhood obesity</td>
+<td>PMID 21779088 / DOI 10.1038/oby.2011.237</td>
+<td>Not contested; supports early-life component to adiposity association</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Genetic association (large-scale smoking/alcohol GWAS, background resource)</td>
+<td>GSCAN consortium GWAS of up to 1.2M individuals for tobacco/alcohol use traits — verified as the primary smoking-behavior GWAS resource relevant to this locus, though the abstract does not itself confirm NRXN3-locus-specific genome-wide significance</td>
+<td>PMID 30643251 / DOI 10.1038/s41588-018-0307-5</td>
+<td>Verified for general claim; NRXN3-specific locus detail not confirmed from abstract — cite only as background resource, not as direct NRXN3 evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Polygenic/contextual (substance use)</td>
+<td>Polygenic risk scores built from GSCAN smoking-initiation summary statistics (which include this locus among GWS smoking-initiation loci) predict multiple substance-use outcomes in young adults</td>
+<td>PMID 30875648 / DOI 10.1016/j.drugalcdep.2019.01.015</td>
+<td>Not contested; contextual</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Mendelian randomization</td>
+<td>Two-sample MR: higher BMI, body fat percentage, and alcohol intake frequency causally associated with increased COPD/asthma risk; SNP annotation implicated an intronic NRXN3 variant (rs10146997) among SNPs linking body-composition exposures to COPD/asthma</td>
+<td>PMID 40869120 / PMC12386338 / DOI 10.3390/ijms26167799</td>
+<td>WEAKENED as direct-lung evidence — skeptic notes this supports a body-composition-mediated pathway to COPD/asthma, not a direct pulmonary mechanism; do not read as evidence of lung biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Neurobiology review (contextual only, not lung/COPD)</td>
+<td>Neurexins (incl. NRXN3) are presynaptic trans-synaptic cell-adhesion molecules organizing synapse formation/plasticity; synaptic CAM mutations linked to neuropsychiatric disorders</td>
+<td>PMID 30359597 / DOI 10.1016/j.neuron.2018.09.040</td>
+<td>Not contested; background biology only, no COPD/lung claim made</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Neurobiology review (contextual only, not lung/COPD)</td>
+<td>Comprehensive review of neurexin (NRXN1/2/3) molecular biology — alternative splicing, ligand binding (neuroligins/cerebellins/latrophilins), association with schizophrenia/autism/Tourette syndrome</td>
+<td>PMID 29100073 / DOI 10.1016/j.cell.2017.10.024</td>
+<td>Not contested; background biology only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Neurobiology review (contextual only, not lung/COPD)</td>
+<td>Foundational review of neurexin/neuroligin synaptic cell-adhesion signaling and link to autism/cognitive disease</td>
+<td>PMID 18923512 / DOI 10.1038/nature07456</td>
+<td>Not contested; background biology only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Functional / animal model (addiction)</td>
+<td>Short-term cocaine exposure increased Nrxn3beta mRNA in mouse globus pallidus (basal ganglia reward circuitry), supporting a functional role in reward-related synaptic plasticity</td>
+<td>PMID 18418251 / DOI 10.1097/WNR.0b013e3282fda231</td>
+<td>Not contested; supports reward-circuit function, not lung biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Genetic association + functional (impulsivity/substance use)</td>
+<td>NRXN3 polymorphisms (rs11624704, rs1004212, rs10146997) associated with impulsivity measures and substance-use problems in a gender-specific manner; luciferase assay for rs917906 on NRXN3 expression was negative</td>
+<td>PMID 21676558 / DOI 10.1016/j.drugalcdep.2011.05.025</td>
+<td>Not contested</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>eQTL / gene-by-environment interaction (brain, smoking)</td>
+<td>Gene x smoking-status interaction analysis in human postmortem brain found the single strongest genome-wide interaction signal (p=1.9x10^-11) at NRXN3, implicating smoking-status-dependent brain expression regulation</td>
+<td>PMID 23909413 / DOI 10.1111/jcpp.12119</td>
+<td>Not contested; strong mechanistic support for a smoking-mediated (not pulmonary) pathway</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Transcriptomics (postmortem brain, smokers vs. non-smokers)</td>
+<td>RNA-seq of 10 postmortem human brain regions identified NRXN3 as a gene with prominent isoform diversity and allele-selective expression; part of broader smoker vs. non-smoker differential expression analysis</td>
+<td>PMID 26597164 / DOI 10.1186/s12864-015-2207-8</td>
+<td>Not contested</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Genetic association (smoking heaviness, schizophrenia cohort)</td>
+<td>NRXN3 marker rs1004212 associated with cigarettes-per-day among patients with schizophrenia, independent of smoking initiation</td>
+<td>PMID 19658047 / DOI 10.1080/15622970903079499</td>
+<td>Not contested</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NRXN3</td>
+<td>Genetic association (nicotine use disorder)</td>
+<td>Case-control study (Turkish population) found NRXN3 SNPs rs11624704 and rs1004212 associated with increased risk of nicotine addiction, independent replication across populations</td>
+<td>PMID 34647286 / DOI 10.5080/u25686</td>
+<td>Not contested</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p><strong>NRXN3 (ENSG00000021645):</strong></p>
+<ul>
+<li>Overall Open Targets target-disease association score (COPD, MONDO_0005002): 0.211 (genetic_association datatype 0.338; literature datatype 0.193) — a modest, not overwhelming, aggregate association score.</li>
+<li>Genetic constraint (gnomAD): strongly constrained against loss-of-function variation — pLoF constraint score 1.0 (top bin), observed/expected = 0.234 (29 observed vs. 124.1 expected); missense oe = 0.747; synonymous unremarkable (oe = 0.997). Consistent with known NRXN3 dosage sensitivity in neurodevelopmental biology.</li>
+<li>Locus-to-gene (L2G): NRXN3 is the sole L2G-predicted target across all 30 GWAS credible sets overlapping the lead variant (14_79042356_A_G / rs10146180), with scores clustering ~0.55-0.60 for every trait examined, including the COPD study GCST90476027 (L2G = 0.556). No competing gene appears in any of the 30 credible sets.</li>
+<li>Colocalization (COLOC_PIP_ECAVIAR) for the COPD credible set (31 rows): strongest and most numerous colocalizations are with body mass index / body weight / body fat percentage (H4 0.71-0.93), smoking initiation (H4 0.63-0.79) and smoking cessation (H4 0.73-0.77), substance use disorder (H4 0.72-0.76), NRXN3/neurexin-3(-beta) plasma protein levels (cis-pQTL, H4 0.65-0.80), age at first sexual intercourse (H4 = 0.73), and daytime nap/rest (H4 = 0.85).</li>
+<li><strong>No L2G or colocalization evidence was found for FEV1, FEV1/FVC, or any spirometric/pulmonary-function trait</strong> among the 30 credible sets / 31 colocalization rows examined at this locus position — a notable absence given biological prior #2 (pulmonary-function concordance).</li>
+</ul>
+<p>Full detail: <code>evidence_tables/_status/14_78850001-79250000/opentargets.md</code>.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Gene: NRXN3 — Confidence: MODERATE</strong></p>
+<p>NRXN3 is the only candidate gene at this locus by every internal method (nearest gene, FLAMES, MAGMA, PoPS) and structurally the only plausible gene — the credible set sits entirely within NRXN3's genomic footprint, and Open Targets independently confirms NRXN3 as the sole L2G-predicted target across all 30 GWAS credible sets that overlap this position, including the COPD study itself (L2G = 0.556). There is no LD/paralog ambiguity to resolve here: whichever biological process this locus operates through, NRXN3 is the gene it operates through. On gene attribution alone, confidence would be HIGH.</p>
+<p>Confidence is capped at MODERATE, not HIGH, because the evidence base overwhelmingly supports a <strong>smoking-behavior and/or adiposity-mediated mechanism rather than a direct pulmonary or immune mechanism</strong> for the COPD GWAS signal at this locus — a materially different and weaker claim about COPD causation than &quot;NRXN3 acts in the lung.&quot; Specifically: (1) all 18 VERIFIED literature citations describe NRXN3's role in smoking initiation/heaviness/cessation, alcohol/opioid/nicotine/cocaine dependence, impulsivity, and obesity/central-adiposity GWAS, or its canonical purely-neuronal presynaptic cell-adhesion biology (Südhof reviews); (2) the researcher found zero direct lung/airway/epithelial literature and zero immune/inflammatory literature for NRXN3, reported as a genuine gap rather than papered over; (3) Open Targets shows no colocalization with FEV1/FEV1-FVC across 30 examined credible sets, in direct tension with biological prior #2; (4) one MR study (PMID 40869120, VERIFIED) links an NRXN3 obesity-associated variant to COPD/asthma risk specifically via a body-composition-mediated pathway, not a lung mechanism; and (5) the red-team-skeptic's determination for this gene was <strong>WEAKENED</strong> (not CONTESTED — gene attribution is not in dispute) — specifically weakened with respect to any claim of direct pulmonary/immune causation, while assessing the smoking/behavioral-mediation evidence as strong and internally consistent. A prior large COPD GWAS (Sakornsakolpat et al. 2019, PMID 30804561) additionally does <strong>not</strong> report this 14q24/NRXN3 locus among its 82 genome-wide-significant COPD loci (CLAIM_MISMATCH on the researcher's use of that citation — see audit appendix), which is mild non-replication evidence and tempers confidence further. Whether NRXN3/14q24 appears among the 559 genes in the largest lung-function GWAS to date (Shrine et al. 2023, PMID 36914875) remains an open, unresolved question (abstract-level review could not settle it) and is the single highest-value follow-up that could shift this call in either direction.</p>
+<p><strong>Bottom line for the study team:</strong> NRXN3 is very likely the correct gene assignment at this locus, and this is very likely a genuine COPD GWAS signal reflecting NRXN3's well-established role in smoking-behavior and/or adiposity biology — exactly the kind of smoking-mediated signal anticipated by biological prior #1, given that the underlying COPD GWAS summary statistics are not adjusted for smoking. It should not be interpreted as evidence of a direct pulmonary structural or inflammatory role for NRXN3 unless and until direct lung-tissue or airway-specific evidence emerges.</p>
+
+</body>
+</html>

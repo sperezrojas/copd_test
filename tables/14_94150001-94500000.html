@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>14_94150001-94500000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1494150001-94500000-nearest-gene-serpina1">Evidence table — locus 14:94,150,001-94,500,000 (nearest gene SERPINA1)</h1>
+<p>Lead variant: rs28929474 (14:94,378,610, GRCh38), missense_variant, MODERATE impact, credible-set PIP = 0.961 (sole variant in credible set).
+Candidate genes evaluated: SERPINA1 (nearest gene; credible-set gene), PRIMA1 (PoPS-prioritized).</p>
+<p>All rows below carry a Skeptic verdict of HOLDS unless noted. Only citations verified VERIFIED by citation-verifier are included. See <code>audits/14_94150001-94500000_audit.md</code> for excluded/unverified citations and full CONTESTED reasoning.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SERPINA1</td>
+<td>Variant identity</td>
+<td>rs28929474 is the standard designation for the PI*Z allele of SERPINA1, principal cause of alpha-1 antitrypsin deficiency (AATD)</td>
+<td>Ramos-Díaz et al. 2024, Gene. PMID 38723785 / DOI 10.1016/j.gene.2024.148540</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SERPINA1</td>
+<td>Variant identity / clinical genetics</td>
+<td>rs28929474 (&quot;the Z allele&quot;) identified in a COPD-symptomatic patient; illustrates genotype-phenotype discordance when combined with a null allele</td>
+<td>Pavičić et al. 2020, Laboratory Medicine. PMID 31583408 / DOI 10.1093/labmed/lmz059</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SERPINA1</td>
+<td>Variant identity / negative finding</td>
+<td>rs28929474 (Glu342Lys, Pi*Z) annotated in population cohort; nominal association with school-age asthma (P=.0058) did NOT survive FDR correction (adjusted P=.058); no SERPINA1 SNP associated with wheeze phenotypes</td>
+<td>DeLuca et al. 2019, Pediatric Pulmonology. PMID 31298815 / DOI 10.1002/ppul.24422</td>
+<td>HOLDS (reported as non-robust/negative finding)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SERPINA1</td>
+<td>Mechanism (structural)</td>
+<td>Z mutation causes loop-sheet polymerization of AAT, explaining ER accumulation/retention in hepatocytes; associated with hepatocellular damage and childhood cirrhosis in ZZ homozygotes</td>
+<td>Lomas, Evans, Finch, Carrell 1992, Nature. PMID 1608473 / DOI 10.1038/357605a0</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SERPINA1</td>
+<td>Mechanism (structural, animal model)</td>
+<td>PiZ transgenic mouse model (human SERPINA1*E342K) confirms ER accumulation of polymerized Z-AAT causes liver fibrosis</td>
+<td>Zhang et al. 2019, Cells. PMID 31817705 / DOI 10.3390/cells8121586</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SERPINA1</td>
+<td>Mechanism (review)</td>
+<td>AATD is a genetic risk factor for COPD and liver cirrhosis; augmentation therapy aims to correct elastase-antielastase imbalance</td>
+<td>Bernhard, Bals, Fähndrich 2016, Deutsche Medizinische Wochenschrift. PMID 27701692 / DOI 10.1055/s-0042-112096</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SERPINA1</td>
+<td>Mechanism (interventional RCT)</td>
+<td>IV AAT augmentation significantly slowed CT-measured lung-density decline vs. placebo in severe AATD (n=180; difference 0.74 g/L/yr, 95% CI 0.06-1.42, p=0.03) — strongest-tier (causal/interventional) support for the protease-antiprotease mechanism</td>
+<td>Chapman et al. 2015, Lancet (RAPID trial). PMID 26026936 / DOI 10.1016/S0140-6736(15)60860-1</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SERPINA1</td>
+<td>Statistical genetics / fine-mapping</td>
+<td>AAT serum levels and locus association driven by rare/low-frequency PI<em>S and PI</em>Z variants, not common SNPs; common-SNP hits are &quot;synthetic associations&quot; (statistical proxies) for the rare causal alleles</td>
+<td>Thun et al. 2013, PLoS Genetics (SAPALDIA). PMID 23990791 / DOI 10.1371/journal.pgen.1003585</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SERPINA1</td>
+<td>Statistical genetics (review, dated)</td>
+<td>SERPINA1 stated as &quot;the only gene proven to influence COPD susceptibility&quot; (2011-era review); situates CHRNA3/5 (15q25, a different locus) as the nicotine-dependence/smoking-behavior locus, not SERPINA1</td>
+<td>Nakamura 2011, Allergology International. PMID 21778810 / DOI 10.2332/allergolint.11-RAI-0326</td>
+<td>HOLDS, but claim is dated (2011) — many more COPD GWAS loci have since been established; do not over-rely on the superlative</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SERPINA1</td>
+<td>Immune/inflammatory</td>
+<td>PiMZ heterozygotes without airflow obstruction show elevated sputum neutrophils and IL-8 vs. normal controls, approaching stable-COPD levels; inverse correlation between %neutrophils and FEV1 in COPD patients (p=0.04, r=-0.43)</td>
+<td>Malerba et al. 2005, Thorax. PMID 16284217 / DOI 10.1136/thx.2005.043471</td>
+<td>HOLDS, but small underpowered study (n=10/group) — supportive/mechanistically plausible, not robust independent immune evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SERPINA1</td>
+<td>PiMZ heterozygote risk (review)</td>
+<td>&quot;Ongoing debate&quot; over MZ risk; risk more pronounced in case-control than population-based studies; family studies show increased emphysema risk specifically in MZ smokers; risk is smoking/exposure-dependent</td>
+<td>Al Ashry &amp; Strange 2017, European Respiratory Review. PMID 29070580 / DOI 10.1183/16000617.0068-2017</td>
+<td>HOLDS (contested topic, reasoning below)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SERPINA1</td>
+<td>PiMZ heterozygote risk / spirometry</td>
+<td>Family study (99 PiMM vs. 89 PiMZ): PiMZ had reduced FEV1/FVC, FEF25-75 vs. PiMM; adjusted OR for COPD 5.18 (95% CI 1.27-21.15) overall, 10.65 (95% CI 2.17-52.29) in ever-smokers; effect abrogated in never-smokers</td>
+<td>Molloy et al. 2014, AJRCCM. PMID 24428606 / DOI 10.1164/rccm.201311-1984OC</td>
+<td>HOLDS — key evidence for smoking-modified penetrance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SERPINA1</td>
+<td>PiMZ heterozygote risk / spirometry (CONTESTED)</td>
+<td>Population-based cohort (SAPALDIA, &gt;4600 subjects, 11-yr follow-up): NO overall main effect of PiMS/PiMZ genotype on lung-function change; PiZ heterozygosity interacted with inflammatory stimuli (obesity, smoking, CRP) to accelerate FEF25-75/FEV1-FVC decline only in that gene-by-environment subgroup</td>
+<td>Thun et al. 2012, PLoS ONE. PMID 22912729 / DOI 10.1371/journal.pone.0042728</td>
+<td>CONTESTED — see audit appendix</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SERPINA1</td>
+<td>PiMZ heterozygote risk / spirometry (CONTESTED, discordant direction)</td>
+<td>Multi-cohort meta-analysis (&gt;19,000 individuals): PI-MZ heterozygosity associated with INCREASED FEV1 (+0.13 z-score, p=1.7e-5) and FVC (+0.16 z-score, p=5.2e-8) — opposite direction from AATD/COPD-risk expectation; authors state the elastase-inhibition-benefits-COPD notion &quot;may merit re-evaluation&quot;</td>
+<td>North et al. 2016, Journal of Medical Genetics. PMID 26831755 / DOI 10.1136/jmedgenet-2015-103342</td>
+<td>CONTESTED — see audit appendix</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SERPINA1</td>
+<td>PiMZ heterozygote risk (small, older)</td>
+<td>10-yr longitudinal study (n=28 PiMZ vs. 28 matched PiMM): supports PiMZ as risk factor for emphysema at younger age</td>
+<td>Tarján et al. 1994, European Respiratory Journal. PMID 7713204 / DOI 10.1183/09031936.94.07122199</td>
+<td>HOLDS but small/old; part of contested heterozygote literature</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SERPINA1</td>
+<td>PiMZ heterozygote risk (small, older, negative)</td>
+<td>Population sample (n=24 PiMZ vs. 38 PiM): no difference in lung mechanics/emphysema risk by PiMZ status; no accelerated-aging/increased-smoking-susceptibility effect</td>
+<td>McDonagh et al. 1979, Journal of Clinical Investigation. PMID 311786 / DOI 10.1172/JCI109303</td>
+<td>HOLDS but small/old/negative; part of contested heterozygote literature</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SERPINA1</td>
+<td>Context (different variant, not rs28929474)</td>
+<td>Rare &quot;Y Barcelona&quot; AAT variant; heterozygous PiYM carriers have AAT concentrations similar to PiMZ — supports general heterozygous-deficiency-variant risk model, not direct rs28929474 evidence</td>
+<td>Miravitlles et al. 2003, Chest. PMID 12853554 / DOI 10.1378/chest.124.1.404</td>
+<td>HOLDS (context only, not direct evidence for this variant)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRIMA1</td>
+<td>Gene function (CNS)</td>
+<td>PRiMA (proline-rich membrane anchor) organizes acetylcholinesterase (AChE) into tetramers and anchors them at neuronal/muscle cell membranes; proposed as essentially the sole AChE membrane anchor in brain and muscle</td>
+<td>Perrier, Massoulié, Krejci 2002, Neuron. PMID 11804574 / DOI 10.1016/S0896-6273(01)00584-0</td>
+<td>HOLDS (no pulmonary relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRIMA1</td>
+<td>Gene function (CNS/NMJ)</td>
+<td>Further characterizes PRiMA-linked AChE at vertebrate neuromuscular junctions</td>
+<td>Tsim et al. 2009, Journal of Molecular Neuroscience. PMID 19680821 / DOI 10.1007/s12031-009-9251-2</td>
+<td>HOLDS (no pulmonary relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRIMA1</td>
+<td>Gene function (CNS, Alzheimer's)</td>
+<td>PRiMA processing linked to presenilin-1/γ-secretase and Alzheimer's disease biology</td>
+<td>García-Ayllón et al. 2014, Neurobiology of Aging. PMID 24612677 / DOI 10.1016/j.neurobiolaging.2014.01.147</td>
+<td>HOLDS (no pulmonary relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRIMA1</td>
+<td>Gene function (CNS, psychiatric epigenetics)</td>
+<td>PRIMA1 promoter methylation 1.6-fold higher in borderline personality disorder patients vs. controls</td>
+<td>Teschler et al. 2016, Int J Mol Sci. PMID 26742039 / DOI 10.3390/ijms17010067</td>
+<td>HOLDS (no pulmonary relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRIMA1</td>
+<td>Gene function (CNS/NMJ, supporting)</td>
+<td>P2Y2R-driven cholinergic gene expression program including PRiMA</td>
+<td>Choi et al. 2013, Mol Pharmacol. PMID 23592515</td>
+<td>HOLDS (no pulmonary relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRIMA1</td>
+<td>Gene function (CNS/NMJ, supporting)</td>
+<td>AChE(T)/PRiMA interaction forms G4 AChE in PC12 cells</td>
+<td>Choi et al. 2008, Chemico-Biological Interactions. PMID 18514641</td>
+<td>HOLDS (no pulmonary relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRIMA1</td>
+<td>Gene function (CNS/NMJ, supporting)</td>
+<td>PRiMA anchors butyrylcholinesterase at terminal Schwann cells; cholinergic spillover sensing at NMJ</td>
+<td>Petrov et al. 2014, J Neuroscience. PMID 25186736</td>
+<td>HOLDS (no pulmonary relevance)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not reviewed by citation-verifier or red-team-skeptic)</h2>
+<p><strong>SERPINA1 (ENSG00000197249):</strong></p>
+<ul>
+<li>Genomic location: chr14:94,376,745-94,390,866 (GRCh38) — contains lead/credible-set variant rs28929474 (14:94,378,610).</li>
+<li>Genetic constraint (gnomAD): synonymous z=0.0068; missense z=-0.163 (oe=1.019); pLoF z≈0 (oe=0.794, 90% CI 0.566-1.134) — NOT LoF-constrained, consistent with AATD being a recessive/codominant disease where damaging alleles segregate in the population.</li>
+<li>Target-disease association score (aggregate, all evidence types): Alpha-1-antitrypsin deficiency (Orphanet_60) 0.764; COPD (MONDO_0005002) 0.686; alpha-1-antitrypsin deficiency (MONDO_0013282) 0.607; pulmonary emphysema (MONDO_0004849) 0.565; chronic lung disease (EFO_0009910) 0.522; chronic bronchitis 0.017; airway obstruction 0.017.</li>
+<li>GWAS credible-set/L2G evidence for COPD specifically: 9 evidence rows, L2G-like scores 0.9829-0.9880 (near-maximal) across (at least) 9 distinct COPD GWAS credible sets/studies in Open Targets' corpus. Underlying variant/study IDs not resolvable via the fields exposed in this API version.</li>
+<li>Colocalization: not independently retrievable via the fields explored; L2G score incorporates colocalization as an input feature per Open Targets' model but a standalone coloc statistic could not be pulled.</li>
+</ul>
+<p><strong>PRIMA1 (ENSG00000175785):</strong></p>
+<ul>
+<li>Genomic location: chr14:93,718,298-93,788,994 (GRCh38) — entirely outside the stated locus window (14:94,150,001-94,500,000), ~589.6 kb from the lead variant. Independently confirmed via two structured lookups (Ensembl REST via researcher; Open Targets genomicLocation via orchestrator).</li>
+<li>Genetic constraint (gnomAD): synonymous z=-1.33; missense z=-0.37 (oe=1.088); pLoF z=0.075 (oe=0.534, 90% CI 0.291-1.053) — wide CI, not a robust constraint signal.</li>
+<li>Target-disease association: 114 total disease associations recorded; COPD (MONDO_0005002) does not appear at all in the top 25 by score (top hits: familial sleep-related hypermotor epilepsy 0.47, COVID-19 0.29; idiopathic pulmonary fibrosis appears far down at 0.057).</li>
+<li>GWAS credible-set/L2G evidence for COPD: 0 evidence rows.</li>
+</ul>
+<p><strong>Summary contrast:</strong> Open Targets' structured genetic evidence overwhelmingly favors SERPINA1 (near-maximal L2G ~0.98-0.99 across 9 COPD evidence rows) over PRIMA1 (zero COPD evidence rows despite PoPS prioritization).</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>SERPINA1 — confidence: HIGH.</strong></p>
+<p>SERPINA1 is the clear, well-supported causal gene at this locus. The evidence base is unusually strong for a GWAS locus: (1) the sole credible-set variant, rs28929474 (PIP=0.961), is a missense variant sitting directly in SERPINA1's own coding sequence and is independently and unambiguously identified across multiple verified sources as the Pi<em>Z (Glu342Lys) allele, the classic cause of alpha-1 antitrypsin deficiency; (2) the causal mechanism (loop-sheet polymerization, ER retention in hepatocytes, reduced circulating AAT, unopposed neutrophil elastase activity in the lung) is established by decades of biochemistry (Lomas 1992) and an animal model using the identical amino-acid substitution (Zhang 2019); (3) uniquely for this pipeline, there is interventional/causal evidence — the RAPID RCT (Chapman 2015) showed that restoring circulating AAT via augmentation therapy slows emphysema progression, directly supporting the protease-antiprotease mechanism rather than relying on observational association alone; (4) fine-mapping literature (Thun et al. 2013) independently supports the rare Pi</em>S/Pi*Z variant class — not a broader common-SNP LD block — as the causal driver at this locus, addressing the concern that credible-set/GWAS signals can reflect synthetic associations; (5) Open Targets' structured L2G evidence is near-maximal (~0.98-0.99) across 9 independent COPD evidence rows, corroborating the literature-based case.</p>
+<p>The alternative candidate, PRIMA1 (PoPS-prioritized), is confidently excluded: it lies ~590 kb outside the stated locus window (confirmed via two independent structured lookups), has an exclusively CNS/neuromuscular-junction cholinergic gene function with no pulmonary or immune literature identified across an actively adversarial search, and has zero Open Targets COPD/GWAS evidence. The red-team-skeptic concurred this is a legitimate absence-of-evidence finding (not merely an unsearched gap) and treated PRIMA1's PoPS prioritization itself as the anomaly requiring explanation (a likely PoPS pathway-similarity false-positive) rather than as competing evidence against SERPINA1.</p>
+<p>One important caveat that tempers claims about the underlying GWAS association's population-level mechanism (though it does not change the gene assignment): the case-control COPD/emphysema literature is dominated by studies framed around rare ZZ homozygotes, whereas the GWAS credible-set signal is a population allele-dosage association almost certainly driven predominantly by the much more common Z-allele heterozygotes (PiMZ). At the heterozygote level, spirometric-trait concordance is genuinely contested: some studies support increased COPD/spirometric risk in PiMZ, especially smokers (Molloy 2014), but a large population-based cohort found no main effect (Thun 2012 SAPALDIA) and a very large multi-cohort meta-analysis found the opposite direction of effect on FEV1/FVC (North 2016). This heterogeneity does not undermine SERPINA1 as the causal gene — the molecular mechanism at the ZZ/rare-variant level is undisputed and interventionally validated — but the synthesis should not overstate that the GWAS association itself has been shown to act uniformly through reduced spirometric function at the population (heterozygote) level. Confidence in the gene call remains HIGH; confidence in a single unified mechanistic narrative for the population-level GWAS beta specifically is more moderate, and this nuance is preserved in the audit appendix.</p>
+
+</body>
+</html>
