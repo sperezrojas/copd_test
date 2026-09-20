@@ -1,688 +1,399 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>1_113700001-113900000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 1:113700001-113900000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
-<body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-1113700001-113900000-nearest-gene-rsbn1">Evidence table — Locus 1:113700001-113900000 (nearest gene: RSBN1)</h1>
-<p>Lead credible-set variant: rs6679677 (1:113761186, GRCh38; PIP=0.7537; annotated
-downstream_gene_variant/MODIFIER, nearest gene RSBN1). No FLAMES/MAGMA/PoPS/ABC
-prioritization available for this locus. Candidate genes researched: RSBN1
-(locus-file nearest gene) plus PTPN22 and PHTF1 (added because Open Targets flags
-both as dominant locus-to-gene (L2G) genes at the exact lead variant), and, at lower
-priority, the remaining immediate neighbors AP4B1, DCLRE1B, and BCL2L15.</p>
-<p>All rows below carry a VERIFIED citation verdict (confirmed real, non-retracted, and
-accurately reflecting the source, per citation-verifier). See
-<code>audits/1_113700001-113900000_audit.md</code> for excluded citations, contested/weakened
-gene verdicts, and the reasoning behind them.</p>
-<table>
-<thead>
-<tr>
-<th>Candidate gene</th>
-<th>Evidence type</th>
-<th>Claim</th>
-<th>Source (PMID/DOI)</th>
-<th>Skeptic verdict</th>
-<th>Verified date</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>RSBN1</td>
-<td>Structural/developmental</td>
-<td>Rosbin/RSBN1 is a testis germ-cell-specific nuclear protein expressed in haploid round spermatids; no described lung or immune role.</td>
-<td>PMID 14724137 / DOI 10.1095/biolreprod.103.026096</td>
-<td>HOLDS (as evidence of non-relevance)</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>RSBN1</td>
-<td>Structural/developmental</td>
-<td>RSBN1 functions as an H4K20me2/me3 histone demethylase in mouse spermatogenesis; expression is broader than originally reported (not exclusively testis).</td>
-<td>PMID 34185806 / DOI 10.1371/journal.pone.0253897</td>
-<td>HOLDS (as evidence of non-relevance)</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>RSBN1</td>
-<td>Structural/developmental</td>
-<td>RSBN1/ROSBIN (named human ortholog of a Jumonji-domain H4K20me2 demethylase subfamily) controls higher-order chromosome conformation (TAD formation) and dosage-compensation-linked gene repression — general chromatin biology, no lung/immune application described.</td>
-<td>PMID 28867287 / DOI 10.1016/j.cell.2017.07.041</td>
-<td>HOLDS (as evidence of non-relevance)</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PTPN22</td>
-<td>Statistical genetics</td>
-<td>The locus lead variant rs6679677, labeled &quot;PHTF1-PTPN22 region,&quot; is significantly associated with type 1 diabetes risk in an Estonian cohort (OR=2.13, P=0.00001); does not statistically distinguish PTPN22 from PHTF1 as the causal gene.</td>
-<td>PMID 20089178 / DOI 10.1186/1471-2350-11-11</td>
-<td>CONTESTED (see gene-level verdict)</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PTPN22</td>
-<td>Statistical genetics</td>
-<td>Same lead-variant &quot;PHTF1-PTPN22 region&quot; tag retained in a best-fit type 1 diabetes genetic-risk model but not associated with latent autoimmune diabetes of adulthood (LADA), illustrating disease-subtype specificity.</td>
-<td>PMID 22326526 / DOI 10.1016/j.gene.2012.01.089</td>
-<td>CONTESTED (see gene-level verdict)</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PTPN22</td>
-<td>Statistical genetics</td>
-<td>Fine-mapping shows PTPN22 R620W (rs2476601, a different, nearby coding variant) is the single common causal variant for rheumatoid arthritis risk at this locus, with no independent effect from other regional SNPs (including one tagging BCL2L15).</td>
-<td>PMID 20975833 / DOI 10.1371/journal.pone.0013544</td>
-<td>CONTESTED (see gene-level verdict)</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PTPN22</td>
-<td>Statistical genetics</td>
-<td>PTPN22 R620W (C1858T) is associated with type 1 diabetes independent of INS and HLA-DR status; risk-allele frequency correlates with family history of other autoimmune disease.</td>
-<td>PMID 17259401 / DOI 10.2337/db06-0942</td>
-<td>CONTESTED (see gene-level verdict)</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PTPN22</td>
-<td>Statistical genetics</td>
-<td>PTPN22 R620W is associated with rheumatoid arthritis (OR ~1.8-1.9) but NOT with Crohn's disease in Canadian populations — disease-selective, not blanket autoimmune/inflammatory risk.</td>
-<td>PMID 15986374 / DOI 10.1002/art.21123</td>
-<td>CONTESTED (see gene-level verdict)</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PTPN22</td>
-<td>Statistical genetics</td>
-<td>PTPN22 C1858T shows NO association with inflammatory bowel disease (Crohn's or ulcerative colitis) in a British population — further evidence of disease-selectivity.</td>
-<td>PMID 16185328 / DOI 10.1111/j.1399-0039.2005.00494.x</td>
-<td>CONTESTED (see gene-level verdict)</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PTPN22</td>
-<td>Statistical genetics</td>
-<td>PTPN22 R620W is associated with celiac disease, extending its autoimmune-disease footprint.</td>
-<td>PMID 18194365 / DOI 10.1111/j.1399-0039.2007.01002.x</td>
-<td>CONTESTED (see gene-level verdict)</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PTPN22</td>
-<td>Statistical genetics</td>
-<td>The entire 1p13.2 region spanning RSBN1-PTPN22-AP4B1 and adjacent lncRNA genes shows NO association with endemic pemphigus foliaceus (an autoimmune skin-blistering disease), cautioning against generalizing PTPN22-region autoimmune associations to every immune-mediated phenotype.</td>
-<td>PMID 30884100 / DOI 10.1111/iji.12423</td>
-<td>CONTESTED (cited by skeptic as direct evidence against &quot;PTPN22 = generic autoimmune driver&quot;)</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PTPN22</td>
-<td>Statistical genetics (COPD-specific)</td>
-<td>A COPD bioinformatics/machine-learning study lists PTPN22 among &quot;characteristic genes&quot; correlated with immune-cell infiltration in a COPD gene-expression dataset, but the same paper's own two-sample Mendelian randomization found NO causal relationship between PTPN22 (or the other identified genes) and COPD.</td>
-<td>PMID 39346628 / DOI 10.2147/COPD.S476808</td>
-<td>CONTESTED — skeptic assesses this as net evidence AGAINST a causal PTPN22-COPD link, not supporting evidence, since it is the only direct gene-and-disease-matched test in the dossier and its own causal analysis was null</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PTPN22</td>
-<td>Statistical genetics (pleiotropy)</td>
-<td>FinnGen genomic-SEM analysis identifies PTPN22 as one of 16 genes at loci overlapping a shared cardiovascular-disease/comorbidity latent genetic factor whose constituent traits include COPD, asthma, T2D, obesity, depression, and hypertension — pleiotropic, not COPD-specific.</td>
-<td>PMID 41299637 / DOI 10.1186/s12920-025-02279-1</td>
-<td>HOLDS as the most defensible (but explicitly non-COPD-specific) line of evidence for PTPN22, per skeptic</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PTPN22</td>
-<td>Immunology/inflammation</td>
-<td>The PTPN22 1858T (R620W) risk allele drives expansion of a cytotoxic EOMES+ CD4+ T-cell subset in human carriers and in rheumatoid arthritis synovial fluid, without altering conventional Th1/Th17/Tfh/Treg subset frequencies.</td>
-<td>PMID 29388193 / DOI 10.1002/eji.201747296</td>
-<td>CONTESTED — skeptic flags this as cross-tissue (synovium, not lung) and arguably wrong-cell-type extrapolation relative to COPD-relevant CD8+ T-cell/macrophage/neutrophil biology</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PTPN22</td>
-<td>Immunology/inflammation</td>
-<td>In a mouse hepatic-injury model, IL-10 induces PTPN22 expression in Kupffer cells (liver-resident macrophages), driving anti-inflammatory M2 macrophage polarization.</td>
-<td>PMID 35095903 / DOI 10.3389/fimmu.2021.811164</td>
-<td>CONTESTED — skeptic flags this as cross-tissue (liver, not lung) extrapolation</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PHTF1</td>
-<td>Statistical genetics</td>
-<td>Same lead-variant &quot;PHTF1-PTPN22 region&quot; T1D association as above (PMID 20089178, 22326526); cannot statistically separate PHTF1 from PTPN22 as the causal gene.</td>
-<td>PMID 20089178 / DOI 10.1186/1471-2350-11-11; PMID 22326526 / DOI 10.1016/j.gene.2012.01.089</td>
-<td>WEAKENED (see gene-level verdict)</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PHTF1</td>
-<td>Statistical genetics</td>
-<td>A GWAS-supported non-MHC gene panel including PHTF1 was tested for replication with autoimmune thyroiditis in Chinese Han type 1 diabetes patients; the specific SNP reaching significance (rs7679475) is in the BCL2L15/GPR103 region, not PHTF1's own tag SNP — partial/non-replication for PHTF1 itself.</td>
-<td>PMID 34234497 / DOI 10.2147/DMSO.S319630</td>
-<td>WEAKENED (see gene-level verdict)</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PHTF1</td>
-<td>Statistical genetics</td>
-<td>In a Japanese population (where PTPN22 R620W is monomorphic), PHTF1's own tag SNP (rs1111695) shows NO significant association with autoimmune thyroid disease; BCL2L15/GPR103-tagging SNPs were significant instead.</td>
-<td>PMID 27486433 / DOI 10.3389/fendo.2016.00092</td>
-<td>WEAKENED — skeptic treats this as a discriminating null pointing away from PHTF1, not merely &quot;partial&quot; support</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PHTF1</td>
-<td>Statistical genetics</td>
-<td>Gene-based GWAS analysis identifies PHTF1 (not PTPN22) as a &quot;European-specific&quot; rheumatoid-arthritis-associated gene with differential expression validated in RA patients vs. controls across multiple datasets.</td>
-<td>PMID 27898717 / DOI 10.1371/journal.pone.0167212</td>
-<td>WEAKENED (only finding cutting toward, rather than away from, PHTF1 per skeptic)</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PHTF1</td>
-<td>Statistical genetics (mechanism, unrelated trait)</td>
-<td>A breast-cancer-risk SNP (unrelated trait) is associated with differential transcript-isoform expression of the neighboring DCLRE1B/PHTF1 gene pair — general regulatory/splicing precedent only.</td>
-<td>PMID 26472073 / DOI 10.1093/hmg/ddv432</td>
-<td>HOLDS as background mechanism only, not disease evidence</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>PHTF1</td>
-<td>Immunology/inflammation (unrelated disease context)</td>
-<td>PHTF1 is overexpressed in T-cell and B-cell acute lymphoblastic leukemia vs. healthy controls; overexpression inhibits proliferation and induces apoptosis in T-ALL cell lines via a PHTF1-FEM1B-Apaf-1 pathway.</td>
-<td>PMID 26448723 / DOI 10.1186/s12935-015-0242-9</td>
-<td>HOLDS as background cell-biology only, not inflammatory/autoimmune-disease evidence</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>AP4B1</td>
-<td>Structural/developmental</td>
-<td>AP4B1 loss-of-function causes a rare monogenic neurodevelopmental disease (hereditary spastic paraplegia type 47, SPG47); modeled in ap4b1-/- zebrafish showing axonal and motor abnormalities.</td>
-<td>PMID 40267240 / DOI 10.1093/hmg/ddaf056</td>
-<td>HOLDS (as evidence of non-relevance to COPD)</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>DCLRE1B</td>
-<td>Structural/developmental</td>
-<td>DCLRE1B/Apollo/SNM1B nuclease functions in telomere maintenance and Hoyeraal-Hreidarsson syndrome; hereditary telomere-maintenance defects AS A DISEASE CLASS (not DCLRE1B-specifically) can manifest as bone marrow failure or pulmonary fibrosis — a distinct, restrictive lung disease from COPD/airflow obstruction.</td>
-<td>PMID 21647296 / DOI 10.4161/nucl.2.1.13993</td>
-<td>HOLDS (disease-class-level statement correctly not conflated with COPD by researcher)</td>
-<td>2026-09-11</td>
-</tr>
-<tr>
-<td>BCL2L15</td>
-<td>Structural/developmental</td>
-<td>BCL2L15 (Bfk), a pro-apoptotic BCL-2-family protein, is predominantly expressed in gastrointestinal tract tissue (not lung), with reduced pro-apoptotic isoform expression during GI malignant transformation.</td>
-<td>PMID 15961081 / DOI 10.1016/j.febslet.2005.05.050</td>
-<td>HOLDS (as evidence of non-relevance to COPD)</td>
-<td>2026-09-11</td>
-</tr>
-</tbody>
-</table>
-<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
-<p>Lead credible-set variant: rs6679677 (Open Targets variant ID <code>1_113761186_C_A</code>), which
-has 356 recorded GWAS credible sets in Open Targets. None of the 356 are for COPD or a
-spirometric trait (FEV1, FEV1/FVC).</p>
-<table>
-<thead>
-<tr>
-<th>Gene</th>
-<th>L2G at lead variant</th>
-<th>COPD association (OT)</th>
-<th>Smoking-initiation genetic_association score</th>
-<th>Constraint (gnomAD LoF oe, upper bound)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>RSBN1</td>
-<td>Essentially never top L2G gene across 356 studies (appears once, 3rd place, score 0.087, for a hypothyroidism GWAS)</td>
-<td>No record (count=0)</td>
-<td>0.105 (weak)</td>
-<td>oe=0.355, upper=0.507</td>
-</tr>
-<tr>
-<td>PTPN22</td>
-<td>Top L2G gene for the large majority of the 356 studies (scores ~0.7-0.9), overwhelmingly autoimmune-disease and blood-cell-count traits; one airway-adjacent trait &quot;Asthma or chronic rhinosinusitis&quot; (L2G=0.718)</td>
-<td>Score 0.0126, literature-datatype only, no genetic_association evidence</td>
-<td>0.064 (weak)</td>
-<td>oe=0.754, upper=0.944 (unconstrained)</td>
-</tr>
-<tr>
-<td>PHTF1</td>
-<td>Top L2G gene for a smaller recurring subset (several Graves'-disease/hypothyroidism cohorts, aging/parental-lifespan, heart failure, some bone-mineral-density cohorts)</td>
-<td>No record (count=0)</td>
-<td>0.440 (strongest of the six genes queried, but unconfirmed by any primary smoking-GWAS publication)</td>
-<td>oe=0.749, upper=0.993 (unconstrained)</td>
-</tr>
-<tr>
-<td>AP4B1</td>
-<td>Not a top L2G gene in any of the 356 studies reviewed</td>
-<td>No record (count=0)</td>
-<td>not separately queried</td>
-<td>oe=0.612, upper=0.777</td>
-</tr>
-<tr>
-<td>DCLRE1B</td>
-<td>Top L2G gene for two unrelated non-pulmonary traits (&quot;Breast cancer luminal A,&quot; &quot;Congestive heart failure&quot;)</td>
-<td>No record (count=0)</td>
-<td>not separately queried</td>
-<td>oe=0.276, upper=0.545 (most constrained of the six)</td>
-</tr>
-<tr>
-<td>BCL2L15</td>
-<td>Not a top L2G gene in any of the 356 studies reviewed</td>
-<td>Score 0.0081, literature-datatype only, no genetic_association evidence</td>
-<td>not separately queried</td>
-<td>oe=0.801, upper=1.234 (unconstrained)</td>
-</tr>
-</tbody>
-</table>
-<p>Full narrative detail is in <code>evidence_tables/_status/1_113700001-113900000/opentargets.md</code>.</p>
-<h2 id="prioritized-gene-synthesis">Prioritized-gene synthesis</h2>
-<p><strong>Prioritized gene: PTPN22 — Confidence: LOW</strong></p>
-<p>None of the six genes assessed at this locus has direct, gene-specific, causal COPD or
-spirometric-trait evidence. Across 356 independent GWAS credible sets sharing the lead
-variant rs6679677, zero are for COPD or a spirometric trait (FEV1, FEV1/FVC) — a
-strikingly complete absence of lung-biology concordance (prior #2), and the one
-COPD-specific, gene-and-disease-matched test available (Cao et al. 2024, PMID
-39346628) found no causal effect of PTPN22 on COPD by its own Mendelian
-randomization, only a confounded observational correlation with immune-cell
-infiltration. Red-team-skeptic marked PTPN22's evidence CONTESTED overall for exactly
-this reason, and marked PHTF1's autoimmune-genetics case WEAKENED (Ban et al. 2016,
-PMID 27486433, is a discriminating null for PHTF1's own tag SNP in a population where
-PTPN22 R620W cannot confound the result). RSBN1 — the locus file's actual nearest-gene
-candidate — has no lung, immune, or COPD literature of any kind and is essentially
-never the top Open Targets L2G gene at this variant; its established biology
-(spermatogenesis-specific H4K20 demethylase) offers no plausible mechanism.</p>
-<p>Despite this, if forced to name a single most-likely-relevant gene for the study team
-to weigh, PTPN22 is the best-supported pick: it is overwhelmingly the top
-locus-to-gene (L2G) assigned gene at the lead variant across the vast majority of the
-356 associated studies, has the deepest and most repeatedly replicated regional
-statistical-genetics evidence of any of the six genes (via its coding variant R620W,
-for T1D, RA, celiac disease), documented (if lung-tissue-unconfirmed) T-cell and
-macrophage immunobiology that is at least mechanistically plausible for COPD's known
-immune complexity (prior #3), and appears as one of 16 genes in a FinnGen pleiotropic
-comorbidity factor that includes COPD (Mishra &amp; Mishra 2025, PMID 41299637). PHTF1 is
-the runner-up, on the strength of its distinct (if only partially replicated)
-autoimmune-genetics signal and the highest Open Targets smoking-initiation score among
-the genes assessed — but per the skeptic's critique, that smoking-initiation score is
-an unconfirmed aggregate metric, not a literature-verified smoking-GWAS finding, and is
-subject to the same LD/nearest-gene attribution ambiguity that clouds the whole locus.</p>
-<p><strong>What would resolve this call:</strong> a COPD- or FEV1/FEV1-FVC-specific GWAS colocalization
-or fine-mapping result at this exact locus that discriminates between PTPN22 and PHTF1
-(analogous to how Ban et al. 2016 discriminated PHTF1 from PTPN22 for autoimmune
-thyroid disease using a population where R620W is monomorphic); a positive, verified
-smoking-initiation or smoking-heaviness GWAS hit naming PTPN22 or PHTF1 specifically at
-this variant; or COPD-relevant single-cell/tissue data (airway epithelium, alveolar
-macrophage, or CD8+ T-cell) for either gene, rather than the synovial/hepatic tissue
-evidence available today. Absent that, this locus should be reported to the study team
-as an autoimmune/blood-cell-trait locus (most likely driven by PTPN22 R620W for those
-traits) with, at best, a weak and unconfirmed pleiotropic or smoking-behavior link to
-COPD — not as a locus with an established COPD mechanism.</p>
 
+<body>
+
+	<div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+	<div id="main-content">
+        <div class="content-card">
+            <h1>Evidence table — Locus 1:113700001-113900000 (nearest gene: RSBN1)</h1>
+
+			<div class="summary">
+                Lead credible-set variant: rs6679677 (1:113761186, GRCh38; PIP=0.7537; annotated
+				downstream_gene_variant/MODIFIER, nearest gene RSBN1). No FLAMES/MAGMA/PoPS/ABC
+				prioritization available for this locus. Candidate genes researched: <strong>RSBN1</strong>
+				(locus-file nearest gene) plus <strong>PTPN22</strong> and <strong>PHTF1</strong> (added because Open Targets flags
+				both as dominant locus-to-gene (L2G) genes at the exact lead variant), and, at lower
+				priority, the remaining immediate neighbors <strong>AP4B1</strong>, <strong>DCLRE1B</strong>, and <strong>BCL2L15</strong>.
+            </div>
+
+			<p>All rows below carry a VERIFIED citation verdict (confirmed real, non-retracted, and
+			accurately reflecting the source, per citation-verifier). See
+			<code>audits/1_113700001-113900000_audit.md</code> for excluded citations, contested/weakened
+			gene verdicts, and the reasoning behind them.</p>
+
+			<div class="evidence-table-wrapper">
+                <table class="evidence-table">
+                    <thead>
+                        <tr>
+                            <th>Gene</th>
+                            <th>Evidence Type</th>
+                            <th>Claim</th>
+                            <th>Source</th>
+                            <th>Verdict</th>
+                            <th>Verified Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="gene">RSBN1</td>
+							<td>Structural/developmental</td>
+							<td>Rosbin/RSBN1 is a testis germ-cell-specific nuclear protein expressed in haploid round spermatids; no described lung or immune role.</td>
+							<td>PMID 14724137 / DOI 10.1095/biolreprod.103.026096</td>
+							<td><span class="tag-hold">HOLDS</span> (as evidence of non-relevance)</td>
+							<td>2026-09-11</td>
+                        </tr>
+						<tr>
+							<td class="gene">RSBN1</td>
+							<td>Structural/developmental</td>
+							<td>RSBN1 functions as an H4K20me2/me3 histone demethylase in mouse spermatogenesis; expression is broader than originally reported (not exclusively testis).</td>
+							<td>PMID 34185806 / DOI 10.1371/journal.pone.0253897</td>
+							<td><span class="tag-hold">HOLDS</span> (as evidence of non-relevance)</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">RSBN1</td>
+							<td>Structural/developmental</td>
+							<td>RSBN1 functions as an H4K20me2/me3 histone demethylase in mouse spermatogenesis; expression is broader than originally reported (not exclusively testis).</td>
+							<td>PMID 34185806 / DOI 10.1371/journal.pone.0253897</td>
+							<td><span class="tag-hold">HOLDS</span> (as evidence of non-relevance)</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">RSBN1</td>
+							<td>Structural/developmental</td>
+							<td>RSBN1/ROSBIN (named human ortholog of a Jumonji-domain H4K20me2 demethylase subfamily) controls higher-order chromosome conformation (TAD formation) and dosage-compensation-linked gene repression — general chromatin biology, no lung/immune application described.</td>
+							<td>PMID 28867287 / DOI 10.1016/j.cell.2017.07.041</td>
+							<td><span class="tag-hold">HOLDS</span> (as evidence of non-relevance)</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PTPN22</td>
+							<td>Statistical genetics</td>
+							<td>The locus lead variant rs6679677, labeled &quot;PHTF1-PTPN22 region,&quot; is significantly associated with type 1 diabetes risk in an Estonian cohort (OR=2.13, P=0.00001); does not statistically distinguish PTPN22 from PHTF1 as the causal gene.</td>
+							<td>PMID 20089178 / DOI 10.1186/1471-2350-11-11</td>
+							<td><span class="tag-warning">CONTESTED</span> (see gene-level verdict)</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PTPN22</td>
+							<td>Statistical genetics</td>
+							<td>Same lead-variant &quot;PHTF1-PTPN22 region&quot; tag retained in a best-fit type 1 diabetes genetic-risk model but not associated with latent autoimmune diabetes of adulthood (LADA), illustrating disease-subtype specificity.</td>
+							<td>PMID 22326526 / DOI 10.1016/j.gene.2012.01.089</td>
+							<td><span class="tag-warning">CONTESTED</span> (see gene-level verdict)</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PTPN22</td>
+							<td>Statistical genetics</td>
+							<td>Fine-mapping shows PTPN22 R620W (rs2476601, a different, nearby coding variant) is the single common causal variant for rheumatoid arthritis risk at this locus, with no independent effect from other regional SNPs (including one tagging BCL2L15).</td>
+							<td>PMID 20975833 / DOI 10.1371/journal.pone.0013544</td>
+							<td><span class="tag-warning">CONTESTED</span> (see gene-level verdict)</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PTPN22</td>
+							<td>Statistical genetics</td>
+							<td>PTPN22 R620W (C1858T) is associated with type 1 diabetes independent of INS and HLA-DR status; risk-allele frequency correlates with family history of other autoimmune disease.</td>
+							<td>PMID 17259401 / DOI 10.2337/db06-0942</td>
+							<td><span class="tag-warning">CONTESTED</span> (see gene-level verdict)</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PTPN22</td>
+							<td>Statistical genetics</td>
+							<td>PTPN22 R620W is associated with rheumatoid arthritis (OR ~1.8-1.9) but NOT with Crohn's disease in Canadian populations — disease-selective, not blanket autoimmune/inflammatory risk.</td>
+							<td>PMID 15986374 / DOI 10.1002/art.21123</td>
+							<td><span class="tag-warning">CONTESTED</span> (see gene-level verdict)</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PTPN22</td>
+							<td>Statistical genetics</td>
+							<td>PTPN22 C1858T shows NO association with inflammatory bowel disease (Crohn's or ulcerative colitis) in a British population — further evidence of disease-selectivity.</td>
+							<td>PMID 16185328 / DOI 10.1111/j.1399-0039.2005.00494.x</td>
+							<td><span class="tag-warning">CONTESTED</span> (see gene-level verdict)</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PTPN22</td>
+							<td>Statistical genetics</td>
+							<td>PTPN22 R620W is associated with celiac disease, extending its autoimmune-disease footprint.</td>
+							<td>PMID 18194365 / DOI 10.1111/j.1399-0039.2007.01002.x</td>
+							<td><span class="tag-warning">CONTESTED</span> (see gene-level verdict)</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PTPN22</td>
+							<td>Statistical genetics</td>
+							<td>The entire 1p13.2 region spanning RSBN1-PTPN22-AP4B1 and adjacent lncRNA genes shows NO association with endemic pemphigus foliaceus (an autoimmune skin-blistering disease), cautioning against generalizing PTPN22-region autoimmune associations to every immune-mediated phenotype.</td>
+							<td>PMID 30884100 / DOI 10.1111/iji.12423</td>
+							<td><span class="tag-warning">CONTESTED</span> (cited by skeptic as direct evidence against &quot;PTPN22 = generic autoimmune driver&quot;)</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PTPN22</td>
+							<td>Statistical genetics (COPD-specific)</td>
+							<td>A COPD bioinformatics/machine-learning study lists PTPN22 among &quot;characteristic genes&quot; correlated with immune-cell infiltration in a COPD gene-expression dataset, but the same paper's own two-sample Mendelian randomization found NO causal relationship between PTPN22 (or the other identified genes) and COPD.</td>
+							<td>PMID 39346628 / DOI 10.2147/COPD.S476808</td>
+							<td><span class="tag-warning">CONTESTED</span> — skeptic assesses this as net evidence AGAINST a causal PTPN22-COPD link, not supporting evidence, since it is the only direct gene-and-disease-matched test in the dossier and its own causal analysis was null</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PTPN22</td>
+							<td>Statistical genetics (pleiotropy)</td>
+							<td>FinnGen genomic-SEM analysis identifies PTPN22 as one of 16 genes at loci overlapping a shared cardiovascular-disease/comorbidity latent genetic factor whose constituent traits include COPD, asthma, T2D, obesity, depression, and hypertension — pleiotropic, not COPD-specific.</td>
+							<td>PMID 41299637 / DOI 10.1186/s12920-025-02279-1</td>
+							<td><span class="tag-hold">HOLDS</span> as the most defensible (but explicitly non-COPD-specific) line of evidence for PTPN22, per skeptic</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PTPN22</td>
+							<td>Immunology/inflammation</td>
+							<td>The PTPN22 1858T (R620W) risk allele drives expansion of a cytotoxic EOMES+ CD4+ T-cell subset in human carriers and in rheumatoid arthritis synovial fluid, without altering conventional Th1/Th17/Tfh/Treg subset frequencies.</td>
+							<td>PMID 29388193 / DOI 10.1002/eji.201747296</td>
+							<td><span class="tag-warning">CONTESTED</span> — skeptic flags this as cross-tissue (synovium, not lung) and arguably wrong-cell-type extrapolation relative to COPD-relevant CD8+ T-cell/macrophage/neutrophil biology</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PTPN22</td>
+							<td>Immunology/inflammation</td>
+							<td>In a mouse hepatic-injury model, IL-10 induces PTPN22 expression in Kupffer cells (liver-resident macrophages), driving anti-inflammatory M2 macrophage polarization.</td>
+							<td>PMID 35095903 / DOI 10.3389/fimmu.2021.811164</td>
+							<td><span class="tag-warning">CONTESTED</span> — skeptic flags this as cross-tissue (liver, not lung) extrapolation</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PHTF1</td>
+							<td>Statistical genetics</td>
+							<td>Same lead-variant &quot;PHTF1-PTPN22 region&quot; T1D association as above (PMID 20089178, 22326526); cannot statistically separate PHTF1 from PTPN22 as the causal gene.</td>
+							<td>PMID 20089178 / DOI 10.1186/1471-2350-11-11; PMID 22326526 / DOI 10.1016/j.gene.2012.01.089</td>
+							<td><span class="tag-warning">WEAKENED</span> (see gene-level verdict)</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PHTF1</td>
+							<td>Statistical genetics</td>
+							<td>A GWAS-supported non-MHC gene panel including PHTF1 was tested for replication with autoimmune thyroiditis in Chinese Han type 1 diabetes patients; the specific SNP reaching significance (rs7679475) is in the BCL2L15/GPR103 region, not PHTF1's own tag SNP — partial/non-replication for PHTF1 itself.</td>
+							<td>PMID 34234497 / DOI 10.2147/DMSO.S319630</td>
+							<td><span class="tag-warning">WEAKENED</span> (see gene-level verdict)</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PHTF1</td>
+							<td>Statistical genetics</td>
+							<td>In a Japanese population (where PTPN22 R620W is monomorphic), PHTF1's own tag SNP (rs1111695) shows NO significant association with autoimmune thyroid disease; BCL2L15/GPR103-tagging SNPs were significant instead.</td>
+							<td>PMID 27486433 / DOI 10.3389/fendo.2016.00092</td>
+							<td><span class="tag-warning">WEAKENED</span> — skeptic treats this as a discriminating null pointing away from PHTF1, not merely &quot;partial&quot; support</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PHTF1</td>
+							<td>Statistical genetics</td>
+							<td>Gene-based GWAS analysis identifies PHTF1 (not PTPN22) as a &quot;European-specific&quot; rheumatoid-arthritis-associated gene with differential expression validated in RA patients vs. controls across multiple datasets.</td>
+							<td>PMID 27898717 / DOI 10.1371/journal.pone.0167212</td>
+							<td><span class="tag-warning">WEAKENED</span> (only finding cutting toward, rather than away from, PHTF1 per skeptic)</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PHTF1</td>
+							<td>Statistical genetics (mechanism, unrelated trait)</td>
+							<td>A breast-cancer-risk SNP (unrelated trait) is associated with differential transcript-isoform expression of the neighboring DCLRE1B/PHTF1 gene pair — general regulatory/splicing precedent only.</td>
+							<td>PMID 26472073 / DOI 10.1093/hmg/ddv432</td>
+							<td><span class="tag-hold">HOLDS</span> as background mechanism only, not disease evidence</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">PHTF1</td>
+							<td>Immunology/inflammation (unrelated disease context)</td>
+							<td>PHTF1 is overexpressed in T-cell and B-cell acute lymphoblastic leukemia vs. healthy controls; overexpression inhibits proliferation and induces apoptosis in T-ALL cell lines via a PHTF1-FEM1B-Apaf-1 pathway.</td>
+							<td>PMID 26448723 / DOI 10.1186/s12935-015-0242-9</td>
+							<td><span class="tag-hold">HOLDS</span> as background cell-biology only, not inflammatory/autoimmune-disease evidence</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">AP4B1</td>
+							<td>Structural/developmental</td>
+							<td>AP4B1 loss-of-function causes a rare monogenic neurodevelopmental disease (hereditary spastic paraplegia type 47, SPG47); modeled in ap4b1-/- zebrafish showing axonal and motor abnormalities.</td>
+							<td>PMID 40267240 / DOI 10.1093/hmg/ddaf056</td>
+							<td><span class="tag-hold">HOLDS</span> (as evidence of non-relevance to COPD)</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">DCLRE1B</td>
+							<td>Structural/developmental</td>
+							<td>DCLRE1B/Apollo/SNM1B nuclease functions in telomere maintenance and Hoyeraal-Hreidarsson syndrome; hereditary telomere-maintenance defects AS A DISEASE CLASS (not DCLRE1B-specifically) can manifest as bone marrow failure or pulmonary fibrosis — a distinct, restrictive lung disease from COPD/airflow obstruction.</td>
+							<td>PMID 21647296 / DOI 10.4161/nucl.2.1.13993</td>
+							<td><span class="tag-hold">HOLDS</span> (disease-class-level statement correctly not conflated with COPD by researcher)</td>
+							<td>2026-09-11</td>
+						</tr>
+						<tr>
+							<td class="gene">BCL2L15</td>
+							<td>Structural/developmental</td>
+							<td>BCL2L15 (Bfk), a pro-apoptotic BCL-2-family protein, is predominantly expressed in gastrointestinal tract tissue (not lung), with reduced pro-apoptotic isoform expression during GI malignant transformation.</td>
+							<td>PMID 15961081 / DOI 10.1016/j.febslet.2005.05.050</td>
+							<td><span class="tag-hold">HOLDS</span> (as evidence of non-relevance to COPD)</td>
+							<td>2026-09-11</td>
+						</tr>
+                    </tbody>
+                </table>
+            </div>
+			
+			<h2>Open Targets Summary</h2>
+            <p style="margin-bottom: 20px;">
+                <i><small>(structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</small></i>
+            </p>
+
+			<p>Lead credible-set variant: rs6679677 (Open Targets variant ID <code>1_113761186_C_A</code>), which
+			has 356 recorded GWAS credible sets in Open Targets. None of the 356 are for COPD or a
+			spirometric trait (FEV1, FEV1/FVC).</p>
+
+			<div class="evidence-table-wrapper">
+				<table class="evidence-table">
+					<thead>
+						<tr>
+							<th>Gene</th>
+							<th>L2G at lead variant</th>
+							<th>COPD association (OT)</th>
+							<th>Smoking-initiation genetic_association score</th>
+							<th>Constraint (gnomAD LoF oe, upper bound)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="gene">RSBN1</td>
+							<td>Essentially never top L2G gene across 356 studies (appears once, 3rd place, score 0.087, for a hypothyroidism GWAS)</td>
+							<td>No record (count=0)</td>
+							<td>0.105 (weak)</td>
+							<td>oe=0.355, upper=0.507</td>
+						</tr>
+						<tr>
+							<td class="gene">PTPN22</td>
+							<td>Top L2G gene for the large majority of the 356 studies (scores ~0.7-0.9), overwhelmingly autoimmune-disease and blood-cell-count traits; one airway-adjacent trait &quot;Asthma or chronic rhinosinusitis&quot; (L2G=0.718)</td>
+							<td>Score 0.0126, literature-datatype only, no genetic_association evidence</td>
+							<td>0.064 (weak)</td>
+							<td>oe=0.754, upper=0.944 (unconstrained)</td>
+						</tr>
+						<tr>
+							<td class="gene">PHTF1</td>
+							<td>Top L2G gene for a smaller recurring subset (several Graves'-disease/hypothyroidism cohorts, aging/parental-lifespan, heart failure, some bone-mineral-density cohorts)</td>
+							<td>No record (count=0)</td>
+							<td>0.440 (strongest of the six genes queried, but unconfirmed by any primary smoking-GWAS publication)</td>
+							<td>oe=0.749, upper=0.993 (unconstrained)</td>
+						</tr>
+						<tr>
+							<td class="gene">AP4B1</td>
+							<td>Not a top L2G gene in any of the 356 studies reviewed</td>
+							<td>No record (count=0)</td>
+							<td>not separately queried</td>
+							<td>oe=0.612, upper=0.777</td>
+						</tr>
+						<tr>
+							<td class="gene">DCLRE1B</td>
+							<td>Top L2G gene for two unrelated non-pulmonary traits (&quot;Breast cancer luminal A,&quot; &quot;Congestive heart failure&quot;)</td>
+							<td>No record (count=0)</td>
+							<td>not separately queried</td>
+							<td>oe=0.276, upper=0.545 (most constrained of the six)</td>
+						</tr>
+						<tr>
+							<td class="gene">BCL2L15</td>
+							<td>Not a top L2G gene in any of the 356 studies reviewed</td>
+							<td>Score 0.0081, literature-datatype only, no genetic_association evidence</td>
+							<td>not separately queried</td>
+							<td>oe=0.801, upper=1.234 (unconstrained)</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<h2>Prioritized-gene synthesis</h2>
+
+			<p><strong>Prioritized gene: PTPN22 — Confidence: LOW</strong></p>
+			<p>None of the six genes assessed at this locus has direct, gene-specific, causal COPD or
+			spirometric-trait evidence. Across 356 independent GWAS credible sets sharing the lead
+			variant rs6679677, zero are for COPD or a spirometric trait (FEV1, FEV1/FVC) — a
+			strikingly complete absence of lung-biology concordance (prior #2), and the one
+			COPD-specific, gene-and-disease-matched test available (Cao et al. 2024, PMID
+			39346628) found no causal effect of PTPN22 on COPD by its own Mendelian
+			randomization, only a confounded observational correlation with immune-cell
+			infiltration. Red-team-skeptic marked PTPN22's evidence CONTESTED overall for exactly
+			this reason, and marked PHTF1's autoimmune-genetics case WEAKENED (Ban et al. 2016,
+			PMID 27486433, is a discriminating null for PHTF1's own tag SNP in a population where
+			PTPN22 R620W cannot confound the result). RSBN1 — the locus file's actual nearest-gene
+			candidate — has no lung, immune, or COPD literature of any kind and is essentially
+			never the top Open Targets L2G gene at this variant; its established biology
+			(spermatogenesis-specific H4K20 demethylase) offers no plausible mechanism.</p>
+			<p>Despite this, if forced to name a single most-likely-relevant gene for the study team
+			to weigh, PTPN22 is the best-supported pick: it is overwhelmingly the top
+			locus-to-gene (L2G) assigned gene at the lead variant across the vast majority of the
+			356 associated studies, has the deepest and most repeatedly replicated regional
+			statistical-genetics evidence of any of the six genes (via its coding variant R620W,
+			for T1D, RA, celiac disease), documented (if lung-tissue-unconfirmed) T-cell and
+			macrophage immunobiology that is at least mechanistically plausible for COPD's known
+			immune complexity (prior #3), and appears as one of 16 genes in a FinnGen pleiotropic
+			comorbidity factor that includes COPD (Mishra &amp; Mishra 2025, PMID 41299637). PHTF1 is
+			the runner-up, on the strength of its distinct (if only partially replicated)
+			autoimmune-genetics signal and the highest Open Targets smoking-initiation score among
+			the genes assessed — but per the skeptic's critique, that smoking-initiation score is
+			an unconfirmed aggregate metric, not a literature-verified smoking-GWAS finding, and is
+			subject to the same LD/nearest-gene attribution ambiguity that clouds the whole locus.</p>
+
+			<p><strong>What would resolve this call:</strong> a COPD- or FEV1/FEV1-FVC-specific GWAS colocalization
+			or fine-mapping result at this exact locus that discriminates between PTPN22 and PHTF1
+			(analogous to how Ban et al. 2016 discriminated PHTF1 from PTPN22 for autoimmune
+			thyroid disease using a population where R620W is monomorphic); a positive, verified
+			smoking-initiation or smoking-heaviness GWAS hit naming PTPN22 or PHTF1 specifically at
+			this variant; or COPD-relevant single-cell/tissue data (airway epithelium, alveolar
+			macrophage, or CD8+ T-cell) for either gene, rather than the synovial/hepatic tissue
+			evidence available today. Absent that, this locus should be reported to the study team
+			as an autoimmune/blood-cell-trait locus (most likely driven by PTPN22 R620W for those
+			traits) with, at best, a weak and unconfirmed pleiotropic or smoking-behavior link to
+			COPD — not as a locus with an established COPD mechanism.</p>
+
+		</div>
+	</div>
 </body>
 </html>
