@@ -19,6 +19,7 @@ body{
     overflow:hidden;
     background:var(--bg);
     color:var(--text);
+    margin: 0;
 }
 
 #sidebar{
@@ -338,4 +339,67 @@ code {
 /* Utility: hidden */
 .hidden {
   display: none !important;
+}
+
+.summary {
+    margin-bottom: 18px;
+}
+
+.evidence-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.evidence-table th,
+.evidence-table td {
+    padding: 12px 14px;
+    vertical-align: top;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.evidence-table thead th {
+    background: #f8fafc;
+    color: #1e293b;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.evidence-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.evidence-table .gene {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    background: #e7f3ff;
+    color: #0969da;
+}
+
+.tag.warning {
+    background: #fff3e0;
+    color: #b45309;
+}
+
+@media (max-width: 800px) {
+    .content-card {
+        padding: 20px;
+    }
+
+    .evidence-table {
+        display: block;
+        overflow-x: auto;
+    }
 }
