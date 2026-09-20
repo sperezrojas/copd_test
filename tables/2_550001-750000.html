@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2_550001-750000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-2550001-750000-grch38">Evidence table — locus 2:550,001-750,000 (GRCh38)</h1>
+<ul>
+<li><strong>Lead variant:</strong> rs4423631 (PIP=0.0368, top of a broad, flat 173-variant credible set;
+no GWAS Catalog trait associations of any kind and zero PubMed hits for this specific
+SNP)</li>
+<li><strong>Candidate genes:</strong> TMEM18 (nearest gene; FLAMES-prioritized; PoPS-prioritized; MAGMA
+NA; ABC NA). Confirmed via independent Ensembl regional gene enumeration to be the
+<strong>sole protein-coding gene</strong> in the 2:550,001-750,000 interval (all other 15 annotated
+features are lncRNA/TEC transcripts, e.g. TMEM18-DT, LINC01115).</li>
+<li><strong>Credible set architecture:</strong> 173 variants, ALL noncoding (intergenic /
+upstream_gene_variant / downstream_gene_variant / intron_variant(non-coding-transcript) /
+non_coding_transcript_exon_variant, impact=MODIFIER only). No missense, splice-donor, or
+splice-acceptor variant anywhere in the set. Per pipeline scope, only the lead variant
+was searched individually; the remainder was rolled into gene-level evidence for TMEM18.</li>
+</ul>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TMEM18</td>
+<td>Statistical genetics — variant lookup</td>
+<td>Lead variant rs4423631 has zero PubMed hits and zero GWAS Catalog trait associations (not BMI, not smoking, not COPD); it is a distinct SNP from the well-established TMEM18 BMI lead SNPs (e.g. rs6548238), consistent with a broad, flat, low-confidence credible set.</td>
+<td>GWAS Catalog / PubMed lookup (no PMID; direct database query by researcher)</td>
+<td>WEAKENED (part of overall gene verdict; skeptic notes this &quot;puzzle&quot; is statistically unremarkable in a large flat LD block and should not be over-weighted either for or against BMI-pleiotropy)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM18</td>
+<td>Statistical genetics — BMI-pathway MR / composite instrument</td>
+<td>Mendelian randomization study (~113,000 Danes) using a 5-SNP weighted BMI allele score (FTO rs9939609, MC4R rs17782313, <strong>TMEM18 rs6548238</strong>, rs10767664, rs10938397) plus a CHRNA3/5 smoking-heaviness SNP (rs1051730): genetically higher BMI causally increases COPD risk, and combined high-BMI-score + high-smoking-score confers the highest COPD risk (joint/synergistic effect). <strong>Skeptic-mandated reframing: this is BMI-pathway/composite-instrument evidence — TMEM18 is one of five unweighted SNPs, not studied individually — not TMEM18-specific evidence of COPD biology.</strong></td>
+<td>Mikkelsen et al. 2025, BMJ Open Respir Res 12(1):e002825. PMID 40953920, DOI 10.1136/bmjresp-2024-002825</td>
+<td>VERIFIED (Claim A); WEAKENED per skeptic (gene-level attribution)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM18</td>
+<td>Statistical genetics — discussion-level pleiotropy claim</td>
+<td>Paper's Discussion states two of the five BMI-score SNPs &quot;have shown pleiotropic effects on cumulative smoking...and smoking initiation&quot; and are &quot;expressed in neural tissue.&quot; <strong>Caveat (verifier + skeptic): full text could not definitively confirm the passage names TMEM18 specifically (vs. two of the other four BMI SNPs) — treat as suggestive, not gene-specific-confirmed; the independent Open Targets L2G data below is the stronger basis for the TMEM18-smoking-pleiotropy claim.</strong></td>
+<td>Mikkelsen et al. 2025, PMID 40953920 (same as above)</td>
+<td>VERIFIED (Claim B, with named caveat)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM18</td>
+<td>Statistical genetics — BMI-pathway morbidity outcome</td>
+<td>FTO/MC4R/TMEM18 (rs6548238) composite BMI allele score tested in 93,894 Danes; among 10,883 with spirometrically-defined existing COPD, higher genetic BMI score associated with more exacerbations (HR 1.13, 95% CI 1.01-1.27) and pneumonias (HR 1.10, 95% CI 1.03-1.19). This is BMI's genetic effect on <strong>COPD morbidity/exacerbations in prevalent COPD</strong>, not COPD susceptibility/case-control risk; TMEM18 is 1-of-3 unweighted SNPs, not studied individually.</td>
+<td>Çolak et al. 2016, Int J Epidemiol 45(5):1551-1559. PMID 27118560, DOI 10.1093/ije/dyw051</td>
+<td>VERIFIED; WEAKENED per skeptic (gene-level attribution — treat as BMI-pathway, not TMEM18-specific, evidence)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM18</td>
+<td>Structural / molecular biology</td>
+<td>TMEM18 is a 140-residue, multi-pass transmembrane, nuclear-envelope-localized, sequence-specific DNA-binding protein (HEK293 cells); binds DNA via a positively-charged, NLS-containing C-terminus; proposed to repress transcription by tethering bound chromatin to the nuclear periphery. General molecular/cell biology, not lung-specific.</td>
+<td>Jurvansuu &amp; Goldman 2011, PLoS One 6(9):e25317. PMID 21980424, DOI 10.1371/journal.pone.0025317</td>
+<td>VERIFIED (no lung relevance claimed or found)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM18</td>
+<td>Structural / developmental physiology</td>
+<td>TMEM18 expression in murine hypothalamic paraventricular nucleus (PVN) changes with nutritional state; germline Tmem18 knockout mice show increased body weight/food intake (exacerbated by high-fat diet); PVN-selective TMEM18 overexpression reduces food intake and increases energy expenditure; TMEM18 has 4 transmembrane domains and interacts with the nuclear pore complex. This is the single most rigorous functional/mechanistic study of TMEM18 to date. <strong>No lung, airway, alveolar, or respiratory phenotype was examined or reported</strong> in this knockout/overexpression model — an absence of inquiry, not a tested negative result (skeptic caveat).</td>
+<td>Larder et al. 2017, PNAS 114(35):9421-9426. PMID 28811369, DOI 10.1073/pnas.1707310114</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM18</td>
+<td>Structural / molecular biology (neuro-oncology, negative for lung)</td>
+<td>TMEM18 overexpression increases neural stem cell migration toward glioma cells in vitro and in rat brain; framed as a &quot;cell migration modulator&quot; in a neural/oncology context. No lung relevance described.</td>
+<td>Jurvansuu et al. 2008, Cancer Res 68(12):4614-4622. PMID 18559506, DOI 10.1158/0008-5472.CAN-07-5291</td>
+<td>VERIFIED (documents absence of lung relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM18</td>
+<td>Negative/contradicting search result — comorbidity genetic architecture</td>
+<td>A shared CVD/COPD/asthma/obesity comorbidity genetic-architecture paper implicates NPC1, TMEM106B, PTPN22, MAP2K5, MSRA in a shared latent factor. <strong>TMEM106B (chr7) is a different gene from TMEM18 (chr2)</strong> — this paper does NOT implicate TMEM18. Reported to document that this search avenue was checked and came up empty for TMEM18.</td>
+<td>Mishra &amp; Mishra 2025, BMC Med Genomics 19(1):1. PMID 41299637, DOI 10.1186/s12920-025-02279-1</td>
+<td>VERIFIED (as a documented negative result)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM18</td>
+<td>Negative/contradicting search result — smoking-genetics fine-mapping</td>
+<td>GSCAN-consortium-adjacent exome-chip fine-mapping paper on smoking/alcohol-use genetics. Full-text search confirms <strong>no mention of TMEM18 or the 2p25.3 locus anywhere</strong> in this paper — no primary GWAS paper was found that specifically singles out TMEM18 as a top smoking-initiation locus (the smoking-pleiotropy claim rests on Open Targets L2G aggregate data instead; see summary below).</td>
+<td>Brazel et al. 2019, Biol Psychiatry 85(11):946-955. PMID 30679032, DOI 10.1016/j.biopsych.2018.11.024</td>
+<td>VERIFIED (documents absence of primary-GWAS-level confirmation)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p><em>See <code>audits/2_550001-750000_audit.md</code> for the excluded citation (Lamonaca et al. 2017,
+PMID 28335527 — CLAIM_MISMATCH) and full skeptic reasoning.</em></p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p><strong>TMEM18 (ENSG00000151353)</strong> — the only candidate gene queried (sole candidate named at
+this locus):</p>
+<ul>
+<li><strong>Genetic constraint (gnomAD):</strong> pLoF observed/expected = 0.767 (oeLower=0.505,
+oeUpper/LOEUF-equivalent=1.198); missense oe=1.07; synonymous oe=1.25. <strong>Not a strongly
+constrained gene</strong> — tolerant of loss-of-function variation, consistent with a common
+regulatory GWAS hit rather than a haploinsufficiency disease gene.</li>
+<li><strong>COPD (MONDO_0005002) evidence:</strong> 3 evidence rows, all <code>europepmc</code> literature-mined
+text-co-mention only, very low scores (0.02-0.04). <strong>Zero <code>gwas_credible_sets</code> (L2G)
+evidence</strong> — no genetic-association support links TMEM18 to COPD in Open Targets.</li>
+<li><strong>Body mass index (EFO_0004340) evidence:</strong> 127 <code>gwas_credible_sets</code> (L2G) evidence rows,
+scores up to 0.552 — strong, broad, high-confidence genetic-association support.</li>
+<li><strong>Smoking initiation (EFO_0005670) evidence:</strong> 7 <code>gwas_credible_sets</code> (L2G) evidence
+rows, scores 0.416-0.436 — moderate genetic-association support, independent of the BMI
+evidence base.</li>
+<li><strong>FEV1 (EFO_0004314) evidence:</strong> ZERO evidence rows of any kind — no genetic-association
+evidence exists linking TMEM18 to lung function in Open Targets. (No EFO id resolved for
+FEV1/FVC ratio specifically, so it could not be queried directly.)</li>
+<li><strong>Aggregated top-15 associated-disease ranking (all datatypes):</strong> dominated by
+adiposity/cardiometabolic traits — obesity disorder (0.330), type 2 diabetes (0.276),
+overnutrition (0.270), hypertensive disorder (0.266), gout (0.254), osteoarthritis
+(0.285, 0.246 knee), atrial fibrillation (0.280) — plus smoking initiation at rank 12
+(0.243). <strong>COPD and no lung-function trait appear anywhere in the top 15.</strong></li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Prioritized gene: TMEM18</strong> — <strong>Confidence: LOW</strong></p>
+<p>TMEM18 is named by every internal prioritization method at this locus (nearest gene,
+FLAMES, PoPS) and is independently confirmed as the sole protein-coding gene in the
+region, so there is no competing gene to weigh it against in the usual &quot;tight LD, multiple
+candidates&quot; sense. The call is nonetheless LOW confidence because the verified evidence
+does not support TMEM18 as a COPD/lung-biology gene in its own right — it supports TMEM18
+as a robust, independent contributor to BMI/adiposity genetics (Open Targets: 127 L2G
+rows, score up to 0.55; mechanistically validated via hypothalamic PVN appetite circuitry,
+Larder et al. 2017, PMID 28811369 verified) and a plausible, moderate contributor to
+smoking-initiation genetics (Open Targets: 7 L2G rows, score 0.42-0.44, independent of the
+BMI evidence base), with the COPD association at this locus most parsimoniously explained
+as <strong>pleiotropy transmitted through one or both of those pathways</strong> rather than through any
+independent pulmonary mechanism.</p>
+<p>Every verified citation directly linking TMEM18 to COPD (Mikkelsen et al. 2025, PMID
+40953920; Çolak et al. 2016, PMID 27118560) does so only via a composite BMI allele score
+in which TMEM18 is one of 3-5 unweighted SNPs, never isolated or tested individually — per
+the red-team-skeptic's explicit reframing, this is BMI-pathway/instrument-level evidence,
+not TMEM18-gene-specific evidence, and should not be read as stronger than that. Open
+Targets shows zero L2G/genetic-association evidence connecting TMEM18 to COPD directly and
+zero evidence of any kind for FEV1/lung function; no dedicated colocalization, conditional,
+or genomic-SEM analysis was found that isolates a COPD- or lung-function-specific causal
+signal at this locus distinct from BMI or smoking. The lead variant rs4423631 itself has no
+GWAS Catalog trait associations of any kind (not even BMI), and the credible set is broad
+and flat (max PIP 0.037, 173 variants, entirely noncoding) — an architecture consistent
+with a large regulatory LD block rather than a well-resolved causal mechanism.</p>
+<p>The red-team-skeptic's verdict for TMEM18 is <strong>WEAKENED, not CONTESTED</strong>: there is no
+literature actively disputing TMEM18's role or proposing a different causal gene at this
+locus (it is the sole protein-coding gene here, so there is no runner-up candidate gene to
+name), but the inference that TMEM18 itself — as opposed to the broader BMI/smoking
+pathway, which composite instruments cannot attribute to any single SNP — is a
+COPD-relevant gene overreaches what the gene-specific evidence supports. What would resolve
+this: a colocalization or fine-mapping analysis testing whether the COPD credible set at
+this locus shares its causal variant(s) with the BMI and/or smoking-initiation credible
+sets at the same locus (rather than three independent, uncoordinated GWAS signals that
+happen to overlap), and/or a single-SNP (not composite-score) MR analysis isolating
+TMEM18's rs6548238 (or another TMEM18-specific instrument) as the exposure for COPD risk,
+independent of FTO/MC4R. Absent that, this recommendation should be read as &quot;TMEM18 is the
+only gene physically present to prioritize, but the mechanism most likely runs through
+BMI/adiposity and/or smoking-behavior pleiotropy rather than pulmonary biology intrinsic to
+TMEM18&quot; — a locus-level call under real uncertainty, not a confident gene-level mechanistic
+finding.</p>
+
+</body>
+</html>

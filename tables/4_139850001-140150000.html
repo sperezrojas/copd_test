@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>4_139850001-140150000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table-locus-4139850001-140150000-nearest-gene-maml3">Evidence table: locus 4:139,850,001-140,150,000 (nearest gene MAML3)</h1>
+<p>Lead variant: rs6841661 (PIP=0.228). All 20 credible-set variants are intron_variant/
+MODIFIER impact, physically located within MAML3 (no missense/splice variants in the
+credible set). Candidate genes evaluated: MAML3 (nearest gene; also sole gene physically
+overlapping the locus/credible set), CCRN4L/NOCT (MAGMA- and PoPS-prioritized gene, ~800-
+900 kb outside the locus boundary).</p>
+<p>Only citations verified by citation-verifier with verdict VERIFIED are included below.
+Citations with verdict NOT_FOUND (for the specific locus-inclusion claim they were tested
+against) are excluded from this table and documented in the audit appendix
+(<code>audits/4_139850001-140150000_audit.md</code>), along with the CONTESTED verdict on CCRN4L/NOCT.</p>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAML3</td>
+<td>Statistical genetics (lung eQTL + phenotype, asthma cohort)</td>
+<td>GWAS of bronchial hyperresponsiveness (BHR) severity in adult asthmatics (smoking-adjusted); rs345983 in MAML3 nominally associated with less severe BHR; BHR-reducing allele associated with higher MAML3 lung-tissue expression; MAML3 co-expressed with MAML2 in lung tissue</td>
+<td>PMID 27709636 / DOI 10.1111/all.13062</td>
+<td>WEAKENED (part of overall MAML3 verdict — real but sub-genome-wide-significant, asthma not COPD)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAML3</td>
+<td>Statistical genetics (lung eQTL + phenotype, smoker cohort)</td>
+<td>GWAS of chronic mucus hypersecretion (CMH) in heavy smokers WITHOUT COPD; MAML3 SNP rs4863687 (T-allele) associated with increased CMH risk (OR 1.48, p=7.57×10⁻⁶) and increased MAML3 lung-tissue expression (p=2.59×10⁻¹²)</td>
+<td>PMID 25234806 / DOI 10.1183/09031936.00093314</td>
+<td>WEAKENED (sub-genome-wide-significant; smoker-subgroup endophenotype, compatible with gene-by-smoking interaction rather than smoking-independent lung effect)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAML3</td>
+<td>Statistical genetics (pleiotropy, non-pulmonary)</td>
+<td>Locus near MAML3 (and HTT) independently replicated association with combined human aging/healthspan phenotype (aging-GIP1) in Finnish/Japanese survival data</td>
+<td>PMID 37118362 / DOI 10.1038/s43587-021-00159-8</td>
+<td>Cited by skeptic as reinforcing non-pulmonary pleiotropy profile</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAML3</td>
+<td>Statistical genetics (pleiotropy, non-pulmonary)</td>
+<td>MAML3 among 283 genes newly associated with migraine in Million Veteran Program GWAS; enrichment in brain/neuroendocrine tissue, not vascular tissue</td>
+<td>PMID 41420111 / DOI 10.1038/s41380-025-03392-4</td>
+<td>Cited by skeptic as reinforcing non-pulmonary pleiotropy profile</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAML3</td>
+<td>Statistical genetics (smoking-mediation axis)</td>
+<td>Cross-trait meta-analysis/colocalization between smoking-behavior GWAS traits (initiation, never/ever smoking, age of initiation) and GERD identified MAML3 as one of three novel pleiotropic genes shared between smoking-related traits and GERD</td>
+<td>PMID 38937676 / DOI 10.1186/s12864-024-10536-3</td>
+<td>Cited by skeptic as supporting smoking-mediation hypothesis</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAML3</td>
+<td>Molecular biology (Notch pathway, non-lung-specific)</td>
+<td>MAML1/2/3 identified as broadly expressed Notch transcriptional coactivators with paralog-specific receptor selectivity/potency</td>
+<td>PMID 12370315 / DOI 10.1128/MCB.22.21.7688-7700.2002</td>
+<td>Foundational, not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAML3</td>
+<td>Molecular biology (review, non-lung-specific)</td>
+<td>Review of MAML family function in Notch-dependent transcription and development broadly</td>
+<td>PMID 26711237 / DOI 10.1093/jb/mvv123</td>
+<td>Foundational, not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAML3</td>
+<td>Developmental biology (mouse, non-lung)</td>
+<td>MamL3-null mice alone show no developmental abnormality; MamL1/MamL3 double-null mouse embryos die during early organogenesis with pan-Notch developmental defects (e.g. loss of lunatic fringe in presomitic mesoderm); no lung phenotype examined</td>
+<td>PMID 22069191 / DOI 10.1242/dev.062802</td>
+<td>Generic Notch biology, not MAML3-lung-specific (skeptic)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAML3</td>
+<td>Developmental biology (zebrafish, cardiac not lung)</td>
+<td>maml3 morphant/mutant zebrafish show defective cardiac trabeculation via inhibited Notch signaling and decreased cardiomyocyte proliferation; no lung phenotype examined</td>
+<td>PMID 36574072 / DOI 10.1007/s00018-022-04669-5</td>
+<td>Generic Notch biology, cardiac not pulmonary organogenesis (skeptic)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAML3</td>
+<td>Immune biology (paralog specificity, absence of MAML3-specific data)</td>
+<td>Maml1 (NOT Maml3) specifically required for Notch2-driven marginal zone B-cell development in mice; all 3 MAML paralogs expressed in MZB cells/precursors but functional specificity shown only for Maml1</td>
+<td>PMID 17699740 / DOI 10.1182/blood-2007-06-097030</td>
+<td>Confirms absence of MAML3-specific immune evidence (not a positive finding for MAML3)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCRN4L/NOCT</td>
+<td>Molecular biology (systemic metabolism, non-lung)</td>
+<td>Nocturnin-knockout mice resist diet-induced obesity via altered lipid/glucose/insulin metabolism; no lung phenotype examined</td>
+<td>PMID 17517647 / DOI 10.1073/pnas.0702448104</td>
+<td>Off-target biology for COPD (skeptic)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCRN4L/NOCT</td>
+<td>Molecular biology (systemic metabolism, non-lung)</td>
+<td>Nocturnin controls circadian dietary lipid absorption in intestinal enterocytes</td>
+<td>PMID 21820310 / DOI 10.1016/j.cub.2011.07.018</td>
+<td>Off-target biology for COPD (skeptic)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCRN4L/NOCT</td>
+<td>Molecular biology (systemic metabolism, non-lung)</td>
+<td>Nocturnin promotes adipogenesis and regulates bone marrow stromal cell lineage allocation via PPAR-gamma nuclear translocation</td>
+<td>PMID 20498072 / DOI 10.1073/pnas.1000788107</td>
+<td>Off-target biology for COPD (skeptic)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCRN4L/NOCT</td>
+<td>Molecular biology (systemic metabolism, non-lung)</td>
+<td>NOC mRNA in human adipose tissue correlates with insulin sensitivity/adiponectin</td>
+<td>PMID 22331129 / DOI 10.1038/oby.2012.37</td>
+<td>Off-target biology for COPD (skeptic)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCRN4L/NOCT</td>
+<td>Molecular biology (systemic metabolism, non-lung)</td>
+<td>Nocturnin regulates amplitude of circadian hepatic lipid/cholesterol metabolic gene expression</td>
+<td>PMID 29386110 / DOI 10.1016/j.celrep.2018.01.011</td>
+<td>Off-target biology for COPD (skeptic)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCRN4L/NOCT</td>
+<td>Molecular biology (lung cancer, not COPD)</td>
+<td>NOC differentially expressed in squamous cell lung carcinoma tissue; higher NOC correlates with increased SCC patient survival; NOC silencing altered cell-adhesion/junction/muscle-contraction gene expression in lung cancer cell lines</td>
+<td>PMID 26541675 / DOI 10.1186/s12943-015-0457-3</td>
+<td>Lung-cancer prognostic context conflated with lung-relevance; not COPD/airway-remodeling biology (skeptic)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-sent-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not sent through citation-verifier or red-team-skeptic)</h2>
+<ul>
+<li><strong>MAML3</strong> (ENSG00000196782): gnomAD pLoF observed/expected (oe) = 0.233 (obs 24 vs exp
+103.2) — strongly constrained against loss-of-function, consistent with a dosage-
+sensitive gene. Aggregate target-disease association score with COPD (MONDO_0005002) =
+0.429, driven almost entirely by the <code>gwas_credible_sets</code> (L2G-aggregated genetics)
+datasource (0.70), with only trace literature contribution. Notably, MAML3's aggregate
+association scores with smoking initiation (0.450), alcohol drinking (0.415), smoking
+cessation (0.335), smoking behavior (0.304), substance abuse, cannabis dependence, ADHD,
+and major depressive disorder are all comparable to or HIGHER than its COPD score, via
+the same genetics datasource. Asthma association (0.305) is lower than COPD. A locus-
+specific (per-credible-set) L2G record for rs6841661 could not be resolved via the
+variant-level API query in this session (exact allele coding unavailable); the above is
+the gene-level aggregate proxy.</li>
+<li><strong>CCRN4L/NOCT</strong> (ENSG00000151014): gnomAD pLoF oe = 0.508 (obs 18 vs exp 35.4) — only
+modestly constrained, not near ceiling. NO recorded association of any kind between NOCT
+and COPD in Open Targets, out of 86 total diseases associated with NOCT (full list
+inspected). Strongest associations: esophageal ulcer (0.308), smoking initiation
+(0.293), ADHD/substance abuse (~0.26), stroke, thrombocytopenia, MODY/neonatal-diabetes
+phenotypes. Trace associations with lung cancer subtypes (scores 0.005-0.015) exist far
+down the list; nothing COPD- or spirometry-specific.</li>
+</ul>
+<p>Full detail: <code>evidence_tables/_status/4_139850001-140150000/opentargets.md</code></p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>MAML3 — confidence: LOW.</strong></p>
+<p>MAML3 is the only gene that physically overlaps this locus: all 20 credible-set variants,
+including the lead SNP rs6841661 (PIP=0.228), sit within MAML3 introns, and no other
+protein-coding gene's body overlaps the stated interval. That positional case is solid and
+is the primary reason MAML3 is named here over CCRN4L/NOCT, whose body sits ~800-900 kb
+outside the locus/credible-set region with six intervening protein-coding genes and no
+eQTL, colocalization, or chromatin-interaction evidence connecting it to these variants
+(researcher's Ensembl gene-content check; red-team-skeptic verdict: CONTESTED for NOCT,
+concluding the MAGMA/PoPS statistical flag should not be weighted as an evidentiary equal
+to MAML3's positional/mechanistic case absent a demonstrated regulatory bridge).</p>
+<p>However, the case for MAML3 reflecting genuine, COPD-relevant pulmonary biology — as
+opposed to being a smoking-behavior/neurobehavioral pleiotropy locus that surfaces in this
+COPD GWAS only because the summary statistics are not adjusted for smoking (biological
+prior #1) — is NOT well resolved by the assembled evidence, and the red-team-skeptic
+explicitly downgraded the gene-level verdict to WEAKENED on this basis:</p>
+<ul>
+<li>The two lung-tissue eQTL/phenotype findings supporting a pulmonary role (bronchial
+hyperresponsiveness severity in asthma, PMID 27709636; chronic mucus hypersecretion in
+heavy smokers without COPD, PMID 25234806) are both sub-genome-wide-significant, and
+neither is a COPD case-control or spirometric (FEV1/FEV1-FVC) result — per biological
+prior #2, the complete absence of any verified spirometry-trait association for MAML3
+is itself a meaningful strike against confident prioritization.</li>
+<li>MAML3/4q31.1 is confirmed ABSENT from the two largest, most directly relevant dedicated
+GWAS for this exact phenotype class — Sakornsakolpat et al. 2019 (82-locus COPD
+case-control GWAS, PMID 30804561) and Shrine et al. 2023 (1,020-signal multi-ancestry
+lung-function/COPD GWAS, PMID 36914875) — as well as from the largest dedicated smoking-
+behavior GWAS, GSCAN (Liu et al. 2019, PMID 30643251). These are real, informative null
+results from adequately powered studies (see audit appendix), not mere gaps.</li>
+<li>Simultaneously, the Open Targets structured lookup shows MAML3's smoking-
+initiation/cessation/behavior and other neurobehavioral/addiction-trait association
+scores are comparable to or higher than its COPD score, and independent literature
+confirms MAML3 pleiotropy with smoking-related GERD (PMID 38937676), migraine (PMID
+41420111), and aging/healthspan (PMID 37118362) — none of which are pulmonary.</li>
+<li>No MAML3-specific (as opposed to MAML1/MAML2) immune-cell-type evidence exists relevant
+to COPD inflammatory biology (prior #3); mechanistic Notch-developmental evidence for
+MAML3 is generic (cardiac in zebrafish, pan-Notch in mouse), with no lung-specific
+developmental study identified.</li>
+</ul>
+<p><strong>Runner-up: CCRN4L/NOCT — not a viable competing pick at this credible set.</strong> Despite
+being the MAGMA- and PoPS-prioritized gene, NOCT/CCRN4L has no COPD or spirometry-trait
+association in Open Targets or literature, no immune/inflammatory connection, an
+extensively characterized systemic metabolic/circadian biology with no lung mechanism, and
+sits far outside the physical locus/credible set with no demonstrated regulatory link. The
+red-team-skeptic's CONTESTED verdict reflects that its statistical prioritization is
+directly contradicted by the positional/mechanistic evidence, not merely under-supported.</p>
+<p><strong>What would resolve this call:</strong> (1) a genome-wide-significant, smoking-adjusted COPD
+case-control or FEV1/FEV1-FVC association specifically at rs6841661/this credible set in a
+large, direct lung-function GWAS (the two largest available did not detect it); (2) a
+direct comparison of whether the Open Targets smoking-initiation signal for MAML3 comes
+from a study that also captures this exact credible set (unresolved in this pipeline —
+GSCAN 2019 does not show it, but Open Targets' smoking-initiation score likely draws from
+a larger/more recent smoking GWAS not checked here); (3) any eQTL/chromatin-interaction
+evidence linking the credible-set variants to CCRN4L/NOCT expression, which would revive
+it as a genuine competing candidate; (4) a lung/airway-specific (as opposed to cardiac or
+generic) developmental or immune mechanistic study for MAML3 specifically.</p>
+<p>Given the unresolved smoking-mediation-vs-lung-biology question (which the researcher
+could not adjudicate and the red-team-skeptic explicitly flagged as at least as
+well-supported toward smoking-mediation as toward lung-intrinsic biology), the absence of
+any spirometry-trait evidence, and the confirmed null results in the two largest dedicated
+COPD/lung-function GWAS, this pick is offered as the best-supported one available — not a
+confident causal-gene call — for the study team's own judgment.</p>
+
+</body>
+</html>

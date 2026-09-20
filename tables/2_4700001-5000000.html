@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2_4700001-5000000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-24700001-5000000-grch38">Evidence table — locus 2:4,700,001-5,000,000 (GRCh38)</h1>
+<p><strong>Lead variant:</strong> rs7585899 (2:4,837,721). <strong>Nearest gene (internal pipeline):</strong>
+LOC105373397. <strong>FLAMES/MAGMA/PoPS/ABC prioritized genes:</strong> none (all NA). Credible set: 70
+variants, all intergenic_variant or upstream_gene_variant (no missense/splice variant
+anywhere in the set), so no dedicated variant-level literature search beyond the lead
+variant was required per pipeline scope rules.</p>
+<p>This is a gene desert on chromosome 2p25.3. No computational gene-prioritization tool
+converged on any gene at this locus, and (per the Open Targets structured lookup below) no
+gene here has an L2G prediction for any registered credible set either.</p>
+<p>Only citations with a citation-verifier verdict of VERIFIED are included below. One
+citation (Grimm et al. 2019, PMID 30914279) returned CLAIM_MISMATCH and is excluded from
+the table below — see the audit appendix (<code>audits/2_4700001-5000000_audit.md</code>) for detail.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LOC105373397</td>
+<td>Locus resolution</td>
+<td>Internal pipeline's &quot;nearest gene&quot; call is NCBI Gene 105373397, an uncharacterized, computationally-predicted (RefSeq &quot;X&quot;-model) protein-coding locus at chr2:4,096,388-4,114,720 — its true coordinates are ~604 kb outside the defined locus window and ~723-741 kb from the lead variant/top-PIP credible-set variants; zero PubMed literature exists for it.</td>
+<td>NCBI Gene ID 105373397 / mygene.info (data resolution, not a literature citation)</td>
+<td>HOLDS (null; correctly excluded as implausible/out-of-window)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SOX11</td>
+<td>Statgen (absence)</td>
+<td>No GWAS/TWAS/MR/colocalization/fine-mapping study reporting SOX11, rs7585899, or the 2p25.3 region for COPD, FEV1, FEV1/FVC, or any spirometric trait was found (all targeted PubMed searches returned zero hits).</td>
+<td>(absence finding; no PMID)</td>
+<td>WEAKENED (consistent null, per prior #2 no spirometric support)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SOX11</td>
+<td>Structural/developmental</td>
+<td>Constitutive Sox11-knockout mice die perinatally with congenital heart defects, craniofacial/skeletal malformations, asplenia, and hypoplasia of the lung, stomach, and pancreas.</td>
+<td>Sock et al. 2004, PMID 15254231, DOI 10.1128/MCB.24.15.6635-6644.2004</td>
+<td>WEAKENED — embryonic, pleiotropic organogenesis phenotype, not adult COPD-specific airway/alveolar remodeling; no adult conditional-knockout or adult-lung eQTL data exists to bridge to COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SOX11</td>
+<td>Structural/developmental</td>
+<td>In a mouse ventilator-induced lung injury (VILI) model, high-volume mechanical ventilation decreased Sox11/FAK expression in alveolar epithelial and interstitial cells, and restoring Sox11 expression alleviated VILI.</td>
+<td>Fang et al. 2019, PMID 30879763, DOI 10.1016/j.bbrc.2019.03.041</td>
+<td>WEAKENED — acute ventilator-injury paradigm, mechanistically/temporally distant from chronic smoking/inflammation-driven COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SOX11</td>
+<td>Structural/developmental</td>
+<td>Reiterates that Sox11-deletion mice show hypoplasia of lung, stomach, and pancreas (in a paper primarily about Sox11 in osteoblast differentiation).</td>
+<td>Gadi et al. 2013, PMID 23888050, DOI 10.1074/jbc.M112.413377</td>
+<td>WEAKENED — secondary citation of the same embryonic phenotype, in a bone-focused paper</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SOX11</td>
+<td>Structural/developmental</td>
+<td>ChIP-seq/transcriptome analysis in E18.5 mouse lungs identified Sox11 as a potential downstream transcriptional target of FOXF1, a gene linked to a distinct neonatal lung disorder (alveolar capillary dysplasia with misalignment of pulmonary veins).</td>
+<td>Dharmadhikari et al. 2016, PMID 27638768, DOI 10.1242/bio.019208</td>
+<td>WEAKENED — embryonic/neonatal developmental network, not adult COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SOX11</td>
+<td>Structural/developmental</td>
+<td>Sox4 and Sox11 are important, partially redundant regulators of diverse developmental processes including heart, lung, pancreas, and spleen development.</td>
+<td>Hoser et al. 2008, PMID 18505825, DOI 10.1128/MCB.00338-08</td>
+<td>WEAKENED — general developmental-biology context, not lung- or COPD-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SOX11</td>
+<td>Structural/developmental (negative/control)</td>
+<td>A study of SOX9 (not SOX11) in respiratory epithelium explicitly checked for and did not detect compensatory Sox11 upregulation after epithelial Sox9 inactivation.</td>
+<td>Perl et al. 2005, PMID 15645446, DOI 10.1002/gene.20093</td>
+<td>SUPPORTED-AS-CAVEATED — cited only as evidence against redundancy in that specific compartment; not itself evidence for SOX11's role in COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SOX11</td>
+<td>Immune/inflammatory</td>
+<td>SOX11 expression in mantle cell lymphoma (MCL) tumor cells is associated with reduced intratumoral T-cell infiltration, CD70 overexpression (a direct SOX11 target gene), and increased regulatory T-cell (Treg) infiltration.</td>
+<td>Balsas et al. 2021, PMID 34189576, DOI 10.1182/blood.2020010527</td>
+<td>WEAKENED — cell-intrinsic oncogenic transcriptional program in B-cell lymphoma tumor microenvironment; no documented role in COPD-relevant neutrophilic/macrophage/CD8+/Th1/Th17 airway inflammation</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SOX11</td>
+<td>Immune/inflammatory (oncologic context)</td>
+<td>SOX11 is highly expressed in small-cell lung cancer (SCLC), alongside SOX2/SOX4.</td>
+<td>Castillo et al. 2011, PMID 22084397, DOI 10.1158/0008-5472.CAN-11-3506</td>
+<td>WEAKENED — oncologic, non-inflammatory context, unrelated to COPD airway immunology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SOX11</td>
+<td>Statgen (competing hypothesis, general background)</td>
+<td>Large-scale chronotype/morningness GWAS efforts identify loci near known circadian genes (RGS16, PER2) and are genetically correlated with BMI; does not itself discuss this locus, rs7585899, SOX11, or LINC01249.</td>
+<td>Jones et al. 2016, PMID 27494321, DOI 10.1371/journal.pgen.1006125</td>
+<td>SUPPORTED-AS-CAVEATED — general background only; establishes plausibility of the chronotype GWAS field, not a claim about this specific locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SOX11</td>
+<td>Statgen (competing hypothesis)</td>
+<td>LD-score regression and Mendelian randomization found a significant negative genetic correlation between smoking cessation and chronotype (rg=-0.18) and between smoking initiation and sleep duration (rg=-0.14), a positive correlation between smoking initiation/heaviness and insomnia, and MR evidence that heavier smoking causally decreases the odds of being a &quot;morning person.&quot;</td>
+<td>Gibson et al. 2019, PMID 30365022, DOI 10.1093/ntr/nty230</td>
+<td>SUPPORTED-AS-CAVEATED — genuine general genetic link between chronotype and smoking behavior, but does not itself reference this locus/SNP; composite causal chain to this locus is speculative</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SOX11</td>
+<td>Statgen (competing hypothesis, weaker/twin design)</td>
+<td>Within monozygotic twin pairs, smoking-status differences were associated with chronotype differences.</td>
+<td>Barclay et al. 2013, PMID 23382591, DOI 10.1177/0748730412468698</td>
+<td>SUPPORTED-AS-CAVEATED — non-genetic, environmental/behavioral corroboration of the smoking-chronotype link; general, not locus-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC01249</td>
+<td>Statgen</td>
+<td>A small (124 discovery + 313 replication subjects) Chinese Han GWAS reported suggestive associations near &quot;LOC105373394-LINC01249&quot; (a different LOC identifier from this locus's LOC105373397, same gene-poor neighborhood) with circulating T3 (rs4850041, rs12474167) and T4 (rs12474167) thyroid hormone levels — unrelated to COPD/lung function.</td>
+<td>Huang et al. 2021, PMID 34533693, DOI 10.1007/s13258-021-01165-1</td>
+<td>HOLDS (null for COPD purposes; honestly reported as off-topic)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-verified-literature-separate-from-the-table-above">Open Targets summary (structured database lookup — NOT verified literature; separate from the table above)</h2>
+<ul>
+<li><strong>LOC105373397</strong> — no Open Targets data available. Does not resolve to any Ensembl/Open
+Targets target entity via <code>search_entities</code>.</li>
+<li><strong>LINC01249</strong> (ENSG00000231532) — L2G score: not resolvable (no COPD/FEV1 credible set
+registered at this locus in Open Targets). Colocalization: none found; the only
+registered credible sets at this locus (lead variant + 4 other top-PIP variants checked)
+belong to two &quot;chronotype measurement&quot; GWAS studies (GCST90691736, GCST90692794), both
+with empty L2G prediction rows. Constraint: not available (non-coding gene). Overall
+disease association: 1 weak non-genetic association with non-small-cell lung carcinoma
+(score 0.0058, rna_expression datatype only); explicit query for COPD (MONDO_0005002) and
+FEV1 (EFO_0004314) returned 0 evidence rows.</li>
+<li><strong>SOX11</strong> (ENSG00000176887, ~855 kb from lead variant, outside locus window) — L2G score:
+not resolvable (no COPD/FEV1 credible set registered at this locus). Colocalization: none
+found; explicit query for COPD/FEV1 evidence returned 0 rows. Constraint: gnomAD lof score
+0.086 (obs=5, exp=9.15, oe=0.547, 90% CI 0.285-1.148 — CI spans 1, not confidently
+LoF-constrained, and the observed-LoF count is small/imprecise); mild missense
+constraint (oe=0.833). Overall disease association: top scores are all rare monogenic
+neurodevelopmental disorders (intellectual disability with microcephaly, score 0.746;
+Coffin-Siris syndrome, 0.723) driven by genetic_association/animal_model/literature
+datatypes from rare-variant genetics, not GWAS/common-variant signals; no COPD or FEV1
+association anywhere in its 4,413 recorded disease associations.</li>
+<li><strong>Other nearby pseudogene/ncRNA loci</strong> (ENSG00000299809, ENSG00000299355, ENSG00000291325,
+ENSG00000289300, ENSG00000306011, ENSG00000231821/NPM1P48, ENSG00000228585/MRAS-pseudogene,
+ENSG00000207192/RNU6-649P, ENSG00000252238 snoRNA) — no Open Targets disease-association,
+L2G, colocalization, or constraint data of note for any of these uncharacterized/pseudogene
+loci.</li>
+<li><strong>Key structured-data finding:</strong> Open Targets' own GWAS credible-set ingestion places the
+lead variant (rs7585899) and 4 other top-PIP credible-set variants (rs2043936, rs1439830,
+rs6735043, rs1821990) as fine-mapped signals for &quot;chronotype measurement&quot; (morning/evening
+person, UK Biobank field 1180) rather than COPD or lung function, with no L2G target
+prediction computed for either chronotype study. This is a database observation, not a
+literature claim; it has not been verified by citation-verifier and was only partially
+corroborated (as a general field of study, not as a claim about this specific locus) by
+the researcher's independent literature search.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Prioritized gene: none — INSUFFICIENT confidence to name a single candidate.</strong></p>
+<p>This locus does not support a confident single-gene call. Reasoning, referencing the table
+and Open Targets summary above:</p>
+<ul>
+<li>No computational gene-prioritization tool (FLAMES/MAGMA/PoPS/ABC) converged on any gene
+at this locus (locus input file).</li>
+<li>No gene at this locus has any COPD- or FEV1-specific evidence from Open Targets (L2G,
+colocalization, or curated evidence rows are all null/zero for SOX11 and LINC01249, the
+only two named genes considered), and the internal pipeline's literal nearest-gene call,
+LOC105373397, is a functionally uncharacterized transcript whose true coordinates in fact
+sit ~604 kb outside the defined locus window entirely (see LOC105373397 row above) —
+effectively ruling it out as a serious candidate.</li>
+<li>SOX11, the nearest annotated protein-coding gene, sits ~855 kb from the lead variant,
+also outside the defined window. Its literature record (Sock et al. 2004 and related rows
+above) is real but embryonic/developmental or acute-injury in nature, not adult-COPD- or
+spirometry-specific, and its immune biology is confined to an unrelated oncologic
+(B-cell lymphoma / SCLC) context. Per the red-team critique, SOX11 risks being
+over-weighted simply because it is the only gene here with a literature trail — a
+&quot;streetlight effect&quot; that should not be mistaken for genuine locus-specific support.</li>
+<li>LINC01249's only literature hit is an unrelated thyroid-hormone GWAS in a different
+(though neighboring) LOC-identifier gene, and Open Targets shows essentially no disease
+evidence for it.</li>
+<li>The most locus-specific structured-data signal available — Open Targets' fine-mapping of
+the lead variant and several other top-PIP credible-set variants to &quot;chronotype
+measurement&quot; GWAS studies — is intriguing because, unlike the SOX11/LINC01249 literature,
+it actually concerns the credible-set variants themselves rather than a distant gene. It
+is corroborated only insofar as chronotype/sleep traits are independently known to be
+genetically correlated with smoking behavior (Gibson et al. 2019, PMID 30365022,
+VERIFIED — a real, general finding, not a locus-specific one). But no verified or
+independently-searched literature names this exact locus, rs7585899, SOX11, or LINC01249
+in a chronotype/circadian context, so this remains an unconfirmed alternative hypothesis,
+not a demonstrated mechanism.</li>
+<li>A further, at-least-equally-plausible alternative (raised by red-team-skeptic) is that
+this is a statistical/winner's-curse false-positive or an unresolved long-range
+regulatory signal in a gene desert, given that even Open Targets' own L2G pipeline (a
+much larger, better-powered dataset) produced no gene assignment for the credible sets it
+did register at this exact locus.</li>
+</ul>
+<p>Given (a) no converging computational prioritization signal, (b) zero COPD/FEV1-specific
+evidence for any candidate gene from Open Targets, (c) the nearest-gene and
+nearest-protein-coding-gene calls both sitting hundreds of kb outside the defined locus
+window, and (d) a competing chronotype/smoking-behavior hypothesis that is itself
+unconfirmed by locus-specific literature — the study team should treat this locus as
+unresolved at the gene level. If forced to rank, SOX11 is the least-implausible named
+candidate by virtue of having any lung-relevant biology at all (even if developmental/
+non-COPD-specific) and being the nearest protein-coding gene in the desert, with LINC01249
+and LOC105373397 as clear runners-down given their near-total absence of relevant biology.
+Confidence: <strong>INSUFFICIENT</strong>. What would resolve this: locus-specific colocalization/eQTL
+data for adult lung tissue at this position (none currently available in Open Targets),
+independent replication of the chronotype/sleep-trait association in a paper specifically
+naming this SNP or region, and any computational prioritization signal (FLAMES/MAGMA/PoPS/
+ABC or Open Targets L2G) actually converging on a candidate gene, none of which exist today.</p>
+
+</body>
+</html>

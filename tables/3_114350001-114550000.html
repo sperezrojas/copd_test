@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>3_114350001-114550000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-3114350001-114550000-nearest-gene-zbtb20">Evidence table — locus 3:114,350,001-114,550,000 (nearest gene: ZBTB20)</h1>
+<p>Lead variant: rs1606494 (3:114,475,941, GRCh38). Credible set: 19 variants (PIP-ranked), all intron_variant/MODIFIER consequence, all physically within ZBTB20 (no missense/splice-donor/splice-acceptor variants in the credible set). Candidate genes evaluated: ZBTB20 (nearest gene, FLAMES-prioritized, PoPS-prioritized) and ZBTB20-AS5 (ABC-prioritized antisense lncRNA).</p>
+<p>Only citations with verifier verdict VERIFIED are included below. Citations verdicted CLAIM_MISMATCH, RETRACTED, or NOT_FOUND are excluded from this table and listed instead in the companion audit file (audits/3_114350001-114550000_audit.md), along with the CONTESTED gene-level verdict and its reasoning.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ZBTB20</td>
+<td>Statistical genetics (smoking behavior)</td>
+<td>Multi-trait GWAS analysis (MTAG) combining alcohol-use-disorder and smoking-behavior GWAS in the Million Veteran Program (N=318,694) explicitly names ZBTB20 (with DRD2, PPP6C, GCKR) as a biologically important region contributing to smoking behaviors (initiation/cessation)</td>
+<td>Cheng Y et al., Transl Psychiatry 2023; PMID 37147289; DOI 10.1038/s41398-023-02409-2</td>
+<td>VERIFIED; CONTESTED at gene-COPD-relevance level (see audit — supports smoking-pleiotropy, not COPD/lung mechanism)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Statistical genetics (smoking behavior, background)</td>
+<td>Large MVP+GSCAN meta-analysis identified 99 loci for smoking initiation and 13 for smoking cessation (background on the smoking-GWAS landscape; abstract does not itself name ZBTB20)</td>
+<td>Xu K et al., Nat Commun 2020; PMID 33082346; DOI 10.1038/s41467-020-18489-3</td>
+<td>VERIFIED (background context only)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Statistical genetics (smoking behavior, partial non-replication)</td>
+<td>Multi-ancestry cerebral-cortex TWAS of smoking initiation/cessation/age-of-initiation/cigarettes-per-day; ZBTB20 explicitly NOT among the genes highlighted (PSMA4, IREB2, CHRNA3, TSPAN3, ANK2 are)</td>
+<td>Tan Q et al., Mol Psychiatry 2024; PMID 38816585; DOI 10.1038/s41380-024-02605-6</td>
+<td>VERIFIED (a partial non-replication in an independent TWAS method)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Statistical genetics (pleiotropy, different SNP/trait)</td>
+<td>ZBTB20 rs9841504 (distinct SNP, gastric-cancer locus) NOT significantly associated with gastric cancer risk in a Korean population, and no significant interaction with smoking habit</td>
+<td>Song HR et al., Mol Carcinog 2013; PMID 23861218; DOI 10.1002/mc.22063</td>
+<td>VERIFIED (negative/non-replicating result)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Statistical genetics (pleiotropy, different SNPs)</td>
+<td>ZBTB20 SNPs rs9288999/rs9841504/rs73230612 (distinct from rs1606494) show subgroup associations with gastric cancer risk stratified by smoking/drinking status, BMI, and age in a Chinese Han population</td>
+<td>Bai F, Xiao K, Biosci Rep 2020; PMID 32936247; DOI 10.1042/BSR20202102</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Structural/developmental lung biology</td>
+<td>Single-cell RNA-seq of neonatal human/mouse lung identifies a FOXF1+cKIT+ general capillary progenitor cell (gCAP) population expressing ZBTB20 (with SMAD7, NFIA, DLL4) in the context of alveolar capillary dysplasia/alveolarization; ZBTB20 is a listed marker gene, not functionally tested in this paper</td>
+<td>Wang G et al., Am J Respir Crit Care Med 2021; PMID 33705684; PMC PMC8513594; DOI 10.1164/rccm.202003-0758OC</td>
+<td>VERIFIED (marker-gene status only, not causally tested; non-COPD developmental/disease context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Structural biology (non-pulmonary-disease context)</td>
+<td>ZBTB20 is upregulated in non-small-cell lung cancer tissue and promotes lung epithelial tumor cell proliferation via transcriptional repression of the tumor suppressor FoxO1</td>
+<td>Zhao JG, Ren KM, Tang J, FEBS Lett 2014; PMID 25311537; DOI 10.1016/j.febslet.2014.10.005</td>
+<td>VERIFIED (malignancy context, not COPD-relevant remodeling)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Structural biology (non-pulmonary-disease context)</td>
+<td>ZBTB20 overexpression represses KCTD1 and activates Hedgehog signaling, driving proliferation/migration/stemness in lung squamous cell carcinoma models</td>
+<td>Wang H et al., Cancer Lett 2026; PMID 41672223; DOI 10.1016/j.canlet.2026.218301</td>
+<td>VERIFIED (malignancy context, not COPD-relevant remodeling)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Structural biology (non-pulmonary-disease context)</td>
+<td>Single-cell network analysis of LUSC identifies ZBTB20 (with PPARG) as a putative upstream transcriptional regulator of UBB-centered prognostic signaling</td>
+<td>Ma W et al., J Transl Med 2026; PMID 42218498; DOI 10.1186/s12967-026-08328-2</td>
+<td>VERIFIED (malignancy context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Structural biology (review, non-pulmonary-disease context)</td>
+<td>Review of ZBTB20's pro-proliferative, pro-migratory, anti-apoptotic roles across multiple malignancies (including NSCLC), best-characterized in hepatocellular carcinoma</td>
+<td>Stoyanov D et al., Int J Mol Sci 2023 (review); PMID 37762065; DOI 10.3390/ijms241813763</td>
+<td>VERIFIED (review, malignancy context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Immune/inflammatory (B-cell/plasma-cell biology, non-COPD program)</td>
+<td>Zbtb20 is an IRF4-driven transcription factor expressed in B1/germinal-center B cells, peaking in long-lived bone-marrow plasma cells, required for plasma-cell survival/humoral longevity in mice</td>
+<td>Chevrier S et al., J Exp Med 2014; PMID 24711583; PMC PMC4010913; DOI 10.1084/jem.20131831</td>
+<td>VERIFIED (humoral immunity, not neutrophilic/CD8+/Th17/macrophage COPD programs)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Immune/inflammatory (B-cell/plasma-cell biology, non-COPD program)</td>
+<td>ZBTB20-deficient bone-marrow plasma cells fail to persist after alum-adjuvanted immunization (B-cell-intrinsic, reduced MCL1); TLR2/TLR4-activating adjuvants can compensate</td>
+<td>Wang Y, Bhattacharya D, J Exp Med 2014; PMID 24711582; PMC PMC4010912; DOI 10.1084/jem.20131821</td>
+<td>VERIFIED (humoral immunity, non-COPD-specific)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Immune/inflammatory (review, non-COPD program)</td>
+<td>Review reiterating ZBTB20 as critical for long-lived bone-marrow plasma-cell survival, with niche shaped by eosinophils, megakaryocytes, monocytes via APRIL/IL-6</td>
+<td>Kometani K, Kurosaki T, Curr Opin Immunol 2015 (review); PMID 25677584; DOI 10.1016/j.coi.2015.01.017</td>
+<td>VERIFIED (review, humoral immunity)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Immune/inflammatory (immunosenescence, non-pulmonary)</td>
+<td>Integrated splenocyte single-cell atlas (&gt;272,000 cells, 7 datasets) identifies Zbtb20 among genes with altered expression in aging B cells (with Zbtb32, Zfp318, Ighd, Cr2), part of a conserved immunosenescence signature</td>
+<td>Philip CS et al., Eur J Immunol 2026; PMID 41817300; PMC PMC12981209; DOI 10.1002/eji.70170</td>
+<td>VERIFIED (general immune-ageing biology, non-pulmonary)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Immune/inflammatory (T-cell exhaustion marker, non-pulmonary tumor context)</td>
+<td>ZBTB20 is one of several upregulated marker genes (with ANK3, ETV6, CAMK4) defining exhausted CD8+/CD4+ T cells (Tex) in colorectal cancer liver metastases</td>
+<td>Ding D et al., J Immunother Cancer 2025; PMID 41120125; PMC PMC12551530; DOI 10.1136/jitc-2025-012330</td>
+<td>VERIFIED (correlative bioinformatic marker, non-pulmonary tumor-immune context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Immune/inflammatory (prognostic signature, non-pulmonary tumor context)</td>
+<td>Three-gene stromal-myeloid signature including ZBTB20 (with KLF2, ARL4C) stratifies recurrence/disease-free survival in colorectal cancer liver metastasis</td>
+<td>Chang M et al., J Transl Med 2026; PMID 41807965; PMC PMC13088502; DOI 10.1186/s12967-026-07978-6</td>
+<td>VERIFIED (non-pulmonary tumor-immune context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Background (gene dosage sensitivity, non-pulmonary)</td>
+<td>ZBTB20 haploinsufficiency causes Primrose syndrome (neurodevelopmental disorder: macrocephaly, intellectual disability, corpus callosum anomalies); no pulmonary phenotype reported</td>
+<td>Alby C et al., Am J Med Genet A 2018; PMID 29681083; DOI 10.1002/ajmg.a.38684</td>
+<td>VERIFIED (background only; no pulmonary phenotype)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Background (gene dosage sensitivity, non-pulmonary)</td>
+<td>Case report of Primrose syndrome (ZBTB20 haploinsufficiency); no pulmonary phenotype reported</td>
+<td>Soğukpınar M et al., Mol Syndromol 2024; PMID 39129839; DOI 10.1159/000537952</td>
+<td>VERIFIED (background only; no pulmonary phenotype)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZBTB20</td>
+<td>Background (gene dosage sensitivity, non-pulmonary)</td>
+<td>Case report of Primrose syndrome / 3q13 deletion spectrum (developmental delay, autism, CNS malformations, overgrowth); no pulmonary phenotype reported</td>
+<td>de Oliveira-Sobrinho RP et al., Mol Syndromol 2024; PMID 39634243; DOI 10.1159/000538012</td>
+<td>VERIFIED (background only; no pulmonary phenotype)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>No verified citation supports a direct COPD case-control or spirometric (FEV1/FEV1-FVC) association for ZBTB20 or ZBTB20-AS5.</strong> A dedicated PubMed search for &quot;ZBTB20 FEV1 lung function spirometry genome-wide&quot; returned zero results, and no citation for ZBTB20-AS5 (statistical-genetics, structural, or immune) was found at all (zero PubMed results for &quot;ZBTB20-AS5&quot; by name).</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
+<p><strong>ZBTB20 (ENSG00000181722):</strong></p>
+<ul>
+<li>Genetic constraint (gnomAD): synonymous obs/exp = 0.976; missense obs/exp = 0.657 (moderately constrained); pLoF obs/exp = 0.172 (oeLower 0.103, oeUpper 0.300, most constrained bin) — strongly LoF-intolerant, consistent with its known haploinsufficiency (Primrose syndrome).</li>
+<li>Target-disease association score: <strong>zero</strong> recorded association with COPD or any pulmonary-function/emphysema trait (explicit query and free-text filters all returned count=0). Top associated diseases (of 388 total): Primrose syndrome (0.81), intellectual disability/neurodevelopmental phenotypes, type 2 diabetes, prostate carcinoma, skin aging/alopecia, major depressive disorder, gout, smoking initiation (0.30), alcohol drinking, risk-taking behaviour.</li>
+<li>Locus-specific L2G/colocalization at lead variant rs1606494 (3_114475941_C_T): three GWAS credible sets on record — &quot;Smoking cessation&quot; (GCST90243988, ZBTB20 L2G=0.612, colocalizes h4&gt;0.88-0.99 with multiple Height GWAS, diastolic blood pressure, thoracic aortic cross-sectional area, mean corpuscular volume, and a second smoking-behavior GWAS), &quot;Mean corpuscular volume&quot; (GCST90475466, L2G=0.645), &quot;Smoking behavior/ever-smoked-≥100-cigarettes&quot; (GCST90476387, L2G=0.642). ZBTB20 has the highest L2G score among nearby genes in every credible set found (vs. TIGIT/ZNF80/QTRT2/CCDC191, all ≤0.16). <strong>No COPD or pulmonary-function GWAS credible set was found at this exact variant.</strong></li>
+<li>Gene-anchored credible sets (62 total, independent of lead variant): all are molecular QTL studies (eQTL/sQTL/tuQTL across many tissues including GTEx lung), none carrying L2G scores and none being COPD/lung-function GWAS.</li>
+</ul>
+<p><strong>ZBTB20-AS5 (ENSG00000242290):</strong> No gnomAD constraint data on record. No disease associations (count=0). Did not appear among top-5 L2G genes at the lead variant in any of the three GWAS credible sets found. No Open Targets support for this gene as causal at this locus.</p>
+<p><strong>Context (not a separately requested candidate):</strong> TIGIT, ZNF80, QTRT2, CCDC191 all appear as weak L2G competitors (0.05-0.16) at the lead variant, well below ZBTB20.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>ZBTB20 — Confidence: LOW.</strong></p>
+<p>ZBTB20 is the best-supported gene at this locus on structural/statistical grounds: it is the nearest gene, is FLAMES- and PoPS-prioritized, physically contains all 19 credible-set variants, and has by far the highest Open Targets locus-to-gene score (0.61-0.65) of any nearby gene (TIGIT/ZNF80/QTRT2/CCDC191 all ≤0.16) at the lead variant rs1606494 across all three GWAS credible sets recorded there. This is corroborated by an independent, verified literature citation (Cheng et al., PMID 37147289) explicitly naming ZBTB20 as a biologically important region in a smoking-behavior multi-trait GWAS.</p>
+<p>However, confidence in ZBTB20 as a <em>COPD-relevant</em> gene, as opposed to simply &quot;the correct gene at this LD block,&quot; is LOW, and the pipeline's own red-team-skeptic marked this gene CONTESTED at the COPD-relevance level (not at the gene-identity level) for good reason: every trait directly observed at the exact lead variant in Open Targets is smoking cessation, smoking behavior, mean corpuscular volume, or (via colocalization) height/blood pressure/aortic size — never COPD or a spirometric trait. Open Targets' curated disease-association database records zero association between ZBTB20 and COPD, FEV1, FEV1/FVC, emphysema, or &quot;obstructive pulmonary&quot; by any query attempted. Independent PubMed searches for ZBTB20 + FEV1/lung function/spirometry likewise returned zero hits. The gene's well-verified literature biology — B-cell/plasma-cell humoral immunity, lung-cancer epithelial proliferation, a developmental lung-capillary marker-gene role, and Primrose-syndrome neurodevelopmental haploinsufficiency — is substantial but not COPD- or airway-inflammation-specific in any of the programs (neutrophilic, CD8+ T-cell, Th1, Th17/Tc17, macrophage) most classically implicated in COPD.</p>
+<p>Applying prior #1 directly: the convergent picture (highest L2G specifically for smoking-cessation/smoking-behavior GWAS at this variant, an independently replicated smoking-behavior MTAG hit, zero COPD/spirometry signal anywhere) makes it more likely that this locus entered the COPD GWAS credible-set list because smoking behavior is a strong causal/confounding driver of COPD case status in summary statistics not adjusted for smoking, rather than because ZBTB20 acts on lung pathophysiology directly. No formal mediation or Mendelian-randomization analysis of ZBTB20/rs1606494 on COPD via smoking was identified in this search — this is the single largest fillable gap, not a settled question. The disclosed search-budget exhaustion (both the researcher and the red-team-skeptic were unable to run a direct &quot;ZBTB20 rs1606494 COPD GWAS&quot; web search or any bioRxiv/medRxiv preprint search) means the possibility of an undiscovered direct COPD/spirometry association or preprint cannot be fully ruled out, which is an additional reason confidence is capped at LOW rather than MODERATE.</p>
+<p>Runner-up: none of the other nearby genes (TIGIT, ZNF80, QTRT2, CCDC191) has any competitive evidence — their L2G scores are far lower and none was independently researched in depth (TIGIT in particular was flagged by the red-team-skeptic as a genuinely unresearched candidate, given search-budget exhaustion, though its low L2G argues against it being the driver gene). ZBTB20-AS5 has essentially no independent support beyond ABC-based physical proximity.</p>
+<p>What would resolve this: (1) a direct, budget-unconstrained literature/GWAS-catalog search for ZBTB20 or rs1606494 against COPD/FEV1/FEV1-FVC specifically (not run in this pipeline due to search-budget exhaustion at two separate stages); (2) a formal smoking-mediation or Mendelian-randomization analysis of this locus's effect on COPD, decomposing direct pulmonary effect from smoking-behavior-mediated effect; (3) any independent evidence for or against TIGIT at this locus, given its immunological plausibility for COPD despite its lower L2G score.</p>
+<p>The study team should weigh this recommendation as: &quot;ZBTB20 is very likely the correct gene at this locus, but this locus's contribution to COPD risk is plausibly smoking-behavior-mediated rather than pulmonary-mechanistic, and that specific question was not resolved by the evidence gathered here.&quot;</p>
+
+</body>
+</html>

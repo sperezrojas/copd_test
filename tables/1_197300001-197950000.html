@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>1_197300001-197950000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-locus-evidence-table--1_197300001-197950000-chr1197300001-197950000-grch38">COPD locus evidence table — 1_197300001-197950000 (chr1:197,300,001-197,950,000, GRCh38)</h1>
+<p><strong>Lead variant:</strong> rs10922326 (chr1:197,898,532, PIP=0.187, upstream_gene_variant of C1orf53, MODIFIER impact)
+<strong>Credible set:</strong> 172 variants (ABF fine-mapping). All 172 variants are annotated intron_variant,
+intergenic_variant, upstream_gene_variant, or downstream_gene_variant (MODIFIER impact) — there is no
+missense, splice-donor, or splice-acceptor variant anywhere in this credible set. The credible set spans
+CRB1's 3' end, all of DENND1B's intron/regulatory space, and the intergenic region upstream of C1orf53.
+Per pipeline scope rules, only the lead variant required its own variant-level literature search; no
+dedicated PubMed literature exists for rs10922326 itself (zero hits).
+<strong>Candidate genes from internal pipeline:</strong> nearest gene C1orf53; MAGMA-prioritized DENND1B; PoPS-prioritized
+CRB1; ABC-prioritized DENND1B. A fourth gene, <strong>LHX9</strong>, was surfaced by the researcher via direct enumeration
+of protein-coding genes physically inside the locus interval (chr1:197,911,902-197,935,478) — it was not
+flagged by any of the four input prioritization methods (see &quot;Excluded / contested&quot; appendix in the audit
+file for the red-team-skeptic's concern about this inclusion).</p>
+<p>All rows below use only citations verdicted <strong>VERIFIED</strong> by citation-verifier. See
+<code>audits/1_197300001-197950000_audit.md</code> for excluded citations (RETRACTED/NOT_FOUND/CLAIM_MISMATCH) and the
+full red-team-skeptic critique, including per-gene WEAKENED verdicts, verbatim.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C1orf53</td>
+<td>Literature (unrelated)</td>
+<td>C1orf53 appears only as one of six genes in an unrelated cuproptosis-related gene prognostic index for endometrial cancer; no lung, immune, or COPD relevance found</td>
+<td>PMID 37859813 / DOI 10.7150/jca.86325</td>
+<td>WEAKENED (proximity-only candidacy; no corroborating biology)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND1B</td>
+<td>Statistical genetics</td>
+<td>Original discovery GWAS: genome-wide-significant asthma locus at 1q31.3 (lead SNP rs2786098) in European- and African-ancestry pediatric cohorts, replicated across multiple series; DENND1B expressed in NK/dendritic cells, predicted to interact with TNF-alpha receptor</td>
+<td>PMID 20032318 / DOI 10.1056/NEJMoa0901867</td>
+<td>WEAKENED (asthma evidence, not COPD)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND1B</td>
+<td>Statistical genetics (commentary)</td>
+<td>Correspondence discussing/critiquing the Sleiman et al. 2010 DENND1B-asthma finding</td>
+<td>PMID 20809851 / DOI 10.1056/NEJMc1002262</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND1B</td>
+<td>Statistical genetics (non-replication)</td>
+<td>Independent Australian asthma GWAS did NOT replicate the specific DENND1B risk variant reported by Sleiman et al.</td>
+<td>PMID 21150878 / DOI 10.1038/ejhg.2010.191</td>
+<td>WEAKENED (undercuts robustness of the asthma signal)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND1B</td>
+<td>Statistical genetics</td>
+<td>Nominal, non-robustly-replicated association between DENND1B variant rs4915551 and BMI specifically in asthmatic children</td>
+<td>PMID 23517042 / DOI 10.1111/cea.12054</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND1B</td>
+<td>Statistical genetics</td>
+<td>In a genetically isolated founder population (Tristan da Cunha) with high asthma prevalence, DENND1B SNP rs2786098 was the top asthma-associated variant, explaining ~1/3 of trait heritability locally, despite absence of association in large modern asthma GWAS meta-analyses</td>
+<td>PMID 31608842 / DOI 10.1017/thg.2019.82</td>
+<td>WEAKENED (heterogeneous, population-specific effect)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND1B</td>
+<td>Statistical genetics / immune</td>
+<td>DENND1B is one of seven novel genome-wide-significant risk loci for narcolepsy type 1 (T-cell-mediated autoimmune disease) in a GWAS of &gt;6,000 cases; immune-cell enrichment analyses point to dendritic/helper T-cell involvement</td>
+<td>PMID 37188663 / DOI 10.1038/s41467-023-36120-z</td>
+<td>WEAKENED (pleiotropic immune signal, not COPD-specific)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND1B</td>
+<td>Statistical genetics / immune</td>
+<td>In a Brazilian pediatric cohort, 72 of 166 tested DENND1B SNPs were associated with asthma and/or atopy markers (specific IgE, skin-prick test, IL-13 production)</td>
+<td>PMID 28668455 / DOI 10.1016/j.molimm.2017.06.030</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND1B</td>
+<td>Statistical genetics / structural</td>
+<td>In the COPSAC2000 birth cohort, DENND1B risk allele rs2786098-C was associated with elevated exhaled nitric oxide (FeNO, an airway-inflammation marker) in asymptomatic one-month-old neonates, independent of other tested risk factors</td>
+<td>PMID 24347560 / DOI 10.1002/ppul.22958</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND1B</td>
+<td>Statistical genetics / structural</td>
+<td>Doctoral thesis synthesizing COPSAC2000 findings: DENND1B risk allele and paternal atopy were the only tested factors independently associated with neonatal FeNO among genetic/perinatal/environmental risk factors</td>
+<td>PMID 27477800</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND1B</td>
+<td>Statistical genetics / immune (negative)</td>
+<td>DENND1B mRNA is detectable in human buccal mucosa; no case-control expression difference was found for DENND1B itself in asthma (differential expression was seen in other genes, HRH1/EDN1)</td>
+<td>PMID 23448392 / DOI 10.1111/pai.12042</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND1B</td>
+<td>Structural / immune (key mechanism)</td>
+<td>Dennd1b-knockout mice show hyperallergic responses after antigen challenge; Dennd1b-/- TH2 cells specifically (not other T-helper subsets) show delayed TCR down-modulation, enhanced TCR signaling, and increased effector cytokine production; DENND1B interacts with AP-2 and Rab35; human TH2 cells carrying asthma-risk DENND1B variants show reduced DENND1B expression and phenocopy knockout mouse TH2 cells</td>
+<td>PMID 26774822 / DOI 10.1016/j.cell.2015.11.052</td>
+<td>WEAKENED — real, specific mechanism, but for asthma/Th2 biology, not demonstrated in COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND1B</td>
+<td>Immune (commentary)</td>
+<td>Commentary on Yang et al. 2016: DENND1B controls the rate of TCR internalization and endosomal routing in Th2 cells</td>
+<td>PMID 26771480 / DOI 10.1016/j.cell.2015.12.045</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND1B</td>
+<td>Structural (basic biochemistry)</td>
+<td>General characterization of connecdenn1/DENND1-family GEF activity toward Rab35 and its Akt-dependent phosphorylation regulation in adipocytes; not disease- or tissue-specific</td>
+<td>PMID 26055712 / DOI 10.1074/jbc.M115.636712</td>
+<td>WEAKENED (background biochemistry only)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND1B</td>
+<td>Structural (contradicting evidence)</td>
+<td>Rab35-GEF family epithelial-polarity trafficking findings (podocalyxin trafficking in polarized epithelial culture) were specifically attributed to paralogs DENND1A and folliculin, NOT DENND1B, in this study</td>
+<td>PMID 31992598 / DOI 10.1074/jbc.RA119.011646</td>
+<td>WEAKENED — undercuts extrapolating a general Rab35-GEF epithelial-polarity role onto DENND1B specifically</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DENND1B</td>
+<td>Statistical genetics (background, negative)</td>
+<td>Large COPD GWAS meta-analysis (35,735 cases/222,076 controls, 82 loci identified) — this study does not include the 1q31.3/DENND1B region among its genome-wide-significant COPD loci</td>
+<td>PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
+<td>Background reference; confirms absence of COPD-specific signal for DENND1B in the largest COPD GWAS the researcher could check</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CRB1</td>
+<td>Structural</td>
+<td>A secreted splice isoform of mouse Crb1 (Crb1s, lacking transmembrane/cytoplasmic domains) is expressed broadly across adult mouse tissues including skin, lung, and kidney (unlike full-length Crb1, confined to brain/eye), with a described functional role in skin/keratinocyte differentiation, not lung function</td>
+<td>PMID 14684155 / DOI 10.1016/j.bbrc.2003.11.122</td>
+<td>WEAKENED — only evidence tying CRB1 to lung tissue at all, and it is expression-only, non-functional for lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LHX9 (not in input candidate list)</td>
+<td>Structural / immune (COPD-specific)</td>
+<td>LHX9 mRNA expression is increased in alveolar epithelial type 2 (AT2) cells from COPD lung tissue (n=11) vs. non-COPD tissue (n=10), independently correlating with degree of airflow obstruction; interferon-gamma (Th1 cytokine) was the strongest inducer of LHX9 among cytokines tested in A549 cells; siRNA LHX9 knockdown altered A549 cell susceptibility to serum-starvation-induced death</td>
+<td>PMID 34548271 / DOI 10.1016/j.resinv.2021.08.007</td>
+<td>WEAKENED — single, small, unreplicated study; no genetic (eQTL/colocalization/fine-mapping) link between this locus's credible-set variants and LHX9 established</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LHX9 (not in input candidate list)</td>
+<td>Immune (cross-tissue, speculative)</td>
+<td>In endometrial stromal cells (not lung tissue), silencing LHX9 suppressed IL6, CXCL8 (IL-8), and IL1B expression that had been upregulated by SERPINA1 (alpha-1 antitrypsin) knockdown combined with PGE2/thrombin treatment</td>
+<td>PMID 40802848 / DOI 10.1002/mrd.70046</td>
+<td>WEAKENED — speculative cross-tissue extrapolation to a COPD protease-antiprotease/inflammatory axis; not a lung-tissue finding</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p>Background (non-gene-specific) references verified and used only as context, not as gene-specific evidence
+rows: Liu et al. 2019 GSCAN smoking/alcohol GWAS (PMID 30643251); Saunders et al. 2022 multi-ancestry
+smoking/alcohol GWAS (PMID 36477530). Neither paper's abstract names DENND1B, C1orf53, or CRB1 specifically;
+the smoking-initiation L2G scores cited in the Open Targets summary below come from Open Targets' own
+structured evidence pipeline, not from having confirmed these genes are individually discussed in either
+paper's text.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — not a verified literature citation)</h2>
+<p>Queried via the Open Targets Platform GraphQL API on 2026-09-11. This section did <strong>not</strong> go through
+citation-verifier or red-team-skeptic and must not be treated as a literature citation. Full detail in
+<code>evidence_tables/_status/1_197300001-197950000/opentargets.md</code>.</p>
+<p><strong>Key caveat:</strong> Open Targets has zero GWAS or molecular-QTL credible sets indexed anywhere in this exact
+region (chr1:197,300,001-197,950,000), and the one COPD GWAS study it has indexed (GCST007692,
+Sakornsakolpat et al. 2019, ~35,735 cases/222,076 controls) has no hit near this locus. <strong>There is no
+COPD-specific L2G score or colocalization result available from Open Targets for any candidate gene at this
+locus</strong> — a genuine data gap, not a negative finding about any gene.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>COPD L2G/coloc (this locus)</th>
+<th>Best genome-wide GWAS-L2G elsewhere (any trait)</th>
+<th>gnomAD constraint (LOF oe / oe_upper, bin)</th>
+<th>QTL tissue/cell-type context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C1orf53</td>
+<td>No data (regional gap)</td>
+<td>Smoking initiation, L2G=0.051 (low)</td>
+<td>oe=2.07 / 1.98, bin 5 (least constrained — highly LoF-tolerant)</td>
+<td>Muscle, artery, kidney, colon, liver, esophagus, hypothalamus; one CD4+ T-cell single-cell eQTL. No lung QTL.</td>
+</tr>
+<tr>
+<td>DENND1B</td>
+<td>No data (regional gap)</td>
+<td>Smoking initiation, L2G=0.840 (very high); asthma, L2G=0.244</td>
+<td>oe=0.589 / 0.798, bin 2 (moderate constraint)</td>
+<td>Monocyte and neutrophil eQTL/sQTL (BLUEPRINT); Salmonella-stimulated macrophage eQTL; lung-tissue transcript-usage QTL (GTEx) — the only candidate with both immune-cell and lung-tissue QTL signal</td>
+</tr>
+<tr>
+<td>CRB1</td>
+<td>No data (regional gap)</td>
+<td>Asthma, L2G=0.368; smoking initiation, L2G=0.065</td>
+<td>oe=0.645 / 0.776, bin 2 (moderate constraint)</td>
+<td>Skeletal muscle, tibial nerve, dorsolateral prefrontal cortex, cerebellum. No immune or lung QTL.</td>
+</tr>
+<tr>
+<td>LHX9</td>
+<td>Not queried (not an original candidate; Open Targets lookup was not re-run for it)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Disease-association overview (all datasources, genome-wide, via <code>associatedDiseases</code>): C1orf53's 34
+associated diseases are dominated by macular degeneration, AMD, COVID-19, hypothyroidism, ovarian neoplasm,
+myopathy, MDD — nothing respiratory. DENND1B's 128 associated diseases are dominated by an
+immune/autoimmune-skewed, pleiotropic profile (psoriasis, IBD, MDD, primary biliary cholangitis, asthma,
+Crohn disease, autoimmune disease, smoking initiation). CRB1's 705 associated diseases are overwhelmingly
+retinal/ophthalmological (Leber congenital amaurosis, retinitis pigmentosa, macular dystrophy, cone-rod
+dystrophy) — CRB1 is a well-characterized Mendelian retinal-dystrophy gene.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Gene: DENND1B</strong>
+<strong>Confidence: LOW</strong></p>
+<p>DENND1B is the best-supported single candidate at this locus, but the case is materially hedged and should
+not be read as an established COPD mechanism gene. In favor: (1) it is both MAGMA- and ABC-prioritized, and
+essentially the entire 172-variant credible set falls within its intronic/regulatory footprint (see evidence
+table rows and locus description above); (2) it has the only mechanistically specific, experimentally
+validated biology among the four candidates — a Rab35 GEF controlling Th2-selective TCR down-modulation,
+with a well-replicated (if imperfectly replicated — see the Ferreira 2011 non-replication and Duffy 2019
+population-specific-effect rows above) genome-wide-significant asthma GWAS signal; (3) per the Open Targets
+structured lookup, it has the highest genome-wide GWAS-L2G score of the three originally-flagged candidates
+for both smoking initiation (0.840) and asthma (0.244), and the only lung-tissue QTL signal alongside
+immune-cell (monocyte/neutrophil/macrophage) QTLs.</p>
+<p>However, per the red-team-skeptic critique (preserved verbatim in the audit file), this case has a specific,
+serious gap: <strong>zero COPD-specific or spirometric (FEV1/FEV1-FVC) literature or colocalization evidence
+exists for DENND1B anywhere</strong> — the entire positive case is built from asthma/atopy/autoimmune-disease
+genetics and mechanism, not from COPD or lung-function genetics directly. The pipeline's Prior #1 (smoking-
+mediated effects) is directly relevant and unresolved here: DENND1B's single strongest documented
+genome-wide trait association is smoking initiation (L2G=0.840, more than 3x its asthma L2G), and the
+&quot;asthma-COPD overlap syndrome&quot; bridge invoked to connect DENND1B's Th2/asthma mechanism to this COPD signal
+is asserted, not evidenced, by anything in the dossier — no COPD-cohort data links DENND1B variants to
+eosinophilic/Th2-high COPD subtypes at this locus. The skeptic explicitly declined to elevate this to
+CONTESTED (no paper argues against DENND1B), but marked it WEAKENED and recommended presenting it as
+&quot;best-supported gene at the locus generically, but via smoking-behavior and/or asthma/Th2 pathways whose
+relevance to intrinsic COPD/emphysema pathophysiology is unestablished&quot; rather than as a confirmed COPD gene.</p>
+<p><strong>Runner-up: LHX9</strong> (not in the input file's candidate list; surfaced by the researcher via direct gene
+enumeration in the interval) has the only genuinely COPD-specific mechanistic literature at this locus —
+increased expression in COPD alveolar type 2 cells correlating with airflow obstruction, IFN-gamma-inducible,
+affecting AT2 cell survival (PMID 34548271) — but the red-team-skeptic flagged this inclusion as
+methodologically questionable: LHX9 was declined by all four of the locus's statistical prioritization
+methods (nearest-gene, MAGMA, PoPS, ABC), and there is no eQTL, colocalization, or fine-mapping evidence
+connecting any of the 172 credible-set variants to LHX9 expression or function. It should be treated as an
+interesting, hypothesis-generating, single-study lead rather than a genetically-linked candidate.</p>
+<p><strong>Runner-up: C1orf53 and CRB1</strong> are both best characterized, per the researcher and skeptic, as likely
+proximity/LD artifacts (nearest-gene bias for C1orf53; PoPS/LD-tagging of DENND1B's real asthma signal for
+CRB1) rather than independently causal genes — neither has any positive functional or disease-genetics case
+in the literature reviewed.</p>
+<p><strong>What would resolve this:</strong> a COPD-specific or FEV1/FEV1-FVC-specific GWAS colocalization or TWAS result
+directly implicating DENND1B (or any candidate) at this exact locus; a smoking-adjusted re-analysis of this
+COPD signal to test whether it survives adjustment for smoking behavior (which would argue against pure
+smoking-mediation and for genuine pulmonary/immune biology); or an eQTL/colocalization study connecting
+credible-set variants to LHX9 expression specifically, which would elevate it from &quot;physically nearby with
+an unrelated COPD paper&quot; to a genetically-supported candidate. Given all of this, confidence in DENND1B as
+the causal gene is LOW, not MODERATE or HIGH — it is the best-supported candidate among weak options, not a
+well-established one.</p>
+
+</body>
+</html>

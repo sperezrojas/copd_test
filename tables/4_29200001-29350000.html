@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>4_29200001-29350000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-429200001-29350000-chr4292-2935-mb-grch38">Evidence table — locus 4:29,200,001-29,350,000 (chr4:29.2-29.35 Mb, GRCh38)</h1>
+<p><strong>Lead/credible-set variant:</strong> rs76849161 (PIP=0.99940697, 4:29,275,597, intron_variant /
+non_coding_transcript_variant of LINC02472, MODIFIER impact). Candidate genes per internal
+pipeline: nearest gene = &quot;intergenic&quot;; FLAMES/MAGMA/PoPS/ABC all NA. Only the credible-set
+annotation resolves to a gene symbol: LINC02472.</p>
+<p>This locus is a <strong>gene desert</strong>: only two lncRNAs overlap the queried window (LINC02472,
+which contains the credible-set variant, and an unnamed/uncharacterized lncRNA
+ENSG00000248176 that only partially overlaps and has no credible-set variant of its own —
+not further characterized, consistent with pipeline scope rules). The nearest
+protein-coding gene, PCDH7, lies ~1.43 Mb away and is not nominated as a candidate by any
+prioritization method; it is included below only as background context, not as a
+competing formal candidate.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LINC02472</td>
+<td>Genomic containment</td>
+<td>rs76849161 (PIP=0.999) is an intron_variant/non_coding_transcript_variant within LINC02472 (4:29,214,253-29,291,886, GRCh38); this is the sole basis for candidacy — no independent supporting evidence identified.</td>
+<td>Locus input file / Ensembl REST (database lookup, not a peer-reviewed literature claim)</td>
+<td>HOLDS as an honest containment fact; skeptic notes intronic containment in a lncRNA is weak causal evidence on its own (not necessarily evidence of transcript function)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC02472</td>
+<td>Statistical genetics (off-topic/tangential)</td>
+<td>LINC02472 appears incidentally in a large gene list of a gastric-cancer metabolome-GWAS study (associated with a plasma metabolite, Phosphoribosyl-ATP); no COPD/lung/smoking/immune relevance.</td>
+<td>Zhang Y et al. 2023, Int J Mol Sci 24(20):15259. PMID 37894938, DOI 10.3390/ijms242015259</td>
+<td>VERIFIED (citation accurate); skeptic did not separately re-critique this tangential citation beyond noting it is off-topic</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC02472</td>
+<td>Variant-level literature/database check</td>
+<td>rs76849161 has zero PubMed hits and no GWAS Catalog entry (any trait) — no published characterization exists outside this internal GWAS pipeline.</td>
+<td>PubMed E-utilities search; GWAS Catalog REST API (database lookups, not literature citations)</td>
+<td>VERIFIED (both absences independently confirmed by citation-verifier)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC02472</td>
+<td>Expression (database lookup)</td>
+<td>GTEx v10: ~1.15 TPM in testis only; ~0.0 TPM in lung, whole blood, spleen, and all other 53 sampled tissues.</td>
+<td>GTEx Portal API v2 (database lookup, not a peer-reviewed citation)</td>
+<td>Skeptic: weak-to-moderate evidence against a lung role, not dispositive — lncRNA expression is often tissue-restricted/disease-state-induced and poorly captured by bulk GTEx from non-diseased donors</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PCDH7 (context only, ~1.43 Mb from credible-set variant; not a formal candidate)</td>
+<td>Statistical genetics</td>
+<td>PCDH7 (rs7664851) is a suggestive (not genome-wide-significant) locus for single-breath DLCO (P=3.03E-06) in COPD-enriched cohorts (COPDGene, NETT, GenKOLS, TESRA); abstract also reports a nominal COPD case-control association near PCDH7.</td>
+<td>Sakornsakolpat P et al. 2019, Am J Respir Cell Mol Biol 60(5):523-531. PMID 30694715, DOI 10.1165/rcmb.2018-0384OC</td>
+<td>VERIFIED, but WEAKENED as evidence for this specific locus — skeptic notes no LD/colocalization check was done between rs7664851 and rs76849161; at 1.43 Mb these are more likely independent, coincidentally nearby signals than the same causal signal</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PCDH7 (context only)</td>
+<td>Structural/oncology (off-topic)</td>
+<td>PCDH7 promoter recurrently hypermethylated in NSCLC tumor tissue vs matched normal lung, not smoking-status-specific — a cancer-tissue epigenetic finding, not a COPD/airway-remodeling finding.</td>
+<td>Karlow JA et al. 2023, Genomics Proteomics Bioinformatics 21(5):991-1013. PMID 37742993, DOI 10.1016/j.gpb.2023.03.006</td>
+<td>VERIFIED; correctly weighted by researcher/skeptic as tangential to COPD biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PCDH7 (context only)</td>
+<td>Statistical genetics / behavioral pleiotropy</td>
+<td>Colocalization of association signal between schizophrenia and smoking-related traits identified at PCDH7 (among other loci).</td>
+<td>Al-Soufi L, Costas J 2023, Psychol Med 53(14):6806-6816. PMID 36876478, DOI 10.1017/S0033291723000326</td>
+<td>VERIFIED; skeptic: this is trait-level evidence about PCDH7's own independent GWAS signal and should NOT be transferred to a smoking-mediation interpretation of rs76849161/LINC02472 without a shared-signal (LD/coloc) check, which has not been done</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PCDH7 (context only)</td>
+<td>Statistical genetics / behavioral pleiotropy</td>
+<td>PCDH7 was one of three genome-wide-significant genes in gene-based analysis of childhood aggression (P=2.0E-06); previously implicated in GWAS of educational attainment/adventurousness; childhood aggression is genetically correlated with smoking phenotypes at the trait level (rg 0.46-0.60), not locus-specifically.</td>
+<td>Ip HF et al. 2021, Transl Psychiatry 11(1):413. PMID 34330890, DOI 10.1038/s41398-021-01480-x</td>
+<td>VERIFIED; same caveat as above — behavioral/smoking pleiotropy at PCDH7 is not shown to be the same signal as rs76849161</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PCDH7 (context only)</td>
+<td>Off-topic/tangential</td>
+<td>PCDH7 methylation appears incidentally near a maternal-lead-exposure-associated differentially methylated region in an autism-risk pregnancy cohort; no lung/immune/smoking-specific claim.</td>
+<td>Aung MT et al. 2021, Epigenetics 17(3):253-268. PMID 33794742, DOI 10.1080/15592294.2021.1897059</td>
+<td>VERIFIED; off-topic, no further weight given</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note on the red-team-skeptic stage for this locus:</strong> the skeptic's WebSearch tool budget
+was exhausted before it could run any independent searches (0 searches completed). Its
+critique above is therefore a critique of the researcher's own reported findings and
+internal logical consistency, not an independently re-verified adversarial search. This is
+disclosed so the reader can weight the &quot;Skeptic verdict&quot; column accordingly for this locus.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>L2G / genetic-association evidence (COPD, MONDO_0005002)</th>
+<th>Colocalization</th>
+<th>Genetic constraint</th>
+<th>Other</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LINC02472 (ENSG00000248338)</td>
+<td>count = 0 (no evidence rows)</td>
+<td>None found</td>
+<td>Not computed (non-coding RNA; constraint metrics not applicable)</td>
+<td>0 disease associations of any kind in Open Targets (all datatypes/diseases); no tractability data. Genomic location chr4:29,214,253-29,291,886, contains the credible-set variant.</td>
+</tr>
+<tr>
+<td>PCDH7 (ENSG00000169851; context only, ~1.43 Mb away, not a formal candidate)</td>
+<td>count = 0 for COPD specifically</td>
+<td>None found for COPD</td>
+<td>mis z=1.91 (oe=0.86), lof oe=0.30 (obs 16 vs exp 53.4) — some constraint against LoF variants; syn z=-1.12 (oe=1.08)</td>
+<td>188 disease associations overall (other datatypes/diseases, e.g. oncology-related; unrelated to this locus)</td>
+</tr>
+</tbody>
+</table>
+<p>Open Targets query methodology: <code>search_entities</code> to resolve Ensembl IDs; <code>target.genomicLocation</code>,
+<code>target.geneticConstraint</code>, <code>target.tractability</code>, <code>target.associatedDiseases</code>, and
+<code>target.evidences(efoIds: [&quot;MONDO_0005002&quot;], datasourceIds: [&quot;ot_genetics_portal&quot;, &quot;gwas_credible_sets&quot;])</code> queried directly via the Open Targets GraphQL API. All queries
+executed successfully and returned genuine empty results (not tool/query errors) where
+noted as count=0 — this is a real absence-of-evidence finding for LINC02472, not a lookup
+failure.</p>
+<h2 id="prioritized-gene-synthesis">Prioritized-gene synthesis</h2>
+<p><strong>Prioritized gene: LINC02472 — Confidence: INSUFFICIENT</strong></p>
+<p>This locus does not support a confident gene-level call, and that absence of resolution is
+itself the finding. The statistical fine-mapping is excellent (rs76849161, PIP=0.999,
+essentially the entire credible set on one variant), but every independent line of
+biological/functional evidence is null: FLAMES/MAGMA/PoPS/ABC prioritization methods all
+returned NA for this locus; LINC02472, the only gene the credible-set variant physically
+falls within, has zero Open Targets disease associations of any kind (not just for COPD),
+zero L2G/genetic-association evidence, no genetic constraint or tractability data
+(expected for a non-coding RNA, but still uninformative), no on-topic PubMed literature
+(its only PubMed hit is an incidental, off-topic gastric-cancer metabolomics gene-list
+mention), no GWAS Catalog entry for the variant itself, and near-zero GTEx expression in
+lung or immune tissue (detectable only in testis). As the red-team-skeptic emphasized,
+physical containment of a noncoding intronic variant within a lncRNA transcript is weak
+causal evidence on its own — it establishes proximity, not function — and the credible-set
+variant could in principle be a distal regulatory element for a gene outside this ~150kb
+window (a recognized pattern at gene-desert loci), which cannot currently be tested here
+because no ABC/Hi-C/eQTL colocalization data exist for this region.</p>
+<p>The only other gene considered, PCDH7 (~1.43 Mb away), is not a formally prioritized
+candidate by any method in the input pipeline. It does have a real, verified, if merely
+suggestive (not genome-wide-significant), DLCO/nominal-COPD association (Sakornsakolpat
+2019) and notable behavioral/smoking-trait pleiotropy elsewhere in the genome-wide
+literature (childhood aggression, schizophrenia-smoking colocalization). However, as the
+skeptic stressed, no LD or colocalization analysis links PCDH7's associated variant
+(rs7664851) to rs76849161, and at 1.43 Mb apart these are far more likely to be two
+independent, coincidentally nearby signals than a single shared causal mechanism. PCDH7's
+smoking-related pleiotropy therefore cannot be invoked to argue this locus operates through
+a smoking-mediated pathway without that shared-signal check, which has not been done.</p>
+<p><strong>Runner-up:</strong> PCDH7 (very low confidence, distance-limited, unconfirmed shared signal).
+<strong>What would resolve this call:</strong> (1) LD/colocalization analysis between rs76849161 and
+rs7664851 (PCDH7's DLCO signal) to test whether they represent the same or independent
+signals; (2) chromatin conformation (Hi-C/ABC) or eQTL colocalization data for the
+rs76849161 credible-set region, to test whether this regulatory element targets LINC02472,
+PCDH7, or some other gene; (3) disease-state or airway-specific single-cell/bulk expression
+data for LINC02472 (smoke-exposed or COPD-affected lung tissue specifically, not healthy
+bulk GTEx) to test whether its testis-restricted expression in healthy donors understates a
+context-specific lung role. Until then, this locus should be carried forward as
+<strong>functionally uncharacterized</strong> rather than confidently assigned to LINC02472 — the study
+team should weigh whether to treat LINC02472 as a placeholder label for &quot;the gene desert
+containing this fine-mapped signal&quot; rather than a mechanistically supported candidate.</p>
+
+</body>
+</html>

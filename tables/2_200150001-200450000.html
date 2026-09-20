@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2_200150001-200450000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-2200150001-200450000-lead-variant-rs985256">Evidence table — Locus 2:200150001-200450000 (lead variant rs985256)</h1>
+<p>Candidate genes evaluated: <strong>SPATS2L</strong> (nearest gene, FLAMES-prioritized, ABC-prioritized) and
+<strong>SATB2</strong> (MAGMA-prioritized, PoPS-prioritized).</p>
+<p>All rows below carry a VERIFIED citation-verifier verdict. Citations returned as
+CLAIM_MISMATCH or RETRACTED, and genes/claims the red-team-skeptic contested or weakened,
+are NOT included here — see <code>audits/2_200150001-200450000_audit.md</code> for the full excluded
+list and the skeptic's verbatim reasoning. Two tangential/minor citations the researcher
+mentioned in passing (PMID 25358868, PMID 26447881) were judged non-load-bearing and never
+submitted to citation-verifier; they are excluded by omission (see audit appendix) and must
+not be treated as verified evidence.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SPATS2L</td>
+<td>Statistical genetics — asthma bronchodilator-response GWAS + functional follow-up</td>
+<td>Original discovery GWAS (1,644 asthmatics, 6 clinical trials) identified rs295137 near SPATS2L at genome-wide-suggestive significance (P=9.7e-7) for bronchodilator response (%FEV1 change post-SABA); SPATS2L siRNA knockdown increased β2-adrenergic receptor (ADRB2) protein levels in vitro</td>
+<td>Himes et al. 2012, PMID 22792082, DOI 10.1371/journal.pgen.1002824</td>
+<td>WEAKENED as COPD-specific evidence — this is the anchor of SPATS2L's asthma/bronchodilator-pharmacodynamic identity; skeptic flags that rs295137 (not itself in this locus's credible set) has no reported LD confirmation with lead variant rs985256, so applying this literature to the credible-set signal assumes shared mechanism by gene-proximity</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Statistical genetics — pediatric asthma bronchodilator response</td>
+<td>In CAMP childhood-asthma cohort, rs295137-bronchodilator-response association is strongest in early childhood/adolescence and diminishes into adulthood</td>
+<td>Sordillo et al. 2018, PMID 30585438, DOI 10.1002/ppul.24219</td>
+<td>Same LD/age-relevance caveat as above; supports asthma-specific, pediatric-skewed identity, not COPD (adult, smoking-related disease)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Statistical genetics — pediatric asthma exacerbation severity</td>
+<td>rs295137 combined with two IL33 SNPs improved prediction of ED management failure in acute pediatric asthma exacerbations</td>
+<td>Tang et al. 2019 (editorial), PMID 30868766, DOI 10.1002/ppul.24309</td>
+<td>Reinforces asthma-severity, not COPD, identity</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Statistical genetics — pediatric asthma exacerbation severity</td>
+<td>In 491 children with moderate-severe asthma, rs295137 associated with increased odds of ED management failure (OR=1.77) independent of clinical predictors</td>
+<td>Tse et al. 2019, PMID 30644648, DOI 10.1002/ppul.24247</td>
+<td>Same as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Statistical genetics — review</td>
+<td>Review lists SPATS2L among established asthma beta-agonist-response pharmacogenetic genes alongside ADRB2</td>
+<td>Ortega &amp; Meyers 2014, PMID 24369795, DOI 10.1016/j.jaci.2013.10.040</td>
+<td>Background/secondary; reinforces asthma-dominant literature identity</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Statistical genetics — review</td>
+<td>Review classifies SPATS2L among beta-agonist response genes in asthma pharmacogenomics</td>
+<td>García-Menaya et al. 2019, PMID 31178722, DOI 10.3389/fphar.2019.00520</td>
+<td>Same as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Statistical genetics — lung-function/COPD GWAS (locus-class background)</td>
+<td>Large multi-ancestry lung-function GWAS (n=400,102) defines 279 lung-function signals (139 novel) that in combination strongly predict COPD</td>
+<td>Shrine et al. 2019, PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
+<td>Not gene-specific; establishes the class of study underlying the FEV1/FVC colocalization noted in Open Targets, not direct SPATS2L evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Statistical genetics — metabolic-trait pleiotropy</td>
+<td>A SPATS2L variant (rs60106404) reached genome-wide significance for fasting plasma glucose in Chinese adult twins</td>
+<td>Wang et al. 2020, PMID 32682390, DOI 10.1186/s12864-020-06898-z</td>
+<td>Non-pulmonary pleiotropy; illustrates locus is not lung-specific in its effects</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Statistical genetics — neuropsychiatric pleiotropy</td>
+<td>Locus shared between schizophrenia risk and hippocampal volume implicates SPATS2L (rs1653290)</td>
+<td>Smeland et al. 2018, PMID 29136250, DOI 10.1093/schbul/sbx148</td>
+<td>Non-pulmonary pleiotropy</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Statistical genetics — neurological pleiotropy</td>
+<td>Linkage fine-mapping maps a restless-legs-syndrome haplotype over KCTD18 and SPATS2L exons 10-13</td>
+<td>Pichler et al. 2012, PMID 23054586, DOI 10.1007/s12031-012-9891-5</td>
+<td>Non-pulmonary pleiotropy; also implicates neighboring gene KCTD18, adding uncertainty to gene attribution within the locus for non-lung traits</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Statistical genetics — cardiovascular pleiotropy (exploratory)</td>
+<td>A SPATS2L SNP was among promising (not genome-wide-significant) loci for diastolic blood pressure via gene-loop-diuretic interaction test</td>
+<td>de las Fuentes et al. 2013, PMID 24400021, DOI 10.3389/fgene.2013.00304</td>
+<td>Weak/exploratory, did not reach genome-wide significance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Immunology — cross-disease pleiotropy (acute lung injury)</td>
+<td>SPATS2L upregulated in whole blood of ARDS patients, grouped with interferon-stimulated genes (IFI44L, OAS3, LY6E), specific to non-HSCT ARDS</td>
+<td>Englert et al. 2019, PMID 30665420, DOI 10.1186/s12931-019-0981-6</td>
+<td>Not COPD-specific — skeptic: this is cross-disease pleiotropy (acute lung injury, not COPD) and should not be read as evidence for a COPD immune mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Immunology — cross-disease pleiotropy (autoimmune skin disease)</td>
+<td>SPATS2L validated as overexpressed in in-vitro-activated T cells from psoriasis patients, hub of a psoriasis-associated coexpression network</td>
+<td>Palau et al. 2013, PMID 24267790, DOI 10.1186/1471-2164-14-825</td>
+<td>Not COPD-specific — skeptic: cross-disease pleiotropy (psoriasis, not COPD); demonstrates T-cell-activation regulation in principle only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Immunology — speculative/indirect</td>
+<td>Sequence-homology (BLAST) and murine macrophage/fibroblast Western-blot evidence proposed as basis for SPATS2L as a candidate thymulin precursor</td>
+<td>Lunin et al. 2017, PMID 28281875, DOI 10.1177/0394632017694625</td>
+<td>Low-confidence/exploratory; non-human, indirect; researcher and skeptic both flag as speculative</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Asthma-COPD-overlap (ACO) context</td>
+<td>In COPDGene smokers, self-reported childhood asthma strongly associated with COPD risk (OR 3.42); childhood-asthma GWAS signal converged on established asthma loci (IL1RL1, IL13, GSDMB region, C11orf30-LRRC32); SPATS2L/rs295137 was NOT among genome-wide-significant loci highlighted in this specific curated-SNP analysis</td>
+<td>Hayden et al. 2018, PMID 30373671, DOI 10.1186/s12931-018-0890-0</td>
+<td>Does not resolve the ACO question for SPATS2L either way — this study examined a curated list of established asthma SNPs, not lung-function fine-mapped loci, so SPATS2L's absence here is not a direct exclusion</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Tangential oncology pleiotropy (not COPD/pulmonary-relevant)</td>
+<td>SPATS2L listed among genes in a glioma prognostic gene panel</td>
+<td>Wang et al. 2021, PMID 33959491, DOI 10.3389/fonc.2021.551160</td>
+<td>Not evaluated for COPD relevance; listed for completeness only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Tangential oncology pleiotropy (not COPD/pulmonary-relevant)</td>
+<td>SPATS2L part of an 8-gene AML prognostic signature</td>
+<td>Zhang &amp; Xiao 2020, PMID 32268820, DOI 10.1080/10428194.2020.1742898</td>
+<td>Not evaluated for COPD relevance; listed for completeness only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPATS2L</td>
+<td>Tangential oncology pleiotropy (not COPD/pulmonary-relevant)</td>
+<td>SPATS2L identified as a miR-1269a target gene with tumor-promoter role in hepatocellular carcinoma</td>
+<td>Min et al. 2017, PMID 28081866, DOI 10.1016/j.bulcan.2016.11.021</td>
+<td>Not evaluated for COPD relevance; listed for completeness only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SATB2</td>
+<td>Pathology — diagnostic IHC marker (argues AGAINST normal lung expression)</td>
+<td>SATB2 nuclear expression used as a marker of colorectal origin in metastases to lung, precisely because SATB2 is not normally expressed in lung epithelium</td>
+<td>Tran et al. 2025, PMID 41310725, DOI 10.1186/s13000-025-01732-0</td>
+<td>CONTESTED gene overall (see synthesis) — this citation actively argues against SATB2 having a normal functional role in lung tissue</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SATB2</td>
+<td>Pathology — diagnostic IHC marker</td>
+<td>SATB2 positivity described in a subset of SMARCB1-proficient sarcomas (diagnostic-marker context, not lung-specific)</td>
+<td>Kantak et al. 2024, PMID 39686642, DOI 10.1177/10668969241301060</td>
+<td>CONTESTED gene overall; non-lung diagnostic-pathology use</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SATB2</td>
+<td>Pathology — diagnostic IHC marker</td>
+<td>SATB2 as an osteoblastic-differentiation marker in bone sarcomas</td>
+<td>Warmke et al. 2022, PMID 35311957, DOI 10.1093/ajcp/aqac033</td>
+<td>CONTESTED gene overall; non-lung, skeletal-lineage biology consistent with SATB2's known developmental role, not COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SATB2</td>
+<td>Oncology — NSCLC circRNA mechanism (not COPD-relevant)</td>
+<td>Circ_SATB2 knockdown alters NSCLC cell progression</td>
+<td>Zheng et al. 2022, PMID 36196919, DOI 10.14670/HH-18-530</td>
+<td>CONTESTED gene overall; cancer-biology mechanism, not airway remodeling/inflammation</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SATB2</td>
+<td>Oncology — NSCLC circRNA mechanism (not COPD-relevant)</td>
+<td>Exosomal circSATB2 transmitted into lung cancer cells contributes to malignant development</td>
+<td>Zhu et al. 2022, PMID 36148757, DOI 10.1111/1759-7714.14652</td>
+<td>CONTESTED gene overall</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SATB2</td>
+<td>Oncology — NSCLC circRNA mechanism (not COPD-relevant)</td>
+<td>HCG11/miR-875/SATB2 axis in NSCLC</td>
+<td>Su et al. 2021, PMID 34080031, DOI 10.3892/mmr.2021.12191</td>
+<td>CONTESTED gene overall</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SATB2</td>
+<td>Oncology — NSCLC circRNA mechanism (not COPD-relevant)</td>
+<td>Circ_SATB2/miR-33a-5p/E2F7 signaling in NSCLC</td>
+<td>Liu et al. 2020, PMID 33239891, DOI 10.2147/OTT.S279434</td>
+<td>CONTESTED gene overall</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SATB2</td>
+<td>Oncology — NSCLC prognostic signature (not COPD-relevant)</td>
+<td>TF-based genomic model comprising SATB2, HLF, and NPAS2 as lung cancer prognostic indicator</td>
+<td>Yao et al. 2021, PMID 34925645, DOI 10.1155/2021/5125643</td>
+<td>CONTESTED gene overall</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SATB2</td>
+<td>Carcinogenesis mechanism in bronchial epithelium (not a COPD/remodeling mechanism)</td>
+<td>SATB2 upregulated during cadmium-induced malignant transformation of BEAS-2B bronchial epithelial cells; shRNA knockdown of SATB2 inhibited anchorage-independent growth</td>
+<td>Cartularo et al. 2016, PMID 27186882, DOI 10.1371/journal.pone.0155002</td>
+<td>CONTESTED gene overall — this is a carcinogenesis/oncogenic-transformation mechanism in bronchial epithelium, not an airway-remodeling, protease-antiprotease, or COPD-relevant structural mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SATB2</td>
+<td>Review — cancer biology (not COPD-relevant)</td>
+<td>Review confirms SATB2 dysregulation is a cancer-biology phenomenon across lung, colon, prostate, breast, gastric, and liver cancers</td>
+<td>Chen et al. 2019, PMID 30916759, DOI 10.1093/carcin/bgz020</td>
+<td>CONTESTED gene overall; confirms SATB2's lung literature is cancer-specific, not COPD/airway-biology</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
+<p><strong>SPATS2L (ENSG00000196141):</strong></p>
+<ul>
+<li>COPD (MONDO_0005002) disease-association score: overall 0.310, with a <code>genetic_association</code> datatype score of 0.510 present (no other datatype contributing).</li>
+<li>Asthma (MONDO_0004979) disease-association score: overall 0.0095, driven entirely by <code>literature</code> datatype (0.078) — <strong>no <code>genetic_association</code> datatype score for asthma at all</strong> in Open Targets, despite SPATS2L's strong asthma literature identity documented above. This is flagged as a likely database/disease-mapping gap (the bronchodilator-response GWAS trait may not be mapped to the &quot;asthma&quot; MONDO term in this data release), not a genuine null finding — do not read this as evidence against asthma pleiotropy.</li>
+<li>L2G/colocalization: the lead credible-set variant (rs985256) and next two highest-PIP variants (rs6435049, rs4673988) all colocalize with a GWAS of lung function (FEV1/FVC ratio, GCST90244094) at <strong>L2G = 0.783 for SPATS2L</strong>, plus multiple GTEx eQTL credible sets (esophagus muscularis, esophagus GEJ, adrenal gland, Treg-naive cells) with SPATS2L as eGene. The same variants also colocalize with a GWAS of &quot;age at first had sexual intercourse&quot; (L2G ≈ 0.76–0.81) — judged almost certainly incidental/non-causal pleiotropy from a large polygenic behavioral-trait GWAS, not biologically meaningful. No COPD-specific (GCST007692) fine-mapped credible set was returned for these variants in the Open Targets release queried — an absence of data, not evidence against.</li>
+<li>Genetic constraint: pLoF obs/exp = 0.497 (20 observed vs. 40.2 expected) — moderate, not extreme, constraint.</li>
+</ul>
+<p><strong>SATB2 (ENSG00000119042):</strong></p>
+<ul>
+<li>COPD (MONDO_0005002) disease-association score: overall 0.0022, driven entirely by <code>literature</code> datatype (0.018) — <strong>no <code>genetic_association</code> datatype score at all</strong>, i.e., Open Targets' aggregated GWAS/L2G evidence assigns no COPD genetic signal to SATB2 despite it being the MAGMA/PoPS pick for this locus.</li>
+<li>L2G/colocalization: SATB2 did <strong>not</strong> appear in the L2G predictions at any of the three credible-set variants queried (SPATS2L was the only gene returned by Open Targets' L2G model at this locus).</li>
+<li>Genetic constraint: pLoF obs/exp = 0.016 (1 observed vs. 61.7 expected) — extremely constrained, consistent with SATB2's known role as a dosage-sensitive developmental transcription factor (SATB2-associated syndrome from de novo LoF variants); this is a marker of general pleiotropic essentiality, not COPD-specific relevance.</li>
+<li>Physical distance: SATB2 (chr2:199,268,900-199,471,271, GRCh38) lies ~679 kb outside the stated locus region (2:200,150,001-200,450,000) and further still from the lead variant — confirmed via Ensembl by the researcher. Only one protein-coding gene (SPATS2L) overlaps the stated locus region at all.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Prioritized gene: SPATS2L</strong>
+<strong>Confidence: MODERATE</strong></p>
+<p>SPATS2L is the clear pick for <em>which gene</em> is implicated at this locus: it is the nearest gene, the FLAMES- and ABC-prioritized gene, the only protein-coding gene physically within the stated locus boundaries, the only gene returned by Open Targets' L2G model at the credible-set variants (L2G=0.783 for a lung-function/FEV1-FVC GWAS colocalization), and the eGene at multiple independent GTEx eQTL credible sets at the same variants. SATB2 (MAGMA/PoPS pick) sits ~679 kb outside the locus, was not returned by L2G at any queried variant, has no COPD genetic-association signal in Open Targets, and has no COPD-relevant structural or immune literature — every SATB2 lung-related citation in the evidence table above is either a diagnostic marker for excluding lung origin of a tumor or a cancer-biology mechanism, none an airway-remodeling or inflammatory mechanism. The red-team-skeptic's CONTESTED verdict on SATB2 is adopted here in full; SATB2 is not a serious competing candidate at this locus.</p>
+<p>The confidence is capped at MODERATE, not HIGH, because of the unresolved question of <em>what disease process</em> SPATS2L's association reflects. The gene's dominant, best-replicated literature identity is an asthma/inhaled-beta-agonist bronchodilator-response and pediatric-asthma-exacerbation-severity gene (Himes 2012 and multiple replications, all via the correlated variant rs295137), not a COPD-specific or classical airway-remodeling/inflammatory gene. The red-team-skeptic raised a specific, unresolved alternative that this evidence table has not been able to rule out: because COPD case definitions typically require post-bronchodilator spirometry, a variant that genuinely alters bronchodilator pharmacodynamics (as SPATS2L appears to, per the ADRB2-knockdown mechanism in Himes 2012) could shift COPD case/control status at the diagnostic threshold as a measurement/ascertainment effect, independent of any true difference in underlying COPD disease biology — this is distinct from, and arguably more parsimonious than, the more commonly considered &quot;asthma-COPD-overlap (ACO) misclassification&quot; explanation, and neither this review nor the one COPDGene ACO-specific study found (Hayden et al. 2018, which did not test SPATS2L directly) resolves it. In addition: (a) no LD data confirms that the pharmacogenetic variant rs295137 is actually correlated with this locus's lead credible-set variant rs985256, so applying the asthma-pharmacogenetic literature to characterize this specific COPD signal involves an unverified assumption of shared mechanism by gene-proximity; (b) the immune evidence offered (ARDS interferon signature, psoriasis T-cell activation) is real but drawn from diseases mechanistically distant from COPD and should not be read as COPD-specific immune support; (c) smoking-mediation (this pipeline's prior #1) is genuinely untested here — no smoking-initiation/cessation/heaviness GWAS literature or GWAS Catalog/GSCAN data could be retrieved in this session, so this is an open gap, not a ruled-out mechanism.</p>
+<p><strong>What would resolve this:</strong> (1) an LD check between rs985256 (this locus's lead/credible-set variant) and rs295137 (the asthma-pharmacogenetic variant) to establish whether they tag the same signal; (2) a direct query of smoking-initiation/cessation/heaviness GWAS summary statistics (e.g., GSCAN) at this locus; (3) COPD-tissue-specific (sputum, BAL, explanted lung) expression or functional data for SPATS2L, which is currently absent from the literature reviewed; (4) a study directly partitioning the COPD case-control signal at this locus by asthma-history/ACO status. Until then, SPATS2L should be reported to the study team as the best-supported gene at this locus by a wide margin over SATB2, but with an explicitly flagged, unresolved question of whether its COPD association reflects direct pulmonary/inflammatory disease biology, asthma-COPD-overlap misclassification, or a bronchodilator-response measurement artifact intrinsic to how COPD is diagnosed.</p>
+
+</body>
+</html>

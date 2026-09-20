@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>6_11400001-11600000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-611400001-11600000-grch38">Evidence table — Locus 6:11,400,001-11,600,000 (GRCh38)</h1>
+<p><strong>Lead variant:</strong> rs693829 (6:11,511,255). <strong>Candidate gene(s):</strong> TMEM170B (sole candidate gene —
+nearest gene, FLAMES, and PoPS all prioritize TMEM170B; MAGMA and ABC made no call at this locus).
+All 7 credible-set variants are non-coding intron_variant/non_coding_transcript_variant, MODIFIER
+impact (rs693829, rs536939, rs667507, rs666173, rs572618, rs620729, rs513870) — none
+missense/splice, so no per-variant literature search beyond the lead variant was performed, per
+pipeline scope.</p>
+<p>Only citations with a citation-verifier verdict of <strong>VERIFIED</strong> are included below. See
+<code>audits/6_11400001-11600000_audit.md</code> for excluded (RETRACTED / NOT_FOUND / CLAIM_MISMATCH)
+citations and the full CONTESTED reasoning for TMEM170B.</p>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TMEM170B</td>
+<td>Mechanistic (Wnt/β-catenin signaling, breast cancer; non-pulmonary tissue)</td>
+<td>TMEM170B suppresses breast cancer proliferation, metastasis, and tumorigenesis and inhibits the Wnt/β-catenin pathway in cell-line and mouse xenograft models. Not a lung/airway study.</td>
+<td>Li M, Han Y, Zhou H, et al. Cell Death Dis. 2018;9(2):91. PMID 29367600 / DOI 10.1038/s41419-017-0128-y</td>
+<td>CONTESTED (gene-level; see below)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM170B</td>
+<td>Tumor-immune infiltrate correlation (pancreatic adenocarcinoma; non-pulmonary)</td>
+<td>TMEM170B expression correlates with tumor prognosis and with an anti-tumor immune-cell infiltrate signature (increased B/T cells, dendritic cells, monocytes, M1 macrophages, neutrophils, NK cells; decreased Tregs/MDSCs) in pancreatic tumor tissue. Cancer-immunology context, not airway inflammation.</td>
+<td>Zhang Z, Shang J, Dai Z, et al. Front Genet. 2022;13:848391. PMID 35601487 / DOI 10.3389/fgene.2022.848391</td>
+<td>CONTESTED (gene-level; see below)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM170B</td>
+<td>Mechanistic (miRNA-target signaling, cervical cancer; non-pulmonary)</td>
+<td>TMEM170B is a target of miR-18a-5p in a cancer-associated-fibroblast exosome signaling axis promoting cervical cancer development. Not lung-relevant.</td>
+<td>Kang C, Duo Y, Zheng L, et al. Biochem Biophys Res Commun. 2023;694:149403. PMID 38147699 / DOI 10.1016/j.bbrc.2023.149403</td>
+<td>CONTESTED (gene-level; see below)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM170B</td>
+<td>Mechanistic (miRNA-target signaling, hepatocellular carcinoma; non-pulmonary)</td>
+<td>Identifies a miR-27a-TMEM170B signaling axis relevant to hepatocellular-carcinoma cell migration. Not lung-specific.</td>
+<td>Cui M, Liu Z, Wang S, et al. Oncogene. 2024;43(36):2708-2721. PMID 39112518 / DOI 10.1038/s41388-024-03115-z</td>
+<td>CONTESTED (gene-level; see below)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM170B</td>
+<td>Expression/DEG list (bovine mammary epithelial cells; non-human, non-pulmonary)</td>
+<td>TMEM170B is among differentially expressed apoptosis- and milk-protein-synthesis-related genes in a bovine mammary epithelial cell system. Very low relevance to human pulmonary biology; included for completeness only.</td>
+<td>Cui J, Peng D, Zong J, et al. Biol Trace Elem Res. 2025;203(11):5914-5926. PMID 40214951 / DOI 10.1007/s12011-025-04614-0</td>
+<td>CONTESTED (gene-level; see below)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM170B</td>
+<td>Candidate-gene proximity (porcine gestation-length GWAS; non-human, non-pulmonary)</td>
+<td>TMEM170B appears as one of many candidate genes near genome-wide-significant SNPs for gestation length in pigs; no functional claim specific to TMEM170B, no connection to human pulmonary biology.</td>
+<td>Shi L, Li H, Wang L. Front Genet. 2023;13:1046423. PMID 36685960 / DOI 10.3389/fgene.2022.1046423</td>
+<td>CONTESTED (gene-level; see below)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Important caveat on this table:</strong> No verified literature citation directly addresses TMEM170B in
+lung, airway, COPD, spirometric, or pulmonary-immune biology. All six VERIFIED citations above are
+non-pulmonary (five cancer-biology papers in unrelated tissues, one non-human agricultural-genomics
+paper) and are included per pipeline rules (&quot;report contested/tangential findings explicitly rather
+than omit them&quot;), not because they support a COPD mechanism. Lead variant rs693829 itself returned
+zero PubMed hits; the researcher could not independently confirm its full GWAS trait profile via
+literature search (see audit for the WebSearch-budget gap flagged by red-team-skeptic). Six
+additional citations were assessed by citation-verifier and excluded from this table — see the audit
+appendix.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — not a verified literature citation)</h2>
+<p>This section reports a structured Open Targets Platform GraphQL API lookup performed directly by
+the orchestrator. It has NOT gone through citation-verifier or red-team-skeptic review.</p>
+<p><strong>TMEM170B (ENSG00000205269)</strong> — sole candidate gene queried (only protein-coding gene in the
+6:11,400,001-11,600,000 region per Ensembl; nearest gene/FLAMES/PoPS all point to it; MAGMA and ABC
+made no call at this locus):</p>
+<ul>
+<li><strong>L2G score:</strong> 0.808 for the credible set underlying &quot;Chronic airway obstruction (PheCode 496)&quot;
+(study GCST90476027, disease-mapped to COPD/MONDO_0005002) at rs693829's locus. TMEM170B was the
+<em>only</em> gene with a non-zero L2G prediction returned for this locus/trait pair. Caveat: &quot;Chronic
+airway obstruction (PheCode 496)&quot; is a UK Biobank/FinnGen-style PheCode phenotype, not necessarily
+a physician-adjudicated COPD case definition.</li>
+<li><strong>Overall target-disease association score</strong> (all evidence types, MONDO_0005002 COPD): 0.390;
+genetic_association datatype score = 0.641 (only datatype contributing materially).</li>
+<li><strong>Colocalization:</strong> The same COPD/airway-obstruction credible set colocalizes strongly (H4
+approximately 0.95-0.98) with multiple platelet-trait GWAS signals (platelet count, mean platelet
+volume, several cohorts) and with multiple cognitive/behavioral-trait GWAS signals (educational
+attainment &quot;cognitive aspects&quot;, intelligence, cognitive performance, and an ADHD/ASD/intelligence
+pleiotropy GWAS). <strong>No eQTL study locus for TMEM170B (blood, muscle, or iPSC) colocalized with the
+COPD signal</strong>, despite eQTL credible sets for TMEM170B existing at this same variant — i.e., there
+is no colocalization-based evidence that this variant regulates TMEM170B expression.</li>
+<li><strong>Genetic constraint (gnomAD):</strong> missense oe = 0.845 (mild constraint); pLoF oe = 0.495 but with a
+wide 90% CI (oeUpper = 0.976, consistent with no constraint at the upper bound) — TMEM170B is not
+confidently constrained.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Gene: TMEM170B</strong>
+<strong>Confidence: LOW</strong></p>
+<p>TMEM170B is named by every prioritization method that made a call at this locus (nearest gene,
+FLAMES, PoPS), it is the only protein-coding gene physically in the 200kb window, and it carries the
+only non-zero Open Targets L2G score (0.808) for the COPD/chronic-airway-obstruction credible set at
+this variant (see Open Targets summary above). By elimination and by the L2G/positional argument, it
+is the best-supported single candidate to name — there is no competing protein-coding gene in the
+region, so this is not really a &quot;close call between two genes&quot; situation but rather &quot;one candidate,
+weakly supported.&quot;</p>
+<p>That said, confidence must be LOW, not higher, because the weight of the assembled evidence actually
+cuts against a confident TMEM170B-causal-via-lung-transcription story, exactly as red-team-skeptic
+flagged (critique verdict: CONTESTED — see audit). Three specific reasons:</p>
+<ol>
+<li><strong>No verified literature</strong> — cancer-biology or agricultural-genomics only (the six VERIFIED rows
+above) — establishes any lung, airway, or COPD-relevant function for TMEM170B. Its only
+documented mechanism (Wnt/β-catenin pathway suppression in breast/cervical/pancreatic/
+hepatocellular cancer) is a plausible-sounding but entirely untested bridge to airway epithelial
+biology; treating it as supportive would be overclaiming.</li>
+<li><strong>The Open Targets colocalization pattern is discordant with a TMEM170B-expression mechanism</strong>:
+the same COPD credible set colocalizes strongly with platelet-trait and cognitive/behavioral-trait
+GWAS signals, but shows no eQTL colocalization for TMEM170B itself in any tissue queried. This
+raises two genuine alternative hypotheses that the assembled evidence does not rule out: (a) a
+platelet/megakaryocyte-biology mechanism unrelated to TMEM170B transcription, and (b) per this
+pipeline's smoking-mediation prior, a neurobehavioral/smoking-proxy pathway (via the educational
+attainment/cognitive-performance/ADHD-ASD colocalization) rather than direct pulmonary biology.
+Neither alternative could be confirmed or refuted with the literature searches completed so far.</li>
+<li><strong>A physically overlapping lncRNA (ENSG00000233656) spans the entire credible set</strong> and was not
+excluded as an alternative functional unit; ABC (designed to catch enhancer-promoter links) made no
+call at all at this locus, which is itself mildly discordant with a straightforward TMEM170B
+cis-regulatory mechanism.</li>
+</ol>
+<p><strong>What would resolve this:</strong> (a) a completed GWAS Catalog cross-check of rs693829's full reported
+trait profile (not completed here due to a WebSearch budget limit hit by both the researcher and
+red-team-skeptic — this is a concrete, actionable follow-up, not a fundamental barrier); (b) a direct
+eQTL/expression study of TMEM170B in lung/airway epithelial tissue or sorted airway immune-cell
+populations; (c) any functional study testing TMEM170B knockdown/knockout in airway epithelial models
+for a Wnt-pathway-mediated phenotype; (d) fine-mapping or functional annotation of the overlapping
+lncRNA ENSG00000233656. Until then, TMEM170B should be treated as the pipeline's best positional
+candidate, not a validated COPD gene, and the study team should weigh the platelet- and
+behavioral-trait pleiotropy explicitly before treating this locus as evidence of TMEM170B-driven
+airway biology.</p>
+
+</body>
+</html>

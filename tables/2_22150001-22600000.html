@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2_22150001-22600000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-gwas-locus-evidence-table--2_22150001-22600000">COPD GWAS locus evidence table — 2_22150001-22600000</h1>
+<p><strong>Region:</strong> GRCh38 chr2:22,150,001-22,600,000. <strong>Lead variant:</strong> rs7599976. <strong>Nearest gene
+(internal pipeline):</strong> intergenic. <strong>FLAMES/MAGMA/PoPS/ABC prioritization:</strong> all NA — no
+computational signal at this locus. <strong>Credible set:</strong> 49 variants (ABF fine-mapping, max
+PIP ~0.044, none individually strong — a poorly-resolved, unconcentrated signal), all
+intronic/non-coding-transcript variants annotated to a single lncRNA, LINC01830. No
+missense or splice-site credible-set variants exist at this locus.</p>
+<p>This is a genuine gene desert: an independent Ensembl gene-overlap query for this exact
+region found only non-coding content overlapping the locus (LINC01830, LINC03116,
+LINC01884, an unannotated lncRNA transcript, MT-CYB/MDM2 processed pseudogenes, an
+RNA5SP87 pseudogene) — no protein-coding gene overlaps the locus itself. The nearest
+protein-coding genes, APOB/TDRD15 (~1.0-1.2 Mb upstream) and KLHL29 (~1.0 Mb downstream),
+are both more than 1 Mb from every credible-set variant.</p>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LINC01830</td>
+<td>Literature search (negative result)</td>
+<td>No PubMed literature exists for LINC01830 or for the lead variant rs7599976 (both searches returned zero results); the gene has no described tissue expression, target gene, or mechanistic role in any domain.</td>
+<td>N/A — absence of literature, not a citation</td>
+<td>WEAKENED — skeptic notes the credible set is a flat, unresolved 49-variant signal (max PIP ~0.044) that lands in LINC01830 only because it is the sole annotated feature spanning this stretch of gene desert; describing LINC01830 as &quot;physically in the credible set&quot; implies more fine-mapping localization than the PIP distribution actually supports.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOB</td>
+<td>Genetic epidemiology (MR)</td>
+<td>Two-sample MR found genetically predicted higher ApoA-I causally reduces COPD risk (IVW OR 0.993, P=.0003) but found <strong>no causal effect of apolipoprotein B on COPD</strong>.</td>
+<td>Chen C et al., Medicine (Baltimore) 2026;105(20):e48564. PMID 42152286, DOI 10.1097/MD.0000000000048564</td>
+<td>CONTESTED — this is one of only two studies testing APOB's own causal role and it is null; skeptic: refutes the only hypothesis that would justify including APOB at this locus.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOB</td>
+<td>Genetic epidemiology (MR)</td>
+<td>MR using UK Biobank apoB instruments (n=439,214) found <strong>no causal link between apoB and COPD</strong>; only ApoA-I remained protective after multivariable MR and multiple-testing correction.</td>
+<td>Huang P et al., Int J Chron Obstruct Pulmon Dis. 2025;20:83-93. PMID 39802042, DOI 10.2147/COPD.S476833</td>
+<td>CONTESTED — second of the two direct APOB-causality studies, also null; see APOB row above.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOB</td>
+<td>Genetic epidemiology (MR, drug-target)</td>
+<td>MR found LDL-C levels driven by APOB drug-target variants were associated with improved lung function (FEV1/FVC).</td>
+<td>Zhang Y et al., J Transl Med. 2024;22(1):615. PMID 38961500, DOI 10.1186/s12967-024-05359-5</td>
+<td>CONTESTED — skeptic: generic lipid-pathway MR, not locus-specific, does not test APOB's own causal role in COPD (distinct from the two null APOB-COPD MR studies above) and does not reference this locus.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOB</td>
+<td>Observational epidemiology</td>
+<td>Cohort (n=68,418) found higher apoB/apoA-I ratio associated with lower FEV1%/FVC% predicted — epidemiological, not genetic.</td>
+<td>Lee J et al., J Korean Med Sci. 2024;39(6):e51. PMID 38374625, DOI 10.3346/jkms.2024.39.e51</td>
+<td>CONTESTED — skeptic: observational, not causal/genetic; generic lipid-lung association independent of this locus.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOB</td>
+<td>Observational epidemiology</td>
+<td>Longitudinal Korean cohort found low apoB/A1 ratio combined with high adiponectin/leptin ratio associated with faster lung-function decline and airflow obstruction (observational).</td>
+<td>Kim S et al., Sci Rep. 2024;14(1):29502. PMID 39604437, DOI 10.1038/s41598-024-80055-4</td>
+<td>CONTESTED — observational, non-genetic, not locus-specific.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOB</td>
+<td>Observational epidemiology (asthma, not COPD)</td>
+<td>In atopic asthma, serum apoB was negatively correlated with FEV1 (observational).</td>
+<td>Barochia AV et al., Am J Respir Crit Care Med. 2015;191(9):990-1000. PMID 25692941, DOI 10.1164/rccm.201411-1990OC</td>
+<td>CONTESTED — asthma not COPD, observational, not locus-specific.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APOB</td>
+<td>Observational / immune biomarker</td>
+<td>Cross-sectional study found ApoA1, ApoB and their ratio correlate with neutrophil count, CRP, and infection status in COPD patients with acute lower respiratory infection.</td>
+<td>Meng J et al., Int J Chron Obstruct Pulmon Dis. 2024;19:309-317. PMID 38292140, DOI 10.2147/COPD.S441503</td>
+<td>CONTESTED — observational biomarker association, not causal/genetic, not locus-specific.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TDRD15</td>
+<td>Genetic association (tangential, different gene)</td>
+<td>SNP rs1117324 near TDRD15/<strong>LINC01822</strong> (a distinct lncRNA from this locus's LINC01830) was associated with antipsychotic-induced metabolic syndrome/hyperglycemia in a Chinese schizophrenia cohort, validating a prior European GWAS metabolic-syndrome signal at this gene region.</td>
+<td>You Y et al., BMC Psychiatry. 2026;26(1). PMID 42092854, DOI 10.1186/s12888-026-08144-4</td>
+<td>HOLDS as &quot;not relevant to this locus&quot; — metabolic-syndrome/psychiatric drug-response trait, not COPD/lung, and concerns a different-named lncRNA; weak positional context only.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TDRD15</td>
+<td>Developmental biology</td>
+<td>TDRD15 shows testis-restricted expression across eutherian mammals and is dispensable for spermatogenesis/fertility in a hamster knockout model (compensated by paralogous TDRD genes).</td>
+<td>Zhu M et al., Eur J Med Res. 2025;30(1):1013. PMID 41126281, DOI 10.1186/s40001-025-03285-w</td>
+<td>HOLDS — establishes germline/testis-restricted function with no lung mechanism; no plausible candidate.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TDRD15</td>
+<td>Developmental biology (comparative)</td>
+<td>TDRD family genes, including TDRD15, are dominantly/highly expressed in gonads/testis across teleost fish.</td>
+<td>Liu Z et al., Mar Life Sci Technol. 2021;4(1):18-30. PMID 37073353, DOI 10.1007/s42995-021-00118-7</td>
+<td>HOLDS — supports germline-restricted function, no lung relevance.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TDRD15</td>
+<td>Proteomics (incidental)</td>
+<td>TDRD15 upregulated among differentially expressed proteins in atopic dermatitis skin swab proteomics; mechanism unclear, unrelated to lung/COPD.</td>
+<td>Morelli P et al., Exp Dermatol. 2021;30(6):811-819. PMID 33394542, DOI 10.1111/exd.14276</td>
+<td>HOLDS — incidental, tangential, no established mechanism connecting to COPD.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLHL29</td>
+<td>Genetic association (non-human, tangential)</td>
+<td>KLHL29 identified as a high-confidence candidate gene for body-weight/BMI QTLs in a porcine GWAS+multi-omics study.</td>
+<td>Yu N et al., Genet Sel Evol. 2026;58(1). PMID 42638083, DOI 10.1186/s12711-026-01078-1</td>
+<td>HOLDS — non-human, non-lung trait; only shows KLHL29 is a generically &quot;GWAS-findable&quot; locus.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLHL29</td>
+<td>Genetic association (non-lung, tangential)</td>
+<td>KLHL29 among genes with genetically-predicted downregulated expression associated with degenerative cervical myelopathy in a human TWAS/transcriptomic-imputation biobank study.</td>
+<td>Seah C et al., Spine J. 2024/2025;25(3):588-596. PMID 39491753, DOI 10.1016/j.spinee.2024.10.014</td>
+<td>HOLDS — spinal, not respiratory, phenotype; no lung relevance.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KLHL29</td>
+<td>Genetic association / immune (tangential)</td>
+<td>KLHL29 downregulation noted in periodontitis transcriptomic data in a family-based genetic study of early-onset periodontitis, with pathway enrichment for IL-17 signaling in the broader gene set (not KLHL29 specifically).</td>
+<td>Guan X et al., J Clin Periodontol. 2025. PMID 41350114, DOI 10.1111/jcpe.70071</td>
+<td>HOLDS — IL-17 enrichment applies to the broader gene set, not KLHL29 itself; correctly not overclaimed as an immune mechanism for KLHL29.</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<ul>
+<li><strong>LINC01830</strong> (ENSG00000228999, lncRNA, the only gene overlapping the credible set): no genetic constraint data available (not computed for this biotype). Only 2 total disease associations database-wide (CNS cancer, breast carcinoma) — neither lung-related. Zero COPD (MONDO_0005002) or FEV1/FVC/lung-function (EFO_0004713/EFO_0003892) evidence rows.</li>
+<li><strong>APOB</strong> (ENSG00000084674, ~1.0-1.2 Mb upstream): LoF constraint oe=0.469 (moderately constrained); missense/synonymous unremarkable. 1,224 total disease associations database-wide, dominated by lipid/cardiovascular traits (hypercholesterolemia, hypobetalipoproteinemia, coronary artery disease). 18 COPD evidence rows, but ALL from the europepmc literature text-mining datasource (not a genetic-association datasource) with modest scores (max 0.7) — a database-wide fact independent of this locus. Zero FEV1/FVC/lung-function evidence rows.</li>
+<li><strong>TDRD15</strong> (ENSG00000218819, ~1.0-1.2 Mb upstream): no genetic constraint data available. Zero COPD or lung-function evidence rows.</li>
+<li><strong>KLHL29</strong> (ENSG00000119771, ~1.0 Mb downstream): LoF constraint oe=0.276 (notably LoF-intolerant); some missense constraint (oe=0.731). Zero COPD or lung-function evidence rows.</li>
+<li><strong>Lead variant (2_22333454_T_C / rs7599976):</strong> Open Targets records this exact variant as a credible-set member for MANY non-COPD GWAS Catalog studies — trauma exposure, multiple depression studies, major depressive disorder, bipolar disorder (MTAG), risk-taking behavior (multivariate), several hypertension/essential-hypertension PheCode studies, abdominal pain PheCode, leg fat-free/predicted mass, and a combined type 2 diabetes+ADHD/MDD/schizophrenia/OCD trait. Critically, <code>l2GPredictions</code> is EMPTY for every one of these study-loci — Open Targets' own locus-to-gene model does not confidently assign any gene at this locus for any trait. No COPD or FEV1/FVC/lung-function GWAS study is recorded for this variant in Open Targets at all (this may reflect incomplete GWAS Catalog coverage of the specific COPD study used by this pipeline, not necessarily a true absence of association). A molecular-QTL colocalisation query was attempted but returned a response too large to parse economically and was not completed — treat colocalisation at this locus as &quot;not checked,&quot; not &quot;absent.&quot;</li>
+<li>A search-entity lookup for the lead variant also returned SLC5A7 (ENSG00000115665, chr2:107.99-108.01 Mb) as a hit; this gene is ~86 Mb away from the locus and is almost certainly an unrelated/spurious index match, not a candidate — reported here only for traceability.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Prioritized gene: none (INSUFFICIENT confidence — this locus has no strong candidate).</strong></p>
+<p>No candidate gene at this locus has both a plausible mechanism and direct genetic evidence for COPD. The evidence table above and the Open Targets summary converge on the same conclusion from independent angles:</p>
+<ul>
+<li>The only gene physically overlapping the credible set, <strong>LINC01830</strong>, has no literature characterization whatsoever (zero PubMed hits for the gene or the lead variant) and essentially no Open Targets disease-association data. The red-team-skeptic additionally flagged that describing LINC01830 as &quot;the gene in the credible set&quot; overstates the fine-mapping support: with 49 variants and a max PIP of ~0.044, this is a flat, statistically unresolved signal that happens to fall inside LINC01830 only because it is the sole annotated feature spanning this part of the gene desert — not because fine-mapping concentrated probability on this transcript. This is a WEAKENED, not a supported, candidate.</li>
+<li><strong>APOB</strong>, the nearest upstream protein-coding gene (~1.0-1.2 Mb away — a long reach for any cis-regulatory claim, with no coloc/eQTL evidence offered to bridge that distance), attracted the most literature in this search, but the red-team-skeptic correctly identified this as a &quot;candidate-gene magnet&quot; effect: APOB is a famous, heavily-studied lipid gene, so any locus search surfaces abundant APOB-lipid-lung literature regardless of relevance. The two studies that actually test APOB's own causal role in COPD via Mendelian randomization (Chen et al. 2026, PMID 42152286; Huang et al. 2025, PMID 39802042) are BOTH null for APOB specifically, with ApoA-I (a different gene/protein) carrying the protective signal instead. The remaining APOB citations are observational/non-causal or test lipid-pathway MR broadly, not APOB's own causal role, and none reference this locus, its credible-set variants, or LINC01830. Per the skeptic, this body of evidence on balance argues against, rather than for, APOB as the causal gene at this locus. CONTESTED.</li>
+<li><strong>TDRD15</strong> and <strong>KLHL29</strong>, the nearest downstream/upstream flanking protein-coding genes, have no COPD/lung-function evidence in any domain and no plausible mechanism (TDRD15 is a germline/testis-restricted piRNA-pathway gene; KLHL29 has no established lung-relevant function and appears only in unrelated GWAS/TWAS studies of other traits). Both HOLD as implausible candidates.</li>
+<li>The internal computational pipeline itself assigns no signal here (FLAMES/MAGMA/PoPS/ABC all NA), and Open Targets' own L2G statistical model independently declines to assign a gene at this exact variant across every GWAS trait it is recorded for — two independent statistical approaches agreeing that this locus does not resolve to a single gene.</li>
+<li>A specific alternative hypothesis worth naming explicitly (per the red-team-skeptic, who considered it under-weighted rather than over-weighted in the initial write-up): the lead variant is recorded by Open Targets as a credible-set member for a cluster of psychiatric/behavioral GWAS traits (depression, bipolar disorder, trauma exposure, risk-taking behavior) and for hypertension and body-composition traits, with zero recorded association to any lung-function or spirometric trait. Given prior #1 (COPD GWAS signals may reflect smoking-initiation/nicotine-dependence neurobiology rather than pulmonary biology) and prior #2 (absence of spirometric concordance is a warning sign against pulmonary mechanism), this pattern is consistent with — though not proven to be — a neurobehavioral/smoking-behavior-mediated mechanism rather than direct pulmonary biology. This hypothesis could NOT be corroborated in primary literature in this search (GWAS Catalog REST lookups failed; PubMed searches for these trait combinations at this exact locus were unproductive), so it is reported as an unresolved, database-sourced lead for the study team's own follow-up (e.g., checking the specific GCST accessions directly against GWAS Catalog), not as a demonstrated finding.</li>
+</ul>
+<p><strong>What would resolve this:</strong> a lung-tissue eQTL/colocalization lookup for LINC01830 and the surrounding desert region (flagged by the skeptic as a gap — not attempted here beyond the truncated Open Targets colocalisation query), independent confirmation of the psychiatric/behavioral-trait credible-set overlap against GWAS Catalog directly, or new COPD/lung-function-specific fine-mapping data with a more concentrated credible set. Until one of those is available, this locus should be reported to the study team as &quot;no defensible single candidate gene,&quot; not forced into a pick.</p>
+
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>1_209950001-210400000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1209950001-210400000-nearest-gene-syt14">Evidence table — locus 1:209,950,001-210,400,000 (nearest gene SYT14)</h1>
+<p>Lead variant: rs7527845 (1:210,156,815, GRCh38, PIP=0.18, intron_variant, MODIFIER). Full 13-variant credible set is entirely intronic/3'UTR, all annotated gene=SYT14, all MODIFIER impact — no missense/splice-donor/splice-acceptor variants in the credible set. Candidate gene: SYT14 (nearest gene, FLAMES, MAGMA, and PoPS all converge on it; ABC = NA). No other candidate gene was evaluated at this locus (a second Open Targets search hit, ATP13A2, was confirmed to be a search-index artifact — physically ~193 Mb away on chr1 — and is not a real candidate; see Open Targets summary below).</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SYT14</td>
+<td>Statistical genetics (literature absence)</td>
+<td>Unfiltered PubMed search for &quot;SYT14&quot; returns only 9 total records across all of PubMed; searches combining &quot;SYT14&quot; with lung/COPD/airway/spirometry terms return 0 hits — no direct COPD/lung-function literature exists for this gene.</td>
+<td>(search result, no single PMID; underlying 9-record corpus verified individually below)</td>
+<td>WEAKENED — skeptic notes this is weak evidence of absence given how sparsely studied the gene is overall (9 total papers), not strong confirmation of no lung biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SYT14</td>
+<td>Statistical genetics / prior COPD GWAS (unresolved)</td>
+<td>Sakornsakolpat et al. is the major prior COPD GWAS (82 loci, 35,735 cases/222,076 controls); whether chr1q32.2/SYT14 is among its 82 reported loci could NOT be confirmed from the abstract.</td>
+<td>PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
+<td>VERIFIED (paper exists; SYT14-locus inclusion unconfirmed either way)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SYT14</td>
+<td>Statistical genetics / smoking-initiation GWAS (unresolved primary-text link)</td>
+<td>Liu et al. (GSCAN) is a 406-locus GWAS of tobacco/alcohol traits (smoking initiation, cessation, heaviness); whether SYT14/rs7527845 is named as a locus for &quot;age of smoking initiation&quot; in this paper could NOT be confirmed from the abstract — this specific gene-trait link currently rests only on an Open Targets aggregator harmonization (see Open Targets summary), not on primary-text confirmation.</td>
+<td>PMID 30643251 / DOI 10.1038/s41588-018-0307-5</td>
+<td>WEAKENED — skeptic states this link is aggregator-only, not independently confirmed, and should not be treated as settled</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SYT14</td>
+<td>Statistical genetics / reproductive-behavior GWAS</td>
+<td>Confirms a 12-locus GWAS of reproductive behavior (age at first birth, number of children ever born); tangential context that this locus/trait class colocalizes with the SYT14 lead variant per Open Targets (not independently confirmed to name SYT14 specifically in primary text).</td>
+<td>PMID 27798627 / DOI 10.1038/ng.3698</td>
+<td>VERIFIED (paper itself; SYT14-specific link not independently confirmed from primary text)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SYT14</td>
+<td>Structural/molecular biology</td>
+<td>Founding disease paper: homozygous SYT14 mutation causes adult-onset autosomal-recessive spinocerebellar ataxia 11 (SCA11); SYT14 mRNA highly expressed in human fetal/adult brain (especially cerebellum), protein localized to cerebellar Purkinje cells. No lung expression assessed.</td>
+<td>PMID 21835308 / DOI 10.1016/j.ajhg.2011.07.012</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SYT14</td>
+<td>Structural/molecular biology (contradicts above)</td>
+<td>Original molecular characterization of Syt XIV (=SYT14): mouse mRNA expression restricted to heart and testis, notably ABSENT from brain — a documented species-level tissue-expression contradiction with Doi et al. 2011's human brain-expression finding for the same gene.</td>
+<td>PMID 12801916 / DOI 10.1093/jb/mvg082</td>
+<td>VERIFIED — skeptic flags this contradiction as reason to lower confidence in any single-species SYT14 expression claim, including an implicit &quot;not expressed in lung&quot; assumption (lung expression was not directly assessed in any verified source)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SYT14</td>
+<td>Structural/developmental (neurodevelopmental, not lung)</td>
+<td>De novo balanced translocation disrupting SYT14 in a child with cerebral atrophy, macrocephaly, seizures, and developmental delay; SYT14 brain expression confirmed by Northern blot.</td>
+<td>PMID 17304550 / DOI 10.1002/ajmg.a.31618</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SYT14</td>
+<td>Immunology (tangential, non-lung)</td>
+<td>SYT14 (with SYT4, SYT9) expression correlates with tumor-infiltrating immune cell populations in a gastric cancer bioinformatic analysis — an oncology tumor-immune-infiltration correlation, not airway/COPD immunology.</td>
+<td>PMID 34229539 / DOI 10.1080/21655979.2021.1951059</td>
+<td>VERIFIED (as a real but non-specific/tangential finding)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SYT14</td>
+<td>Neurobehavioral/psychiatric (Prior 1 context)</td>
+<td>A bipolar-disorder/MDD GWAS lead SNP (rs126277) at 1q32.2 has a risk allele that lowers brain SYT14 mRNA expression via eQTL; Syt14-knockout/knockdown mice show mania-like behaviors (hyperactivity, anti-depressive-like behavior) with altered hippocampal synaptic vesicle ultrastructure — mechanistically validates SYT14 as a genuine neurobehavioral gene.</td>
+<td>PMID 39966626 / DOI 10.1038/s41380-025-02933-1</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SYT14</td>
+<td>Statistical genetics (rare variant, neurobehavioral)</td>
+<td>A rare missense SYT14 variant (P159L) cosegregates with schizophrenia/bipolar disorder in a multiplex family — further neuropsychiatric role, unrelated to lung biology.</td>
+<td>PMID 34947986 / DOI 10.3390/ijms222413189</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SYT14</td>
+<td>Other (cell biology, non-lung)</td>
+<td>SYT14 knockdown inhibits proliferation/colony formation of the U87MG glioma cell line — not lung/COPD relevant, noted for completeness only.</td>
+<td>PMID 29634997 / DOI 10.1016/j.brainresbull.2018.04.002</td>
+<td>VERIFIED (as a real but not COPD-relevant finding)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SYT14</td>
+<td>Comparative genomics (non-lung)</td>
+<td>Syt14 ortholog used as a mushroom-body Kenyon-cell developmental marker gene in honeybee brain — supports cross-phylum conservation of neuronal Syt14 expression, not lung-relevant.</td>
+<td>PMID 27351839 / DOI 10.1371/journal.pone.0157841</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p>See <code>audits/1_209950001-210400000_audit.md</code> for excluded citations (fabricated/wrong PMID, claim mismatch) and the full red-team critique.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
+<p><strong>SYT14 (ENSG00000143469)</strong>, chr1:209,900,923-210,171,389 (GRCh38), within the locus window.</p>
+<ul>
+<li><strong>Genetic constraint (gnomAD):</strong> LoF oe = 0.411 (90% CI 0.309-0.553), most-constrained bin of 6 — a fairly LoF-constrained gene despite sparse disease literature. Missense oe = 0.760; synonymous oe = 0.827.</li>
+<li><strong>Disease association (aggregate score across all Open Targets datasources, 267 total diseases with any recorded association):</strong> ZERO recorded association with COPD (MONDO_0005002), FEV1 (EFO_0004314), or FEV1/FVC (EFO_0004713) — none of these three terms appear anywhere in SYT14's 267 disease associations. Top association: autosomal recessive spinocerebellar ataxia 11 (score 0.51). Weak associations present for smoking initiation (score 0.149, genetic_association 0.245) and smoking behavior (score 0.057, genetic_association 0.094).</li>
+<li><strong>L2G / colocalization at the exact lead variant (1:210,156,815 C&gt;T / rs7527845):</strong> 5 GWAS credible sets in Open Targets' catalog contain this variant, none for COPD or lung function. In every one, SYT14 is the top L2G-predicted gene (score ~0.39-0.45), consistently beating neighboring gene SERTAD4 (L2G ~0.10-0.11): &quot;Age at first birth&quot; (GCST90000050, GCST90000048), &quot;Refractive error&quot; (GCST010002), &quot;Age of smoking initiation (MTAG)&quot; (GCST007462), &quot;LDL cholesterol&quot; (GCST90475420). These signals colocalize with each other very strongly (H4 = 0.989-0.990 via COLOC_PIP_ECAVIAR), consistent with one shared pleiotropic regulatory signal across multiple unrelated traits. No COPD or lung-function GWAS signal is registered at this exact variant in Open Targets at all — this is an absence-of-data caveat (the COPD GWAS behind this internal pipeline may not be integrated into Open Targets), not confirmation of a null pulmonary effect.</li>
+<li><strong>Search artifact noted:</strong> an Open Targets entity search on rsID rs7527845 also returned ATP13A2 (ENSG00000159363) as a hit; confirmed via genomic-location query that ATP13A2 sits at chr1:16,985,958-17,011,928, ~193 Mb from this locus. This is not a real candidate gene here and was excluded from all downstream research and synthesis.</li>
+<li><strong>SERTAD4</strong> (L2G runner-up gene at the lead variant, score ~0.10-0.11 vs. SYT14's ~0.39-0.45 in the same credible sets) was not independently queried for constraint/disease association in Open Targets, since it is not part of the locus input file's candidate gene list; flagged here (and by red-team-skeptic) as an incomplete check.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>SYT14 — Confidence: LOW</strong></p>
+<p>SYT14 is the only real candidate gene at this locus: nearest gene, FLAMES, MAGMA, and PoPS all independently converge on it, the entire 13-variant credible set is intronic/3'UTR to SYT14 with no ambiguous neighbor annotation, and Open Targets' own L2G analysis at the exact lead variant picks SYT14 over the only plausible neighbor (SERTAD4) by a wide margin (~0.39-0.45 vs ~0.10-0.11) across five independent GWAS traits. Gene identity at this locus is therefore well-supported and not seriously contested.</p>
+<p>What is NOT well-supported is any specific mechanism connecting SYT14 to COPD. Verified literature and the Open Targets structured lookup agree that SYT14 has no documented pulmonary/airway biology at all (0 PubMed hits combining SYT14 with lung/COPD/airway terms; 0 of 267 Open Targets disease associations touch COPD, FEV1, or FEV1/FVC). Its best-supported biology is neuronal/synaptic: it causes autosomal-recessive spinocerebellar ataxia 11 (PMID 21835308), and a mouse-knockout study mechanistically ties it to bipolar disorder/mania (PMID 39966626), with additional rare-variant schizophrenia/bipolar evidence (PMID 34947986). The researcher initially proposed this locus is best explained as smoking-behavior-mediated (Prior 1) on the strength of Open Targets' colocalization of the lead variant with an &quot;age of smoking initiation&quot; GWAS signal. Red-team review WEAKENED this specific directional claim: the smoking-initiation link is aggregator-only (the primary GSCAN paper, PMID 30643251, could not be confirmed by citation-verifier to name SYT14 in its own text), the same lead variant colocalizes just as strongly with four other, non-smoking traits (age at first birth x2, refractive error, LDL cholesterol) that have no more mechanistic connection to COPD than smoking does, and the one citation that would have let anyone check the Prior-2 spirometry evidence directly (a claimed Shrine et al. lung-function GWAS, PMID 31649364) turned out to be a fabricated/wrong PMID (see audit). A genuine, unresolved mouse-vs-human tissue-expression contradiction for SYT14 itself (heart/testis-restricted and brain-absent in mouse per PMID 12801916, vs. brain/cerebellum-enriched in human per PMID 21835308) further undercuts confidence in any confident claim about this gene's tissue-expression pattern, including an implicit assumption that it is not expressed in lung — direct GTEx/Human Protein Atlas lung-expression data for SYT14 was not obtained in this review (a flagged gap, not a checked-and-negative result).</p>
+<p>Net assessment: gene identity = SYT14, essentially uncontested. Mechanism = unknown. The evidence does not distinguish between &quot;COPD signal here is smoking-behavior-mediated,&quot; &quot;COPD signal here reflects some other neurobehavioral pleiotropy with no lung relevance,&quot; or &quot;this locus has genuine but entirely unstudied direct lung biology&quot; (given how sparse the SYT14 literature is overall, absence of lung papers is weak evidence of absence of lung biology). No runner-up gene is proposed, since SERTAD4's L2G scores are consistently and substantially lower than SYT14's at every credible set examined — this is a single-gene, uncertain-mechanism locus rather than a tied-gene locus. Confidence is marked LOW (not INSUFFICIENT) because gene identity itself is well-supported by multiple converging, verified lines of evidence; what is missing is mechanistic specificity, not gene assignment. Resolving the mechanism would require: (1) direct GTEx/Human Protein Atlas lung-expression data for SYT14, (2) primary-text confirmation (not aggregator-only) of whether SYT14/this variant is a genuine locus in the GSCAN smoking-initiation GWAS or any lung-function GWAS (Shrine et al. or successors) via a correctly-identified PMID, and (3) an independent SERTAD4 literature check to fully rule out the L2G runner-up.</p>
+
+</body>
+</html>

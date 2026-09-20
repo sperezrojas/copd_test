@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2_300001-550000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-2300001-550000">Evidence table — locus 2:300001-550000</h1>
+<ul>
+<li><strong>Region:</strong> 2:300,001-550,000 (GRCh38)</li>
+<li><strong>Lead variant:</strong> rs62106258 (PIP=0.351; 2:417,167; intron_variant/non_coding_transcript_variant in LINC01865)</li>
+<li><strong>Candidate genes:</strong> LOC124905962 (nearest gene, pipeline annotation), TMEM18 (FLAMES prioritized), LINC01865 (credible-set gene)</li>
+<li><strong>Ancestry/cohort(s):</strong> not provided in locus input file</li>
+</ul>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TMEM18</td>
+<td>Statistical genetics (BMI/obesity GWAS)</td>
+<td>Identified as one of six novel BMI-associated loci in a large GWAS meta-analysis; the six loci are enriched near genes with CNS/neuronal expression, supporting a neurobiological mechanism for body-weight regulation.</td>
+<td>Willer CJ et al. 2009, Nat Genet, PMID 19079261, DOI 10.1038/ng.294</td>
+<td>VERIFIED (citation); gene overall CONTESTED — see Prioritized-gene synthesis and audit appendix</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM18</td>
+<td>Statistical genetics / clinical epidemiology (Mendelian-randomization-style; BMI-mediated, not COPD-susceptibility)</td>
+<td>In 93,894 Danes, a 3-SNP allele score (FTO + MC4R + TMEM18 rs6548238) used as an instrument for genetically-determined BMI; among a spirometrically-defined COPD subgroup (FEV1/FVC&lt;LLN, n=10,883) already diagnosed with COPD, each allele-score increment was associated with increased risk of COPD exacerbations (HR 1.13) and pneumonias (HR 1.10), whereas OBSERVATIONAL BMI was not associated with either outcome. This is a study of exacerbation/pneumonia risk in existing COPD, using TMEM18 as 1 of 3 SNPs in a composite BMI instrument — NOT a study of COPD susceptibility, and not a locus-specific fine-mapping/colocalization analysis of this GWAS signal.</td>
+<td>Çolak Y et al. 2016, Int J Epidemiol, PMID 27118560, DOI 10.1093/ije/dyw051</td>
+<td>VERIFIED (citation); red-team-skeptic judges the BMI-mediated COPD-susceptibility narrative built on this paper to be OVERCLAIMED — see audit appendix</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM18</td>
+<td>Structural / functional (adipocyte biology, not lung biology)</td>
+<td>siRNA knockdown of TMEM18 in human preadipocytes significantly inhibited adipocyte maturation/differentiation (to ~71% of control, p&lt;0.0001); TMEM18 expression was suppressed by insulin and dexamethasone, decreased in adipose tissue of obese patients, and negatively correlated with adiposity/adipocyte size.</td>
+<td>Bernhard F et al. 2012, Diabetologia, PMID 23229156, DOI 10.1007/s00125-012-2773-0</td>
+<td>VERIFIED (citation); this is adipose-tissue/whole-body energy-balance biology, not pulmonary structural biology — no lung-relevance claim is made or supported</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM18 (lead variant rs62106258, tangential)</td>
+<td>Statistical genetics (cross-trait pleiotropy, not COPD-relevant)</td>
+<td>In an unrelated heart-failure/cancer multi-trait GWAS analysis (MTAG/PLACO framework), rs62106258 (the lead variant at THIS locus) was flagged as a candidate pleiotropic variant (CADD score &gt;12.37). Not evidence for or against a COPD mechanism; documents only that this variant/region shows cross-trait genomic signal beyond COPD.</td>
+<td>Shui W et al. 2025, Human Genomics, PMID 41366697, DOI 10.1186/s40246-025-00888-6</td>
+<td>VERIFIED (citation); explicitly non-COPD-relevant, included for completeness/traceability only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC01865</td>
+<td>Statistical genetics / fine-mapping (locus structure only; not a literature claim about gene function)</td>
+<td>Physically contains 3 of the 4 ABF credible-set variants at this locus, including the lead variant rs62106258 (PIP=0.351, intron) and the second-highest-PIP variant rs62107261 (PIP=0.224, non-coding-transcript exon). No PubMed literature of any kind exists characterizing this gene's expression, function, or disease association — this is a genuine literature absence, not a negative finding.</td>
+<td>No citation (absence of literature); locus/credible-set structure independently confirmed by researcher via Ensembl REST API and the locus input file's own credible-set table</td>
+<td>Not applicable (no citation to verify); red-team-skeptic judged the researcher's hedged &quot;plausible but speculative&quot; framing to be fair and non-overclaiming</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LOC124905962</td>
+<td>Annotation / structural</td>
+<td>Pipeline's &quot;nearest gene&quot; annotation; does not resolve to any Ensembl gene ID, has zero PubMed literature, and likely refers to (or overlaps) one of the same unnamed lncRNA transcripts in this interval already captured under LINC01865 or a flanking transcript.</td>
+<td>No citation (absence of literature/annotation artifact)</td>
+<td>Not applicable (no citation to verify); red-team-skeptic recommends this not be weighted as an independent biological entity</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p>Note on scope: per pipeline rules, only the lead variant and any missense/splice-donor/
+splice-acceptor credible-set variants require dedicated per-variant literature search. All
+four credible-set variants at this locus are intronic/non-coding-transcript/intergenic
+(none missense or splice), so no additional per-variant search was owed beyond the
+gene-level evidence above and the one lead-variant hit reported (Shui et al. 2025, tangential/non-COPD).</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-verified-literature-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT verified literature; did not go through citation-verifier or red-team-skeptic)</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Ensembl ID</th>
+<th>L2G score (this locus)</th>
+<th>Colocalization</th>
+<th>Genetic constraint</th>
+<th>Aggregated disease associations (all traits, not locus-specific)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LOC124905962</td>
+<td>Not resolvable — no Ensembl ID found</td>
+<td>No data available</td>
+<td>No data available</td>
+<td>No data available</td>
+<td>No data available</td>
+</tr>
+<tr>
+<td>TMEM18</td>
+<td>ENSG00000151353 (chr2:663,877-677,470; ~110-240kb outside this locus interval)</td>
+<td>Not resolvable (this internal COPD GWAS is not an indexed Open Targets study)</td>
+<td>Not resolvable</td>
+<td>Not strongly constrained against LoF: o/e = 0.767 (90% CI 0.505-1.198, includes 1.0); missense o/e = 1.070; synonymous o/e = 1.250</td>
+<td>Obesity/BMI (genetic_association 0.499, strongest signal), smoking initiation (0.399), smoking behavior (0.369), smoking cessation (0.259), sleep apnea/T2D/atrial fibrillation/hypertension/ADHD (moderate). <strong>COPD itself: literature-only score (0.030), NO genetic_association datatype score.</strong> <strong>Asthma: literature-only, no genetic_association score.</strong> No FEV1, FEV1/FVC, or any spirometric trait appears anywhere in the associated-disease list.</td>
+</tr>
+<tr>
+<td>LINC01865</td>
+<td>ENSG00000233684 (chr2:317,823-422,312; contains all 4 credible-set variants)</td>
+<td>Not resolvable</td>
+<td>Not resolvable</td>
+<td>Not available (lncRNA; gnomAD constraint not computed)</td>
+<td>Essentially none: only one nonzero association in the entire platform (colorectal cancer, score 0.003, rna_expression-datatype only). No COPD, asthma, smoking, or spirometric-trait association of any kind.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Prioritized gene: LINC01865 — Confidence: LOW / INSUFFICIENT</strong></p>
+<p>This call is close, and it is being made for structural rather than functional reasons —
+the study team should weigh it accordingly.</p>
+<p><strong>Why LINC01865 over TMEM18:</strong> LINC01865 is the only candidate gene that physically
+overlaps this GWAS locus and its fine-mapped credible set. It contains the lead variant
+(rs62106258, PIP=0.351) and the second-highest-PIP variant (rs62107261, PIP=0.224) — i.e.,
+credible-set mass totaling ~0.575 posterior probability sits inside this gene's
+transcript. TMEM18, by contrast, lies 110-240kb outside the queried locus interval
+entirely (Open Targets genomic location; confirmed independently by the researcher's
+Ensembl REST API query), has no locus-specific L2G or colocalization evidence in Open
+Targets, and — critically — every citation that could have established a genome-wide
+significant TMEM18/chr2p25.3 hit in the primary COPD case-control GWAS (Sakornsakolpat
+2019), the primary lung-function GWAS (Shrine 2019), or the primary smoking-behavior GWAS
+(GSCAN/Liu 2019) came back CLAIM_MISMATCH from citation-verifier (see evidence table row
+citations and audit appendix) — the claimed locus-level link could not be substantiated
+from accessible text in any of the three papers most likely to carry it. TMEM18's only
+VERIFIED COPD-adjacent citation (Çolak et al. 2016) is a Mendelian-randomization-style
+analysis of exacerbation/pneumonia risk in patients who already have COPD, using TMEM18 as
+one of three SNPs in a composite BMI genetic instrument — this is evidence about a
+BMI-mediated modifier of COPD severity, not about COPD susceptibility or an intrinsic
+pulmonary mechanism, and red-team-skeptic flagged the broader BMI-mediated causal
+narrative built on this single paper as overclaimed relative to what it actually shows.
+Open Targets independently corroborates this gap: TMEM18 has no genetic_association
+datatype score for COPD and no association with any spirometric trait (FEV1, FEV1/FVC) at
+all in its aggregated evidence.</p>
+<p><strong>Why confidence is only LOW/INSUFFICIENT, not higher, despite naming LINC01865:</strong>
+LINC01865 has literally zero PubMed literature characterizing its expression, function, or
+disease association, and zero Open Targets disease-association or constraint data of any
+kind (both are true absences, not negative findings, per pipeline conventions — but they
+mean there is no positive functional evidence supporting LINC01865 either). The lead
+variant's PIP of 0.351 means the credible set itself is not tightly resolved — roughly 65%
+of posterior probability lies outside the single highest-PIP variant, and even considering
+all three LINC01865-overlapping variants together, meaningful fine-mapping uncertainty
+remains (the fourth credible-set variant, rs77165542, PIP=0.264, is intergenic and falls
+just outside LINC01865's boundary). Red-team-skeptic explicitly flagged TMEM18 as
+CONTESTED rather than ruled out, and raised a real alternative hypothesis that this locus's
+COPD association may currently be biologically unexplained altogether — a fine-mapped
+signal in a gene desert of uncharacterized lncRNAs, with TMEM18 reached for by
+proximity/prior fame (a streetlight-effect / availability-bias pattern) rather than by
+genuine locus-specific evidence.</p>
+<p><strong>Runner-up: TMEM18.</strong> If future data (see below) established genuine colocalization or a
+verified locus-level GWAS hit linking this exact signal to TMEM18 (via smoking-behavior or
+lung-function biology, or via long-range regulatory action of the LINC01865/lncRNA region
+on TMEM18 expression), TMEM18's much richer mechanistic literature (adipocyte
+differentiation, CNS/neuronal body-weight regulation, replicated obesity GWAS locus) would
+become directly relevant and could shift this call.</p>
+<p><strong>LOC124905962</strong> is not treated as a competing candidate: it does not resolve to any
+Ensembl gene ID, has no literature, and most plausibly represents a RefSeq-only annotation
+of the same lncRNA-dense interval already covered by LINC01865 and its neighboring unnamed
+transcripts (per researcher's Ensembl region query) — an annotation artifact rather than an
+independently evidenced gene.</p>
+<p><strong>What would resolve this tie:</strong> (1) A lung-tissue or whole-blood eQTL colocalization
+(coloc/SMR) analysis testing whether this credible set's association signal colocalizes
+with LINC01865 or TMEM18 expression specifically; (2) direct extraction of summary
+statistics for rs62106258 (or LD proxies) from the Shrine 2019 lung-function GWAS,
+Sakornsakolpat 2019 COPD GWAS, and GSCAN 2019 smoking-initiation GWAS to determine, without
+relying on secondary citation claims, whether this locus is genome-wide significant in any
+of those three studies; (3) any functional/expression characterization of LINC01865 itself
+(e.g., tissue expression atlas data, CRISPRi screens, or enhancer-RNA evidence) that current
+PubMed-indexed literature does not yet provide.</p>
+
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>6_164800001-165050000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-6164800001-165050000-copd-gwas">Evidence table — locus 6:164,800,001-165,050,000 (COPD GWAS)</h1>
+<ul>
+<li><strong>Lead variant:</strong> rs6902631 (6:164,880,451, GRCh38)</li>
+<li><strong>Credible set span:</strong> 6:164,874,785-164,887,853 (13 variants, all intron_variant/
+non_coding_transcript_variant, downstream_gene_variant, or intergenic_variant — none
+missense/splice)</li>
+<li><strong>Locus file candidate gene:</strong> C6orf118 (nearest gene). No FLAMES/MAGMA/PoPS/ABC prioritization
+given.</li>
+<li><strong>Orchestrator note (genomic context, not a literature claim):</strong> this window is a protein-coding
+gene desert. Ensembl REST confirms only 4 unnamed lncRNA loci overlap the window; the credible
+set sits almost entirely within one of them (ENSG00000309021). The nearest protein-coding genes
+are C6orf118 (~230-400kb downstream), PDE10A (~450kb-1.1Mb downstream, adjacent to C6orf118),
+and QKI (~1.2Mb upstream). PDE10A and QKI were added to the researcher's scope as flagged
+alternative candidates given this structure; they are not locus-file-designated candidates.</li>
+</ul>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C6orf118</td>
+<td>Structural/developmental (hypothesis-generating only)</td>
+<td>Computational data-mining workflow proposed an untested hypothesis that C6orf118 (with CXorf58, TMEM232) may have a cilia-related function; no experimental validation</td>
+<td>PMID 34318869 / DOI 10.1093/database/baab046 (Duek et al. 2021, <em>Database</em>)</td>
+<td>VERIFIED (citation); WEAKENED (skeptic: absence-of-evidence, not evidence for C6orf118 — this is speculative and unvalidated)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>C6orf118</td>
+<td>Statgen (different disease/population, tangential)</td>
+<td>An intergenic SNP (rs9365798) downstream of C6orf118 was the top hit in a 10-SNP pulmonary tuberculosis risk panel in a Korean cohort (OR=1.59, P=2.1e-6); the &quot;immune/inflammatory pathway&quot; characterization applies to the whole 10-gene panel, not C6orf118 specifically</td>
+<td>PMID 28355295 / DOI 10.1371/journal.pone.0174642 (Hong et al. 2017, <em>PLoS One</em>)</td>
+<td>VERIFIED (citation, including the panel-vs-gene-specific caveat); WEAKENED (skeptic: different disease [TB], different population, different SNP than this locus's lead variant, no validated C6orf118 function)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PDE10A</td>
+<td>Statgen (single cohort, not replicated)</td>
+<td>Sex-stratified SNP-by-sex interaction analysis in CLSA cohort data (1,415 COPD cases) found a SNP in/near PDE10A (with CAMTA1, SATB2, LINC00908) significantly associated with COPD specifically in females</td>
+<td>PMID 37466093 / DOI 10.1080/15412555.2023.2229906 (Odimba et al. 2023, <em>COPD</em>)</td>
+<td>VERIFIED (citation); WEAKENED (skeptic: single, non-replicated, sex-stratified signal; smoking-covariate handling not reported, a real confound risk given sex-differential smoking behavior)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PDE10A</td>
+<td>Structural/developmental (asthma-candidate-gene study, not COPD)</td>
+<td>Among ~96 curated asthma-candidate genes, PDE10A (with ROBO1, RORA, HLA-DQB1, IL2RB) was differentially expressed during human lung developmental stages (pseudoglandular/canalicular)</td>
+<td>PMID 21699702 / DOI 10.1186/1465-9921-12-86 (Melén et al. 2011, <em>Respir Res</em>)</td>
+<td>VERIFIED (citation); WEAKENED (skeptic: asthma-candidate-gene framing, not COPD; developmental expression timing only, no phenotype link)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>QKI</td>
+<td>Structural/developmental + immune (single-cell, general COPD biology, no locus-specific genetic link)</td>
+<td>scRNA-seq of severe COPD peripheral lung parenchyma (n=3 cases vs n=3 non-smoking controls) found ciliated epithelial cells, monocytes, and macrophages had the most differentially expressed genes; QKI and IGFBP5 (ciliated epithelial cell genes) were altered at transcript AND protein level in COPD lungs</td>
+<td>PMID 33823868 / DOI 10.1186/s12931-021-01675-2 (Li et al. 2021, <em>Respir Res</em>)</td>
+<td>VERIFIED (citation); CONTESTED (skeptic: strong general COPD/QKI biology, but zero statistical-genetics evidence — colocalization/TWAS/eQTL — ties QKI to this specific 1.2Mb-distant locus)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>QKI</td>
+<td>Structural/developmental (mechanistic, protease-antiprotease pathway; general COPD biology, no locus-specific genetic link)</td>
+<td>COPD lungs show increased distal-site polyadenylation of SERPINA1 (alpha-1-antitrypsin), reducing A1AT translation efficiency &gt;50-fold; QKI identified via eCLIP + knockdown/luciferase-reporter validation as the RNA-binding protein modulating this SERPINA1 alternative-polyadenylation/translation event</td>
+<td>PMID 34784346 / DOI 10.1371/journal.pgen.1009912 (Lackey et al. 2021, <em>PLoS Genet</em>)</td>
+<td>VERIFIED (citation); CONTESTED (skeptic: same locus-specificity gap as above — direct experimental mechanism for QKI in COPD generally, but no genetic link to this credible set)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>QKI</td>
+<td>Structural/developmental (knockout mouse, mechanistic; PREPRINT, not peer-reviewed; general COPD biology, no locus-specific genetic link)</td>
+<td>QKI protein reduced in human COPD lungs, correlates with spirometric indices/DLCO in AT2 cells; lung-epithelium-specific QKI knockout mice spontaneously developed airspace enlargement/emphysema-like mechanics; QKI-deficient AT2 cells showed impaired spheroid formation, increased apoptosis, reduced mitochondrial respiratory-chain proteins</td>
+<td>PMID 42465480 / DOI 10.64898/2026.07.09.737340 (Uemasu et al. 2026, bioRxiv preprint)</td>
+<td>VERIFIED as a real, currently-unpublished preprint (NOT peer-reviewed — flag every use); CONTESTED (skeptic: same locus-specificity gap; this preprint currently carries substantial weight in the QKI narrative despite lacking peer review)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lead-variant-specific finding (not a citation, reported for completeness):</strong> PubMed search for
+&quot;rs6902631&quot; returned 0 results, and a GWAS Catalog web lookup found zero indexed associations of
+any kind for this variant (not even the presumptive COPD signal). This is a negative/absence
+finding, not a verified claim, and is not included in the table above. No smoking-initiation/
+cessation/heaviness GWAS overlap was found for this locus or any candidate gene.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<ul>
+<li><strong>C6orf118</strong> (ENSG00000112539, chr6:165,279,664-165,309,605): 2 <code>gwas_credible_sets</code> evidence
+scores for COPD (0.583, 0.191) — variant/study linkage fields were null in the API response, so
+it is unconfirmed whether both correspond to this exact credible set. Aggregated COPD
+association score 0.215 (genetic_association datatype score 0.354; no literature datatype
+score). No FEV1 or FEV1/FVC association found. gnomAD constraint: LoF o/e ~0.99 (tolerant/
+unconstrained), missense o/e ~1.09, synonymous o/e ~1.01. Colocalization data not resolved in
+this session.</li>
+<li><strong>PDE10A</strong> (ENSG00000112541, chr6:165,327,287-165,988,117): 2 <code>gwas_credible_sets</code> evidence
+scores for COPD (0.431, 0.149), same locus-linkage caveat as above. Aggregated COPD score 0.057
+(literature 0.065, genetic_association 0.090). No FEV1/FEV1-FVC association. gnomAD constraint:
+LoF o/e ~0.26 (obs=12/exp=45.5, some LoF intolerance), missense o/e ~0.55 (constrained),
+synonymous o/e ~0.93. More evolutionarily constrained than C6orf118. Colocalization data not
+resolved in this session.</li>
+<li><strong>QKI</strong> (ENSG00000112531, chr6:163,414,000-163,578,592): 0 <code>gwas_credible_sets</code> evidence rows
+for COPD (no genetic evidence at all in Open Targets for this gene-disease pair). Aggregated
+COPD score 0.030, entirely from literature datatype (0.250); no genetic_association datatype
+score. No FEV1/FEV1-FVC association. gnomAD constraint: LoF o/e ~0.25 (obs=8/exp=32.2), missense
+o/e ~0.52 (constrained). Colocalization data not resolved in this session.</li>
+<li><strong>Non-coding RNA genes overlapping the credible set</strong> (ENSG00000287550, ENSG00000227455,
+ENSG00000309021, ENSG00000287877 — all unnamed lncRNA &quot;novel transcript&quot; Havana models): no
+Open Targets target-disease association or constraint data available/meaningful for these loci
+via the query paths used (constraint metrics presume protein-coding transcripts). Flagged
+because the credible set physically overlaps ENSG00000309021, an alternative candidate
+mechanism (a cis-regulatory lncRNA) distinct from either flanking protein-coding gene.</li>
+<li><strong>Genomic context</strong> (Ensembl REST API, not Open Targets): the locus window chr6:164,800,001-
+165,050,000 contains no protein-coding genes.</li>
+</ul>
+<h2 id="prioritized-gene-synthesis">Prioritized-gene synthesis</h2>
+<p><strong>Prioritized gene: C6orf118. Confidence: INSUFFICIENT.</strong></p>
+<p>This is a genuinely difficult, low-confidence call, and none of the three candidates clears a bar
+that would justify more than INSUFFICIENT/LOW confidence. The honest summary: no candidate gene at
+this locus has both credible locus-specific genetic evidence AND credible COPD-relevant biology.</p>
+<ul>
+<li><strong>C6orf118</strong> is named the prioritized pick only because it is the locus file's designated
+nearest gene and holds Open Targets' highest (if locus-linkage-unconfirmed) gwas_credible_sets
+score of the three (0.583, row 1 of the Open Targets summary above). But its literature base is
+essentially empty — two off-target citations (an untested cilia hypothesis, and an incidental
+proximity hit in an unrelated tuberculosis GWAS on a different SNP; rows 1-2 of the evidence
+table), both flagged WEAKENED by the skeptic — and its gnomAD LoF o/e of ~0.99 indicates no
+evolutionary constraint, undercutting a haploinsufficiency-type mechanism. There is no FEV1/
+FEV1-FVC concordance and no smoking-trait overlap for this gene or this locus at all.</li>
+<li><strong>Runner-up: PDE10A.</strong> Physically adjacent to C6orf118, with a comparable/lower Open Targets
+credible-set score (0.431 vs. 0.583) but <em>more</em> evolutionary constraint (LoF o/e ~0.26 vs.
+~0.99) and two legitimate literature hits (Odimba 2023 sex-stratified COPD signal; Melén 2011
+developmental expression) after the citation-verifier removed a third citation
+(Hernandez-Pacheco 2021) that was found to actually describe a different gene (ROBO2), not
+PDE10A — see the audit appendix. PDE10A's only well-characterized biology is CNS/striatal
+pharmacology, which is arguably more consistent with a smoking-behavior-mediated mechanism (per
+biological prior #1) than a direct pulmonary one, a tension the skeptic raised and that is not
+resolved by current evidence either way.</li>
+<li><strong>QKI</strong> was deliberately excluded from the top pick despite having by far the strongest and most
+mechanistically detailed COPD/emphysema literature of the three (ciliated-epithelial-cell
+scRNA-seq changes, a validated RNA-binding mechanism controlling alpha-1-antitrypsin, and a
+knockout-mouse emphysema phenotype — rows 5-7 of the evidence table). The skeptic explicitly
+marked the locus-to-QKI inference CONTESTED: QKI has zero Open Targets genetic evidence
+(gwas_credible_sets rows) for COPD, sits ~1.2Mb from the credible set, and its entire Open
+Targets COPD association score derives from literature-mining, not genetics. This is a case
+where strong general disease-gene biology should not be allowed to backfill an absent
+statistical-genetics link — the reasoning preserved verbatim in the audit appendix.</li>
+</ul>
+<p><strong>What would resolve this tie:</strong> colocalization or fine-mapping evidence (eQTL/pQTL/sQTL
+colocalization in relevant lung/airway tissue) directly linking the credible set at 6:164.87-
+164.89Mb to expression of C6orf118, PDE10A, or QKI; independent replication of the Odimba 2023
+PDE10A-COPD signal (ideally in a mixed-sex, smoking-adjusted analysis); confirmation of what the
+overlapping lncRNA (ENSG00000309021) does, if anything, in cis; and resolution of the unexplained
+GWAS-Catalog-zero-hits anomaly for rs6902631 itself, which currently leaves this locus's very
+existence outside the source meta-analysis unreplicated. Given all of this, the study team should
+treat &quot;C6orf118&quot; here as a nearest-gene placeholder pick rather than a biologically justified
+nomination, and should weigh PDE10A and QKI seriously as alternatives pending the colocalization
+work above.</p>
+
+</body>
+</html>

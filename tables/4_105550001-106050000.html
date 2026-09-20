@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>4_105550001-106050000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-4105550001-106050000-nearest-gene-npnt">Evidence table — Locus 4:105,550,001-106,050,000 (nearest gene: NPNT)</h1>
+<p><strong>Lead variant:</strong> rs34712979 (4:105,897,896, GRCh38; PIP = 0.99884 in ABF fine-mapping)
+<strong>Credible-set annotation:</strong> splice_region_variant, splice_polypyrimidine_tract_variant,
+intron_variant (in NPNT); VEP impact = LOW
+<strong>Candidate genes considered:</strong> NPNT (nearest gene; sole pipeline-nominated candidate — no
+FLAMES/MAGMA/PoPS/ABC prioritization given for this locus). GSTCD, ARHGEF38, INTS12, and
+TBCK also lie within the queried physical window and were checked as alternative-gene
+hypotheses (see Prioritized-gene synthesis below and the audit appendix).</p>
+<p>All rows below carry a Skeptic verdict of WEAKENED for NPNT overall (see red-team critique,
+persisted in <code>evidence_tables/_status/4_105550001-106050000/critique.md</code>), reflecting real,
+specific reservations about strength of causal proof even though every individual citation
+was independently VERIFIED (existence/no retraction/claim accuracy) by citation-verifier.
+Reservations are noted per-row where they apply most directly.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NPNT</td>
+<td>GWAS locus discovery (statgen)</td>
+<td>CHARGE Consortium GWAS meta-analysis (~20,890 European-ancestry participants) identified the &quot;INTS12-GSTCD-NPNT&quot; 4q24 locus as genome-wide significant for FEV1; original signal did not distinguish which of the three genes was causal.</td>
+<td>Hancock et al. 2010, Nat Genet. PMID 20010835, DOI 10.1038/ng.500</td>
+<td>VERIFIED (citation); locus-level only, does not itself distinguish NPNT from neighbors</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NPNT</td>
+<td>GWAS replication + smoking-independence (statgen)</td>
+<td>In ~50,000 UK Biobank/UK BiLEVE participants, an independent genome-wide-significant signal at NPNT (distinct from the original INTS12/GSTCD signal) was associated with FEV1 extremes; NPNT/other FEV1 loci were also associated with COPD &quot;including in individuals with no history of smoking,&quot; and NPNT was genetically distinguishable from smoking-behavior loci (NCAM1, TEX41/PABPC1P2) in the same dataset.</td>
+<td>Wain et al. 2015, Lancet Respir Med. PMID 26423011, DOI 10.1016/S2213-2600(15)00283-0</td>
+<td>VERIFIED (citation); supports direct-pulmonary- over smoking-mediated interpretation (prior #1)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NPNT</td>
+<td>GWAS replication, multi-ancestry (statgen)</td>
+<td>Large multi-ancestry lung-function GWAS (400,102 individuals, 279 signals for FEV1/FEV1-FVC) found NPNT protein levels linked via a sentinel pQTL to the lung-function credible set (alongside ECM1, THBS4, C1QTNF5, SCARF2).</td>
+<td>Shrine et al. 2019, Nat Genet. PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
+<td>VERIFIED (citation), with nuance — the verified quote supports a pQTL link to the credible set, not a verbatim &quot;NPNT/4q24 is one of the 279 named signals&quot; statement; read narrowly</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NPNT</td>
+<td>sQTL / colocalization / functional splicing (statgen + structural)</td>
+<td>rs34712979 (the exact credible-set variant at this locus) is associated with alternative NPNT splice-junction use (GTEx lung sQTL + LTRC RNA-seq); this sQTL colocalizes with COPD case-control and spirometric-lung-function GWAS signals at 94% posterior probability. Long-read (ONT) sequencing found 13 NPNT isoforms (6 protein-coding); rs34712979 creates a cryptic splice acceptor site.</td>
+<td>Saferali et al. 2020 (medRxiv preprint). PMID 33173926, DOI 10.1101/2020.10.20.20203927</td>
+<td>VERIFIED (citation); WEAKENED as sole proof of causality — colocalization is not proof of mechanism, and this is a preprint later refined by #5 below (same group)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NPNT</td>
+<td>sQTL / colocalization / functional splicing, published + refined (statgen + structural)</td>
+<td>Peer-reviewed refinement of the above: of four splicing changes from the rs34712979-A cryptic splice acceptor, only the cassette-exon-3 change was associated with COPD phenotypes; the COPD risk allele shifts isoform usage toward the exon-3-including &quot;isoform A&quot;; AlphaFold modeling indicates exon 3 inclusion disrupts an EGF-like domain in NPNT.</td>
+<td>Saferali et al. 2025, Eur Respir J. PMID 39978861, DOI 10.1183/13993003.01407-2024</td>
+<td>VERIFIED (citation); WEAKENED — this is the single strongest mechanistic paper for this locus, but it is the same research group's own preprint-to-publication pipeline (not independent replication), and the structural claim rests on computational (AlphaFold) modeling, not wet-lab validation</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NPNT (non-replication)</td>
+<td>TWAS / colocalization, contrasting result (statgen)</td>
+<td>A TWAS/multi-variant colocalization study of severe COPD and quantitative emphysema did NOT identify NPNT among its five colocalization-confirmed genes (PSMA4, EGLN2, WNT3, DCBLD1, LILRA3).</td>
+<td>Sakornsakolpat et al. 2018, Respir Res. PMID 29566699, DOI 10.1186/s12931-018-0744-9</td>
+<td>VERIFIED (citation); genuine, only partially explained discordant data point — flagged by red-team-skeptic as a live discrepancy, not fully resolved by methodological differences alone</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NPNT</td>
+<td>Structural/developmental biology + innate immune (macrophage)</td>
+<td>Postnatal Npnt-knockout mice with LPS-induced acute lung injury showed thickened alveolar septa and increased BALF macrophages during injury-resolution phase; NPNT-deficient BALF was more chemotactic for macrophages in vitro (no in vivo chemokine differences by genotype).</td>
+<td>Wilson et al. 2022, PLoS One. PMID 35552565, DOI 10.1371/journal.pone.0268398</td>
+<td>VERIFIED (citation); acute-injury model only, not chronic COPD — macrophage-specific, no CD8+/Th17/neutrophil evidence found for NPNT</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NPNT (via ITGA8 receptor)</td>
+<td>Developmental biology</td>
+<td>Integrin alpha8 (NPNT's receptor) is required for lung branching morphogenesis/alveolarization; alpha8-deficient explants show reduced growth/branching and enlarged endbuds; postnatal alpha8-deficient lungs show reduced alveolar surface area/septal length at P4/P7, rescued by increased septation by P90.</td>
+<td>Cremona et al. 2020, Front Physiol. PMID 33408636, DOI 10.3389/fphys.2020.530635</td>
+<td>VERIFIED (citation); studies the receptor (ITGA8), not NPNT directly — supportive but indirect</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NPNT</td>
+<td>Structural biology, non-COPD disease context (IPF)</td>
+<td>NPNT expression reduced in IPF patient lung tissue, correlates with lung-function decline; NPNT deficiency exacerbates bleomycin-induced alveolar epithelial senescence and worsens fibrosis via loss of ITGA3-mediated YAP1 signaling; NPNT overexpression/escin improves lung function and reduces fibrosis in mice.</td>
+<td>Guo et al. 2025, Adv Sci. PMID 40444575, DOI 10.1002/advs.202501956</td>
+<td>VERIFIED (citation); IPF-specific, not COPD — Open Targets shows this pulmonary-fibrosis association is literature-only with no genetic-association support; directional tension with COPD isoform-shift mechanism (see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NPNT</td>
+<td>Structural biology, non-COPD disease context (silicosis)</td>
+<td>Serum NPNT elevated in silicosis patients vs healthy controls, proposed as a fibrosis-progression biomarker, in context of silica-induced macrophage/Th-cell-mediated inflammation/fibrosis.</td>
+<td>Lee et al. 2019, Int J Mol Sci (review). PMID 31130697, DOI 10.3390/ijms20102581</td>
+<td>VERIFIED (citation); occupational fibrotic lung disease, not COPD; correlative biomarker evidence only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NPNT</td>
+<td>Structural biology, non-COPD disease context (SSc-ILD)</td>
+<td>scRNA-seq of bleomycin-induced systemic sclerosis mouse lung fibrosis model identifies an NPNT-positive peri-alveolar fibroblast subpopulation (vs PI16-positive) with increased ECM gene expression after bleomycin.</td>
+<td>Maekawa et al. 2024, Biochem Biophys Res Commun. PMID 39608052, DOI 10.1016/j.bbrc.2024.151017</td>
+<td>VERIFIED (citation); systemic-sclerosis-ILD fibrosis model, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>INTS12 (alternative gene, broader 4q24 signal, not this credible-set variant)</td>
+<td>eQTL (statgen)</td>
+<td>Lung eQTL data: 4q24 FEV1 GWAS-associated SNPs act as an eQTL for INTS12 (not GSTCD) in multiple tissues.</td>
+<td>Obeidat et al. 2013, PLoS One. PMID 24058608, DOI 10.1371/journal.pone.0074630</td>
+<td>VERIFIED (citation); concerns the original, broader 4q24 signal, not rs34712979 specifically</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>INTS12 (alternative gene, broader 4q24 signal, not this credible-set variant)</td>
+<td>Functional follow-up (structural)</td>
+<td>INTS12 regulates protein-synthesis-pathway genes in airway/lung cells; 4q24 lung-function polymorphisms correlate with INTS12, not GSTCD, expression.</td>
+<td>Kheirallah et al. 2017, BMC Genomics. PMID 28335732, DOI 10.1186/s12864-017-3628-3</td>
+<td>VERIFIED (citation); concerns the original, broader 4q24 signal, not rs34712979 specifically</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — not a verified literature citation)</h2>
+<p>Queried via Open Targets Platform GraphQL API, 2026-09-11. This section did NOT go
+through citation-verifier or red-team-skeptic; it is a structured database lookup
+included for context only.</p>
+<p><strong>NPNT (ENSG00000168743):</strong></p>
+<ul>
+<li>Disease association score vs. COPD (MONDO_0005002): 0.558 overall (genetic_association
+subscore 0.904; literature subscore 0.269).</li>
+<li>13 gwas_credible_sets (L2G-based) evidence records link NPNT to COPD: scores 0.947
+(x11), 0.942, 0.814 — consistently high-confidence L2G gene assignment across
+apparently multiple underlying COPD GWAS credible sets. Variant/study/effect-size
+detail fields were null in the API response for this datasource (a data-completeness
+gap in what Open Targets exposes via this query path, not an omission by this review).</li>
+<li>Also strongly associated with asthma (score 0.544, genetic_association 0.893) and
+&quot;Chronic Obstructive Asthma&quot; (score 0.360), and more broadly with &quot;lower respiratory
+tract disorder&quot; (0.442) and &quot;respiratory system disorder&quot; (0.440) — a broad
+obstructive/respiratory signal, not COPD-specific.</li>
+<li>Also shows substantial genetic_association-driven scores for several apparently
+unrelated traits: hypertension/essential hypertension, major depressive disorder,
+glaucoma, atrial fibrillation, information processing speed, and renal agenesis —
+indicating regional/gene-level pleiotropy in GWAS-catalog-derived data. Per red-team
+critique, most of this is plausibly generic LD-block pleiotropy, but the renal-agenesis
+association is biologically coherent with NPNT-ITGA8's established role in kidney
+branching morphogenesis and should be flagged as an open question about allelic
+heterogeneity (same variant vs. a different NPNT variant) rather than dismissed.</li>
+<li>Pulmonary fibrosis (MONDO_0002771) association score is low (0.078) and driven
+ENTIRELY by literature/text-mining (0.638), with NO genetic_association contribution —
+i.e., a literature-only link, not a genetic one; consistent with the IPF/fibrosis
+citations in the table above being mechanistic-context papers, not genetic evidence for
+a COPD (or any) genetic association.</li>
+<li>Genetic constraint (gnomAD, target-level, not disease-specific): NPNT is NOT
+constrained against loss-of-function variation (LOF constraint score ~4.94e-9, oe =
+0.712, 90% CI 0.543-0.944) and is roughly neutral for missense constraint (oe = 0.936).
+This argues against a classic haploinsufficiency mechanism and is more consistent with
+a regulatory/splicing-modulation mechanism, as reported in the Saferali et al. sQTL
+studies above.</li>
+<li>No colocalization-specific (e.g., QTL colocalization) data field could be confirmed
+returned via the query paths attempted; this should be read as &quot;not found via the
+queries attempted&quot; given tool-output size limits encountered during schema
+introspection, not as &quot;Open Targets has no such data.&quot;</li>
+</ul>
+<p>Full detail: <code>evidence_tables/_status/4_105550001-106050000/opentargets.md</code></p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Prioritized gene: NPNT</strong>
+<strong>Confidence: MODERATE</strong></p>
+<p>NPNT is the best-supported candidate gene at this locus, but the evidence stops short of
+definitive proof, so confidence is capped at MODERATE rather than HIGH.</p>
+<p>Supporting the call: NPNT is the sole pipeline-nominated candidate (nearest gene, sole
+credible-set gene) and the credible-set variant rs34712979 (PIP=0.9988) sits within its
+annotated transcript with a splice-region consequence. This is independently corroborated
+by (1) robust, multi-cohort GWAS replication for lung function/COPD at this general locus
+(Hancock 2010; Wain 2015; Shrine 2019), (2) an unusually direct, variant-specific
+mechanistic story — rs34712979 creates a cryptic splice acceptor altering NPNT exon 3
+usage, and this sQTL colocalizes with COPD/spirometry GWAS signals at 94% posterior
+probability, with AlphaFold modeling suggesting disruption of an EGF-like protein domain
+(Saferali et al., preprint PMID 33173926 and published PMID 39978861), and (3) very high,
+consistent Open Targets L2G scores (0.81-0.95 across 13 credible-set records) for
+NPNT-COPD specifically. The gnomAD constraint profile (LOF-tolerant, not haploinsufficient)
+is coherent with a splicing/regulatory rather than complete-loss-of-function mechanism,
+matching the Saferali mechanism exactly. Prior #1 (smoking-mediation) evidence argues
+against a smoking-behavior explanation: Wain et al. 2015 found this signal generalizes to
+never-smokers and is genetically distinct from smoking-behavior loci in the same dataset.</p>
+<p>Weighing against higher confidence, per the red-team critique (WEAKENED verdict): the
+mechanistic case rests on one research group's own preprint-to-publication work using
+substantially the same dataset (not independent replication of the mechanism, even though
+the underlying locus-COPD GWAS association is independently replicated across cohorts),
+and the structural/functional claim is computationally (AlphaFold) rather than
+experimentally validated. Sakornsakolpat et al. 2018 (PMID 29566699) is a genuine,
+only partially explained non-replication — a severe-COPD/emphysema TWAS/colocalization
+study that did not flag NPNT among its confirmed genes. The neighboring genes GSTCD and
+INTS12 have a documented history as alternative candidates for the broader 4q24
+lung-function locus (Obeidat 2013; Kheirallah 2017), and while rs34712979's
+NPNT-specific splicing evidence is a strong distinguishing argument, no negative
+eQTL/sQTL control ruling out INTS12 at this exact variant was reported.</p>
+<p><strong>Runner-up:</strong> INTS12 (favored over GSTCD by lung eQTL evidence for the original, broader
+4q24 signal — Obeidat 2013, Kheirallah 2017 — though this evidence concerns the original
+lead signal, not rs34712979 specifically).</p>
+<p><strong>What would resolve the remaining uncertainty:</strong> (1) independent replication of the
+rs34712979-NPNT splicing/colocalization result by a group other than Saferali/Castaldi and
+colleagues, ideally with orthogonal wet-lab validation (minigene splicing reporter assay,
+or a knock-in model) rather than AlphaFold modeling alone; (2) a direct eQTL/sQTL test of
+rs34712979 against INTS12/GSTCD/ARHGEF38/TBCK expression in the same lung datasets, to
+formally rule out allelic heterogeneity with the neighboring genes; (3) reconciliation of
+why Sakornsakolpat et al.'s severe-COPD/emphysema TWAS did not detect NPNT — ideally a
+reanalysis testing isoform-usage (not just total-expression) colocalization in an
+independent severe-COPD cohort.</p>
+
+</body>
+</html>

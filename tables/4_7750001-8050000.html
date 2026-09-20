@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>4_7750001-8050000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-47750001-8050000-nearestflamesmagmapops-gene-afap1">Evidence table — Locus 4:7,750,001-8,050,000 (nearest/FLAMES/MAGMA/PoPS gene: AFAP1)</h1>
+<p>Lead variant: rs73073939 (4:7889101, intron_variant, PIP=0.519). Credible set: 39 variants,
+all intronic in AFAP1 (all impact=MODIFIER; no missense/splice-donor/splice-acceptor
+variants). Second-highest PIP variant: rs4696771 (PIP=0.365). All candidate-gene methods
+(nearest gene, FLAMES, MAGMA, PoPS) agree on AFAP1; ABC = NA.</p>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AFAP1</td>
+<td>Statistical genetics — cross-ancestry COPD replication</td>
+<td>Taiwanese case-control COPD GWAS (5,442 cases/17,681 controls) abstract states: &quot;Thirteen susceptibility loci, such as CHRNA4, AFAP1, and DTWD1, previously reported in other populations were replicated and confirmed to be associated with COPD in Taiwanese populations.&quot; This is the only citation in this locus's packet where AFAP1 is explicitly named and confirmed associated with COPD.</td>
+<td>Lin WD et al., BMC Genomics 2024;25(1):607. PMID 38886662 / DOI 10.1186/s12864-024-10526-5</td>
+<td>WEAKENED overall (see synthesis below) — this is a single independent replication cohort, not convergent gene-level confirmation across the wider statgen literature (see excluded appendix: 5 other statgen citations were CLAIM_MISMATCH because AFAP1 was not named in their abstracts)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AFAP1</td>
+<td>Molecular/structural biology</td>
+<td>AFAP1 (AFAP-110) is a direct actin-filament-binding and cross-linking adaptor protein, and a binding partner/substrate of Src-family kinases and PKC, regulating actin filament/stress-fiber organization and cell-motility structures. General cell biology, not lung-specific.</td>
+<td>Qian Y et al., Mol Biol Cell 2002;13(7):2311-2322. PMID 12134071 / DOI 10.1091/mbc.e01-12-0148</td>
+<td>WEAKENED — establishes generic cytoskeletal-adaptor function; no pulmonary tissue context</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AFAP1</td>
+<td>Molecular/structural biology — vascular (not airway) smooth muscle</td>
+<td>AFAP1 is enriched in Src- and phorbol-ester-induced podosomes specifically in vascular smooth muscle cells (A7r5 line), regulating podosome stability/lifespan via PKCalpha-dependent phosphorylation.</td>
+<td>Dorfleutner A et al., J Cell Sci 2008;121(Pt 14):2394-2405. PMID 18577577 / DOI 10.1242/jcs.026187</td>
+<td>WEAKENED — closest AFAP1 comes to &quot;smooth muscle&quot; biology in the literature, but vascular, not airway, and no COPD/lung disease context</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AFAP1</td>
+<td>Developmental biology — knockout mouse phenotype</td>
+<td>The only reported germline Afap1-knockout mouse has one physiological phenotype: a mammary-gland lactation defect (impaired secretory activation, lipid-droplet accumulation, precocious involution) via loss of AFAP1-dependent cSrc regulation in luminal epithelial cells. No lung/airway phenotype is reported for this knockout.</td>
+<td>Cunnick JM et al., Oncogene 2014;34(20):2640-2649. PMID 25043309 / DOI 10.1038/onc.2014.205</td>
+<td>WEAKENED — absence-of-evidence data point; knockout wasn't specifically designed to test pulmonary phenotypes, so not a definitive negative, but no emphysema/airway phenotype has ever been reported</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AFAP1</td>
+<td>Alternative-phenotype pleiotropy — ocular (discovery GWAS + functional validation)</td>
+<td>Original POAG discovery GWAS (Australian cohorts, 1,155 advanced-POAG cases/1,992 controls, with replication) identifies AFAP1 intronic variant rs4619890[G], OR=1.20, P=7.0×10⁻¹⁰, as genome-wide significant for primary open-angle glaucoma. Functional validation (RT-PCR, immunolabeling) shows AFAP1 expressed in human retina, optic nerve, trabecular meshwork, and retinal ganglion cells — i.e. AFAP1's only directly-demonstrated human tissue-expression/functional evidence is ocular, not pulmonary.</td>
+<td>Gharahkhani P et al., Nat Genet 2014;46(10):1120-1125. PMID 25173105 / DOI 10.1038/ng.3079</td>
+<td>WEAKENED / important complicating evidence — see Prioritized-gene synthesis below for why this matters for causal-mechanism confidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AFAP1</td>
+<td>Alternative-phenotype pleiotropy — ocular (cross-ancestry replication, shares a locus variant with the COPD credible set)</td>
+<td>Cross-population replication (Hong Kong Chinese, Shantou Chinese, Osaka Japanese) confirms AFAP1 intronic variant rs938604 significantly associated with primary open-angle glaucoma, specifically the high-tension glaucoma subtype, across two independent East Asian ancestries. rs938604 is also present in this locus's COPD credible set, but at negligible PIP (0.000467).</td>
+<td>Chen SY et al., Br J Ophthalmol 2026;110(6):627-634 (advance online 2025). PMID 41338940 / DOI 10.1136/bjo-2025-328041</td>
+<td>WEAKENED / important complicating evidence — verifier specifically confirmed this citation is genuine despite its unusually recent PMID/date</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AFAP1</td>
+<td>Alternative-phenotype pharmacogenetics (negative result)</td>
+<td>AFAP1 SNPs (rs11723068, rs757253) were NOT significantly associated with intraocular-pressure response to the glaucoma drug latanoprost in POAG patients (GMDS and PTGFR SNPs were significant).</td>
+<td>Cui XJ et al., J Clin Pharm Ther 2016;42(1):87-92. PMID 27862086 / DOI 10.1111/jcpt.12468</td>
+<td>Not directly relevant to COPD; included for completeness of the ocular-pleiotropy picture</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AFAP1</td>
+<td>Alternative-phenotype prognostic (negative result)</td>
+<td>An AFAP1 POAG-risk SNP was tested among 10 known glaucoma loci for association with visual-field progression in a Singaporean cohort and was NOT significant (only a TGFBR3-CDC7 variant was).</td>
+<td>Trikha S et al., Ophthalmology 2015. PMID 26383992</td>
+<td>Not directly relevant to COPD; shows the ocular AFAP1 association is itself not uniformly replicated across every POAG sub-phenotype</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p><strong>AFAP1 (ENSG00000196526):</strong></p>
+<ul>
+<li><strong>Genetic constraint:</strong> LoF oe = 0.75 (95% CI 0.616-0.918) — mild depletion of LoF variation, moderate not extreme constraint. Missense oe = 1.11, synonymous oe = 1.16 (both ~unconstrained).</li>
+<li><strong>Tractability:</strong> No approved drugs, no advanced/phase-1 clinical assets, no high-quality small-molecule ligand/pocket or antibody-modality evidence. Currently a poorly tractable/undrugged target.</li>
+<li><strong>AFAP1-COPD target-disease association score:</strong> 0.4176 overall (genetic_association datatype contributes 0.6836; literature text-mining only 0.0638).</li>
+<li><strong>COPD evidence rows (gwas_credible_sets):</strong> genetic_association scores 0.828 (x2, PMID 36777996) and 0.807 (PMID 40155373) — note per the evidence table above, neither of these PMIDs, on independent verification, was confirmed to name AFAP1 specifically in its abstract; these Open Targets scores reflect the underlying GWAS summary-statistics pipeline, not necessarily a gene-specific textual claim in those papers.</li>
+<li><strong>Pulmonary-function trait evidence:</strong> FEV1, 8 evidence rows, scores 0.81-0.89; FEV1/FVC ratio, 6 evidence rows, scores 0.826-0.871 — strong, concordant genetic-association signal across COPD and spirometric traits (satisfies biological prior #2's concordance criterion at the aggregate-database level).</li>
+<li><strong>Smoking-trait evidence:</strong> Zero genetic-association evidence rows for smoking initiation, cigarettes-per-day, or nicotine dependence — an absence-of-evidence finding consistent with (but not proof of) a non-smoking-mediated mechanism.</li>
+<li><strong>Lead-variant (rs73073939 / 4_7889101_T_C) credible-set lookup:</strong> Open Targets resolves this exact variant to only ONE indexed credible set, and it is for a different trait entirely — glaucoma/high intraocular pressure (study GCST011441), with an L2G score of 0.78 for AFAP1 on that credible set. No COPD-specific credible set was found indexed for this exact lead variant.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>AFAP1 — Confidence: LOW</strong></p>
+<p>AFAP1 is the only candidate gene at this locus: all four internal prioritization methods
+(nearest gene, FLAMES, MAGMA, PoPS) agree on it, and all 39 credible-set variants are
+intronic within the AFAP1 gene body itself (not merely nearby in a multi-gene LD block),
+which structurally weakens the usual &quot;nearest-gene-bias&quot; concern relative to most loci in
+this review. AFAP1 is also independently, explicitly named as a replicated COPD-associated
+locus in an East Asian case-control GWAS (Lin WD et al. 2024, PMID 38886662, VERIFIED), and
+Open Targets shows strong, concordant genetic-association evidence across COPD, FEV1, and
+FEV1/FVC ratio (scores ~0.8-0.9), consistent with biological prior #2. There is no evidence
+of a smoking-behavior-mediated mechanism (zero smoking-trait genetic association in Open
+Targets, and the researcher's targeted literature search found no smoking-GWAS overlap
+either), consistent with prior #1 favoring a pulmonary-biology interpretation over a
+neurobehavioral one.</p>
+<p>However, confidence cannot be rated higher than LOW for two compounding reasons, both raised
+independently by the researcher and the red-team-skeptic:</p>
+<ol>
+<li>
+<p><strong>The gene-level statistical case is thinner than the citation count suggests.</strong> Of the
+10 statistical-genetics citations the researcher surfaced, 5 were CLAIM_MISMATCH on
+verification specifically because AFAP1 is not named in their abstracts (Shrine 2019,
+Shrine 2023, Wyss 2018, Zhou/GBMI 2022, You D 2025 — see excluded appendix); only one
+paper (Lin WD 2024) explicitly and verifiably names AFAP1 as COPD-associated. No
+colocalization, TWAS, or eQTL study naming AFAP1 as the causal/functional (as opposed to
+merely nearest/statistically-mapped) gene was found by the researcher.</p>
+</li>
+<li>
+<p><strong>AFAP1's only well-validated human functional/mechanistic biology is ocular, not
+pulmonary, and there is a specific, unresolved variant-level pleiotropy concern.</strong> AFAP1's
+best-characterized human disease association, with direct tissue-expression and
+functional-validation support (retina, optic nerve, trabecular meshwork, retinal ganglion
+cells), is primary open-angle glaucoma/intraocular pressure — repeatedly replicated across
+independent cohorts (Gharahkhani 2014, Chen 2026, both VERIFIED). Critically, the actual
+lead COPD credible-set variant in this analysis, rs73073939 (PIP=0.519), is the same
+variant Open Targets indexes into a glaucoma credible set (L2G=0.78 for AFAP1) — a
+shared-variant overlap, not just a shared gene. No literature search performed in this
+pipeline run (by either the researcher or, notably, the red-team-skeptic, whose search
+budget was already exhausted before it could run its own contradiction-search pass for
+this locus — see audit file) could establish whether the COPD/lung-function and POAG/IOP
+signals at this locus reflect one shared causal mechanism or two independent, coincidentally
+co-located signals. Zero literature connects AFAP1 to airway epithelium, alveolar
+development, protease-antiprotease balance, mucociliary function, smoking behavior, or any
+immune/inflammatory program relevant to COPD; the one AFAP1 knockout mouse's only reported
+phenotype (mammary lactation defect) has no lung component.</p>
+</li>
+</ol>
+<p><strong>What would resolve this:</strong> a formal colocalization/LD analysis between this locus's COPD/
+FEV1 credible set and the AFAP1 POAG/IOP credible set (GCST011441) to test whether rs73073939
+and the POAG-associated variants represent the same causal signal; a lung-tissue eQTL or TWAS
+study directly testing whether AFAP1 transcript levels mediate the pulmonary-function
+association; and completion of the region gene-content enumeration (not finished this
+session) to formally rule out an unrecognized neighboring gene. There is no runner-up
+candidate gene to name at this locus (no other gene was proposed by any prioritization
+method or found in the credible set), so this is not a tie between two genes — it is a single
+candidate whose statistical case is solid but whose causal/mechanistic pulmonary story is
+unconfirmed and complicated by unresolved ocular pleiotropy at the lead variant itself.</p>
+
+</body>
+</html>

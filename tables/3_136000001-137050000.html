@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>3_136000001-137050000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-3_136000001-137050000-nearest-gene-stag1">Evidence table — locus 3_136000001-137050000 (nearest gene STAG1)</h1>
+<p>Region: 3:136,000,001-137,050,000 (GRCh38). Lead variant: rs145172807 (PIP=0.189,
+chr3:136,723,691, intron of STAG1). Credible set: 212 variants (large/diffuse). Per pipeline
+scope, evidence below is organized by candidate gene; only the lead variant and the sole
+missense credible-set variant (rs1052618, SLC35G2) were searched individually at the
+variant level. All rows below carry a citation-verifier verdict of VERIFIED (existence,
+non-retraction, and accurate claim correspondence all confirmed) — see
+<code>evidence_tables/_status/3_136000001-137050000/verified_citations.md</code> for full verifier
+notes. The &quot;Skeptic verdict&quot; column reflects the red-team-skeptic's per-gene assessment (see
+<code>audits/3_136000001-137050000_audit.md</code> for full reasoning); note the skeptic's own web-search
+budget was exhausted before independent contradiction-searches could run, so this critique is
+an internal-consistency review of the verified findings, not a fresh literature check.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STAG1</td>
+<td>Statistical genetics (indirect/behavioral, whole-genome PRS)</td>
+<td>UK Biobank gene-based GWAS found STAG1 gene-wide associated with depressive symptoms (p&lt;2.77e-6); PRS incorporating gene-by-environment (stress) effects showed shared genetic aetiology between depressive symptoms and self-reported &quot;schizotypal personality, heart disease and COPD&quot; in an independent sample</td>
+<td>Arnau-Soler et al. 2019, Transl Psychiatry, PMID 30718454, DOI 10.1038/s41398-018-0360-y</td>
+<td>WEAKENED — whole-genome PRS cross-trait correlation, not STAG1- or locus-specific; should carry near-zero weight as COPD evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STAG1</td>
+<td>Structural (general cell biology, non-lung)</td>
+<td>STAG1- and STAG2-cohesin have distinct, largely non-redundant roles in chromatin looping/transcriptional control in human cells and neural stem cells; STAG1/STAG2 dosage is disease-relevant in neurodevelopmental/intellectual-disability contexts</td>
+<td>Casa et al. 2020, Genome Research, PMID 32253279, DOI 10.1101/gr.253211.119</td>
+<td>WEAKENED — general cell-biology context only, no lung relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STAG1</td>
+<td>Structural/developmental (general, non-lung)</td>
+<td>De novo STAG1 loss-of-function/missense variants cause a syndromic neurodevelopmental disorder (cohesinopathy/MRD47) with dysmorphism, developmental delay, occasional congenital limb/eye anomalies</td>
+<td>Lehalle et al. 2017, J Med Genet, PMID 28119487, DOI 10.1136/jmedgenet-2016-104468</td>
+<td>WEAKENED — supports dosage sensitivity, but no pulmonary phenotype reported in this or related case reports</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STAG1</td>
+<td>Structural/developmental (general, non-lung)</td>
+<td>Same STAG1-neurodevelopmental-disorder phenotype (case report)</td>
+<td>Di Muro et al. 2021, Genes, PMID 34440290, DOI 10.3390/genes12081116</td>
+<td>WEAKENED — see above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STAG1</td>
+<td>Structural/developmental (general, non-lung)</td>
+<td>Same STAG1-neurodevelopmental-disorder phenotype (case report, monozygotic twins)</td>
+<td>Cipriano et al. 2024, Genes, PMID 39336775, DOI 10.3390/genes15091184</td>
+<td>WEAKENED — see above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STAG1</td>
+<td>Structural/developmental (general, non-lung)</td>
+<td>Same STAG1-neurodevelopmental-disorder phenotype, novel nonsense variant with congenital clubfoot and microphthalmia</td>
+<td>Bregvadze et al. 2024, SAGE Open Med Case Rep, PMID 39224759, DOI 10.1177/2050313X241277123</td>
+<td>WEAKENED — see above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STAG1</td>
+<td>Structural/developmental (general, non-lung)</td>
+<td>Review of STAG1-related neurodevelopmental disorder (MRD47) phenotype</td>
+<td>Palazzotti et al. 2026, Genes, PMID 42074601, DOI 10.3390/genes17040483</td>
+<td>WEAKENED — see above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STAG1</td>
+<td>Structural (general, cancer, tangential)</td>
+<td>Review of RAD21 (cohesin subunit) biology and somatic mutation relevance in cancer</td>
+<td>Cheng et al. 2020, Gene, PMID 32687945, DOI 10.1016/j.gene.2020.144966</td>
+<td>WEAKENED — tangential, non-lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>STAG1</td>
+<td>Structural (general, cancer, tangential)</td>
+<td>Review of cohesin-complex somatic mutations across cancer types</td>
+<td>Swett &amp; Tothova 2025, Int J Cancer, PMID 40063003, DOI 10.1002/ijc.35378</td>
+<td>WEAKENED — tangential, non-lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MSL2</td>
+<td>Structural/developmental (general, non-lung)</td>
+<td>Heterozygous de novo MSL2 variants cause a neurodevelopmental syndrome (developmental delay, intellectual disability, hypotonia, dysmorphism) with a distinct DNA-methylation episignature; iPSC models show altered target-gene expression without global loss of H4K16ac</td>
+<td>Karayol et al. 2024, Am J Hum Genet, PMID 38815585, DOI 10.1016/j.ajhg.2024.05.001</td>
+<td>HOLDS as characterized — weak candidate, no lung/immune connection, not overclaimed</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MSL2</td>
+<td>Structural/developmental (general, non-lung)</td>
+<td>Nervous-system-specific Msl2 conditional-knockout mice show impaired neurogenesis, disrupted cortical lamination, reduced H4K16ac at NDD-related gene promoters</td>
+<td>Luo et al. 2026, Cell Mol Life Sci, PMID 42168661, DOI 10.1007/s00018-026-06237-7</td>
+<td>HOLDS as characterized — see above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NCK1</td>
+<td>Structural (lung-cancer cell-line biology, non-COPD)</td>
+<td>miR-374a-5p inhibits NSCLC cell proliferation/migration by targeting NCK1; NCK1 overexpression reverses this effect</td>
+<td>Guo et al. 2021, Exp Ther Med, PMID 34306207, DOI 10.3892/etm.2021.10375</td>
+<td>WEAKENED — oncogenic cell-line biology, not COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NCK1</td>
+<td>Structural (lung-cancer cell-line biology, non-COPD)</td>
+<td>The lncRNA NCK1-AS1 promotes lung squamous cell carcinoma progression by transcriptionally upregulating neighboring gene NCK1 via MYC interaction</td>
+<td>Zhou et al. 2021, Cancer Biol Ther, PMID 33629937, DOI 10.1080/15384047.2020.1842717</td>
+<td>WEAKENED — see above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NCK1</td>
+<td>Structural (lung-cancer cell-line biology, non-COPD)</td>
+<td>NCK1-AS1 promotes NSCLC progression via a miR-512-5p/p21 axis</td>
+<td>Luo et al. 2020, Pathol Res Pract, PMID 32858372, DOI 10.1016/j.prp.2020.153157</td>
+<td>WEAKENED — see above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NCK1</td>
+<td>Immune (generic T-cell biology, non-lung, non-COPD)</td>
+<td>Nck (Nck1/Nck2) cooperates with Lck to promote TCR phosphorylation, ZAP70 recruitment/phosphorylation, productive TCR signaling in human T cells</td>
+<td>Hartl et al. 2021, Cells, PMID 33917227, DOI 10.3390/cells10040834</td>
+<td>WEAKENED — real mechanism but generic T-cell biology with zero COPD/lung data; NCK1 is not LoF-constrained, undercutting a common-variant dosage argument</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NCK1</td>
+<td>Immune (generic T-cell biology, non-lung, non-COPD)</td>
+<td>Nck (via Nck1) binds the TCR/CD3ε proline-rich sequence via cooperating SH3.1/SH2 domains; SH3.1-domain mutation impairs TCR signaling/T-cell activation</td>
+<td>Paensuwan et al. 2015, J Immunol, PMID 26590318, DOI 10.4049/jimmunol.1500958</td>
+<td>WEAKENED — see above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NCK1</td>
+<td>Immune (generic T-cell biology, non-lung, non-COPD)</td>
+<td>Actin polymerization promotes Nck1 recruitment to CD3ε upon TCR triggering</td>
+<td>Wipa et al. 2020, Immunology, PMID 31674657, DOI 10.1111/imm.13146</td>
+<td>WEAKENED — see above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NCK1</td>
+<td>Immune (generic T-cell biology, non-lung, non-COPD)</td>
+<td>Nck1 knockdown reduces FoxP3+ regulatory T-cell (Treg) development from human thymocytes via reduced AKT/FoxO1 phosphorylation</td>
+<td>Nuiyen et al. 2025, Clin Exp Immunol, PMID 39963999, DOI 10.1093/cei/uxaf011</td>
+<td>WEAKENED — see above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NCK1</td>
+<td>Immune (generic T-cell biology, non-lung, non-COPD)</td>
+<td>Nck1 knockdown in primary human T cells impairs glucose uptake/ATP production, T-cell activation/proliferation, increases apoptosis</td>
+<td>Rattanasri et al. 2025, Immunology, PMID 40421785, DOI 10.1111/imm.13950</td>
+<td>WEAKENED — see above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SLC35G2</td>
+<td>Other (food-allergy methylation biomarker, ML study, non-lung)</td>
+<td>SLC35G2 (with LDHC) DNA methylation flagged as a promising machine-learning biomarker for food-allergy prediction</td>
+<td>Kiliçarslan et al. 2025, Biomedicines, PMID 41153772, DOI 10.3390/biomedicines13102489</td>
+<td>HOLDS as characterized — tangential, correctly framed as weak/not lung-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PPP2R3A</td>
+<td>Structural (pulmonary fibrosis model, non-COPD)</td>
+<td>In a silica-induced silicosis/pulmonary-fibrosis mouse model, GREM1-driven PPP2R3A expression in &quot;inflammatory-proliferative fibroblasts&quot; increases fibroblast viability/proliferation/migration, initiating early pathological lung changes</td>
+<td>Shi et al. 2022, Cell Biosci, PMID 35933397, DOI 10.1186/s13578-022-00860-0</td>
+<td>HOLDS as characterized — the locus's most specific lung-structural finding, but non-COPD pathology (fibrosis, not emphysema/airway obstruction); PP2A biology is pleiotropic and cross-tissue relevance could be coincidental pathway overlap</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PPP2R3A</td>
+<td>Structural (pulmonary hypertension model, non-COPD)</td>
+<td>In monocrotaline/hypoxia-induced pulmonary-hypertension models, reduced PP2A regulatory subunits (including Ppp2r3a) associated with sustained CREB phosphorylation and pulmonary-artery-smooth-muscle-cell (PASMC) proliferation</td>
+<td>Xiao et al. 2021, Cell Commun Signal, PMID 34635097, DOI 10.1186/s12964-021-00779-y</td>
+<td>HOLDS as characterized — vascular remodeling, non-COPD, correctly hedged</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PPP2R3A</td>
+<td>Structural (cancer biology, non-substantive control finding)</td>
+<td>Wild-type PP2A Abeta (PPP2R1B) subunit interacts with PR72/PPP2R3A and PR48 as binding partners in a breast-cancer PP2A-subunit-mutation study; PPP2R3A appears only as a complex-partner control, not as a disease gene</td>
+<td>Esplin et al. 2006, Genes Chromosomes Cancer, PMID 16276521, DOI 10.1002/gcc.20284</td>
+<td>HOLDS as characterized — non-substantive, included for transparency only, essentially no evidentiary weight</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PCCB</td>
+<td>Structural/metabolic (rare recessive-disease mouse model, non-COPD)</td>
+<td>In a Pcca(A138T) mouse model of propionic acidemia, lung was one of several organs (with liver, brain, kidney, adipose) showing reduced L-carnitine and reduced PCC enzymatic activity due to systemic propionylcarnitine accumulation</td>
+<td>He et al. 2021, Mol Genet Metab, PMID 34635437, DOI 10.1016/j.ymgme.2021.09.009</td>
+<td>CONTESTED — gene itself is contested as a serious candidate at this locus (see audit); this citation is incidental organ-panel biochemistry in a recessive metabolic-disease model, not causal lung pathology, and is correctly characterized as non-substantive by the researcher</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>IL20RB</td>
+<td>Immune/structural (skin, irrelevant tissue)</td>
+<td>IL-20 subfamily cytokines induce keratinocyte proliferation, altered differentiation, and an inflammatory/wound-healing gene-expression program in reconstituted human epidermis (psoriasis-relevant)</td>
+<td>Sa et al. 2007, J Immunol, PMID 17277128, DOI 10.4049/jimmunol.178.4.2229</td>
+<td>WEAKENED — skin biology, not lung; IL20RB has no directly-annotated credible-set variant (see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>IL20RB</td>
+<td>Immune (lung-cancer tumor-immune-microenvironment, non-COPD)</td>
+<td>IL20RB is overexpressed in NSCLC tissue, correlates with advanced stage/worse survival, and drives tumor immune evasion via JAK2-STAT3 signaling (upregulating PD-L1) with reduced T-cell infiltration</td>
+<td>Wang et al. 2026, Lung Cancer, PMID 42685527, DOI 10.1016/j.lungcan.2026.109599</td>
+<td>WEAKENED — oncology tumor-microenvironment biology, not COPD/airway inflammation</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>IL20RB</td>
+<td>Immune (lung-cancer tumor-immune-microenvironment, non-COPD)</td>
+<td>IL20RB expression in lung cancer correlates positively with Th2/NK CD56dim cells and negatively with eosinophils/Th17 cells; independent prognostic factor</td>
+<td>Li et al. 2026, Transl Cancer Res, PMID 41674991, DOI 10.21037/tcr-2025-2054</td>
+<td>WEAKENED — see above</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p>Disease queried: chronic obstructive pulmonary disease (MONDO_0005002). Full detail in
+<code>evidence_tables/_status/3_136000001-137050000/opentargets.md</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>Disease-association score (genetic_association sub-score)</th>
+<th>L2G-like score(s) (gwas_credible_sets datasource)</th>
+<th>Colocalization</th>
+<th>Genetic constraint (gnomAD via Open Targets)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STAG1 (ENSG00000118007)</td>
+<td>0.145 (0.239)</td>
+<td>0.370, 0.0915 (2nd highest at locus)</td>
+<td>Not resolvable via available API surface</td>
+<td>Strongly LoF-constrained (lof 1.0, o/e 0.085); missense-constrained (mis 4.17, o/e 0.644)</td>
+</tr>
+<tr>
+<td>MSL2 (ENSG00000174579)</td>
+<td>0.035 (0.058)</td>
+<td>0.095</td>
+<td>Not resolvable</td>
+<td>Strongly LoF-constrained (lof 1.0, o/e 0.054)</td>
+</tr>
+<tr>
+<td>NCK1 (ENSG00000158092)</td>
+<td>0.024 (0.039)</td>
+<td>0.064</td>
+<td>Not resolvable</td>
+<td>NOT LoF-constrained (lof 0.009, o/e 0.49)</td>
+</tr>
+<tr>
+<td>SLC35G2 (ENSG00000168917)</td>
+<td>0.026 (0.043)</td>
+<td>0.058, 0.051</td>
+<td>Not resolvable</td>
+<td>Not LoF-constrained (o/e 0.71)</td>
+</tr>
+<tr>
+<td>PPP2R3A (ENSG00000073711)</td>
+<td>0.031 (0.051)</td>
+<td>0.084</td>
+<td>Not resolvable</td>
+<td>Not LoF- or missense-constrained (o/e 0.73)</td>
+</tr>
+<tr>
+<td>PCCB (ENSG00000114054)</td>
+<td>0.138 (0.228, 2nd highest)</td>
+<td>0.374 (HIGHEST at locus, despite negligible PIP)</td>
+<td>Not resolvable</td>
+<td>Not strongly LoF-constrained (o/e 0.59); not missense-constrained</td>
+</tr>
+<tr>
+<td>STAG1-DT (ENSG00000261758, lncRNA)</td>
+<td>No data</td>
+<td>No data</td>
+<td>No data</td>
+<td>Not applicable</td>
+</tr>
+<tr>
+<td>NCK1-DT (ENSG00000239213, lncRNA)</td>
+<td>No data</td>
+<td>No data</td>
+<td>No data</td>
+<td>Not applicable</td>
+</tr>
+<tr>
+<td>IL20RB (ENSG00000174564)</td>
+<td>Not queried (added by researcher post hoc; not in original candidate-gene list)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Note: PMEPA1 (ENSG00000124225) was excluded from all of the above — it shares the historical
+alias &quot;STAG1&quot; but is a distinct, unrelated gene (TGF-beta/androgen-responsive transmembrane
+protein). No molecular-QTL colocalization data was retrievable for any gene at this locus
+through the available Open Targets GraphQL query surface; this is a limitation of the API
+layer used, not necessarily an absence of true colocalization evidence.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>STAG1 — confidence: MODERATE (genetics/fine-mapping-only; no mechanistic or lung-tissue
+confirmation)</strong></p>
+<p>STAG1 is the best-supported candidate at this locus, but the support is entirely statistical/
+positional, not mechanistic. It is simultaneously the nearest gene to the lead variant, and
+independently prioritized by FLAMES, MAGMA, and PoPS — a four-way convergence that is unusually
+strong for this pipeline. The lead variant (rs145172807, PIP=0.189) and the majority of the
+212-variant credible set's PIP mass sit in STAG1/STAG1-DT intronic variants. Per the Open
+Targets summary above, STAG1 carries the 2nd-highest L2G-like score at the locus (0.370) and is
+strongly constrained against both loss-of-function (o/e 0.085) and missense variation (o/e
+0.644), consistent with an essential, dosage-sensitive gene — a plausible substrate for a
+common regulatory variant to act on. Its only rival by raw score, PCCB (L2G-like 0.374, the
+locus's single highest), is explicitly rejected by both the researcher and skeptic as very
+likely a database-aggregation artifact: all PCCB credible-set variants carry negligible PIP
+(≤0.0019), PCCB is a recessive metabolic-disease gene with no LoF-constraint signal and no
+COPD-relevant literature, and the one lung-adjacent citation found (He et al. 2021, PMID
+34635437) is incidental organ-panel biochemistry in an unrelated rare-disease mouse model, not
+evidence of common-variant lung causality (see audit for full reasoning).</p>
+<p>Against STAG1, however, is a genuine and important gap: no COPD-GWAS, lung-function-GWAS
+(FEV1/FEV1-FVC), TWAS, eQTL, or colocalization literature was found for STAG1 despite dedicated
+searching, and the one behavioral citation retrieved (Arnau-Soler et al. 2019, PMID 30718454)
+is a whole-genome PRS cross-trait correlation that the skeptic explicitly says should carry
+near-zero weight as COPD-specific evidence — it is not being used to support this call. STAG1's
+established biology (cohesin complex, sister-chromatid cohesion, chromatin looping;
+de novo LoF/missense variants cause a neurodevelopmental cohesinopathy) provides no pulmonary
+phenotype in any characterized patient, and no molecular-QTL colocalization data could be
+retrieved via Open Targets for this gene (a tooling limitation, not confirmed absence). No gene
+at this locus — including STAG1 — has any smoking-behavior-trait or spirometric-trait
+literature to help distinguish a lung-biology-mediated versus smoking-behavior-mediated
+mechanism, which per the pipeline's biological priors should keep the whole locus's
+gene-assignment confidence capped at MODERATE at best regardless of which single gene is named.</p>
+<p>Runner-up: none of the remaining candidates offer a comparably strong case. PPP2R3A has the
+locus's only lung-structural mechanistic literature (fibroblast proliferation in silicosis;
+PASMC proliferation in pulmonary hypertension) but very weak statistical support (low PIP, no
+LoF/missense constraint) and both mechanisms are non-COPD lung pathologies (fibrosis, vascular
+remodeling) rather than airway obstruction/emphysema. NCK1 carries the most credible-set
+variants by raw count and a specific, well-replicated T-cell-signaling literature (TCR proximal
+signaling, Treg development), but the skeptic flags this as generic T-cell immunology being
+stretched to fit the pipeline's inflammatory prior with zero COPD- or lung-specific data, and
+NCK1 is explicitly not LoF-constrained — a weaker case than STAG1's. MSL2 (ABC-prioritized) and
+SLC35G2 (carries the only missense/synonymous variants) are both weak on both statistical and
+literature grounds. IL20RB, added post hoc by the researcher via region enumeration, has no
+directly-annotated credible-set variant and was downgraded by the skeptic from &quot;candidate&quot; to
+&quot;positional note only.&quot;</p>
+<p>What would resolve this close call and raise confidence: (1) a lung-tissue or airway-epithelium
+eQTL/sQTL colocalization study for STAG1 at this locus (not currently retrievable via Open
+Targets or literature); (2) a direct lookup of this locus/lead variant against published
+FEV1/FEV1-FVC or COPD case-control GWAS summary statistics for concordance; (3) resolution of
+whether rs145172807 or other high-PIP STAG1/STAG1-DT variants show allele-specific chromatin
+activity (e.g. ATAC-seq/Hi-C) in lung tissue or airway cell types; (4) a smoking-initiation/
+cessation GWAS lookup to rule in or out a behavioral-mediation pathway, given the sole (weak)
+behavioral hit found. The study team should weigh this recommendation accordingly — this is a
+statistically well-supported but mechanistically unconfirmed pick, not a settled one.</p>
+
+</body>
+</html>

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>4_144250001-144900000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-4144250001-144900000-nearest-gene-hhip">Evidence table — Locus 4:144,250,001-144,900,000 (nearest gene HHIP)</h1>
+<p>Lead variant: rs13141641 (PIP=0.459, 4:144,585,304, intergenic). Candidate genes from
+internal pipeline: HHIP (nearest gene), FREM3 (MAGMA-prioritized), SMARCA5 (PoPS-
+prioritized). No FLAMES or ABC-prioritized gene listed. All 17 credible-set variants are
+intergenic or upstream_gene_variant (none coding), so per pipeline scope only gene-level
+literature evidence was gathered (variant-level search was performed for the lead variant
+only).</p>
+<p>All rows below carry citations with skeptic-reviewed VERIFIED verdicts only. Citations with
+CLAIM_MISMATCH verdicts, and genes/claims the red-team-skeptic marked CONTESTED, are
+listed in the companion audit file (<code>audits/4_144250001-144900000_audit.md</code>), not here.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HHIP</td>
+<td>Statistical genetics — smoking dissociation</td>
+<td>In ECLIPSE/ICGN cohorts, CHRNA3/5 (not HHIP) was associated with smoking pack-years/emphysema; HHIP was NOT associated with smoking intensity but was associated with FEV1/FVC, fat-free body mass, and COPD exacerbation frequency</td>
+<td>Pillai SG et al. 2010, AJRCCM. PMID 20656943, DOI 10.1164/rccm.201002-0151OC</td>
+<td>VERIFIED; red-team: satisfies prior #1 (smoking dissociation), holds</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Statistical genetics — smoking dissociation</td>
+<td>HHIP and FAM13A variants genome-wide significant for FEV1/FVC in never-smokers specifically, with no significant variant-by-ever-smoking interaction</td>
+<td>van der Plaat DA et al. 2016, J Allergy Clin Immunol. PMID 27612410, DOI 10.1016/j.jaci.2016.06.062</td>
+<td>VERIFIED; red-team: holds</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Statistical genetics — GWAS discovery</td>
+<td>First GWAS report of HHIP locus association with COPD (Bergen discovery + ICGN/NETT replication), alongside CHRNA3/5</td>
+<td>Pillai SG et al. 2009, PLoS Genet. PMID 19300482, DOI 10.1371/journal.pgen.1000421</td>
+<td>VERIFIED; red-team: holds (part of convergent multi-decade case)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Statistical genetics — GWAS discovery</td>
+<td>chr4q31 SNPs near HHIP associated with FEV1/FVC in Framingham, replicated in Family Heart Study; region also associated with COPD</td>
+<td>Wilk JB et al. 2009, PLoS Genet. PMID 19300500, DOI 10.1371/journal.pgen.1000429</td>
+<td>VERIFIED; red-team: holds</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Statistical genetics — meta-analysis</td>
+<td>CHARGE consortium meta-analysis (n=20,890) identifies HHIP among 8 genome-wide significant loci for FEV1/FVC</td>
+<td>Hancock DB et al. 2009, Nat Genet. PMID 20010835, DOI 10.1038/ng.500</td>
+<td>VERIFIED; red-team: holds</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Statistical genetics — large COPD GWAS</td>
+<td>UK Biobank + ICGC COPD GWAS (82 loci) reconfirms HHIP/4q31 among COPD risk loci, with functional enrichment in lung tissue and smooth muscle</td>
+<td>Sakornsakolpat P et al. 2019, Nat Genet. PMID 30804561, DOI 10.1038/s41588-018-0342-2</td>
+<td>VERIFIED; red-team: holds</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Statistical genetics — large lung-function GWAS</td>
+<td>400,102-person lung-function GWAS (279 signals); combined variants including HHIP strongly predict COPD and generalize across smokers, never-smokers, and ancestries</td>
+<td>Shrine N et al. 2019, Nat Genet. PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
+<td>VERIFIED; red-team: holds; supports spirometry-COPD concordance (prior #2)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Statistical genetics — replication</td>
+<td>HHIP-locus variant (rs12504628) associated with COPD in a 12-study, &gt;31,000-person sample; contributes to a joint multi-locus COPD risk score</td>
+<td>Soler Artigas M et al. 2011, AJRCCM. PMID 21965014, DOI 10.1164/rccm.201102-0192OC</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Statistical genetics — eQTL colocalization</td>
+<td>Lung-tissue eQTL analysis identifies HHIP as the most likely causal gene at the 4q31 COPD locus based on eQTL colocalization, versus FAM13A (4q22) and EGLN2 (19q13)</td>
+<td>Lamontagne M et al. 2013, PLoS ONE. PMID 23936167, DOI 10.1371/journal.pone.0070220</td>
+<td>VERIFIED; red-team: &quot;most likely causal gene&quot; is the source paper's own 2013-era statistical-colocalization inference, not functional validation — corroborated by independent 2024 colocalization (Debban et al.) but direction-of-effect (risk allele vs. HHIP expression, vs. mouse LOF phenotype) is not established by the evidence provided</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Statistical genetics — dysanapsis GWAS/colocalization</td>
+<td>GWAS of CT-assessed dysanapsis (21 signals/19 gene regions) implicates HHIP by colocalization; dysanapsis genetic risk score predicts obstructive spirometry from age 5 through the 7th decade of life</td>
+<td>Debban CL et al. 2024, AJRCCM. PMID 38935874, DOI 10.1164/rccm.202401-0011OC</td>
+<td>VERIFIED; red-team: independent corroboration of the eQTL colocalization finding in a different phenotype, strengthens confidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Functional genomics</td>
+<td>HHIP knockdown in Beas-2B bronchial epithelial cells alters expression of 296 genes enriched for ECM/proliferation function and COPD-GWAS-nominated variants; 7/11 validated targets also differ in human COPD vs. control lung tissue</td>
+<td>Zhou X et al. 2013, Genomics. PMID 23459001, DOI 10.1016/j.ygeno.2013.02.010</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Statistical genetics — rare-variant</td>
+<td>Suggestive rare-variant burden signal upstream of HHIP in targeted sequencing of lung-function loci in COPD</td>
+<td>Soler Artigas M et al. 2017, PLoS ONE. PMID 28114305, DOI 10.1371/journal.pone.0170222</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Statistical genetics — replication</td>
+<td>Confirms HHIP among replicated COPD-risk loci in an independent exome-array/UK Biobank analysis</td>
+<td>Jackson VE et al. 2016, Thorax. PMID 26917578, DOI 10.1136/thoraxjnl-2015-207876</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Statistical genetics — imaging phenotypes</td>
+<td>HHIP among loci associated with emphysema-related quantitative CT imaging phenotypes</td>
+<td>Cho MH et al. 2015, AJRCCM. PMID 26030696, DOI 10.1164/rccm.201501-0148OC</td>
+<td>VERIFIED; supports spirometry/imaging concordance (prior #2)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Statistical genetics — WGS severe COPD</td>
+<td>Top signal near HHIP in whole-genome sequencing of severe COPD cases vs. smoking controls (combined P=1.6x10^-8)</td>
+<td>Prokopenko D et al. 2018, AJRCMB. PMID 29949718, DOI 10.1165/rcmb.2018-0088OC</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Statistical genetics — subtype/credible-set variant</td>
+<td>HHIP variant rs1980057 (present in this locus's own credible set) associated with the &quot;lowest FEV1%&quot; GOLD-1 COPD subtype cluster in COPDGene</td>
+<td>Lee JH et al. 2014, Respir Med. PMID 25154699, DOI 10.1016/j.rmed.2014.07.018</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Structural/developmental biology</td>
+<td>Mouse Hip1(Hhip) knockout causes defects in Hedgehog-target tissues including the lung via dysregulated Hh-Fgf crosstalk controlling early lung branching morphogenesis</td>
+<td>Chuang PT, Kawcak T, McMahon AP. 2003, Genes Dev. PMID 12569124, DOI 10.1101/gad.1026303</td>
+<td>VERIFIED; foundational developmental mechanism, pre-dates GWAS link</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Structural/developmental biology</td>
+<td>Hhip+/- mice develop spontaneous age-related emphysema and increased lung compliance by 10 months, preceded by increased oxidative stress; N-acetylcysteine prevents this</td>
+<td>Lao T et al. 2016, PNAS. PMID 27444019, DOI 10.1073/pnas.1602342113</td>
+<td>VERIFIED; direct in vivo causal evidence for reduced-HHIP-dosage -&gt; emphysema, though mouse-to-human extrapolation and direction-of-effect concordance not fully established (see red-team note above)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Structural/developmental biology — smoking interaction</td>
+<td>Hhip+/- mice exposed to chronic cigarette smoke show altered urinary cotinine excretion and oxidative-stress metabolite correlations with emphysema severity vs. wild-type</td>
+<td>Wan ES et al. 2017, Sci Rep. PMID 28566717, DOI 10.1038/s41598-017-02701-4</td>
+<td>VERIFIED; gene-by-smoke-exposure interaction, distinct from smoking-initiation neurobiology (prior #1)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Structural/developmental biology</td>
+<td>Stromal-specific Hhip deletion causes hyperactivated Hedgehog-IGF1 signaling, persistent myofibroblasts, and epithelial stem/progenitor senescence during alveologenesis, linking early-life HHIP deficiency to both BPD and adult emphysema; a therapeutic Fc-HHIP fusion protein mitigated both phenotypes in mice</td>
+<td>Ye D et al. 2025, Sci Adv. PMID 40333979, DOI 10.1126/sciadv.adu2958</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Structural/developmental biology — cell-type localization</td>
+<td>Single-cell/3D-imaging atlas of mouse lung mesenchyme identifies HHIP (with CDH4, LGR6) as a marker of &quot;ductal myofibroblasts&quot; surrounding alveolar ducts that persist post-alveologenesis</td>
+<td>Narvaez Del Pilar O et al. 2022, Development. PMID 35302583, DOI 10.1242/dev.200081</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Structural/developmental biology — cross-species</td>
+<td>Characterizes hhip expression pattern (with shh, ptch1, gli1, smo) during early chick lung branching morphogenesis, supporting conserved developmental expression</td>
+<td>Moura RS et al. 2016, Histochem Cell Biol. PMID 27221780, DOI 10.1007/s00418-016-1448-1</td>
+<td>VERIFIED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Structural biology — asthma cohorts</td>
+<td>HHIP variants associated with lung function (FEV1, FVC) and bronchodilator reversibility across 5 asthma cohorts (white and African-American), but not with methacholine bronchial hyperresponsiveness</td>
+<td>Li X et al. 2011, J Allergy Clin Immunol. PMID 21397937, DOI 10.1016/j.jaci.2011.01.056</td>
+<td>VERIFIED; general airway-structural role, not COPD-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Structural biology (negative/contrastive immune evidence)</td>
+<td>In asthmatic cohorts, HHIP is among airway-structure/remodeling genes confirmed for lung function, while a distinct set of TH1/IL-12-pathway genes (IL12A, IL12RB1, STAT4, IRF2) — not HHIP — explain additional lung-function variance from inflammatory pathways; TH2 genes not associated</td>
+<td>Li X et al. 2013, J Allergy Clin Immunol. PMID 23541324, DOI 10.1016/j.jaci.2013.01.051</td>
+<td>VERIFIED; useful negative evidence categorizing HHIP with structural rather than TH1-immune gene set in this analysis</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HHIP</td>
+<td>Immune/inflammatory mechanism</td>
+<td>Single-cell analysis of human emphysema lungs shows expansion of tissue-resident lymphocytes (TRLs); a stromal niche expressing Hhip normally restrains TRL expansion; stromal-specific Hhip deletion hyperactivates a hedgehog-IL-7 axis, expanding TRLs, which suppress alveolar epithelial stem cells via IFNgamma</td>
+<td>Wang C et al. 2023, Immunity. PMID 36822205, DOI 10.1016/j.immuni.2023.01.032</td>
+<td>VERIFIED; red-team: genuine and mechanistically direct, but a SINGLE STUDY — should be treated as an emerging, single-study mechanistic lead, not a co-equal pillar alongside the multi-decade statistical-genetics/spirometry evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FREM3</td>
+<td>Structural biology (non-pulmonary)</td>
+<td>In mouse knockouts, Frem3 basement-membrane localization is independent of the Fras1/Frem1/Frem2 ternary complex, indicating a distinct anchoring mechanism within the epidermal-mesenchymal basement membrane</td>
+<td>Petrou P et al. 2007, Matrix Biol. PMID 17596926, DOI 10.1016/j.matbio.2007.05.008</td>
+<td>VERIFIED, but non-pulmonary (skin/epithelial development); no lung/COPD relevance demonstrated</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMARCA5</td>
+<td>Structural biology (non-pulmonary, paralog-based)</td>
+<td>SMARCA1 (SMARCA5's NURF-complex paralog) pathogenic variants cause an X-linked neurodevelopmental disorder; SMARCA5 and BPTF variants previously implicated in NDDs; SMARCA5/SMARCA1/BPTF double-knockout mice show NURF dosage is important for forebrain development</td>
+<td>Mirzaa GM et al. 2025, Nat Commun. PMID 41213919, DOI 10.1038/s41467-025-64838-5</td>
+<td>VERIFIED, but non-pulmonary and only tangentially about SMARCA5 (via paralog/complex relationship); no lung/COPD relevance</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — NOT a verified literature citation)</h2>
+<p>This section is a structured database lookup performed directly by the orchestrator via the
+Open Targets Platform GraphQL API. It has NOT gone through citation-verifier or
+red-team-skeptic and should not be conflated with the peer-reviewed evidence table above.</p>
+<p><strong>HHIP</strong> (ENSG00000164161): Top locus-to-gene (L2G) prediction gene for essentially every
+COPD, FEV1/FVC, emphysema, and chronic-bronchitis GWAS credible set overlapping lead variant
+rs13141641 (28 credible sets checked), with L2G scores ~0.67-0.70 across COPD-relevant
+traits — far ahead of runner-up genes GYPA/ANAPC10 (~0.07-0.09, neither of which is one of
+this locus's listed candidate genes). Overall target-disease association score for
+HHIP-COPD = 0.473 (genetic_association component 0.732; literature component 0.931).
+Genetic constraint: LoF oe = 0.173 (90% CI 0.105-0.293), i.e. LOEUF ~0.29 — below the
+conventional 0.35 LoF-intolerance threshold, indicating a constrained gene.</p>
+<p><strong>FREM3</strong> (ENSG00000183090): Never appears in L2G predictions for any of the 28 credible
+sets overlapping the lead variant, for any trait. Overall COPD association score = 0.162
+(genetic_association component 0.267) — COPD is not among FREM3's top-5 associated
+diseases (myeloid leukemia, malaria, placental abruption rank higher). Not LoF-constrained
+(LOEUF ~0.93).</p>
+<p><strong>SMARCA5</strong> (ENSG00000153147): Never appears in L2G predictions for any of the 28 credible
+sets overlapping the lead variant, for any trait. COPD does not appear at all among
+SMARCA5's 185 associated diseases in Open Targets (checked to page size 500, covering the
+full list); its disease profile is dominated by neurodevelopmental phenotypes. Highly
+LoF-constrained (LOEUF ~0.22), but this constraint is not accompanied by any COPD-relevant
+genetic signal.</p>
+<p>Full detail: <code>evidence_tables/_status/4_144250001-144900000/opentargets.md</code>.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>HHIP — Confidence: HIGH</strong></p>
+<p>HHIP is the best-supported candidate gene at this locus by a wide margin, and this is one
+of the more clear-cut calls in this pipeline. The case rests on four independently
+convergent, VERIFIED evidence streams, none of which the red-team-skeptic overturned:</p>
+<ol>
+<li><strong>Multi-decade, repeatedly replicated statistical genetics</strong>, from the original 2009
+discovery GWAS (Pillai PMID 19300482; Wilk PMID 19300500) through the 2019 mega-GWAS
+(Sakornsakolpat PMID 30804561; Shrine PMID 30804560) to a 2024 dysanapsis GWAS (Debban
+PMID 38935874), with concordance across COPD case-control, FEV1/FVC, and emphysema-
+imaging phenotypes — exactly the cross-trait concordance pattern that this pipeline's
+prior #2 treats as strong evidence for direct pulmonary biology.</li>
+<li><strong>A locus-specific, gene-level test against the smoking-mediation alternative (prior
+#1) that HHIP passes</strong>: Pillai 2010 (PMID 20656943) explicitly dissociates the HHIP
+signal from smoking pack-years/intensity (in contrast to CHRNA3/5 in the same cohorts),
+and van der Plaat 2016 (PMID 27612410) shows genome-wide significance for FEV1/FVC in
+never-smokers with no smoking-interaction term. This is a rare case where the smoking
+confound was directly tested and ruled out for this specific gene, not merely assumed
+away.</li>
+<li><strong>Deep, mechanistic developmental biology</strong>: classic Hedgehog-pathway lung-branching-
+morphogenesis knockout studies (Chuang/McMahon 2003, PMID 12569124) and Hhip+/- mice
+developing spontaneous age-related emphysema (Lao PMID 27444019) and impaired
+alveologenesis/BPD-emphysema linkage (Ye 2025, PMID 40333979) provide a causal,
+loss-of-function-to-phenotype bridge in vivo, though as the red-team-skeptic noted, the
+evidence assembled here does not establish the direction of the human GWAS effect on
+HHIP expression, so the mouse-to-human bridge is suggestive rather than fully closed.</li>
+<li><strong>An emerging, single-study immune mechanism</strong> (Wang et al. 2023, Immunity, PMID
+36822205) linking stromal Hhip loss to a hedgehog-IL-7-driven tissue-resident-lymphocyte
+expansion that suppresses alveolar stem cells via IFNgamma. Per the red-team-skeptic's
+critique, this should be weighted as a promising but unreplicated single-study lead, not
+a co-equal pillar alongside the statistical-genetics/spirometry evidence — the
+confidence rating here does not depend on this immune finding holding up.</li>
+</ol>
+<p>This is corroborated by the Open Targets structured lookup (not itself evidence, but
+consistent context): HHIP is the dominant L2G gene at this locus by a wide margin across
+essentially every COPD/lung-function GWAS credible set, while FREM3 and SMARCA5 never
+appear in L2G predictions at all and show no COPD association in Open Targets' own
+disease-association data.</p>
+<p><strong>Runner-up genes and why they are not competitive</strong>: FREM3 (MAGMA-prioritized) and
+SMARCA5 (PoPS-prioritized) both have essentially no COPD/lung-relevant literature (zero
+PubMed hits in the researcher's targeted searches), and both were marked CONTESTED by the
+red-team-skeptic — not on the strength of any specific rebuttal paper, but because (a) an
+independent Ensembl coordinate check found both genes' bodies lie physically outside the
+stated locus window (FREM3 ~550kb-1.1Mb centromeric; SMARCA5 further still), consistent
+with these MAGMA/PoPS nominations reflecting LD-block/feature-similarity artifacts rather
+than direct mechanistic implication, and (b) the one citation offered in support of FREM3
+(Band et al. 2015, PMID 26416757) was found by citation-verifier to actually attribute its
+malaria-resistance signal to the neighboring glycophorin gene cluster (GYPA/GYPB/GYPE), not
+specifically to FREM3 — a CLAIM_MISMATCH excluded from the evidence table above (see audit
+file). SMARCA5's only two offered citations are similarly off-target (a paralog-based
+neurodevelopmental-disorder paper) or unreliable (a paper misattributing Williams syndrome
+to SMARCA5, also excluded as CLAIM_MISMATCH). Neither gene shows any signal on the
+smoking/spirometry/immune priors this pipeline applies, because there is no lung-relevant
+evidence base to apply those priors to.</p>
+<p>Because the case for HHIP is convergent across independent evidence types, directly tests
+and rules out the leading smoking-mediation alternative, and because the two competing
+candidate genes have both a coordinate-based structural reason and an evidentiary vacuum
+counting against them, this call is rated HIGH confidence rather than the more cautious
+MODERATE/LOW that this pipeline reserves for loci with only locus-level or paralog-analogy
+evidence. The main residual uncertainty — noted by the red-team-skeptic — is that the
+assembled evidence does not establish the direction of effect linking the GWAS risk allele
+to HHIP expression level, and the immune mechanism (Wang et al. 2023) is still a single
+study; a direction-of-effect eQTL/MR analysis and independent replication of the stromal
+immune mechanism would further strengthen (or could qualify) this call.</p>
+
+</body>
+</html>

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2_173000001-173300000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-2173000001-173300000-grch38">Evidence table — locus 2:173,000,001-173,300,000 (GRCh38)</h1>
+<p><strong>Lead variant:</strong> rs16861404 (2:173,229,772, intron_variant, PIP=0.4024). Credible set (29 variants,
+26 annotated to MAP3K20, 3 intergenic) is entirely intronic/upstream/intergenic MODIFIER-impact — no
+missense or splice donor/acceptor variants, so no separate per-variant literature search was performed
+beyond the lead variant, per pipeline scope rules.</p>
+<p><strong>Candidate genes evaluated:</strong> MAP3K20 (nearest gene; locus input file's candidate for essentially the
+whole credible set), ITGA6 (PoPS prioritized), and RAPGEF4 (added by the researcher subagent based on
+an independent Ensembl physical-overlap check — not flagged by any of the internal pipeline's four
+prioritization methods, but literature search surfaced substantive gene-specific COPD-mechanistic
+evidence, so it is reported here as a full candidate rather than omitted).</p>
+<p><strong>Important pipeline data-quality flag:</strong> The researcher's own Ensembl REST API region-overlap query
+found that ITGA6 (2:172,234,216-172,506,565) does <strong>not</strong> physically overlap this locus window
+(2:173,000,001-173,300,000) under current GRCh38 coordinates — it sits roughly 500-750 kb centromeric.
+Only MAP3K20 and RAPGEF4 physically overlap the window. This is flagged for the study team as a
+possible genome-build mismatch or PoPS-scoring artifact upstream of this review, not resolved here.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAP3K20</td>
+<td>Statistical genetics</td>
+<td>Distinct ZAK SNPs (rs3769201, rs722864 — not in this credible set) associated with lung cancer risk (OR~0.91-0.92) with eQTL effects on ZAK expression in lymphoblastoid cell lines, across 8 GWAS datasets</td>
+<td>Feng et al. 2017, Mol Carcinog, PMID 29071797, DOI 10.1002/mc.22748</td>
+<td>VERIFIED; different variants and phenotype (lung cancer, not COPD/lung function) — LD-region evidence only, not concordant with this signal</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAP3K20</td>
+<td>Statistical genetics (background)</td>
+<td>Major multi-ancestry lung-function GWAS (400,102 individuals, 279 signals); whether this specific locus is among the 279 reported signals was NOT confirmed by researcher or skeptic</td>
+<td>Shrine et al. 2019, Nat Genet, PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
+<td>VERIFIED; background only — do NOT read as confirming spirometric concordance for this locus (open question per red-team)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAP3K20</td>
+<td>Structural/mechanistic (non-lung)</td>
+<td>ROS-generating agents trigger ribosomal impairment and ZAKα activation; ZAK-knockout mice/zebrafish protected from ROS-induced pathology and diet-induced metabolic decline</td>
+<td>Snieckute et al. 2023, Science, PMID 38060659, DOI 10.1126/science.adf3208</td>
+<td>VERIFIED; WEAKENED — hepatic/metabolic mouse/zebrafish model, off-target tissue for COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAP3K20</td>
+<td>Structural/mechanistic (non-lung)</td>
+<td>ZAK-dependent ribotoxic stress response (not DNA damage response) drives acute inflammation and keratinocyte death/proliferation after UV skin injury in vivo</td>
+<td>Vind et al. 2024, Mol Cell, PMID 39591967, DOI 10.1016/j.molcel.2024.10.044</td>
+<td>VERIFIED; WEAKENED — skin, not airway epithelium</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAP3K20</td>
+<td>Structural/mechanistic (non-lung)</td>
+<td>Foundational mechanism of ZAKα ribosome-stalling detection and coupling to inflammatory signaling</td>
+<td>Vind et al. 2020, Mol Cell, PMID 32289254, DOI 10.1016/j.molcel.2020.03.021</td>
+<td>VERIFIED; WEAKENED — general cell biology, no tissue-specific disease claim</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAP3K20</td>
+<td>Structural/mechanistic (non-lung)</td>
+<td>ZAK-null mice show lean phenotype and altered AMPK/mTOR signaling under nutrient stress</td>
+<td>Snieckute et al. 2022, Cell Metab, PMID 36384144, DOI 10.1016/j.cmet.2022.10.011</td>
+<td>VERIFIED; WEAKENED — metabolic phenotype, off-target tissue</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAP3K20</td>
+<td>Structural/mechanistic (non-lung)</td>
+<td>ZAK is the primary mediator of UV-induced apoptosis (not the DNA damage response), with negative-feedback regulation via GCN2</td>
+<td>Sinha et al. 2024, Cell, PMID 38843833, DOI 10.1016/j.cell.2024.05.018</td>
+<td>VERIFIED; WEAKENED — UV/skin model, off-target tissue</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAP3K20</td>
+<td>Structural/mechanistic (non-lung)</td>
+<td>Cryo-EM structural mechanism of ZAK activation at collided ribosomes</td>
+<td>Huso et al. 2025/2026, Nature, PMID 41261136, DOI 10.1038/s41586-025-09772-8</td>
+<td>VERIFIED; WEAKENED — structural biology only, no disease-tissue claim</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAP3K20</td>
+<td>Structural/mechanistic (review)</td>
+<td>Review of ribotoxic-stress-response/p38 effects on cell-cycle transitions and senescence</td>
+<td>McKenney &amp; Regot 2025, Trends Cell Biol, PMID 40379527, DOI 10.1016/j.tcb.2025.04.005</td>
+<td>VERIFIED; WEAKENED — general review, no lung-specific content</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAP3K20</td>
+<td>Structural (lung cell biology, non-COPD)</td>
+<td>ZAK is expressed in normal human lung cells and lung cancer cell lines; overexpression suppresses lung cancer cell proliferation via ERK/JNK/AP-1</td>
+<td>Yang et al. 2010, Cancer Sci, PMID 20331627, DOI 10.1111/j.1349-7006.2010.01537.x</td>
+<td>VERIFIED; WEAKENED — establishes lung expression but disease context is cancer, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAP3K20</td>
+<td>Structural (protease-antiprotease, non-lung)</td>
+<td>ZAK overexpression increases MMP-2, decreases MMP-9, and increases TIMP-1/2 in cardiac myoblasts (net anti-proteolytic/pro-fibrotic direction)</td>
+<td>Cheng et al. 2009, Mol Cell Biochem, PMID 19184368, DOI 10.1007/s11010-008-0021-1</td>
+<td>VERIFIED; WEAKENED/CONTRADICTING — cardiac tissue, and this direction of effect, if generalized to lung, would argue AGAINST an emphysema-promoting (net-proteolytic) role</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAP3K20</td>
+<td>Structural/immune (animal, non-human)</td>
+<td>MAP3K20 identified as a hub protein in a PI3K/Akt-centered inflammatory pathway (with TLR4/NF-κB and MAPK activation) in particulate-matter-exposed broiler chicken lung</td>
+<td>Shen et al. 2025, Poultry Sci, PMID 40479768, DOI 10.1016/j.psj.2025.105388</td>
+<td>VERIFIED; WEAKENED — avian, non-human model; mechanistically suggestive only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAP3K20</td>
+<td>Immune/inflammatory (non-lung)</td>
+<td>ZAK required for Shiga-toxin/ricin-induced upregulation of IL-8 (neutrophil chemoattractant) in intestinal epithelial cells; ZAK-specific inhibitor blunts this response</td>
+<td>Jandhyala et al. 2008, Cell Microbiol, PMID 18331592, DOI 10.1111/j.1462-5822.2008.01139.x</td>
+<td>VERIFIED; WEAKENED — intestinal epithelium, not airway; suggestive of a neutrophilic-cytokine-coupling paradigm by analogy only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAP3K20</td>
+<td>Immune/inflammatory (non-lung)</td>
+<td>ZAK expression rises with CML disease progression and drives apoptosis upon BCR::ABL1 inhibition</td>
+<td>Park et al. 2026, Leukemia, PMID 41912913, DOI 10.1038/s41375-026-02916-3</td>
+<td>VERIFIED; WEAKENED — hematologic/leukemic context, not lung/COPD relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ITGA6</td>
+<td>Structural (marker only)</td>
+<td>Keratin-5-positive basal airway epithelial cells co-expressing CD49f (ITGA6) identified as putative epithelial stem/progenitor cells in porcine conducting airway</td>
+<td>Jia et al. 2019, Stem Cells Int, PMID 30936924, DOI 10.1155/2019/7043890</td>
+<td>VERIFIED; WEAKENED — marker-identification only, not a functional or disease study</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ITGA6</td>
+<td>Structural (developmental, non-lung)</td>
+<td>Itga6 trafficking to the plasma membrane is required for hemidesmosome formation in developing zebrafish epidermis</td>
+<td>Sonawane et al. 2009, Development, PMID 19261700, DOI 10.1242/dev.032508</td>
+<td>VERIFIED; WEAKENED — zebrafish epidermis, general developmental biology, non-lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ITGA6</td>
+<td>Structural (monogenic rare disease)</td>
+<td>Case report of ITGA6-related disorder presenting with nail dysplasia/onycholysis without classic bullous skin changes</td>
+<td>Zalesny et al. 2024, Global Medical Genetics, PMID 39583125, DOI 10.1055/s-0044-1791804</td>
+<td>VERIFIED; WEAKENED — monogenic rare-disease phenotype, not common-variant adult COPD evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ITGA6</td>
+<td>Structural (monogenic rare disease)</td>
+<td>Junctional epidermolysis bullosa with pyloric atresia linked to homozygous ITGA6 pathogenic variant</td>
+<td>Ghazzawi &amp; Fatma 2023, Cureus, PMID 37525771, DOI 10.7759/cureus.41167</td>
+<td>VERIFIED; WEAKENED — monogenic rare-disease phenotype, not common-variant adult COPD evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ITGA6</td>
+<td>Structural (monogenic rare disease, paralog gene)</td>
+<td>Compound heterozygous ITGB4 (ITGA6's obligate heterodimer partner) mutations cause JEB without pyloric atresia but with urinary symptoms</td>
+<td>Zhou et al. 2021, J Dermatol, PMID 34462954, DOI 10.1111/1346-8138.16104</td>
+<td>VERIFIED; WEAKENED — different gene (ITGB4), monogenic rare-disease phenotype only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RAPGEF4</td>
+<td>Statistical genetics (different locus/trait)</td>
+<td>Genome-wide-significant PDK1-RAPGEF4 locus associated with fasting plasma glucose in East Asian populations</td>
+<td>Hwang et al. 2014, Diabetes, PMID 25187374, DOI 10.2337/db14-0563</td>
+<td>VERIFIED; WEAKENED — different sub-locus and trait (metabolic), pleiotropy context only, not evidence for this credible set</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RAPGEF4</td>
+<td>Structural/immune (paralog gene, human COPD tissue)</td>
+<td>Cigarette-smoke-extract-induced IL-8 release from human airway smooth muscle reduced by Epac/PKA activation; Epac1 (RAPGEF3, a paralog of RAPGEF4) protein reduced in human COPD lung tissue and down-regulated by CSE (Epac2/RAPGEF4 itself was NOT down-regulated by CSE in this study)</td>
+<td>Oldenburger et al. 2012, PLoS ONE, PMID 22363678, DOI 10.1371/journal.pone.0031574</td>
+<td>VERIFIED; WEAKENED — primarily implicates the paralog RAPGEF3/Epac1, not RAPGEF4/Epac2 itself, in human COPD tissue</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RAPGEF4</td>
+<td>Structural/immune (mouse, cigarette-smoke-specific, gene-specific)</td>
+<td>Epac2(-/-) (=RAPGEF4-knockout) mice have significantly LOWER total inflammatory cells, macrophages, neutrophils, and IL-6 release after cigarette-smoke exposure vs. wild-type — i.e. RAPGEF4 promotes cigarette-smoke-induced neutrophilic/macrophage inflammation in vivo; Epac1(-/-) (not Epac2) mice have increased baseline MUC5AC and remodeling markers</td>
+<td>Oldenburger et al. 2014, FASEB J, PMID 25103224, DOI 10.1096/fj.13-248930</td>
+<td>VERIFIED; SUPPORTED (with caveats) — the single most mechanistically on-target (gene-specific, cigarette-smoke-specific, neutrophilic/macrophage-readout) finding across all three candidate genes at this locus, but mouse-only, non-COPD-tissue, and with no statistical-genetics link to this credible set</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RAPGEF4</td>
+<td>Structural/immune (mouse, different disease model — directionally discordant)</td>
+<td>Both Epac1 and Epac2 reduced in lung tissue of ovalbumin-sensitized asthmatic mice; pharmacologic (non-isoform-selective) Epac activation reduces airway inflammatory-cell infiltration, Th2 cytokine secretion, hyperresponsiveness, and remodeling</td>
+<td>Chen et al. 2019, Respir Res, PMID 31852500, DOI 10.1186/s12931-019-1260-2</td>
+<td>VERIFIED; CONTESTED — directionally discordant with Oldenburger 2014 (there, Epac2 LOSS was protective against cigarette-smoke inflammation; here, Epac pathway ACTIVATION is protective against Th2/allergic inflammation). Plausibly reconcilable as context-dependence (neutrophilic/CS vs. Th2/allergic programs) per pipeline's inflammatory-heterogeneity prior, but should not be resolved by favoring the more COPD-flattering study</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RAPGEF4</td>
+<td>Structural (developmental, different disease context)</td>
+<td>Hyperoxia increases Epac2 (not Epac1) expression in developing human airway smooth muscle; Epac2 mediates hyperoxia-induced BDNF secretion enhancing airway-smooth-muscle calcium responsiveness/contractility</td>
+<td>Thompson et al. 2015, Biochim Biophys Acta, PMID 26112987, DOI 10.1016/j.bbamcr.2015.06.008</td>
+<td>VERIFIED; WEAKENED — neonatal/hyperoxic lung-injury model, not adult COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RAPGEF4</td>
+<td>Structural (tool paper, low weight)</td>
+<td>Epac2-based FRET biosensors used as a research tool to map subcellular cAMP microdomains in human airway smooth muscle</td>
+<td>Agarwal et al. 2017, Br J Pharmacol, PMID 28603838, DOI 10.1111/bph.13904</td>
+<td>VERIFIED; WEAKENED — Epac2 used only as a sensor scaffold, not itself a functional finding; low evidentiary weight</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-independently-verified-literature-not">Open Targets summary (structured database lookup — NOT independently verified literature; not</h2>
+<p>passed through citation-verifier or red-team-skeptic)</p>
+<ul>
+<li><strong>MAP3K20</strong> (ENSG00000091436): L2G score <strong>0.671</strong> at this locus (dominant; runner-up CDCA7 = 0.296,
+not a candidate gene here). COPD association score 0.248 (driven entirely by <code>gwas_credible_sets</code>,
+score 0.408). Colocalizes (H4 0.70–0.99) with cognitive performance, educational attainment,
+math-related traits, red cell distribution width, and ALT levels — <strong>not</strong> with any spirometric
+trait. Zero association with FEV1/FVC or FEV1. Strong association with smoking initiation (score
+0.342, <code>gwas_credible_sets</code> component 0.563 — higher than the COPD score). No association with
+smoking cessation. gnomAD LOF constraint o/e = 0.419 (moderately constrained).</li>
+<li><strong>ITGA6</strong> (ENSG00000091409): COPD association score only 0.00586, driven solely by weak <code>europepmc</code>
+text-mining (score 0.048) — no <code>gwas_credible_sets</code>/L2G contribution, no colocalization evidence,
+and zero association with FEV1/FVC, FEV1, smoking initiation, or smoking cessation. gnomAD LOF
+constraint o/e = 0.394 (similarly constrained to MAP3K20). Ensembl coordinates place ITGA6 at
+2:172,234,216-172,506,565 — outside this locus's defined window, per the researcher's independent
+physical-overlap check.</li>
+<li><strong>RAPGEF4</strong> (ENSG00000091428; follow-up check, added post-hoc after the researcher flagged this gene
+via physical overlap): COPD association score only 0.0213, driven solely by <code>europepmc</code> text-mining
+(score 0.175) — no <code>gwas_credible_sets</code>/L2G contribution. Zero association with FEV1/FVC or smoking
+initiation. gnomAD LOF constraint o/e = 0.430 (similarly constrained). No structured genetic-
+association evidence for RAPGEF4 at this or any COPD locus in Open Targets; its candidacy rests
+entirely on ~54 kb of 3'-end physical overlap with the locus window plus literature-derived
+mechanistic plausibility (see table above), not on any statistical fine-mapping signal.</li>
+</ul>
+<h2 id="prioritized-gene-map3k20--confidence-low">Prioritized gene: MAP3K20 — confidence LOW</h2>
+<p>MAP3K20 is the best-supported single pick at this locus, but the case is genuinely weak and close,
+and confidence should not be overstated.</p>
+<p><strong>Why MAP3K20 over the alternatives:</strong> MAP3K20 is the only candidate gene with a dominant, locus-
+specific statistical-genetics signal — essentially the entire 29-variant credible set falls in its
+introns/upstream region, and Open Targets' own L2G model assigns it 0.671 versus 0.296 for the next
+gene (CDCA7, not itself a candidate here). ITGA6's candidacy is undermined by two independent
+findings: it has zero genetic-association evidence in Open Targets (score 0.00586, text-mining only)
+and the researcher's own Ensembl coordinate check found it does not physically overlap this locus at
+all (it sits 500-750 kb centromeric under GRCh38) — per red-team-skeptic, this pattern is &quot;close to
+disqualifying&quot; and should be flagged to the study team as a possible genome-build or PoPS-scoring
+data-quality issue, not treated as a live candidate on the strength of PoPS alone. RAPGEF4 has the
+single most mechanistically on-target piece of evidence in this entire dossier — Oldenburger et al.
+2014's Epac2(-/-) mouse model showing RAPGEF4 promotes cigarette-smoke-induced neutrophilic/macrophage
+inflammation — but it was not flagged by any of the four internal prioritization methods, has zero
+statistical-genetics anchoring to this specific credible set (its inclusion rests on ~54 kb of
+incidental 3'-end overlap), and its one supporting mouse study is directionally complicated by a
+different mechanistic study in an asthma/Th2 model (Chen et al. 2019).</p>
+<p><strong>Why confidence is only LOW, not MODERATE or HIGH:</strong> MAP3K20's statistical dominance is undercut by
+an Open Targets pattern that is, per red-team-skeptic, &quot;close to the textbook profile of a smoking-
+behavior locus masquerading as a lung-disease locus&quot; — zero colocalization with FEV1/FEV1-FVC despite
+the strong L2G score, colocalization instead with cognitive/behavioral/educational-attainment traits,
+and a smoking-initiation association score (0.342) that is actually higher than the COPD association
+score (0.248) itself. No literature was found directly linking MAP3K20/ZAK to smoking behavior,
+nicotine dependence, or any COPD/lung-function-specific mechanism — every mechanistic citation for
+this gene is in the wrong tissue or species for COPD (hepatic/metabolic, skin, cardiac myoblast,
+leukemic, avian lung, or lung-cancer-cell-line systems), and one of them (Cheng et al. 2009, cardiac
+MMP/TIMP shift) points in a direction that, if it generalized to lung, would argue against rather than
+for an emphysema-promoting role. Whether this locus is among the 279 signals in the major Shrine et
+al. 2019 lung-function GWAS was never confirmed by researcher or skeptic and remains an open,
+checkable question.</p>
+<p><strong>What would resolve this:</strong> (1) confirmation of whether rs16861404/this credible set is among the
+Shrine et al. 2019 lung-function GWAS signals (a direct spirometric-concordance check); (2) a
+smoking-adjusted or multivariable MR analysis distinguishing a direct pulmonary effect of MAP3K20 from
+a smoking-behavior-mediated one; (3) resolution of the ITGA6 genome-build/coordinate discrepancy
+(confirm whether PoPS was run against a different build, or whether this is a genuine PoPS false
+positive); (4) any human COPD airway tissue or single-cell data on MAP3K20 or RAPGEF4 expression,
+which is currently absent for both; (5) additional independent contradiction-search for all three
+genes, which the red-team-skeptic was unable to complete this pass due to an exhausted web-search
+budget.</p>
+<p><strong>Runner-up:</strong> RAPGEF4, on the strength of the single Oldenburger et al. 2014 cigarette-smoke
+knockout-mouse finding, notwithstanding its complete lack of statistical-genetics anchoring to this
+locus. The study team should weigh whether a locus-specific mouse/human eQTL check for RAPGEF4 in
+lung tissue is warranted before deciding between MAP3K20 and RAPGEF4, and should treat ITGA6 as
+provisionally deprioritized pending the coordinate-discrepancy resolution above.</p>
+
+</body>
+</html>

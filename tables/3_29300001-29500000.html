@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>3_29300001-29500000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-329300001-29500000-rbms3">Evidence table — Locus 3:29,300,001-29,500,000 (RBMS3)</h1>
+<p><strong>Lead variant:</strong> rs17666332 (PIP=0.198, 3:29428184, intron_variant, RBMS3)
+<strong>Candidate genes:</strong> RBMS3 only (nearest gene, FLAMES-prioritized, PoPS-prioritized; MAGMA and ABC = NA). All 15 credible-set variants are intronic/MODIFIER-impact, entirely within RBMS3 — no missense/splice-donor/acceptor variants in the credible set.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RBMS3</td>
+<td>Structural/mechanistic (EMT/Wnt review)</td>
+<td>RBMS3 loss activates Wnt/β-catenin/c-Myc signaling; RBMS3 proposed as a regulator of epithelial-mesenchymal transition (EMT) across physiological and pathological (mainly cancer) contexts</td>
+<td>Górnicki et al. 2022, Int J Mol Sci. PMID 36142783, DOI 10.3390/ijms231810875</td>
+<td>SUPPORTED as background biology — explicitly not lung/COPD-specific evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RBMS3</td>
+<td>Structural (lung epithelium, cancer)</td>
+<td>RBMS3 silencing (chromosome 3p24 loss) cooperates with oncogenic BRAF to drive malignant lung adenocarcinoma progression in mouse models via elevated Wnt/β-catenin signaling (Ctnnb1, Ccnd1, Axin2, Lgr5, c-Myc); RBMS3 acts as a lung tumor/epithelial-growth suppressor</td>
+<td>Vaishnavi et al. 2022, Cancer Res. PMID 36112789, DOI 10.1158/0008-5472.CAN-21-3214</td>
+<td>SUPPORTED as lung-tissue-relevant (cancer) background biology; not direct COPD/airway-remodeling evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RBMS3-AS3 (distinct antisense lncRNA at the RBMS3 locus, NOT RBMS3 itself)</td>
+<td>Bioinformatic biomarker screen</td>
+<td>RBMS3-AS3 was one of three candidate lncRNA biomarkers screened bioinformatically in alcoholic liver disease</td>
+<td>Yan et al. 2021, Aging (Albany NY). PMID 34633988, DOI 10.18632/aging.203614</td>
+<td>Weak/indirect — different transcript than RBMS3, different disease; noted for transparency only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RBMS3</td>
+<td>Structural, weak-immune (non-lung)</td>
+<td>RBMS3 overexpression inhibits Wnt/β-catenin signaling and reduces apoptosis/inflammation in IL-1β-stimulated human nucleus pulposus (intervertebral disc) cells</td>
+<td>Wang et al. 2020, Eur Rev Med Pharmacol Sci. PMID 32016951, DOI 10.26355/eurrev_202001_20023</td>
+<td>Non-lung, non-immune-cell context; nonspecific anti-inflammatory effect only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RBMS3</td>
+<td>Statistical genetics (disease-specific cohort)</td>
+<td>RBMS3 identified in a 3-gene epistatic network associated with lung function/pulmonary pathology in systemic sclerosis (SSc) patients</td>
+<td>Tyler, Mahoney, Carter 2020, G3 (Bethesda). PMID 31694854, DOI 10.1534/g3.119.400775</td>
+<td>Disease-context-specific (SSc, a fibrotic/autoimmune disease) — not general-population COPD genetics</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RBMS3</td>
+<td>Structural (cancer, non-lung)</td>
+<td>RBMS3 inhibits breast cancer cell proliferation/metastasis via suppression of Wnt/β-catenin/c-Myc signaling</td>
+<td>Yang et al. 2017, Oncol Res. PMID 28409548, DOI 10.3727/096504017X14871200709504</td>
+<td>SUPPORTED as background biology; non-lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RBMS3</td>
+<td>Structural/mechanistic (fibrosis)</td>
+<td>RBMS3 is upregulated during activation of hepatic stellate cells and in liver fibrosis, stabilizing Prx1 mRNA and increasing collagen type I (COL1A1) expression</td>
+<td>Fritz &amp; Stefanovic 2007, J Mol Biol. PMID 17586524, DOI 10.1016/j.jmb.2007.06.006</td>
+<td>SUPPORTED — establishes RBMS3 as a fibrosis-transcript stabilizer in liver; extrapolation to lung fibrosis/COPD is speculative, not directly evidenced</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RBMS3</td>
+<td>Statistical genetics (ocular GWAS)</td>
+<td>RBMS3 (3p24) is one of five new genome-wide-significant susceptibility loci for exfoliation syndrome, a fibrotic ocular disorder</td>
+<td>Aung et al. 2017, Nat Genet. PMID 28553957, DOI 10.1038/ng.3875</td>
+<td>VERIFIED gene-locus attribution (&quot;...to RBMS3 (3p24)...&quot; confirmed in full text) — only independent, verified non-cancer GWAS hit for RBMS3/3p24 found in this review; disease context is ocular fibrosis, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RBMS3</td>
+<td>Structural/developmental</td>
+<td>In zebrafish, Rbms3 is required for normal proliferation of cranial neural crest cells and cartilage/bone lineage marker expression, acting by stabilizing smad2 mRNA and promoting TGF-β/Smad2 signaling</td>
+<td>Jayasena &amp; Bronner 2012, J Cell Biol. PMID 23091072, DOI 10.1083/jcb.201204138</td>
+<td>SUPPORTED as general developmental post-transcriptional-regulator biology; not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RBMS3</td>
+<td>Structural/developmental (non-lung organogenesis)</td>
+<td>Rbms3 is expressed in developing pancreas/neural tube in mouse and post-transcriptionally regulates the pancreas-specific transcription factor Ptf1a</td>
+<td>Lu et al. 2012, DNA Cell Biol. PMID 22372950, DOI 10.1089/dna.2012.1619</td>
+<td>SUPPORTED as background developmental biology; not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RBMS3</td>
+<td>Structural (lung epithelium, cancer)</td>
+<td>RBMS3 protein/mRNA is downregulated in human lung squamous cell carcinoma tissue and inversely correlated with c-Myc expression; acts as tumor suppressor/prognostic marker via Wnt/β-catenin/c-Myc axis</td>
+<td>Liang et al. 2015, Med Oncol. PMID 25588924, DOI 10.1007/s12032-014-0459-9</td>
+<td>SUPPORTED as lung-tissue-relevant (cancer) background biology; not direct COPD evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RBMS3</td>
+<td>Structural (lung epithelium, cancer)</td>
+<td>RBMS3 mediates LKB1/AMPK-dependent suppression of lung cancer cell invasion/metastasis; low RBMS3 expression correlates with higher histological grade/stage and worse survival</td>
+<td>Lv et al. 2023, J Cancer. PMID 37781074, DOI 10.7150/jca.86572</td>
+<td>SUPPORTED as lung-tissue-relevant (cancer) background biology; not direct COPD evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RBMS3</td>
+<td>Structural (cancer, non-lung)</td>
+<td>RBMS3 inhibits breast cancer metastasis via suppression of Twist1/MMP2</td>
+<td>Zhu et al. 2019, J Exp Clin Cancer Res. PMID 30819235, DOI 10.1186/s13046-019-1111-5</td>
+<td>SUPPORTED as background biology; non-lung</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Important note on statistical-genetics evidence for COPD/lung function specifically:</strong> The researcher's initial claim that RBMS3/3p24 is a repeatedly-replicated locus in three major published lung-function/COPD GWAS papers (Wain et al. 2017 Nat Genet PMID 28166213; Shrine et al. 2019 Nat Genet PMID 30804560; Sakornsakolpat et al. 2019 Nat Genet PMID 30804561) was found to be <strong>CLAIM_MISMATCH by citation-verifier for all three</strong> — full-text search found zero mentions of RBMS3, 3p24, or rs17666332 in any of them, despite these being large, systematic locus-enumeration papers (279 lung-function signals and 82 genome-wide-significant COPD loci respectively) that should have been positioned to detect this signal if it were present and well-powered at the time. These three citations are therefore excluded from the table above and moved to the audit appendix. A candidate RBMS3-height GWAS citation (PMID 41897845) was found to be <strong>NOT_FOUND</strong> — it resolves to an unrelated sheep genomics paper. See <code>audits/3_29300001-29500000_audit.md</code> for full detail. No PubMed-indexed literature exists for the lead variant rs17666332 itself, and no literature was found linking RBMS3 directly to smoking initiation/nicotine/tobacco despite an Open Targets database flag for a &quot;smoking initiation&quot; association (see Open Targets summary below).</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-run-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not run through citation-verifier or red-team-skeptic)</h2>
+<p><strong>Gene queried: RBMS3 (ENSG00000144642)</strong> — sole candidate gene at this locus.</p>
+<ul>
+<li><strong>Genetic constraint (gnomAD, via Open Targets <code>geneticConstraint</code>):</strong> LoF: exp 53.31, obs 22, oe 0.413, oeUpper (LOEUF) ≈ 0.589, score 0.254. Missense: oe 0.907 (oeLower 0.841, oeUpper 0.979), score 0.768. Synonymous: oe 1.010 (near-neutral, as expected). Interpretation: moderately constrained against loss-of-function (LOEUF ≈ 0.59, below the ~0.6 threshold commonly used as a constraint cutoff), not in the most extremely constrained decile.</li>
+<li><strong>Locus-specific genetic association evidence (<code>target.evidences</code>, datasourceIds=[&quot;gwas_credible_sets&quot;], filtered to COPD/MONDO_0005002):</strong> 1 evidence record, score 0.8297563791275024. This score derives from the same underlying COPD GWAS meta-analysis that generated this pipeline's own credible set (associated literature PMID on the record: 39024449) — it is <strong>not independent replication</strong>, and per red-team-skeptic critique should carry near-zero incremental evidentiary weight beyond what is already known from this locus's own credible set.</li>
+<li><strong>Overall target-disease association (<code>target.associatedDiseases</code>, all data types combined, out of 179 diseases associated with RBMS3):</strong> COPD (MONDO_0005002) overall score 0.309 — genetic_association sub-score 0.504, <strong>literature sub-score only 0.085</strong> (the more informative number: independent literature support for RBMS3-COPD is nearly absent). RBMS3's single highest-scored associated disease across its whole phenome is myopia (score 0.409), followed by hypermetropia (0.397), vitreous body disorder (0.382), alcohol drinking (0.376), and placental abruption (0.355) — ocular/refractive and non-respiratory traits dominate the top of its association list. &quot;Smoking initiation&quot; (EFO_0005670) appears as an independently scored associated trait (score 0.264, genetic_association sub-score 0.433) — directly relevant to this pipeline's smoking-mediation prior, but this database flag was NOT corroborated by any literature citation located during this review (zero PubMed hits for RBMS3 + smoking/nicotine/tobacco terms).</li>
+<li>No separately exposed eQTL/molecular-QTL colocalization score was retrievable from this API version for this gene/disease pair beyond the unified gwas_credible_sets record above.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Prioritized gene: RBMS3</strong>
+<strong>Confidence: LOW</strong></p>
+<p>RBMS3 is named as the best-supported candidate gene at this locus for the simple reason that it is the <em>only</em> candidate gene under consideration — nearest gene, FLAMES-prioritized, and PoPS-prioritized all agree (MAGMA and ABC did not weigh in), and all 15 credible-set variants (lead rs17666332, PIP=0.198) fall entirely within RBMS3 introns with no competing overlapping gene identified. There is no gene-identity ambiguity to resolve here (see red-team-skeptic: &quot;HOLDS (clean single-gene assignment, FLAMES+PoPS concordant)&quot;).</p>
+<p>However, confidence in RBMS3 as a genuine, mechanistically-understood COPD gene (as opposed to simply &quot;the gene at this locus&quot;) is LOW, for reasons the evidence table and Open Targets summary above lay out explicitly:</p>
+<ol>
+<li><strong>The statistical-genetics case is weaker than the pipeline's own database score suggests.</strong> The Open Targets gwas_credible_sets score (0.83) is circular — it derives from the same GWAS meta-analysis that produced this locus's own credible set, not an independent source. When the researcher searched for independent replication in three major, well-powered, systematic lung-function/COPD GWAS papers (Wain 2017, Shrine 2019, Sakornsakolpat 2019 — together enumerating 279 lung-function signals and 82 genome-wide-significant COPD loci), citation-verifier's full-text checks found <strong>zero mentions of RBMS3, 3p24, or rs17666332 in any of them</strong>. This is informative negative evidence, not merely an evidence gap, and the corresponding Open Targets literature sub-score for COPD (0.085) is consistent with this — independent literature support for RBMS3-COPD is nearly absent.</li>
+<li><strong>The mechanistic/functional literature is real but entirely non-lung/non-COPD in its direct evidence base.</strong> RBMS3's most robust literature (VERIFIED, per table above) documents it as a Wnt/β-catenin/c-Myc-restraining tumor suppressor across multiple tissues (including lung epithelium in cancer contexts — Vaishnavi 2022, Liang 2015, Lv 2023), a TGF-β/Smad2-dependent regulator of neural-crest chondrogenesis (Jayasena &amp; Bronner 2012), a stabilizer of profibrotic Prx1/collagen I transcripts in liver fibrosis (Fritz &amp; Stefanovic 2007), and a developmental regulator in pancreas (Lu 2012). None of this literature directly tests RBMS3 in airway/alveolar structural biology, emphysema models, or lung inflammation.</li>
+<li><strong>The only independent, verified non-cancer GWAS hit for RBMS3/3p24 is exfoliation syndrome</strong> (Aung et al. 2017, PMID 28553957), a fibrotic ocular disease — and RBMS3's single strongest disease association by Open Targets score across its entire phenome is myopia. This raises a live, unresolved alternative hypothesis that RBMS3 (or this locus) may act through an ocular/connective-tissue-fibrosis mechanism that happens to also register a signal in COPD GWAS, rather than through lung-specific biology per se — though this is explicitly a reviewer-constructed hypothesis, not a claim any cited paper makes.</li>
+<li><strong>The smoking-mediation question (Prior #1) is flagged but unresolved.</strong> Open Targets independently scores RBMS3 for &quot;smoking initiation&quot; (0.264), which is exactly the alternative pathway Prior #1 asks reviewers to consider — but no literature (PubMed) was found linking RBMS3 to smoking behavior, so this cannot be confirmed or ruled out.</li>
+<li><strong>A pattern of overclaiming/citation error was caught in this locus's research pass</strong>: the researcher's initial claim of &quot;repeated replication&quot; in three major GWAS papers was contradicted by full-text verification, and a claimed RBMS3-height GWAS citation (PMID 41897845) turned out to be an unrelated sheep-genomics paper. Per red-team-skeptic, this pattern (not a single isolated slip) warrants extra caution about this gene's evidence base specifically, beyond the normal level of scrutiny.</li>
+</ol>
+<p>There is no runner-up candidate gene to name at this locus (RBMS3 is the sole candidate across all four prioritization methods that returned a call), so this is not a &quot;tied paralogs&quot; situation — the uncertainty here is not about <em>which gene</em>, but about <em>whether the locus reflects genuine, mechanistically-specific COPD/lung biology at all</em>, or a not-yet-replicated statistical signal, or a pleiotropic/ocular-fibrosis/smoking-behavior mechanism instead. What would resolve this: (a) replication of the rs17666332/RBMS3 credible-set signal in a more recent, independently-analyzed COPD or lung-function GWAS meta-analysis than the three checked here; (b) a direct test of RBMS3 in airway epithelium, alveolar structural cells, or an emphysema/lung-fibrosis model; (c) a dedicated look at whether this locus or RBMS3 shows a genome-wide-significant signal in a smoking-behavior GWAS (e.g., GSCAN/Liu et al. 2019) to adjudicate the smoking-mediation hypothesis.</p>
+
+</body>
+</html>

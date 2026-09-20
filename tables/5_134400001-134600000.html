@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>5_134400001-134600000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-5134400001-134600000-lead-variant-rs329120-nearestabc-gene-jade2-magma-gene-c5orf66">Evidence table — Locus 5:134,400,001-134,600,000 (lead variant rs329120; nearest/ABC gene JADE2; MAGMA gene C5orf66)</h1>
+<p>Region: chr5:134,400,001-134,600,000 (GRCh38). Credible set (ABF fine-mapping): rs329120 (PIP=0.404, JADE2 intron), rs329118 (PIP=0.269, JADE2 5'UTR), rs329122 (PIP=0.244, JADE2 intron), rs329124 (PIP=0.064, JADE2 intron), rs10900828 (PIP=0.003, intergenic), rs6860961 (PIP=0.0026, LINC01843 downstream), rs4559047 (PIP=0.0022, LINC01843 downstream). None of the credible-set variants are missense/splice-donor/splice-acceptor, so no additional per-variant literature search beyond the lead variant (rs329120) and the JADE2 5'UTR variant rs329118 was required or performed.</p>
+<p>Only citations verdicted <strong>VERIFIED</strong> (or VERIFIED WITH CAVEAT, noted explicitly) by citation-verifier are included below. See <code>audits/5_134400001-134600000_audit.md</code> for excluded/contested items and full reasoning.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JADE2</td>
+<td>Statistical genetics (fine-mapping/physical location)</td>
+<td>JADE2 physically contains the entire credible set at this locus (rs329120 intron, rs329118 5'UTR, rs329122 intron, rs329124 intron); is the nearest protein-coding gene and the ABC-prioritized gene.</td>
+<td>Locus input file / Ensembl region-overlap (not a literature citation — genomic fact)</td>
+<td>WEAKENED (identification holds; inference to lung-intrinsic COPD mechanism does not)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JADE2</td>
+<td>Statistical genetics (independent GWAS, smoking-interaction)</td>
+<td>Credible-set variant rs329118 (JADE2 5'UTR) is significantly associated with lung cancer risk (P=8.80E-09) in a two-stage discovery/replication study (TRICL/ILCCO/OncoArray, 29,266 cases/56,450 controls, European ancestry), with a stronger effect in ever-smokers than never-smokers and in squamous histology, plus eQTL evidence for JADE2 regulation.</td>
+<td>Yang et al. 2022, NPJ Precision Oncology, PMID 35773316, DOI 10.1038/s41698-022-00281-9</td>
+<td>VERIFIED by citation-verifier; WEAKENED by skeptic as support for a lung-intrinsic COPD mechanism specifically — read instead as evidence of smoking-behavior-mediated biology at this variant (consistent with prior #1)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JADE2</td>
+<td>Molecular/structural biology</td>
+<td>JADE (including JADE2) is a core subunit of the HBO1 histone-acetyltransferase complex; JADE-family PZP domain recognition of unmethylated H3K4 directs the complex's enzymatic activity toward histone H4 acetylation — general chromatin-regulatory biology, not lung-specific.</td>
+<td>Gaurav et al. 2024, Nature Structural &amp; Molecular Biology, PMID 38448574, DOI 10.1038/s41594-024-01245-2; Foy et al. 2008, J Biol Chem, PMID 18684714, DOI 10.1074/jbc.M801407200</td>
+<td>HOLDS as general mechanistic context; not lung/COPD-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JADE2</td>
+<td>Molecular biology (paralog)</td>
+<td>JADE1 (JADE2 paralog) has documented roles in epithelial cell-cycle regulation and acute kidney injury/regeneration.</td>
+<td>Panchenko 2016, Gene (review), PMID 27155521, DOI 10.1016/j.gene.2016.05.002</td>
+<td>HOLDS as indirect paralog-inference context only; not JADE2-specific, not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JADE2</td>
+<td>Lung-tissue expression (cancer biomarker)</td>
+<td>JADE2 mRNA/protein expression is significantly altered in resected non-small-cell lung cancer (NSCLC) tissue; high expression is associated with better 5-year overall survival; correlated with tumor mutational burden and immune-cell infiltration.</td>
+<td>Murphy et al. 2023, Biomedicines, PMID 37761019, DOI 10.3390/biomedicines11092576</td>
+<td>HOLDS as lung-tissue-expression context; a cancer-biomarker study, not COPD/airway-remodeling biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JADE2</td>
+<td>Molecular biology (hematologic)</td>
+<td>A NUP98-JADE2 gene fusion, identified in a patient with acute myeloid leukemia resembling acute promyelocytic leukemia, impairs all-trans-retinoic-acid-mediated transcriptional control and myeloid differentiation.</td>
+<td>Cheng et al. 2022, Blood Advances, PMID 34673934, DOI 10.1182/bloodadvances.2021006064</td>
+<td>HOLDS as general JADE2 biology; hematologic/oncologic, not lung-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JADE2</td>
+<td>Statistical genetics (tangential gene-based associations, non-COPD)</td>
+<td>JADE2 is one of six genes (with ALPK2, ANKRD55, INTS8, IQCB1, MALT1) significantly contributing to rare-variant burden in a fibromyalgia/regional pain syndrome cohort.</td>
+<td>Turk et al. 2025, Scientific Reports, PMID 40592943, DOI 10.1038/s41598-025-04741-7</td>
+<td>HOLDS as evidence of general pleiotropy; not COPD-relevant, not discussed further by researcher</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>JADE2</td>
+<td>Statistical genetics (tangential gene-based association, non-COPD)</td>
+<td>JADE2 appears among genes identified in a UK Biobank multi-trait gene-based association study of back pain.</td>
+<td>Belonogova et al. 2024, Pain Reports, PMID 39726856, DOI 10.1097/PR9.0000000000001218</td>
+<td>HOLDS as evidence of general pleiotropy; not COPD-relevant, not discussed further by researcher</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>C5orf66</td>
+<td>Gene-identification / negative finding</td>
+<td>C5orf66 (and aliases PITX1-AS1, EPIST, LINC02900, C5orf66-AS1/AS2) is NOT physically located within the 5:134,400,001-134,600,000 locus interval; it maps to a distinct lncRNA locus ~450-800kb away near PITX1 (chr5:135.0-135.4 Mb), independently confirmed by both an Ensembl REST region-overlap query and Open Targets identifier resolution.</td>
+<td>Ensembl REST API region-overlap query (not a literature citation — genomic/database fact, independently reproduced by researcher and orchestrator)</td>
+<td>HOLDS — corroborated by skeptic's independent check (zero PITX1-lung-function/COPD/spirometry literature found either)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>C5orf66</td>
+<td>Literature context (off-locus, non-COPD)</td>
+<td>C5orf66/C5orf66-AS1/C5orf66-AS2 literature is exclusively oncology (renal cell carcinoma, triple-negative breast cancer, osteosarcoma, pancreatic adenocarcinoma prognostic-signature/mechanistic bioinformatics) or a genuine endometriosis GWAS at a distinct chromosomal position (5q31.1) — none COPD- or lung-relevant.</td>
+<td>Huang et al. 2025, Transl Androl Urol, PMID 41368248, DOI 10.21037/tau-2025-541; Li et al. 2025, Oncogene, PMID 41315668, DOI 10.1038/s41388-025-03621-8; Zhang &amp; Song 2025 (erratum), Oncology Letters, PMID 40213089, DOI 10.3892/ol.2025.15000 (VERIFIED WITH CAVEAT: published erratum to a 2021 paper; underlying finding stands); Liu et al. 2023, Biochem Genet, PMID 37382751, DOI 10.1007/s10528-023-10435-4; Sheu et al. 2024, J Hum Genet, PMID 38982179, DOI 10.1038/s10038-024-01270-5</td>
+<td>HOLDS — confirms irrelevance of C5orf66 literature to this locus regardless of physical-location question</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC01843</td>
+<td>Statistical genetics (colocalization, negative finding)</td>
+<td>LINC01843 is physically within the locus interval, overlapped only by two very-low-PIP (0.0026, 0.0022) downstream_gene_variant credible-set members; it never appears as the Locus-to-Gene (L2G) prediction target at the lead variant (JADE2 always does instead) — no colocalization evidence supports LINC01843 as the causal gene.</td>
+<td>Ensembl region-overlap + Open Targets L2G lookup (database facts, not literature)</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC01843</td>
+<td>Literature context (non-mechanistic)</td>
+<td>LINC01843 appears as one of 3-18 co-selected lncRNAs in multiple unsupervised TCGA-bioinformatics prognostic-signature papers across lung adenocarcinoma and clear-cell renal cell carcinoma, with no mechanistic or functional characterization specific to LINC01843 itself and no COPD/spirometry/airway relevance.</td>
+<td>Lv et al. 2025, Clin Transl Oncol, PMID 41087642, DOI 10.1007/s12094-025-04079-6; Yang et al. 2024, Clin Respir J, PMID 39187946, DOI 10.1111/crj.13753; Liang et al. 2022, Front Genet, PMID 36531243, DOI 10.3389/fgene.2022.1052092; Lin et al. 2023, Comb Chem High Throughput Screen, PMID 36165528, DOI 10.2174/1386207325666220926123923; Zhou et al. 2022, Front Endocrinol, PMID 36034461, DOI 10.3389/fendo.2022.964362; Zheng et al. 2021, Front Genet, PMID 34367250, DOI 10.3389/fgene.2021.690509; Li et al. 2020, Front Oncol, PMID 33163400, DOI 10.3389/fonc.2020.560779</td>
+<td>HOLDS — no overclaiming; researcher explicitly frames as low-priority</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CDKN2AIPNL</td>
+<td>Gene-identification (added candidate)</td>
+<td>CDKN2AIPNL is the only other protein-coding gene physically within/immediately flanking this locus interval besides JADE2 (per Ensembl region-overlap), despite not appearing in any of the internal pipeline's prioritized-gene lists; no credible-set variant is annotated to it.</td>
+<td>Ensembl REST API region-overlap query (database/genomic fact, not literature)</td>
+<td>HOLDS — skeptic flags this gene-identification work positively as a valuable, non-obvious contribution</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CDKN2AIPNL</td>
+<td>Structural/lung-tissue expression (indirect, non-genetic)</td>
+<td>Cdkn2aipnl was among several genes significantly upregulated in mouse airway epithelial cells under extreme heat exposure (40°C), examined alongside a modest human pediatric/adult asthma cohort.</td>
+<td>Makrufardi et al. 2025, Front Med (Lausanne), PMID 40313552, DOI 10.3389/fmed.2025.1531154</td>
+<td>HOLDS — correctly framed as weak, exposure-driven (not genetic), asthma- (not COPD-) context evidence, one of ~10 co-regulated genes, not mechanistically isolated</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CDKN2AIPNL</td>
+<td>Molecular biology (mechanistic, non-lung)</td>
+<td>CDKN2AIPNL contains an XRN2-binding domain (XTBD) and regulates the exoribonuclease XRN2 in general RNA-metabolism/transcription-termination biology; can functionally substitute for C. elegans PAXT-1 in vivo.</td>
+<td>Richter et al. 2016, Nat Struct Mol Biol, PMID 26779609, DOI 10.1038/nsmb.3155; Alexandrova et al. 2020, Biochem J, PMID 32011671, DOI 10.1042/BCJ20190733</td>
+<td>HOLDS as general housekeeping-biology context; no lung-specific function described</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CDKN2AIPNL</td>
+<td>Cancer genomics (non-lung-specific, tangential)</td>
+<td>Pan-cancer bioinformatics study reports CDKN2AIPNL has paradoxical tumor-suppressive/tumor-promoting roles across cancer types, including a modest worse-survival association in lung adenocarcinoma (HR=1.36, p=0.049), interacting with MYC/XRN2/CHAMP1.</td>
+<td>Yuan et al. 2026, Front Genet, PMID 41640880, DOI 10.3389/fgene.2025.1588292</td>
+<td>HOLDS as tangential cancer-genomics context; not COPD/lung-structural relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CDKN2AIPNL</td>
+<td>Comparative genomics (non-human, tangential)</td>
+<td>CDKN2AIPNL lies within a sheep copy-number-variation hotspot overlapping QTL associated with lipid metabolism, milk protein yield, and milk fat percentage.</td>
+<td>Goyache et al. 2021, J Anim Breed Genet, PMID 33682236, DOI 10.1111/jbg.12542</td>
+<td>HOLDS — non-human, no direct relevance, included for completeness only</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-verified-literature-see-full-detail-in-evidence_tables_status5_134400001-134600000opentargetsmd">Open Targets summary (structured database lookup — NOT verified literature; see full detail in <code>evidence_tables/_status/5_134400001-134600000/opentargets.md</code>)</h2>
+<ul>
+<li><strong>JADE2</strong> (ENSG00000043143): Strongly LoF-constrained (gnomAD LOEUF/oe=0.154, obs=12/exp=77.8 — among the most constrained few percent of genes genome-wide); moderate missense constraint (oe=0.74). No target-disease association record for COPD or any spirometric trait (FEV1/FEV1-FVC) in Open Targets' full 208-trait association list. Top associations by score: skeletal abnormality (0.51), type 2 diabetes (0.50), smoking initiation (0.44), smoking cessation (0.44), diabetic neuropathy, atrial fibrillation, hypothyroidism, hair color, osteoarthritis, lung cancer (0.33), prostate cancer, obesity, endometriosis, nicotine dependence (0.26). At the lead variant rs329120, 233 credible-set/QTL rows overlap; JADE2 is the sole L2G target across all of them (L2G ~0.85-0.89), spanning BMI/body composition, IGF-1/SHBG/testosterone, T2D, hypothyroidism, atrial fibrillation, QT/JT interval, eGFR/cystatin C, hematologic traits, educational attainment, coffee consumption, lung cancer, and smoking-behavior traits (initiation, cessation, status, lifetime index, age of initiation) — but zero COPD or FEV1/FEV1-FVC rows.</li>
+<li><strong>C5orf66</strong> (MAGMA prioritized): identifier resolution problem — no reliable Open Targets data available for a gene actually located within this locus interval. The symbol/its aliases (PITX1-AS1, EPIST, LINC02900) resolve only to loci ~450-800kb outside the interval, near the distinct PITX1 locus. Those three loci (queried anyway for completeness) are lncRNAs with no constraint metrics and disease associations restricted to cervical/gastric/esophageal/colorectal cancers, Barrett esophagus, and temporal arteritis — no COPD/lung-function/smoking association.</li>
+<li><strong>LINC01843</strong> (ENSG00000251169, confirmed within locus interval): lncRNA, no constraint metrics applicable. Disease associations: Barrett esophagus (0.050), esophageal adenocarcinoma (0.035), COVID-19 (0.012), several cancers — no COPD/lung-function/smoking association. Never appears as the L2G target at the lead variant (JADE2 always does instead) — no gene-specific colocalization evidence.</li>
+<li><strong>CDKN2AIPNL</strong>: not queried in Open Targets by the orchestrator's step-1 lookup (identified only later, independently, by the researcher via Ensembl region-overlap, after the Open Targets stage had already run). No Open Targets L2G/constraint/disease-association data is available in this checkpoint for CDKN2AIPNL; this is a genuine data gap for this gene, not an intentional omission — flagged explicitly per pipeline instructions.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>JADE2 — Confidence: LOW.</strong></p>
+<p>JADE2 is, without question, the best statistically and regulatorily supported gene at this locus: it physically contains the entire credible set (rs329120, rs329118, rs329122, rs329124), is both the nearest gene and the ABC-prioritized gene, and is the sole Locus-to-Gene (L2G) target across all 233 GWAS-trait/QTL rows overlapping the lead variant in Open Targets (L2G ~0.85-0.89), including direct JADE2 eQTL/tuQTL. It is also strongly LoF-constrained, consistent with an essential regulatory gene (core HBO1 histone-acetyltransferase complex subunit). No competing gene at this locus comes close on genetic-mapping grounds: C5orf66 (the MAGMA-prioritized alternative) is very likely a mapping artifact — independently confirmed via Ensembl region-overlap to sit ~450-800kb outside the interval near the distinct PITX1 locus, with a literature base (oncology, endometriosis) entirely unrelated to lung or COPD biology; LINC01843, while physically present, is never the L2G target and has only nonspecific multi-lncRNA cancer-signature literature; and CDKN2AIPNL (an unprioritized gene at the locus boundary, identified only via independent Ensembl lookup) has no credible-set variant and only weak, non-genetic, asthma-context expression evidence.</p>
+<p>The confidence rating is LOW rather than HIGH or MODERATE specifically because — per the red-team-skeptic's critique — the statistical/regulatory case for JADE2 <em>as the gene at this locus</em> is strong, but the case that this locus's COPD association reflects a lung-intrinsic mechanism specific to JADE2 is weak. Across Open Targets' full 208-trait disease-association catalog and all 233 trait rows at the lead variant, there is zero COPD or FEV1/FEV1-FVC signal — a locus this densely phenotyped in Open Targets would be expected to show at least some spirometric/COPD colocalization if the mechanism were lung-intrinsic (pipeline prior #2). Instead, the trait profile is dominated by anthropometric/metabolic/endocrine/hematologic pleiotropy and, notably, smoking-behavior traits (initiation, cessation, nicotine dependence, lifetime smoking index — all with L2G/association scores comparable to or exceeding any lung-adjacent trait). This is independently corroborated by a separate, COPD-unrelated lung-cancer GWAS (Yang et al. 2022, PMID 35773316, VERIFIED) showing the credible-set variant rs329118 has a smoking-status-dependent effect on lung cancer risk (stronger in ever-smokers). No published literature links JADE2 to airway remodeling, emphysema, alveolar development, protease-antiprotease biology, mucociliary function, or any COPD-relevant inflammatory/immune cell program (this is reported as a genuine evidence gap, not a null finding, per the researcher). Taken together, this locus's association with COPD is plausibly mediated in whole or in part through smoking-behavior biology (consistent with pipeline prior #1 — the parent COPD GWAS is not adjusted for smoking) rather than through lung-intrinsic biology specific to JADE2, and this inference should not be overstated: it rests on a convergence of indirect/absence-based evidence rather than a single definitive mechanistic study.</p>
+<p><strong>What would resolve this:</strong> (1) a direct COPD or FEV1/FEV1-FVC colocalization/GWAS signal at this locus (currently entirely absent from Open Targets' indexed studies, which may simply reflect that the parent COPD GWAS used in this pipeline is not yet indexed there, rather than a true absence of lung-function association — this ambiguity should be checked against the internal COPD GWAS's own summary statistics for FEV1/FEV1-FVC concordance if available); (2) mediation/conditional analysis of the COPD association at rs329120 adjusting for smoking initiation/heaviness, to directly test whether the COPD signal survives smoking adjustment; (3) any airway-epithelial, alveolar, or COPD-relevant-immune-cell functional/expression study of JADE2 specifically (none currently exists). Runner-up candidates (LINC01843, CDKN2AIPNL) are not close competitors on the gene-identification question — the ambiguity here is not &quot;which gene&quot; but &quot;which mechanism for the one well-supported gene&quot; — so this LOW confidence reflects mechanistic uncertainty about JADE2 itself, not a tie between candidates.</p>
+
+</body>
+</html>

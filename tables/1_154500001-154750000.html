@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>1_154500001-154750000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-1154500001-154750000-nearest-gene-chrnb2">Evidence table — locus 1:154,500,001-154,750,000 (nearest gene CHRNB2)</h1>
+<p><strong>Lead variant:</strong> rs45490696 (1:154576516, CHRNB2, 3_prime_UTR_variant, PIP=0.290)
+<strong>Credible set:</strong> rs45490696 (CHRNB2, PIP=0.290), rs6680410 (ADAR, downstream_gene_variant,
+PIP=0.237), rs3811450 (ADAR, downstream_gene_variant, PIP=0.225), rs4292956 (CHRNB2,
+3_prime_UTR_variant, PIP=0.206), rs78062588 (ADAR, intron_variant, PIP=0.026)
+<strong>Candidate genes:</strong> CHRNB2 (nearest gene, credible-set gene), ADAR (credible-set gene),
+KCNN3 (PoPS-prioritized, not in credible set). SHE, TDRD10, UBE2Q1 were additionally
+identified by direct Ensembl-region enumeration (not flagged by any internal
+prioritization method); all lie outside the fine-mapped credible-set span.</p>
+<p>Note on variant-level literature search: all five credible-set variants are annotated
+3_prime_UTR_variant, downstream_gene_variant, or intron_variant — none are
+missense/splice-donor/splice-acceptor. Per pipeline protocol these were rolled into
+gene-level evidence rather than searched individually. A direct search for the lead
+variant rs45490696 itself returned zero PubMed results.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHRNB2</td>
+<td>Statgen (rare-variant burden + functional)</td>
+<td>Rare predicted-LoF/deleterious-missense CHRNB2 variants associated with 35% decreased odds of smoking heavily (OR=0.65, CI 0.56-0.76); concordant common-variant signal (rs2072659, OR=0.96); mouse Chrnb2-KO loses nicotine-mediated neuronal responses/self-administration. Different variant than this locus's credible set.</td>
+<td>PMID 37308787 / DOI 10.1038/s41588-023-01417-8</td>
+<td>WEAKENED (real gene-level smoking evidence, but not this locus's own variants; part of an inference stack — see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNB2</td>
+<td>Statgen (GWAS, background)</td>
+<td>Likely source GWAS (GSCAN, 3.4M individuals) for the Open Targets smoking-initiation/problematic-tobacco-use signals colocalizing at this locus; researcher did not independently confirm this exact sub-locus reaches genome-wide significance in GSCAN's own tables.</td>
+<td>PMID 36477530 / DOI 10.1038/s41586-022-05477-4</td>
+<td>WEAKENED (inference from OT trait linkage, not directly verified against this sub-locus)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNB2</td>
+<td>Statgen (candidate-gene/interaction)</td>
+<td>CHRNB2 part of a significant SNP-SNP interacting set (CHRNA4/B2/A5) affecting nicotine dependence in Chinese Han smokers; top individually significant SNPs were in CHRNB4/CHRNA3, not CHRNB2.</td>
+<td>PMID 29666375 / DOI 10.1038/s41398-018-0130-x</td>
+<td>WEAKENED (CHRNB2 is the non-significant partner in its own gene-family literature)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNB2</td>
+<td>Statgen (family-based)</td>
+<td>CHRNB2 SNP rs2072658 significantly associated with age of smoking onset (Bonferroni P=.003) in Mexican Mestizo families; different variant than this locus's credible set.</td>
+<td>PMID 26416825 / DOI 10.1093/ntr/ntv213</td>
+<td>WEAKENED (different variant, small family study)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNB2</td>
+<td>Statgen (pharmacogenetic)</td>
+<td>CHRNB2 genotyped alongside CHRNA4/CHRNA5 for smoking-quantity/cessation-outcome association; baseline smoking-quantity association was driven by CHRNA5, not CHRNB2.</td>
+<td>PMID 29196725 / DOI 10.1038/s41598-017-16946-6</td>
+<td>WEAKENED (negative/non-primary result for CHRNB2 itself)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNB2</td>
+<td>Statgen (candidate-gene, small n)</td>
+<td>CHRNB2 variant x maternal-bonding-style interaction on suicidal ideation among smokers (n=255); neuropsychiatric, not pulmonary, phenotype.</td>
+<td>PMID 29411706 (Hungarian-language)</td>
+<td>WEAKENED (small n, neuropsychiatric phenotype, tangential)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNB2</td>
+<td>Statgen (review/background)</td>
+<td>Review framing CHRNA4/CHRNB2 and CHRNA5/A3/B4 as the two most intensively studied nAChR clusters in nicotine-dependence genetics.</td>
+<td>PMID 27327258 / DOI 10.1038/tp.2016.103</td>
+<td>SUPPORTED (as background context only, not a novel finding)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNB2</td>
+<td>Statgen (lung cancer GWAS-by-proxy)</td>
+<td>Lung cancer risk loci colocalize with smoking-propensity genes CHRNA4/CHRNB2; smoking-propensity PRS correlates with tumor somatic mutation burden — smoking-mediated, not direct germline-pulmonary, mechanism.</td>
+<td>PMID 35511172 / DOI 10.1093/jnci/djac087</td>
+<td>SUPPORTED (consistent with smoking-mediation hypothesis, but lung-cancer not COPD)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNB2</td>
+<td>Structural/developmental lung biology</td>
+<td>No CHRNB2-specific structural/airway-epithelial literature found (explicit zero-result searches); independently reconfirmed as a genuine zero by red-team-skeptic.</td>
+<td>n/a (absence of evidence)</td>
+<td>—</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CHRNB2</td>
+<td>Immune/inflammatory</td>
+<td>No CHRNB2-specific immune/inflammatory literature found; cholinergic anti-inflammatory pathway in general nAChR literature is attributed to CHRNA7 (alpha-7), not CHRNB2 (beta-2).</td>
+<td>n/a (absence of evidence)</td>
+<td>—</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADAR</td>
+<td>Statgen</td>
+<td>No ADAR-specific COPD/lung-function GWAS, TWAS, MR, or colocalization publication found (explicit zero-result searches, independently reconfirmed).</td>
+<td>n/a (absence of evidence)</td>
+<td>—</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADAR</td>
+<td>Immune/inflammatory (mechanistic analogy)</td>
+<td>Reduced ADAR-mediated A-to-I editing of Alu dsRNA in severe COVID-19 leukocytes; unedited Alu dsRNA is a potent inducer of IRF/NF-κB/interferon-stimulated-gene responses. Not COPD; mechanistic analogy only.</td>
+<td>PMID 33782089 / DOI 10.4049/jimmunol.2001428</td>
+<td>HOLDS (as hedged; analogy only, not COPD-specific)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADAR</td>
+<td>Immune/inflammatory (mechanistic analogy)</td>
+<td>ADAR1 expression increases with CD4+/CD8+ T-cell activation; ADAR1 knockdown causes T-cell apoptosis and aberrant IL-2 secretion, in SARS-CoV-2 infection (not COPD).</td>
+<td>PMID 39178184 / DOI 10.1371/journal.pone.0307450</td>
+<td>HOLDS (as hedged; analogy only, not COPD-specific)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADAR</td>
+<td>Immune/inflammatory + structural (airway epithelium)</td>
+<td>Reduced ADAR editing of miR-200b-3p in bronchial epithelial cells (n=142) associated with moderate-to-severe ASTHMA (not COPD), with SOCS1 overexpression, altered IL-4/IFN-γ signaling, and BAL eosinophil association. Most airway-disease-proximate ADAR finding identified, but is asthma, not COPD; direction of any COPD analog is unestablished.</td>
+<td>PMID 33446603 / DOI 10.1183/13993003.03862-2020</td>
+<td>HOLDS (real, specific, but asthma not COPD)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADAR</td>
+<td>Immune (general mechanism)</td>
+<td>ADAR1 p150 induction via MDA5-mediated interferon sensing upon viral infection; A-to-I editing correlates with innate-immune-response intensity across tissues/cell types. General mechanistic background, not lung-disease-specific.</td>
+<td>PMID 35234938 / DOI 10.1093/nar/gkac120</td>
+<td>HOLDS (general background only)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNN3</td>
+<td>Statgen</td>
+<td>No KCNN3-specific COPD/lung-function GWAS/TWAS/MR/colocalization publication found (explicit zero-result search, independently reconfirmed). Dominant KCNN3 disease literature is atrial fibrillation (a separate, unrelated genomic locus).</td>
+<td>n/a (absence of evidence)</td>
+<td>—</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNN3</td>
+<td>Structural biology</td>
+<td>No KCNN3/SK3-specific airway-smooth-muscle, alveolar, or pulmonary-hypertension literature found (explicit zero-result searches).</td>
+<td>n/a (absence of evidence)</td>
+<td>—</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>KCNN3</td>
+<td>Immune/inflammatory</td>
+<td>SK3 (KCa2.3/KCNN3) functionally expressed in CNS microglia; pharmacological modulation shifts classical vs. alternative microglial activation state. Only immune-cell-type KCNN3 evidence found, and it is CNS tissue, not lung.</td>
+<td>PMID 22527636 / DOI 10.1007/s11481-012-9365-0</td>
+<td>WEAKENED (real finding, but wrong tissue/cell type for this disease context)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="excluded-from-evidence-table-incidental-genes-outside-credible-set-background-only">Excluded from evidence table (incidental genes outside credible set, background only)</h2>
+<p>UBE2Q1 (Ensembl-enumeration only, outside credible-set span) had two VERIFIED citations
+(PMID 39389359, PMID 30527173) describing lung-cancer/mesothelioma tumor-biology roles —
+these are mechanistically off-topic for COPD's airway-remodeling/protease-antiprotease/
+inflammatory biology and are not included as evidentiary rows above; see audit appendix.
+SHE and TDRD10 (also Ensembl-enumeration only) yielded no COPD/lung/immune literature at
+all and are omitted entirely.</p>
+<hr>
+<h2 id="open-targets-summary-structured-database-lookup--not-verified-literature-see">Open Targets summary (structured database lookup — NOT verified literature; see</h2>
+<p><code>evidence_tables/_status/1_154500001-154750000/opentargets.md</code> for full detail)</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>L2G colocalization at this locus's credible-set variants</th>
+<th>COPD target-disease association (aggregate)</th>
+<th>Genetic constraint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHRNB2</td>
+<td>Highest among nearby genes at every overlapping GWAS Catalog signal found: smoking initiation L2G=0.627, problematic tobacco use/nicotine dependence L2G=0.783, WBC count L2G=0.51-0.81. <strong>No COPD- or lung-function-labeled colocalizing signal found at this locus at all.</strong></td>
+<td>Score 0.381 (datatypes: animal_model 0.327, clinical 0.610; <strong>no genetic_association datatype score surfaced</strong> despite strong smoking-trait L2G — noted by red-team-skeptic as a striking gap)</td>
+<td>Not LoF-constrained (constraint score ~0, oe=0.83, 90% CI 0.62-1.12); missense z=1.01 (oe=0.89)</td>
+</tr>
+<tr>
+<td>ADAR</td>
+<td>Consistently second to CHRNB2 at the same studyLoci: smoking initiation L2G=0.324, nicotine dependence L2G=0.114, WBC L2G=0.07-0.28. No COPD/lung-function colocalization found.</td>
+<td>Score 0.035 (datatypes: literature 0.128, genetic_association 0.051)</td>
+<td>Strongly LoF-intolerant (constraint score 0.9997, oe=0.35, 90% CI 0.27-0.45); missense z=3.42 (oe=0.77)</td>
+</tr>
+<tr>
+<td>KCNN3</td>
+<td><strong>Absent from L2G colocalization at every studyLocus checked for this region.</strong> Not in the fine-mapped credible set (PoPS-only).</td>
+<td>Score 0.261 (datatypes: genetic_association 0.428, literature 0.021 — plausibly reflects KCNN3's unrelated atrial-fibrillation GWAS hits elsewhere in the genome, not this locus)</td>
+<td>Strongly LoF-intolerant (constraint score 0.9999, oe=0.25, 90% CI 0.17-0.38); missense z=4.61 (oe=0.60)</td>
+</tr>
+</tbody>
+</table>
+<p>Caveat (from opentargets.md): the absence of a COPD-/lung-function-labeled colocalizing
+studyLocus for this region in Open Targets should not be read as proof that no COPD
+association exists — it reflects what GWAS Catalog summary statistics Open Targets has
+ingested and fine-mapped, which may not include the same COPD meta-analysis used to
+define this locus's credible set. It IS informative that the only phenotypes Open Targets
+independently colocalizes at this exact position are smoking-behavior and
+blood-cell-count traits.</p>
+<hr>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>CHRNB2 — Confidence: LOW</strong></p>
+<p>CHRNB2 is the best-supported single candidate at this locus, but the case is an inference
+stack rather than a directly demonstrated mechanism, and red-team-skeptic's critique
+(preserved in full in the audit appendix) substantially tempers what would otherwise read
+as a confident call. The evidence favoring CHRNB2 over ADAR consists of: (1) it carries
+the lead variant and the higher-PIP half of the credible set (PIP 0.290 + 0.206 vs. ADAR's
+0.237 + 0.225 + 0.026 — the credible set itself splits roughly evenly and cannot
+statistically separate the two genes); (2) Open Targets L2G at every colocalizing
+GWAS-Catalog signal found for this exact locus favors CHRNB2 over ADAR by a factor of
+2-7x, but every one of those colocalizing signals is a smoking-behavior or blood-cell-count
+trait, not COPD or lung function — Open Targets has no COPD-labeled colocalization at this
+locus for either gene, and CHRNB2's own COPD association score in Open Targets carries no
+genetic_association datatype contribution at all; (3) eight independent verified
+literature citations tie CHRNB2 (or its immediate nAChR gene-family/interacting partners)
+to smoking initiation, heaviness, dependence, cessation, and age of onset — a pattern
+directly analogous (by gene-family paralogy, not by shared statistical signal) to the
+well-established CHRNA5/CHRNA3/CHRNB4 15q25.1 locus — but none of these eight citations
+use this locus's own credible-set variants, and in several of them (Pintarelli 2017, Liu
+2018) CHRNB2 is the non-significant partner within its own gene family; (4) no CHRNB2
+lung-structural or immune literature exists at all, which is consistent with (but does not
+prove) a smoking-mediated rather than direct-pulmonary mechanism per Prior 1.</p>
+<p>ADAR is the credible runner-up: it is LoF-intolerant and missense-constrained (more
+dosage-sensitive than CHRNB2 by Open Targets' constraint metrics), has a mechanistically
+plausible connection to COPD's interferon/innate-immune inflammatory heterogeneity
+(Prior 3), and one directly airway-disease-relevant finding (reduced ADAR editing
+associated with asthma severity and eosinophilic/cytokine dysregulation) — but no
+ADAR-specific COPD statistical-genetics evidence exists, its L2G at every shared
+smoking-trait signal is consistently secondary to CHRNB2's, and its credible-set variants
+are regulatory (downstream/intronic) rather than coding, which for this degree of
+LoF-intolerance is at least as consistent with LD-tagging of the CHRNB2 signal as with an
+independent ADAR-driven effect.</p>
+<p><strong>What would resolve the tie:</strong> (a) a direct GTEx/lung-tissue eQTL lookup for ADAR at this
+locus's exact credible-set variants (flagged by red-team-skeptic as not yet done in this
+pipeline; would move ADAR from &quot;plausible&quot; to &quot;supported&quot; or rule it out); (b) a formal
+statistical colocalization (e.g., coloc PP4) between this COPD credible set and the GSCAN
+smoking-initiation/nicotine-dependence summary statistics, rather than relying on Open
+Targets' L2G-on-a-different-trait as a proxy; (c) confirmation of whether the GSCAN GWAS
+itself reaches genome-wide significance at this precise sub-locus (not independently
+verified in this pipeline run).</p>
+<p>KCNN3 is excluded from serious consideration: it is not in the fine-mapped credible set
+(flagged only by the polygenic-similarity method PoPS), has zero Open Targets L2G
+colocalization at this locus, and its literature is dominated by an unrelated
+atrial-fibrillation GWAS signal elsewhere in the genome. Per red-team-skeptic, it should be
+regarded as &quot;no locus-specific evidence identified; retained only because a
+polygenic-similarity method flagged it&quot; — a materially weaker epistemic status than either
+CHRNB2 or ADAR, not a co-tier &quot;weak candidate.&quot;</p>
+<p>Given that the credible set itself cannot statistically distinguish CHRNB2 from ADAR, and
+that no COPD-specific (as opposed to smoking-specific) colocalization exists for either
+gene, this call is marked <strong>LOW confidence</strong> rather than MODERATE or HIGH. The study team
+should weigh whether the follow-up analyses above are feasible before treating CHRNB2 as
+settled.</p>
+
+</body>
+</html>

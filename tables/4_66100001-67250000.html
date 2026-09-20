@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>4_66100001-67250000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-locus-evidence-table--466100001-67250000-lead-variant-rs13109017">COPD locus evidence table — 4:66,100,001-67,250,000 (lead variant rs13109017)</h1>
+<p>Candidate genes evaluated: <strong>CENPC</strong> (nearest gene; FLAMES-prioritized) and <strong>EPHA5</strong>
+(PoPS-prioritized). MAGMA and ABC did not prioritize any gene at this locus. This is a
+large gene desert: no protein-coding gene overlaps the credible-set interval itself.
+CENPC's transcript (chr4:67,468,762-67,545,565) lies ~518 kb from the lead variant and is
+technically outside the locus's own stated upper boundary (67,250,000); EPHA5
+(chr4:65,319,563-65,670,528) is ~1.28 Mb away, farther still. All ~45 credible-set
+variants are intergenic/MODIFIER impact (no missense/splice variants), so no dedicated
+variant-level literature search beyond the lead variant was required.</p>
+<p>Only citations with a VERIFIED verdict are included below. See
+<code>audits/4_66100001-67250000_audit.md</code> for excluded/contested items and full reasoning.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CENPC</td>
+<td>Statistical genetics (COPD GWAS landscape, locus-overlap unconfirmed)</td>
+<td>Large-scale COPD GWAS meta-analysis identified 82 genome-wide-significant loci for COPD; whether this specific chr4:66.1-67.25 Mb region is among them could not be confirmed from the abstract/available text (open gap, not asserted as included or excluded).</td>
+<td>Sakornsakolpat P, et al. Nat Genet. 2019;51(3):494-505. PMID 30804561, DOI 10.1038/s41588-018-0342-2</td>
+<td>WEAKENED (borderline CONTESTED) — CENPC nomination overall</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CENPC</td>
+<td>Statistical genetics (smoking-trait GWAS, locus-overlap unconfirmed)</td>
+<td>GSCAN meta-analysis (n up to 1.2M) identified 566 variants across 406 loci for tobacco/alcohol use traits (smoking initiation, cessation, heaviness, alcohol use); phenotype set matches the smoking/behavioral traits Open Targets reports colocalizing with this locus's COPD signal, but locus-specific (chr4:66.9-67.0 Mb) inclusion in the 406 loci could not be confirmed from the abstract.</td>
+<td>Liu M, Jiang Y, Wedow R, et al. Nat Genet. 2019;51(2):237-244. PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
+<td>WEAKENED (borderline CONTESTED) — supports smoking-mediation hypothesis, argues against a lung-intrinsic CENPC mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CENPC</td>
+<td>Structural/mechanistic biology (non-lung)</td>
+<td>CENP-C directly recruits PLK-1 to kinetochores (alongside BUB-1), controlling chromosome alignment and segregation fidelity during meiosis I — a general cell-division mechanism study in C. elegans oocytes, not lung tissue.</td>
+<td>Taylor SJP, Bel Borja L, Soubigou F, et al. eLife. 2023;12. PMID 37067150, DOI 10.7554/eLife.84057</td>
+<td>WEAKENED — generic essential-gene biology, no lung relevance shown</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CENPC</td>
+<td>Structural/mechanistic biology (non-lung)</td>
+<td>CENP-C is identified as a kinetochore-localized interacting partner of the motor protein Kif4, relevant to chromosome-segregation fidelity in mouse oocyte meiosis — again a non-lung mechanistic study.</td>
+<td>Camlin NJ, McLaughlin EA, Holt JE. PLoS One. 2017;12(1):e0170650. PMID 28125646, DOI 10.1371/journal.pone.0170650</td>
+<td>WEAKENED — generic essential-gene biology, no lung relevance shown</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>EPHA5</td>
+<td>Structural/developmental biology (non-lung)</td>
+<td>EphA5 is one of three functionally interchangeable EphA receptors (with EphA4, EphA6) whose expression gradient in retinal ganglion cells directs topographic axon targeting to the superior colliculus — an established neurodevelopmental (axon-guidance) role, not a pulmonary one.</td>
+<td>Bevins N, Lemke G, Reber M. J Neurosci. 2011;31(28):10302-10310. PMID 21753007, DOI 10.1523/JNEUROSCI.1652-11.2011</td>
+<td>CONTESTED — confirms EPHA5's biology is neurodevelopmental, not lung-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>EPHA5</td>
+<td>Immunology/oncology (tangential, somatic not germline)</td>
+<td>In a retrospective Chinese lung-cancer cohort, tumors from patients with concomitant COPD had a higher somatic EPHA5 mutation frequency (24% vs 1%, P=0.002) than tumors from non-COPD lung-cancer patients, associated with higher PD-L1 expression/tumor mutation burden (&quot;improved tumor immunity&quot;). This is a somatic tumor-mutation finding in lung-cancer tissue, not a germline GWAS/eQTL link to this locus.</td>
+<td>Ma H, Zhang Q, Zhao Y, et al. Int J Chron Obstruct Pulmon Dis. 2022;17:1601-1612. PMID 35860812, DOI 10.2147/COPD.S363482</td>
+<td>CONTESTED — tangential somatic-cancer finding, does not support a germline COPD mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>EPHA5</td>
+<td>Immunology/oncology (tangential, somatic not germline)</td>
+<td>In a TCGA pan-cancer analysis, somatic EPHA5 mutation is among 12 genes whose mutations correlate with increased tumor mutation burden across ≥10 cancer types and with better overall survival in an immune-checkpoint-blockade-treated pan-cancer cohort — a cancer-immunotherapy finding, not lung/COPD-specific.</td>
+<td>Li M, Gao X, Wang X. Front Immunol. 2023;14:1090838. PMID 36911742, DOI 10.3389/fimmu.2023.1090838</td>
+<td>CONTESTED — tangential somatic-cancer finding, re-verified independently after an initial citation-write-up artifact was flagged and resolved</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>EPHA5</td>
+<td>Immunology/oncology (tangential, somatic not germline)</td>
+<td>Blood-based (ctDNA) somatic EPHA5 mutation was among several genes associated with overall survival in NSCLC patients receiving atezolizumab immunotherapy (POPLAR/OAK trial cohorts) — a somatic, treatment-response finding, not a germline COPD mechanism.</td>
+<td>Qian J, Nie W, Lu J, et al. Int J Cancer. 2019;146(11):3124-3133. PMID 31583695, DOI 10.1002/ijc.32717</td>
+<td>CONTESTED — tangential somatic-cancer finding, re-verified independently after an initial citation-write-up artifact was flagged and resolved</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
+<p><strong>CENPC (ENSG00000145241):</strong></p>
+<ul>
+<li>Genetic constraint (gnomAD): strongly LoF-constrained (LoF score ≈ 2.6e-5, obs/exp 0.625); missense/synonymous not notably constrained. Consistent with CENPC being a broadly essential gene; not disease-specific.</li>
+<li>L2G: CENPC is the only gene ever assigned a nonzero L2G score across all GWAS study-loci overlapping this locus (22 studies checked at the lead variant). COPD/chronic-airway-obstruction-specific L2G scores are low: 0.087 (GCST90476027, GCST90399695), 0.085 (GCST90480254), 0.074 (GCST90399694) — all well below Open Targets' own ~0.5 confidence threshold.</li>
+<li>Colocalization (COPD study GCST90399695, credibleSet at rs13143549): strong colocalization (H4 0.87-0.98) with smoking initiation/heaviness (&quot;ever smoker&quot; H4=0.89, cigarettes/day H4=0.87-0.92), educational attainment, fluid intelligence, drinks per week, and lung cancer/family history of lung cancer, and with the other COPD/airway-obstruction GWAS themselves. No FEV1/FEV1-FVC/spirometric trait found among the 25 of 45 total colocalizing traits retrieved (remaining 20 not retrieved).</li>
+<li>Overall target-disease association (all evidence types, genome-wide): top hit is &quot;smoking initiation&quot; (score 0.305); COPD does not appear in CENPC's top-25 associated-disease list.</li>
+</ul>
+<p><strong>EPHA5 (ENSG00000145242):</strong></p>
+<ul>
+<li>Genetic constraint (gnomAD): strongly LoF-constrained (LoF score ≈ 2.4e-9, obs/exp 0.568) — even more constrained than CENPC; missense moderately constrained.</li>
+<li>L2G: zero GWAS study-loci with any L2G prediction for EPHA5 at this locus. All 16 of EPHA5's Open Targets credible sets genome-wide are QTL studies (GTEx/other eQTL/exon/tx-usage in nerve tibial, thyroid, brain regions, pituitary, fibroblast) — none is a GWAS disease/trait study, none overlaps this locus, and every one returns an empty L2G predictions list.</li>
+<li>Colocalization: not applicable — no GWAS credible set exists for EPHA5 at this locus.</li>
+<li>Overall target-disease association: top hit is medullary thyroid carcinoma (0.542); COPD does not appear in EPHA5's top-25 associated-disease list. Smoking initiation appears at 0.309 (rank ~13).</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>CENPC — confidence LOW.</strong></p>
+<p>This is a close call between two weakly supported candidates, and the call should be read
+as low-confidence rather than a resolved answer. CENPC is favored over EPHA5 for three
+reasons visible in the table and Open Targets summary above: (1) it is the nearest
+protein-coding gene and the only FLAMES-prioritized candidate; (2) it is the only gene
+Open Targets' L2G algorithm ever nominates at any GWAS study-locus overlapping this
+region, including the COPD-specific studies (scores 0.074-0.087) — weak, but EPHA5 has
+<em>zero</em> L2G or colocalization support anywhere in Open Targets for this locus, a systematic
+null across all 16 of its independent credible sets; and (3) EPHA5 was explicitly marked
+<strong>CONTESTED</strong> by the red-team-skeptic, while CENPC was marked <strong>WEAKENED/borderline
+CONTESTED</strong> — a meaningfully less negative verdict.</p>
+<p>That said, CENPC's own case is far from strong, and the skeptic's critique should weigh
+heavily on how this pick is used: CENPC's transcript sits outside the locus's own stated
+boundary in a genuine gene desert (a long-range, proximity-driven nearest-gene call); its
+COPD-specific L2G scores are well below Open Targets' own confidence threshold; there is
+no published literature placing CENPC in airway/alveolar structural biology or in any
+COPD-relevant immune program (the one candidate immunology citation, a 1998 CREST-antigen
+paper, was found on verification to be about CENP-A, not CENP-C, and is excluded — see
+audit); and, most importantly, this locus's COPD credible set colocalizes far more
+strongly with smoking initiation/heaviness and cognitive/behavioral traits than with any
+lung-function trait, and CENPC's own strongest genome-wide disease association is
+&quot;smoking initiation,&quot; not COPD. The single most quantitatively substantial piece of
+evidence at this locus argues for a smoking/behavior-mediated mechanism (prior #1 in the
+pipeline's biological priors) rather than for CENPC acting through lung-intrinsic biology.</p>
+<p><strong>Runner-up:</strong> EPHA5 (PoPS-only, CONTESTED, no statistical or mechanistic support beyond
+tangential somatic-cancer literature).</p>
+<p><strong>What would resolve this:</strong> (a) direct confirmation of whether chr4:66.9-67.25 Mb appears
+among the loci reported in the Sakornsakolpat 2019 COPD GWAS (PMID 30804561) or the GSCAN
+2019 smoking/tobacco GWAS (PMID 30643251) supplementary tables — neither could be
+confirmed from abstracts alone; (b) retrieval of the remaining 20 (of 45) colocalizing
+traits at this locus to rule out an undetected FEV1/FEV1-FVC signal; (c) a fresh
+independent literature/contradiction search for both genes and a re-check of the two
+EPHA5 somatic-mutation citations' broader context — the red-team-skeptic's search budget
+was exhausted before it could run its own contradiction-search pass on this locus, so this
+critique rests entirely on the researcher's original searches, the Open Targets pull, and
+one follow-up re-verification, not on an independent skeptic search; and (d) direct
+lung-tissue/airway-epithelium expression or functional data for CENPC, which is currently
+absent from the literature reviewed.</p>
+
+</body>
+</html>

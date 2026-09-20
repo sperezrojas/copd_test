@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2_61850001-62250000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-261850001-62250000-nearest-gene-commd1">Evidence table — locus 2:61850001-62250000 (nearest gene COMMD1)</h1>
+<p><strong>Lead variant:</strong> rs55677935 (missense, COMMD1, PIP=0.579, chr2:62,000,878 GRCh38)
+<strong>Credible set:</strong> 5 variants; 4 assigned to COMMD1 (rs55677935 missense PIP=0.579,
+rs140099906 intron PIP=0.134, rs146396094 intron PIP=0.126, rs72821346 intron PIP=0.073;
+~92% of summed PIP), 1 intergenic/non-coding with no gene assignment (rs141953614,
+PIP=0.076).
+<strong>Candidate genes evaluated:</strong> COMMD1 (nearest gene + credible-set gene), CCT4
+(PoPS-prioritized), B3GNT2 (ABC-prioritized). FAM161A (marginal boundary overlap, no
+prioritization signal) was scoped out by the researcher as implausible (retinal ciliary
+gene, no lung biology) and is not included in the table below — see audit appendix.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COMMD1</td>
+<td>Structural (COPD lung tissue, protein-correlational)</td>
+<td>In COPD lung tissue, emphysematous areas (vs non-emphysematous areas, same patients) show significantly lower COMMD1 protein alongside lower elastin, LOX, LOXL1, LOXL2, HIF-1α, PTEN; proposes decreased COMMD1 (via HIF-1α) contributes to emphysema's elastic-fiber/protease-antiprotease abnormalities. Cross-sectional/correlational — cannot distinguish cause from downstream consequence of tissue hypoxia/destruction.</td>
+<td>Besiktepe et al 2017, J Trace Elem Med Biol, PMID 28965583, DOI 10.1016/j.jtemb.2017.08.011</td>
+<td>WEAKENED — most COPD-relevant citation at this locus, but correlational only, doesn't test the genetic variant, and directionally inconsistent with item below (COMMD1 up, not down, in NSCLC)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>COMMD1</td>
+<td>Immune (CF bronchial epithelium model, not COPD)</td>
+<td>COMMD1 knockdown increases NF-κB transcription; overexpression inhibits NF-κB and decreases IL-8 in bronchial epithelial cell lines.</td>
+<td>de Becdelièvre et al 2013, Int J Biochem Cell Biol, PMID 23892095, DOI 10.1016/j.biocel.2013.07.012</td>
+<td>WEAKENED — plausible airway-epithelial/IL-8 mechanism, but demonstrated in CF, not COPD; transfer to COPD is inference, not shown</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>COMMD1</td>
+<td>Structural (CF/ion-transport model, not COPD)</td>
+<td>COMMD1 interacts with CFTR, protects it from ubiquitination, promotes surface expression; also interacts with ENaC (sodium uptake).</td>
+<td>Drévillon et al 2011, PLoS One, PMID 21483833, DOI 10.1371/journal.pone.0018334</td>
+<td>WEAKENED — CF/mucociliary-axis relevance to COPD is plausible but not established; no &quot;acquired CFTR dysfunction in COPD/smokers&quot; literature was cited to bridge this</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>COMMD1</td>
+<td>Immune (review, mechanism, not disease-specific)</td>
+<td>COMMD protein family (incl. COMMD1) terminates canonical NF-κB signaling to prevent chronic inflammation; reviews CFTR/ENaC interactions.</td>
+<td>Bartuzi, Hofker, van de Sluis 2013, Biochim Biophys Acta, PMID 24080195, DOI 10.1016/j.bbadis.2013.09.014</td>
+<td>WEAKENED — general mechanistic background, not COPD-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>COMMD1</td>
+<td>Structural/mechanistic (oncology, not COPD)</td>
+<td>COMMD1 binds HIF-1α, blocks HIF-1α/β dimerization; reduced COMMD1 correlates with tumor invasiveness (incl. lung cancers).</td>
+<td>van de Sluis et al 2010, J Clin Invest, PMID 20458141, DOI 10.1172/JCI40583</td>
+<td>WEAKENED — generic hypoxia/oncology pathway mechanism, not lung- or COPD-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>COMMD1</td>
+<td>Immune/mechanistic (lung cancer cell line, not COPD)</td>
+<td>In COMMD1-knockout NCI-H460 lung cancer cells, an anticancer peptide's NF-κB/HIF-1 modulation is impaired.</td>
+<td>Daghero et al 2020, Molecules, PMID 33396282, DOI 10.3390/molecules26010152</td>
+<td>WEAKENED — oncology pharmacology model; generic pathway relevance only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>COMMD1</td>
+<td>Structural (oncology, not COPD)</td>
+<td>COMMD1 required for DNA double-strand break repair; upregulated in NSCLC, with high levels associated with worse prognosis.</td>
+<td>Suraweera et al 2021, Cancers (Basel), PMID 33669398, DOI 10.3390/cancers13040830</td>
+<td>WEAKENED — oncology finding; notably COMMD1 is UP in NSCLC here vs DOWN in emphysema (Besiktepe et al above) — a directional inconsistency across disease contexts that argues against a single unified &quot;COMMD1 dose&quot; narrative</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCT4</td>
+<td>Immune/mechanistic (lung adenocarcinoma tumor immunology, not COPD)</td>
+<td>CCT4 upregulated in lung adenocarcinoma (LUAD), correlates with reduced Th1/CD8+T and increased Th2 tumor infiltration; knockdown suppresses LUAD proliferation/migration/invasion.</td>
+<td>Wu et al 2025, Front Immunol, PMID 41403933, DOI 10.3389/fimmu.2025.1714837</td>
+<td>HOLDS (as a correctly-scoped negative/non-supportive finding) — tumor-immune Th1/Th2 skewing has no established bridge to COPD's non-malignant airway inflammatory programs; researcher appropriately did not over-interpret it as COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>B3GNT2</td>
+<td>Immune/statgen (ankylosing spondylitis, not COPD)</td>
+<td>B3GNT2 SNPs associated with AS susceptibility/severity in HLA-B27+ patients; B3GNT2 mRNA negatively correlates with CRP, ESR, and BASFI.</td>
+<td>Wang et al 2021, J Formos Med Assoc, PMID 34645591, DOI 10.1016/j.jfma.2021.09.010</td>
+<td>WEAKENED — real AS genetics, but ~200kb from the lead variant with no assigned credible-set PIP and no established LD/shared-mechanism link to this COPD signal; AS and COPD are mechanistically distinct diseases</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>B3GNT2</td>
+<td>Immune/statgen (ankylosing spondylitis, NK-cell axis, not COPD)</td>
+<td>NK-cell-specific chromatin/expression enrichment for AS heritability (more than T/B cells/monocytes); B3GNT2 one of 4 AS loci with NK-cell-specific eQTL colocalization.</td>
+<td>Chiñas et al 2024, HGG Adv, PMID 39468794, DOI 10.1016/j.xhgg.2024.100375</td>
+<td>WEAKENED — genuine cell-type-specific immune evidence, but for an NK-cell/AS axis distinct from COPD's classically implicated neutrophil/CD8+T/Th17/macrophage programs</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>B3GNT2</td>
+<td>Immune/statgen (ankylosing spondylitis, MR/colocalization, not COPD)</td>
+<td>SMR/Bayesian colocalization (IGAS discovery, FinnGen/UKB replication) names B3GNT2 among 4 causal AS genes; higher B3GNT2 protein associated with decreased AS risk.</td>
+<td>Dai et al 2024, J Transl Med, PMID 39707330, DOI 10.1186/s12967-024-05925-x</td>
+<td>WEAKENED — same AS-specific, distance/LD caveat as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>B3GNT2</td>
+<td>Statgen (ankylosing spondylitis GWAS meta-analysis, preprint, not COPD)</td>
+<td>Largest AS GWAS meta-analysis to date; 2-sample MR supports B3GNT2 (not COMMD1 or another 2p15 gene) as the causal gene at the chr2p15 AS association; reduced B3GNT2 mRNA causally associated with increased AS risk.</td>
+<td>Brown et al 2025, Research Square preprint, PMID 40709250, DOI 10.21203/rs.3.rs-6917334/v1</td>
+<td>WEAKENED — confirmed B3GNT2-specific (not COMMD1) by citation-verifier, but still an AS finding, still unpublished/not peer-reviewed, and still subject to the same distance/LD caveat</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>B3GNT2</td>
+<td>Structural/mechanistic (coagulation biology, not COPD or immune)</td>
+<td>B3GNT2 is a novel locus for circulating Factor VIII and von Willebrand factor levels; knockdown decreases FVIII/VWF release from endothelial cells.</td>
+<td>de Vries et al 2024, Blood, PMID 38320121, DOI 10.1182/blood.2023021452</td>
+<td>WEAKENED — demonstrates B3GNT2 pleiotropy across an unrelated systemic axis (hemostasis); no COPD/lung relevance</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not reviewed by citation-verifier or red-team-skeptic)</h2>
+<ul>
+<li><strong>COMMD1 (ENSG00000173163):</strong> No COPD/FEV1/FEV1-FVC/smoking-initiation curated
+evidence (0 rows). No COPD entry among 125 genome-wide scored disease associations
+(top hits: neurodegenerative disease, Parkinson disease, autoimmune disease). At this
+exact locus, all 4 COMMD1-assigned credible-set variants (rs55677935, rs140099906,
+rs146396094, rs141953614) are registered in Open Targets as belonging to fine-mapped
+<strong>C-reactive protein (CRP) levels</strong> GWAS credible sets (3 independent studies:
+GCST009777, GCST90692828, GCST90691573), not COPD/lung function — this pipeline's
+own COPD signal is not indexed in Open Targets Genetics for this locus. COMMD1 is the
+consistent top (often sole) L2G gene across all three CRP credible sets (L2G
+0.50-0.94). gnomAD constraint: LoF oe=0.64, CI 0.385-1.12 (crosses 1, not confidently
+constrained).</li>
+<li><strong>CCT4 (ENSG00000115484):</strong> No COPD/FEV1/FEV1-FVC/smoking-initiation curated evidence
+(0 rows). No COPD entry among 146 scored disease associations. Appears only as a
+much lower-scoring secondary L2G candidate (0.069) in one of the three CRP credible
+sets (rs146396094), never top-ranked. gnomAD constraint: LoF oe=0.34, CI 0.19-0.65
+(confidently constrained — consistent with core/essential chaperonin subunit).</li>
+<li><strong>B3GNT2 (ENSG00000170340):</strong> No COPD/FEV1/FEV1-FVC/smoking-initiation curated
+evidence (0 rows). No COPD entry among 110 scored disease associations; strong general
+autoimmune/inflammatory signature instead (hypothyroidism, autoimmune disease,
+psoriasis, ankylosing spondylitis, rheumatoid arthritis, Crohn's, ulcerative colitis).
+Appears only as a lower-scoring secondary L2G candidate (0.10-0.16) in the
+rs146396094 CRP credible set, never top-ranked; no credible-set variant assigned
+directly to B3GNT2 in this locus's fine-mapping. gnomAD constraint: LoF oe=0.42, CI
+0.27-0.67 (constrained).</li>
+<li><strong>Cross-cutting:</strong> The only GWAS trait with fine-mapped credible-set data at this
+exact locus, across all queryable credible-set variants, is CRP levels — not COPD or
+any spirometric trait. This is a structured-database finding about what IS indexed,
+not a claim that COPD biology is absent at this locus.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>COMMD1 — Confidence: LOW.</strong></p>
+<p>COMMD1 is the best-supported single pick at this locus, but the confidence ceiling is
+set by the weakest link identified by the red-team-skeptic, not by the volume of
+functional literature. The case for COMMD1 rests on three independent lines, each with
+material limitations: (1) <strong>Positional/fine-mapping</strong>: COMMD1 is the nearest gene and
+carries 4 of 5 credible-set variants (~92% of summed PIP), including the lead missense
+variant rs55677935 (PIP=0.579) — but the skeptic notes this variant's actual functional
+consequence (domain location, predicted deleteriousness) has not been characterized in
+any cited source; &quot;missense + high PIP&quot; is a reasonable prior, not direct functional
+evidence. (2) <strong>Open Targets L2G</strong>: COMMD1 is the consistent top (often sole) L2G gene
+across three independent CRP-level GWAS credible sets registered at this exact locus,
+clearly outscoring CCT4 and B3GNT2 in the one study where they appear at all — this is
+real evidence for &quot;COMMD1 over its neighbors&quot; as the physically/regulatorily implicated
+gene. But CRP is a nonspecific systemic acute-phase marker, and this pipeline's own
+COPD/FEV1 signal is not itself indexed in Open Targets at this locus — so the L2G
+evidence resolves <em>which gene</em> better than it resolves <em>whether this is lung biology</em>.
+(3) <strong>Functional literature</strong>: one paper (Besiktepe et al 2017) directly measures COMMD1
+in human COPD/emphysema lung tissue (lower in emphysematous regions), which is
+genuinely the most disease-relevant citation at this locus, but it is correlational,
+cross-sectional, and does not test the genetic variant — it cannot separate COMMD1 loss
+as cause vs. consequence of tissue destruction. The remaining six COMMD1 citations
+(NF-κB, CFTR/ENaC, HIF-1α, DNA repair) are from cystic fibrosis or oncology models, not
+COPD, and one of them (Suraweera et al 2021, NSCLC) reports COMMD1 <em>upregulated</em> with
+<em>worse</em> prognosis — directionally inconsistent with the emphysema paper's finding of
+COMMD1 being <em>lower</em> in more-damaged tissue, undercutting any simple unified
+&quot;COMMD1 dose&quot; narrative across contexts.</p>
+<p><strong>Runner-up: B3GNT2</strong> has genuinely strong, replicated, mechanistically-validated
+genetics — but for ankylosing spondylitis (AS), not COPD, via an NK-cell-specific immune
+axis mechanistically distinct from COPD's classically implicated neutrophil/CD8+T/Th17/
+macrophage programs, and it sits ~200kb from the lead variant with zero assigned
+credible-set PIP, relying entirely on ABC (enhancer-promoter) linkage — a method with a
+non-trivial false-positive rate at this range. No LD check between the AS-associated
+B3GNT2 variants and the COMMD1 credible-set variants was performed or is available from
+current sources, so whether this is the same causal signal or an independent,
+coincidentally-adjacent AS locus in a gene-dense immune-active region of chr2p13-15
+remains genuinely unresolved. <strong>CCT4</strong> is the weakest candidate: no credible-set variant,
+no COPD/lung literature at all, high gnomAD constraint more consistent with general
+essentiality (core TRiC/CCT chaperonin subunit) than COPD-specific dosage sensitivity,
+and its sole functional citation is lung-cancer tumor immunology with no established
+bridge to COPD.</p>
+<p><strong>What would resolve this:</strong> (i) direct functional/computational characterization of
+rs55677935 (AlphaMissense/CADD, protein domain/structure context); (ii) an LD check
+between the B3GNT2/AS-associated variants and this locus's COPD credible-set variants,
+to determine whether B3GNT2's AS signal and this COPD signal are the same or
+independent; (iii) a COPD- or spirometry-specific GWAS/TWAS/MR/colocalization study
+directly naming any of these three genes (none currently exists in PubMed or Open
+Targets for any of the three); (iv) confirmation of whether smoking-initiation/heaviness
+GWAS overlap was checked for CCT4 and B3GNT2 specifically (only explicitly confirmed
+negative for COMMD1). Given the near-total absence of COPD-specific genetic or
+functional evidence for any gene at this locus, and the reliance on cross-disease
+inference throughout, LOW confidence is the appropriate ceiling — this is the
+best-supported call among three candidates with genuinely thin, non-COPD-specific
+support, not a well-evidenced COPD gene assignment.</p>
+
+</body>
+</html>

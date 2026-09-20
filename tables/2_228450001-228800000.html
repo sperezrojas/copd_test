@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2_228450001-228800000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-2228450001-228800000-grch38">Evidence table — Locus 2:228450001-228800000 (GRCh38)</h1>
+<p><strong>Lead variant:</strong> rs62201738 (2:228,637,481, GRCh38). <strong>Credible set:</strong> 19 variants (ABF
+fine-mapping, PIP 0.19–0.005), all but two (rs12620170, rs6744195) intronic /
+non-coding-transcript variants within the <strong>LINC01807</strong> gene body; none missense or
+splice-donor/acceptor. <strong>Candidate genes:</strong> PID1 (nearest gene), SPHKAP (FLAMES-
+prioritized), CCL20 (PoPS-prioritized), LINC01807 (physical host of the credible set).</p>
+<p>All citations below carry verifier verdict VERIFIED (see
+<code>evidence_tables/_status/2_228450001-228800000/verified_citations.md</code> for full
+per-citation justification). Verified date for all: 2026-09-11.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PID1</td>
+<td>Statistical genetics</td>
+<td>Korean case-control study (1,000 cases/1,000 controls): a PID1 SNP significantly associated with COPD susceptibility after adjusting for age, sex, smoking intensity, alongside FAM13A; no significant SNP×smoking interaction for PID1 (unlike ACN9/FAM13A in the same study)</td>
+<td>PMID 24737086 / DOI 10.1007/s00408-014-9579-4</td>
+<td>WEAKENED (real but single, unreplicated candidate-gene study)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PID1</td>
+<td>Statistical genetics (landscape context, locus/gene pairing not independently confirmed in paper)</td>
+<td>Large UK Biobank + ICGC COPD GWAS (82 loci) providing broader genetic-landscape context (lung-tissue/smooth-muscle cell-type enrichment, shared loci with asthma/pulmonary fibrosis)</td>
+<td>PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
+<td>WEAKENED (landscape citation, not locus-specific confirmation)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PID1 / SPHKAP</td>
+<td>Statistical genetics (landscape context, locus/gene pairing not independently confirmed in paper)</td>
+<td>Companion SpiroMeta/UK Biobank lung-function GWAS (279 signals for FEV1, FEV1/FVC, FVC, PEF) providing population-based spirometric evidence base</td>
+<td>PMID 30804560 / DOI 10.1038/s41588-018-0321-7</td>
+<td>WEAKENED (landscape citation, not locus-specific confirmation)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PID1</td>
+<td>Structural/developmental (non-lung)</td>
+<td>PID1 is an insulin-dependent adaptor regulating LRP1/LDLR-mediated hepatic lipoprotein endocytosis — liver/metabolic biology</td>
+<td>PMID 30100244 / DOI 10.1016/j.molmet.2018.07.010</td>
+<td>WEAKENED (no lung relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PID1</td>
+<td>Structural/developmental (non-lung)</td>
+<td>PID1 has growth-inhibitory, pro-apoptotic function in embryonal brain tumor/glioma cell lines, correlating with better patient survival</td>
+<td>PMID 24300787 / DOI 10.1158/1078-0432.CCR-13-2053</td>
+<td>WEAKENED (no lung relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PID1</td>
+<td>Structural/developmental (non-lung)</td>
+<td>PID1 is NFκB-responsive and increases chemotherapy-induced apoptosis in medulloblastoma/glioblastoma cell lines</td>
+<td>PMID 28400607 / DOI 10.1038/s41598-017-00947-6</td>
+<td>WEAKENED (brain-tumor NFκB finding, not immune/airway pathway support)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPHKAP</td>
+<td>Structural (non-lung biochemistry)</td>
+<td>SPHKAP/SKIP negatively regulates SPHK1 (sphingosine kinase 1) activity and downstream proliferation/apoptosis effects via the S1P pathway (in vitro fibroblast biology)</td>
+<td>PMID 12080051 / DOI 10.1074/jbc.M202841200</td>
+<td>WEAKENED (no lung relevance; flags unexplored SPHK1/ceramide-COPD literature gap)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPHKAP</td>
+<td>Structural (non-lung biochemistry)</td>
+<td>SPHKAP/SKIP is a PKA-RI-selective AKAP expressed in heart and spleen tissue, localizing PKA type I signaling to the cytoplasm</td>
+<td>PMID 20394097 / DOI 10.1002/cbic.201000058</td>
+<td>WEAKENED (no lung relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPHKAP</td>
+<td>Structural (non-lung biochemistry)</td>
+<td>SPHKAP/SKIP anchors PKA-RI at the inner mitochondrial membrane, a mitochondrial/cAMP-compartmentalization role</td>
+<td>PMID 22084075 / DOI 10.1073/pnas.1107182108</td>
+<td>WEAKENED (no lung relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCL20</td>
+<td>Statistical genetics/immune (gut, not lung)</td>
+<td>CCL20 is among NF-κB-regulated, MAST3-modulated proinflammatory genes enriched in inflamed ulcerative colitis mucosa</td>
+<td>PMID 21994190 / DOI 10.1002/ibd.21887</td>
+<td>CONTESTED (gut mucosal disease, not lung)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCL20</td>
+<td>Immune/inflammatory (review)</td>
+<td>CCL20-CCR6 shows heightened expression in allergic asthma, chronic airway inflammation, NSCLC, and COPD; CCL20-CCR6 blockade proposed as therapeutic target</td>
+<td>PMID 39731176 / DOI 10.1186/s12950-024-00427-5</td>
+<td>CONTESTED (review/aspirational language, not causal or genetic claim; risk of review-citing-review circularity)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCL20</td>
+<td>Immune/inflammatory (mouse model)</td>
+<td>In a mouse COPD airway-remodeling model, IL-17A/IL-17RA signaling increased CCL20 (with IL-6) in airway tissue and bronchial fibroblasts, linking CCL20 to an IL-17A-driven Th17/Tc17-associated inflammatory-fibrotic circuit</td>
+<td>PMID 40360557 / DOI 10.1038/s41598-025-00458-9</td>
+<td>CONTESTED (animal model; CCL20 one of several co-elevated cytokines, not isolated as the driver)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCL20</td>
+<td>Immune/inflammatory (human cell coculture)</td>
+<td>In COPD-patient-derived bronchial epithelial/fibroblast cocultures, CCL20 (with IL-6, CXCL8) was among mediators measured alongside MUC5AC/MUC5B mucin hypersecretion</td>
+<td>PMID 41955101 / DOI 10.1152/ajplung.00315.2025</td>
+<td>CONTESTED — this paper's own data point to IL-6, not CCL20, as the mechanistically proven driver; using it to support CCL20 is an internal contradiction</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCL20</td>
+<td>Immune/inflammatory (rat model, non-genetic)</td>
+<td>In a rat model of CO-induced emphysematous lung injury (COPD-like pathology, not genetic COPD), CCL20 was among several cytokines co-expressed by CD86+/CD163+ macrophages and neutrophils</td>
+<td>PMID 40441279 / DOI 10.1016/j.envpol.2025.126521</td>
+<td>CONTESTED (toxicant animal model, not genetic association)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CCL20</td>
+<td>Immune/inflammatory (review, non-lung)</td>
+<td>CCL20-CCR6 axis recruits Th17, γδ T cells, and ILC3s mainly in IBD, psoriasis, rheumatoid arthritis</td>
+<td>PMID 42284975 / DOI 10.1016/j.prp.2026.156586</td>
+<td>CONTESTED (reinforces CCL20's best-established disease associations are gut/skin/joint, not lung)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC01807</td>
+<td>Statistical genetics (different phenotype/population; LD-block identity unconfirmed)</td>
+<td>A locus &quot;within or near LINC01807&quot; was one of four genome-wide-significant loci for circulating melatonin in a Han Chinese GWAS; GTEx tissue enrichment neural/vascular/adrenal, not lung</td>
+<td>PMID 42565856 / DOI 10.1007/s00439-026-02859-w</td>
+<td>HOLDS (for the modest claim: generic pleiotropy of a long intronic lncRNA locus, not lung/COPD relevance)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PID1 / SPHKAP (background context only, no gene-specific claim)</td>
+<td>Statistical genetics (smoking-behavior GWAS; searched but PID1/SPHKAP not found named)</td>
+<td>GSCAN consortium smoking-initiation/tobacco-use GWAS; searched directly for PID1/SPHKAP as prioritized genes — not found named in this paper</td>
+<td>PMID 30643251</td>
+<td>Not critiqued (background search target, absence-of-evidence only)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PID1 / SPHKAP (background context only, no gene-specific claim)</td>
+<td>Statistical genetics (smoking-behavior GWAS; searched but PID1/SPHKAP not found named)</td>
+<td>Smoking-trajectory/smoking-status GWAS meta-analysis (842,000 individuals); searched directly for PID1/SPHKAP — not found named</td>
+<td>PMID 33082346</td>
+<td>Not critiqued (background search target, absence-of-evidence only)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PID1 / SPHKAP (background context only, no gene-specific claim)</td>
+<td>Statistical genetics (smoking-behavior TWAS; searched but PID1/SPHKAP not found named)</td>
+<td>Multi-ancestry cerebral cortex TWAS for smoking behaviors (719 genes identified, 249 prioritized); searched directly for PID1/SPHKAP — not found named</td>
+<td>PMID 38816585</td>
+<td>Not critiqued (background search target, absence-of-evidence only)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p><strong>Locus-to-gene (L2G) predictions for lead variant rs62201738</strong>, across 18 GWAS studies
+(COPD case-control, FEV1, FEV1/FVC, PEF, asthma, smoking-status) whose credible sets
+contain this variant: the ONLY two genes ever nominated are <strong>PID1</strong> and <strong>SPHKAP</strong>.</p>
+<ul>
+<li>PID1 scores higher in 5/6 direct COPD case-control GWAS and both combined
+smoking-status+COPD GWAS (e.g. PID1 0.470 vs SPHKAP 0.409 in GCST90399697).</li>
+<li>SPHKAP scores higher in essentially all FEV1/FVC-ratio- and PEF-specific GWAS (e.g.
+SPHKAP 0.724 vs PID1 0.182 in GCST007431).</li>
+<li>FEV1-specific studies split (one favors each gene).</li>
+<li>CCL20 and LINC01807 are never nominated by L2G in any of the 18 studies.</li>
+</ul>
+<p><strong>Colocalization (GWAS-GWAS, COLOC/eCAVIAR):</strong> Cross-trait H4 &gt; 0.95 consistently between
+COPD, FEV1/FVC, FEV1, PEF, asthma, and smoking-status-measurement GWAS — confirms a
+single shared locus signal spanning pulmonary function, COPD case-control status, and
+smoking behavior. No eQTL/pQTL/sQTL/tuQTL colocalization data resolvable at this exact
+variant (count = 0) — absence of data, not evidence against a molecular-QTL mechanism.</p>
+<p><strong>Genetic constraint:</strong> PID1 LoF oe = 0.518 (0.312–0.905), moderately constrained.
+SPHKAP LoF oe = 0.478 (0.392–0.586), constraint score ≈2.4×10⁻⁶ — more strongly
+LoF-constrained than PID1. CCL20 too small a gene (few expected LoF variants) for an
+informative constraint estimate. LINC01807 has no constraint data (non-coding gene).</p>
+<p><strong>Aggregate target-disease association scores (all evidence types):</strong> PID1-COPD 0.2615
+(genetic_association-driven, sub-score 0.4279; literature sub-score only 0.0468).
+SPHKAP-COPD 0.2342 (genetic_association-driven, sub-score 0.3853; no literature
+sub-score recorded). CCL20-COPD 0.0951 (driven almost entirely by literature/text-mining,
+sub-score 0.7821; essentially no genetic_association sub-score for COPD specifically).
+LINC01807 has no COPD association recorded at all (top associations are
+rna_expression-only hits for NSCLC and colorectal cancer, both very low score).</p>
+<p>Full detail: <code>evidence_tables/_status/2_228450001-228800000/opentargets.md</code>.</p>
+<hr>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>PID1 — confidence LOW.</strong></p>
+<p>This is a close call between PID1 and SPHKAP, and the pipeline's own red-team-skeptic
+explicitly recommends against treating either as clearly preferred. I am naming PID1 as
+the marginally better-supported pick, but the case is genuinely thin and could reasonably
+be called a tie.</p>
+<p><strong>Why PID1, on balance:</strong> (1) PID1 is the only one of the two genes with any direct
+human COPD case-control genetic-association evidence from a source outside the discovery
+GWAS itself — the Kim et al. 2014 Korean candidate-gene study (PMID 24737086) found a
+PID1 SNP associated with COPD after adjusting for smoking intensity, with no
+SNP×smoking interaction detected, which is at least a modest data point against the
+&quot;this locus is purely a smoking-behavior signal&quot; alternative hypothesis. (2) PID1
+outscores SPHKAP by L2G in 5 of 6 direct COPD case-control GWAS and in both combined
+smoking-status+COPD GWAS, which is the disease definition this pipeline is built around,
+even though the skeptic correctly notes this margin is thin (0.47 vs 0.41) and that
+spirometric-trait GWAS (which favor SPHKAP) should be weighted comparably, not
+discounted, per this pipeline's own priors on lung-function evidence.</p>
+<p><strong>Why this is not a HIGH- or even MODERATE-confidence call:</strong> SPHKAP wins L2G decisively
+in essentially every FEV1/FVC-ratio- and PEF-specific GWAS at this locus (e.g. 0.72 vs
+0.18 in GCST007431) — spirometric traits that are directly core to COPD pathophysiology
+per this pipeline's own biological priors — and SPHKAP is more strongly LoF-constrained
+than PID1 (a marker of likely functional importance, though not of tissue specificity).
+Neither gene has a shred of independently established lung-specific structural,
+developmental, or immune/inflammatory literature: PID1's documented biology is
+insulin/lipid-metabolism signaling (liver) and growth/apoptosis regulation (brain
+tumors); SPHKAP's is cAMP/PKA scaffolding (heart, spleen, mitochondria) and sphingosine
+kinase regulation (fibroblasts) — none of it lung tissue. No eQTL/pQTL/sQTL
+colocalization data exists at this variant to nominate either gene via a molecular
+mechanism. The entire credible set sits inside the neighboring lncRNA LINC01807, which
+is itself never prioritized by any method (L2G/MAGMA/PoPS/ABC) and has no COPD or lung
+association at all — the causal mechanism, whichever gene it points to, most plausibly
+acts through distal regulatory elements within/near LINC01807, a hypothesis this
+literature review cannot further adjudicate.</p>
+<p><strong>Runner-up:</strong> SPHKAP, essentially tied. <strong>What would resolve the tie:</strong> (a) a
+lung-tissue eQTL or splice-QTL colocalization at rs62201738 (or its LD proxies) for
+either gene, which Open Targets currently lacks; (b) an independent PID1 replication
+study outside the single Korean cohort, or conversely a null-replication report; (c) any
+literature search connecting SPHKAP's sphingosine-kinase-inhibitory function to the
+established ceramide/sphingolipid-signaling literature in emphysema pathogenesis, which
+the skeptic flagged as an unexplored but plausible mechanistic thread that was not
+searched in this pass.</p>
+<p><strong>CCL20</strong> is explicitly downgraded and not treated as competitive here: it is never
+nominated by L2G at this locus in any of 18 GWAS studies, its aggregate Open Targets
+COPD association is driven almost entirely by literature/text-mining rather than
+genetics, it sits ~820kb from the lead variant (well outside the credible set), and one
+of its own key supporting citations (Tasena et al. 2026, PMID 41955101) names a
+different gene (IL-6) as the mechanistically proven driver in the very same experiment.
+Its real CCL20-CCR6/Th17 airway-inflammation literature is set against a much larger and
+better-established CCL20 literature in gut (IBD) and skin (psoriasis) mucosal immunity,
+exactly as the pipeline's biological priors anticipated as a possible outcome.</p>
+<p><strong>LINC01807</strong> is carried forward only as the physical, non-causal host of the credible
+set (no computational gene-prioritization method nominates it, and it has no COPD
+association in Open Targets), not as a competing causal candidate.</p>
+<p><strong>Caveat on search coverage:</strong> the red-team-skeptic's own web-search budget was exhausted
+before it could run any independent contradiction search this session — its critique is
+reasoned from the assembled evidence, not from a fresh literature check. A follow-up
+search pass (PID1 replication outside the Korean cohort; SPHKAP-sphingolipid-pathway COPD
+literature; any paper naming an alternative causal gene at this 2q37 locus) is recommended
+before this locus's prioritization is finalized at higher confidence.</p>
+
+</body>
+</html>

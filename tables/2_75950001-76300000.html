@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2_75950001-76300000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-2_75950001-76300000-chr275950001-76300000-grch38">Evidence table — locus 2_75950001-76300000 (chr2:75,950,001-76,300,000, GRCh38)</h1>
+<p>Lead variant: rs35328078 (2:76,126,909, PIP=0.663). Nearest/FLAMES-prioritized gene: GCFC2.
+MAGMA/PoPS/ABC: NA. All 76 credible-set variants are intronic/non-coding-transcript variants
+with no gene annotation; none are missense/splice-donor/splice-acceptor, so no dedicated
+per-variant literature search was required beyond the lead variant (rs35328078: no PubMed or
+GWAS Catalog record found).</p>
+<p>This locus window is a gene desert (only pseudogenes/lncRNAs lie physically inside it). GCFC2
+and MRPL19 are a closely-spaced, co-regulated gene pair ~300-420 kb from the credible-set
+interval; GCFC2 is marginally nearer and is the internal pipeline's nearest-gene/FLAMES pick.
+TACR1 (~750-900 kb away) was added to this review after red-team-skeptic review flagged it as
+biologically plausible but originally under-searched; see its own section and the Prioritized
+gene synthesis below for how its evidence is weighted differently from GCFC2/MRPL19's.</p>
+<p>Only citations with verifier verdict VERIFIED are included below. Citations with verdict
+CLAIM_MISMATCH, RETRACTED, or NOT_FOUND are listed in the audit appendix
+(audits/2_75950001-76300000_audit.md), not here.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GCFC2</td>
+<td>Statistical genetics (dyslexia/cognition)</td>
+<td>Fine-mapped DYX3 dyslexia locus on 2p12 to a 157kb region with a 16kb risk haplotype between MRPL19/C2ORF3 and FLJ13391; MRPL19 and C2ORF3 in strong LD and co-expressed; risk-haplotype carriers show attenuated expression of both genes</td>
+<td>Anthoni et al. 2007, Hum Mol Genet, PMID 17309879</td>
+<td>Contextualized as neurocognitive, not pulmonary, evidence (part of CONTESTED mechanism verdict)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Statistical genetics (cognition)</td>
+<td>MRPL19/C2ORF3 locus significantly and replicately associated with general cognitive ability (IQ) in ALSPAC + 4 replication cohorts; associated with white-matter structure (posterior corpus callosum/cingulum) in a 5th sample</td>
+<td>Scerri et al. 2012, PLoS One, PMID 23209710</td>
+<td>Neurocognitive, not pulmonary (CONTESTED mechanism)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Statistical genetics (dyslexia, non-replication)</td>
+<td>&quot;Data do not support MRPL19/C2ORF3 as a locus involved in reading abilities&quot; (negative result, same ALSPAC cohort)</td>
+<td>Scerri et al. 2011, Biol Psychiatry, PMID 21457949</td>
+<td>Illustrates inconsistent replication for this locus's specific phenotype</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Statistical genetics (dyslexia, non-replication)</td>
+<td>No marker/haplotype at MRPL19/C2ORF3 (or DYX1C1/DCDC2/KIAA0319) significant for dyslexia case-control or quantitative reading/spelling in NeuroDys meta-analysis (&gt;900 cases)</td>
+<td>Becker et al. 2014, Eur J Hum Genet, PMID 24022301</td>
+<td>Non-replication</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Statistical genetics (dyslexia, non-replication)</td>
+<td>No association of MRPL19/C2ORF3 (or ROBO1/THEM2) SNPs/haplotypes with developmental dyslexia in Indian cohort</td>
+<td>Venkatesh et al. 2013, Gene, PMID 23954868</td>
+<td>Non-replication</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Statistical genetics (dyslexia, non-replication)</td>
+<td>Positive signal for DYX1C1 only in Raine (Australian) cohort; no MRPL19/C2ORF3 replication reported</td>
+<td>Paracchini et al. 2010, Genes Brain Behav, PMID 20846247</td>
+<td>Non-replication</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Statistical genetics (review)</td>
+<td>C2ORF3 and MRPL19 summarized as DYX3 (2p) positional candidate genes for reading disability, alongside DYX2/DYX1 loci</td>
+<td>Petryshen &amp; Pauls 2009, Curr Psychiatry Rep, PMID 19302769</td>
+<td>Secondary/background context</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Statistical genetics (language/ASD)</td>
+<td>&quot;Suggestive&quot; (non-definitive) association between GCFC2 and receptive vocabulary/language performance in autism spectrum disorder cohorts (AGRE/SSC)</td>
+<td>Eicher &amp; Gruen 2014, Autism Res, PMID 25448322</td>
+<td>Neurocognitive, non-definitive</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Statistical genetics (dyslexia, non-replication)</td>
+<td>Sequencing study of 11 dyslexia candidate genes; positive for DCDC2/S100B, negative for GCFC2/C2orf3 and MRPL19</td>
+<td>Matsson et al. 2015, J Hum Genet, PMID 25877001</td>
+<td>Non-replication for GCFC2 specifically</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Statistical genetics (neuroimaging)</td>
+<td>Genome-wide-significant association between GCFC2 gene-region SNPs and hippocampal volume in a two-stage GWAS of Alzheimer's-ascertained families</td>
+<td>Melville et al. 2012, Ann Neurol, PMID 22745009</td>
+<td>Reinforces neurocognitive, not pulmonary, phenotype signature</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Structural/molecular biology</td>
+<td>Original cloning/characterization of GCF as an EGFR-promoter-binding transcriptional repressor</td>
+<td>Kageyama &amp; Pastan 1989, Cell, DOI 10.1016/0092-8674(89)90605-3</td>
+<td>Background housekeeping-biology context; no lung relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Structural/molecular biology</td>
+<td>Revised GCF cDNA/protein sequence: ~100kDa nuclear protein with leucine-zipper-like domain, nuclear localization in A431/HeLa cells</td>
+<td>Mao et al. 1999, Hokkaido Igaku Zasshi, PMID 10480038</td>
+<td>General molecular biology, not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Structural/molecular biology</td>
+<td>English peer-reviewed confirmation of corrected GCF cDNA/protein sequence (781 aa)</td>
+<td>Takimoto et al. 1999, Biochim Biophys Acta, PMID 10500253</td>
+<td>General molecular biology, not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Structural/developmental biology</td>
+<td>GCF2 (=GCFC2) mediates repression of an upstream Igf2 imprinting-control element; DNA methylation abolishes GCF2 binding/repression (mouse)</td>
+<td>Eden et al. 2001, EMBO J, PMID 11432838</td>
+<td>General developmental/imprinting biology, not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Structural/molecular biology</td>
+<td>C2ORF3 (GCFC2) is a component of the spliceosomal &quot;Intron Large&quot; complex, required for pre-mRNA splicing via intron-turnover pathway; localizes to nucleoplasm/nucleoli</td>
+<td>Yoshimoto et al. 2013, Genes Cells, PMID 24304693</td>
+<td>Most mechanistically specific GCFC2 paper found; general splicing biology, not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Structural/molecular biology</td>
+<td>GCF represses IER5 transcription via GC-rich promoter sites in HepG2 cells; repression attenuated by irradiation</td>
+<td>Yang et al. 2016, Cancer Gene Ther, PMID 26915404</td>
+<td>General transcription-factor biology, liver cell line, not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Structural/molecular biology</td>
+<td>GCFC2 listed among splicing-associated genes in a myotonic-dystrophy iPSC-cardiomyocyte CRISPR-correction transcriptome study</td>
+<td>Dastidar et al. 2021, Mol Ther, PMID 34371182</td>
+<td>General splicing biology, cardiomyocyte context, not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GCFC2</td>
+<td>Immune/inflammatory (identity caveat)</td>
+<td>Contemporaneous commentary describing a &quot;novel zinc finger nuclear factor&quot; (GC-BP) that represses macrophage IL-12 after efferocytosis as &quot;a completely new mechanism&quot;</td>
+<td>Henson 2004, Immunity, PMID 15539147</td>
+<td>VERIFIED as a commentary on the underlying mechanism, but does NOT establish GC-BP=GCFC2 (see audit appendix for the primary Kim et al. 2004 paper, which failed verification on this identity question)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TACR1</td>
+<td>Structural/mechanistic (causal mouse model)</td>
+<td>NK1 receptor (Tacr1) knockout mice show impaired cigarette-smoke-induced airway macrophage/dendritic-cell accumulation, attenuated CCL20/TGF-beta1, and no additional smoke-induced emphysema/MMP-12 production vs wild-type; pharmacological NK1 antagonism reproduces the effect</td>
+<td>De Swert et al. 2009, Respir Res, PMID 19445658</td>
+<td>VERIFIED, but INSUFFICIENT-DISTANCE-EVIDENCE overall for TACR1 — no genetic linkage (eQTL/coloc/L2G/Hi-C) connects this credible set to TACR1 despite the mechanistic strength; see Bai et al. tension below</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TACR1</td>
+<td>Structural/mechanistic (human tissue)</td>
+<td>NK1-receptor mRNA localizes to submucosal glands/airway epithelium; ~2-fold higher in smokers without obstruction vs nonsmokers, but significantly LOWER in COPD patients vs smoking controls</td>
+<td>Bai et al. 1995, Am J Physiol, PMID 7573463</td>
+<td>VERIFIED, but skeptic flags real tension with De Swert et al.'s causal direction (see audit appendix) — not confirmatory concordance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TACR1</td>
+<td>Structural/mechanistic (review)</td>
+<td>Substance-P/neurokinin-A/NK1-NK2 receptor signaling mediates bronchoconstriction and proinflammatory changes in asthma/COPD; NK1/NK2 antagonists active in animal models</td>
+<td>Joos et al. 2003, Ann N Y Acad Sci, PMID 12794061</td>
+<td>Secondary/review evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TACR1</td>
+<td>Structural/mechanistic (review)</td>
+<td>Tobacco smoke and other stimuli activate airway sensory nerves to release substance P/neurokinin A, mediating neurogenic inflammation via NK1/NK2 receptors in asthma/COPD</td>
+<td>Dinh et al. 2006, Pneumologie, PMID 16463247</td>
+<td>Secondary/review evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TACR1</td>
+<td>Immune (allergic-asthma context, not COPD)</td>
+<td>Substance-P/NK1R upregulated in circulating monocytes and B cells in allergic rhinitis/asthma patients and an ovalbumin mouse model, FceRI-dependent</td>
+<td>Han et al. 2022, Clin Exp Immunol, PMID 36001730</td>
+<td>VERIFIED but low weight for COPD-specificity (Th2/atopic program, distinct from COPD's classic neutrophilic/CD8/Th1/Th17 axis)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TACR1</td>
+<td>Statistical genetics + immune (occupational asthma, not COPD or this locus)</td>
+<td>TACR1 regulatory variant rs2287231 shows allele-dependent gene-regulatory activity (EMSA/luciferase) in lung cell lines (A549/BEAS-2B/IMR-90), from a study of diisocyanate-induced occupational asthma</td>
+<td>Bernstein et al. 2018, J Allergy Clin Immunol, PMID 29969634</td>
+<td>VERIFIED but explicitly not transferable to this locus's credible-set variant/population/disease</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TACR1</td>
+<td>Structural (cytogenetic, indirect)</td>
+<td>A 1.32-Mb prenatal microduplication region (GRCh37-era coordinates) co-locates TACR1 with FAM176A, MRPL19, and C2orf3</td>
+<td>Chen et al. 2012, J Chin Med Assoc, PMID 23331783</td>
+<td>Cytogenetic case report only; does not establish a regulatory link between the credible set and TACR1</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not">Open Targets summary (structured database lookup — not a verified literature citation; not</h2>
+<p>routed through citation-verifier or red-team-skeptic)</p>
+<p>Disease context: chronic obstructive pulmonary disease (MONDO_0005002).</p>
+<ul>
+<li><strong>GCFC2</strong> (ENSG00000005436): L2G score 0.577 at a COPD-related credible set (lead SNP
+rs17752567, ~30kb from this pipeline's own lead variant rs35328078 — likely a different
+underlying GWAS/fine-mapping run). Overall COPD association score 0.213 (entirely from
+genetic_association datatype). Colocalization: strong (h4 ~0.85-0.90) with reaction-time/
+cognitive-processing-speed traits and schizophrenia across multiple cohorts; <strong>no</strong>
+colocalization with FEV1/FEV1-FVC/spirometry, and <strong>no</strong> evidence entries for smoking-
+initiation. Broad pleiotropy: ~16 diseases score in the same 0.21-0.35 tier as COPD (ocular
+hypertension/hypotension, preeclampsia, restless legs syndrome, type 1 diabetes, psoriatic
+arthritis, ankylosing spondylitis, polyarteritis nodosa, sinusitis, placental abruption, male
+infertility), while asthma scores only 0.023. Genetic constraint: LOEUF (LoF) = 1.618 (CI
+0.936-1.945) — not constrained, tolerant of loss-of-function.</li>
+<li><strong>MRPL19</strong> (ENSG00000115364): L2G score 0.056 at the same credible set (~10x lower than
+GCFC2). Overall COPD association score 0.021. LOEUF (LoF) = 0.995 (CI 0.733-1.373) —
+moderately more constrained than GCFC2, not highly constrained.</li>
+<li><strong>TACR1</strong> (ENSG00000115353): Overall COPD association score 0.059, driven entirely by
+literature (0.077) and clinical (0.093) datatypes — <strong>zero</strong> genetic_association datatype
+contribution. Confirmed by direct query: zero <code>gwas_credible_sets</code> evidence entries for
+TACR1-COPD, and TACR1 was not among the candidates considered by Open Targets' own L2G model
+for the credible set where GCFC2/MRPL19 were scored. LOEUF (LoF) = 0.657 (CI 0.478-0.918) —
+more constrained than GCFC2 or MRPL19, though not extremely so.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>GCFC2 — confidence: LOW.</strong></p>
+<p>GCFC2 is the best-supported single pick at this locus, but the case is close and should not be
+overstated. It is the internal pipeline's nearest-gene/FLAMES candidate, and it is the only gene
+Open Targets' own L2G model favors at a COPD-related credible set in this region (L2G 0.577 vs
+MRPL19's 0.056; TACR1 wasn't even in the L2G candidate set) — this is real, if imperfect,
+statistical-genetics support (the L2G score comes from a nearby but non-identical lead SNP, per
+the Open Targets summary above and the skeptic's critique, so it should be read as suggestive
+rather than definitive for this exact credible set).</p>
+<p>However, the verified literature evidence table above shows that GCFC2's entire specific
+literature footprint is neurocognitive (developmental dyslexia, general cognitive ability,
+hippocampal volume, white-matter structure) — not pulmonary, not classically immune. The
+red-team-skeptic marked GCFC2 CONTESTED specifically on the claim of a direct pulmonary/immune
+mechanism: Open Targets shows null colocalization with FEV1/FEV1-FVC/spirometry despite strong
+colocalization with cognitive/psychiatric traits at the same credible set; the one candidate
+immune mechanism (GC-BP/IL-12 repression in efferocytosing macrophages, Kim et al. 2004) failed
+citation verification on whether GC-BP is even the same gene product as GCFC2; and GCFC2 shows
+gnomAD LOEUF ~1.618, i.e., no haploinsufficiency-type constraint signature. The asthma-vs-COPD
+association-score asymmetry (0.023 vs 0.213) further suggests the signal may be more
+smoking/cohort-composition-mediated than reflective of shared airway-obstruction biology (prior
+#1), though this remains a hypothesis, not an evidenced finding.</p>
+<p>The runner-up, MRPL19, is weaker on every axis (10x lower L2G, no independent literature, a
+generic mitochondrial-translation housekeeping function with no COPD/lung-specific literature at
+all) but cannot be fully excluded, because GCFC2 and MRPL19 are co-regulated (a shared risk
+haplotype attenuates expression of both genes per Anthoni et al. 2007) — the existing evidence
+does not include gene-specific fine-mapping, chromatin-interaction, or allele-specific-expression
+data that would cleanly separate the two.</p>
+<p>TACR1, added after red-team-skeptic flagged it as an under-searched but biologically compelling
+candidate, has by far the strongest COPD-mechanism-specific literature of the three genes at this
+locus — causal mouse-knockout data showing NK1-receptor-dependent, cigarette-smoke-driven
+macrophage/dendritic-cell recruitment and MMP-12-mediated emphysema, plus human airway-tissue
+expression data showing altered NK1R expression in COPD versus smoking controls. But this
+evidence carries <strong>zero direct genetic linkage</strong> to this specific credible set: no eQTL, no
+colocalization, no L2G inclusion, and no chromatin-interaction (Hi-C/ABC) evidence bridges the
+~750-900kb distance, nearly double that of GCFC2/MRPL19. The skeptic's final verdict on TACR1 was
+&quot;INSUFFICIENT-DISTANCE-EVIDENCE&quot; — a biologically plausible but genetically unlinked candidate,
+not a co-equal alternative causal gene as currently evidenced. The skeptic also flagged
+unresolved internal tension in the TACR1 human/mouse evidence itself (Bai et al.'s reduced NK1R
+expression in established COPD sits awkwardly against De Swert et al.'s causal knockout-protects-
+against-damage model), further limiting how much weight TACR1's mechanistic story can carry
+without direct genetic confirmation.</p>
+<p><strong>What would resolve this three-way tie:</strong> (1) a direct colocalization or fine-mapping analysis
+using this pipeline's own credible set (not a nearby proxy) against GCFC2, MRPL19, and TACR1
+eQTL/pQTL data in lung and relevant immune-cell types; (2) chromatin-interaction (Hi-C/ABC/
+promoter-capture Hi-C) data for the credible-set interval to determine whether any regulatory
+loop reaches TACR1 despite the linear distance; (3) allele-specific expression or reporter-assay
+data at the credible-set lead variant(s) themselves (rs35328078 and the next few highest-PIP
+variants) to determine which gene's expression they actually perturb; (4) a smoking-initiation/
+smoking-heaviness GWAS lookup specifically at this credible set to adjudicate whether the null
+Open Targets smoking-trait result is a true null or a data-coverage gap, which bears directly on
+whether prior #1 (smoking-mediated confounding) is operative here.</p>
+<p>Given the absence of any of that discriminating evidence, GCFC2 is named as the single best-
+supported pick on statistical-genetics/positional grounds alone, with confidence marked LOW
+because the mechanistic case for GCFC2 specifically causing COPD pathology is actively contested,
+MRPL19 cannot be excluded as a co-regulated bystander, and TACR1 remains a live, biologically
+motivated alternative that current evidence can neither confirm nor rule out at this locus. This
+recommendation should be weighed by the study team alongside the runner-up candidates, not
+treated as a settled call.</p>
+
+</body>
+</html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>5_120650001-121000000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-5120650001-121000000-lead-variant-rs6878072-nearestflames-gene-prr16">Evidence table — Locus 5:120,650,001-121,000,000 (lead variant rs6878072; nearest/FLAMES gene PRR16)</h1>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRR16</td>
+<td>Structural/developmental (gene function)</td>
+<td>PRR16 encodes &quot;Largen,&quot; a cell-size-regulating protein discovered via a novel genetic screen, that stimulates translation of specific mRNAs including those encoding mitochondrial-function proteins, increases mitochondrial mass and ATP production, and increases cell size both in vitro (human cells) and in vivo (conditional Largen transgenic mice). No lung, airway, or immune phenotype was reported in this paper.</td>
+<td>Yamamoto et al. 2014, Mol Cell; PMID 24656129 / DOI 10.1016/j.molcel.2014.02.028</td>
+<td>SUPPORTED as characterized (non-lung, non-immune, generic mechanistic background); no overclaiming. An additional &quot;independent of mTOR/Hippo signaling&quot; sub-claim was checked separately and found CLAIM_MISMATCH — dropped, not included here (see audit).</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRR16</td>
+<td>Structural (epithelial biology, breast cancer model)</td>
+<td>PRR16/Largen overexpression induces epithelial-mesenchymal transition (EMT) in MCF7 breast cancer cells by binding ABI2 and de-repressing ABL1 kinase phosphorylation, enhancing migration/invasion. Studied in breast cancer cells only; no pulmonary data.</td>
+<td>Kang et al. 2022, Biomol Ther (Seoul); PMID 35719027 / DOI 10.4062/biomolther.2022.066</td>
+<td>SUPPORTED as characterized; correctly not extended to a lung claim. EMT is a process also implicated in airway remodeling in COPD, but this paper provides no pulmonary evidence for that link.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRR16</td>
+<td>Statistical genetics (psychiatric GWAS) — KEY EVIDENCE</td>
+<td>Genome-wide meta-analysis of anxiety disorders (74,973 cases / 400,243 controls incl. proxy cases/controls) identified 14 risk loci including 10 new associations, naming PRR16 as the nearest gene at one of the 10 new loci (alongside CNTNAP5, MAP2, RAB9BP1, BTN1A1, PCLO, PTPRD, FARP1, CDH2, RAB27B). The paper's own integrative/functional-follow-up analyses prioritized other genes (CTNND1, RAB27B, BTN3A2, PCLO) as possibly causal, with mouse behavioral validation performed on Ctnnd1 (not Prr16); PRR16 itself received no functional follow-up.</td>
+<td>Li et al. 2023, Nat Hum Behav; PMID 37945807 / DOI 10.1038/s41562-023-01746-y</td>
+<td>CONTESTED as evidence that PRR16 specifically (not just &quot;this locus&quot;) is the causal gene for anxiety — the paper's own deeper fine-mapping/functional layer did not confirm PRR16, only nearest-gene naming did. See audit appendix for full reasoning, including an orchestrator note on a genuine ambiguity in how to read &quot;other loci.&quot; Independent of this contest, this evidence is psychiatric, not pulmonary, and does not by itself support a COPD mechanism.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRR16</td>
+<td>Incidental gene-list mentions (not gene-specific biology)</td>
+<td>PRR16 appears only as one of several genes in unrelated multi-gene screens: keloid-vs-normal-skin DEG list (POSTN was the actual focus gene); liver hepatocellular carcinoma stemness WGCNA gene list; pig meat-quality GWAS candidate-gene list; mouse oxygen-consumption/mitochondrial-trait candidate-gene list (&quot;Prr16 encoding Largen protein&quot;); carotid paraganglioma exome mutation list; maternal-BMI cord-blood DNA methylation gene list; PM2.5 transgenerational sperm-methylation gene list; family-history-informed T2D GWAS flagging a PRR16 locus at 5q23 (single novel-locus report, not replicated, and unrelated to lung/COPD).</td>
+<td>Xu et al. 2022 PMID 36517972; Bai et al. 2020 PMID 32311840; Li et al. 2022 PMID 36421806; Ogawa et al. 2022 PMID 35608337; Snezhkina et al. 2019 PMID 31397435; Liu et al. 2013 PMID 24243566; Lee et al. 2023 PMID 38091677; Zhang et al. 2022 PMID 36182916</td>
+<td>SUPPORTED as characterized (all confirmed accurate by citation-verifier) but judged low-value / non-specific — none bear meaningfully on COPD, lung structural biology, or immune function. Included for completeness/transparency only.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRR16</td>
+<td>Smoking-mediated-effects prior (negative finding)</td>
+<td>Targeted literature searches combining PRR16 or this locus with smoking initiation, smoking heaviness, nicotine dependence, and cessation returned <strong>zero PubMed results</strong>. No dedicated smoking-behavior GWAS publication naming PRR16 or this locus was located.</td>
+<td>Researcher's systematic negative search (no citable positive source; reported as an absence finding)</td>
+<td>Not independently contested; red-team affirms this negative finding should be reported as &quot;no smoking-trait GWAS evidence at all,&quot; not softened into an unconfirmed-but-implied smoking-mediation narrative.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRR16</td>
+<td>Pulmonary-function prior (negative finding)</td>
+<td>Targeted literature searches combining PRR16 or this locus with COPD case-control status, FEV1, and FEV1/FVC returned <strong>zero PubMed results</strong>. No COPD/spirometry GWAS, TWAS, MR, or colocalization paper naming PRR16 or this locus was located.</td>
+<td>Researcher's systematic negative search (no citable positive source; reported as an absence finding)</td>
+<td>Red-team: this is a true absence-of-evidence finding, but should not be over-read as &quot;evidence against&quot; a pulmonary mechanism (see audit) — expression data (below) show non-trivial lung expression that is at least as suggestive of an untested pulmonary role as the psychiatric GWAS hit is of a psychiatric one.</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRR16</td>
+<td>Inflammatory/immune-complexity prior</td>
+<td>No COPD- or airway-disease-specific immune/inflammatory functional study of PRR16 was located. Human Protein Atlas curated blood immune-cell panels (T/B/NK/monocyte/neutrophil/dendritic cell) report PRR16 &quot;Not detected in immune cells&quot; (database lookup, not peer-reviewed literature — see Open Targets/expression summary below, not independently verified as a citation).</td>
+<td>No peer-reviewed citation located (database-lookup context only)</td>
+<td>Red-team: accurately reported as an open question, not a resolved negative — does not rule out a tissue-resident (lung macrophage/alveolar) role.</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p><strong>PRR16 (ENSG00000184838, protein_coding):</strong></p>
+<ul>
+<li><strong>Genetic constraint:</strong> pLoF oe = 0.296 (oeUpper/LOEUF-like = 0.622 — moderate, not extreme, intolerance to loss-of-function variation); missense oe = 1.095 (not missense-constrained); synonymous unremarkable.</li>
+<li><strong>Locus-to-gene (L2G) / colocalization at this exact locus:</strong> queried the two highest-PIP credible-set variants resolvable in Open Targets (rs6878072 PIP=0.094, rs6877942 PIP=0.055). Both have 9 credible sets each, ALL from FinnGen R12 GWAS of psychiatric/behavioral traits (anxiety disorders, recurrent/chronic depression, depression, depression-or-dysthymia, mood [affective] disorders, &quot;any mental disorder,&quot; depression-medication use). For every one of these 18 credible-set instances, Open Targets' L2G algorithm assigns PRR16 as the causal gene, with scores ~0.61-0.63. <strong>Zero credible sets exist in Open Targets for COPD or spirometry/lung-function traits at this locus</strong> — an absence-of-data finding (Open Targets' COPD GWAS ingestion may not have called a credible set here), not evidence of no effect.</li>
+<li><strong>Aggregate target-disease association (all data types, not locus-specific L2G):</strong> PRR16 has association scores for 111 diseases/traits. Top-ranked: neurodegenerative disease (0.460, pathway-only), major depressive disorder (0.439, genetic_association 0.722), alcohol drinking (0.392, genetic_association 0.644), anxiety disorder (0.322, genetic_association 0.530). COPD ranks 26th of 111 (score 0.226; genetic_association sub-score 0.371, literature sub-score only 0.030 — this genetic_association sub-score likely derives in part from the same GWAS signal under evaluation here, so it should not be read as independent corroboration). No spirometry/FEV1/FEV1FVC trait appears anywhere in this list. Asthma scores far lower (0.0037, literature-only).</li>
+<li><strong>Overlapping feature at the lead variant:</strong> rs6878072 also resolves to an unnamed lncRNA, ENSG00000248927 (no HGNC symbol), overlapping this genomic position. This lncRNA is not part of the internal pipeline's candidate-gene list and was not investigated further by the researcher or red-team (search-budget exhausted for the red-team's planned follow-up); the red-team explicitly flags this as an unresolved gap — the credible-set/L2G evidence available does not distinguish PRR16 from this lncRNA (or from any other unexamined transcript in the window).</li>
+<li><strong>Expression (GTEx v8 / Human Protein Atlas, database lookups, not peer-reviewed citations):</strong> PRR16 is broadly expressed across tissues (highest in cultured fibroblasts, 57.7 TPM; artery-aorta 24.1 TPM); lung expression is moderate (~9-11 TPM), notably higher than most brain regions and much higher than liver or whole blood. HPA immunohistochemistry localizes PRR16 protein to alveolar cells and resident lung macrophages at medium level; single-cell clustering places it in a &quot;Fibroblasts — ECM organization&quot; cluster with low cell-type specificity (tau ~0.71). PRR16 is explicitly annotated &quot;Not detected in immune cells&quot; across curated blood immune-cell panels (T/B/NK/monocyte/neutrophil/dendritic cell), arguing against a circulating-immune-cell-specific role but not against a tissue-resident (lung macrophage/alveolar) role.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>PRR16 — Confidence: LOW.</strong></p>
+<p>PRR16 is named here not because the evidence strongly implicates it in COPD biology, but because
+it is the only candidate gene the internal pipeline (nearest gene + FLAMES) or this review
+identified at this locus — there is no competing candidate gene to weigh it against, only an
+unexamined overlapping lncRNA (ENSG00000248927) that was never investigated (see audit). This is
+a &quot;best available pick by default,&quot; not a confidently supported causal call, and the confidence
+label reflects that.</p>
+<p>The evidence assembled is unusually clean in its negative findings: systematic literature
+searches for PRR16/this locus combined with smoking-behavior traits (initiation, heaviness,
+nicotine dependence, cessation) and with COPD/spirometric traits (FEV1, FEV1/FVC) each returned
+zero PubMed hits (see evidence table rows 5-6). The credible set is 100% non-coding across ~110
+variants with no missense or splice variants, and MAGMA/PoPS/ABC gave no supporting signal.
+PRR16's founding functional paper (Yamamoto et al. 2014) describes a general, non-lung,
+non-immune cell-size/mitochondrial-translation mechanism; a second paper (Kang et al. 2022) shows
+PRR16 can drive EMT in a breast-cancer cell line only, never studied in lung tissue.</p>
+<p>The one substantive genetic signal located anywhere for this locus is Open Targets' L2G
+assignment of PRR16 across 9 psychiatric/behavioral FinnGen credible sets (anxiety, depression,
+mood disorder) at the two highest-PIP variants, corroborated by a verified literature citation
+(Li et al. 2023, PMID 37945807) naming PRR16 as the nearest gene at a new anxiety-disorder risk
+locus. However, red-team review contests treating this as confirmed PRR16-causality even for the
+anxiety phenotype: that same paper's own deeper fine-mapping/functional-validation layer
+prioritized different genes (CTNND1, RAB27B, BTN3A2, PCLO) elsewhere in its results, and PRR16
+itself received no functional follow-up (see audit for a fuller discussion of a genuine ambiguity
+in how to read &quot;other loci&quot; in that paper). Even taking the anxiety association at face value,
+it is a psychiatric-trait finding, not a pulmonary one, and the &quot;smoking-mediated pathway&quot;
+narrative connecting it to COPD is, per red-team, a two-step inference (PRR16-to-anxiety, then
+anxiety/depression-to-smoking) with no direct evidence for either step at this locus specifically
+— it should not be read as an established mechanism.</p>
+<p><strong>Runner-up:</strong> the overlapping lncRNA ENSG00000248927 (no HGNC symbol) is a formally undifferentiated
+alternative at this locus — the available fine-mapping/L2G evidence does not distinguish it from
+PRR16, and it was not investigated in this review (a follow-up flagged by red-team, not completed
+here due to search-budget limits on that agent's turn).</p>
+<p><strong>What would resolve this:</strong> (1) direct identity/expression/functional characterization of
+ENSG00000248927 to determine whether it is a more plausible regulatory candidate than PRR16 at
+this locus; (2) a dedicated smoking-initiation/heaviness GWAS (e.g., GSCAN or successor)
+cross-referenced against this exact locus, to test the smoking-mediation hypothesis directly
+rather than by inference from psychiatric-trait proxies; (3) direct COPD/spirometry
+fine-mapping or colocalization at this locus (currently absent from Open Targets), to establish
+whether any pulmonary signal exists at all, independent of the psychiatric one; (4) confirmation
+of whether Li et al. 2023's deeper functional/fine-mapping layer assessed PRR16 directly (and
+excluded it) or simply never assessed it (silence) — this materially affects how much weight the
+anxiety-GWAS evidence should carry even for the psychiatric-pathway hypothesis.</p>
+<p>Given the near-total absence of pulmonary-specific evidence, the contested strength of even the
+non-pulmonary (anxiety) signal, and the unexamined lncRNA alternative, <strong>INSUFFICIENT</strong> evidence
+exists to confidently prioritize PRR16 (or any gene) as causal for COPD at this locus. LOW
+confidence is assigned rather than INSUFFICIENT only because PRR16 is at least the
+consistently-named candidate across every tool used (nearest-gene, FLAMES, and Open Targets L2G
+for the correlated psychiatric traits) — but the study team should treat this locus as needing
+substantially more direct pulmonary/smoking-behavior evidence before drawing any causal
+conclusion.</p>
+
+</body>
+</html>

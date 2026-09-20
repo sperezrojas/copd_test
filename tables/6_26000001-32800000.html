@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>6_26000001-32800000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-locus-evidence-table-626000001-32800000-nearest-gene-hla-dqa1">COPD locus evidence table: 6:26,000,001-32,800,000 (nearest gene HLA-DQA1)</h1>
+<p><strong>Region:</strong> 6:26,000,001-32,800,000 (GRCh38), the extended MHC/HLA class II
+region on chromosome 6. <strong>Lead variant:</strong> rs9272466 (6:32,637,919, intron
+variant in HLA-DQA1, PIP=0.403). Credible set: 17 variants, all clustered
+within a ~24 kb span (6:32,619,017-32,642,624), including one missense variant
+(rs9272785, PIP=0.057).</p>
+<p><strong>IMPORTANT SCOPE AND CAUTION NOTE:</strong> This 6.8 Mb window spans one of the most
+gene-dense, structurally complex, extended-linkage-disequilibrium regions in
+the entire human genome (HLA-A/B/C, HLA-DRB1/DQA1/DQB1/DPA1/DPB1, C4A/C4B, TNF,
+and dozens of other genes). Because all 17 credible-set variants cluster
+tightly at the HLA-DQA1 locus itself, candidate-gene research for this locus
+was deliberately scoped to the genes at/immediately flanking that cluster
+(HLA-DQA1, HLA-DQB1, HLA-DRB1) plus the two genes nominated by the internal
+statistical pipeline via genome-wide gene-based tests (CSNK2B via MAGMA,
+HIST1H4A/H4C3 via PoPS) — not an exhaustive enumeration of every gene across
+the full 6.8 Mb span. <strong>MHC fine-mapping is notoriously unreliable for
+pinpointing a single causal gene</strong> because of extreme, extended LD across the
+classical HLA genes (HLA-DRB1, HLA-DQA1, HLA-DQB1, and neighboring genes are
+largely co-inherited as haplotypes). This locus's causal gene, if resolvable at
+all, should be treated with extra caution regardless of any single gene's
+apparent statistical support. Even the field's own reference COPD GWAS
+(Sakornsakolpat et al. 2019) excludes the MHC region from its standard-threshold
+primary locus list, analyzing it separately — an acknowledgment from within the
+field that this region does not behave like a typical, cleanly resolved locus.</p>
+<h2 id="evidence-table">Evidence table</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HLA-DQA1</td>
+<td>Missense credible-set variant (statgen/functional)</td>
+<td>rs9272785 (HLA-DQA1 missense, PIP=0.057) associated with pulmonary tuberculosis susceptibility (OR=1.14, P=9.3×10⁻⁹) in Icelandic GWAS, replicated in Russian/Croatian cohorts; proposed mechanism = altered HLA-DQ antigen presentation to T cells — an infectious-disease mechanism, not a COPD finding</td>
+<td>Sveinbjornsson et al. 2016, Nat Genet, PMID 26829749, DOI 10.1038/ng.3498</td>
+<td>WEAKENED — mechanism borrowed from tuberculosis biology, not demonstrated in COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HLA-DQA1</td>
+<td>Proteomics (COPD lung tissue)</td>
+<td>HLA-DQA1 protein differentially abundant (western-blot confirmed) in lung tissue of COPD frequent exacerbators vs infrequent exacerbators; pathway analysis implicated the immune network for IgA production</td>
+<td>Sun et al. 2019, Life Sciences, PMID 31121174, DOI 10.1016/j.lfs.2019.05.047</td>
+<td>WEAKENED — small observational proteomics study, not genetic evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HLA-DQA1</td>
+<td>Autoimmune-genetics mechanism (background, non-COPD)</td>
+<td>HLA-DQA1/DQB1 DQ2.5/DQ8 risk alleles are more highly expressed and coordinately regulated in celiac disease and type 1 diabetes — establishes the canonical CD4+ T-cell antigen-presentation disease mechanism for this gene family</td>
+<td>Farina et al. 2019, Cells, PMID 31331105, DOI 10.3390/cells8070751</td>
+<td>WEAKENED — mechanism demonstrated in other autoimmune diseases, not tested in COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HLA-DQA1 (locus-level)</td>
+<td>Parent COPD GWAS meta-analysis (background)</td>
+<td>The primary 82-locus COPD case-control meta-analysis (35,735 cases/222,076 controls) this pipeline builds on explicitly excluded/segregated the MHC region from its standard-threshold primary locus list, analyzing it under a separate, more stringent significance threshold (2×10⁻⁶ vs 8×10⁻⁵)</td>
+<td>Sakornsakolpat et al. 2019, Nat Genet, PMID 30804561, DOI 10.1038/s41588-018-0342-2</td>
+<td>HOLDS — important structural caveat on how reliable this region's locus assignment is</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HLA-DQA1 (locus-level)</td>
+<td>Lung-function GWAS PheWAS (background)</td>
+<td>A large-scale lung-function GWAS (400,102 participants, 279 signals) reports broad autoimmune-pleiotropic phenome-wide associations (celiac disease, Crohn's disease, ulcerative colitis, psoriasis, SLE, IgA nephropathy, type 1 diabetes, asthma) for lung-function-associated variants generally</td>
+<td>Shrine et al. 2019, Nat Genet, PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
+<td>HOLDS — general background supporting an autoimmune-pleiotropy framing, not a COPD-specific mechanistic claim</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HLA-DQB1</td>
+<td>Spirometric-trait GWAS (SNP-by-smoking interaction)</td>
+<td>A locus near HLA-DQB1/HLA-DQA2 (lead SNP rs7764819, intergenic) was associated with FEV1/FEV1-FVC in a joint meta-analysis of 19 studies (N=50,047); authors state &quot;the HLA region has been widely implicated for autoimmune and lung phenotypes&quot;</td>
+<td>Hancock et al. 2012, PLoS Genetics, PMID 23284291, DOI 10.1371/journal.pgen.1003098</td>
+<td>WEAKENED — lead SNP sits nearer HLA-DQA2 than HLA-DQB1 itself; LD-block gene attribution unresolved</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HLA-DQB1</td>
+<td>COPD / extreme-FEV1 GWAS (UK BiLEVE)</td>
+<td>HLA-DQB1/HLA-DQA2 locus (rs9274600) associated with extreme FEV1 and COPD &quot;including in individuals with no history of smoking&quot; — strongest association in never-smokers (OR=1.24, 95% CI 1.16-1.32), weaker in heavy smokers (OR=1.05)</td>
+<td>Wain et al. 2015, Lancet Respir Med, PMID 26423011, DOI 10.1016/S2213-2600(15)00283-0</td>
+<td>WEAKENED — genuine smoking-independent signal, but single-gene attribution within the haplotype block remains unresolved</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HLA-DQB1</td>
+<td>Asthma-COPD overlap GWAS</td>
+<td>HLA-DQB1 (rs9273410) was one of three signals (with IL17RD, C5orf56) predominantly influencing fixed airflow obstruction in asthma-COPD overlap, association &quot;not driven by smoking,&quot; with phenome-wide links to eosinophil counts/atopy/asthma</td>
+<td>John et al. 2022, Chest, PMID 35104449, DOI 10.1016/j.chest.2021.12.674</td>
+<td>WEAKENED — may reflect a type-2/eosinophilic asthma-COPD-overlap phenotype rather than classical neutrophilic COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HLA-DQB1</td>
+<td>HLA allele association, RA-associated lung disease</td>
+<td>HLA-DQB1*03:01 associated with predisposition to (OR=2.43), and *03:02 with resistance to (OR=0.33), bronchiectatic airway disease and emphysema, in rheumatoid arthritis patients</td>
+<td>Oka et al. 2016, Rheumatology (Oxford), PMID 27048628, DOI 10.1093/rheumatology/kew025</td>
+<td>WEAKENED — RA-specific patient cohort, not general-population COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HLA-DRB1</td>
+<td>HLA allele case-control + spirometry</td>
+<td>In a Chilean case-control cohort (214 COPD cases, 193 controls), HLA-DRB1<em>01:02 was more frequent in COPD cases (6.54% vs 3.27%, OR=2.07, p=0.04) and associated with FEV1 (p=0.04) and oxygen saturation (p=0.02); DRB1</em>15:01 carriers had higher FEV1/FVC (p=9×10⁻⁵); authors conclude a role for autoimmunity in COPD</td>
+<td>Díaz-Peña et al. 2020, Arch Bronconeumol, PMID 32948369, DOI 10.1016/j.arbres.2020.07.022</td>
+<td><strong>CONTESTED</strong> — single small (n=214/193), unreplicated cohort; directly conflicts in direction of effect with Karzakova et al. 2017 below for a related DRB1*01-family allele</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HLA-DRB1</td>
+<td>HLA allele association, occupational cohort</td>
+<td>In Chuvash silicon-manufacture workers (50 COPD cases, 38 controls), HLA-DRB1<em>01, DQA1</em>0101, and DQB1*0501 alleles/haplotypes showed a protective (negative) association with COPD</td>
+<td>Karzakova et al. 2017, Klin Lab Diagn, PMID 30615373</td>
+<td><strong>CONTESTED</strong> — opposite direction of effect from Díaz-Peña 2020 for a related allele, different population and exposure context (occupational silica vs general COPD); tiny sample</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HLA-DRB1</td>
+<td>Mechanistic review (RA-lung disease, non-COPD)</td>
+<td>Cigarette smoking induces pulmonary protein citrullination and generation of anti-citrullinated-protein antibodies in carriers of the HLA-DRB1 &quot;shared epitope,&quot; contributing to rheumatoid arthritis and RA-associated lung disease</td>
+<td>Drosos et al. 2025, Mediterranean J Rheumatol, PMID 41122182, DOI 10.31138/mjr.050325.erl</td>
+<td>WEAKENED — this is an RA-specific smoking-interaction mechanism, not demonstrated in idiopathic COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HLA-DRB1</td>
+<td>Autoimmune-genetics background (non-lung)</td>
+<td>HLA-DRB1*16:02 shows disease- and mechanism-specific associations (strong with autoantibody-mediated disease, weak with T-cell-mediated disease); no lung disease examined in this meta-analysis</td>
+<td>Chen et al. 2020, Autoimmun Rev, PMID 32234402, DOI 10.1016/j.autrev.2020.102532</td>
+<td>HOLDS — background only, correctly labeled non-lung by the researcher</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CSNK2B</td>
+<td>General cell biology (antiviral autophagy)</td>
+<td>CSNK2 (regulatory subunit CSNK2B) negatively regulates autophagy via TRIM2/TRIM3/TRIM71; CSNK2 inhibition enhances autophagy-dependent restriction of influenza A virus, measles virus, and HIV-1 in primary human lung cells among other cell types</td>
+<td>Hoenigsperger et al. 2023, Autophagy, PMID 37938186, DOI 10.1080/15548627.2023.2281128</td>
+<td>HOLDS (as a null for COPD relevance) — generic essential-kinase cell biology, not COPD- or airway-inflammation-specific; consistent with CSNK2B candidacy being an LD/MAGMA artifact rather than genuine biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CSNK2B</td>
+<td>Literature search (COPD-specific)</td>
+<td>No COPD-specific GWAS, TWAS, MR, colocalization, or disease literature was found for CSNK2B despite targeted searches</td>
+<td>N/A — honest null result</td>
+<td>HOLDS — null; treat as effectively refuted/deprioritized for this locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HIST1H4A / H4C3</td>
+<td>Literature search (COPD/lung/inflammation-specific)</td>
+<td>No COPD-, lung-, or inflammation-specific literature was found for this gene; it sits ~6.6 Mb from the credible-set cluster (opposite end of the 6.8 Mb window) and is confounded by multiple near-identical paralogous genes in the HIST1 histone cluster</td>
+<td>N/A — honest null result</td>
+<td>HOLDS — null; treat as effectively refuted/deprioritized for this locus</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p>Disease entity used: MONDO_0005002 (&quot;chronic obstructive pulmonary disease&quot;).</p>
+<ul>
+<li><strong>HLA-DQA1</strong> (ENSG00000196735): 8 Open Targets evidence rows for COPD, all
+EuropePMC literature co-mentions (no GWAS/L2G statistical evidence rows at
+all). gnomAD constraint: LoF oe=2.19 (90% CI 0.93-1.96) — not LoF-intolerant,
+consistent with balancing selection typical of classical HLA loci rather
+than dosage sensitivity; this metric carries little diagnostic weight for
+COPD relevance at HLA genes specifically.</li>
+<li><strong>HLA-DQB1</strong> (ENSG00000179344): 15 literature co-mention rows, no GWAS/L2G
+rows. LoF oe=1.05 (CI 0.54-1.83) — not constrained.</li>
+<li><strong>HLA-DRB1</strong> (ENSG00000196126): 12 literature co-mention rows, no GWAS/L2G
+rows. LoF oe=1.25 (CI 0.66-1.89) — not constrained.</li>
+<li><strong>CSNK2B</strong> (ENSG00000204435): Zero evidence of any kind (literature or
+genetic) linking CSNK2B to COPD. Constraint: missense oe=0.37 (CI
+0.32-0.44), <strong>LoF oe=0.075 (CI 0.03-0.24)</strong> — among the most LoF-intolerant
+genes genome-wide, an essential CK2 regulatory subunit; this constraint
+profile is a strong prior against CSNK2B being a plausible common-variant
+COPD gene.</li>
+<li><strong>HIST1H4A / H4C3</strong> (ENSG00000197061): Zero evidence of any kind linking
+this gene to COPD. LoF oe=1.76 (CI 0.99-1.96) — not constrained.</li>
+<li><strong>Cross-cutting note:</strong> the complete absence of GWAS-credible-set/L2G
+evidence for COPD at any of these five genes in Open Targets — despite
+substantial curated literature evidence existing for the three classical HLA
+genes as a general disease topic — is consistent with the well-documented
+practice of GWAS Catalog/Open Targets pipelines masking or excluding the
+extended MHC region from routine fine-mapping/L2G ingestion because of its
+extreme LD structure. This absence should not be read as evidence against a
+causal role for any of these genes; the literature evidence assembled above
+is doing essentially all of the evidentiary work at this locus.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Prioritized call: HLA-DQA1/HLA-DQB1/HLA-DRB1 haplotype block (classical HLA
+class II region) — no single confidently causal gene named. Confidence:
+LOW.</strong></p>
+<p>This is one of the loci in this review where naming a single, confidently
+causal protein-coding gene is not supported by the evidence, and doing so
+would manufacture certainty the data do not have. The reasoning:</p>
+<ul>
+<li>The statistical signal is real and substantial (lead PIP=0.403, a tight
+24 kb credible-set cluster including one missense variant), and it
+concordantly appears across multiple independent large-scale spirometry and
+COPD/asthma-COPD-overlap GWAS in this haplotype block (Hancock 2012, Wain
+2015, John 2022), with some evidence explicitly reported as
+smoking-independent (Wain 2015: stronger in never-smokers) — satisfying
+biological prior #2 (spirometric concordance) and offering some evidence
+against pure smoking-mediation (prior #1).</li>
+<li>However, per the red-team critique, none of the population-scale GWAS hits
+actually localize inside HLA-DQA1 itself — their lead SNPs are intergenic or
+nearer HLA-DQA2/HLA-DQB1 — so citing them as HLA-DQA1-specific evidence
+reflects nearest-gene/LD-block bias rather than gene-specific resolution.
+HLA-DQA1's own most specific literature (its missense credible-set variant,
+rs9272785) is tuberculosis-susceptibility evidence, not COPD evidence.</li>
+<li>HLA-DRB1 has the most direct COPD case-control/spirometry allele-level
+literature (Díaz-Peña 2020), but this is CONTESTED: a small, unreplicated
+Chilean cohort finding directly conflicts in direction of effect with a
+separate small occupational-cohort study (Karzakova 2017) for a related
+DRB1*01-family allele.</li>
+<li>The mechanism invoked throughout — CD4+ T-cell antigen presentation and
+autoimmune/infectious-disease susceptibility (tuberculosis, celiac disease,
+type 1 diabetes, rheumatoid arthritis) — is imported wholesale from other
+diseases and has not been directly tested in COPD lung tissue or COPD immune
+cells; per prior #3, this is a plausible but unconfirmed inflammatory
+mechanism, and it points toward a type-2/eosinophilic or asthma-COPD-overlap
+pathway (John 2022) rather than classical neutrophilic, smoking-driven COPD
+biology.</li>
+<li>Even the field's own primary reference COPD GWAS (Sakornsakolpat 2019)
+excludes the MHC region from its standard locus list, underscoring that this
+region is not expected to yield a cleanly resolved single-gene signal by
+ordinary GWAS/fine-mapping standards.</li>
+<li>CSNK2B and HIST1H4A/H4C3 (the MAGMA and PoPS picks) are effectively refuted
+as candidates: CSNK2B has zero COPD-relevant evidence and an extreme
+loss-of-function-intolerance profile inconsistent with a common-variant
+disease gene, most parsimoniously explained as a MAGMA artifact of dense
+regional LD; HIST1H4A/H4C3 has zero COPD-relevant evidence, sits 6.6 Mb from
+the credible-set cluster, and is confounded by dozens of near-identical
+histone paralogs.</li>
+</ul>
+<p><strong>What would resolve this:</strong> HLA-specific fine-mapping using classical
+allele/haplotype imputation (e.g., HIBAG, SNP2HLA) with COPD/lung-function as
+the outcome in a large, ancestrally diverse cohort, ideally paired with
+cell-type-resolved (CD4+ T-cell, alveolar macrophage, airway epithelial)
+expression/eQTL colocalization specific to HLA-DQA1 vs. HLA-DQB1 vs. HLA-DRB1
+vs. HLA-DQA2, and a direct test of whether the association is mediated by
+antigen-presentation/autoimmune pathways versus a distinct, non-immune
+mechanism. Until such data exist, this locus should be reported to the study
+team as &quot;HLA class II region (DRB1-DQA1-DQB1 haplotype), gene-level causality
+unresolved&quot; rather than attributed to HLA-DQA1 specifically, notwithstanding
+that HLA-DQA1 is the nearest gene and carries the lead/missense variant.</p>
+
+</body>
+</html>

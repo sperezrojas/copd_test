@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>5_60450001-61350000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-locus-evidence-table--560450001-61350000-nearest-gene-smim15">COPD locus evidence table — 5:60,450,001-61,350,000 (nearest gene SMIM15)</h1>
+<p><strong>Lead variant:</strong> rs194369 (GRCh38 5:61,203,358; PIP = 0.109, the single highest-PIP
+variant in a broad/flat 115-variant credible set). No variant anywhere in this
+credible set is missense, splice-donor, or splice-acceptor — every credible-set variant
+is annotated intron/UTR/upstream/downstream/intergenic/non-coding-transcript. Per
+pipeline scope rules, variant-level literature search was performed only for rs194369
+itself; no dedicated PubMed literature or GWAS Catalog entry was found for this rsID
+(confirmed independently by citation-verifier).</p>
+<p><strong>Candidate genes:</strong> nearest gene/ABC-prioritized = SMIM15; FLAMES/MAGMA/PoPS-prioritized
+= ZSWIM6; additional genes physically overlapped by credible-set variants = LINC02057
+(contains the lead variant and most of the PIP mass), NDUFAF2, SMIM15-AS1, ERCC8, ELOVL7.</p>
+<h2 id="evidence-table">Evidence table</h2>
+<p>Only citations with citation-verifier verdict <strong>VERIFIED</strong> are included below. One
+citation (Abusheikha et al. 2025, PMID 40709334) returned CLAIM_MISMATCH and is excluded
+here — see the audit appendix (<code>audits/5_60450001-61350000_audit.md</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMIM15</td>
+<td>Cancer bioinformatics (tangential, non-lung)</td>
+<td>SMIM15 is 1 of 11 genes in a platelet-related prognostic gene signature for AML; no lung/COPD relevance</td>
+<td>PMID 42340073 (Wu et al., BioFactors 2026, DOI 10.1002/biof.70123)</td>
+<td>Not contested; correctly treated as non-specific/tangential, no COPD relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SMIM15</td>
+<td>Comparative genomics (tangential, non-human)</td>
+<td>SMIM15 co-occurs with NDUFAF2 in a shared, selected runs-of-homozygosity region in llamas; no disease link</td>
+<td>PMID 37605116 (Pallotti et al., BMC Genomics 2023, DOI 10.1186/s12864-023-09547-3)</td>
+<td>Not contested; non-specific, no functional inference supported</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZSWIM6</td>
+<td>Mendelian genetics (dominant gain-of-function, non-pulmonary)</td>
+<td>Recurrent de novo ZSWIM6 missense mutation causes acromelic frontonasal dysostosis (craniofacial/limb) via Hedgehog pathway activation</td>
+<td>PMID 25105228 (Smith et al., Am J Hum Genet 2014, DOI 10.1016/j.ajhg.2014.07.008)</td>
+<td>Not contested as fact; flagged as non-lung disease mechanism — do not over-interpret as COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZSWIM6</td>
+<td>Mendelian genetics, supporting case reports (non-pulmonary)</td>
+<td>Additional acromelic frontonasal dysostosis case reports/phenotypic-spectrum expansion, including mosaicism and a prenatal presentation</td>
+<td>PMID 26706854 (Twigg et al., Clin Genet 2016); PMID 33776626 (Martínez-Payo et al., Mol Syndromol 2020)</td>
+<td>Not contested; non-pulmonary</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZSWIM6</td>
+<td>Mendelian genetics, distinct phenotype (non-pulmonary)</td>
+<td>A distinct recurrent nonsense variant (p.Arg913Ter) causes severe intellectual disability without frontonasal/limb malformation</td>
+<td>PMID 29198722 (Palmer et al., Am J Hum Genet 2017, DOI 10.1016/j.ajhg.2017.10.009)</td>
+<td>Not contested; non-pulmonary</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZSWIM6</td>
+<td>Statistical genetics (psychiatric/behavioral GWAS) + mouse functional</td>
+<td>ZSWIM6 has been associated with schizophrenia and limited educational attainment by three independent GWAS; mouse Zswim6 knockout shows postnatal striatal restriction and motor phenotypes</td>
+<td>PMID 28433741 (Tischfield et al., Neurobiol Dis 2017, DOI 10.1016/j.nbd.2017.04.013)</td>
+<td>WEAKENED as support for a COPD-specific smoking-mediation hypothesis — red-team-skeptic notes this evidence supports a broader neuropsychiatric/behavioral pleiotropy narrative (schizophrenia, bipolar, ADHD, autism, educational attainment), of which smoking is only one thread among several (and not the dominant one by Open Targets' own aggregate score), not confirmation of a smoking-specific mechanism for this COPD locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZSWIM6</td>
+<td>Developmental expression (non-lung caveat)</td>
+<td>Zswim6/Zswim8 show dynamic expression in Xenopus brain, eyes, somite, and &quot;bronchial arch&quot; at tailbud stages — this is the embryonic pharyngeal arch (craniofacial structure), not the pulmonary bronchi</td>
+<td>PMID 37161653 (Hassan et al., Zool Res 2023, DOI 10.24272/j.issn.2095-8137.2022.418)</td>
+<td>Confirmed correct caveat by both researcher and skeptic; must NOT be read as lung-developmental evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ZSWIM6</td>
+<td>Immune-adjacent, cancer cell-biology (tangential, non-lung)</td>
+<td>ZSWIM6 acts as an E3 ubiquitin ligase degrading NAT10 in head-and-neck squamous cell carcinoma cells; loss of this degradation enhances IL-6/IL-8-pathway-related gene translation</td>
+<td>PMID 38246918 (Wang et al., Int J Oral Sci 2024, DOI 10.1038/s41368-023-00276-7)</td>
+<td>Weak/indirect; a non-lung tumor-cell mechanism, not airway-immune-cell evidence — should not be read as COPD-relevant inflammatory biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC02057</td>
+<td>Cancer biomarker (tangential; multi-gene signatures, one in lung tissue context)</td>
+<td>LINC02057 is used as an expression biomarker in multi-gene prognostic lncRNA signatures for gastric, renal, esophageal cancer, and lung adenocarcinoma; any immune-infiltration correlations are attributable to the composite multi-gene signatures, not to LINC02057 individually</td>
+<td>PMID 42368553 (He et al. 2026); PMID 42061012 (Moghbeli et al. 2026); PMID 40629658 (Lei et al. 2025); PMID 37666951 (Ma et al. 2023)</td>
+<td>Not contested as fact; correctly kept separate from COPD relevance — no mechanistic link to airway/COPD biology established despite LINC02057 physically containing the lead variant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NDUFAF2</td>
+<td>Mendelian genetics (recessive, mitochondrial disease) — pulmonary vascular case report</td>
+<td>First reported case of neonatal compound-heterozygous NDUFAF2 mutations presenting as persistent/primary pulmonary hypertension with early right heart failure; autopsy showed pulmonary artery dilation and myocardial hypertrophy, no alveolar capillary dysplasia</td>
+<td>PMID 40462436 (Yan et al., Zhongguo Dang Dai Er Ke Za Zhi 2025, DOI 10.7499/j.issn.1008-8830.2411150)</td>
+<td><strong>CONTESTED (logic grounds)</strong> — red-team-skeptic flags this as liable to be misread downstream as &quot;NDUFAF2 has a lung phenotype, therefore plausible COPD gene,&quot; when the correct reading is that this is a mechanistically distinct pulmonary VASCULAR phenotype in a severe recessive neonatal disease, arguing against (not for) a common-variant airway-obstruction (COPD) mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NDUFAF2</td>
+<td>Mendelian genetics, supporting case reports/functional (non-pulmonary)</td>
+<td>Additional NDUFAF2 mitochondrial-complex-I-deficiency case reports and foundational functional characterization</td>
+<td>PMID 40709164 (Alhamad et al. 2025); PMID 38477541 (Marshall et al. 2024); PMID 19384974 (Hoefs et al., Hum Mutat 2009, foundational)</td>
+<td>Not contested; non-pulmonary Mendelian disease, no COPD relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NDUFAF2 / ERCC8</td>
+<td>Genomic adjacency (structural)</td>
+<td>A homozygous ~0.53 kb microdeletion spanning the first exon of both ERCC8 and NDUFAF2 (via paternal uniparental isodisomy of chr5) causes a blended Cockayne-syndrome/complex-I-deficiency phenotype, with RNA-seq confirming reduced expression of both genes — establishes that ERCC8 and NDUFAF2 are genomically adjacent and can be co-disrupted by a single small deletion</td>
+<td>PMID 39621529 (Yamoto et al., Mol Genet Genomic Med 2024, DOI 10.1002/mgg3.70037)</td>
+<td>Not contested; useful structural/positional context, but reflects a rare Mendelian-disease deletion mechanism, not evidence of shared common-variant COPD biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NDUFAF2</td>
+<td>Mouse functional (non-lung)</td>
+<td>NDUFAF2 protein is compensatorily upregulated across brain regions in a different complex-I-deficient (Ndufs4-KO) mouse model</td>
+<td>PMID 39395749 (van de Wal et al., Biochim Biophys Acta Proteins Proteom 2024, DOI 10.1016/j.bbapap.2024.141055)</td>
+<td>Not contested; general complex-I assembly biology, not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ELOVL7</td>
+<td>Cancer metabolism (non-lung)</td>
+<td>ELOVL7 is an androgen/SREBP1-regulated elongase of saturated very-long-chain fatty acids in prostate cancer cells; knockdown attenuates tumor growth</td>
+<td>PMID 19826053 (Tamura et al., Cancer Res 2009, DOI 10.1158/0008-5472.CAN-09-0775)</td>
+<td>Not contested; foundational molecular-function paper, not lung-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ELOVL7</td>
+<td>Cancer metabolism, supporting (non-lung)</td>
+<td>Androgen-receptor-regulated lipid biosynthesis reactivation, including ELOVL7, drives castration-resistant prostate cancer progression</td>
+<td>PMID 29059155 (Han et al., Oncogene 2018, DOI 10.1038/onc.2017.385)</td>
+<td>Not contested; not lung-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ELOVL7</td>
+<td>Cross-species preprint (tangential, NOT peer-reviewed)</td>
+<td>A largely Drosophila-based tumor-host lipid-signaling axis involving a VLCFA elongase supports insect &quot;tracheogenesis&quot; (tracheal/respiratory-tube development) around gut tumors; hepatic elongation-gene expression separately increased in lung-tumor-bearing mice</td>
+<td>PMID 40236168 (Huang et al., bioRxiv 2025 preprint, DOI 10.1101/2025.04.04.647255)</td>
+<td>Very weak/indirect cross-species evidence; insect tracheogenesis is not mammalian airway development — must not be read as a lung-biology finding for human ELOVL7. Preprint, not peer-reviewed</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p>Note: SMIM15-AS1 has zero PubMed-indexed literature of any kind (confirmed by researcher
+search) and therefore has no rows in this table — this is a genuine literature blank, not
+an omission.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — NOT a verified literature citation;</h2>
+<p>did not go through citation-verifier or red-team-skeptic)</p>
+<p>Source: Open Targets Platform GraphQL API, queried directly by the orchestrator,
+2026-09-11.</p>
+<table>
+<thead>
+<tr>
+<th>Gene (Ensembl ID)</th>
+<th>L2G / colocalization for COPD (MONDO_0005002)</th>
+<th>Aggregated COPD association (all datatypes)</th>
+<th>Aggregated smoking-initiation association (EFO_0005670)</th>
+<th>FEV1 / FEV1-FVC / lung-function association</th>
+<th>gnomAD genetic constraint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMIM15 (ENSG00000188725)</td>
+<td>None found (this GWAS not ingested into Open Targets — coverage gap, not a negative finding)</td>
+<td>None (count = 0)</td>
+<td>Score 0.036 (very weak)</td>
+<td>None found</td>
+<td>LoF oe 0.706 (90% CI 0.368-1.463, wide/uninformative); mis oe 0.906; not clearly constrained</td>
+</tr>
+<tr>
+<td>ZSWIM6 (ENSG00000130449)</td>
+<td>None found (same coverage gap)</td>
+<td>None (count = 0)</td>
+<td>Score 0.347 (ranks ~10th of 743 total associated traits for this gene)</td>
+<td>None found</td>
+<td>LoF score 1.000, oe 0.081 (90% CI 0.046-0.146) — extremely LoF-constrained; mis score 3.289, oe 0.759 — missense-constrained. Consistent with known dominant gain-of-function disease mechanism</td>
+</tr>
+<tr>
+<td>LINC02057 (ENSG00000249279)</td>
+<td>None found</td>
+<td>None (count = 0)</td>
+<td>None (count = 0)</td>
+<td>None found</td>
+<td>No data (non-coding gene, not assessed by gnomAD protein-coding constraint)</td>
+</tr>
+<tr>
+<td>NDUFAF2 (ENSG00000164182)</td>
+<td>None found</td>
+<td>Score 0.281, but this derives <strong>entirely</strong> from datatype &quot;clinical&quot; / datasource &quot;clinical_precedence&quot; (score 0.463) — a clinical/drug-trial-precedence signal, NOT a genetic/GWAS signal</td>
+<td>Score 0.125</td>
+<td>None found</td>
+<td>LoF oe 0.614 (90% CI 0.359-1.107, wide); mis oe 0.831; no strong constraint signal either way</td>
+</tr>
+<tr>
+<td>SMIM15-AS1 (ENSG00000251279)</td>
+<td>None found</td>
+<td>None (count = 0)</td>
+<td>None (count = 0)</td>
+<td>None found</td>
+<td>No data (non-coding gene)</td>
+</tr>
+<tr>
+<td>ERCC8 (ENSG00000049167)</td>
+<td>None found</td>
+<td>None (count = 0)</td>
+<td>Score 0.126</td>
+<td>None found</td>
+<td>Not LoF-constrained (oe 1.175, 90% CI 0.870-1.608); not missense-constrained (oe 1.117, i.e. more missense variation than expected) — consistent with its known recessive (not dominant) disease mechanism</td>
+</tr>
+<tr>
+<td>ELOVL7 (ENSG00000164181)</td>
+<td>None found</td>
+<td>None (count = 0)</td>
+<td>Score 0.351 (similar magnitude to ZSWIM6)</td>
+<td>None found</td>
+<td>LoF oe 0.690 (90% CI 0.471-1.035); mis oe 0.910; no strong constraint signal either way</td>
+</tr>
+</tbody>
+</table>
+<p>Cross-cutting note: no candidate gene at this locus has any Open Targets <code>gwas_credible_sets</code>
+L2G or colocalization evidence for COPD, and no gene shows any FEV1/FEV1-FVC/lung-function
+trait association in Open Targets. This absence of spirometric-trait concordance —
+flagged independently by both the researcher and red-team-skeptic as one of the most
+informative facts about this locus — is notable per the pipeline's spirometry prior
+(prior #2), though a genuine data-coverage gap (this specific GWAS not being ingested
+into Open Targets) limits how much weight the <em>absence</em> of L2G/colocalization evidence
+specifically can bear.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Prioritized gene: LINC02057.</strong>
+<strong>Confidence: LOW.</strong></p>
+<p>This is a genuinely close call across a locus where every candidate gene's evidence is
+weak, and the call should be read as &quot;least-bad positional candidate,&quot; not as a
+confident functional pick. Reasoning:</p>
+<ul>
+<li><strong>Fine-mapping/positional evidence favors LINC02057.</strong> The lead variant (rs194369,
+PIP=0.109) and the large majority of the credible set's higher-PIP variants sit
+physically within/near LINC02057 (see evidence table and researcher notes). In a
+credible set with no coding or splice variant anywhere (115 variants, all
+intron/UTR/intergenic/regulatory), positional concentration under a single gene is
+the strongest form of evidence still available, even though it is not corroborated by
+any mechanistic literature for LINC02057 (a real, acknowledged evidence gap, not a
+negative finding — see LINC02057 row above).</li>
+<li><strong>The pipeline's computational top pick, ZSWIM6, is weaker than it first appears.</strong>
+Despite being the FLAMES/MAGMA/PoPS-prioritized gene, ZSWIM6 sits 150-500kb from the
+credible set's actual variant mass with no eQTL/Hi-C/ABC evidence located connecting
+the credible set to ZSWIM6 expression specifically. Per the red-team-skeptic critique,
+MAGMA/PoPS gene-level scores are known to be biased toward large, well-annotated,
+constrained genes and can reflect a neighboring gene's regulatory landscape without
+being the causal gene. ZSWIM6's genetic-association profile (Open Targets: 743 total
+associated traits) is dominated by its own dominant gain-of-function Mendelian disease
+(acromelic frontonasal dysostosis) and a bundle of neuropsychiatric/behavioral traits
+(schizophrenia 0.465, bipolar 0.341, alcohol drinking 0.329, autism 0.326, ADHD/OCD/
+Tourette/MDD/anorexia ~0.214 each), with &quot;smoking initiation&quot; (0.347) only one thread
+among several and not even the dominant one. The critique explicitly WEAKENED the
+&quot;ZSWIM6 = smoking-mediated COPD signal&quot; narrative: it is a plausible inference, not a
+confirmed one (no primary smoking-GWAS paper was independently verified for this
+locus), and a generic neurobehavioral-pleiotropy explanation is at least as well
+supported by the same data.</li>
+<li><strong>NDUFAF2, ERCC8, and ELOVL7 all lack any COPD/lung-function-relevant common-variant
+or mechanistic evidence.</strong> NDUFAF2's one pulmonary case-report link (neonatal
+persistent pulmonary hypertension, PMID 40462436) was explicitly CONTESTED by
+red-team-skeptic on logic grounds — it reflects a mechanistically distinct pulmonary
+vascular phenotype from a severe recessive disease, and should not be read as support
+for a common-variant COPD mechanism. Its apparent Open Targets &quot;COPD&quot; score is a
+clinical/drug-precedence artifact, not genetic evidence. ERCC8 (Cockayne syndrome) and
+ELOVL7 (prostate-cancer lipogenesis) have no pulmonary or COPD-relevant literature at
+all beyond weak, unverified Open Targets smoking-initiation aggregate scores similar in
+magnitude to ZSWIM6's.</li>
+<li><strong>SMIM15 (nearest gene/ABC pick) and SMIM15-AS1 are essentially literature blanks</strong> —
+SMIM15's one candidate supporting citation (Abusheikha et al. 2025) was found by
+citation-verifier to be a CLAIM_MISMATCH (the paper does not actually mention SMIM15)
+and is excluded from the evidence table entirely; SMIM15-AS1 has zero PubMed-indexed
+literature. Both rest on proximity/ABC-score alone, with no supporting function.</li>
+</ul>
+<p><strong>Runner-up: ZSWIM6</strong> (the pipeline's own computational top pick, but weakened per above).
+<strong>What would resolve this tie:</strong> direct eQTL or Hi-C/promoter-capture evidence linking
+the credible-set region to either LINC02057 or ZSWIM6 expression in lung/airway tissue;
+independent confirmation (not just an Open Targets aggregate score) of a genome-wide-
+significant smoking-initiation or cigarettes-per-day GWAS hit at this exact locus; and
+a direct check of the Shrine et al. 2019 and Sakornsakolpat et al. 2019 supplementary
+gene-level tables for this specific sub-locus, which neither the researcher nor the
+red-team-skeptic was able to independently confirm in this research pass (search-budget
+constraints on both sides — see critique). Given the critique's most important
+observation — the total absence of FEV1/FEV1-FVC concordance for any gene at this locus,
+despite Shrine and Sakornsakolpat being companion COPD/lung-function GWAS papers from the
+same consortium generation — the study team should also weigh the alternative
+possibility, raised explicitly by red-team-skeptic, that this locus's COPD signal is a
+statistical/pleiotropic artifact (e.g., driven by smoking behavior, psychiatric
+comorbidity, or non-pulmonary case-ascertainment correlates) rather than a genuine
+pulmonary-biology locus with a single identifiable causal gene at all. Confidence is
+marked LOW (not INSUFFICIENT) because the positional/fine-mapping case for LINC02057 is
+real and specific, even though it lacks any corroborating functional literature.</p>
+
+</body>
+</html>

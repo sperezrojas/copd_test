@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>6_142250001-142600000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-6142250001-142600000-grch38">Evidence table — locus 6:142,250,001-142,600,000 (GRCh38)</h1>
+<p><strong>Lead variant:</strong> rs4896582 (6:142,382,740:G:A, PIP=0.481, intron_variant in ADGRG6)
+<strong>Nearest gene:</strong> ADGRG6 · <strong>PoPS-prioritized:</strong> NMBR · <strong>FLAMES/MAGMA/ABC:</strong> NA
+<strong>Credible set:</strong> all ~44 variants are intronic in ADGRG6 or intergenic; none missense/splice.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADGRG6</td>
+<td>Statistical genetics</td>
+<td>Original CHARGE Consortium meta-analysis identifies GPR126 (ADGRG6) as one of eight loci genome-wide significant for FEV1/FVC in ~20,890 individuals — founding statgen evidence for this locus.</td>
+<td>Hancock DB et al., Nat Genet 2010. PMID 20010835, DOI 10.1038/ng.500</td>
+<td>SUPPORTED (part of core, unimpeached statgen replication set)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRG6</td>
+<td>Statistical genetics</td>
+<td>Identifies a second, distinct signal at GPR126 (beyond the originally reported one) associated with FEV1/FVC in a ~92,749-individual meta-analysis — allelic heterogeneity at this locus.</td>
+<td>Soler Artigas M et al., Nat Commun 2015. PMID 26635082, DOI 10.1038/ncomms9658</td>
+<td>SUPPORTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRG6</td>
+<td>Statistical genetics / smoking-mediated</td>
+<td>Large (400,102-individual) multi-ancestry lung-function GWAS (279 signals, 139 new); GPR126 among long-replicated loci; combined lung-function-variant panel effect &quot;showed generalizability across smokers and never smokers&quot; (panel-level, not GPR126-specific stratification).</td>
+<td>Shrine N et al., Nat Genet 2019. PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
+<td>SUPPORTED, with the caveat that the never/ever-smoker generalizability statement is about the combined 279-variant panel, not a GPR126-specific stratified analysis</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRG6</td>
+<td>Statistical genetics / smoking-mediated</td>
+<td>In a gene-by-smoking-interaction meta-analysis of exonic variants (~44,429 discovery, replicated in UK BiLEVE/UK Biobank), the most significant replicated signal was a low-frequency GPR126 variant distinct from common-variant associations, for FEV1.</td>
+<td>Yang T et al., Sci Rep 2021. PMID 34588469, DOI 10.1038/s41598-021-98120-7</td>
+<td>SUPPORTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRG6</td>
+<td>Statistical genetics</td>
+<td>In a Chinese-ancestry twin GWAS with UK Biobank validation, 25 SNPs located in GPR126 were associated with FVC and were also significant in gene-based analysis — cross-ancestry replication.</td>
+<td>Wang T et al., BMC Genomics 2024. PMID 39736507, DOI 10.1186/s12864-024-11165-6</td>
+<td>SUPPORTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRG6</td>
+<td>Statistical genetics (functional-variant fine-mapping)</td>
+<td>Identifies candidate functional/causal variants at the locus: a missense variant (Ser123Gly) and an intronic variant with eQTL effects on GPR126 expression (via GTEx/LDlink); states locus variants are &quot;reproducibly associated with lung function and COPD in GWAS.&quot;</td>
+<td>Hall RJ et al., FASEB J 2021;35(7):e21300. PMID 34165809, DOI 10.1096/fj.202002073R</td>
+<td>SUPPORTED (re-verified via Europe PMC/PubMed abstract after initial paywall block; all specific claims confirmed verbatim)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRG6</td>
+<td>Structural / developmental lung biology</td>
+<td>CRISPRi knockdown of ADGRG6 in iPSC-derived alveolar type II epithelial cells (iAT2s) alters focal adhesions, cytoskeleton, tight junctions, and proliferation, and specifically changes the injury response of cigarette-smoke-exposed iAT2s; ties locus to DLCO/VA (gas-exchange/alveolar function) as a distinct fine-mapped signal.</td>
+<td>Werder RB et al., AJHG 2023. PMID 37734371, DOI 10.1016/j.ajhg.2023.08.017</td>
+<td>SUPPORTED — direct mechanistic evidence in a disease-relevant human cell type and exposure</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRG6</td>
+<td>Structural / immune-adjacent (airway remodeling)</td>
+<td>GPR126 activation via its tethered &quot;stachel&quot; agonist triggers cAMP signaling in human airway smooth muscle and bronchial epithelial cells and regulates ~350 downstream genes including IL33, CTGF (CCN2), and SERPINE1 (PAI-1); authors propose &quot;a role for GPR126 in airway remodeling.&quot;</td>
+<td>Hall RJ et al., FASEB J 2021. PMID 34165809, DOI 10.1096/fj.202002073R</td>
+<td>SUPPORTED, but this is the ONLY verified immune-adjacent finding for ADGRG6, and IL33 induction occurs in a non-immune cell type (airway smooth muscle) — do not read as direct evidence of an immune-cell-intrinsic role</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRG6</td>
+<td>Structural (review, secondary source)</td>
+<td>Review states GWAS &quot;have implicated variations at the [GPR126] locus in obstructive pulmonary dysfunction, in scoliosis and as a determinant of trunk length and body height,&quot; framing these as parallel, tissue-context-dependent signaling outputs.</td>
+<td>Patra C, Monk KR, Engel FB, Receptors Clin Investig 2014. PMID 25493288, DOI 10.14800/rci.79</td>
+<td>SUPPORTED as a secondary/review source; does not itself establish a mechanistic bridge between skeletal and pulmonary phenotypes</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRG6</td>
+<td>Structural — skeletal biology (NOT lung-specific; alternative/pleiotropic hypothesis)</td>
+<td>Conditional knockout of Adgrg6 in mouse chondrocytes disrupts growth-plate homeostasis via PTHrP/Indian Hedgehog signaling — mechanistic support for ADGRG6's established skeletal role, no lung phenotype examined.</td>
+<td>Bian F et al., J Bone Miner Res 2024. PMID 39236220, DOI 10.1093/jbmr/zjae144</td>
+<td>SUPPORTED as skeletal-biology evidence only; explicitly NOT lung-structural evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRG6</td>
+<td>Structural — molecular/receptor biology (background, not lung-specific)</td>
+<td>Solves the ECR structure of zebrafish Gpr126 and demonstrates a calcium-dependent conformational mechanism regulating receptor signaling.</td>
+<td>Leon K et al., Nat Commun 2020. PMID 31924782, DOI 10.1038/s41467-019-14040-1</td>
+<td>SUPPORTED as general receptor-biology background only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRG6</td>
+<td>Smoking-mediated effects (absence-of-evidence check)</td>
+<td>Standard reference GWAS for smoking initiation/cessation/heaviness (566 variants, 406 loci); abstract does not name ADGRG6/GPR126 among discussed genes/pathways (nicotinic, dopaminergic, glutamatergic neurotransmission highlighted instead).</td>
+<td>Liu M et al. (GSCAN), Nat Genet 2019. PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
+<td>SUPPORTED as a weak/indirect absence-of-evidence argument only (abstract cannot list all 406 loci) — not a systematic check of the full locus list</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRG6</td>
+<td>Other mechanism — myelination (background, NOT lung-relevant)</td>
+<td>Gpr126 is required for Schwann cells to progress through developmental stages to myelination; small molecules can activate Gpr126 or bypass its loss to restore myelination in zebrafish.</td>
+<td>Bradley EC et al., Ann NY Acad Sci 2019. PMID 31529518, DOI 10.1111/nyas.14233</td>
+<td>SUPPORTED as background only; no documented connection to lung biology found</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NMBR</td>
+<td>Structural/developmental + immune (disease-context mismatch)</td>
+<td>In a baboon model of bronchopulmonary dysplasia (BPD, a neonatal chronic lung disease of prematurity), elevated bombesin-like peptides are associated with pulmonary neuroendocrine cell and mast cell hyperplasia; Nmbr-null mice show NMB-R (not GRPR) is required for bombesin-induced lung mast cell accumulation.</td>
+<td>Subramaniam M et al., Am J Respir Crit Care Med 2003. PMID 12807697, DOI 10.1164/rccm.200212-1434OC</td>
+<td>WEAKENED as support for this locus — real mechanism, but neonatal BPD is a distinct disease context from adult COPD; not meaningful support for NMBR as the causal gene here</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HIVEP2</td>
+<td>Immune (non-COPD-specific; gene outside physical locus)</td>
+<td>CRISPR screen in primary human Treg cells: &quot;HIVEP2, to our knowledge not previously implicated in T cell function, coregulates another gene network with SATB1 and is important for T cell-mediated immunosuppression.&quot;</td>
+<td>Schumann K et al., Nat Immunol 2020. PMID 32989329, DOI 10.1038/s41590-020-0784-4</td>
+<td>WEAKENED as locus-specific support — genuine immune mechanism, but general immunology context, not COPD/airway-disease-specific, and HIVEP2 sits ~151kb outside the locus with weak/distant L2G and no colocalization support</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HIVEP2</td>
+<td>Immune (non-COPD-specific; viral-infection model)</td>
+<td>In SARS-CoV-2-infected Calu-3 lung epithelial cells, HIVEP2 is among several transcription factors post-transcriptionally restricted by the virus.</td>
+<td>Alexander MR et al., Int J Mol Sci 2021. PMID 33806254, DOI 10.3390/ijms22073392</td>
+<td>WEAKENED as locus-specific support — viral-infection model, not COPD; relevance to chronic airway inflammation unclear</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p><strong>ADGRG6 (ENSG00000112414):</strong></p>
+<ul>
+<li>Genetic constraint: LOF oe=0.425 (90% CI 0.292-0.630, moderate constraint); missense oe=0.901; synonymous oe=0.933.</li>
+<li>Overall integrated disease-association score for COPD (MONDO_0005002): 0.499 (rank 3 of 1,140 diseases associated with this gene); datatype breakdown: genetic_association=0.786, literature=0.702.</li>
+<li>L2G scores at lead variant rs4896582 (6_142382740_G_A): 0.62-0.83 across every COPD case-control study sampled (plain, ever-smoker, never-smoker, non-current-smoker strata) and every smoking-interaction model; 0.69-0.83 across FEV1/FEV1-FVC/peak-expiratory-flow studies. HIVEP2 is a consistent distant second (0.06-0.11); NMBR appears once, at 0.05, in an unrelated hip-index study.</li>
+<li>Colocalization (COLOC_PIP_ECAVIAR): ADGRG6 eQTL colocalizes with the GWAS signal in GTEx adipose subcutaneous and skin (h4 0.74-0.96 for several studies, including COPD/hypertension pleiotropy h4=0.94 and COPD-smoking-interaction h4=0.89), more weakly in BLUEPRINT T-cells (h4 0.61-0.77); no colocalization rows were returned for peak expiratory flow or one height study (count=0 — absence, not a negative result). No whole-lung-tissue GTEx colocalization was found in this lookup — a disclosed gap.</li>
+</ul>
+<p><strong>NMBR (ENSG00000135577):</strong></p>
+<ul>
+<li>Genetic constraint: LOF oe=0.691; missense oe=1.10 (essentially missense-tolerant); weaker constraint than ADGRG6.</li>
+<li>COPD does not appear in NMBR's top 25 disease associations (of 104 total). No COPD/spirometric-trait L2G signal at this locus in any study sampled.</li>
+<li>No NMBR-specific eQTL colocalization returned.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>ADGRG6 — Confidence: MODERATE.</strong></p>
+<p>ADGRG6 is the only protein-coding gene physically overlapping the credible-set interval (confirmed
+independently by the researcher via direct Ensembl genomic-overlap query), is the nearest gene to
+the lead variant, and carries by far the strongest and most consistent evidence at every level:
+(1) statistical genetics — five independent, large, cross-ancestry GWAS replications for FEV1/FVC
+spanning 2010-2024 (Hancock, Soler Artigas, Shrine, Yang, Wang — all SUPPORTED above), plus a
+consistently dominant Open Targets L2G score (0.62-0.83) across COPD case-control studies in
+multiple smoking strata and spirometric traits, far ahead of the next candidate (HIVEP2, 0.06-0.11);
+(2) a specific, re-verified candidate functional variant (missense Ser123Gly) and an intronic eQTL
+variant at the locus (Hall et al.); (3) two independent, verified pieces of direct cell-type-specific
+functional/mechanistic evidence in disease-relevant human lung cells — iPSC-derived alveolar type II
+cells under cigarette-smoke injury (Werder et al.) and primary airway smooth muscle/bronchial
+epithelial cells with an explicit airway-remodeling mechanism (Hall et al.); (4) no literature found
+directly linking ADGRG6 to smoking-initiation/nicotine-dependence genetics (GSCAN), and the strongest
+argument against pure smoking-mediation is the gene's own independently replicated FEV1/FVC
+association, since spirometric traits are not simple proxies for smoking behavior.</p>
+<p>Confidence is capped at MODERATE rather than HIGH for two disclosed reasons: (a) the only verified
+immune/inflammatory mechanistic evidence for ADGRG6 is a single downstream gene (IL33) induced in a
+non-immune cell type (airway smooth muscle) — this is real but thin relative to the heterogeneous
+immune programs (CD8+ T-cell, Th17/Tc17, macrophage, etc.) implicated in COPD generally, and no
+lung-tissue (whole-organ) eQTL colocalization was found in the Open Targets structured lookup to
+complement the airway-cell-type functional data; (b) two citations initially used to argue ADGRG6 is
+a directly &quot;well-replicated primary COPD-GWAS locus&quot; (Sakornsakolpat 2019, Jackson 2016) were found
+by the citation-verifier to overstate their own papers' actual findings (ADGRG6 appears only as a
+fine-mapped variant, not a primary locus, in Sakornsakolpat; Jackson's blanket &quot;confirmed&quot; framing
+is undercut by its own failed MMP12 replication) — so the COPD-specific (as opposed to
+lung-function-specific) statistical case rests more heavily on Open Targets L2G/credible-set
+evidence than on independently verified COPD case-control replication literature. Two independent
+red-team-skeptic search passes found no genuine contradicting evidence against ADGRG6.</p>
+<p>NMBR (PoPS-prioritized) and HIVEP2 (a distant secondary Open Targets L2G hit) are both weaker
+candidates: NMBR's gene body lies ~103kb outside the physical locus interval, has no COPD/lung-
+function GWAS or L2G signal, and its only mechanistic literature (NMBR-dependent mast-cell
+recruitment) is drawn from a neonatal bronchopulmonary-dysplasia model, a disease context distinct
+from adult COPD. HIVEP2's gene body lies ~151kb outside the locus on the opposite side, has a weak/
+distant L2G score, no colocalization support, and its only literature (a Treg-immunosuppression
+mechanism and a SARS-CoV-2 lung-epithelium finding) is genuine but not COPD-specific — most likely
+reflecting LD/regulatory bleed-through from the ADGRG6 signal rather than an independent causal
+gene. Neither is a close competitor to ADGRG6 on the evidence gathered; this is not a tied-LD-block
+call between genes of comparable support.</p>
+
+</body>
+</html>

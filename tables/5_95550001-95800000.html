@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>5_95550001-95800000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-595550001-95800000-nearest-gene-spata9">Evidence table — Locus 5:95,550,001-95,800,000 (nearest gene: SPATA9)</h1>
+<p>Lead variant: rs466748 (PIP=0.334, 5:95,674,324, intronic to SPATA9). All credible-set
+variants are intronic/downstream/intergenic/non-coding (no missense/splice variants).
+FLAMES/MAGMA/PoPS/ABC gene-prioritization methods were all NA at this locus in the original
+pipeline run.</p>
+<p><strong>Targeted re-opening (2026-09-11):</strong> the study team discovered a genome-build error in the
+original MAGMA/PoPS gene-location merge file. A corrected re-merge surfaced a new candidate
+gene at this locus, <strong>RFESD</strong>, which was independently confirmed (via Ensembl/Open Targets
+coordinates) to genuinely physically overlap this locus and the credible-set span — the
+lead variant rs466748 itself sits inside RFESD's gene body (RFESD and SPATA9 overlap/abut
+at this exact position). RFESD was researched, verified, and critiqued with the same rigor
+as the original candidates; see its dedicated section below. The original SPATA9/RHOBTB3
+evidence base is unchanged and was not re-verified in this re-opening.</p>
+<p>Only citations with verifier verdict VERIFIED, and verified as gene-specific (not
+CLAIM_MISMATCH), are included below. See <code>audits/5_95550001-95800000_audit.md</code> for excluded
+citations and contested/weakened gene verdicts with reasoning preserved verbatim.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SPATA9</td>
+<td>Statistical genetics (GWAS discovery)</td>
+<td>GWAS of FEV1/FEV1-FVC (48,201 discovery, ~94,612 follow-up) explicitly names SPATA9 as one of 16 new genome-wide-significant loci for pulmonary function traits.</td>
+<td>Soler Artigas et al. 2011, Nat Genet. PMID: 21946350, DOI: 10.1038/ng.941</td>
+<td>WEAKENED (sole SPATA9-specific citation; a 2011 nearest-gene discovery call, not fine-mapped/functionally validated)</td>
+<td>2011</td>
+</tr>
+<tr>
+<td>SPATA9 (locus-class, not gene-specific)</td>
+<td>Statistical genetics (GWAS, GRS)</td>
+<td>GWAS of lung function in 400,102 individuals (279 signals, 139 novel); combined genetic-risk-score effect of lung-function variants predicted COPD and generalized &quot;across smokers and never smokers.&quot;</td>
+<td>Shrine et al. 2019, Nat Genet. PMID: 30804560, DOI: 10.1038/s41588-018-0321-7</td>
+<td>WEAKENED — locus-class-level claim, NOT SPATA9-specific; included only as context for the smoking-mediation prior, not as gene-level evidence</td>
+<td>2019</td>
+</tr>
+<tr>
+<td>RHOBTB3 (secondary/context gene; not in locus file's own candidate list — surfaced via Open Targets L2G, see summary below)</td>
+<td>Structural/developmental (mouse model)</td>
+<td>Rhobtb3 nearly ubiquitously expressed in mouse embryo/adult (bone, cartilage, muscle, testis, cardiac, vascular); knockout mice show reduced viability, growth defect, reduced testis size. Lung/airway expression explicitly NOT addressed by this paper.</td>
+<td>Lutz et al. 2014, Histochem Cell Biol. PMID: 24923387, DOI: 10.1007/s00418-014-1235-9</td>
+<td>WEAKENED — confirms absence of lung-specific evidence rather than supporting one</td>
+<td>2014</td>
+</tr>
+<tr>
+<td>RHOBTB3</td>
+<td>Molecular/cellular mechanism (cancer biology, not lung)</td>
+<td>RHOBTB3 forms a RHOBTB3/LIMD1-PHD2-VHL-HIFα complex promoting HIFα hydroxylation/degradation; RHOBTB3 loss elevates Warburg effect/tumor growth in renal-carcinoma xenograft.</td>
+<td>Zhang et al. 2015, Cell Research. PMID: 26215701, DOI: 10.1038/cr.2015.90</td>
+<td>WEAKENED/speculative — real molecular biology, but cancer-context only, not lung or COPD</td>
+<td>2015</td>
+</tr>
+<tr>
+<td>RHOBTB3</td>
+<td>Molecular/cellular mechanism (tumor immunology, not lung)</td>
+<td>HIF-1-induced ISG20 degrades RHOBTB3 mRNA, increasing HIF-1α and activating NANOG/stemness in triple-negative breast cancer; the separate immune-evasion axis (reduced CXCL10, impaired CD8+ T-cell/NK-cell recruitment) operates via STAT1/IRF1 degradation, NOT via RHOBTB3 itself.</td>
+<td>Yang et al. 2025, J Exp Med. PMID: 41385111, DOI: 10.1084/jem.20250777</td>
+<td>CONTESTED as RHOBTB3-immune evidence — skeptic flags this citation as near-irrelevant to RHOBTB3's own mechanism and at risk of being misread as &quot;RHOBTB3 -&gt; immune evasion&quot;</td>
+<td>2025 (epub; print 2026)</td>
+</tr>
+<tr>
+<td>RHOBTB3</td>
+<td>Molecular/cellular mechanism (skin biology, not lung)</td>
+<td>RHOBTB3/PHD2/HIF-1α axis operates in skin keratinocytes; druggable by diosmetin to reduce oxidative stress/inflammation in UV-induced sunburn in mice.</td>
+<td>Gong et al. 2025, Phytomedicine. PMID: 40311591, DOI: 10.1016/j.phymed.2025.156793</td>
+<td>WEAKENED/speculative — reinforces HIF-pathway mechanism in a third non-pulmonary tissue, not lung/COPD evidence</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>RFESD (new candidate, added 2026-09-11 re-opening; surfaced by corrected MAGMA/PoPS genome-build re-merge; physically overlaps the lead credible-set variant, see Open Targets summary)</td>
+<td>Structural/developmental (non-lung, teleost fish gonad)</td>
+<td>rfesd identified as one of several testis-biased differentially expressed genes in a four-finger threadfin (fish) gonad transcriptome.</td>
+<td>Mkulo et al. 2025, Comp Biochem Physiol D. PMID: 40694934, DOI: 10.1016/j.cbd.2025.101586</td>
+<td>WEAKENED/speculative — non-mammalian, non-lung, no plausible relevance to human COPD biology</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>RFESD</td>
+<td>Molecular/cellular mechanism + immune-adjacent (hepatocellular carcinoma, not lung)</td>
+<td>WGCNA on 746 HCC samples identifies a γδ T-cell-infiltration-associated co-expression module and an 11-hub-gene prognostic signature including RFESD; in vitro knockdown of RFESD (si-RFESD) inhibited HCC cell proliferation.</td>
+<td>Wang et al. 2022, BMC Cancer. PMID: 35681134, DOI: 10.1186/s12885-022-09662-6</td>
+<td>WEAKENED — only functional (knockdown) data found for RFESD anywhere, but it is liver-cancer bulk-tumor/immune-infiltration correlation, not a demonstrated cell-intrinsic immune function, and non-pulmonary</td>
+<td>2022</td>
+</tr>
+<tr>
+<td>RFESD</td>
+<td>Immune-adjacent (maternal peripheral blood, autism outcome, not lung)</td>
+<td>RFESD (with TGR-AS1, SQSTM1, HLA-C) one of six transcripts differentially expressed with genome-wide significance in maternal blood comparing ASD vs. typical-development pregnancies.</td>
+<td>Zhu et al. 2020, Autism Research. PMID: 33159718, DOI: 10.1002/aur.2428</td>
+<td>WEAKENED — core claim verified but whether RFESD is actually part of the paper's separately-described adaptive-immune-enriched co-expression module (vs. only the unrelated 6-transcript DE list) is UNRESOLVED from the abstract; non-pulmonary regardless</td>
+<td>2020</td>
+</tr>
+<tr>
+<td>RFESD (locus-class/context, not gene-specific)</td>
+<td>Statistical genetics (smoking/alcohol-behavior GWAS, context for prior #1)</td>
+<td>GSCAN consortium GWAS of tobacco/alcohol use in up to 1.2 million individuals (566 variants, 406 loci for tobacco-use stages, 150 pleiotropic loci with alcohol use).</td>
+<td>Liu et al. 2019, Nat Genet. PMID: 30643251, DOI: 10.1038/s41588-018-0307-5</td>
+<td>WEAKENED — paper identity/general claim verified only; whether this region/RFESD/SPATA9/RHOBTB3 specifically appears among the 406 loci is UNRESOLVED (abstract-level access only); included only as context, not as gene-specific evidence</td>
+<td>2019</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary">Open Targets summary</h2>
+<p>Structured database lookup only — NOT verified literature citations, did not go through
+citation-verifier or red-team-skeptic. Retrieved directly via Open Targets Platform GraphQL
+API, 2026-09-11 (SPATA9/RHOBTB3 portion), addended 2026-09-11 (RFESD portion, targeted
+re-opening).</p>
+<p><strong>SPATA9</strong> (ENSG00000145757, nearest gene / primary candidate):</p>
+<ul>
+<li>Genetic constraint: LOEUF (oeUpper, pLoF) = 1.402, constraint score ≈ 0.0000026 — tolerant
+of loss-of-function, i.e. no evidence of haploinsufficiency-type constraint.</li>
+<li>Open Targets aggregate COPD association score: 0.225 (genetic_association datatype:
+0.367; literature datatype: 0.061). No direct FEV1 disease-entity association recorded.</li>
+<li>Locus-to-gene (L2G): Open Targets' own fine-mapping of this exact locus (COPD GWAS study
+GCST007692, n=257,811; credible set lead variant rs153916, matching a variant in our own
+credible set) gives L2G = 0.604 for SPATA9 (top-ranked at this credible set).</li>
+<li>Colocalization (COLOC_PIP_ECAVIAR) at this same credible set: H4 ≈ 0.97 with FEV1/FVC
+ratio across six independent GWAS, including &quot;FEV1/FVC ratio in never smokers&quot;
+(GCST90308603, H4=0.970, 30 colocalizing variants) — locus-level (gene-agnostic) evidence
+that this region acts on pulmonary function detectably in never-smokers.</li>
+<li>SPATA9's broader Open Targets disease-association profile is dominated by
+spermatogenesis/testis phenotypes (Sertoli cell-only syndrome, male infertility,
+globozoospermia, abnormal sperm morphology), consistent with its canonical annotated
+function.</li>
+</ul>
+<p><strong>RHOBTB3</strong> (ENSG00000164292, secondary/context gene — not in locus file's candidate list):</p>
+<ul>
+<li>Genetic constraint: LOEUF (oeUpper, pLoF) = 0.771, constraint score ≈ 0.0026 — more
+constrained against LoF than SPATA9, though not in the conventionally &quot;highly
+constrained&quot; range (LOEUF &lt; 0.35).</li>
+<li>Open Targets aggregate COPD association score: 0.0845 (genetic_association datatype:
+0.139) — substantially lower than SPATA9's.</li>
+<li>L2G at the same credible set (rs153916) as above: 0.229, second to SPATA9's 0.604.</li>
+<li>Broader disease-association profile dominated by literature-datatype hits for breast
+cancer/myeloid leukemia and a long tail of animal-model-datatype skeletal-dysplasia
+phenotypes (likely nonspecific mouse-knockout phenotype matches).</li>
+</ul>
+<p><strong>RFESD</strong> (ENSG00000175449, new candidate added 2026-09-11 targeted re-opening; surfaced by
+corrected MAGMA/PoPS genome-build re-merge, not by the original pipeline):</p>
+<ul>
+<li>Physical overlap (orchestrator-confirmed via <code>target.genomicLocation</code>, GRCh38): RFESD
+spans chr5:95,646,718-95,684,773 — entirely inside the 5:95,550,001-95,800,000 locus
+window, and the locus's single highest-PIP credible-set variant, rs466748 (PIP=0.334,
+5:95,674,324), falls physically INSIDE RFESD's gene body (this position is intronic to
+both SPATA9 and RFESD, which overlap/abut here). This is a genuine physical-overlap
+finding, not a build-error artifact — confirmed independently and separately by the
+researcher via Ensembl REST lookup.</li>
+<li>Genetic constraint: LOEUF (oeUpper, pLoF) = 0.915 — moderately constrained (more than
+SPATA9's 1.402, less than RHOBTB3's 0.771; rank order RHOBTB3 &lt; RFESD &lt; SPATA9 for LoF
+constraint at this locus).</li>
+<li>Open Targets aggregate COPD association score: <strong>no COPD association record exists for
+RFESD at all</strong> (vs. SPATA9's 0.225 and RHOBTB3's 0.0845). <strong>No FEV1/lung-function
+association record either.</strong> Of 12 total diseases associated with RFESD in Open Targets,
+none are lung/COPD-related (top hits: vitiligo, alcohol drinking, seasonal allergic
+rhinitis, placental abruption, osteosarcoma, infectious disease, hepatocellular
+carcinoma, myelodysplastic syndrome, AML, ovarian serous cystadenocarcinoma, gastric
+cancer, lymphoma).</li>
+<li>Locus-to-gene (L2G): queried directly at the same credible-set variant (rs153916) across
+all 9 credible sets Open Targets has there (including the exact COPD GWAS GCST007692 and
+all 5 FEV1/FVC-ratio GWAS at this locus), plus 6 more credible sets at the lead variant
+rs466748 itself (15 queries total) — <strong>RFESD never appears as a scored L2G candidate at
+any of them.</strong> Only SPATA9 and RHOBTB3 ever appear in the L2G output at this locus. This
+is a structural absence (never scored, not merely low-ranked), corroborated by two further
+independent negative findings from the researcher: an EBI GWAS Catalog search returning
+&quot;no results&quot; for RFESD across any trait, and zero PubMed GWAS/eQTL hits for RFESD.
+Caveat (per red-team-skeptic): L2G's feature set draws on functional annotation and
+eQTL/pQTL data that RFESD — whose UniProt function field is empty — may simply lack,
+making this partly a &quot;sparse-annotation blind spot&quot; rather than a fully considered
+rejection; it should not be read as definitive proof against RFESD, only as one of several
+converging negative signals.</li>
+<li>No colocalization evidence found for RFESD at this locus in any query performed.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>SPATA9 — Confidence: LOW.</strong> (Reaffirmed 2026-09-11 after targeted evaluation of RFESD;
+call unchanged from the original review.)</p>
+<p>SPATA9 is named as the sole candidate gene at this locus by the internal pipeline
+(nearest-gene annotation; FLAMES/MAGMA/PoPS/ABC all NA even after the genome-build
+correction, meaning no orthogonal gene-prioritization method independently corroborates
+it), and it carries the highest Open Targets L2G score (0.604 vs. RHOBTB3's 0.229, and vs.
+RFESD's — never scored at all) at the one credible-set variant Open Targets independently
+fine-mapped for this exact COPD GWAS locus. That locus also shows very strong, consistent
+colocalization (H4 ≈ 0.97) with FEV1/FVC ratio across six GWAS, including a
+never-smokers-only cohort — evidence that this region acts on pulmonary function through a
+mechanism not purely mediated by smoking behavior (prior #1). SPATA9 itself was also
+explicitly named as a genome-wide-significant lung-function locus in the 2011 Soler Artigas
+discovery GWAS (PMID 21946350, VERIFIED).</p>
+<p>However, per the red-team critique (both the original pass and the fresh RFESD-focused
+pass), this case is genuinely weak on closer inspection:</p>
+<ul>
+<li>The Soler Artigas 2011 citation is the ONLY SPATA9-specific literature support that
+exists; there has been no gene-specific mechanistic, TWAS, eQTL, or MR follow-up on
+SPATA9 in 15 years, and zero published work on the lead variant rs466748 itself.</li>
+<li>SPATA9's only well-characterized molecular function is spermatogenesis (Sertoli-cell
+biology, male infertility, globozoospermia) — there is no mechanistic literature
+connecting it to airway, alveolar, or any other lung-relevant biology.</li>
+<li>gnomAD shows SPATA9 to be tolerant of loss-of-function variation (LOEUF ~1.40), which
+does not support a highly penetrant, dosage-sensitive causal role.</li>
+<li>The Open Targets L2G margin (0.604 vs 0.229 vs. RFESD's absence) is modest relative to
+RHOBTB3 and not fully independent of the nearest-gene prior that nominated SPATA9 in the
+first place, since L2G partly incorporates distance-to-gene features.</li>
+<li>The FEV1/FVC never-smoker colocalization is gene-agnostic — it does not distinguish
+SPATA9 from RHOBTB3 (or, now, RFESD) and should not be read as gene-specific confirmation
+for SPATA9.</li>
+<li>Both red-team passes' own independent contradiction-searches failed entirely (exhausted
+search budget both times) — so the absence of contested/contradicting literature reported
+here reflects unperformed searches, not a clean literature record, for all three genes.</li>
+</ul>
+<p><strong>On RFESD specifically (the subject of this targeted re-opening):</strong> RFESD genuinely
+physically overlaps this locus and the lead credible-set variant (rs466748 sits inside its
+gene body), so it was a legitimate candidate to evaluate rather than a build-error false
+positive — but on every other axis it is the weakest of the three genes considered here. It
+has zero COPD or FEV1/lung-function association in Open Targets, is never scored at all by
+Open Targets' own L2G model across 15 independent queries at this locus (a structural
+absence, not a low rank — though partly confounded by RFESD's sparse functional annotation,
+per the red-team-skeptic's caveat), has no GWAS Catalog entry for any trait whatsoever, and
+its only functional literature (a hepatocellular-carcinoma knockdown study and a maternal
+peripheral-blood autism transcriptome study) is non-pulmonary and does not establish any
+lung-relevant biology. Its own protein function is not even characterized in UniProt. Per
+the red-team-skeptic's verdict, RFESD is &quot;WEAKENED, bordering on excludable&quot; — it does not
+create a three-way tie and does not unseat either SPATA9 or RHOBTB3 as the closer
+contenders.</p>
+<p>Given this, <strong>SPATA9 remains the best-supported single candidate</strong> — it has the higher L2G
+score among genes L2G actually scores, a direct (if old and unreplicated) gene-named GWAS
+hit, and is the pipeline's actual designated candidate (both before and after the
+genome-build correction, which did not change SPATA9's own candidacy) — but the call
+remains close between SPATA9 and RHOBTB3, RFESD is a documented but substantially weaker
+third candidate whose relevance rests almost entirely on raw physical gene-body overlap
+with the lead variant rather than any association or functional evidence, and confidence
+should remain LOW rather than MODERATE or HIGH. What would resolve the SPATA9-vs-RHOBTB3
+tie: (1) lung/airway single-cell or bulk-tissue expression data (e.g., GTEx, Human Lung Cell
+Atlas) for SPATA9 vs. RHOBTB3; (2) an eQTL/TWAS/colocalization analysis specifically
+distinguishing which gene's expression the credible-set variants affect in lung tissue; (3)
+any functional study of SPATA9 or RHOBTB3 in airway epithelium, alveolar cells, or a
+COPD/emphysema model; (4) a completed (not exhausted-budget) independent contradiction
+search. What would resolve RFESD's status specifically: (5) direct lung eQTL/sQTL catalog
+lookups (e.g., GTEx lung, lung-specific eQTL studies) for RFESD that Open Targets' L2G model
+may be missing due to its sparse annotation; (6) confirmation of whether RFESD and SPATA9
+share a bidirectional promoter or overlapping regulatory element that would make them
+mechanistically inseparable at this locus. Until then, this prioritization should be treated
+as a tentative, statistically-motivated best guess, not a mechanistically grounded
+conclusion.</p>
+
+</body>
+</html>

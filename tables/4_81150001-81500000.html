@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>4_81150001-81500000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table-locus-4_81150001-81500000-nearest-gene-prkg2">Evidence table: locus 4_81150001-81500000 (nearest gene PRKG2)</h1>
+<p><strong>Region:</strong> 4:81150001-81500000 (GRCh38). <strong>Lead variant:</strong> rs6831114 (4:81283862,
+PIP=0.186, intergenic_variant). Credible set: ~48 variants, essentially all
+intergenic/upstream/downstream, MODIFIER impact — no missense or splice-donor/acceptor
+variants anywhere in the set. Internal pipeline candidates: nearest gene/FLAMES = PRKG2;
+MAGMA = NA; PoPS = C4orf22 (now HGNC-renamed CFAP299); ABC = NA. RASGEF1B is included below
+as an additional candidate: it is not flagged by any internal prioritization method, but is
+the only other protein-coding gene physically overlapping the 350kb-wide locus window per
+Ensembl, and is included per pipeline instructions to enumerate genes in the region.</p>
+<p>All rows below carry only citations verified by citation-verifier (22/22 submitted
+citations returned VERIFIED; none excluded on citation grounds — see
+<code>audits/4_81150001-81500000_audit.md</code> for the full verification detail and for genes/claims
+the red-team-skeptic flagged as CONTESTED or WEAKENED).</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRKG2</td>
+<td>Structural (alveolar epithelial biology)</td>
+<td>Prkg2-knockout mouse AT2 cells form more organoids than wild-type but with fewer AT2/more AT1 cells and reduced proliferation, indicating a role in AT2 cell fate and alveolar epithelial regeneration; no smoke-exposure or emphysema model was tested</td>
+<td>PMID 35313961 / DOI 10.1186/s13287-022-02793-4</td>
+<td>WEAKENED — real biology but a baseline organ-repair phenotype in a constitutive KO with no COPD/emphysema disease model; being asked to substitute for absent genetic evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRKG2</td>
+<td>Structural (airway epithelial ion transport)</td>
+<td>PKG-II is the sole PKG isoform in human airway (Clara-cell-derived H441) cells and activates apical ENaC, increasing alveolar fluid clearance in mice</td>
+<td>PMID 19359370 / DOI 10.1113/jphysiol.2009.170324</td>
+<td>WEAKENED — relevant to fluid/edema clearance physiology, not to airflow obstruction or chronic inflammation (the COPD-defining pathophysiology)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRKG2</td>
+<td>Structural (non-lung, rare disease)</td>
+<td>Biallelic PRKG2 loss-of-function variants cause acromesomelic dysplasia, PRKG2 type, via impaired FGF-MAPK/ERK signaling in chondrocytes</td>
+<td>PMID 33106379 / DOI 10.1136/jmedgenet-2020-107177</td>
+<td>Not lung-relevant; included for completeness on PRKG2 LoF phenotype in humans</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRKG2</td>
+<td>Structural (non-lung, rare disease)</td>
+<td>Companion iPSC line resource for the same PRKG2-AMDP mutation; no lung phenotype reported</td>
+<td>PMID 33887582 / DOI 10.1016/j.scr.2021.102340</td>
+<td>Not lung-relevant; resource paper only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRKG2</td>
+<td>Structural (non-lung epithelial ion transport, general mechanism)</td>
+<td>PKG-II regulates CFTR-mediated Cl-/fluid secretion in rat jejunum</td>
+<td>PMID 15872007 / DOI 10.1152/ajpcell.00544.2004</td>
+<td>Not lung tissue; general mechanism only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRKG2</td>
+<td>Structural (non-lung epithelial ion transport, general mechanism)</td>
+<td>PKG-II regulates CFTR-mediated Cl-/fluid secretion in human/rat colon (T84 cells)</td>
+<td>PMID 11042348 / DOI 10.1016/s0167-4889(00)00075-6</td>
+<td>Not lung tissue; general mechanism only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRKG2</td>
+<td>Structural (non-lung epithelial ion transport, general mechanism)</td>
+<td>cGKII (PKG-II), CFTR, and AE2 co-localize in rat pancreatic ductal system</td>
+<td>PMID 12142741 / DOI 10.1097/00006676-200208000-00010</td>
+<td>Not lung tissue; general mechanism only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PRKG2</td>
+<td>Immune (tangential, non-COPD)</td>
+<td>PRKG2 was one of several genes in a cGMP-PKG-signaling-enriched WGCNA co-expression module in HTLV-1-associated myelopathy/tropical spastic paraparesis (a neuroinflammatory/viral disease)</td>
+<td>PMID 33405203 / DOI 10.1007/s13365-020-00919-z</td>
+<td>Weak/tangential; not COPD or lung relevant, only shows pathway co-expression in an unrelated disease</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RASGEF1B</td>
+<td>Statistical genetics (unrelated trait)</td>
+<td>RASGEF1B is one of three genes in a genomic region under recent positive selection associated with hemoglobin concentration in Peruvian Andean highlanders</td>
+<td>PMID 42402195 / DOI 10.1093/gbe/evag164</td>
+<td>Not lung/COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RASGEF1B</td>
+<td>Statistical genetics (unrelated trait, sub-genome-wide)</td>
+<td>A RASGEF1B-region variant (rs10033652) showed sub-genome-wide-significant (p~5x10^-5) association with diastolic white-coat-hypertension effect in a small Finnish GWAS</td>
+<td>PMID 31044621 / DOI 10.1080/08037051.2019.1604066</td>
+<td>Not lung/COPD-relevant; did not reach genome-wide significance for its own trait</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RASGEF1B</td>
+<td>Statistical genetics (unrelated trait)</td>
+<td>Variants ~84kb 5' of RASGEF1B were top hits for serum PTH level in a Croatian GWAS meta-analysis</td>
+<td>PMID 30134803 / DOI 10.1186/s10020-018-0018-5</td>
+<td>Not lung/COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RASGEF1B</td>
+<td>Immune (macrophage TLR signaling, generic)</td>
+<td>RasGEF1b expression in macrophages is induced by TLR3/TLR4 agonists via a MyD88-independent pathway; localizes to early endosomes and activates Ras</td>
+<td>PMID 20090772 / DOI 10.1038/gene.2009.107</td>
+<td>WEAKENED — reproducible general TLR/macrophage mechanism, not COPD-specific, no genetic link to this locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RASGEF1B</td>
+<td>Immune (macrophage TLR signaling, generic)</td>
+<td>The Rasgef1b promoter contains NF-kB (RelA/cRel) binding sites required for TLR-agonist-induced expression in macrophages (ChIP-seq/luciferase confirmed)</td>
+<td>PMID 32866686 / DOI 10.1016/j.biocel.2020.105840</td>
+<td>WEAKENED — same caveat as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RASGEF1B</td>
+<td>Immune (macrophage TLR signaling, generic)</td>
+<td>Rasgef1b-knockout macrophages show altered basal/LPS-induced chemotaxis and cytokine-response gene expression; RasGEF1b activates the Serpinb2 (PAI-2) promoter</td>
+<td>PMID 37950057 / DOI 10.1038/s41598-023-47040-9</td>
+<td>WEAKENED — same caveat as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RASGEF1B</td>
+<td>Immune (macrophage TLR signaling, generic)</td>
+<td>RasGEF1b-activated Rap2a regulates NF-kB activity and LPS-induced IL-6/CXCL1 in macrophages; both knockdown and overexpression impair normal responses</td>
+<td>PMID 30851634 / DOI 10.1016/j.molimm.2019.02.015</td>
+<td>WEAKENED — same caveat as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RASGEF1B</td>
+<td>Immune (macrophage TLR signaling, generic)</td>
+<td>An LPS-inducible circular RNA (circRasGEF1B) positively regulates ICAM-1 mRNA stability/expression downstream of TLR4/LPS signaling in macrophages</td>
+<td>PMID 27362560 / DOI 10.1080/15476286.2016.1207036</td>
+<td>WEAKENED — same caveat as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RASGEF1B</td>
+<td>Immune (macrophage TLR signaling, generic)</td>
+<td>Knockdown of circRasGEF1B alters expression of NF-kB/LPS-signaling and macrophage-activation genes</td>
+<td>PMID 28947785 / DOI 10.1038/s41598-017-12550-w</td>
+<td>WEAKENED — same caveat as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RASGEF1B</td>
+<td>Immune (non-COPD disease association)</td>
+<td>circRasGEF1B is upregulated in PBMCs of COVID-19 patients with diagnostic-accuracy potential</td>
+<td>PMID 39503793 / DOI 10.1089/gtmb.2024.0337</td>
+<td>Not COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RASGEF1B</td>
+<td>Immune/structural (non-human airway model)</td>
+<td>RASGEF1B was among several candidate genes implicated by ATAC-seq/RNA-seq in goat bronchial epithelial cell response to bacterial infection — the only instance of RASGEF1B activity specifically in airway tissue identified</td>
+<td>PMID 36674828 / DOI 10.3390/ijms24021312</td>
+<td>Non-human infection model, not COPD; weak analog evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RASGEF1B</td>
+<td>Immune (non-COPD disease association)</td>
+<td>A MYO1E+RASGEF1B+ monocyte-derived macrophage subpopulation was implicated in immune hyperactivation/coagulation-pathway activation in SARS-CoV-2 cardiac microthrombosis</td>
+<td>PMID 39470924 / DOI 10.1007/s11427-023-2624-9</td>
+<td>Not COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>C4orf22 / CFAP299</td>
+<td>Statistical genetics (negative/contradicting evidence at an unrelated locus)</td>
+<td>In a functional follow-up of an unrelated blood-pressure GWAS locus (4q21, lead SNP rs16998073, ANTXR2/PRDM8/FGF5/C4orf22 gene cluster), authors concluded ANTXR2 (not C4orf22 or FGF5) was the likely causal gene, after Fgf5-knockout mice showed no BP difference and Antxr2 knockdown raised BP</td>
+<td>PMID 24739539 / DOI 10.1038/hr.2014.84</td>
+<td>CONTESTED — this is evidence AGAINST default-crediting C4orf22 when it appears in a GWAS gene cluster; see audit</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>C4orf22 / CFAP299</td>
+<td>Structural (testis biology; contradicts cilia-motility hypothesis)</td>
+<td>C4orf22/CFAP299 is predominantly expressed in mouse testis (spermatogonia/primary spermatocyte cytoplasm) and regulates apoptosis/cell-cycle progression in spermatogenic cell lines via a bcl-2/caspase pathway — not an axonemal/ciliary-motility phenotype despite CFAP-family name</td>
+<td>PMID 30820741 / DOI 10.1007/s11033-019-04651-8</td>
+<td>CONTESTED — the only functional data for this gene contradicts the &quot;motile cilia/PCD-like&quot; hypothesis its gene family name would suggest for lung relevance</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not reviewed by citation-verifier or red-team-skeptic)</h2>
+<ul>
+<li><strong>PRKG2</strong> (ENSG00000138669): Kinase (AGC/PKG family). No L2G/colocalization evidence for
+COPD — <code>disease.evidences</code> query against MONDO_0005002 returned 0 rows (no curated Open
+Targets evidence of any kind, genetic or literature). 41 QTL credible sets in Open
+Targets, all molecular-QTL studies (no disease-GWAS colocalization), heavily weighted
+toward immune-cell eQTLs (naive/memory CD4 T-cells, Treg, Th1, Th17, Th1-17, Tfh, CD8
+T-cells, B-cells, NK cells) plus GTEx tissue eQTLs (nerve, esophagus, breast, adipose) and
+blood eQTL — no lung-tissue eQTL. gnomAD constraint: missense oe 0.685 (score 3.198,
+moderate constraint), LoF oe 0.335 but LoF constraint score only 0.994 (not strongly
+LoF-intolerant), synonymous oe 0.990 (no constraint). No safety liabilities recorded.</li>
+<li><strong>C4orf22 / CFAP299</strong> (ENSG00000197826): No target class or pathway annotations in Open
+Targets. No L2G/colocalization evidence for COPD — same query against MONDO_0005002
+returned 0 rows. 14 QTL credible sets, dominated by testis expression/splicing QTLs plus
+brain (cerebellum, DLPFC) and fibroblast eQTLs — no immune-cell or lung-tissue eQTL.
+gnomAD constraint: no signal at all (LoF oe 0.802, missense oe 0.952, synonymous oe
+1.170) — gene tolerates loss-of-function variation. No safety liabilities recorded.</li>
+<li><strong>RASGEF1B</strong>: not queried directly against Open Targets in step 1 (added later by the
+researcher as a candidate not flagged by any internal prioritization method); no
+structured Open Targets lookup was performed for this gene at this locus.</li>
+<li>Neither of the two genes queried (PRKG2, CFAP299) has any Open Targets-curated
+genetic-association, colocalization, or literature evidence for COPD specifically. This
+is a true structured-database null result for both, not a search failure — both queries
+returned syntactically valid, non-error responses with count = 0.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Gene: PRKG2 — Confidence: LOW</strong></p>
+<p>This is a close, unresolved call and should be read as such. None of the three candidates
+(PRKG2, RASGEF1B, C4orf22/CFAP299) has any genetic evidence (GWAS, colocalization,
+Mendelian randomization, or TWAS) directly linking it to COPD, lung function, or
+smoking-behavior traits — every targeted PubMed search for these connections returned zero
+hits for all three genes, the GWAS Catalog has no catalogued record for the lead variant
+rs6831114, and Open Targets shows a hard zero for curated COPD evidence for both PRKG2 and
+CFAP299. The credible set itself is diffuse (lead variant PIP=0.186, entirely
+intergenic/MODIFIER, no missense/splice variant anywhere), and the internal prioritization
+methods disagree with each other (FLAMES favors PRKG2, PoPS favors CFAP299, MAGMA/ABC
+report nothing) — itself a sign of genuine locus-level ambiguity rather than convergent
+support.</p>
+<p>I still name <strong>PRKG2</strong> as the best-supported pick, with LOW confidence, for three reasons
+that fall short of a strong case but exceed the alternatives: (1) it is the nearest gene to
+the lead variant and the only candidate with a (very-low-PIP, PIP=0.0014) credible-set
+variant physically inside it (rs3114135); (2) it has genuine, verified, mechanistically
+specific alveolar/airway epithelial biology — AT2 cell fate and alveolar regeneration
+(PMID 35313961) and airway epithelial ENaC/fluid-clearance regulation (PMID 19359370) — that,
+while not COPD-disease-modeled and correctly labeled WEAKENED rather than strong evidence
+by the red-team-skeptic, is at least in the correct organ and cell-type domain (alveolar/
+airway epithelium) rather than an unrelated tissue; (3) its constraint profile shows
+moderate missense and LoF depletion (oe 0.335–0.685), consistent with (though not proof of)
+functional importance. Against this: the red-team-skeptic correctly flagged that this
+epithelial-biology evidence is being asked to substitute for entirely absent genetic
+evidence, and that PRKG2's abundant immune-cell-eQTL landscape in Open Targets is
+QTL-breadth only, with zero mechanistic literature connecting it to immune function or
+disease — an open question, not supporting evidence.</p>
+<p><strong>Runner-up: C4orf22/CFAP299</strong> (PoPS-prioritized) is explicitly weaker: the
+red-team-skeptic marked it CONTESTED because its only two verified citations are, on
+inspection, unfavorable — one shows this exact gene was considered and rejected as the
+causal gene in an unrelated GWAS gene-cluster context (PMID 24739539), and the other shows
+its actual characterized function (testis/germ-cell apoptosis regulation) directly
+contradicts the motile-cilia/PCD-family hypothesis its gene name would suggest for lung
+relevance (PMID 30820741). <strong>RASGEF1B</strong> is not flagged by any internal prioritization
+method and rests on weak positional overlap with a wide locus window plus a real but
+disease-nonspecific TLR/macrophage inflammatory mechanism (also marked WEAKENED,
+bordering on &quot;should not be treated as a peer candidate&quot;).</p>
+<p><strong>What would resolve this tie:</strong> direct COPD or FEV1/FEV1-FVC GWAS/coloc evidence for any
+of the three genes (e.g., a published lung-function GWAS colocalization at this exact
+locus, or an eQTL/pQTL colocalization in lung tissue specifically — notably absent from
+Open Targets for both genes queried); a cigarette-smoke or elastase disease model showing a
+PRKG2-dependent emphysema-relevant phenotype (rather than the current baseline-organoid
+and non-disease ENaC data); or fine-mapping/functional evidence narrowing which gene(s) the
+lead variant rs6831114 and its credible set actually regulate (e.g., a lung-tissue
+promoter-capture Hi-C or CRISPRi enhancer screen at this locus). Absent any of that, this
+call should be treated as provisional and low-confidence, not a settled gene assignment,
+and the study team may reasonably weigh PRKG2 and CFAP299 as roughly comparable
+long-shots rather than accept PRKG2 as clearly favored.</p>
+
+</body>
+</html>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2_166000001-166250000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-gwas-locus-evidence-table--2166000001-166250000-grch38">COPD GWAS locus evidence table — 2:166,000,001-166,250,000 (GRCh38)</h1>
+<p><strong>Nearest gene:</strong> SCN1A. <strong>Lead credible-set variant:</strong> rs5027759 (2:166,145,175,
+PIP=0.713, intronic/non-coding-transcript variant in SCN1A-AS1). <strong>MAGMA/PoPS
+prioritized gene:</strong> SCN2A. <strong>Candidate genes evaluated:</strong> SCN1A, SCN2A,
+SCN1A-AS1 (the antisense lncRNA gene body containing the lead variant and
+44/47 of the credible set's PIP mass), and SCN9A (added independently by the
+researcher because it physically overlaps the locus's 3' boundary, though not
+flagged by any of the four internal prioritization methods).</p>
+<p>Only citations with a <strong>VERIFIED</strong> verdict from citation-verifier are included
+below. Two citations returned <strong>CLAIM_MISMATCH</strong> and are excluded here — see
+<code>audits/2_166000001-166250000_audit.md</code> for details. A gene-level CONTESTED /
+WEAKENED verdict from red-team-skeptic is noted in the &quot;Skeptic verdict&quot;
+column and explained fully in the audit file; it applies to the whole gene,
+not just the row it's attached to.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SCN1A</td>
+<td>Physiological/mechanistic (central respiratory control, mouse model)</td>
+<td>Scn1a loss-of-function (A1783V variant) in retrotrapezoid-nucleus (RTN) inhibitory neurons disrupts CO2-dependent breathing control, causing apnea/hypoventilation</td>
+<td>PMID 31025941 / DOI 10.7554/eLife.43387</td>
+<td>WEAKENED (real biology, wrong tissue/mechanism for adult COPD airflow obstruction)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>Physiological/mechanistic</td>
+<td>Scn1a+/- mice show a blunted ventilatory response to CO2/H+ that precedes seizures, worsens with disease progression, and correlates with mortality</td>
+<td>PMID 40924494 / DOI 10.1172/jci.insight.184231</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>Physiological/mechanistic</td>
+<td>Seizures in Dravet/GEFS+ mouse models impair ventilatory CO2 chemoreception via serotonergic dysfunction</td>
+<td>PMID 37160367 / DOI 10.1523/JNEUROSCI.0450-23.2023</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>Physiological/mechanistic</td>
+<td>Loss of inhibitory activity in a Dravet syndrome mouse model disinhibits RTN chemoreceptors and destabilizes baseline breathing</td>
+<td>PMID 34013884 / DOI 10.7554/eLife.60317</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>Physiological/mechanistic</td>
+<td>Altered excitability in an extended-amygdala-to-brainstem circuit may drive respiratory dysfunction comorbid with Dravet syndrome seizures</td>
+<td>PMID 34045209 / DOI 10.1523/ENEURO.0306-20.2021</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>Physiological/mechanistic</td>
+<td>Brainstem metabolic/transcriptomic changes accompany SUDEP-risk periods in Scn1a-deficient mice</td>
+<td>PMID 41511350 / DOI 10.3390/cells15010067</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SCN2A</td>
+<td>Immune/neuroimmune (CNS-specific, not peripheral/systemic)</td>
+<td>Human iPSC-derived microglia sense and dampen hyperexcitability of SCN2A-L1342P cortical neurons</td>
+<td>PMID 39557580 / DOI 10.1523/JNEUROSCI.2027-23.2024</td>
+<td>CONTESTED (gene physically ~600-850kb outside the stated locus window under GRCh38, confirmed by two independent sources; see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SCN1A-AS1 (transcript identity to literature &quot;SCN1A-NAT&quot; plausible but unconfirmed)</td>
+<td>Mechanistic/regulatory (brain/neuronal, Dravet syndrome context)</td>
+<td>A natural antisense transcript (&quot;SCN1A-NAT&quot;) suppresses SCN1A expression; AntagoNAT oligonucleotides targeting it increase SCN1A expression in vitro, in Dravet knock-in mice, and in a non-human primate, improving seizure phenotype</td>
+<td>PMID 27333023 / DOI 10.1016/j.ebiom.2016.05.011</td>
+<td>WEAKENED (mechanism plausible but tissue-mismatched to lung/COPD; transcript identity to Ensembl SCN1A-AS1 unconfirmed)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SCN1A-AS1 (transcript identity to &quot;SCN1A-dsAS&quot;/&quot;SCN1A-usAS&quot; plausible but unconfirmed)</td>
+<td>Mechanistic/regulatory</td>
+<td>Two SCN1A antisense RNAs (SCN1A-dsAS, RefSeq NR_110598; SCN1A-usAS, RefSeq NR_110260) are expressed in human pediatric brain tissue; SCN1A-dsAS expression is negatively correlated with SCN1A mRNA; ASO knockdown of SCN1A-dsAS in SK-N-AS cells increases SCN1A mRNA</td>
+<td>PMID 38283997 / DOI 10.1515/tnsci-2022-0330</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SCN1A-AS1 (transcript identity unconfirmed)</td>
+<td>Mechanistic/regulatory (translational)</td>
+<td>AAV9-delivered AntagoNATs against the SCN1A natural antisense transcript increase survival and decrease seizure frequency in Dravet mice</td>
+<td>PMID 42181696 / DOI 10.1016/j.omtn.2026.102942</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SCN1A-AS1 (tangential — different gene/species; cross-cluster analogy only)</td>
+<td>Mechanistic (cross-gene-cluster)</td>
+<td>A distinct natural antisense transcript to mouse Scn9a (Nat9a) suppresses Scn9a and shares a divergent bipartite promoter with Scn1a in parvalbumin+ neurons, suggesting a broader pattern of antisense-mediated regulation across the sodium-channel gene cluster (mouse data; inferential relevance to the human locus only)</td>
+<td>PMID 41991614 / DOI 10.1038/s41598-026-48500-8</td>
+<td>WEAKENED (inferential/cross-species only)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SCN1A-AS1 (tangential — different lncRNA, peripheral pain model)</td>
+<td>Mechanistic (peripheral nerve injury model)</td>
+<td>lncRNA Snhg16 (not SCN1A-AS1) regulates SCN1A via a miR-719 sponge mechanism in a chronic-constriction-injury (neuropathic pain) mouse model</td>
+<td>PMID 37632673 / DOI 10.1007/s12033-023-00847-3</td>
+<td>WEAKENED (off-target gene/tissue, low specific value)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SCN1A-AS1 (general review, low specificity)</td>
+<td>Review</td>
+<td>General review discussing miRNA/lncRNA epigenetic modifiers of SCN1A haploinsufficiency in Dravet syndrome</td>
+<td>PMID 36153432 / DOI 10.1007/s12017-022-08723-0</td>
+<td>WEAKENED (low specific evidentiary value)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SCN9A (tangential — class-level, different tissue, not gene-specific)</td>
+<td>Immune/inflammatory (class context only)</td>
+<td>The pan-voltage-gated-sodium-channel blocker neosaxitoxin reduces synovial macrophage-driven inflammation and neutrophil counts in an equine osteoarthritis model</td>
+<td>PMID 42650808 / DOI 10.3390/biom16081142</td>
+<td>WEAKENED (not SCN9A-specific, not lung-relevant)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SCN9A (tangential — different gene, SCN7A/Nax, not SCN9A)</td>
+<td>Immune/inflammatory (class context only)</td>
+<td>The atypical sodium channel Nax/SCN7A (a different gene from SCN9A) is implicated in psoriasis-like skin inflammation</td>
+<td>PMID 30903711 / DOI 10.1111/exd.13917</td>
+<td>WEAKENED (off-target gene, not lung-relevant)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>Locus-level (SCN1A / SCN1A-AS1 / SCN9A / cytoband 2q24.3)</td>
+<td>GWAS absence-of-evidence (main text only; supplementary locus tables not checked)</td>
+<td>Main text of the largest published COPD GWAS (82 genome-wide-significant loci) does not name SCN1A, SCN1A-AS1, SCN9A, or cytoband 2q24.3 among its reported loci</td>
+<td>PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
+<td>Inconclusive (absence in main text is not confirmed absence in supplement)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>Locus-level (SCN1A / SCN1A-AS1 / SCN9A / cytoband 2q24.3)</td>
+<td>GWAS absence-of-evidence (main text only; supplementary locus tables not checked)</td>
+<td>Main text of the companion lung-function GWAS (279 signals, 139 new) does not name SCN1A, SCN1A-AS1, SCN9A, or cytoband 2q24.3</td>
+<td>PMID 30804560 / DOI 10.1038/s41588-018-0321-7</td>
+<td>Inconclusive</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p>Genetic-constraint data (gnomAD, via Open Targets — see summary below, not a
+literature citation) and the coordinate-overlap discrepancy for SCN2A are
+discussed in the Open Targets summary and Prioritized-gene sections below.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p>Disease resolved: chronic obstructive pulmonary disease -&gt; MONDO_0005002.</p>
+<ul>
+<li><strong>SCN1A (ENSG00000144285):</strong> L2G/GWAS-credible-set, gene2phenotype, ClinGen,
+PanelApp, and Orphanet evidence for COPD: <strong>none</strong> (0 evidence rows). No
+colocalization evidence retrievable. Overall target-disease association
+score = 0.0155, driven entirely by a <code>literature</code> text-mining datatype score
+(0.127) — no genetics or functional-genomics contribution. gnomAD genetic
+constraint: LOF score=1, oe=0.056 (95% CI oe 0.033-0.098), most-constrained
+bin (upperBin6=0) — extremely LOF-intolerant. Missense score=7.62, oe=0.564.
+Synonymous score=1.77, oe=0.885 (near-neutral, as expected).</li>
+<li><strong>SCN2A (ENSG00000136531):</strong> Same — zero GWAS/L2G/clinical-genetics evidence
+for COPD. Overall association score = 0.0039, entirely literature
+text-mining (score 0.0317). gnomAD constraint: LOF score=1, oe=0.109 (95%
+CI 0.074-0.161), most-constrained bin. Missense score=8.73, oe=0.505.
+Synonymous score=1.08, oe=0.931. <strong>Independently confirmed genomic location</strong>
+(via Open Targets <code>target.genomicLocation</code>, a second data source separate
+from the researcher's original Ensembl REST lookup): chr2:165,194,993-
+165,392,310 (GRCh38, strand +1) — approximately 600-850 kb outside the
+stated locus window (2:166,000,001-166,250,000) and lead variant position.</li>
+<li><strong>SCN1A-AS1 (ENSG00000236107):</strong> count = 0 rows for association data of any
+kind (including literature) versus COPD. No gnomAD constraint data
+available (expected — constraint scores are not computed for non-coding
+genes).</li>
+<li><strong>SCN9A (ENSG00000169432):</strong> not queried against Open Targets in step 1
+(added to the candidate list later, by the researcher, via direct Ensembl
+region lookup) — this is a genuine gap in the structured-lookup coverage
+for this locus, not a finding of absence.</li>
+<li><strong>Bottom line:</strong> none of the three originally queried candidate genes have
+any GWAS/L2G, colocalization, or curated clinical-genetics evidence for
+COPD in Open Targets. SCN1A and SCN2A are both highly LOF-constrained,
+consistent with their established roles as monogenic causes of severe
+neurodevelopmental/epileptic disease via haploinsufficiency — this
+constraint profile does not by itself support a common-variant COPD GWAS
+mechanism acting through the same pathway.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Prioritized gene: SCN1A-AS1. Confidence: LOW.</strong></p>
+<p>This call is close, and is made with substantial reservations that the study
+team should weigh carefully.</p>
+<p><strong>Why SCN1A-AS1 over the alternatives:</strong> Of the four candidates, SCN1A-AS1 is
+the only one with a genuine gene-specific statistical case at this locus: the
+lead credible-set variant (rs5027759, PIP=0.713) and 44 of 47 credible-set
+variants (essentially all of the fine-mapped PIP mass) sit inside its gene
+body, versus only 3 very-low-PIP variants (each ≤0.0016) in SCN1A and zero in
+SCN2A or SCN9A. SCN2A — the MAGMA/PoPS-prioritized gene — is CONTESTED outright:
+its genomic coordinates (chr2:165,194,993-165,392,310, confirmed independently
+by both the researcher's Ensembl lookup and the orchestrator's Open Targets
+lookup, see summary above) place it ~600-850 kb outside the stated locus
+window, meaning it fails the input pipeline's own physical-overlap criterion
+for PoPS genes. This should be treated as a likely artifact of PoPS's
+expression/pathway-similarity-based scoring rather than genuine locus-level
+support, pending upstream review of a possible build mismatch. SCN9A has no
+gene-specific evidence of any kind and was not flagged by any prioritization
+method; it is included only for positional completeness at the locus
+boundary.</p>
+<p><strong>Why confidence is only LOW, not MODERATE or HIGH:</strong> The case for SCN1A-AS1
+rests on positional/statistical concentration of the credible set plus a
+biologically plausible but explicitly <em>unconfirmed</em> mechanistic story: a body
+of literature (Hsiao 2016, PMID 27333023; Schneider 2024, PMID 38283997; Diaz
+2026, PMID 42181696 — all VERIFIED) establishes that antisense transcripts
+overlapping the SCN1A locus (named &quot;SCN1A-NAT,&quot; &quot;SCN1A-dsAS,&quot; &quot;SCN1A-usAS&quot; in
+the primary literature) act as cis-repressors of SCN1A expression in brain
+tissue, and are validated therapeutic targets for raising SCN1A expression in
+Dravet syndrome. However, the researcher explicitly flagged, and red-team-skeptic
+concurred, that transcript-identity between these literature-named
+transcripts and the Ensembl-curated gene model &quot;SCN1A-AS1&quot; (ENSG00000236107)
+is plausible but not independently confirmed — antisense-RNA nomenclature is
+notoriously inconsistent across RefSeq/Ensembl/primary literature. Even
+granting that identity, every single piece of mechanistic evidence is from
+brain/neuronal tissue in a pediatric-epilepsy context; there is zero
+published lung, airway, or immune-cell expression or functional data for
+SCN1A-AS1 (or the related transcripts) anywhere in the literature found, and
+Open Targets independently shows zero association data of any kind for this
+gene and COPD. The regulated gene, if the mechanism holds, is SCN1A itself —
+whose own established biology (central brainstem CO2/H+ chemoreception
+control, implicated in Dravet-associated apnea/SUDEP; six VERIFIED citations,
+all WEAKENED by red-team-skeptic as tissue/mechanism-mismatched to adult
+airflow obstruction) offers no direct pulmonary-structural or
+airway-inflammatory mechanism for COPD either.</p>
+<p><strong>Runner-up: SCN1A</strong> (nearest gene). If the credible set's regulatory target
+is in fact SCN1A itself (via the antisense mechanism above, or via some other
+regulatory path independent of SCN1A-AS1), SCN1A would be the effector gene,
+not SCN1A-AS1. The evidence currently cannot distinguish between &quot;SCN1A-AS1
+acts autonomously&quot; and &quot;SCN1A-AS1's real role here is purely as a cis-regulator
+whose effect is entirely attributable to SCN1A&quot; — both readings are
+consistent with everything found, and neither is supported by any
+lung-specific evidence.</p>
+<p><strong>What would resolve the tie / raise confidence:</strong> (1) independent
+confirmation that the Ensembl &quot;SCN1A-AS1&quot; gene model is transcript-identical
+to the literature-described SCN1A-NAT/dsAS/usAS antisense RNAs; (2) any GTEx
+or lung-tissue-specific eQTL/expression data showing rs5027759 or its proxies
+affect SCN1A, SCN1A-AS1, or SCN9A expression specifically in lung, airway
+epithelium, or immune cells (none was found by the researcher); (3) direct
+confirmation (via full-text/supplementary-table access, which the researcher
+and citation-verifier could not obtain) of whether this locus is or is not a
+genome-wide-significant hit in the GSCAN smoking-initiation GWAS or in the
+Sakornsakolpat/Shrine COPD and lung-function GWAS — the one claim offered as
+supporting a smoking-behavior-mediated alternative explanation (GSCAN pathway
+enrichment of voltage-gated ion channel genes) was flagged CLAIM_MISMATCH by
+citation-verifier and should be treated as currently unsupported, not simply
+unresolved; (4) a GWAS Catalog/PhenoScanner check for rs5027759, which the
+researcher reports as null but which citation-verifier could not
+independently confirm before exhausting its search budget.</p>
+<p><strong>Alternative hypothesis explicitly noted:</strong> given the complete absence of
+any direct lung-structural, spirometric, or COPD-specific mechanistic
+evidence for any of the four candidate genes, and given this gene family's
+overwhelming established biology is CNS/PNS neuronal excitability, a
+genuinely live alternative explanation is that this locus's COPD association
+(if real) is mediated through a neurobiological/smoking-behavior pathway
+rather than direct pulmonary biology — but this alternative currently has no
+confirmed direct genetic evidence either (no locus-specific smoking-GWAS hit
+was found, and the one candidate supporting citation failed verification). A
+third possibility — that this is a false-positive or weak/borderline locus —
+cannot be excluded given the near-total absence of corroborating evidence
+across every domain searched (statistical genetics, pulmonary structural
+biology, and immune/inflammatory biology alike).</p>
+
+</body>
+</html>

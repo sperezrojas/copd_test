@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>1_31650001-31900000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-131650001-31900000-nearest-gene-adgrb2">Evidence table — Locus 1:31,650,001-31,900,000 (nearest gene ADGRB2)</h1>
+<p>Lead variant: rs1889571 (1:31,730,218, GRCh38, PIP=0.330, intron_variant, ADGRB2). Candidate genes: nearest = ADGRB2; PoPS = FABP3; ABC = COL16A1; FLAMES/MAGMA = NA. All rows below use only citations with a VERIFIED verdict from citation-verifier.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADGRB2</td>
+<td>Statistical genetics (background, not locus-confirmed)</td>
+<td>Large tobacco/alcohol-use GWAS meta-analysis (GSCAN; 566 variants, 406 loci, up to 1.2M individuals) exists as a plausible source of smoking-behavior signal; citation-verifier could <strong>not</strong> confirm that this specific 1p31.1/ADGRB2 locus is among the 406 reported loci (supplementary tables inaccessible)</td>
+<td>Liu M et al. 2019, Nat Genet, PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
+<td>WEAKENED — cited only as general background; do not read as confirming this locus is a reported GSCAN hit (see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRB2</td>
+<td>Statistical genetics / neurobehavioral genetics (review)</td>
+<td>ADGRB2 (BAI2) is among orphan GPCRs implicated by GWAS and post-mortem transcriptomic studies in mood/anxiety disorders</td>
+<td>Watkins LR, Orlandi C 2020, Genes (Basel), PMID 32599826, DOI 10.3390/genes11060694</td>
+<td>WEAKENED (part of broader smoking/behavioral-pleiotropy framing — see audit re: overclaim risk)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRB2</td>
+<td>Structural/developmental biology (review)</td>
+<td>Comprehensive review of BAI1/2/3 subfamily biology (synaptogenesis, spinogenesis, apoptotic cell clearance, myoblast fusion, vascular development, glucose homeostasis/metabolic disease); no lung/airway biology described</td>
+<td>Alsharif HA, Bhatnagar S 2025, Compr Physiol, PMID 41220366, DOI 10.1002/cph4.70068</td>
+<td>HOLDS — supports &quot;no pulmonary biology&quot; negative finding</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRB2</td>
+<td>Structural/developmental biology</td>
+<td>ADGRB2 is highly expressed in hippocampus and regulates glutamatergic synapse and dendritic-spine development; no lung phenotype studied</td>
+<td>Meyer CM et al. 2025, Mol Cell Neurosci, PMID 40451404, DOI 10.1016/j.mcn.2025.104015 (also bioRxiv preprint DOI 10.1101/2025.02.02.636169)</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRB2</td>
+<td>Structural/developmental biology (foundational)</td>
+<td>Original cloning report: BAI2 (like BAI1/BAI3) is brain-tissue-specific in expression and maps to human 1p35</td>
+<td>Shiratsuchi T et al. 1997, Cytogenet Cell Genet, PMID 9533023, DOI 10.1159/000134693</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRB2</td>
+<td>Structural/developmental biology</td>
+<td>BAI2 has developmentally regulated, brain-specific expression and modulates VEGF-driven angiogenesis in ischemic brain</td>
+<td>Kee HJ et al. 2002, J Cereb Blood Flow Metab, PMID 12218411, DOI 10.1097/00004647-200209000-00003</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRB2</td>
+<td>Structural/developmental biology (model organism)</td>
+<td>ENU-induced loss-of-function missense mutation (R619W) in mouse Bai2 causes a locomotor hyperactivity phenotype — a behavioral, not pulmonary, causal role</td>
+<td>Speca DJ et al. 2017, Mamm Genome, PMID 28894906, DOI 10.1007/s00335-017-9716-5</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRB2</td>
+<td>Structural/developmental biology (human disease)</td>
+<td>A de novo human ADGRB2 mutation (R1465W) was found in a patient with progressive spastic paraparesis and other neurological symptoms — the only reported human disease phenotype directly tied to an ADGRB2 coding mutation, and it is neurological</td>
+<td>Purcell RH et al. 2017, Hum Mutat, PMID 28891236, DOI 10.1002/humu.23336</td>
+<td>HOLDS</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADGRB2</td>
+<td>Immune/inflammatory (weak/tangential)</td>
+<td>GPS-domain cleavage of this receptor family activates the NFAT signaling pathway, studied in a neuronal (hippocampal), not immune-cell, context</td>
+<td>Okajima D et al. 2010, J Recept Signal Transduct Res, PMID 20367554, DOI 10.3109/10799891003671139</td>
+<td>HOLDS (researcher itself judged this domain does not meaningfully apply to ADGRB2)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>COL16A1</td>
+<td>Structural/developmental biology (review)</td>
+<td>Collagen XVI is a minor ECM adaptor protein in skin/cartilage, produced by myofibroblasts and upregulated in chronically inflamed intestinal wall (Crohn's disease), promoting myofibroblast persistence/fibrotic responses; also implicated in glioblastoma and oral squamous cell carcinoma invasiveness. No lung/airway role described</td>
+<td>Grässel S, Bauer RJ 2012, Matrix Biol, PMID 23149016, DOI 10.1016/j.matbio.2012.11.001</td>
+<td>WEAKENED — cross-tissue analogy only, not lung evidence (see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>COL16A1</td>
+<td>Structural/developmental biology</td>
+<td>Collagen XVI promotes myofibroblast focal-adhesion formation/persistence in inflamed bowel wall (gut, not lung) — indirect cross-tissue analogy</td>
+<td>Ratzinger S et al. 2009, Matrix Biol, PMID 19931388, DOI 10.1016/j.matbio.2009.11.004</td>
+<td>WEAKENED — indirect analogy, explicitly not lung evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>COL16A1</td>
+<td>Structural/developmental biology</td>
+<td>Collagen XVI is upregulated in glioblastoma ECM and promotes tumor cell invasion via β1-integrin signaling (brain tumor, not lung)</td>
+<td>Bauer R et al. 2011, Cell Physiol Biochem, PMID 21471710, DOI 10.1159/000327947</td>
+<td>WEAKENED — tissue-irrelevant to lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>COL16A1</td>
+<td>Structural/developmental biology</td>
+<td>Collagen XVI is expressed in the subepidermal region of human/mouse skin and downregulated by UVB-induced photoaging (skin, not lung)</td>
+<td>Abe H, Tajima S 2012, J Cosmet Dermatol, PMID 22938000, DOI 10.1111/j.1473-2165.2012.00612.x</td>
+<td>WEAKENED — tissue-irrelevant to lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FABP3</td>
+<td>Structural/developmental biology</td>
+<td>FABP3 is upregulated by ischemia/hypoxia in cardiomyocytes and promotes apoptosis and adverse cardiac remodeling after myocardial infarction (cardiac, not lung)</td>
+<td>Zhuang L et al. 2019, Am J Physiol Heart Circ Physiol, PMID 30735072, DOI 10.1152/ajpheart.00360.2018</td>
+<td>WEAKENED — tissue-irrelevant to lung (see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FABP3</td>
+<td>Immune/inflammatory</td>
+<td>CSF FABP3 levels correlate with markers of neuronal damage (tau) and neuroinflammatory markers (sTREM2, MIF, sVCAM-1, C1q) in Alzheimer's disease — a CNS tissue-damage/neuroinflammation biomarker role, not a lung/airway immune mediator</td>
+<td>Brosseron F et al. 2020, J Neurochem, PMID 32894885, DOI 10.1111/jnc.15175</td>
+<td>WEAKENED — tissue-irrelevant to lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SPOCD1</td>
+<td>Immune/inflammatory (unrelated context)</td>
+<td>SPOCD1 expression correlates with macrophage infiltration/M1-to-M2 polarization and chemokine-signaling-pathway enrichment in colorectal cancer — an oncology/tumor-immune-microenvironment context, not airway or COPD-relevant immune biology</td>
+<td>Gan L et al. 2023, Biomolecules, PMID 36830578, DOI 10.3390/biom13020209</td>
+<td>HOLDS as stated but explicitly non-generalizable to COPD (see audit — SPOCD1 overall judged a weak candidate)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p>Note on &quot;Skeptic verdict&quot; column: all 16 citations received a citation-verifier verdict of VERIFIED (existence, non-retraction, and claim-correspondence all confirmed). The verdicts shown above (HOLDS / WEAKENED) are the red-team-skeptic's judgment of how much evidentiary weight each citation should carry for the COPD-locus-prioritization question specifically, not a re-litigation of citation authenticity. See <code>audits/1_31650001-31900000_audit.md</code> for full reasoning, including gene-level CONTESTED/WEAKENED calls and the negative-finding statements (e.g., &quot;no PubMed-indexed paper names rs1889571 or this locus as a COPD/lung-function GWAS signal&quot;) that are themselves load-bearing parts of the evidence base for this locus.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
+<p>Disease queried: chronic obstructive pulmonary disease (MONDO_0005002). Lead variant rs1889571 = 1_31730218_T_G.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>Ensembl ID</th>
+<th>Genetic constraint (gnomAD via OT)</th>
+<th>OT COPD association</th>
+<th>Locus-level L2G / colocalization at rs1889571</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADGRB2</td>
+<td>ENSG00000121753</td>
+<td>LoF constraint score = 1.00, oe = 0.301 (0.237-0.383) — strongly LoF-intolerant. Missense z = 3.84, oe = 0.768.</td>
+<td>count = 0 rows — <strong>no evidence of any kind</strong> (genetic or literature) links ADGRB2 to COPD in Open Targets. Top associated traits (of 76): smoking initiation (0.31), open-angle glaucoma, wheezing (0.20), asthma (0.16), obesity, insomnia, ADHD/substance abuse. No COPD or FEV1/FVC in top associations.</td>
+<td>Present in 45 GWAS/QTL credible sets at this variant (none COPD case-control, none FEV1/FVC/spirometric). Colocalizing traits: smoking initiation/status/ever-vs-never/age-of-initiation (many cohorts), self-reported wheeze (2 UKB cohorts), educational attainment, adiposity, fatty-acid metabolism, insomnia, substance use/externalizing behavior, triglycerides, walking pace. ADGRB2 has the higher L2G score at most (typical range 0.29-0.70; e.g. smoking initiation L2G=0.60, educational attainment L2G=0.61, wheeze L2G=0.39-0.41). High colocalization H4 (0.81-0.98) links several of these credible sets to each other, indicating one shared signal.</td>
+</tr>
+<tr>
+<td>COL16A1</td>
+<td>ENSG00000084636</td>
+<td>LoF constraint score ~0 (4.3e-41), oe = 0.701 (0.620-0.794) — not classified LoF-intolerant. Missense z = 1.75, oe = 0.895.</td>
+<td>count = 1 row, score = 0.0037 (negligible), driven entirely by the &quot;literature&quot; datatype (sub-score 0.030) — no genetic-association evidence. Top associated traits (of 346): glaucoma (0.49), open-angle glaucoma, neurodegenerative disease, asthma (0.39), intelligence, obesity, insomnia, ADHD, smoking behavior/initiation — substantially overlapping with ADGRB2's profile.</td>
+<td>Present as the second gene at nearly all of the same 45 credible sets as ADGRB2, generally with lower L2G (0.06-0.24), but the top-scoring gene at a handful (insomnia 0.47, one DHA-fatty-acid cohort 0.37-0.48, one smoking-status-ever/never cohort 0.47, externalizing behavior 0.47). No ABC-model cell-type/tissue metadata was available in this lookup to assess tissue relevance of the ABC prioritization call (flagged by red-team-skeptic as an open question).</td>
+</tr>
+<tr>
+<td>FABP3</td>
+<td>ENSG00000121769</td>
+<td>LoF constraint score = 0.027, oe = 0.570 (0.334-1.029, CI spans 1) — not clearly constrained. Missense z = 1.07, oe = 0.778.</td>
+<td>count = 1 row, score = 0.078, driven entirely by the &quot;literature&quot; datatype (sub-score 0.644) — no genetic-association evidence. Top associated traits (of 925, dominated by non-respiratory conditions): cataract/lens disorders, Alzheimer disease, peripheral arterial disease, acute kidney injury, sepsis, retinitis pigmentosa, type 2 diabetes. No respiratory trait in top 25.</td>
+<td>Does not appear among the L2G predictions for any of the 45 credible sets at the lead variant — no locus-specific fine-mapping/colocalization support at all, despite PoPS nomination (a polygenic/pathway-based method not requiring physical proximity).</td>
+</tr>
+</tbody>
+</table>
+<p>Cross-gene note: no COPD case-control GWAS credible set and no FEV1/FVC or other spirometric-trait credible set was found among the 45 credible sets recorded at the lead variant in Open Targets.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>ADGRB2 — confidence: LOW</strong></p>
+<p>ADGRB2 is the best-supported single candidate at this locus on fine-mapping grounds alone: it carries the highest-PIP credible-set variants (rs1889571 PIP=0.33 plus several more, all ADGRB2 intronic), is the nearest gene, and has the higher locus-to-gene (L2G) score at the large majority of the 45 GWAS/QTL credible sets that colocalize at rs1889571 in Open Targets (Open Targets summary table above). Its established literature biology (Shiratsuchi 1997, Kee 2002, Meyer 2025, Speca 2017, Purcell 2017, Alsharif &amp; Bhatnagar 2025 — all HOLDS in the evidence table) is exclusively and consistently brain-restricted: synapse/dendritic-spine development, brain angiogenesis modulation, and a single reported human disease phenotype (progressive spastic paraparesis) that is neurological, not pulmonary. There is a complete absence of lung, airway, or COPD-relevant biology for ADGRB2 in PubMed, and Open Targets records zero association evidence (of any kind) between ADGRB2 and COPD specifically.</p>
+<p>The case for prioritizing ADGRB2 over COL16A1 and FABP3 despite this absence of direct pulmonary biology rests on pipeline prior #1 (smoking-mediated pathway): the same lead variant colocalizes at high confidence (H4 0.81-0.98) with smoking initiation, smoking status, age of smoking initiation, and self-reported wheeze across many cohorts — but NOT with COPD case-control status or any spirometric trait (FEV1/FVC) in any of 45 tested credible sets. This is consistent with the locus acting on COPD risk indirectly, through a neurobehavioral pathway affecting smoking, rather than through direct lung structural or immune biology.</p>
+<p>However, per red-team-skeptic's critique (see audit), this conclusion should be held with real caution and is capped at LOW confidence for two specific reasons: (1) the one literature citation that could have anchored the &quot;smoking&quot; interpretation in primary literature — the GSCAN tobacco/alcohol GWAS (Liu et al. 2019) — was verified as a real, non-retracted paper but citation-verifier could NOT confirm that this exact 1p31.1/ADGRB2 locus is actually among its 406 reported genome-wide-significant loci; the &quot;smoking pathway&quot; narrative for this locus currently rests entirely on the Open Targets colocalization data, which is a structured database lookup, not a verified literature claim. (2) The full pattern of colocalizing traits (smoking, wheeze, ADHD, substance abuse, insomnia, educational attainment, adiposity, externalizing behavior) is at least as consistent with a broad behavioral/impulsivity-pleiotropy locus as with a clean, smoking-specific mechanism — smoking-initiation may be only one of several correlated downstream manifestations of a shared reward/impulse-control pathway, not necessarily the operative link to COPD risk at all.</p>
+<p>Runner-up: COL16A1 has a smaller, coherent secondary body of L2G support at the same locus (higher L2G than ADGRB2 at several individual credible sets, e.g., insomnia, one smoking-status cohort) and a plausible-in-principle ECM/fibrosis biology class (from non-pulmonary tissues: gut myofibroblasts/Crohn's, glioblastoma, skin), but no gene-specific lung/airway literature and a disease-association profile that substantially overlaps with ADGRB2's — consistent with COL16A1 largely riding the same LD/credible-set signal rather than being an independently causal gene. Its ABC-prioritization status could not be weighted more heavily here because the cell type/tissue underlying that ABC call was not available in this lookup — an open question that, if resolved to a lung-relevant tissue, could raise COL16A1's standing. FABP3, despite its PoPS nomination, has no locus-specific genetic corroboration (no credible-set variant, no L2G/coloc support at all) and no lung-relevant functional literature — it is not a serious contender at this locus based on current evidence.</p>
+<p>What would resolve the tie/uncertainty: (a) direct confirmation (e.g., from GWAS Catalog or GSCAN supplementary tables) of whether this exact locus is a reported smoking-initiation/tobacco-use hit; (b) an FEV1/FVC or COPD-specific GWAS colocalization at this variant, which does not currently exist in Open Targets; (c) lung-tissue-specific eQTL/sQTL colocalization for ADGRB2, COL16A1, or FABP3 (the only eQTL credible sets found at this variant were thyroid, not lung); (d) clarification of which cell type/tissue the ABC model was run on for the COL16A1 call.</p>
+
+</body>
+</html>

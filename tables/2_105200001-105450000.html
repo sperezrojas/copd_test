@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2_105200001-105450000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-2105200001-105450000-nearest-gene-c2orf49">Evidence table — locus 2:105,200,001-105,450,000 (nearest gene C2orf49)</h1>
+<p>Lead variant: rs6749911 (2:105,345,882, GRCh38, 3'UTR variant in C2orf49, PIP=0.109)</p>
+<p>Candidate genes evaluated: C2orf49 (= TSLIG2 / ASW / ashwin — current HGNC-approved
+symbol is TSLIG2; older literature and the locus tables use C2orf49/ASW/ashwin, all
+verified to refer to the same gene, ENSG00000135974), TGFBRAP1, FHL2, and GPR45
+(GPR45 added by the researcher as a protein-coding gene physically within the queried
+region, per Ensembl, but flagged by no prioritization method and containing no
+credible-set variant).</p>
+<p>Only citations with a VERIFIED verdict from citation-verifier are included below.
+RETRACTED, NOT_FOUND, and CLAIM_MISMATCH citations, and CONTESTED gene reasoning, are
+in the companion audit file (audits/2_105200001-105450000_audit.md).</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C2orf49</td>
+<td>Structural/molecular biology (housekeeping)</td>
+<td>ASW (=C2orf49) is a subunit of the essential human tRNA splicing ligase complex (with RTCB, DDX1, CGI-99/FAM98B, archease), required for tRNA maturation and non-canonical mRNA splicing (e.g. XBP1/UPR). Not lung-specific.</td>
+<td>PMID 24870230 / DOI 10.1038/nature13284</td>
+<td>WEAKENED (gene-level: no lung-specific mechanism)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>C2orf49</td>
+<td>Developmental biology (Xenopus, not lung)</td>
+<td>Ashwin (C2orf49 ortholog) expressed in neural ectoderm/embryonic brain/eyes; knockdown causes gastrulation defects/apoptosis; overexpression causes anterior truncations.</td>
+<td>PMID 16680723 / DOI 10.1002/dvdy.20834</td>
+<td>WEAKENED (gene-level: developmental/neural, not lung)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>C2orf49</td>
+<td>Bioinformatics / immune (weak, nonspecific, not COPD)</td>
+<td>WGCNA analysis identifies C2orf49 as a hub gene shared between obstructive sleep apnea and sarcopenia expression datasets, &quot;closely associated with pro-inflammatory immune cells&quot; (CIBERSORT). Correlative, not COPD-specific, not causal.</td>
+<td>PMID 41784837 / DOI 10.1007/s11325-026-03633-y</td>
+<td>WEAKENED (correlative bioinformatics, off-disease)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>C2orf49</td>
+<td>Off-target note (included for transparency, not COPD-relevant)</td>
+<td>Concerns C2orf49-DT, a distinct antisense lncRNA (not the C2orf49 protein-coding gene itself), as a colorectal-cancer prognostic biomarker.</td>
+<td>PMID 41348314 / DOI 10.1007/s10528-025-11296-9</td>
+<td>N/A — not about the candidate gene itself</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TGFBRAP1</td>
+<td>Statistical genetics (general context only, locus-level overlap NOT confirmed)</td>
+<td>GSCAN consortium smoking/alcohol-use GWAS (~1.2M individuals); abstract does not name this specific chr2:105.2-105.45Mb locus or TGFBRAP1.</td>
+<td>PMID 30643251</td>
+<td>CONTESTED (gene overall; this citation is non-locus-specific context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TGFBRAP1</td>
+<td>Statistical genetics (general context only, locus NOT among named loci)</td>
+<td>Meta-analysis of 40 novel smoking-behavior loci; named loci (TMEM182, REV3L, CNNM2, GPR101, PJA1, CCDC141, CEP350, HDGFRP2) do not include this locus.</td>
+<td>PMID 30617275</td>
+<td>CONTESTED (gene overall; this citation argues against locus-level smoking-GWAS overlap)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TGFBRAP1</td>
+<td>Statistical genetics (general context only, locus-level overlap NOT confirmed)</td>
+<td>Multi-ancestry lung-function GWAS defining 279 signals (139 new) in ~400,000 individuals; whether this locus is among them not confirmed from abstract.</td>
+<td>PMID 30804560 / DOI 10.1038/s41588-018-0321-7</td>
+<td>CONTESTED (gene overall; non-locus-specific context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TGFBRAP1</td>
+<td>Statistical genetics (general context only, locus-level overlap NOT confirmed)</td>
+<td>COPD genetic-landscape GWAS identifying 82 COPD risk loci in UK Biobank + ICGC; whether this locus is among the 82 not confirmed from abstract.</td>
+<td>PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
+<td>CONTESTED (gene overall; non-locus-specific context)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TGFBRAP1</td>
+<td>Genetics, non-lung phenotype</td>
+<td>rs17687727 in TGFBRAP1 associated with antituberculosis drug-induced liver injury susceptibility (Han Chinese cohort). Hepatotoxicity, not lung/COPD-relevant.</td>
+<td>PMID 31534460 / DOI 10.1155/2019/1685128</td>
+<td>CONTESTED (gene overall; off-disease finding)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TGFBRAP1</td>
+<td>Genetics, non-lung phenotype</td>
+<td>rs2241797 in TGFBRAP1 associated with type 2 diabetes mellitus and diabetes-related miRNA expression. Not lung-relevant.</td>
+<td>PMID 30461200 / DOI 10.1111/jcmm.13885</td>
+<td>CONTESTED (gene overall; off-disease finding)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TGFBRAP1</td>
+<td>Structural/mechanistic (lung-fibrosis-adjacent, but dependent on a retracted interaction — see audit)</td>
+<td>Small-molecule CHIT1 inhibitor (kasugamycin) has antifibrotic effects in murine pulmonary fibrosis models; &quot;null mutation of TGFBRAP1 phenocopied antifibrotic effects&quot; in vivo/in vitro; kasugamycin inhibits the CHIT1-TGFBRAP1 interaction. NOT itself retracted, but its TGFBRAP1-specific mechanistic claim depends on the same CHIT1-TGFBRAP1 interaction asserted in a now-retracted foundational paper (PMID 31085559 — see audit).</td>
+<td>PMID 35679109 / DOI 10.1165/rcmb.2021-0156OC</td>
+<td>CONTESTED — unreplicated pending independent confirmation</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TGFBRAP1</td>
+<td>Review (inherits same retraction-adjacent caveat)</td>
+<td>Review citing TGFBRAP1 as part of the CHIT1 pulmonary-fibrosis signaling model established by the now-retracted primary paper.</td>
+<td>PMID 35370755 / DOI 10.3389/fphar.2022.826471</td>
+<td>CONTESTED — same caveat as above</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TGFBRAP1</td>
+<td>Structural/mechanistic, general TGF-β biology (not lung)</td>
+<td>TGFBRAP1 competes with Smurf1/2 E3 ubiquitin ligases for TGFBR1 binding, stabilizing the receptor and potentiating TGF-β signaling; shown in a hepatocellular carcinoma stemness/drug-resistance model.</td>
+<td>PMID 38981014 / DOI 10.1002/advs.202402327</td>
+<td>CONTESTED (gene overall); this citation is general-mechanism support only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TGFBRAP1</td>
+<td>Structural/mechanistic, distinct pathway (not lung, not TGF-β)</td>
+<td>TGFBRAP1 (Vps8/CORVET ortholog) is a CORVET-tethering-complex subunit; its overexpression impairs autophagosome-lysosome fusion — a vesicle-trafficking function independent of any TGF-β receptor role, reflecting genuine ambiguity about the gene's primary cellular function.</td>
+<td>PMID 38698024 / DOI 10.1038/s41598-024-59775-0</td>
+<td>CONTESTED (gene overall); underscores mechanistic ambiguity</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FHL2</td>
+<td>Structural/mechanistic (direct, non-retracted, lung tissue)</td>
+<td>FHL2 mRNA increased in pulmonary fibrosis tissue; FHL2 knockdown in mouse lung fibroblasts reduced TGF-β1-induced fibrotic morphology and α-SMA/Col I/Fibronectin expression via reduced Smad2/3 phosphorylation; small-molecule FHL2-targeting compound (Arbutin) reduced bleomycin-induced pulmonary fibrosis in vivo.</td>
+<td>PMID 36641135 / DOI 10.1016/j.yexcr.2023.113470</td>
+<td>WEAKENED — real lung-fibrosis mechanism, but from an IPF/bleomycin model, not COPD/emphysema; extrapolation across disease contexts</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FHL2</td>
+<td>Bioinformatics biomarker + immune correlation (lung, IPF)</td>
+<td>ML analysis of IPF GEO datasets identifies FHL2 (with CFH) as an IPF diagnostic biomarker; scRNA-seq shows FHL2 upregulated in IPF lung tissue; ssGSEA shows FHL2 expression correlated with immune-cell infiltration (B cells, NK cells). Correlative, not causal.</td>
+<td>PMID 38784225 / DOI 10.3389/fmed.2024.1363643</td>
+<td>WEAKENED — correlative, IPF not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FHL2</td>
+<td>Structural/mechanistic, other organ (same pathway logic, not lung)</td>
+<td>Fibroblast-specific FHL2 deletion reduces kidney fibrosis in a mouse ureteral-obstruction model via TGF-β1-Wnt/β-catenin signaling.</td>
+<td>PMID 31927599 / DOI 10.1007/s00109-019-01870-1</td>
+<td>WEAKENED (gene overall); general-mechanism support only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FHL2</td>
+<td>Review, cardiac (not lung)</td>
+<td>FHL2 important in cardiac morphogenesis, cardiomyocyte growth, and cardiac fibrosis/remodeling.</td>
+<td>PMID 39466483 / DOI 10.1007/s11010-024-05142-6</td>
+<td>WEAKENED (gene overall); off-tissue</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FHL2</td>
+<td>Structural/mechanistic, cardiac (not lung)</td>
+<td>PARP1-mediated PARylation of FHL2 drives endothelial-to-mesenchymal transition in ischaemic heart failure.</td>
+<td>PMID 42362853</td>
+<td>WEAKENED (gene overall); off-tissue</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FHL2</td>
+<td>Structural/mechanistic, cardiac, macrophage-mediated (not lung)</td>
+<td>QiShenYiQi pill ameliorates cardiac fibrosis by regulating FHL2 and a macrophage RP S19/TGF-β1 signaling pathway.</td>
+<td>PMID 35910357</td>
+<td>WEAKENED (gene overall); off-tissue</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FHL2</td>
+<td>Structural/mechanistic, lung cancer (not COPD)</td>
+<td>FHL2 drives proliferation, migration, invasion, radioresistance, chemoresistance, EMT, and angiogenesis in lung adenocarcinoma/squamous cell carcinoma via PI3K/AKT/mTOR, β-catenin/Wnt, c-Jun, and ITGB1/FAK/MAPK pathways (9 independent studies). Demonstrates FHL2 is functionally active in lung epithelial/tumor and cancer-associated fibroblast cell types, but characterizes malignant transformation, not COPD/non-neoplastic airway or alveolar remodeling.</td>
+<td>PMIDs 41136360, 40482916, 39321737, 39244734, 38323374, 38505066, 37434686, 36227138, 35366027</td>
+<td>WEAKENED — not COPD-relevant per se</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>FHL2</td>
+<td>Immune (tumor-immune-evasion context, not COPD)</td>
+<td>In lung adenocarcinoma, UCHL1-mediated deubiquitination of FHL2 suppresses ferroptosis and antagonizes CD8+ T-cell tumor-killing activity; FHL2 knockdown restores CD8+ T-cell cytotoxic function.</td>
+<td>PMID 41123299 / DOI 10.1111/imm.70057</td>
+<td>WEAKENED — tumor-immune context, not COPD/airway inflammation</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GPR45</td>
+<td>Structural/molecular biology (brain, not lung)</td>
+<td>GPR45 is an orphan class-A GPCR, closely related to a Xenopus lysophosphatidic-acid-receptor homolog (PSP24), predominantly expressed in brain (olfactory mitral cells, cortical/hippocampal/cerebellar neurons).</td>
+<td>PMID 10036181 / DOI 10.1006/geno.1998.5655; PMID 11027574 / DOI 10.1006/bbrc.2000.3569</td>
+<td>WEAKENED — no positive case to begin with; not independently re-checked by skeptic</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GPR45</td>
+<td>Physiology, mouse knockout (brain/metabolic, not lung)</td>
+<td>Gpr45 disruption in mice causes increased adiposity, glucose intolerance, and hepatic steatosis via reduced hypothalamic POMC expression (JAK/STAT signaling). No lung phenotype reported.</td>
+<td>PMID 27500489 / DOI 10.1172/JCI85676</td>
+<td>WEAKENED — no lung phenotype, no credible-set support</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-verified-literature-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT verified literature; did not go through citation-verifier or red-team-skeptic)</h2>
+<ul>
+<li><strong>C2orf49</strong> (ENSG00000135974, OT-approved symbol TSLIG2/ASW): No direct COPD (MONDO_0005002) or FEV1/lung-function association in Open Targets. Strongest disease association overall: &quot;upper respiratory tract disorder&quot; (MONDO_0004867, score 0.259, genetic_association-only), with a single-credible-set L2G score of <strong>0.702</strong> — the highest respiratory-adjacent L2G of any gene at this locus. Also two smoking-initiation (EFO_0005670) credible sets, L2G 0.213 and 0.198. Genetic constraint: LoF score 0.021 (pLI-like, tolerant of LoF), gnomAD lof oe 0.529 (90% CI 0.332-0.876).</li>
+<li><strong>TGFBRAP1</strong> (ENSG00000135966): No direct COPD/FEV1 association. Top overall disease associations are non-respiratory: obesity (0.250), substance-related disorder (0.230), abdominal aortic aneurysm (0.201), schizophrenia (0.147), intelligence (0.147), then smoking initiation (0.138, L2G 0.298 x2). &quot;Upper respiratory tract disorder&quot; L2G only 0.113 — markedly weaker than C2orf49. Genetic constraint: strongly LoF-constrained (pLI-like ~1.0, gnomAD lof oe 0.238, 90% CI 0.167-0.346) — an essential, highly constrained gene.</li>
+<li><strong>FHL2</strong> (ENSG00000115641): No Open Targets evidence at all for &quot;upper respiratory tract disorder.&quot; Top genetic-association hits are cardiac (familial isolated dilated cardiomyopathy 0.371, dilated cardiomyopathy 0.196, cardiomyopathy 0.172, and related terms), plus alcohol drinking (0.351), seasonal allergic rhinitis (0.287), stroke disorder (0.258), and smoking initiation (0.133, L2G 0.307/0.211). Several lung-cancer disease entries exist but are driven only by literature/RNA-expression datatypes, not genetic association. Genetic constraint: LoF-tolerant (pLI-like ~0, gnomAD lof oe 0.581).</li>
+<li><strong>GPR45</strong>: Not queried in Open Targets by the orchestrator (added later by the researcher as a region-overlap gene not in the original candidate list); no structured lookup performed for this gene.</li>
+<li>No gene at this locus has any Open Targets evidence tagged directly to COPD (MONDO_0005002), FEV1 (EFO_0004314), or general lung function (EFO_0003892).</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>C2orf49 — Confidence: LOW.</strong></p>
+<p>This call is close, and the underlying evidence at this locus is weak and non-differentiating across all three seriously-considered genes; none has direct COPD- or FEV1-specific genetic or mechanistic evidence.</p>
+<p>C2orf49 (= TSLIG2/ASW/ashwin) is favored primarily on statistical/positional grounds: it is both the nearest gene and the ABC-prioritized gene, it carries the two highest-PIP credible-set variants at the whole locus (lead variant rs6749911, PIP=0.109, 3'UTR; rs4851758, PIP=0.096, upstream), and it has by far the strongest Open Targets L2G score of the three genes for a respiratory-adjacent disease term (&quot;upper respiratory tract disorder,&quot; L2G 0.702 vs. 0.113 for TGFBRAP1 and no evidence at all for FHL2 — see Open Targets summary above, a structured database lookup, not a literature claim). Its verified literature, however, provides no lung-specific mechanism at all: its only characterized molecular roles are as an essential, ubiquitously required subunit of the tRNA splicing ligase complex (PMID 24870230) and a Xenopus neural-developmental factor (PMID 16680723) — neither lung-relevant — plus one weak, correlative, non-COPD bioinformatics finding (PMID 41784837).</p>
+<p>The runner-up, <strong>TGFBRAP1</strong>, has the most extensive lung-fibrosis-specific mechanistic literature of the three genes, but the red-team-skeptic marked it <strong>CONTESTED</strong>: its foundational mechanistic paper (CHIT1-TGFBRAP1-FOXO3-SMAD7 axis in pulmonary fibrosis, PMID 31085559) was retracted in 2024 after a 2023 correction, and the one surviving non-retracted paper claiming a TGFBRAP1-dependent antifibrotic phenotype (PMID 35679109) depends on the same disputed CHIT1-TGFBRAP1 interaction and should be treated as unreplicated, not independent support. TGFBRAP1 is also strongly LoF-constrained (essential-gene signature) with all its credible-set variants intronic/upstream, and its Open Targets disease profile is dominated by non-respiratory traits.</p>
+<p>The second runner-up, <strong>FHL2</strong>, has real, non-retracted lung-fibrosis mechanistic evidence (bleomycin-model knockdown study, PMID 36641135; IPF biomarker study, PMID 38784225) — the clearest positive structural case of the three genes on its face — but this evidence is drawn entirely from IPF/bleomycin fibrosis models, a pathophysiologically distinct process from COPD's protease-antiprotease/airspace-destruction biology, and FHL2's entire credible-set support is a single, low-PIP (0.041, the lowest at the whole locus), synonymous variant. Open Targets shows zero COPD/FEV1 signal for FHL2, with its dominant genetic signals being cardiac and smoking-initiation.</p>
+<p><strong>What would resolve this tie:</strong> COPD- or FEV1-specific colocalization/eQTL evidence in lung tissue for any of the three genes (none currently exists in the checked sources); independent, non-retracted replication of a TGFBRAP1-COPD mechanism; or a COPD/emphysema-specific (rather than IPF-specific) functional model implicating FHL2. Until such evidence emerges, this recommendation should be read as &quot;best available positional/statistical candidate,&quot; not as a mechanistically established COPD driver gene — the study team should weigh all three genes as live possibilities.</p>
+
+</body>
+</html>

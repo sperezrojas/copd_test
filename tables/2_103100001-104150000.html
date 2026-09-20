@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2_103100001-104150000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table-locus-2103100001-104150000-nearest-gene-tmem182">Evidence table: locus 2:103,100,001-104,150,000 (nearest gene TMEM182)</h1>
+<p><strong>Lead variant:</strong> rs17343925 (2:103,809,919 G&gt;T, GRCh38; intron_variant/non_coding_transcript_variant, MODIFIER; PIP=0.208)
+<strong>Candidate genes evaluated:</strong> TMEM182 (nearest gene), SLC9A2 (MAGMA + PoPS prioritized), CAPZBP1 (recurring credible-set gene annotation), LINC01965 (minor credible-set gene annotation)
+<strong>Credible set:</strong> 149 variants (ABF fine-mapping). No missense, splice-donor, or splice-acceptor variants present in the credible set — every variant's consequence is intronic/non-coding-transcript, non-coding-exon, upstream/downstream-gene, or intergenic. Variant-level literature search was therefore limited to the lead variant per pipeline scope rules.</p>
+<p><strong>Important genomic-architecture note (established during research, not present in the original locus input file):</strong> Per Ensembl GRCh38, TMEM182 (chr2:102,736,905-103,019,900) sits ~80kb outside/upstream of the stated locus window, and SLC9A2 (chr2:102,619,278-102,711,788) sits ~390kb outside/upstream of the window. The window itself contains zero protein-coding genes — only a processed pseudogene (the credible-set's &quot;CAPZBP1&quot; annotation, ENSG00000231723, officially &quot;CAPZB pseudogene 1&quot;) and an lncRNA (LINC01965, ENSG00000256637). The credible-set annotation &quot;CAPZBP1 (also known as RCSD1)&quot; in the original locus input file appears to be a symbol conflation: the pseudogene is physically and functionally distinct from the real RCSD1 gene, which is on chromosome 1. See the excluded/contested appendix for full reasoning.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TMEM182</td>
+<td>statgen</td>
+<td>rs12616219 (~74kb from the COPD lead SNP, near TMEM182) reached Bonferroni-significant replication for a smoking-behavior trait in a meta-analysis of up to 622,409 individuals</td>
+<td>PMID 30617275 / DOI 10.1038/s41380-018-0313-0</td>
+<td>CONTESTED (gene-level; see appendix)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM182</td>
+<td>statgen</td>
+<td>rs13390641 (nearest gene TMEM182) associated with systolic blood pressure via a SNP×BMI interaction in East Asians (n=12,030), stronger effect in obese individuals</td>
+<td>PMID 24903457 / DOI 10.1186/1471-2350-15-65</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM182</td>
+<td>structural</td>
+<td>TMEM182 is a negative regulator of myoblast differentiation/fusion and muscle regeneration via direct interaction with integrin beta 1 (ITGB1), modulating FAK-ERK/FAK-Akt signaling; TMEM182 knockout mice show increased body weight, muscle mass, fiber number/diameter, and accelerated regeneration</td>
+<td>PMID 34427057 / DOI 10.1002/jcsm.12767</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM182</td>
+<td>structural</td>
+<td>TMEM182 expression is upregulated during C2C12 myoblast differentiation, is muscle-tissue-specific, and is regulated by MyoD and p300</td>
+<td>PMID 41133695 / DOI 10.3390/jdb13040034</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM182</td>
+<td>structural</td>
+<td>TMEM182 overexpression suppresses cardiomyocyte differentiation of human iPSCs via sustained Wnt/β-catenin activation mediated by increased ILK expression</td>
+<td>PMID 39512841 / DOI 10.1096/fba.2024-00086</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM182</td>
+<td>structural</td>
+<td>TMEM182 overexpression promotes preadipocyte-to-adipocyte differentiation and fat-synthesis gene expression; TMEM182 knockout mice show decreased abdominal fat deposition</td>
+<td>PMID 38181918 / DOI 10.1016/j.ijbiomac.2023.129144</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM182</td>
+<td>structural</td>
+<td>A regulatory indel in TMEM182 intron 1 is associated with chicken body weight, muscle fiber area, and breast muscle weight via altered PAX4 transcription-factor binding</td>
+<td>PMID 35759289 / DOI 10.1080/00071668.2022.2094217</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TMEM182</td>
+<td>structural</td>
+<td>Additional non-human (rabbit/poultry/cattle) agricultural genetics studies converging on TMEM182's role in muscle development and intramuscular fat deposition (existence-only verified, not individually claim-checked)</td>
+<td>PMID 40877790, PMID 39094502, PMID 38539997, PMID 35308836</td>
+<td>CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SLC9A2</td>
+<td>statgen + structural + immune</td>
+<td>Using an integrative functional-genomics framework (GWAS-SEM latent &quot;gAirwayDisease&quot; factor across COPD/asthma/bronchiectasis/CRSsNP; PoPS; MAGMA; GTEx v8 lung MTWAS; immune-cell MTWAS; scMORE; MR-PheWAS), lung MTWAS identified SLC9A2 and ORMDL3 as the top genetically-regulated expression signals for the shared airway-disease genetic-liability factor</td>
+<td>PMID 42653451 / DOI 10.3390/ijms27167450</td>
+<td>WEAKENED (see appendix)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SLC9A2</td>
+<td>structural</td>
+<td>NHE1, NHE2 (SLC9A2), and NHE3 (SLC9A3) are expressed during mucociliary epithelial development (Xenopus and human airway epithelial cells); pharmacological pan-NHE inhibition (not isoform-specific) impairs mucociliary clearance, cilia formation, and basal body alignment; SLC9A3(NHE3) mutations separately noted as a CF airway-infection risk factor</td>
+<td>PMID 30300884 / DOI 10.1159/000492973</td>
+<td>WEAKENED (not isoform-specific)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>SLC9A2</td>
+<td>structural</td>
+<td>Original rat NHE-2 cloning paper: NHE-2 mRNA predominant in small intestine/colon/stomach, with much lower levels in skeletal muscle, kidney, brain, testis, uterus, heart, and lung</td>
+<td>PMID 7685026 (no DOI available, 1993)</td>
+<td>WEAKENED (lung is a low-expression tissue by this data)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CAPZBP1</td>
+<td>—</td>
+<td>No verified literature exists for the actual gene annotated at this locus (a ~200bp processed pseudogene, &quot;CAPZB pseudogene 1,&quot; ENSG00000231723, physically inside the locus window). The input file's parenthetical equating this pseudogene with RCSD1 (a distinct, unrelated protein-coding gene on chromosome 1) appears to be a symbol conflation — see excluded/contested appendix for the RCSD1 literature found and why it was judged inapplicable to this locus.</td>
+<td>n/a</td>
+<td>CONTESTED (gene misattribution)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC01965</td>
+<td>—</td>
+<td>No literature exists for this lncRNA (confirmed via PubMed search: zero results). Genuine literature gap, not a search failure.</td>
+<td>n/a</td>
+<td>WEAKENED (unevaluable)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>Ensembl ID</th>
+<th>L2G score (this locus)</th>
+<th>Colocalization</th>
+<th>Constraint (gnomAD)</th>
+<th>Aggregate COPD association score (genome-wide)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TMEM182</td>
+<td>ENSG00000170417</td>
+<td>No data available (no L2G predictions exist for any of the ~100 credible sets sharing this locus's lead variant, across the entire GWAS catalogue)</td>
+<td>No data available</td>
+<td>lof score ≈0 (LoF-tolerant); lof o/e 0.751 (0.528-1.092)</td>
+<td>Not in top 500 of 6323 targets genome-wide (no independent corroborating evidence)</td>
+</tr>
+<tr>
+<td>SLC9A2</td>
+<td>ENSG00000115616</td>
+<td>No data available (same reason as above)</td>
+<td>No data available</td>
+<td>lof score ≈0 (LoF-tolerant); lof o/e 0.565 (0.420-0.770); missense Z=2.25 (mild constraint signal)</td>
+<td>Not in top 500 of 6323 targets genome-wide</td>
+</tr>
+<tr>
+<td>CAPZBP1</td>
+<td>ENSG00000231723</td>
+<td>No data available</td>
+<td>No data available</td>
+<td>No data available (gene not covered by gnomAD constraint metrics)</td>
+<td>Not in top 500 of 6323 targets genome-wide</td>
+</tr>
+<tr>
+<td>LINC01965</td>
+<td>ENSG00000256637</td>
+<td>No data available</td>
+<td>No data available</td>
+<td>No data available (lncRNA, not subject to protein-coding constraint metrics)</td>
+<td>Not in top 500 of 6323 targets genome-wide</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Locus-wide pleiotropy pattern (structured lookup, informative context):</strong> The lead variant rs17343925 is shared as a credible-set lead across ~100 GWAS signals in Open Targets. ~75% are UK Biobank body-composition/anthropometric traits (BMI, weight, fat mass, lean mass, waist/hip circumference, basal metabolic rate, body water, bioimpedance). A smaller cluster (5/100) are airway-obstruction/bronchitis traits (chronic airway obstruction/COPD, chronic bronchitis, obstructive chronic bronchitis — PheCode-based cohorts). Another small cluster (3/100) are smoking-behavior traits (tobacco use disorder/nicotine dependence, smoking status, lifetime smoking index). No spirometry/FEV1/FEV1-FVC credible set was found sharing this exact lead variant. No L2G prediction or colocalization evidence exists for any of the 100 credible sets inspected.</p>
+<hr>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>Gene: SLC9A2</strong>
+<strong>Confidence: LOW</strong></p>
+<p>This call is close and should be read as the least-weak option among four genes with no strong evidence, rather than a confident pick. The single most COPD-relevant finding at this locus is the 2026 unified-airway-disease TWAS (PMID 42653451, VERIFIED), which names SLC9A2 as a top lung-expression signal for a shared COPD/asthma/bronchiectasis/CRSsNP genetic-liability factor. However, the red-team-skeptic's critique (preserved in full in the audit appendix) correctly notes this is a single, very recent, non-COPD-specific, non-colocalized finding, and that SLC9A2 sits ~390kb outside the stated locus window with no L2G/colocalization data tying it to this exact signal. Independent NHE-family literature (PMID 30300884) supports plausibility of an ion-transport role in airway mucociliary epithelium but is not SLC9A2-isoform-specific, and the original NHE-2 expression-profiling paper (PMID 7685026) found lung to be a comparatively low-expression tissue for this transporter. Open Targets shows no aggregate COPD association signal and no L2G/coloc data for SLC9A2 at all.</p>
+<p>The runner-up is TMEM182 (the nearest gene), whose literature is exclusively about muscle/adipose developmental biology (myogenesis, cardiomyocyte differentiation, fat deposition) with zero direct lung evidence; the red-team-skeptic marked TMEM182 CONTESTED because its verified evidence affirmatively supports an alternative, non-pulmonary mechanism (body composition/muscle biology) rather than a COPD-relevant one, and any COPD link for TMEM182 depends on an untested comorbidity narrative (e.g., sarcopenia/respiratory-muscle-wasting or obesity-COPD interaction) rather than on the cited biology itself. Given the Open Targets pleiotropy pattern is dominated by body-composition/anthropometric traits sharing this exact lead SNP, TMEM182's adiposity/muscle biology is at least as plausible a mediating pathway for this locus's COPD signal as SLC9A2's epithelial-transporter hypothesis — this is precisely why the call is close.</p>
+<p>CAPZBP1 and LINC01965 are not viable candidates: CAPZBP1 resolves to a functionless processed pseudogene inside the window with no literature of its own (the RCSD1 literature cited under this symbol is very likely a misattribution to a different gene on a different chromosome, per the red-team-skeptic's CONTESTED verdict), and LINC01965 has no literature at all.</p>
+<p><strong>What would resolve this tie:</strong> (1) a COPD-specific (not multi-disease latent-factor) colocalization or fine-mapping result directly linking rs17343925 (or a variant in strong LD) to SLC9A2 lung expression; (2) replication of the SLC9A2 lung-MTWAS finding by an independent group; (3) confirmation of whether this locus/lead variant appears in the Shrine et al. 2019 (PMID 30804560, VERIFIED) spirometry GWAS supplementary signal list — this pipeline could not access those tables, and a positive FEV1/FEV1-FVC hit would meaningfully strengthen a direct-pulmonary-biology case for whichever gene it implicates; (4) a Mendelian-randomization or comorbidity-adjusted analysis testing whether TMEM182-mediated body composition/lean mass causally affects COPD risk or severity, which would help adjudicate between the adiposity-mediated and epithelial-transporter hypotheses. Given the weakness of evidence on both sides, confidence is marked LOW rather than MODERATE, and this recommendation should be weighed accordingly by the study team.</p>
+
+</body>
+</html>

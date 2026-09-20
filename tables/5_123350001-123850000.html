@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>5_123350001-123850000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table--locus-5123350001-123850000-5q232">Evidence table — locus 5:123,350,001-123,850,000 (5q23.2)</h1>
+<p><strong>Lead variant:</strong> rs35390568 (5:123,618,127, GRCh38, downstream_gene_variant, PIP=0.092)
+<strong>Nearest gene:</strong> CSNK1G3
+<strong>FLAMES-prioritized / ABC-prioritized gene:</strong> CEP120
+<strong>Candidate genes reviewed:</strong> CSNK1G3, CEP120 (the only two protein-coding genes in the region, confirmed by Ensembl REST overlap query)</p>
+<p>All rows below use ONLY citations verdicted VERIFIED by citation-verifier. Citations verdicted CLAIM_MISMATCH, NOT_FOUND, or RETRACTED, and any gene-level CONTESTED/WEAKENED skeptic verdicts, are documented in the companion audit file (see <code>audits/5_123350001-123850000_audit.md</code>), not here.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CSNK1G3</td>
+<td>Statistical genetics (non-lung)</td>
+<td>Mendelian randomization + experimental study identifies CSNK1G3 as downregulated in an oxalate-stress kidney cell model, associated with reduced calcium-oxalate kidney stone risk (renal trait, not pulmonary; documents CSNK1G3 pleiotropy outside the respiratory system)</td>
+<td>PMID 40842671 / DOI 10.1002/fsn3.70800</td>
+<td>WEAKENED (gene-level: real citation but lung-irrelevant)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CSNK1G3</td>
+<td>Statistical genetics (non-lung)</td>
+<td>Population-genetics positive-selection scan in Taiwanese Han identifies CSNK1G3 among genes under selection, pleiotropic with unspecified &quot;metabolic-related traits&quot; (not COPD/lung function)</td>
+<td>PMID 33170928 / DOI 10.1093/molbev/msaa276</td>
+<td>WEAKENED (gene-level: real citation but lung-irrelevant)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CSNK1G3</td>
+<td>Statistical genetics (non-human, non-lung)</td>
+<td>Bovine milk-protein GWAS: SNP near CSNK1G3 (and PRKCQ) associated with kappa-casein glycosylation in dairy cattle</td>
+<td>PMID 27485317 / DOI 10.1186/s12863-016-0421-2</td>
+<td>WEAKENED (gene-level: real citation but lung-irrelevant)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CSNK1G3</td>
+<td>Molecular/cell biology (non-lung)</td>
+<td>RNAi kinome screen identifies CSNK1G3 as an Akt-cooperating kinase; knockdown enhances Akt-inhibitor-induced cancer cell killing via reduced Akt-Ser473/S6 phosphorylation</td>
+<td>PMID 16247451 / DOI 10.1038/sj.onc.1209169</td>
+<td>WEAKENED (gene-level: real citation but lung-irrelevant)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CEP120</td>
+<td>Structural/developmental biology (rare disease, Mendelian)</td>
+<td>Founder CEP120 missense mutation (p.Ala199Pro) causes Jeune asphyxiating thoracic dystrophy (JATD); reduced cilia/abnormal centriole number in patient fibroblasts; cilia/body-axis defects in CEP120-knockdown zebrafish</td>
+<td>PMID 25361962 / DOI 10.1093/hmg/ddu555</td>
+<td>WEAKENED/CONTESTED-adjacent (see audit: rare biallelic LOF causing a distinct monogenic, restrictive-physiology skeletal disease -- architecture and phenotype mismatch vs. the common noncoding GWAS variant actually in this credible set)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CEP120</td>
+<td>Structural/mechanistic biology (rare disease)</td>
+<td>Disease-associated CEP120 mutations (V194A/Joubert, A199P/JATD) destabilize a C2 domain, reduce CEP120 protein, impair distal centriole marker recruitment, cause deficient ciliogenesis</td>
+<td>PMID 29847808 / DOI 10.1016/j.celrep.2018.04.100</td>
+<td>WEAKENED/CONTESTED-adjacent (see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CEP120</td>
+<td>Structural/developmental biology (rare disease)</td>
+<td>Exome sequencing of 6 probands: CEP120 mutations cause a Joubert-to-severe-ciliopathy spectrum (TCDOE, Meckel syndrome, JATD, orofaciodigital syndromes); CEP120 mutations account for ~1% of Joubert syndrome cases</td>
+<td>PMID 27208211 / DOI 10.1136/jmedgenet-2016-103832</td>
+<td>WEAKENED/CONTESTED-adjacent (see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CEP120</td>
+<td>Structural/mechanistic biology (cell model)</td>
+<td>CRISPR knockout of CEP120 in RPE1 cells produces short centrioles lacking distal/subdistal appendages, impairs C2CD3/Talpid3 recruitment, blocks ciliogenesis; disease-associated I975S mutant shows reduced C2CD3 binding</td>
+<td>PMID 30988386 / DOI 10.1038/s41598-019-42577-0</td>
+<td>WEAKENED/CONTESTED-adjacent (see audit)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CEP120</td>
+<td>Developmental biology (cross-organ analogy, kidney not lung)</td>
+<td>Conditional Cep120 deletion in mouse kidney stromal mesenchyme causes defective centrosome duplication, reduced interstitial cell abundance, hypoplastic kidneys, sensitizes kidney to fibrosis via TGF-beta/Smad3-Gli2 signaling after injury (kidney tissue only; cited as a general organ-stromal/fibrosis-sensitization analogy, NOT lung evidence)</td>
+<td>PMID 38177914 / DOI 10.1038/s44319-023-00019-z</td>
+<td>WEAKENED (explicitly non-lung analogy; must not be read as pulmonary-fibrosis evidence)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>CSNK1G3 &amp; CEP120</td>
+<td>Contextual background (flagship GWAS papers)</td>
+<td>Shrine et al. 2019 multi-ancestry lung-function GWAS (279 signals, 139 novel) and Sakornsakolpat et al. 2019 COPD GWAS meta-analysis (82 loci) exist and are accurately described; neither gene is named in the retrievable abstract of either paper, and full-text/supplementary-table search for this specific locus (rs35390568, CEP120, CSNK1G3) could not be completed this session (tool limitation, not a confirmed negative)</td>
+<td>PMID 30804560 / DOI 10.1038/s41588-018-0321-7; PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
+<td>Not gene-specific evidence -- background context only; flagged by skeptic as an open follow-up item</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note on evidence gaps (not a citation, but material to interpretation):</strong> Despite dedicated PubMed searches, no literature was found directly linking either CSNK1G3 or CEP120 to COPD case-control GWAS, FEV1/FEV1-FVC spirometric GWAS, smoking-initiation/cigarettes-per-day GWAS (GSCAN, PMID 30643251 / DOI 10.1038/s41588-018-0307-5, exists and is accurately described as the standard smoking-behavior GWAS reference, but no gene-specific check against this locus was completed), or COPD-relevant immune/inflammatory programs (T-cell, macrophage, neutrophil biology) for either gene. This is treated as an open evidence gap per pipeline convention, not a confirmed absence of effect.</p>
+<h2 id="open-targets-summary-structured-database-lookup----not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup -- NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p>Source: Open Targets Platform GraphQL API, queried directly 2026-09-11. Ensembl IDs: CSNK1G3 = ENSG00000151292; CEP120 = ENSG00000168944. Disease/trait IDs: COPD = MONDO_0005002; FEV1 = EFO_0004314.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>COPD disease-association score</th>
+<th>COPD L2G-like evidence score(s)</th>
+<th>FEV1 L2G-like evidence score(s)</th>
+<th>Constraint (pLoF oe / LOEUF-equivalent)</th>
+<th>Constraint (missense oe)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CSNK1G3</td>
+<td>0.036 (genetic_association datatype: 0.058)</td>
+<td>0.096 (1 evidence row)</td>
+<td>0.081, 0.079 (2 evidence rows)</td>
+<td>0.353 (~0.62) -- moderately constrained</td>
+<td>0.649</td>
+</tr>
+<tr>
+<td>CEP120</td>
+<td>0.281 (genetic_association datatype: 0.463)</td>
+<td>0.761 (1 evidence row)</td>
+<td>Range 0.052-0.840 across 14 evidence rows; 10/14 rows &gt;=0.73, but 4/14 rows are markedly lower (heterogeneous, not full consensus)</td>
+<td>0.762 (~0.93) -- not constrained</td>
+<td>1.039 (not constrained)</td>
+</tr>
+</tbody>
+</table>
+<p>Per-database-query caveat: <code>Evidence.studyId</code> and <code>Evidence.diseaseFromSource</code> fields returned null for all <code>gwas_credible_sets</code> evidence rows queried, so the specific underlying GWAS study/publication generating each L2G-like score could not be identified via this API; only the aggregate scores were retrievable, not per-study colocalization posterior probabilities. Neither gene shows constraint in the most-constrained genomic tier.</p>
+<h2 id="prioritized-gene-synthesis">Prioritized-gene synthesis</h2>
+<p><strong>Prioritized gene: CEP120. Confidence: LOW.</strong></p>
+<p>This call is close, and the pipeline's own red-team-skeptic review pushed back hard on it, so the reasoning below tries to be transparent about exactly how much weight each piece of evidence can bear.</p>
+<p>In favor of CEP120: both independent gene-prioritization methods used by this pipeline (FLAMES and ABC) point to CEP120 rather than the nearest gene, and Open Targets' own L2G-like aggregation is markedly stronger for CEP120 than CSNK1G3 for both COPD (0.761 vs 0.096) and FEV1 (up to 0.840 across 14 rows vs. 0.079-0.081 across 2 rows) (Open Targets summary table above). CEP120 also has a well-replicated, VERIFIED Mendelian-genetics literature base (PMID 25361962, 29847808, 27208211, 30988386) establishing that loss of CEP120 causes centriole/ciliogenesis defects and a skeletal ciliopathy (JATD) with a mechanistically plausible, non-smoking-mediated route to lung pathology (per this pipeline's prior #2, structural/pulmonary mechanisms are to be weighed alongside COPD case-control signal).</p>
+<p>Against a confident call: the red-team-skeptic identified a genuine, unresolved architecture and phenotype gap that this evidence base does not bridge. Every verified CEP120 functional citation concerns rare, biallelic loss-of-function/hypomorphic mutations causing a distinct monogenic disease (JATD/Joubert syndrome) with restrictive (not obstructive) thoracic/lung physiology -- not the common noncoding regulatory variant (rs35390568, PIP 0.092, downstream_gene_variant) actually driving this GWAS credible set. No verified citation demonstrates that common CEP120 regulatory variation, partial/heterozygous dosage effects, or airway epithelial ciliary dysfunction specifically produces an obstructive, COPD-relevant phenotype. The one citation that came closest to bridging rare-disease genetics with the qualitative phenotype in question (PMID 37547106) was flagged CLAIM_MISMATCH by citation-verifier (the researcher's claim of &quot;no CEP120-specific finding&quot; was itself wrong -- the paper does report a CEP120 variant in a JBTS patient with breathing abnormalities -- but this remains rare-variant JBTS evidence, not a common-variant/GWAS bridge, and per pipeline rules cannot be used in the main table above as originally framed). The red-team-skeptic also raised a plausible alternative explanation for the L2G scores themselves (gene-distance/chromatin-annotation features rather than curated mechanism) and flagged that the credible-set variants near CEP120 sit in intergenic/non-coding-transcript regions near a pseudogene (KRT18P16), leaving open the unexplored possibility that the functional element regulates something other than CEP120 (KRT18P16 itself, or a currently unannotated element, or even acts at a distance on CSNK1G3).</p>
+<p><strong>Runner-up: CSNK1G3.</strong> It is the physically nearest gene and contains the lead variant and most high-PIP credible-set variants intronically, and is moderately constrained for LoF (LOEUF ~0.62, more constrained than CEP120's ~0.93). However, despite dedicated literature searches across statistical genetics, structural/developmental, immune, and smoking-behavior domains, no VERIFIED citation links CSNK1G3 to any lung-relevant biology; all four verified citations are off-target (renal MR, population-genetics selection scan, dairy-cattle GWAS, cancer-cell-line kinome screen), and its own Open Targets L2G scores are markedly weaker than CEP120's at this same locus.</p>
+<p><strong>What would resolve the tie:</strong> (1) a lung-tissue or airway-epithelium eQTL/sQTL colocalization analysis for CEP120 and CSNK1G3 at rs35390568 specifically (neither the researcher nor the skeptic could complete this given tool/search-budget limitations this session); (2) direct lookup of this locus (chr5:123.6 Mb, rs35390568, CEP120, CSNK1G3) in the Shrine et al. 2019 and Sakornsakolpat et al. 2019 primary supplementary tables, which the researcher attempted but could not complete via available full-text tools; (3) any study of heterozygous CEP120 carriers or common CEP120 regulatory variation and airway/spirometric phenotype, as opposed to biallelic monogenic ciliopathy. Until at least one of these is available, CEP120 should be treated as &quot;statistically prioritized, mechanistically unproven&quot; rather than a confidently established causal gene, and this LOW confidence rating should not be read by the study team as a recommendation against further investigation -- rather, it flags exactly where the next unit of evidence would be most decisive.</p>
+
+</body>
+</html>

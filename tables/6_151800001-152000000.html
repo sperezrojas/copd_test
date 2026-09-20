@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>6_151800001-152000000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="locus-6151800001-152000000--candidate-gene-esr1">Locus 6:151,800,001-152,000,000 — Candidate gene: ESR1</h1>
+<p>Lead variant: rs3757323 (6:151,880,872, GRCh38, intron_variant, PIP=0.633). All 11 credible-set
+variants (cumulative PIP ≈0.98) are intronic within ESR1 itself; no missense/splice-donor/
+splice-acceptor variant present. Candidate genes from internal pipeline: nearest gene ESR1,
+FLAMES-prioritized ESR1, PoPS-prioritized ESR1; MAGMA and ABC = NA. A direct Ensembl region query
+(WebFetch, not a literature source) confirmed ESR1 is the only protein-coding gene physically
+within this window (plus one uncharacterized lncRNA); the neighboring gene CCDC170 — proposed by
+some as an alternative effector at the broader, more telomeric 6q25.1 breast-cancer GWAS peak —
+lies entirely outside this specific locus window.</p>
+<h2 id="evidence-table">Evidence table</h2>
+<p>All 21 citations below were checked by citation-verifier: <strong>21/21 VERIFIED</strong>, no retractions, no
+CLAIM_MISMATCH, no NOT_FOUND. Skeptic verdicts are from red-team-skeptic's critique (full text in
+<code>audits/6_151800001-152000000_audit.md</code>); note the skeptic disclosed it exhausted its web-search
+quota before running independent contradiction searches for this locus, so its critique is
+reasoning over the researcher's already-verified findings, not new literature discovery.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESR1</td>
+<td>Statistical genetics (absence-of-evidence)</td>
+<td>TWAS/colocalization study of severe COPD and quantitative emphysema (blood + lung transcriptome imputation) identified PSMA4, EGLN2, WNT3, DCBLD1, LILRA3 as colocalizing genes at known COPD GWAS loci; ESR1/6q25 is NOT among the genes reported as significant.</td>
+<td>Sakornsakolpat et al. 2018, Respir Res, PMID 29566699, DOI 10.1186/s12931-018-0744-9</td>
+<td>HOLDS as characterized — honestly-reported negative evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>Statistical genetics (absence-of-evidence, verifier-confirmed)</td>
+<td>Large lung-function/COPD GWAS (UK Biobank extremes design), 97 signals; verifier confirmed ESR1/6q25 is <strong>NOT</strong> among the 97 reported signals (chr6 loci reported instead: LST1, HLA-DQB1/DQA2, KCNQ5, ZNF184/LINC01012, NCR3/AIF1, AGER).</td>
+<td>Wain et al. 2017, Nat Genet, PMID 28166213, DOI 10.1038/ng.3787</td>
+<td>WEAKENED — real negative evidence against a direct lung-function signal at this locus, should be weighted accordingly</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>Statistical genetics (absence-of-evidence, verifier-confirmed)</td>
+<td>Landmark lung-function GWAS meta-analysis (400,102 individuals), 279 signals; combined genetic-risk score predicts COPD across smokers/never-smokers; verifier confirmed ESR1/6q25 is <strong>NOT</strong> among the 279 reported signals (chr6 loci reported instead: MIR588, GPR126, DSP).</td>
+<td>Shrine et al. 2019, Nat Genet, PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
+<td>WEAKENED — same as above, second major primary GWAS that does not name this locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>Statistical genetics (direct, weak)</td>
+<td>Candidate-gene re-analysis of 130 lung-function genes in SpiroMeta (n=20,288): ESR1 (rs9322335) showed the strongest association with FEV1/FVC ratio among all tested genes, but specifically and only in the ever-smoker subgroup (P=5.42×10⁻⁴); no gene reached genome-wide-corrected significance overall.</td>
+<td>Obeidat et al. 2011, PLoS ONE, PMID 21625484, DOI 10.1371/journal.pone.0019382</td>
+<td>WEAKENED — nominal significance only, smoking-subgroup-restricted, underpowered by modern standards; is nonetheless the strongest direct gene-specific human evidence in the packet and its smoking-subgroup-specificity is concordant with prior #1</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>Statistical genetics (absence-of-evidence, verifier-confirmed)</td>
+<td>GSCAN consortium GWAS of smoking initiation/cessation/heaviness/alcohol use in up to 1.2M individuals (406 loci); verifier confirmed ESR1/6q25 (rs3757323) is <strong>NOT</strong> named as a smoking-initiation locus in main text/visible supplementary content (chr6 smoking-initiation loci reported instead: REV3L, MMS22L).</td>
+<td>Liu et al. 2019 (GSCAN), Nat Genet, PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
+<td>CONTESTED (as context for the Open Targets coloc claim below) — this is the primary paper that would be expected to report the smoking-initiation signal Open Targets attributes to this SNP, and it does not; source of the OT credible set is unverified (newer GSCAN release vs. different phenotype vs. curation artifact) and should not be treated as literature-confirmed</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1 (region)</td>
+<td>Statistical genetics (regional context, different SNP)</td>
+<td>Two variants (rs3734805, rs9383938) at 6q25.1/ESR1 region associated with breast cancer risk in European-ancestry subjects.</td>
+<td>Fletcher et al. 2011, JNCI, PMID 21263130, DOI 10.1093/jnci/djq563</td>
+<td>Not separately contested — background/context only, different SNPs than this locus's credible set</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1 (region)</td>
+<td>Statistical genetics / functional fine-mapping (different SNP)</td>
+<td>Breast-cancer variant rs2046210 (~180kb from ESR1) and rare variants across a 600kb region including ESR1 show allele-specific enhancer/promoter activity on ESR1 promoters (reporter assays, altered TFAP2C binding) — supports ESR1 (not a neighbor) as the functionally relevant transcript for regulatory variation in this broader region generally.</td>
+<td>Pierce et al. 2025, PNAS, PMID 41129222, DOI 10.1073/pnas.2517736122</td>
+<td>Not separately contested — indirect/regional support, different SNP than this locus's credible set</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1 (alternative-hypothesis caveat)</td>
+<td>Statistical genetics (alternative gene hypothesis)</td>
+<td>At the broader 6q25.1 breast-cancer GWAS peak, differential allele-specific-expression analysis argues CCDC170 (not ESR1) better explains the signal; breast-cancer-associated CCDC170 rearrangements/truncations disrupt its Golgi-microtubule-organizing function.</td>
+<td>Jiang et al. 2017, EBioMedicine, PMID 28687497, DOI 10.1016/j.ebiom.2017.06.024</td>
+<td>Noted as limited applicability here — CCDC170 lies entirely outside this specific locus window (confirmed by Ensembl query), so this alternative-gene hypothesis applies to the broader, more telomeric 6q25.1 breast-cancer peak, not to this locus's credible set (which is entirely within ESR1)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>Structural/developmental lung biology (review, hedged)</td>
+<td>ERα, ERβ, GPER1 are expressed across airway epithelium, smooth muscle, fibroblasts, lung endothelium, immune cells; ERα &quot;frequently amplifies proinflammatory transcriptional programs&quot; vs ERβ preserving ECM integrity/attenuating inflammation; framework proposed to explain enhanced COPD susceptibility in women at lower tobacco exposure and postpubertal female asthma predominance.</td>
+<td>Ekpruke &amp; Silveyra 2025, AJP Lung, PMID 41474472, DOI 10.1152/ajplung.00060.2025</td>
+<td>WEAKENED — hedged, hypothesis-generating review language (&quot;proposed to explain&quot;), not a demonstrated COPD-specific finding; should not be presented as direct mechanistic proof</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>Structural/developmental lung biology (COPD-relevant, smoke-conditional)</td>
+<td>Mouse chronic cigarette-smoke model: female (not male/ovariectomized) mice show increased small-airway-wall remodeling, oxidative stress, TGF-β1 activation vs males; ovariectomy abolishes excess remodeling; tamoxifen mitigates smoke-induced oxidative stress in females; female human smokers have thicker airway walls (OCT) than male smokers.</td>
+<td>Tam et al. 2016, AJRCCM, PMID 26599602, DOI 10.1164/rccm.201503-0487OC</td>
+<td>HOLDS — genuinely COPD/smoke-model-relevant; supports a smoke-conditional lung-autonomous mechanism (concordant with prior #1's &quot;biology conditional on smoking&quot; framing), one of the strongest mechanistic citations in the packet</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>Structural/developmental lung biology (review, hedged)</td>
+<td>Lung cancer and COPD incidence risen in women; both associated with chronic pulmonary inflammation; estrogen (via receptors on multiple lung cell types incl. immune cells) proposed to promote pro-growth/inflammatory phenotypes relevant to both diseases; context-dependent.</td>
+<td>Siegfried 2022, Endocrinology, PMID 34927202, DOI 10.1210/endocr/bqab254</td>
+<td>WEAKENED — hedged review language, not COPD-specific demonstrated mechanism</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>Immunology/inflammation (review, hedged)</td>
+<td>Androgens broadly anti-inflammatory in the lung, estrogens broadly pro-inflammatory; &quot;estrogens may promote neutrophilic inflammation in subjects with asthma and COPD.&quot;</td>
+<td>Reyes-García et al. 2021, Adv Exp Med Biol, PMID 34019274, DOI 10.1007/978-3-030-68748-9_15</td>
+<td>WEAKENED — hedged (&quot;may promote&quot;), general review claim not ESR1-COPD-specific primary data</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>Structural/developmental lung biology (COPD-relevant, smoke-conditional)</td>
+<td>Cigarette-smoke extract disrupts the protective/bronchodilatory effect of 17β-estradiol on airway-smooth-muscle calcium signaling/contractility despite increased ER expression; increased S-nitrosylation of ERα.</td>
+<td>Sathish et al. 2015, Cell Physiol Biochem, PMID 26113109, DOI 10.1159/000430282</td>
+<td>HOLDS — genuinely smoke-conditional, lung-autonomous mechanism relevant to COPD; second of the two strongest mechanistic citations in the packet</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>Immunology/inflammation (asthma model, extrapolated)</td>
+<td>Female mouse alveolar macrophages show greater IL-4-induced M2 polarization than male, ERα-dependent (ERα agonist enhances M2 in females; macrophage-specific ERα knockout impairs it).</td>
+<td>Keselman et al. 2017, J Immunol, PMID 28760880, DOI 10.4049/jimmunol.1601975</td>
+<td>WEAKENED — asthma model, not COPD; should not be presented as direct COPD mechanistic evidence without extrapolation caveat</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>Immunology/inflammation (particulate-exposure model, extrapolated)</td>
+<td>Male alveolar macrophages downregulate ERα after multi-walled-carbon-nanotube lung exposure; females do not; ER antagonism (fulvestrant) attenuates M2a macrophage gene expression/eosinophilia in females.</td>
+<td>Ray et al. 2024, FASEB J, PMID 38071600, DOI 10.1096/fj.202301571RR</td>
+<td>WEAKENED — nanoparticle-inhalation model, not COPD/cigarette-smoke; extrapolation caveat applies</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>Immunology/inflammation (ozone-exposure model, extrapolated)</td>
+<td>ESR1/ERα identified (with TP53, NR4A1/Nur77) as central upstream regulator of mitochondrial-respiration pathways in lung macrophages 72h post-ozone exposure; ERα-knockout mice show altered glycolytic capacity/reserve in lung macrophages.</td>
+<td>Smith et al. 2024, Toxicol Sci, PMID 38897669, DOI 10.1093/toxsci/kfae081</td>
+<td>WEAKENED — air-pollutant (ozone) model, not cigarette-smoke/COPD; extrapolation caveat applies</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>Immunology/inflammation (asthma/obesity model, extrapolated)</td>
+<td>Ovarian hormones and ERα T-cell signaling drive Th17-mediated airway inflammation (increased eosinophils, neutrophils) in an obese/allergic-airway mouse model; women with asthma+obesity have higher circulating Th17 cells than men with asthma+obesity.</td>
+<td>Henriquez Pilier et al. 2026, AJP Lung, PMID 41686163, DOI 10.1152/ajplung.00400.2025</td>
+<td>WEAKENED — asthma/obesity model, not COPD; extrapolation caveat applies; relevant to Th17/neutrophilic programs named in prior #3 but not COPD-tested</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>Immunology (general, not lung-specific)</td>
+<td>T-cell-specific ERα knockout mice spontaneously develop mild autoimmunity with increased follicular helper T (TFH) cell responses/autoantibody production; estradiol suppresses TFH responses in wild-type mice.</td>
+<td>Kim et al. 2019, Exp Mol Med, PMID 30988419, DOI 10.1038/s12276-019-0237-z</td>
+<td>General background only — not lung- or COPD-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>Immunology (contradicting direction, tumor context)</td>
+<td>In TCGA NSCLC RNA-seq data, high ESR1 (and PGR) expression associated with significantly DECREASED CD4+/CD8+ activated T-cell tumor infiltration.</td>
+<td>Oh et al. 2021, Cancer Treat Res Commun, PMID 33711637, DOI 10.1016/j.ctarc.2021.100317</td>
+<td>Noted contradiction, carried forward — opposite direction from a simple &quot;ERα drives T-cell/CD8 inflammation&quot; model, albeit in a tumor-immune-microenvironment context rather than COPD/emphysema</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1 (comparator, not evidence for ESR1)</td>
+<td>Immunology (comparator context)</td>
+<td>Review of androgen-receptor (not estrogen-receptor) effects on lung myeloid cells in asthma, COPD, fibrosis.</td>
+<td>Becerra-Diaz et al. 2020, Front Immunol, PMID 32849595, DOI 10.3389/fimmu.2020.01698</td>
+<td>Context/comparator only — illustrates sex-hormone lung-immunity complexity is bidirectional, not itself evidence for or against ESR1</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ESR1 (mechanistic, non-genetic)</td>
+<td>Smoking-behavior mechanistic</td>
+<td>In a twin cohort, women metabolize nicotine/cotinine faster than men; estrogen-containing (not progesterone-only) oral contraceptives further accelerate nicotine clearance in women; effect abolished post-menopause.</td>
+<td>Benowitz et al. 2006, Clin Pharmacol Ther, PMID 16678549, DOI 10.1016/j.clpt.2006.01.008</td>
+<td>HOLDS as characterized — genuine pharmacokinetic mechanism (circulating estrogen exposure, not ESR1 genotype) establishing biological plausibility for an estrogen-smoking-behavior link; does not test ESR1 genetic variation directly</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not">Open Targets summary (structured database lookup — not a verified literature citation; did not</h2>
+<p>go through citation-verifier or red-team-skeptic)</p>
+<p><strong>ESR1 (ENSG00000091831):</strong></p>
+<ul>
+<li><strong>Disease association scores</strong> (aggregated evidence): COPD (MONDO_0005002) overall score 0.328
+(genetic_association 0.503, literature 0.228, clinical 0.122); FEV1 (EFO_0004314) overall score
+0.526 (genetic_association 0.865); FEV1/FVC ratio (EFO_0004713) overall score 0.295
+(genetic_association 0.486). Note: the FEV1 genetic-association score is notably stronger than
+the direct COPD case-control score.</li>
+<li><strong>Genetic constraint</strong> (gnomAD-based): synonymous oe=0.977 (z=0.216); missense oe=0.752
+(z=2.461); loss-of-function oe=0.296 (oe_upper=0.456) — ESR1 is LoF-constrained and moderately
+missense-constrained, consistent with a dosage-sensitive gene.</li>
+<li><strong>Locus-to-gene (L2G) / colocalization at the lead variant:</strong> Open Targets has <strong>no curated
+credible set for this specific internal COPD GWAS meta-analysis</strong> at this locus (checked
+GCST007692, FINNGEN_R12_J10_COPD, GCST011766, GCST004147, FINNGEN_R12_COPD_EARLY,
+FINNGEN_R12_COPD_LATER — zero credible sets returned in this region for any of them; an
+absence-of-curated-data finding, not evidence of absence of effect). However, Open Targets has
+49 OTHER GWAS Catalog/FinnGen/UK Biobank credible sets whose lead/tag variant is exactly
+rs3757323 (6:151,880,872) or in tight LD. Across essentially all 49, <strong>ESR1 is the top
+L2G-predicted gene</strong> (scores ~0.63-0.83), far above neighboring genes CCDC170 (~0.06-0.08),
+SYNE1 (~0.05-0.07), DCPH1 (~0.05-0.06), RMND1 (~0.05) — strong gene-specific (not just
+locus-level) statistical evidence that ESR1 is the L2G-favored effector transcript at this SNP
+across many phenotypes. Notable traits with a credible set at this SNP and ESR1 as top L2G
+gene: smoking initiation (L2G 0.81-0.83), chronic airway obstruction/PheCode 496 (L2G 0.828),
+peak expiratory flow UKB field 3064 (L2G 0.832), educational attainment (multiple GWAS, L2G
+0.82-0.83), depression/MDD/anxiety/PTSD/mood disorders/suicidality (L2G 0.62-0.83), age at
+first birth/first sexual intercourse (L2G 0.83-0.99), standing height, pain phenotypes, erectile
+dysfunction, GERD.</li>
+<li><strong>Colocalization (COLOC_PIP_ECAVIAR, H4 = shared-causal-variant posterior):</strong> the &quot;chronic
+airway obstruction&quot; credible set (GCST90476027) colocalizes with smoking initiation
+(GCST90243968) at <strong>H4=0.986</strong> (very strong), and similarly strongly (H4 0.84-0.99) with
+depression, MDD, anxiety, PTSD, mood disorders, suicidality, educational attainment, and
+reproductive-timing traits. It colocalizes more ambiguously with peak expiratory flow
+(GCST90691841, H4=0.72, H3=0.28) and asthma (FinnGen, H4=0.65-0.84). Separately, the peak-
+expiratory-flow credible set colocalizes with smoking initiation at H4=0.56 (H3=0.44, more
+ambiguous).</li>
+<li><strong>Caveat (see audit trail):</strong> the red-team-skeptic notes that an H4 near 1 between &quot;chronic
+airway obstruction&quot; and &quot;smoking initiation&quot; is evidence FOR smoking-mediation, not for
+lung-autonomous ESR1 biology, and that this specific smoking-initiation/6q25 association could
+not be corroborated in the primary GSCAN discovery paper (Liu et al. 2019) — see audit file for
+full reasoning.</li>
+</ul>
+<p>Other candidate genes: none queried in comparable depth — ESR1 is the sole candidate gene listed
+by the internal pipeline (nearest/FLAMES/PoPS all ESR1; MAGMA/ABC NA), and all 11 credible-set
+variants are intronic within ESR1.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>ESR1 — confidence: LOW.</strong></p>
+<p>ESR1 is the correct gene to prioritize at this locus in the narrow sense that it is the only
+protein-coding gene physically present in the window and every method that returned a result
+(nearest gene, FLAMES, PoPS) converges on it; there is no plausible competing gene to weigh
+against it here (unlike the broader, telomeric 6q25.1 breast-cancer peak, where CCDC170 has been
+proposed as an alternative effector — CCDC170 lies entirely outside this specific window, per
+direct Ensembl query, so that alternative-gene concern does not transfer cleanly to this locus).
+Genetic constraint data (LoF oe=0.296) is consistent with ESR1 being a plausible dosage-sensitive
+disease gene in general.</p>
+<p>However, confidence in a <em>lung-autonomous COPD mechanism</em> for ESR1 at this locus must be rated
+LOW, not higher, for reasons documented in the evidence table and audit trail: (1) the three
+largest, best-powered, most directly relevant primary GWAS (Wain 2017, Shrine 2019 lung-function
+GWAS; Liu et al. 2019 GSCAN smoking-initiation GWAS) were checked by the citation-verifier and
+confirmed to NOT name this locus/ESR1 among their genome-wide-significant loci; (2) the one direct
+gene-specific human genetic-association finding (Obeidat et al. 2011) is a nominal,
+smoking-subgroup-restricted, likely underpowered signal, not a robust genome-wide-significant
+association; (3) the Open Targets L2G/colocalization pattern — while showing decisively that ESR1
+(not a neighbor) is the effector transcript at this SNP across dozens of other GWAS traits — is,
+per the red-team-skeptic, more consistent with a smoking-behavior/neuropsychiatric-pleiotropy hub
+(near-1 colocalization with smoking initiation, depression, anxiety, PTSD, educational attainment,
+reproductive-timing traits) than with a lung-restricted signal, and this smoking-initiation
+colocalization could not be independently corroborated in the primary GSCAN paper; (4) most of the
+mechanistic immune literature relevant to inflammatory programs (Th17, M2 macrophage,
+neutrophilic) is drawn from asthma or particulate/ozone-exposure models, not COPD or
+cigarette-smoke models directly, and is explicitly extrapolated by hedged review language rather
+than demonstrated in COPD; and (5) one immune finding (Oh et al. 2021) shows the opposite direction
+from a simple &quot;ERα drives T-cell inflammation&quot; model in a lung-tumor context, which further
+complicates a clean mechanistic story.</p>
+<p>The two citations that most directly support a genuine lung-autonomous, smoke-conditional
+mechanism — Tam et al. 2016 and Sathish et al. 2015, both cigarette-smoke mouse/cell models
+showing sex-dimorphic, ERα-dependent airway remodeling and airway-smooth-muscle dysfunction — are
+real and hold up under critique, and they are consistent with prior #1's framing that pulmonary
+biology can be conditional on (rather than independent of, or purely upstream of) smoking
+exposure. This is the most defensible version of a &quot;lung biology&quot; story for this locus: not that
+ESR1 acts on COPD risk independently of smoking, but that ERα signaling modulates the pulmonary
+response to cigarette smoke once smoking has occurred, while a separate (or overlapping) part of
+the same signal's pleiotropy plausibly acts through smoking-initiation/behavioral pathways
+upstream of lung exposure altogether.</p>
+<p>There is no runner-up gene to name (ESR1 is the only candidate at this locus), so this is not a
+tie between genes needing resolution — the uncertainty here is entirely about <em>mechanism</em>
+(smoking-behavior-mediated vs. smoke-conditional-lung-autonomous vs. weak/winner's-curse signal),
+not about <em>which gene</em>. What would resolve this: (a) direct confirmation of whether this exact
+locus/SNP appears in the internal COPD GWAS's own smoking-adjusted or smoking-stratified analyses,
+if available; (b) a look-up of whether rs3757323 or its proxies appear in a more recent
+(post-2019) GSCAN/smoking-initiation GWAS release, to resolve the unverified Open-Targets-derived
+smoking-initiation colocalization; (c) direct COPD-model (not asthma/particulate) functional
+follow-up of ERα in airway epithelium/macrophages under chronic cigarette-smoke exposure. Given
+the weak/negative direct GWAS evidence and the unresolved smoking-mediation question, LOW
+confidence is the appropriate rating for the study team to weigh; this is a plausible, biologically
+motivated pick by elimination (sole gene in window) rather than a strongly evidenced causal-gene
+call.</p>
+
+</body>
+</html>

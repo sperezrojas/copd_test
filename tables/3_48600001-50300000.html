@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>3_48600001-50300000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="evidence-table-locus-348600001-50300000-nearest-gene-bsn">Evidence table: locus 3:48,600,001-50,300,000 (nearest gene BSN)</h1>
+<p>Lead variant: rs1873625 (3:49,629,531, intronic in BSN, PIP=0.145). Candidate genes from
+internal pipeline: nearest/MAGMA = BSN; PoPS = DAG1; ABC = GPX1. Credible set additionally
+spans MST1 (missense rs3197999, PIP=0.054), APEH, RNF123, RHOA, NICN1, AMT, BSN-DT, and one
+intergenic variant. Full locus detail: <code>loci/3_48600001-50300000.md</code>.</p>
+<p>All rows below carry verdict VERIFIED from citation-verifier (existence, non-retraction,
+and claim-correspondence confirmed against abstracts/full text on 2026-09-11) unless noted.
+The &quot;Skeptic verdict&quot; column reflects the red-team-skeptic's per-gene overall judgment
+(WEAKENED / CONTESTED / SUPPORTED), not a per-citation verdict — see
+<code>audits/3_48600001-50300000_audit.md</code> for the skeptic's full per-gene reasoning.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BSN</td>
+<td>Statistical genetics (immune)</td>
+<td>BSN synonymous variant rs9858542 (in this credible set) independently associated with Crohn's disease and ulcerative colitis susceptibility in Italian cohorts; same source paper also supports the MST1 signal — LD-independence between the two hits was not established (see skeptic note)</td>
+<td>Latiano et al. 2010, PMID 20024904 / DOI 10.1002/ibd.21176</td>
+<td>WEAKENED — possible double-count of one IBD haplotype across BSN and MST1</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>BSN</td>
+<td>Statistical genetics (context)</td>
+<td>Largest multi-ancestry lung-function/COPD GWAS (1,020 signals/559 genes), explicitly modeling smoking-group heterogeneity; likely source-family for this locus's credible set</td>
+<td>Shrine et al. 2023, PMID 36914875 / DOI 10.1038/s41588-023-01314-0</td>
+<td>WEAKENED — background reference, does not itself resolve BSN vs. neighbors at this locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>BSN</td>
+<td>Structural (neuronal, not pulmonary)</td>
+<td>BSN mutations disrupt astrocyte lipid metabolism, causing neuronal hyperexcitability/epilepsy with secondary CNS (not lung) cytokine elevation</td>
+<td>Chen et al. 2025, PMID 40962686 / DOI 10.1016/j.neurot.2025.e00740</td>
+<td>WEAKENED — confirms BSN biology is neuronal, not pulmonary</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>BSN</td>
+<td>Structural (neuronal)</td>
+<td>BSN is a novel candidate epilepsy gene (ClinGen-framework evidence)</td>
+<td>Ye et al. 2022, PMID 36600631 / DOI 10.1136/jmg-2022-108865</td>
+<td>WEAKENED — reinforces neuronal, not pulmonary, disease biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>BSN</td>
+<td>Structural (neuronal)</td>
+<td>BSN among candidate genes for Landau-Kleffner syndrome (epileptic neurodevelopmental disorder)</td>
+<td>Conroy et al. 2014, PMID 24828792 / DOI 10.1111/epi.12645</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>BSN</td>
+<td>Structural (neuronal)</td>
+<td>Bassoon-knockout mice are a genetic epilepsy model with striatal synaptic plasticity abnormalities</td>
+<td>Ghiglieri et al. 2010, PMID 20200504 / DOI 10.1038/npp.2010.23</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MST1</td>
+<td>Statistical genetics / immune</td>
+<td>Fine-mapping of 3p21-22 IBD linkage region identifies rs3197999 (R689C, this credible set's missense variant) as the coding variant driving a replicated Crohn's disease and ulcerative colitis association</td>
+<td>Goyette et al. 2008, PMID 19079170 / DOI 10.1038/mi.2007.15</td>
+<td>WEAKENED — strong immune-genetics signal, but entirely in gut/IBD tissue, never tested in lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MST1</td>
+<td>Statistical genetics</td>
+<td>rs3197999 is a cis-pQTL for serum MST1 protein level in IBD patients, linking the credible-set missense variant to altered circulating protein</td>
+<td>Di Narzo et al. 2017, PMID 28129359 / DOI 10.1371/journal.pgen.1006565</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MST1</td>
+<td>Statistical genetics / immune</td>
+<td>rs3197999 genotype associates with height Z-score and CRP levels at diagnosis in pediatric IBD</td>
+<td>Brylak et al. 2024, PMID 39202524 / DOI 10.3390/medicina60081243</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MST1</td>
+<td>Immune (functional)</td>
+<td>rs3197999 (R689C) is a gain-of-function allele increasing MSP-induced macrophage chemotaxis/proliferation (THP-1 cells)</td>
+<td>Häuser et al. 2012, PMID 22237417 / DOI 10.1038/gene.2011.88</td>
+<td>WEAKENED — mechanistic but gut/macrophage-line context, not lung-tissue-tested</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MST1</td>
+<td>Immune (review)</td>
+<td>MSP-RON signaling broadly dampens innate immune/macrophage pro-inflammatory activation; implicated in chronic inflammatory/autoimmune disease</td>
+<td>Huang et al. 2020, PMID 33117355 / DOI 10.3389/fimmu.2020.569082</td>
+<td>WEAKENED — generic pathway review, not lung-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MST1</td>
+<td>Immune</td>
+<td>MSP-RON signaling suppresses macrophage IL-12/IL-15/IL-18 production (Th1-polarizing arm)</td>
+<td>Morrison et al. 2004, PMID 14734766 / DOI 10.4049/jimmunol.172.3.1825</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MST1</td>
+<td>Immune</td>
+<td>MSP-RON signaling promotes complement-receptor-3-mediated macrophage phagocytosis</td>
+<td>Lutz &amp; Correll 2003, PMID 12773513 / DOI 10.1189/jlb.0602319</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MST1</td>
+<td>Immune (CNS autoimmune model, non-lung)</td>
+<td>Loss of RON signaling exacerbates pro-inflammatory (TNF-α, MMP-12) tissue damage in an EAE (multiple sclerosis) model</td>
+<td>Tsutsui et al. 2005, PMID 15929040 / DOI 10.1002/ana.20502</td>
+<td>WEAKENED — cross-organ generalizability only, not lung data</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MST1</td>
+<td>General biology (hepatic, non-lung)</td>
+<td>Hepatic MSP expression is transcriptionally induced by alcohol via ERRγ</td>
+<td>Jung et al. 2024, PMID 38237793 / DOI 10.1016/j.cellsig.2024.111059</td>
+<td>WEAKENED — general MST1 biology only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DAG1</td>
+<td>Structural (respiratory muscle, not airway/alveolar)</td>
+<td>Congenital muscular dystrophies/dystroglycanopathies frequently complicated by respiratory insufficiency via respiratory muscle weakness</td>
+<td>Nascimento et al. 2026, PMID 42659544</td>
+<td>WEAKENED — mechanism mismatch with classic COPD airflow obstruction</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DAG1</td>
+<td>Structural (respiratory muscle)</td>
+<td>Dystroglycanopathy patients show phenotypes from muscle-eye-brain disease to limb-girdle dystrophy; one patient died of respiratory failure</td>
+<td>Luo et al. 2025, PMID 41726576 / DOI 10.1002/ped4.70029</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DAG1</td>
+<td>Structural (respiratory muscle)</td>
+<td>Fukuyama congenital muscular dystrophy causes death before age 20, predominantly via respiratory failure and cardiomyopathy</td>
+<td>Ishigaki &amp; Taniguchi-Ikeda 2025, PMID 40914050 / DOI 10.1016/j.braindev.2025.104437</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DAG1</td>
+<td>Structural (muscle, review)</td>
+<td>General review of satellite-cell dysfunction across neuromuscular disorders including dystroglycanopathies</td>
+<td>Ganassi &amp; Zammit 2022, PMID 35302338 / DOI 10.4081/ejtm.2022.10064</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DAG1</td>
+<td>Structural (airway, asthma/Th2 context — surfaced by skeptic)</td>
+<td>β-dystroglycan expression increased in airway smooth muscle in allergic asthma, correlating with eosinophil counts — airway-tissue biology, but Th2/eosinophilic asthma context, not COPD/neutrophilic/smoke-response context</td>
+<td>Shareef et al. 2021, PMID 33566255 / DOI 10.1007/s10753-020-01401-y</td>
+<td>WEAKENED — softens &quot;no lung biology&quot; claim slightly but still a mechanistic mismatch with COPD specifically</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>DAG1</td>
+<td>Structural (airway epithelial repair — surfaced by skeptic)</td>
+<td>α-dystroglycan mediates airway epithelial cell migration/wound repair via laminin binding</td>
+<td>White et al. 2001, PMID 11159052 / DOI 10.1165/ajrcmb.24.2.3993</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GPX1</td>
+<td>Structural/immune (review)</td>
+<td>GPX1 is a central antioxidant defense against cigarette-smoke-derived ROS; candidate COPD therapeutic target</td>
+<td>Vlahos &amp; Bozinovski 2013, PMID 23849338 / DOI 10.1179/1351000213Y.0000000053</td>
+<td>WEAKENED — strong mechanism, but no credible-set variant hits GPX1 directly</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GPX1</td>
+<td>Structural/immune (in vivo, mouse)</td>
+<td>GPX1-knockout mice show exaggerated smoke-induced emphysema; GPX1-transgenic mice protected from smoke-induced airway inflammation/alveolar destruction</td>
+<td>Geraghty et al. 2013, PMID 23590304 / DOI 10.1165/rcmb.2013-0026OC</td>
+<td>WEAKENED — most disease-specific direct evidence at this locus, but weak genetic linkage to this exact GWAS signal (ABC-only, no PIP)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GPX1</td>
+<td>Structural (mouse + human tissue)</td>
+<td>GPX1 expression reduced in COPD-donor bronchial epithelium; GPX1 loss enhances smoke-induced ER stress/UPR in mice</td>
+<td>Geraghty et al. 2016, PMID 28070146 / DOI 10.1155/2016/9461289</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>GPX1</td>
+<td>Structural (epithelial/EMT)</td>
+<td>Cigarette-smoke-induced UCHL1 increases GPX1 expression in bronchial epithelial cells, modulating smoke-induced EMT</td>
+<td>Yang et al. 2025, PMID 40000498 / DOI 10.1007/s00408-025-00790-x</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APEH</td>
+<td>Structural (oxidative stress, brain not lung)</td>
+<td>APEH activity inhibited by lipid peroxidation products; e-cigarette vapor exposure decreases APEH activity in mouse brain</td>
+<td>Tyler et al. 2021, PMID 34508712 / DOI 10.1016/j.cbi.2021.109639</td>
+<td>SUPPORTED (as &quot;thin/no evidence&quot;) — not independently re-searched by skeptic; tissue mismatch (brain, not lung)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>APEH</td>
+<td>Negative/tangential</td>
+<td>APEH activity evaluated as PD biomarker in peripheral blood; no COPD/lung relevance found</td>
+<td>Di Costanzo et al. 2025, PMID 41436906 / DOI 10.1007/s12035-025-05624-8</td>
+<td>SUPPORTED (as &quot;thin/no evidence&quot;)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RNF123</td>
+<td>Statistical genetics / immune (gut, not lung)</td>
+<td>Crohn's-disease-associated RNF123 coding SNP (R854H) impairs NLRP3-inflammasome restraint via NEK7 ubiquitination, aggravating colitis</td>
+<td>Liu et al. 2026, PMID 41719337 / DOI 10.1073/pnas.2518759123</td>
+<td>WEAKENED — genuine immune-genetic mechanism, gut only, not lung-tested</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RNF123</td>
+<td>General biology (cardiac, not lung)</td>
+<td>RNF123 mediates pathological cardiac hypertrophy via PRDX1 ubiquitination</td>
+<td>Wang et al. 2026, PMID 42106994 / DOI 10.1111/apha.70244</td>
+<td>WEAKENED — demonstrates pleiotropy, not lung relevance</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RNF123</td>
+<td>General biology (retinal, not lung)</td>
+<td>RNF123 affects Müller cell glycolysis in diabetic retinopathy</td>
+<td>Luo et al. 2025, PMID 41094513 / DOI 10.1186/s12967-025-07129-3</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RNF123</td>
+<td>General biology (wound healing, not lung-specific)</td>
+<td>RNF123 lactylation regulates NF-κB p105→p50 processing in wound healing</td>
+<td>He et al. 2026, PMID 41576329 / DOI 10.1021/acsami.5c21101</td>
+<td>WEAKENED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RHOA</td>
+<td>Structural/immune (macrophage, mouse)</td>
+<td>Cigarette smoke activates RhoA in alveolar macrophages via ER stress, impairing efferocytosis</td>
+<td>Ito et al. 2020, PMID 32724133 / DOI 10.1038/s41598-020-69610-x</td>
+<td>WEAKENED, bordering CONTESTED — pathway-level, not locus-specific; no RHOA genetic variation studied</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RHOA</td>
+<td>Structural (airway smooth muscle, incl. human data)</td>
+<td>Hypercapnia activates RhoA-dependent airway smooth muscle contraction; hypercapnic COPD patients had higher airway resistance, improved after correcting hypercapnia</td>
+<td>Shigemura et al. 2018, PMID 30185650 / DOI 10.1126/scitranslmed.aat1662</td>
+<td>WEAKENED, bordering CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RHOA</td>
+<td>Structural (respiratory muscle, mouse)</td>
+<td>RhoA/ROCK signaling upregulated in COPD-mouse diaphragms, driving atrophy; exercise attenuates via RhoA/ROCK inhibition</td>
+<td>Li et al. 2024, PMID 39005647 / DOI 10.2147/COPD.S460182</td>
+<td>WEAKENED, bordering CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RHOA</td>
+<td>Structural/immune (macrophage/fibroblast, mouse/cell)</td>
+<td>Smoke-extract exposure upregulates RhoA/ROCK2 in macrophages/fibroblasts, driving cytokine release and collagen production</td>
+<td>Shen et al. 2022, PMID 36275894 / DOI 10.1155/2022/7056283</td>
+<td>WEAKENED, bordering CONTESTED</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>RHOA</td>
+<td>Structural (cross-locus pathway reference, not this gene's own variant)</td>
+<td>FAM13A (an independent, different-locus COPD GWAS gene) regulates RhoA activity/EMT in airway epithelium</td>
+<td>Corvol et al. 2018, PMID 29239766 / DOI 10.1016/j.jcf.2017.11.003</td>
+<td>CONTESTED as support for RHOA's own candidacy — a non-sequitur; shows RhoA is downstream of a different gene, says nothing about this locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>NICN1</td>
+<td>General gene characterization only</td>
+<td>NICN1 is a nuclear-localized, mammalian-specific protein of unknown function; weakly expressed in leukocytes/spleen/intestine relative to brain/testis/liver/kidney</td>
+<td>Backofen et al. 2002, PMID 12392556 / DOI 10.1046/j.1432-1033.2002.03232.x</td>
+<td>SUPPORTED (as &quot;no evidence found,&quot; consistent with lowest PIP/L2G at locus)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>AMT</td>
+<td>General gene characterization only</td>
+<td>AMT is the glycine-cleavage-system T-protein (nonketotic hyperglycinemia gene); NICN1 lies immediately upstream and may share/compete for regulatory sequence</td>
+<td>Backofen &amp; Leeb 2002, PMID 12487019 / DOI 10.1080/1042517021000021572</td>
+<td>SUPPORTED (as &quot;no evidence found&quot;)</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<p>Excluded citation: Korytina et al. 2009 (PMID 19705749) was surfaced by the red-team-skeptic
+as a possible GPX1-COPD association study but received verdict <strong>CLAIM_MISMATCH</strong> from
+citation-verifier (the paper's own conclusion credits GSTP1/CAT/NQO1/SOD3, not GPX1, with
+the COPD association) — excluded from this table; see audit appendix.</p>
+<h2 id="gwas-catalog-cross-trait-associations-structured-database-lookup-not-verified-literature--context-only">GWAS Catalog cross-trait associations (structured database lookup, NOT verified literature — context only)</h2>
+<p>During research, the researcher subagent looked up individual credible-set variants against
+the EBI GWAS Catalog REST API via WebFetch. This is a <strong>structured database lookup, like the
+Open Targets summary below — it did NOT go through citation-verifier or red-team-skeptic</strong>
+(the skeptic explicitly flagged that citing educational-attainment/cognitive-trait hits as
+evidence of a specific smoking-mediated mechanism is likely overclaiming, since these traits
+have near-universal polygenic overlap across the genome). Reported for transparency, not as
+proof of mechanism:</p>
+<ul>
+<li>rs1873625 (BSN, lead variant): COPD, Self-Reported Educational Attainment, Mathematical Ability, BMI.</li>
+<li>rs34762726 (BSN missense, PIP=0.025): Smoking Cessation (p=2e-18), blood protein QTLs, back pain.</li>
+<li>rs9858213 (RNF123, PIP=0.018): Self-Reported Educational Attainment.</li>
+<li>rs1987628 (RHOA, PIP=0.002): Intelligence.</li>
+<li>rs3197999 (MST1 missense, PIP=0.054): Crohn's disease, primary sclerosing cholangitis, ulcerative colitis only — no behavioral/smoking trait found.</li>
+</ul>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — NOT a verified literature citation)</h2>
+<p>Disease queried: chronic obstructive pulmonary disease (MONDO_0005002). Method: Open Targets
+<code>target.evidences(efoIds:[&quot;MONDO_0005002&quot;])</code>, datasourceId <code>gwas_credible_sets</code> (an L2G-style
+score per contributing credible set/study for this target-disease pair — the closest analog
+to L2G exposed by this schema version). This did not go through citation-verifier or
+red-team-skeptic.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>Max L2G-style score (COPD)</th>
+<th>gnomAD oe_lof (constraint)</th>
+<th>gnomAD oe_mis</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MST1</td>
+<td>0.608 (highest at locus; 4 evidence rows + 1 europepmc row)</td>
+<td>0.786 (tolerant)</td>
+<td>0.868</td>
+<td>Highest statistical score despite LOF-tolerance</td>
+</tr>
+<tr>
+<td>DAG1</td>
+<td>0.270</td>
+<td>0.165 (strongly constrained)</td>
+<td>0.801</td>
+<td></td>
+</tr>
+<tr>
+<td>RNF123</td>
+<td>0.182</td>
+<td>0.506 (moderate)</td>
+<td>0.800</td>
+<td></td>
+</tr>
+<tr>
+<td>APEH</td>
+<td>0.171</td>
+<td>0.718 (tolerant)</td>
+<td>0.896</td>
+<td></td>
+</tr>
+<tr>
+<td>BSN</td>
+<td>0.131</td>
+<td>0.217 (strongly constrained)</td>
+<td>0.874</td>
+<td>Nearest/MAGMA gene ranks 5th by L2G</td>
+</tr>
+<tr>
+<td>GPX1</td>
+<td>0.108</td>
+<td>0.793 (tolerant, wide CI)</td>
+<td>0.978</td>
+<td>No credible-set variant hits GPX1 directly (ABC only)</td>
+</tr>
+<tr>
+<td>RHOA</td>
+<td>0.081</td>
+<td>0.168 (strongly constrained)</td>
+<td>0.219 (most missense-constrained gene at locus)</td>
+<td></td>
+</tr>
+<tr>
+<td>AMT</td>
+<td>0.076</td>
+<td>0.572</td>
+<td>0.885</td>
+<td></td>
+</tr>
+<tr>
+<td>NICN1</td>
+<td>0.056 (only 1 evidence row)</td>
+<td>0.681</td>
+<td>0.837</td>
+<td>Lowest at locus</td>
+</tr>
+</tbody>
+</table>
+<p>No colocalization-specific datasource rows were returned for any gene at this locus; no data
+for BSN-DT (non-coding transcript, not queried).</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>MST1 — confidence LOW.</strong></p>
+<p>This is a genuinely close call, and the call is being made under material uncertainty that
+the evidence available does not resolve. Reasoning:</p>
+<ul>
+<li>By the structured genetics, MST1 is the strongest candidate: it carries the credible set's
+missense variant (rs3197999, R689C, PIP=0.054) with a replicated, functionally validated
+gain-of-function mechanism (Häuser 2012, PMID 22237417) and a cis-pQTL effect on circulating
+MST1 protein (Di Narzo 2017, PMID 28129359), and it has by far the highest Open Targets
+L2G-style score at this locus (0.608 vs. next-highest DAG1 at 0.270; see Open Targets
+summary above). Unlike BSN's own credible-set variants, MST1's missense variant shows no
+behavioral/smoking-trait association in the GWAS Catalog lookup, which somewhat reduces
+concern that its contribution to the COPD signal is confounded by smoking-behavior genetics
+(see GWAS Catalog subsection above).</li>
+<li>However, the red-team-skeptic's critique (<code>audits/3_48600001-50300000_audit.md</code>) correctly
+identifies that <strong>every piece of MST1's mechanistic evidence is from IBD/PSC/gut tissue or
+a CNS-autoimmune (EAE) model — none of it has ever been tested in lung or COPD tissue</strong>,
+and independent PubMed checks for &quot;MST1/RON + COPD&quot; returned zero results. The absence of a
+smoking-trait GWAS Catalog hit for rs3197999 is being used as supporting evidence, but this
+is absence-of-evidence reasoning, not a positive finding.</li>
+<li>The skeptic also raised a serious, unresolved structural concern: <strong>Latiano et al. 2010
+(PMID 20024904) is the source citation for BOTH the BSN (rs9858542) and MST1 (rs3197999)
+IBD associations</strong>, and this pipeline's literature search did not establish whether these
+two variants are LD-independent within that paper. If they are not, the &quot;three independent
+immune-disease genes at this locus&quot; framing (BSN, MST1, RNF123 all IBD-associated) may
+really be one shared IBD-risk haplotype being counted under multiple gene names — a
+long-standing ambiguity in the 3p21.31/IBD-genetics literature that this review did not
+resolve for the COPD credible set either.</li>
+<li><strong>Runner-up: BSN</strong> (nearest gene, MAGMA-prioritized, carries the great majority of the
+credible set's PIP mass including the lead variant). BSN's own established Mendelian
+disease biology is exclusively neuronal (epilepsy/Landau-Kleffner; Chen 2025, Ye 2022,
+Conroy 2014, Ghiglieri 2010), it has no lung structural/immune literature, and its own
+credible-set variants (lead SNP and a missense variant) show associations with educational
+attainment and, notably, smoking cessation (p=2e-18) — a real, if not fully verified, red
+flag for a neurobehavioral/smoking-confounded mechanism rather than direct pulmonary
+biology, per prior #1. The skeptic judged the &quot;smoking-mediated&quot; framing partly overclaimed
+(educational-attainment pleiotropy is weak, non-specific evidence), but did not dismiss it
+outright, and BSN's genomic size alone (spanning most of the credible set) is a plausible
+alternative, non-causal explanation for its prominence.</li>
+<li><strong>Second runner-up: RNF123</strong>, which has its own independent, functionally-validated
+immune-disease mechanism (Crohn's-associated NLRP3-inflammasome restraint, PMID 41719337) —
+again gut-tissue-only evidence, but mechanistically distinct from both BSN and MST1, and a
+third candidate for the same &quot;shared immune-regulatory hub&quot; hypothesis the skeptic raised.</li>
+<li>GPX1 and RHOA have the most COPD/lung-mechanistically-direct literature of any genes at
+this locus (GPX1: in vivo smoke-induced emphysema in knockout/transgenic mice; RHOA:
+macrophage efferocytosis, airway smooth muscle contractility with human patient data,
+diaphragm atrophy) but both have materially weaker direct statistical fine-mapping support
+(GPX1 has no credible-set variant at all — ABC-regulatory-link only; RHOA's variants all
+have PIP&lt;0.008 and the second-lowest L2G score at the locus). The skeptic explicitly judged
+RHOA's inclusion among &quot;the most compelling&quot; genes as <strong>not supportable</strong> given how generic
+and pathway-level (rather than locus-specific) its cited evidence is, bordering on
+CONTESTED. DAG1 (PoPS-prioritized, second-highest L2G) has no COPD/lung-function literature
+and its strongest disease link (muscular dystrophy) operates through a different mechanism
+(respiratory muscle weakness) than classic COPD airflow obstruction; two newly-verified
+airway-tissue dystroglycan papers (Shareef 2021, White 2001) modestly soften but do not
+resolve this mismatch, since they describe Th2/asthma and epithelial-repair contexts, not
+COPD/smoke-response biology.</li>
+</ul>
+<p><strong>What would resolve this tie:</strong> COPD-specific (not IBD-borrowed) lung eQTL/pQTL
+colocalization data for MST1, BSN, and RNF123 individually; a conditional/joint fine-mapping
+analysis testing whether the BSN, MST1, and RNF123 credible-set signals are statistically
+independent of each other and of the shared IBD-risk haplotype identified in Latiano et al.
+2010; direct functional validation of rs34762726's reported smoking-cessation association
+and its independence from the IBD-associated haplotype; and single-cell/bulk lung-tissue
+expression or perturbation data for MST1/MST1R (RON) and RNF123 in COPD-relevant cell types
+(macrophage, airway epithelium), which do not currently exist in the literature reviewed
+here. Given all of the above, this pick should be treated as the best-supported nomination
+for further investigation, not a settled causal-gene call — confidence is explicitly LOW,
+and the study team should weigh the BSN and RNF123 alternatives seriously.</p>
+
+</body>
+</html>

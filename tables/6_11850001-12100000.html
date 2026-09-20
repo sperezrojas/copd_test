@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>6_11850001-12100000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-locus-evidence-table--611850001-12100000-nearest-gene-hivep1">COPD locus evidence table — 6:11,850,001-12,100,000 (nearest gene HIVEP1)</h1>
+<p><strong>Lead variant:</strong> rs55968946 (PIP=0.144, intron_variant/non_coding_transcript_variant,
+6:11,927,765). No independent GWAS Catalog or PubMed entry was found for this variant
+(GWAS Catalog REST lookup returned HTTP 404; PubMed search for &quot;rs55968946&quot; returned zero
+results) — it has no literature outside this fine-mapping analysis itself.</p>
+<p><strong>Credible set:</strong> 127 variants (ABF fine-mapping), spanning 6:11,925,979-12,037,083. All
+127 credible-set variants are annotated intron_variant / downstream_gene_variant /
+non_coding_transcript_variant / intergenic_variant / upstream_gene_variant /
+non_coding_transcript_exon_variant, impact=MODIFIER — there is no missense, splice-donor,
+or splice-acceptor variant anywhere in the credible set. Per pipeline scope rules, no
+variant-by-variant literature search beyond the lead variant was performed; all other
+credible-set variants are rolled into the gene-level evidence below (several
+HIVEP1-intronic credible-set variants, e.g. rs9470768 at PIP=0.024, are represented in the
+HIVEP1 statistical-genetics evidence).</p>
+<p><strong>Candidate genes:</strong> HIVEP1 (nearest gene; PoPS-prioritized; ABC-prioritized), ADTRP
+(FLAMES-prioritized only; MAGMA did not prioritize either gene).</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HIVEP1</td>
+<td>Statistical genetics (VTE/PE, distinct variant rs169713)</td>
+<td>HIVEP1 rs169713C allele associated with increased venous thrombosis risk, OR=1.20, p=2.86e-9, in a large case-control GWAS follow-up</td>
+<td>PMID 20226436 / DOI 10.1016/j.ajhg.2010.02.011</td>
+<td>WEAKENED — gene-level statistical/positional case solid, but this is a different variant than the COPD credible set with unknown LD; do not treat as locus-concordant evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HIVEP1</td>
+<td>Statistical genetics (VTE, distinct variant)</td>
+<td>Haplotype analysis supports a role for HIVEP1 (with PROCR, STAB2) in venous thrombosis susceptibility</td>
+<td>PMID 21980494 / DOI 10.1371/journal.pone.0025581</td>
+<td>WEAKENED — same caveat as above (different variant, unknown LD to this locus)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HIVEP1</td>
+<td>Statistical genetics (fatal PE, distinct variant)</td>
+<td>rs169713 shows nominal association with fatal pulmonary embolism in a small subgroup (185 cases/375 controls)</td>
+<td>PMID 33128086 / DOI 10.1007/s00414-020-02441-7</td>
+<td>WEAKENED — nominal-only finding in a small subgroup; different variant than this locus</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HIVEP1</td>
+<td>Statistical genetics (VTE replication, distinct variant)</td>
+<td>rs169713 is one of five VTE risk-allele SNPs replicating the locus in a Thai cohort</td>
+<td>PMID 41440514 / DOI 10.3390/medsci13040282</td>
+<td>WEAKENED — replication of the VT signal, not the COPD signal</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HIVEP1</td>
+<td>Proteomics (VTE, distinct variant)</td>
+<td>Circulating HIVEP1 protein levels showed only a weak, non-replicated trend of association with VTE risk (contrast with the DNA-level GWAS signal)</td>
+<td>PMID 27742707 / DOI 10.1182/blood-2016-05-711846</td>
+<td>WEAKENED — explicitly a weak/non-replicated finding; underscores that even the VT/PE signal is not uniformly robust</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HIVEP1</td>
+<td>Somatic oncology (tangential)</td>
+<td>Somatic HIVEP1-ALK gene fusion reported as an oncogenic driver in one NSCLC case, alectinib-sensitive</td>
+<td>PMID 35693284 / DOI 10.21037/tlcr-22-288</td>
+<td>WEAKENED — somatic/oncologic finding, not germline COPD-relevant; included for completeness only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HIVEP1</td>
+<td>Immunology (non-lung: sepsis)</td>
+<td>HIVEP1 is upregulated in monocytes from sepsis patients/TLR-agonist-stimulated monocytes and negatively regulates NF-κB, inhibiting pro-inflammatory cytokine production (human, murine, zebrafish models)</td>
+<td>PMID 34804025 / DOI 10.3389/fimmu.2021.744358</td>
+<td>WEAKENED — mechanistically the most detailed immune paper, but tissue context is sepsis, not lung/COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HIVEP1</td>
+<td>Immunology (non-lung: NASH/liver)</td>
+<td>HIVEP1 drives Th17 cell differentiation/cytokine production via ODC1/polyamine metabolism; CD4-T-cell-specific knockout impairs Th17 differentiation and alleviates NASH in mice</td>
+<td>PMID 41124285 / DOI 10.1126/scitranslmed.adn1150</td>
+<td>WEAKENED — Th17/Tc17 is a COPD-relevant inflammatory program per biological priors, but this finding is in liver (NASH), not lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HIVEP1</td>
+<td>Immunology (non-lung: macrophage screen)</td>
+<td>Hivep1 identified as a transcription factor associated with M2 (alternatively activated) macrophage polarization dynamics in a CAGE transcriptomics screen</td>
+<td>PMID 26117544 / DOI 10.1093/nar/gkv646</td>
+<td>WEAKENED — not lung-tissue-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HIVEP1</td>
+<td>Immunology (non-lung: M.tb infection)</td>
+<td>Hivep1 linked to a transcriptionally induced macrophage enhancer in the response to Mycobacterium tuberculosis infection</td>
+<td>PMID 30669987 / DOI 10.1186/s12864-019-5450-6</td>
+<td>WEAKENED — not lung/COPD-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HIVEP1</td>
+<td>Immunology (non-lung: leukocyte/exercise)</td>
+<td>HIVEP1 strongly up-regulated by exercise specifically in LPS-stimulated (not unstimulated) whole-blood leukocyte cultures</td>
+<td>PMID 24513876 / DOI 10.1016/j.bbi.2013.10.023</td>
+<td>WEAKENED — general leukocyte biology, not lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>HIVEP1</td>
+<td>Immunology (non-lung: leukocyte/exercise, sex-specific)</td>
+<td>HIVEP1 shows sex-differential regulation in LPS-stimulated leukocyte cultures, part of a broader anti-inflammatory gene-regulation signature</td>
+<td>PMID 27832807 / DOI 10.1186/s12974-016-0758-5</td>
+<td>WEAKENED — general leukocyte biology, not lung</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADTRP</td>
+<td>Statistical genetics (CAD, distinct variant rs6903956)</td>
+<td>ADTRP promoter/UTR variants associate with early-onset coronary artery disease in Han Chinese and correlate with decreased ADTRP mRNA expression</td>
+<td>PMID 26375920 / DOI 10.1371/journal.pone.0137547</td>
+<td>WEAKENED — different variant than this locus's credible set; cardiometabolic, not pulmonary phenotype</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADTRP</td>
+<td>Statistical genetics (CAD, distinct variant)</td>
+<td>rs6903956 significantly associated with CAD in Singaporean Chinese, independent of plasma lipid levels</td>
+<td>PMID 23337689 / DOI 10.1016/j.clinbiochem.2013.01.004</td>
+<td>WEAKENED — same caveat</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADTRP</td>
+<td>Statistical genetics (negative finding, distinct variant)</td>
+<td>rs6903956 NOT associated with plasma Factor VIIc or fibrinogen levels after adjustment (including smoking status)</td>
+<td>PMID 28074087 / DOI 10.1186/s12959-016-0124-y</td>
+<td>WEAKENED — a negative finding; argues against a simple coagulation-pathway or smoking-mediated mechanism for the CAD signal</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADTRP</td>
+<td>Statistical genetics (hyperuricemia, distinct variant)</td>
+<td>rs6903956 independently associated with asymptomatic hyperuricemia susceptibility after adjustment for smoking and other CAD risk factors</td>
+<td>PMID 25928384 / DOI 10.1186/s12944-015-0026-1</td>
+<td>WEAKENED — cardiometabolic trait, not pulmonary</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADTRP</td>
+<td>Statistical genetics (epistasis, distinct variant)</td>
+<td>Gene-gene interaction identified between ADTRP rs6903956 and TMEM106B rs17465637 for CAD risk</td>
+<td>PMID 32237974 / DOI 10.1161/JAHA.119.014146</td>
+<td>WEAKENED — cardiometabolic, not pulmonary</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADTRP</td>
+<td>Structural biology (vascular, non-lung)</td>
+<td>Adtrp knockout in zebrafish/mice causes vascular malformations via negative regulation of Wnt signaling and downstream MMP-9 upregulation in endothelial/mast cells</td>
+<td>PMID 30571485 / DOI 10.1161/JAHA.118.010690</td>
+<td>WEAKENED — systemic vasculature, not lung parenchyma; MMP-9 is protease-antiprotease-relevant but demonstrated in a non-pulmonary vascular context</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADTRP</td>
+<td>Review (vascular/coagulation/lipid)</td>
+<td>Reviews ADTRP roles in vascular integrity (Wnt/MMP-9), coagulation (TFPI), and FAHFA lipid hydrolase activity</td>
+<td>PMID 33923232 / DOI 10.3390/ijms22094451</td>
+<td>WEAKENED — no pulmonary phenotype discussed</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADTRP</td>
+<td>Review (cardiometabolic)</td>
+<td>Comprehensive review of ADTRP in coagulation, inflammation, endothelial function, vascular integrity, FAHFA-hydrolase energy metabolism; disease associations limited to atherosclerosis, CAD, obesity, metabolic disorders — no mention of pulmonary phenotypes</td>
+<td>PMID 34797389 / DOI 10.1007/s00109-021-02160-5</td>
+<td>WEAKENED — review explicitly does not mention any pulmonary disease association</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADTRP</td>
+<td>Lung cell-line exposure (smoking-relevant, in vitro only)</td>
+<td>ADTRP is among genes modulated by garlic compound diallyl disulfide in cigarette-smoke-condensate-exposed Beas-2b human bronchial epithelial cells</td>
+<td>PMID 36758788 / DOI 10.1016/j.fct.2023.113656</td>
+<td>WEAKENED — an in vitro transcriptomic exposure-response effect, not a genetic association with COPD/lung function; the only lung-tissue (cell-line) data point for ADTRP</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>ADTRP</td>
+<td>Lipid metabolism (non-lung)</td>
+<td>ADTRP is a FAHFA hydrolase with tissue- and sex-specific effects on anti-inflammatory bioactive lipid levels (adipose, liver, plasma studied; no lung tissue examined)</td>
+<td>PMID 39097081 / DOI 10.1016/j.bbalip.2024.159543 (preprint: bioRxiv DOI 10.1101/2023.11.15.567158)</td>
+<td>WEAKENED — not studied in lung tissue</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — NOT a verified literature citation)</h2>
+<p>Queried via Open Targets Platform GraphQL API. Disease context: chronic obstructive
+pulmonary disease, MONDO_0005002. This section did not go through citation-verifier or
+red-team-skeptic — it is a structured database score, not a literature claim.</p>
+<table>
+<thead>
+<tr>
+<th>Gene</th>
+<th>Ensembl ID</th>
+<th>Genetic-association evidence score (gwas_credible_sets datasource, COPD)</th>
+<th>Colocalization detail</th>
+<th>Genetic constraint (gnomAD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HIVEP1</td>
+<td>ENSG00000095951</td>
+<td>0.657 (1 evidence record; underlying variant/study/beta/p-value fields null in this API response — record exists with a score but no exposed credible-set/coloc detail)</td>
+<td>Not resolvable via <code>Evidence</code> type as queried (no <code>studyLocusId</code>/<code>variant</code> populated)</td>
+<td>Strongly LoF-intolerant: LoF constraint score = 1.0 (max), oe = 0.167 (95% CI 0.122-0.231), 27 observed vs 161.5 expected LoF variants</td>
+</tr>
+<tr>
+<td>ADTRP</td>
+<td>ENSG00000111863</td>
+<td>0.083 (1 evidence record; same field-availability caveat as above)</td>
+<td>Not resolvable via <code>Evidence</code> type as queried</td>
+<td>LoF-tolerant: LoF constraint score = 0.0000146 (near zero), oe = 0.732 (95% CI 0.509-1.074), 19 observed vs 26 expected LoF variants</td>
+</tr>
+</tbody>
+</table>
+<p>Additional context: an unfiltered query of <code>disease(efoId: MONDO_0005002).associatedTargets</code>
+(overall harmonic association score across ALL Open Targets datatypes/datasources, not
+L2G-specific) returned SCNN1B, SCNN1A, CFTR, SCNN1G, NR3C1 as the top 5 of 6,323 total
+COPD-associated targets platform-wide — neither HIVEP1 nor ADTRP appear in that broader,
+non-locus-specific top 5; the datasource-specific <code>gwas_credible_sets</code> evidence score in the
+table above is the figure most relevant to this locus.</p>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>HIVEP1 — confidence LOW.</strong></p>
+<p>HIVEP1 has the stronger case on every structural/statistical-genetics axis available: it is
+the nearest gene to the lead variant, independently prioritized by both PoPS and ABC (versus
+ADTRP's single FLAMES-only prioritization), carries several credible-set intronic variants
+within its gene body (e.g. rs9470768, PIP=0.024), has a substantially higher Open Targets
+gwas_credible_sets evidence score (0.657 vs. 0.083), and is strongly LoF-intolerant in gnomAD
+(oe=0.167) — consistent with an essential, tightly-regulated transcriptional regulator, unlike
+the LoF-tolerant ADTRP (oe=0.732). ADTRP's gene body also sits ~43kb outside both the defined
+locus boundary and the entire 127-variant credible-set span, meaning no credible-set variant
+is physically near it — a substantial strike against it as the effector gene here, independent
+of any literature.</p>
+<p>However, per the red-team-skeptic's critique (preserved in full in the audit appendix), this
+confidence is capped at LOW rather than MODERATE/HIGH because: (1) no PubMed-indexed
+literature directly links HIVEP1 to COPD, emphysema, or spirometric traits (FEV1/FEV1-FVC) —
+prior #2's expected concordance is entirely absent for both candidates; (2) HIVEP1's
+well-replicated disease association (venous thromboembolism/pulmonary embolism, via rs169713)
+involves a different variant than this locus's credible set, with LD to the COPD signal not
+established in any paper found — this should be read as gene-level pleiotropy at best, not
+locus-level concordance; (3) HIVEP1's substantial immune/NF-κB mechanistic literature
+(sepsis monocytes, NASH-liver Th17, macrophage polarization/M.tb response, leukocyte/exercise
+studies) is real but entirely non-lung-tissue, so its relevance to COPD-specific inflammatory
+programs (per prior #3) is inferential, not demonstrated; and (4) whether the COPD signal at
+this locus is smoking-mediated (prior #1) is genuinely unresolved — the researcher's and
+skeptic's searches for a direct smoking-initiation/cessation GWAS hit for HIVEP1 were both
+left incomplete due to tool-budget exhaustion, not completed negative findings.</p>
+<p>Runner-up: ADTRP is weaker on essentially every axis (single-method prioritization, lowest
+L2G score, LoF-tolerant, physically outside the credible-set span, and its own best-established
+disease association — CAD via rs6903956, a different variant — is likewise cardiometabolic
+rather than pulmonary). It is not a close call between the two candidates on current
+statistical/positional grounds; the tie that remains open is not &quot;HIVEP1 vs. ADTRP&quot; but
+&quot;HIVEP1-via-fine-mapping vs. no literature-confirmed mechanism at all.&quot; What would resolve
+this: (a) an FEV1/FEV1-FVC or direct COPD PheWAS hit for either gene, (b) an LD check between
+rs169713/rs6903956 and this locus's credible set to determine whether the VT/CAD and COPD
+signals are the same or independent, and (c) a completed smoking-initiation/cessation GWAS
+lookup for HIVEP1 to rule in or out prior #1's smoking-mediation pathway. The study team
+should weigh HIVEP1 as the best-supported nomination for further functional/colocalization
+follow-up, not as a settled call.</p>
+
+</body>
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>1_117250001-117650000.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="copd-locus-evidence-table--1117250001-117650000-nearest-gene-man1a2">COPD locus evidence table — 1:117,250,001-117,650,000 (nearest gene MAN1A2)</h1>
+<p>Lead variant: rs1289960 (1:117,383,496, intronic, MAN1A2, PIP=0.070). Credible set contains
+~46 variants, overwhelmingly intronic/UTR MODIFIER-impact calls assigned to MAN1A2, plus a
+handful of intergenic variants, one higher-PIP variant in LINC01525 (rs907662, PIP=0.041),
+and a low-PIP tail in the pseudogene VPS25P1. No missense, splice-donor, or splice-acceptor
+variant appears anywhere in the credible set. Candidate genes evaluated: MAN1A2 (nearest
+gene, ABC-prioritized), PTGFRN (PoPS-prioritized), LINC01525, VPS25P1, and TENT5C (added by
+the researcher via region enumeration; not flagged by any prioritization method or credible
+set variant).</p>
+<p>Only citations verified as VERIFIED are included below. RETRACTED / NOT_FOUND /
+CLAIM_MISMATCH citations and CONTESTED/WEAKENED gene-level judgments are documented
+separately in <code>audits/1_117250001-117650000_audit.md</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAN1A2</td>
+<td>Locus structure</td>
+<td>Nearest gene to lead variant rs1289960; ABC-prioritized; harbors lead variant and vast majority of credible-set variants (all intronic/UTR, MODIFIER impact)</td>
+<td>Locus input file / internal pipeline (not a literature citation)</td>
+<td>WEAKENED (see audit: strong LD anchoring but no confirmed COPD/spirometry genetic evidence)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAN1A2</td>
+<td>Structural/developmental lung biology</td>
+<td>Homozygous Man1a2 deletion in mice causes lethal neonatal respiratory failure and decreased lung ciliation; whole-lung transcriptomics implicate abnormal protein-synthesis, UPR, hypoxic, and oxidative-stress pathway activation; gestational N-acetylcysteine partially rescues ciliation/survival</td>
+<td>Ningappa et al. 2021, Front Physiol, PMID 34366878, PMC8343402, DOI 10.3389/fphys.2021.658518</td>
+<td>WEAKENED — real and verified, but this is a homozygous-null neonatal developmental phenotype, not an adult COPD/emphysema model; credible-set variants here are regulatory/hypomorphic (MODIFIER intronic/UTR), not null alleles, so extrapolating knockout severity to common noncoding variant effect is a substantial leap</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAN1A2</td>
+<td>Structural lung-injury genetics (mouse)</td>
+<td>Man1a2 among genes with &quot;suggestive&quot; (sub-genome-wide-significant) SNP associations with phosgene-induced acute lung injury susceptibility in mice</td>
+<td>Leikauf et al. 2013, Am J Respir Cell Mol Biol, PMID 23590305, PMC3824050, DOI 10.1165/rcmb.2012-0337OC</td>
+<td>WEAKENED — modest (&quot;suggestive&quot;) evidence in an acute chemical-injury model, not COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAN1A2</td>
+<td>Immune/single-cell eQTL</td>
+<td>MAN1A2 expression in naive/central-memory CD4+ T cells shows a robust, colocalizing eQTL (PP.H4=0.96) causally associated with osteoarthritis risk in an MR study</td>
+<td>Zhou et al. 2026, Exp Gerontol, PMID 42520998, DOI 10.1016/j.exger.2026.113251</td>
+<td>WEAKENED — establishes MAN1A2 is a genetically-regulated eGene in a specific T-cell subset, but disease outcome studied is osteoarthritis, not COPD or any lung/immune phenotype</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAN1A2</td>
+<td>Proteomics/pleiotropy</td>
+<td>MAN1A2 protein levels show non-linear genetic association with venous thromboembolism risk (PWAS)</td>
+<td>Kong et al. 2025, Nat Commun, PMID 40664692, DOI 10.1038/s41467-025-61874-z</td>
+<td>WEAKENED — demonstrates pQTL control and pleiotropy, not lung/COPD relevance; supports &quot;promiscuous eQTL/pQTL hub&quot; alternative hypothesis over tissue-specific causal biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAN1A2</td>
+<td>Smoking-behavior TWAS methodology (context only)</td>
+<td>Multi-ancestry cerebral-cortex TWAS of GSCAN smoking-initiation/cessation/heaviness GWAS identified 719 genes associated with smoking traits (249 fine-mapped); MAN1A2's specific inclusion is UNCONFIRMED (not stated in abstract; supplementary table not checked)</td>
+<td>Tan et al. 2024, Mol Psychiatry, PMID 38816585, DOI 10.1038/s41380-024-02605-6</td>
+<td>WEAKENED — cite only as general smoking-TWAS methodology context, NOT as direct MAN1A2-smoking evidence; do not carry forward a &quot;MAN1A2 acts via smoking neurobiology&quot; claim on this citation's basis alone</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAN1A2</td>
+<td>Pleiotropy (paralog family)</td>
+<td>MAN1A1 (paralog, not MAN1A2 itself) promotes hepatocarcinogenesis via UPR activation</td>
+<td>Tu et al. 2017, Hepatology Communications, PMID 29404456, PMC5721452, DOI 10.1002/hep4.1032</td>
+<td>Not lung-relevant; cited only to establish alpha-1,2-mannosidase family / UPR mechanistic plausibility, correctly attributed to the paralog, not MAN1A2</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAN1A2</td>
+<td>Pleiotropy (unrelated traits, not lung-relevant)</td>
+<td>MAN1A2/circMAN1A2 implicated across cancer biology, gout biomarker, male-specific serum urate locus, bovine ovarian hyperplasia, cardiac autophagy/atrial fibrillation, and COVID-19 susceptibility (East Asian MR)</td>
+<td>Shang et al. 2026 (PMID 42348294); Guo et al. 2026 (PMID 42273075); Tan et al. 2026 (PMID 41873804); Cuellar et al. 2024 (PMID 38954257); Chen et al. 2025 (PMID 40581749); Tang et al. 2024 (PMID 39701775)</td>
+<td>Not lung-relevant individually; collectively support the alternative hypothesis that MAN1A2 is a broadly pleiotropic, multi-organ housekeeping/glycosylation gene recurrently picked up across unrelated GWAS/omics screens, rather than evidence of COPD-specific causal biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>MAN1A2 (variant-level)</td>
+<td>Lead variant literature</td>
+<td>rs1289960 has zero PubMed hits and zero GWAS Catalog hits — no variant-specific literature exists</td>
+<td>Independently confirmed by citation-verifier via PubMed E-utilities and GWAS Catalog query</td>
+<td>Confirmed negative finding; all interpretation of this variant is gene-level (MAN1A2 intronic), not variant-specific</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PTGFRN</td>
+<td>Locus structure</td>
+<td>PoPS-prioritized only; confirmed via Ensembl lookup to lie ~360-473 kb OUTSIDE the defined locus window and credible set entirely; not overlapped by any credible-set variant</td>
+<td>Ensembl REST region lookup (not a literature citation)</td>
+<td>WEAKENED — bordering on &quot;should not be retained as a candidate gene for this locus,&quot; since it fails the basic physical/credible-set overlap test before any biology is considered; case rests entirely on PoPS genome-wide network-similarity statistics</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PTGFRN</td>
+<td>Oncology/angiogenesis (not COPD-relevant)</td>
+<td>Truncated CD9P-1 (PTGFRN) inhibits tumor-induced angiogenesis and tumor growth in vivo, tested using (among others) a Calu-6 lung-cancer xenograft</td>
+<td>Colin et al. 2011, Br J Cancer, PMID 21863033, PMC3185932, DOI 10.1038/bjc.2011.303</td>
+<td>Not COPD-relevant; Calu-6 is a lung-derived cell line used only as an oncology tumor-angiogenesis model — flagged to prevent this being misread downstream as &quot;lung evidence&quot;</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PTGFRN</td>
+<td>Basic cell biology (not COPD-relevant)</td>
+<td>PTGFRN/CD9P-1 functions in tetraspanin-web protein complexes affecting CD81 regulation in Plasmodium yoelii hepatocyte infection, exosome sorting, and general tetraspanin-web architecture</td>
+<td>Charrin et al. 2009 (PMID 19762465); Abache et al. 2007 (PMID 17407154); Charrin et al. 2003 (PMID 12705892)</td>
+<td>Not COPD/lung-relevant; establishes general immune-adjacent cell-surface signaling biology only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PTGFRN</td>
+<td>Tool use (not disease biology)</td>
+<td>PTGFRN used as an extracellular-vesicle membrane-scaffold engineering tool for gene-editing cargo delivery</td>
+<td>Wei et al. 2026, Cells, PMID 41827839, PMC12984111, DOI 10.3390/cells15050405</td>
+<td>Not disease-relevant; engineering application only</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>PTGFRN</td>
+<td>Pleiotropy (unrelated trait)</td>
+<td>PTGFRN listed as one of several nearest-gene SNP annotations in a bidirectional MR analysis of type 2 diabetes and glioblastoma; no disease-specific mechanism for PTGFRN detailed</td>
+<td>Chen et al. 2024, Sci Rep, PMID 39020091, DOI 10.1038/s41598-024-67341-x</td>
+<td>Not COPD-relevant; no gene-specific mechanism established</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC01525</td>
+<td>Locus structure</td>
+<td>rs907662 (PIP=0.041, one of the higher-PIP variants in the credible set) assigned to this lncRNA</td>
+<td>Locus input file / internal pipeline fine-mapping (not a literature citation)</td>
+<td>WEAKENED — modest PIP, no independent supporting literature</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>LINC01525</td>
+<td>Oncology (not lung-relevant)</td>
+<td>LINC01525 identified as a novel TMPRSS2-ERG-family fusion partner in African-ancestry prostate cancer structural-variant analysis</td>
+<td>Gong et al. 2022, Genome Medicine, PMID 36045381, PMC9434886, DOI 10.1186/s13073-022-01096-w</td>
+<td>Not COPD/lung-relevant; only verified, substantive citation for this gene</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>VPS25P1</td>
+<td>Locus structure</td>
+<td>Only lowest-PIP tail credible-set variants (PIP&lt;0.015, all upstream_gene_variant) assigned to this processed pseudogene</td>
+<td>Locus input file / internal pipeline fine-mapping (not a literature citation)</td>
+<td>HOLDS as a non-candidate — zero PubMed hits, zero Open Targets data, no evidence basis to prioritize independently</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TENT5C</td>
+<td>Region enumeration (not prioritized)</td>
+<td>Protein-coding gene at far edge of locus window (~220 kb from lead variant); not flagged by any prioritization method or credible-set variant</td>
+<td>Ensembl REST region lookup (not a literature citation)</td>
+<td>HOLDS as a non-candidate — clean true negative, no lung/COPD connection attempted or found</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>TENT5C</td>
+<td>Molecular biology (not lung-relevant)</td>
+<td>FAM46C/TENT5C stabilizes mRNAs encoding ER-targeted secretory proteins (import/folding/N-glycosylation/secretion) via p62/FNDC3 interaction in plasma cells and multiple myeloma</td>
+<td>Fucci et al. 2020, Cell Reports, PMID 32966780, DOI 10.1016/j.celrep.2020.108162</td>
+<td>Not lung/COPD-relevant; no attempt made to force a connection</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<ul>
+<li><strong>MAN1A2 (ENSG00000198162):</strong> COPD disease-association score 0.069, driven entirely by
+<code>animal_model</code> datatype; <strong>zero</strong> <code>genetic_association</code> datatype contribution for COPD and
+<strong>zero rows</strong> from the <code>gwas_credible_sets</code> (L2G) evidence datasource for MAN1A2-COPD. By
+contrast, a registered <code>genetic_association</code> score of <strong>0.534</strong> for smoking initiation
+(EFO_0005670) — substantially higher than for COPD. No association registered for FEV1 or
+pulmonary function measurement. Genetic constraint: LoF oe=0.324 (obs 12/exp 37, 95% CI
+0.207-0.525, moderately-to-strongly constrained), missense z=2.13. Not tractable by small
+molecule; antibody modality only flagged for signal-peptide/TMHMM topology.</li>
+<li><strong>PTGFRN (ENSG00000134247):</strong> COPD disease-association score negligible (0.004),
+<code>literature</code> datatype only, zero <code>genetic_association</code> contribution, zero
+<code>gwas_credible_sets</code> rows. No association with smoking initiation, nicotine dependence,
+FEV1, or pulmonary function measurement. Modest LoF constraint (oe=0.411, obs 32/exp 77.8).</li>
+<li><strong>LINC01525 (ENSG00000235202):</strong> no Open Targets data available — empty
+<code>geneticConstraint</code>/<code>tractability</code> arrays (expected for a non-coding RNA); did not appear
+in the COPD associatedTargets result set (no registered COPD association of any kind).</li>
+<li><strong>VPS25P1 (ENSG00000226755):</strong> no Open Targets data available — pseudogene; empty
+<code>geneticConstraint</code>/<code>tractability</code> arrays; no registered COPD association.</li>
+<li><strong>TENT5C:</strong> not queried in Open Targets (identified by the researcher via region
+enumeration after the Open Targets lookup stage; not flagged by any prioritization method
+or credible-set variant, so not part of the original candidate-gene query set).</li>
+<li><strong>Methodological note:</strong> L2G/colocalization data proved difficult to retrieve directly
+through the categorized GraphQL schema without pulling oversized type-dependency dumps.
+The <code>evidences(datasourceIds: [&quot;gwas_credible_sets&quot;])</code> field was used instead as the most
+direct proxy for L2G-based GWAS evidence per gene-disease pair; it returned 0 rows for both
+MAN1A2 and PTGFRN against COPD. This absence should not be read as ruling out a true
+colocalization signal — it may reflect a gap in database coverage/timing for the specific
+COPD GWAS meta-analysis underlying this locus file.</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>MAN1A2 — Confidence: LOW.</strong></p>
+<p>MAN1A2 is the best-supported single candidate at this locus, but the support is weak and
+the confidence level should not be overstated. It is the nearest gene to the lead variant
+rs1289960, is ABC-prioritized, and physically harbors essentially the entire credible set
+(all intronic/UTR, MODIFIER-impact variants). No other gene in this locus comes close to
+this degree of physical/fine-mapping anchoring — PTGFRN (the only other prioritized
+candidate) is confirmed to lie 360-473 kb outside the locus and credible set entirely, and
+its candidacy rests solely on PoPS's genome-wide network-similarity statistic with zero
+gene-specific genetic or functional evidence (see audit: red-team-skeptic judged this
+&quot;bordering on should not be retained as a candidate gene for this locus at all&quot;). LINC01525
+and VPS25P1 have essentially no independent supporting evidence beyond their positional
+credible-set assignment, and TENT5C was not implicated by any prioritization method.</p>
+<p>However, the case for MAN1A2 acting through <em>pulmonary</em> biology specifically is not well
+supported by the verified evidence. Open Targets shows <strong>zero</strong> COPD <code>genetic_association</code>
+or L2G evidence for MAN1A2 despite it sitting directly under a genome-wide-significant COPD
+locus, and <strong>no</strong> association with FEV1 or pulmonary function measurement was found in
+Open Targets or the literature search — a genuine warning sign under this pipeline's
+spirometry-concordance prior. The one directly relevant mechanistic paper (Ningappa et al.
+2021, PMID 34366878) shows Man1a2 homozygous-null mice have impaired lung ciliation and
+neonatal respiratory failure via ER-stress/UPR pathways, which is a biologically plausible,
+smoking-independent link to airway mucociliary biology — but it is a complete-knockout
+developmental/neonatal phenotype, and the credible-set variants here are regulatory/
+hypomorphic at most, so extrapolating knockout severity to the effect of common noncoding
+variants is a substantial leap that the red-team-skeptic flagged as not adequately
+foregrounded. Meanwhile, MAN1A2 does carry a genuine Open Targets <code>genetic_association</code>
+signal with smoking initiation (0.534) that exceeds its COPD signal — consistent with this
+pipeline's Prior 1 (the parent COPD GWAS is not smoking-adjusted) — but no primary
+smoking-initiation GWAS paper (e.g., GSCAN/Saunders) naming MAN1A2 could be confirmed via
+PubMed search, so this remains an unconfirmed database-only inference, not an established
+mediation pathway. A third, equally plausible alternative raised by the skeptic is that
+MAN1A2 is simply a broadly pleiotropic, promiscuous local-eQTL/pQTL &quot;hot gene&quot; that
+recurs across many unrelated GWAS/omics screens (osteoarthritis CD4+ T-cell eQTL, venous
+thromboembolism PWAS, serum urate, COVID-19 susceptibility, cardiac autophagy, gout,
+hepatocarcinogenesis-via-paralog) — a pattern at least as consistent with nonspecific
+regulatory-hub status as with tissue-specific causal biology at this locus.</p>
+<p><strong>Runner-up: PTGFRN</strong>, but only on the strength of the PoPS statistical call — it is
+physically outside the locus, has no credible-set overlap, no Open Targets genetic
+evidence, and no COPD/lung-relevant literature of any kind.</p>
+<p><strong>What would resolve this:</strong> (1) direct confirmation (or refutation) of MAN1A2 in the
+primary GSCAN/Saunders smoking-initiation GWAS supplementary tables, to settle whether the
+smoking-mediation hypothesis has primary-literature grounding or is an Open Targets
+aggregation artifact; (2) a targeted look at FEV1/FEV1-FVC GWAS/colocalization data for
+this exact locus (not found by either the Open Targets lookup or the literature search
+here) — its continued absence would further weaken the pulmonary-biology case for MAN1A2;
+(3) direct lung-tissue or airway-epithelium eQTL/colocalization analysis for MAN1A2 in
+COPD-relevant cohorts (e.g., GTEx lung, or COPD case-control expression datasets), since no
+such analysis was identified in this search. Given the absence of COPD-specific genetic
+association, spirometric concordance, or confirmed smoking-GWAS support, this pick is
+correctly labeled LOW confidence rather than MODERATE or HIGH — the study team should weigh
+MAN1A2's strong positional/fine-mapping anchoring against the near-total absence of
+disease-mechanism-specific human genetic evidence before prioritizing it for follow-up.</p>
+
+</body>
+</html>
