@@ -91,7 +91,6 @@
                 <a id="link-evidence-table"
                     href="#"
                     class="file-link file-link--evidence"
-                    target="_blank"
                     rel="noopener noreferrer">
                     📄 Evidence Table
                 </a>
@@ -99,7 +98,6 @@
                 <a id="link-audit-report"
                     href="#"
                     class="file-link file-link--audit"
-                    target="_blank"
                     rel="noopener noreferrer">
                     🔍 Audit Report
                 </a>
@@ -224,12 +222,12 @@
      */
     function getEvidenceTablePath(plotFileKey) {
     // e.g. "LOC001" → "files/LOC001_evidence_table.html"
-    return `files/${plotFileKey}.html`;
+    return `tables/${plotFileKey}.html`;
     }
 
     function getAuditReportPath(plotFileKey) {
     // e.g. "LOC001" → "files/LOC001_audit_report.html"
-    return `files/${plotFileKey}_audit_report.html`;
+    return `audits/${plotFileKey}_audit_report.html`;
     }
 
     /**
