@@ -1,389 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>13_109050001-109450000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 13:109050001-109450000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-13109050001-109450000-nearest-gene-myo16">Evidence table — Locus 13:109050001-109450000 (nearest gene: MYO16)</h1>
-<p>Lead variant: rs9521268 (13:109266735, PIP=0.266). Credible set is almost
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-13109050001-109450000-nearest-gene-myo16">Evidence Table — Locus 13:109050001-109450000</h1><div class="summary"><p>Lead variant: rs9521268 (13:109266735, PIP=0.266). Credible set is almost
 entirely intronic/intergenic/non-coding-transcript variants; no missense or
 splice-donor/acceptor variant is present, so no dedicated variant-level
 literature search beyond the lead variant was performed (per pipeline scope
-rules). A direct PubMed search for rs9521268 returned zero indexed results.</p>
-<p>Candidate genes evaluated: <strong>MYO16</strong> (nearest gene; also FLAMES-, MAGMA-, and
+rules). A direct PubMed search for rs9521268 returned zero indexed results.</p><p>Candidate genes evaluated: <strong>MYO16</strong> (nearest gene; also FLAMES-, MAGMA-, and
 PoPS-prioritized; sole protein-coding gene overlapping/flanking this locus
 per an independent Ensembl gene-region check), <strong>LINC00370</strong> (lncRNA tagged
 only by very-low-PIP credible-set variants), and <strong>MYO16-AS1</strong> (an antisense
 lncRNA overlapping MYO16 that surfaced during the Open Targets structured
 lookup as a cis-eQTL/colocalization candidate at the lead variant's credible
 set — not in the locus input file's official candidate list, given a brief
-look per pipeline instructions).</p>
-<p>Only citations with verifier verdict VERIFIED are included below. Citations
+look per pipeline instructions).</p><p>Only citations with verifier verdict VERIFIED are included below. Citations
 with CLAIM_MISMATCH, RETRACTED, or NOT_FOUND verdicts, and genes marked
 CONTESTED/WEAKENED by red-team-skeptic, are documented with full reasoning in
-the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</p>
-<table>
+the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</p></div>
+
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -396,7 +80,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 </thead>
 <tbody>
 <tr>
-<td>MYO16</td>
+<td class="gene">MYO16</td>
 <td>Statistical genetics — lung-function GWAS (locus-level only)</td>
 <td>Large UK Biobank + SpiroMeta lung-function GWAS (279 signals genome-wide; fine-mapping/eQTL-pQTL annotation of 107 putative causal genes; enrichment of cytoskeleton/ciliogenesis and elastic-fiber/TGF-beta pathway genes among prioritized genes generally). This paper establishes locus-level significance for the 13q33-34 region; it does <strong>not</strong> itself name MYO16 in the accessible body text/abstract — the gene-level assignment to MYO16 comes from downstream fine-mapping/L2G tools, not from this paper's own stated results.</td>
 <td>PMID 30804560 / DOI 10.1038/s41588-018-0321-7</td>
@@ -404,7 +88,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MYO16</td>
+<td class="gene">MYO16</td>
 <td>Statistical genetics — COPD case-control GWAS (background)</td>
 <td>Companion COPD case-control GWAS (UK Biobank + International COPD Genetics Consortium, 35,735 cases/222,076 controls) identified 82 COPD risk loci genome-wide with cell-type/phenotype heterogeneity. Whether MYO16/13q33 is specifically among the 82 named loci could not be confirmed from the abstract.</td>
 <td>PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
@@ -412,7 +96,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MYO16</td>
+<td class="gene">MYO16</td>
 <td>Bioinformatic/ML COPD-asthma biomarker screen (weak, hypothesis-generating)</td>
 <td>WGCNA + LASSO/random-forest screen of COPD/asthma microarray data selected MYO16 as one of 5 machine-learning-selected candidate genes (alongside CHML, POLR3B, ZNF101, ZNF143); MYO16 itself was not individually validated (the paper's validated diagnostic biomarker was ZNF143).</td>
 <td>PMID 41137279 / DOI 10.1097/MD.0000000000045317</td>
@@ -420,15 +104,15 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MYO16</td>
+<td class="gene">MYO16</td>
 <td>ceRNA/PPI network screen in male smokers with COPD (weak, hypothesis-generating)</td>
-<td>RNA-seq of PBMCs from male smokers with stable COPD vs. controls identified MYO16 as one of seven &quot;core genes&quot; (MYO16, MYL4, SCN4A, NRCAM, HMCN1, MYOM2, IQSEC3) in a differentially-expressed circRNA/mRNA PPI network; gene-set-level (not MYO16-specific) pathway enrichment implicated IL-18/IL-5/NLRP3 inflammasome and Th1/Th2/Th17 differentiation pathways.</td>
+<td>RNA-seq of PBMCs from male smokers with stable COPD vs. controls identified MYO16 as one of seven "core genes" (MYO16, MYL4, SCN4A, NRCAM, HMCN1, MYOM2, IQSEC3) in a differentially-expressed circRNA/mRNA PPI network; gene-set-level (not MYO16-specific) pathway enrichment implicated IL-18/IL-5/NLRP3 inflammasome and Th1/Th2/Th17 differentiation pathways.</td>
 <td>PMID 38933922 / DOI 10.3389/fgene.2024.1376721</td>
 <td>VERIFIED (claim); red-team-skeptic: weak, non-specific, hypothesis-generating only — circumstantial network-connectivity evidence, not a validated causal/mechanistic immune role for MYO16; pseudo-replication risk with row above</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MYO16</td>
+<td class="gene">MYO16</td>
 <td>Core biology — cytoskeletal/neural (non-pulmonary)</td>
 <td>MYO16 (myosin XVI) is a vertebrate-specific unconventional myosin expressed predominantly in neural tissue; functions as a signal-transduction element linking cell-signaling pathways (PI3K/WAVE-complex) to actin cytoskeleton reorganization; dysregulation linked to neurological/neuropsychiatric disorders.</td>
 <td>PMID 32824179 / DOI 10.3390/cells9081903</td>
@@ -436,7 +120,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MYO16</td>
+<td class="gene">MYO16</td>
 <td>Core biology — cytoskeletal/neural (non-pulmonary)</td>
 <td>Two principal MYO16 isoforms (Myo16a cytoplasmic tailless; Myo16b full-length, nuclear-localized), both with N-terminal ankyrin-repeat domain binding protein phosphatase 1 (PP1) catalytic subunit; impaired MYO16 expression implicated in autism, schizophrenia, bipolar disorder; highest neural expression in late embryonic/early postnatal period (neuronal migration/dendritic elaboration).</td>
 <td>PMID 32451869 / DOI 10.1007/978-3-030-38062-5_18</td>
@@ -444,7 +128,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MYO16</td>
+<td class="gene">MYO16</td>
 <td>Core biology — cytoskeletal/neural, functional (non-pulmonary)</td>
 <td>Mouse Myo16 knockout/knockdown regulates F-actin turnover in Purkinje-cell dendritic spines via the WAVE regulatory complex/Arp2/3 pathway and is required for normal presynaptic vesicle numbers in cerebellum; MYO16 shows genetic association with autism spectrum disorder.</td>
 <td>PMID 31474830 / DOI 10.3389/fncel.2019.00330</td>
@@ -452,7 +136,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MYO16</td>
+<td class="gene">MYO16</td>
 <td>Core biology — epigenetic/neuropsychiatric (non-pulmonary)</td>
 <td>MYO16 gene-body 5-hydroxymethylcytosine (5hmC) changes are associated with altered MYO16 expression in prefrontal cortex of depressed suicide completers vs. controls.</td>
 <td>PMID 28485726 / DOI 10.1038/tp.2017.93</td>
@@ -460,7 +144,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MYO16</td>
+<td class="gene">MYO16</td>
 <td>Core biology — cell cycle, general (non-tissue-specific)</td>
 <td>Myo16 mRNA/protein abundance is cell-cycle regulated in Rat2 fibroblasts (peaks late G1/S phase); Myo16 depletion alters cell-cycle distribution and causes cell death; Myo16 protein is downregulated in response to DNA replication stress.</td>
 <td>PMID 23596177 / DOI 10.1002/cm.21109</td>
@@ -468,7 +152,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MYO16</td>
+<td class="gene">MYO16</td>
 <td>Core biology — original discovery, neural (non-pulmonary)</td>
 <td>Original cloning/characterization of class XVI myosins (myr 8a/8b, rat MYO16 orthologs), expressed principally in developing brain (migrating cerebellar granule neurons, astrocytes); defines ankyrin-repeat/PP1-binding structural features.</td>
 <td>PMID 11588169 / DOI 10.1523/JNEUROSCI.21-20-07954.2001</td>
@@ -476,7 +160,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MYO16-AS1 (surfaced during OT lookup; not in locus input file candidate list)</td>
+<td class="gene">MYO16-AS1 (surfaced during OT lookup; not in locus input file candidate list)</td>
 <td>Lung-tissue functional mechanism (oncology context, not COPD)</td>
 <td>MYO16-AS1 (antisense lncRNA overlapping MYO16) is expressed mainly in lung tissue and is notably downregulated in lung adenocarcinoma (LUAD); competitively binds IGF2BP3 protein, reducing HK2 mRNA stability, inhibiting glycolytic reprogramming and LUAD cell invasion/migration.</td>
 <td>PMID 38041756 / DOI 10.1007/s11010-023-04887-w</td>
@@ -484,7 +168,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MYO16-AS1 (surfaced during OT lookup; not in locus input file candidate list)</td>
+<td class="gene">MYO16-AS1 (surfaced during OT lookup; not in locus input file candidate list)</td>
 <td>Lung-tissue dysregulation (chronic lung disease context, not COPD)</td>
 <td>MYO16-AS1 is one of six significant lncRNAs in WGCNA modules most negatively correlated with idiopathic pulmonary fibrosis (IPF) phenotype in a whole-transcriptome lung-tissue study; co-expressed mRNAs are enriched in inflammatory-response pathways.</td>
 <td>PMID 40782499 / DOI 10.1016/j.clinsp.2025.100732</td>
@@ -492,7 +176,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINC00370</td>
+<td class="gene">LINC00370</td>
 <td>Off-topic biology (included for completeness; no lung/COPD relevance found)</td>
 <td>LINC00370 modulates a miR-222-3p/RGS4 axis in adipose-derived stem cell osteogenic differentiation, protecting against osteoporosis progression in a rat ovariectomy model. No lung, airway, immune, or COPD-relevant biology reported.</td>
 <td>PMID 34450404 / DOI 10.1016/j.archger.2021.104505</td>
@@ -500,12 +184,12 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
 <ul>
 <li><strong>MYO16 (ENSG00000041515):</strong> COPD disease-association score in Open Targets
-is 0.0078, driven entirely by the &quot;literature&quot; datatype (0.064); no
-&quot;genetic_association&quot; datatype score recorded for COPD specifically.
+is 0.0078, driven entirely by the "literature" datatype (0.064); no
+"genetic_association" datatype score recorded for COPD specifically.
 Locus-to-gene (L2G) score = <strong>0.381</strong> (moderate, not high-confidence by
 conventional &gt;0.5 thresholds) for the credible set containing lead variant
 rs9521268, in two independent lung-function (FEV1/FVC) GWAS: GCST007080 and
@@ -565,22 +249,22 @@ proximity and protein-coding status over lncRNAs, and the L2G algorithm's
 colocalization reflects that same bias rather than a settled adjudication.
 (2) The Shrine et al. 2019 lung-function GWAS citation (PMID 30804560) is
 VERIFIED only as locus-level evidence — it does not itself name MYO16 in the
-accessible text, so citing it as &quot;evidence implicating MYO16&quot; would overstate
+accessible text, so citing it as "evidence implicating MYO16" would overstate
 what the paper shows (see audit). (3) MYO16's own established literature
 (rows above: PMID 32824179, 32451869, 31474830, 28485726, 23596177, 11588169)
 is essentially all neuronal/cytoskeletal/neuropsychiatric, with zero
 structural-lung-biology, airway-epithelium, or alveolar-remodeling literature
 despite this locus being genome-wide significant for lung function since at
 least 2019 — a gap red-team-skeptic argues is informative in its own right,
-not merely &quot;under-studied.&quot; (4) The only COPD-specific literature for MYO16
+not merely "under-studied." (4) The only COPD-specific literature for MYO16
 (PMID 41137279, PMID 38933922) is weak, non-validated, exploratory
 bioinformatic/ML gene-list evidence that both red-team-skeptic and the
 researcher flag as hypothesis-generating only, with a real risk of
 pseudo-replication (same low-specificity study design in both papers). (5)
 MYO16-AS1, the runner-up, has its own real (if COPD-non-specific) lung-tissue
 functional literature — a demonstrated molecular mechanism in lung
-adenocarcinoma (PMID 38041756, which explicitly states MYO16-AS1 &quot;is
-expressed mainly in lung tissue&quot;) and dysregulation in idiopathic pulmonary
+adenocarcinoma (PMID 38041756, which explicitly states MYO16-AS1 "is
+expressed mainly in lung tissue") and dysregulation in idiopathic pulmonary
 fibrosis co-expressed with inflammatory-pathway genes (PMID 40782499) — that
 MYO16 itself entirely lacks, which is genuine contradicting/competing
 evidence, not just a caveat.</p>
@@ -605,5 +289,7 @@ unexplained trans-pQTL colocalization with AGER and CEACAM5. This is the
 study team's call to make with that additional evidence in hand — this
 section is a best-supported recommendation, not a final determination.</p>
 
+        </div>
+    </div>
 </body>
 </html>

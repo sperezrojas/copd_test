@@ -1,378 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>11_1150001-1450000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPD GWAS locus evidence table — 11:1,150,001-1,450,000 (GRCh38)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="copd-gwas-locus-evidence-table--111150001-1450000-grch38">COPD GWAS locus evidence table — 11:1,150,001-1,450,000 (GRCh38)</h1>
-<p><strong>Lead variant:</strong> rs2943516 (11:1,250,199, missense_variant in MUC5B, PIP = 0.943)
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="copd-gwas-locus-evidence-table--111150001-1450000-grch38">COPD GWAS locus evidence table — 11:1,150,001-1,450,000 (GRCh38)</h1><div class="summary"><p><strong>Lead variant:</strong> rs2943516 (11:1,250,199, missense_variant in MUC5B, PIP = 0.943)
 <strong>Candidate genes (disagreement across prioritization methods):</strong> nearest gene = MUC5B; MAGMA-prioritized = BRSK2; PoPS-prioritized = TOLLIP; FLAMES/ABC = NA.
-<strong>Credible set:</strong> rs2943516 (PIP 0.943, missense, MUC5B); rs908229 (PIP 0.035, synonymous, MUC5B — rolled into gene-level evidence, no individual variant search per pipeline scope); rs2943521 (PIP 0.006, missense, MUC5B); rs2471912 (PIP 0.005, splice_polypyrimidine_tract_variant/intron_variant, MUC5B).</p>
-<p>Pipeline stages completed: Open Targets structured lookup -&gt; researcher -&gt; citation-verifier (20 citations checked: 19 VERIFIED, 1 CLAIM_MISMATCH) -&gt; red-team-skeptic -&gt; this synthesis. Full stage-by-stage checkpoints are preserved in <code>evidence_tables/_status/11_1150001-1450000/</code> (opentargets.md, researcher.md, verified_citations.md, critique.md).</p>
-<p>Only VERIFIED citations appear in the table below. The one CLAIM_MISMATCH citation, and the reasoning behind each gene's red-team verdict, are preserved in <code>audits/11_1150001-1450000_audit.md</code>.</p>
+<strong>Credible set:</strong> rs2943516 (PIP 0.943, missense, MUC5B); rs908229 (PIP 0.035, synonymous, MUC5B — rolled into gene-level evidence, no individual variant search per pipeline scope); rs2943521 (PIP 0.006, missense, MUC5B); rs2471912 (PIP 0.005, splice_polypyrimidine_tract_variant/intron_variant, MUC5B).</p><p>Pipeline stages completed: Open Targets structured lookup -&gt; researcher -&gt; citation-verifier (20 citations checked: 19 VERIFIED, 1 CLAIM_MISMATCH) -&gt; red-team-skeptic -&gt; this synthesis. Full stage-by-stage checkpoints are preserved in <code>evidence_tables/_status/11_1150001-1450000/</code> (opentargets.md, researcher.md, verified_citations.md, critique.md).</p><p>Only VERIFIED citations appear in the table below. The one CLAIM_MISMATCH citation, and the reasoning behind each gene's red-team verdict, are preserved in <code>audits/11_1150001-1450000_audit.md</code>.</p></div>
+
+
+
 <h2 id="evidence-table">Evidence table</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -385,164 +69,164 @@ code {
 </thead>
 <tbody>
 <tr>
-<td>MUC5B</td>
+<td class="gene">MUC5B</td>
 <td>Structural/functional (mouse model)</td>
 <td>Muc5b (not Muc5ac) is required for mucociliary clearance and control of bacterial airway infection in mice; Muc5b-deficient mice develop chronic infection, impaired macrophage phagocytosis, and unresolving inflammation.</td>
 <td>PMID 24317696 / DOI 10.1038/nature12807</td>
-<td>WEAKENED (see gene-level note)</td>
+<td><span class="tag-warning">WEAKENED</span> (see gene-level note)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MUC5B</td>
+<td class="gene">MUC5B</td>
 <td>Statistical genetics (pQTL, different variant)</td>
 <td>A SPIROMICS sputum-mucin pQTL (rs140324259, chr11, not this locus's lead variant) explains 14% of sputum MUC5B protein variance; the low-MUC5B allele is associated with increased chronic bronchitis (OR 1.42) and exacerbations (OR 1.41), replicated in UK Biobank for chronic mucus/cough.</td>
 <td>PMID 37352370 / DOI 10.1371/journal.pgen.1010445</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MUC5B</td>
+<td class="gene">MUC5B</td>
 <td>Statistical genetics (different variant)</td>
 <td>The MUC5B promoter variant rs35705950 (not this locus's lead) is strongly associated with interstitial lung abnormalities, sharing genetic architecture with IPF.</td>
 <td>PMID 31339356 / DOI 10.1164/rccm.201903-0511OC</td>
-<td>WEAKENED (pleiotropy caveat)</td>
+<td><span class="tag-warning">WEAKENED</span> (pleiotropy caveat)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MUC5B</td>
+<td class="gene">MUC5B</td>
 <td>Statistical genetics (locus-class context)</td>
 <td>Large COPD case-control GWAS (35,735 cases/222,076 controls) identified 82 loci with lung-tissue/smooth-muscle/immune cell-type enrichment; general context for the 11p15.5 region as a recurring COPD/lung-function locus class.</td>
 <td>PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
-<td>WEAKENED (general context, not gene-specific in abstract)</td>
+<td><span class="tag-warning">WEAKENED</span> (general context, not gene-specific in abstract)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MUC5B</td>
+<td class="gene">MUC5B</td>
 <td>Statistical genetics (locus-class context)</td>
 <td>Lung-function GWAS (FEV1, FEV1/FVC; n=400,102) defined 279 signals (139 novel) that jointly predict COPD; supports pipeline prior of concordant COPD/spirometry signal at loci in this class.</td>
 <td>PMID 30804560 / DOI 10.1038/s41588-018-0321-7</td>
-<td>WEAKENED (general context, not MUC5B-specific in abstract)</td>
+<td><span class="tag-warning">WEAKENED</span> (general context, not MUC5B-specific in abstract)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MUC5B</td>
+<td class="gene">MUC5B</td>
 <td>Statistical genetics + structural</td>
 <td>MUC5B (IPF) risk-variant carriers show increased MUC5B clonal somatic mutations, explained by elevated MUC5B expression, correlated with reduced lung function in COPD/IPF lung-tissue cohorts.</td>
 <td>PMID 37788444 / DOI 10.1164/rccm.202303-0395OC</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MUC5B</td>
+<td class="gene">MUC5B</td>
 <td>Statistical genetics (pleiotropy evidence)</td>
 <td>Three-stage IPF GWAS: MUC5B promoter SNP rs35705950 and TOLLIP SNPs (rs111521887, rs5743894, rs5743890) are the strongest, independent (low LD, r2 0.01-0.16) IPF susceptibility signals at this same 11p15.5 interval.</td>
 <td>PMID 24429156 / DOI 10.1016/S2213-2600(13)70045-6</td>
-<td>WEAKENED (central to pleiotropy alternative hypothesis)</td>
+<td><span class="tag-warning">WEAKENED</span> (central to pleiotropy alternative hypothesis)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MUC5B</td>
+<td class="gene">MUC5B</td>
 <td>Statistical genetics / structural (counter-evidence)</td>
-<td>In a lung-transplant cohort, MUC5B promoter variant (rs35705950) allele frequency was far higher in ILD (17.6%) than COPD/emphysema (9.3%); this promoter variant was NOT associated with COPD and is &quot;very specific&quot; to pulmonary fibrosis.</td>
+<td>In a lung-transplant cohort, MUC5B promoter variant (rs35705950) allele frequency was far higher in ILD (17.6%) than COPD/emphysema (9.3%); this promoter variant was NOT associated with COPD and is "very specific" to pulmonary fibrosis.</td>
 <td>PMID 35651878 / DOI 10.3389/ti.2022.10159</td>
-<td>WEAKENED (used by skeptic as evidence against simple promoter-driven pleiotropy, but underscores lead variant rs2943516 is a distinct, uncharacterized mechanism)</td>
+<td><span class="tag-warning">WEAKENED</span> (used by skeptic as evidence against simple promoter-driven pleiotropy, but underscores lead variant rs2943516 is a distinct, uncharacterized mechanism)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MUC5B</td>
+<td class="gene">MUC5B</td>
 <td>Structural (different variant)</td>
 <td>In a COPD cohort (SPIROMICS), MUC5B promoter genotype (rs35705950) modified the association between air pollution exposure and interstitial lung abnormalities.</td>
 <td>PMID 38568439 / DOI 10.1513/AnnalsATS.202308-741OC</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TOLLIP</td>
+<td class="gene">TOLLIP</td>
 <td>Statistical genetics (pleiotropy evidence)</td>
 <td>TOLLIP SNPs (rs111521887, rs5743894, rs5743890 — none in this locus's credible set) are independent, well-replicated IPF susceptibility signals; TOLLIP expression reduced 20-50% in minor-allele carriers; protective allele of rs5743890 paradoxically associated with worse IPF mortality.</td>
 <td>PMID 24429156 / DOI 10.1016/S2213-2600(13)70045-6</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TOLLIP</td>
+<td class="gene">TOLLIP</td>
 <td>Review (immune/structural)</td>
 <td>TOLLIP is a context- and cell-type-specific adaptor protein that can inhibit inflammation/ER stress, activate autophagy, or regulate vacuole trafficking; variants linked to IPF, asthma, transplant primary graft dysfunction, and TB/Legionella/respiratory-virus susceptibility.</td>
 <td>PMID 33233920 / DOI 10.1165/rcmb.2020-0470TR</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TOLLIP</td>
+<td class="gene">TOLLIP</td>
 <td>Statistical genetics (different variant)</td>
 <td>TOLLIP rs5743890 and MUC5B rs35705950 (neither in this locus's credible set) were assessed for survival across IPF/IPAF/CTD-ILD; associated with worse IPAF transplant-free survival (HR 1.92).</td>
 <td>PMID 30635297 / DOI 10.1183/13993003.01641-2018</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TOLLIP</td>
+<td class="gene">TOLLIP</td>
 <td>Statistical genetics + immune (different variant)</td>
 <td>TOLLIP variant rs3168046 associated with higher circulating PAI-1 (lung-injury biomarker) and primary graft dysfunction after lung transplantation (acute lung injury context).</td>
 <td>PMID 26663441 / DOI 10.1111/ajt.13525</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TOLLIP</td>
+<td class="gene">TOLLIP</td>
 <td>Clinical trial design (different variant)</td>
 <td>TOLLIP rs3750920 TT genotype used to select IPF (not COPD) patients for a genotype-stratified N-acetylcysteine Phase III trial (PRECISIONS), based on a post hoc PANTHER trial finding.</td>
 <td>PMID 36514019 / DOI 10.1186/s12890-022-02281-8</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TOLLIP</td>
+<td class="gene">TOLLIP</td>
 <td>Immune / structural (gene-level, smoking-conditional)</td>
 <td>Cigarette smoke epigenetically suppresses TOLLIP (via EZH1/EZH2-mediated H3K27 trimethylation) in COPD patient lungs, airway epithelial cells, and precision-cut lung slices, impairing antiviral defense against influenza A; TOLLIP measured as decreased in COPD lungs vs healthy lungs.</td>
 <td>PMID 40056974 / DOI 10.1016/j.ajpath.2025.02.005</td>
-<td>WEAKENED (most COPD-specific TOLLIP evidence found, but gene-level, not locus/variant-specific)</td>
+<td><span class="tag-warning">WEAKENED</span> (most COPD-specific TOLLIP evidence found, but gene-level, not locus/variant-specific)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TOLLIP</td>
+<td class="gene">TOLLIP</td>
 <td>Immune</td>
 <td>TLR3 ligand poly(I:C) decreases TOLLIP expression while inducing strong proinflammatory cytokine/chemokine/MMP responses in primary airway epithelial cells; authors link this to viral exacerbations of COPD/asthma.</td>
 <td>PMID 16316467 / DOI 10.1186/1476-9255-2-16</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BRSK2</td>
+<td class="gene">BRSK2</td>
 <td>Structural (neurobiology, non-pulmonary)</td>
 <td>BRSK2 (SAD-B), with paralog BRSK1/SAD-A, is a brain-enriched serine/threonine kinase downstream of LKB1 required for axon specification during cortical neuron polarization.</td>
 <td>PMID 17482548 / DOI 10.1016/j.cell.2007.03.025</td>
-<td>CONTESTED (search-thoroughness grounds, see gene-level note)</td>
+<td><span class="tag-warning">CONTESTED</span> (search-thoroughness grounds, see gene-level note)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BRSK2</td>
+<td class="gene">BRSK2</td>
 <td>Structural (neurobiology, non-pulmonary)</td>
 <td>De novo, predominantly loss-of-function heterozygous BRSK2 variants cause a neurodevelopmental disorder (speech delay, intellectual disability, motor delay, autism); BRSK2 is relatively intolerant to protein-altering variation in humans.</td>
 <td>PMID 30879638 / DOI 10.1016/j.ajhg.2019.02.002</td>
-<td>CONTESTED (search-thoroughness grounds)</td>
+<td><span class="tag-warning">CONTESTED</span> (search-thoroughness grounds)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BRSK2</td>
+<td class="gene">BRSK2</td>
 <td>Structural / immune (non-pulmonary, cell-line)</td>
 <td>BRSK2 regulates basal autophagy via the Vps34-class III PI3K (PIK3C3)-Beclin-1-ATG14 complex and activates AKT/STAT3/NF-kB survival pathways in breast cancer cells; overexpression increases inflammatory cytokine/chemokine levels; kinase inhibition (GW296115) reduces nutrient-deprivation-stress autophagy and metastatic potential.</td>
 <td>PMID 41258112 / DOI 10.1038/s41598-025-24354-4</td>
-<td>CONTESTED (surfaced by skeptic as a thoroughness follow-up; non-pulmonary breast-cancer cell-line evidence, does not establish COPD/lung relevance)</td>
+<td><span class="tag-warning">CONTESTED</span> (surfaced by skeptic as a thoroughness follow-up; non-pulmonary breast-cancer cell-line evidence, does not establish COPD/lung relevance)</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Locus-level context (not gene-specific, not in table above):</strong> A targeted background check of the GSCAN smoking-initiation/cessation/heaviness GWAS (Liu et al. 2019, PMID 30643251, DOI 10.1038/s41588-018-0307-5, VERIFIED as a real, non-retracted paper) found that this 11p15.5 region (~1.15-1.45 Mb) is not among that GWAS's reported smoking-behavior loci. This is an absence-of-evidence finding from targeted search, not an exhaustive lookup of GSCAN's full supplementary tables.</p>
 <h2 id="open-targets-summary">Open Targets summary</h2>
 <p><strong>Structured database lookup (Open Targets Platform GraphQL API, queried directly by synthesis-lead) — not a literature citation, not passed through citation-verifier or red-team-skeptic.</strong></p>
 <ul>
-<li><strong>MUC5B (ENSG00000117983):</strong> Aggregate COPD (MONDO_0005002) disease-association score = 0.108 (datatype breakdown: literature 0.889 only, no genetic_association datatype score in Open Targets' aggregate model). Locus-specific: at lead variant 11_1250199_C_T (rs2943516), Open Targets' L2G model assigns MUC5B the top score (0.778) against a UK Biobank &quot;chronic lung disease medication use&quot; GWAS credible set (GCST90479592); that credible set colocalizes strongly with an independent UK Biobank chronic-lung-disease-diagnosis GWAS (GCST90475272, h4 = 0.957) and with GCST90475273 (h4 = 0.990); colocalization with IPF (FinnGen R12) is weak (h4 = 0.161). VEP consequence score for rs2943516 is highest for MUC5B (missense, 0.68) of any gene at this position. Constraint: missense z = 0.19 (near-neutral), LOF z = 1.0 (oe = 0.34, oe upper = 0.40; some constraint against loss-of-function).</li>
+<li><strong>MUC5B (ENSG00000117983):</strong> Aggregate COPD (MONDO_0005002) disease-association score = 0.108 (datatype breakdown: literature 0.889 only, no genetic_association datatype score in Open Targets' aggregate model). Locus-specific: at lead variant 11_1250199_C_T (rs2943516), Open Targets' L2G model assigns MUC5B the top score (0.778) against a UK Biobank "chronic lung disease medication use" GWAS credible set (GCST90479592); that credible set colocalizes strongly with an independent UK Biobank chronic-lung-disease-diagnosis GWAS (GCST90475272, h4 = 0.957) and with GCST90475273 (h4 = 0.990); colocalization with IPF (FinnGen R12) is weak (h4 = 0.161). VEP consequence score for rs2943516 is highest for MUC5B (missense, 0.68) of any gene at this position. Constraint: missense z = 0.19 (near-neutral), LOF z = 1.0 (oe = 0.34, oe upper = 0.40; some constraint against loss-of-function).</li>
 <li><strong>BRSK2 (ENSG00000174672):</strong> Aggregate COPD disease-association score = 0.0046 — the lowest of the three candidates (literature only, no genetic_association datatype score). Not the top L2G gene in any credible set Open Targets has indexed at this locus. No BRSK2-specific eQTL/pQTL credible set was found colocalizing with lung-disease GWAS in this lookup (though BRSK2 does have a UKB-PPP plasma protein QTL study indexed in principle). Constraint: missense z = 2.13 (moderate constraint), LOF z = 1.0 (oe = 0.24, oe upper = 0.36).</li>
 <li><strong>TOLLIP (ENSG00000078902):</strong> Aggregate COPD disease-association score = 0.142 — the highest of the three, and the only one with a non-zero genetic_association datatype score (0.228) in Open Targets' aggregate model. Not the top L2G gene at the lead-variant GWAS credible set, but Open Targets separately indexes a TOLLIP eQTL credible set (TwinsUK, skin tissue) at the same lead variant that colocalizes strongly with the same lung-disease GWAS signals (h4 = 0.90-0.98 across two UK Biobank phenotype definitions); colocalization with IPF is weak (h4 = 0.053). Caveat (noted at data-collection time and reaffirmed by red-team-skeptic): this eQTL is measured in skin, not lung, and at this gene-dense locus, strong eQTL-GWAS colocalization alone does not distinguish which nearby gene is causal. Constraint: missense z = 1.32 (moderate), LOF z = 0.037 (oe = 0.48, oe upper = 0.75) — the weakest LOF-constraint evidence of the three genes.</li>
 <li><strong>Cross-gene note:</strong> Open Targets' own VEP annotation scores rs2943516 as missense in MUC5B with the highest transcript-consequence severity of any gene at the locus (0.68) versus BRSK2/TOLLIP, both scored only as upstream/downstream_gene_variant (0.20-0.22).</li>
@@ -550,11 +234,13 @@ code {
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>MUC5B — confidence MODERATE.</strong></p>
 <p>MUC5B has the strongest locus-specific (not just gene-level) evidence of the three candidates: it is the gene the fine-mapped lead variant (rs2943516, PIP=0.943) actually sits in as a missense change (the highest VEP consequence score of any gene at this position), it is the top-scoring L2G gene at this exact credible set (0.778) against a chronic-lung-disease GWAS trait, and that credible set colocalizes strongly (h4 ~0.96-0.99) with an independent UK Biobank COPD/emphysema/bronchitis diagnosis GWAS — internal consistency across two separately ascertained lung-disease phenotype definitions. General MUC5B mucus biology (Roy et al., PMID 24317696: Muc5b is required for mucociliary clearance and infection control; Van Buren et al., PMID 37352370: an independent MUC5B sputum-protein pQTL is associated with chronic bronchitis and exacerbations) supports a plausible mechanism connecting MUC5B dosage/function to COPD-relevant phenotypes (chronic bronchitis, mucus plugging, exacerbations).</p>
-<p>The call is not higher than MODERATE because red-team-skeptic correctly identified a real gap: essentially none of the supporting human-disease literature is about this locus's actual lead variant (rs2943516). The gene's best-replicated human disease signal — the promoter variant rs35705950 — is IPF-specific and explicitly shown NOT to associate with COPD (Goos et al., PMID 35651878). rs2943516 itself has no dedicated functional characterization in the literature found by either the researcher or the skeptic's independent search. This locus also sits in an unusually gene-dense, pleiotropic interval where TOLLIP independently carries its own well-replicated IPF risk alleles (Noth et al., PMID 24429156), raising a genuine alternative hypothesis that part of this &quot;COPD&quot; GWAS signal could reflect IPF/ILD phenotype overlap in biobank-based COPD case ascertainment rather than pure emphysema/airflow-obstruction biology — a possibility this evidence base cannot rule out.</p>
+<p>The call is not higher than MODERATE because red-team-skeptic correctly identified a real gap: essentially none of the supporting human-disease literature is about this locus's actual lead variant (rs2943516). The gene's best-replicated human disease signal — the promoter variant rs35705950 — is IPF-specific and explicitly shown NOT to associate with COPD (Goos et al., PMID 35651878). rs2943516 itself has no dedicated functional characterization in the literature found by either the researcher or the skeptic's independent search. This locus also sits in an unusually gene-dense, pleiotropic interval where TOLLIP independently carries its own well-replicated IPF risk alleles (Noth et al., PMID 24429156), raising a genuine alternative hypothesis that part of this "COPD" GWAS signal could reflect IPF/ILD phenotype overlap in biobank-based COPD case ascertainment rather than pure emphysema/airflow-obstruction biology — a possibility this evidence base cannot rule out.</p>
 <p><strong>Runner-up: TOLLIP.</strong> TOLLIP has real, COPD-specific, smoking-conditional mechanistic evidence at the gene level (Agraval et al., PMID 40056974: cigarette smoke epigenetically suppresses TOLLIP in COPD lungs, impairing antiviral defense) and the highest Open Targets aggregate genetic_association score of the three genes. But its locus-specific case is weaker than MUC5B's: it was not the top L2G gene at the GWAS credible set, its colocalization evidence comes from a skin (not lung) eQTL — exactly the pattern expected from LD/gene-density rather than causal specificity at this interval — and no dedicated TOLLIP COPD genetic-association paper (case-control or otherwise) was found in PubMed at all; its dominant human genetics is IPF.</p>
 <p><strong>What would resolve the tie:</strong> (1) direct functional characterization of rs2943516 (or a lung-tissue eQTL/sQTL/pQTL specifically implicating either MUC5B or TOLLIP expression, ideally in airway epithelium rather than skin); (2) fine-mapping or colocalization repeated in a COPD cohort with ILD/IPF cases rigorously excluded, to test whether the signal survives removal of possible IPF-phenotype contamination; (3) a dedicated TOLLIP COPD case-control genetic-association study, which currently does not exist in the literature searched.</p>
 <p><strong>BRSK2 is not competitive</strong> at this locus on current evidence (lowest Open Targets aggregate score, not top L2G anywhere, no pulmonary/immune/smoking-behavior literature), though red-team-skeptic flagged this dismissal as reached via an incomplete search (BRSK2's AMPK-family autophagy/inflammatory-signaling biology, PMID 41258112, was not explored until after critique, and even that citation is non-pulmonary breast-cancer cell-line evidence). This does not change the ranking but is noted as a residual thoroughness caveat for the study team.</p>
 <p>This is a recommendation for the study team to weigh, not a final determination — verify independently before acting on it, especially given the WEAKENED verdicts on both top candidates.</p>
 
+        </div>
+    </div>
 </body>
 </html>

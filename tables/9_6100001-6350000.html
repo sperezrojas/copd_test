@@ -1,384 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>9_6100001-6350000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 9:6,100,001-6,350,000 (nearest gene IL33)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-96100001-6350000-nearest-gene-il33">Evidence table — locus 9:6,100,001-6,350,000 (nearest gene IL33)</h1>
-<p>Lead variant: rs2095044 (9:6,192,796, intergenic, VEP nearest gene GTF3AP1 — a processed
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-96100001-6350000-nearest-gene-il33">Evidence table — locus 9:6,100,001-6,350,000 (nearest gene IL33)</h1><div class="summary"><p>Lead variant: rs2095044 (9:6,192,796, intergenic, VEP nearest gene GTF3AP1 — a processed
 pseudogene). Internal pipeline candidates: nearest gene = IL33; PoPS prioritized = IL33.
 Credible set is entirely non-coding (upstream/downstream/intronic/intergenic; no
 missense or splice variants), split between variants nearest the GTF3AP1 pseudogene and
 variants nearest/within IL33 itself. Only two protein-coding genes overlap the ~250kb
 locus window: IL33 and TPD52L3 (the latter at the extreme edge, unflagged by any
 prioritization method, no credible-set variant assigned, no lung-relevant literature —
-not carried into the table below as a genuine candidate).</p>
-<p>Only citations with a VERIFIED verdict from citation-verifier are included below. Two
+not carried into the table below as a genuine candidate).</p><p>Only citations with a VERIFIED verdict from citation-verifier are included below. Two
 citations returned CLAIM_MISMATCH and are excluded from the table — see the audit
 appendix (<code>audits/9_6100001-6350000_audit.md</code>) for full detail and how they were
-corrected/removed from the narrative.</p>
-<table>
+corrected/removed from the narrative.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -391,31 +75,31 @@ corrected/removed from the narrative.</p>
 </thead>
 <tbody>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Genetic association (asthma)</td>
-<td>GABRIEL consortium GWAS: rs1342326 (this locus's own credible-set variant, PIP=0.055) flanking IL33 genome-wide significant for asthma (P=9×10⁻¹⁰); discussion frames IL33/IL1RL1 as mediating &quot;communication of epithelial damage to the adaptive immune system.&quot;</td>
+<td>GABRIEL consortium GWAS: rs1342326 (this locus's own credible-set variant, PIP=0.055) flanking IL33 genome-wide significant for asthma (P=9×10⁻¹⁰); discussion frames IL33/IL1RL1 as mediating "communication of epithelial damage to the adaptive immune system."</td>
 <td>Moffatt et al. 2010, NEJM, PMID 20860503 / DOI 10.1056/NEJMoa0906312</td>
-<td>CONTESTED (asthma, not COPD, evidence — see synthesis)</td>
+<td><span class="tag-warning">CONTESTED</span> (asthma, not COPD, evidence — see synthesis)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Genetic association (asthma onset)</td>
 <td>Confirms 9p24/IL33 as genome-wide-significant locus for asthma onset age, skewed toward childhood onset; two independent signals upstream of IL33.</td>
 <td>Sarnowski et al. 2016, JACI, PMID 27130862 / DOI 10.1016/j.jaci.2016.03.018</td>
-<td>CONTESTED (asthma-specific)</td>
+<td><span class="tag-warning">CONTESTED</span> (asthma-specific)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Genetic association (COPD, general)</td>
 <td>Large UK Biobank + ICGC COPD GWAS (82 loci) reports 14 COPD risk loci genetically shared with asthma or pulmonary fibrosis, establishing that such asthma-COPD locus sharing is a known general phenomenon. Caveat: verifier could not confirm IL33/9p24 is itself named among the specific 14 shared loci in the accessible text — do not read this citation as direct proof IL33 is one of the 14.</td>
 <td>Sakornsakolpat et al. 2019, Nat Genet, PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
-<td>CONTESTED (general context only, not IL33-specific confirmation)</td>
+<td><span class="tag-warning">CONTESTED</span> (general context only, not IL33-specific confirmation)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Genetic association (asthma, eosinophils)</td>
 <td>Two independent IL33 signals (rs992969, rs4008366) associated with blood eosinophilia/eosinophilic asthma but NOT with FEV1, FEV1/FVC, atopy, or asthma age of onset; eQTL for IL33 in bronchial epithelium/HBECs (not whole lung); IL33 overexpression in HBECs reduced cell viability/ROS-capturing capacity without affecting barrier function.</td>
 <td>Ketelaar et al. 2020, JACI, PMID 32442646 / DOI 10.1016/j.jaci.2020.04.051</td>
@@ -423,7 +107,7 @@ corrected/removed from the narrative.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Pulmonary function (negative, asthma cohort)</td>
 <td>TH2 pathway genes (IL13, TSLP, IL33, IL1RL1) conferring asthma susceptibility were NOT associated with lung function in an asthma-focused lung-function GWAS.</td>
 <td>Li X et al. 2013, JACI, PMID 23541324 / DOI 10.1016/j.jaci.2013.01.051</td>
@@ -431,7 +115,7 @@ corrected/removed from the narrative.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Pulmonary function (negative, pediatric asthma)</td>
 <td>IL33 SNPs did not associate with any clinical phenotype tested (FEV1%, bronchial hyperresponsiveness, severity, skin-prick positivity) after multiple-testing correction in a UK pediatric asthma family cohort.</td>
 <td>Tulah et al. 2013, BMC Med Genet, PMID 24066901 / DOI 10.1186/1471-2350-14-100</td>
@@ -439,15 +123,15 @@ corrected/removed from the narrative.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Genetic association + clinical trial (COPD-specific)</td>
 <td>IL33 loss-of-function variants associated with REDUCED COPD risk; gain-of-function IL33/IL1RL1 variants associated with INCREASED COPD risk (exome-wide analysis, independent of the GWAS locus). Phase 2a anti-IL-33 (itepekimab) trial: all-comers primary endpoint (annualized exacerbation rate) NOT met; prespecified subgroup showed significant benefit (reduced exacerbations, improved FEV1) in FORMER smokers only, none in current smokers.</td>
 <td>Rabe et al. 2021, Lancet Respir Med, PMID 34302758 / DOI 10.1016/S2213-2600(21)00167-3</td>
-<td>CONTESTED — strongest COPD-specific human-genetic evidence at this locus, but clinical benefit confined to former smokers suggests smoking-history-dependent modulation rather than a clean, smoking-independent COPD mechanism</td>
+<td><span class="tag-warning">CONTESTED</span> — strongest COPD-specific human-genetic evidence at this locus, but clinical benefit confined to former smokers suggests smoking-history-dependent modulation rather than a clean, smoking-independent COPD mechanism</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Genetic association (COPD, negative)</td>
 <td>Meta-analysis of 78 candidate-gene studies across 12 cytokine genes found IL33 SNPs were NOT among the variants significantly associated with COPD risk (only TNF-α rs1800629, TGFB1 rs6957, IL13 rs1800925, IL6 rs1800796 were significant).</td>
 <td>Masjedy et al. 2023, Cytokine, PMID 37703677 / DOI 10.1016/j.cyto.2023.156352</td>
@@ -455,15 +139,15 @@ corrected/removed from the narrative.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Genetic association (COPD, positive, small)</td>
 <td>rs928413 (this locus's own credible-set variant, PIP=0.00057) minor (G) allele associated with increased COPD susceptibility (allele OR 2.04, dominant OR 2.08) in a small Chinese Han case-control study (160 cases/123 controls).</td>
 <td>Xu et al. 2020, J Int Med Res, PMID 33292049 / DOI 10.1177/0300060520962340</td>
-<td>WEAKENED (small, single-ethnicity, unreplicated)</td>
+<td><span class="tag-warning">WEAKENED</span> (small, single-ethnicity, unreplicated)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Genetic association (COPD, negative)</td>
 <td>IL-33 SNP rs7044343 showed no significant association with COPD in a case-control study (111 cases/116 controls).</td>
 <td>Masood et al. 2025, J Appl Genet, PMID 41193663 / DOI 10.1007/s13353-025-01016-9</td>
@@ -471,23 +155,23 @@ corrected/removed from the narrative.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Genetic association (allergic rhinitis, not COPD)</td>
 <td>IL33 polymorphisms rs928413 and rs1342326 (both this locus's credible-set variants) associated with increased hay fever risk and reduced circulating CD4+CD25+FOXP3+ regulatory T cells in the PASTURE/EFRAIM birth cohort.</td>
 <td>Schröder et al. 2016, Pediatr Allergy Immunol, PMID 27171815 / DOI 10.1111/pai.12597</td>
-<td>CONTESTED (allergic-rhinitis phenotype, not COPD)</td>
+<td><span class="tag-warning">CONTESTED</span> (allergic-rhinitis phenotype, not COPD)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Genetic/bioinformatic (asthma)</td>
 <td>Translational analysis of moderate-to-severe asthma GWAS signals into candidate causal genes; asthma/eosinophilic traits are the strongest associated traits for this class of loci overall; IL33 discussed in an interaction/colocalization context.</td>
 <td>Portelli et al. 2021, Front Allergy, PMID 35386986 / DOI 10.3389/falgy.2021.738741</td>
-<td>CONTESTED (asthma-focused context)</td>
+<td><span class="tag-warning">CONTESTED</span> (asthma-focused context)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Mechanistic (smoking effect on IL-33)</td>
 <td>Cigarette smoke extract reduced IL-33 release from bronchial epithelial cells (increased intracellular retention) via TLR4-related mechanisms; mini-BAL fluid from smokers showed reduced IL-33 concentrations.</td>
 <td>Pace et al. 2014, Biochim Biophys Acta, PMID 24931101 / DOI 10.1016/j.bbadis.2014.06.009</td>
@@ -495,7 +179,7 @@ corrected/removed from the narrative.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Mechanistic (smoking effect on IL-33, COPD lung tissue)</td>
 <td>Across 8 independent bulk RNA-seq datasets, IL33 expression lower in current smokers vs former/never smokers, increased upon smoking cessation; single-cell RNA-seq shows IL33 predominantly in resting basal airway epithelial cells, decreasing with smoke-driven basal-cell differentiation; IL-33 protein lower in lung tissue from current vs former smokers WITH COPD specifically.</td>
 <td>Faiz et al. 2023, Am J Respir Crit Care Med, PMID 37708400 / DOI 10.1164/rccm.202210-1881OC</td>
@@ -503,23 +187,23 @@ corrected/removed from the narrative.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Mechanistic (emphysema, mouse, protective)</td>
 <td>IL-33-knockout mice showed significantly GREATER emphysematous changes than wild-type after elastase and cigarette-smoke-extract challenge (endogenous IL-33 protective at homeostatic baseline), with lower BAL hepatocyte growth factor in IL-33-KO mice.</td>
 <td>Morichika et al. 2021, Respir Res, PMID 33992109 / DOI 10.1186/s12931-021-01705-z</td>
-<td>CONTESTED — directly opposite direction of effect vs. Gimenes et al. below; unresolved contradiction, not smoothed over</td>
+<td><span class="tag-warning">CONTESTED</span> — directly opposite direction of effect vs. Gimenes et al. below; unresolved contradiction, not smoothed over</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Mechanistic (emphysema, mouse, pathogenic during viral exacerbation)</td>
 <td>In an elastase/cigarette-smoke mouse COPD model, rhinovirus infection increased IL-33 and MMP12, acting through the ST2/IL-33 axis to drive IFN-γ/CXCL-10 production and recruit CD11b+/CD11c+ macrophages and CD8+ T cells; ST2 neutralization attenuated MMP12 and prevented emphysema progression.</td>
 <td>Gimenes et al. 2019, Clin Sci (Lond), PMID 30952808 / DOI 10.1042/CS20181088</td>
-<td>CONTESTED — directly opposite direction of effect vs. Morichika et al. above; unresolved contradiction, not smoothed over</td>
+<td><span class="tag-warning">CONTESTED</span> — directly opposite direction of effect vs. Morichika et al. above; unresolved contradiction, not smoothed over</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Mechanistic (eosinophilic COPD endotype)</td>
 <td>ST2+ ILC2s and IL-5+ ILC2s significantly elevated in induced sputum specifically in eosinophilic COPD (vs non-eosinophilic COPD and healthy smokers), correlating with sputum eosinophil percentage.</td>
 <td>Królak-Nowak et al. 2024, Adv Respir Med, PMID 39452061 / DOI 10.3390/arm92050039</td>
@@ -527,7 +211,7 @@ corrected/removed from the narrative.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Mechanistic (ACO/eosinophilic-COPD in vitro)</td>
 <td>Multi-omics study: IL-33 (combined with TNF-α, IL-5, IFN-γ) induces the specific inflammatory eosinophil signature seen in ACO/eosinophilic-COPD patients in vitro.</td>
 <td>Sunata et al. 2024, Front Immunol, PMID 39439801 / DOI 10.3389/fimmu.2024.1445769</td>
@@ -535,15 +219,15 @@ corrected/removed from the narrative.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Mechanistic (epithelial IL-33 release, COPD vs asthma)</td>
-<td>IL-33 was only &quot;sparsely detected&quot; in airway epithelial air-liquid-interface culture subnatants across COPD, asthma, and control groups (not a robust discriminator); COPD cultures showed a &quot;mixed&quot; T1/T2 signature rather than asthma's uniform T2-high signature. (Note: the paper's IL-25 finding is a disease-discriminating signal; TSLP levels were similar across groups and do NOT show a disease-associated pattern — correcting the original researcher claim that both IL-25 and TSLP discriminated.)</td>
+<td>IL-33 was only "sparsely detected" in airway epithelial air-liquid-interface culture subnatants across COPD, asthma, and control groups (not a robust discriminator); COPD cultures showed a "mixed" T1/T2 signature rather than asthma's uniform T2-high signature. (Note: the paper's IL-25 finding is a disease-discriminating signal; TSLP levels were similar across groups and do NOT show a disease-associated pattern — correcting the original researcher claim that both IL-25 and TSLP discriminated.)</td>
 <td>Vernisse et al. 2023, Eur J Immunol, PMID 36793156 / DOI 10.1002/eji.202250101</td>
 <td>SUPPORTED (as corrected) — evidence for genuinely mixed, non-Th2-exclusive COPD inflammatory profile</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Mechanistic (structural remodeling/fibrocytes)</td>
 <td>Circulating fibrocytes expressing the IL-33 receptor (sST2L) significantly increased in COPD patients vs controls; ST2L+/activated (α-SMA+) fibrocytes accumulated in airway/alveolar walls in COPD patients and murine models.</td>
 <td>Yao et al. 2026, Sci Rep, PMID 42297864 / DOI 10.1038/s41598-026-56766-1</td>
@@ -551,7 +235,7 @@ corrected/removed from the narrative.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Mechanistic (review)</td>
 <td>Narrative review: IL-33 levels elevated in serum/BALF/lungs across multiple inflammatory lung diseases including COPD; role in damage signaling, repair and regeneration of lungs.</td>
 <td>Gaurav &amp; Poole 2021, J Asthma, PMID 34928757 / DOI 10.1080/02770903.2021.2020815</td>
@@ -559,7 +243,7 @@ corrected/removed from the narrative.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL33</td>
+<td class="gene">IL33</td>
 <td>Mechanistic (receptor biology)</td>
 <td>Functional receptor (IL1RL1/ST2) signaling assays show different proteolytically-cleaved IL-33 isoforms activate IL1RL1 with differing potency, modulated by asthma-risk IL1RL1 haplotypes.</td>
 <td>Portelli et al. 2024, Clin Exp Allergy, PMID 39301832 / DOI 10.1111/cea.14562</td>
@@ -567,21 +251,21 @@ corrected/removed from the narrative.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GTF3AP1</td>
+<td class="gene">GTF3AP1</td>
 <td>Absence of evidence</td>
-<td>Confirmed processed pseudogene (Ensembl ENSG00000237274); exact-term PubMed search for &quot;GTF3AP1&quot; returned zero results — no functional, expression, disease-association, or mechanistic literature exists.</td>
+<td>Confirmed processed pseudogene (Ensembl ENSG00000237274); exact-term PubMed search for "GTF3AP1" returned zero results — no functional, expression, disease-association, or mechanistic literature exists.</td>
 <td>PubMed search (no publication to cite — absence-of-evidence finding)</td>
-<td>HOLDS as &quot;correctly deprioritized,&quot; but rests on absence-of-evidence/relative-plausibility, not a dispositive colocalization study vs. IL33</td>
+<td><span class="tag-hold">HOLDS</span> as "correctly deprioritized," but rests on absence-of-evidence/relative-plausibility, not a dispositive colocalization study vs. IL33</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="excluded-from-table-see-audit-appendix-for-full-detail">Excluded from table (see audit appendix for full detail)</h2>
 <ul>
 <li>Li H et al. 2026, PMID 41592539 (CLAIM_MISMATCH — cited variant rs2428305 is in KIAA1217, not IL33; P-value also misstated)</li>
 <li>Vernisse et al. 2023, PMID 36793156, TSLP-specific portion of the original claim (CLAIM_MISMATCH on the TSLP sub-claim only; the paper itself is retained above with a corrected claim, since the IL-33/IL-25/mixed-T1-T2 portions were verified)</li>
 </ul>
-<hr>
+<hr/>
 <h2 id="open-targets-summary-structured-database-lookup--not-verified-literature-not">Open Targets summary (structured database lookup — NOT verified literature; not</h2>
 <p>routed through citation-verifier or red-team-skeptic)</p>
 <p><strong>IL33 (ENSG00000137033):</strong></p>
@@ -601,11 +285,11 @@ Targets; IL33 is consistently the top L2G gene (scores 0.73–0.79) across nearl
 them. The overwhelming majority of these 111 studies are asthma, eosinophil count/
 measurement, allergic rhinitis/hayfever, nasal polyps, chronic rhinosinusitis, wheeze,
 and asthma-medication-use traits. One study is a direct pulmonary-function GWAS:
-&quot;Lung function (FEV1/FVC)&quot; (GCST007080), IL33 L2G score 0.747. COPD-adjacent (not pure
-COPD case-control) phenotypes with IL33 as top L2G gene: FinnGen &quot;Asthma/COPD&quot; combined
-phenotype (score 0.781), &quot;Chronic lower respiratory diseases&quot; ICD J40-J47 (0.738–0.755),
-&quot;Chronic bronchitis&quot; (0.775), &quot;Obstructive chronic bronchitis&quot; (0.735–0.756). No pure
-&quot;chronic obstructive pulmonary disease&quot; case-control study appears among these 111
+"Lung function (FEV1/FVC)" (GCST007080), IL33 L2G score 0.747. COPD-adjacent (not pure
+COPD case-control) phenotypes with IL33 as top L2G gene: FinnGen "Asthma/COPD" combined
+phenotype (score 0.781), "Chronic lower respiratory diseases" ICD J40-J47 (0.738–0.755),
+"Chronic bronchitis" (0.775), "Obstructive chronic bronchitis" (0.735–0.756). No pure
+"chronic obstructive pulmonary disease" case-control study appears among these 111
 credible sets — the locus's COPD signal is only visible via composite/proxy phenotypes
 and via the separate disease-association score above, not via a dedicated COPD GWAS
 credible set with its own L2G run at this exact variant.</li>
@@ -622,7 +306,7 @@ independent function.</li>
 <p><strong>TPD52L3:</strong> not queried in Open Targets (not flagged by any internal prioritization
 method, no credible-set variant assigned, ruled out by the researcher on gene-enumeration
 and literature-absence grounds before reaching the Open Targets stage).</p>
-<hr>
+<hr/>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>IL33 — confidence: MODERATE.</strong></p>
 <p>IL33 is, with high confidence, the correct functionally-implicated gene at this locus
@@ -642,7 +326,7 @@ eosinophilic-COPD endotype) is genuinely contested, per the red-team-skeptic's c
 <li>The Open Targets L2G pattern at this exact variant is overwhelmingly asthma/allergy/
 eosinophil-trait dominated; zero pure COPD case-control studies appear among the 111
 indexed credible sets, and the best COPD-adjacent signal is a combined FinnGen
-&quot;Asthma/COPD&quot; phenotype — exactly the kind of comorbidity-conflated endpoint this
+"Asthma/COPD" phenotype — exactly the kind of comorbidity-conflated endpoint this
 pipeline's smoking/phenotyping prior warns about.</li>
 <li>All three verified primary-literature spirometry studies (Ketelaar 2020, Li 2013, Tulah
 2013) found NO IL33-FEV1/FEV1-FVC association, all within asthma cohorts; the only
@@ -667,7 +351,7 @@ variant cited (rs2428305) is in KIAA1217, not IL33 — and has been removed from
 evidence base entirely; it should not be read as supporting an IL33-ACO link.</li>
 </ul>
 <p>Runner-up: none within this locus — GTF3AP1 and TPD52L3 are both essentially ruled out.
-The real &quot;competing hypothesis&quot; here is not a different gene but a different mechanism:
+The real "competing hypothesis" here is not a different gene but a different mechanism:
 IL33's association with COPD may be substantially attributable to (a) comorbid/overlapping
 asthma phenotyping in COPD GWAS cohorts (misclassification/ACO), and (b) a genuine but
 minority eosinophilic-COPD endotype that is itself Th2-skewed, rather than to a distinct,
@@ -677,9 +361,11 @@ independent colocalization/L2G run at this variant, restricted to spirometricall
 COPD without physician-diagnosed asthma; and a mechanistic study directly reconciling the
 opposite-direction emphysema mouse phenotypes (homeostatic-protective vs.
 exacerbation-pathogenic). Absent that, IL33 is the best-supported single gene call at this
-locus, but the specific claim &quot;this locus drives COPD via IL33&quot; should be qualified as
-&quot;drives COPD-adjacent/eosinophilic-endotype/ACO-overlap phenotypes via IL33, with a
-smoking-history-dependent component,&quot; not treated as clean, COPD-specific causal biology.</p>
+locus, but the specific claim "this locus drives COPD via IL33" should be qualified as
+"drives COPD-adjacent/eosinophilic-endotype/ACO-overlap phenotypes via IL33, with a
+smoking-history-dependent component," not treated as clean, COPD-specific causal biology.</p>
 
+        </div>
+    </div>
 </body>
 </html>

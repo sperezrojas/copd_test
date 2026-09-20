@@ -1,384 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>8_129150001-129400000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 8:129,150,001-129,400,000 (nearest gene GSDMC; lead variant rs10095076)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-8129150001-129400000-nearest-gene-gsdmc-lead-variant-rs10095076">Evidence table — Locus 8:129,150,001-129,400,000 (nearest gene GSDMC; lead variant rs10095076)</h1>
-<p>Candidate genes evaluated: <strong>GSDMC</strong> (nearest gene, FLAMES-prioritized; protein-coding;
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-8129150001-129400000-nearest-gene-gsdmc-lead-variant-rs10095076">Evidence table — Locus 8:129,150,001-129,400,000 (nearest gene GSDMC; lead variant rs10095076)</h1><div class="summary"><p>Candidate genes evaluated: <strong>GSDMC</strong> (nearest gene, FLAMES-prioritized; protein-coding;
 physically ~350 kb outside this locus interval/credible set), <strong>CCDC26</strong> (lncRNA gene body
 that fully spans the locus interval and contains essentially the entire ~40-variant
 credible set, including the lead variant rs10095076, PIP=0.706, intronic), and
 <strong>LINC00977</strong> (ABC-prioritized; confirmed via Ensembl/Open Targets to be a synonym
 resolving to the identical gene record as CCDC26, ENSG00000229140 — treated as one gene
-below, &quot;CCDC26/LINC00977&quot;).</p>
-<p>Only citations with a clean <strong>VERIFIED</strong> verdict from citation-verifier are included below.
+below, "CCDC26/LINC00977").</p><p>Only citations with a clean <strong>VERIFIED</strong> verdict from citation-verifier are included below.
 Citations verified as RETRACTED/NOT_FOUND/CLAIM_MISMATCH, or verified-but-with-unresolved
-claim details (&quot;NOT_FOUND (specific claim unverifiable)&quot;), are excluded from this table and
+claim details ("NOT_FOUND (specific claim unverifiable)"), are excluded from this table and
 listed instead in the audit appendix (<code>audits/8_129150001-129400000_audit.md</code>), along with
-the red-team-skeptic's CONTESTED verdicts and reasoning.</p>
-<table>
+the red-team-skeptic's CONTESTED verdicts and reasoning.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -391,7 +75,7 @@ the red-team-skeptic's CONTESTED verdicts and reasoning.</p>
 </thead>
 <tbody>
 <tr>
-<td>GSDMC / CCDC26 (locus-level)</td>
+<td class="gene">GSDMC / CCDC26 (locus-level)</td>
 <td>Statistical genetics — reference lung-function GWAS</td>
 <td>Reports 279 lung-function GWAS signals in 400,102 individuals of European ancestry, which strongly predict COPD in independent populations; this locus's specific presence among the 279 signals was NOT confirmed by the researcher (abstract-level check only, no full supplementary-table cross-reference performed)</td>
 <td>Shrine et al. 2019, Nat Genet. PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
@@ -399,85 +83,85 @@ the red-team-skeptic's CONTESTED verdicts and reasoning.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GSDMC / CCDC26 (locus-level)</td>
+<td class="gene">GSDMC / CCDC26 (locus-level)</td>
 <td>Statistical genetics — reference COPD GWAS</td>
-<td>Reports 82 COPD loci from UK Biobank + ICGC; this locus's specific presence among the 82 loci was NOT confirmed by the researcher (abstract/metadata-level check only, exact &quot;82 loci&quot; figure and full locus list not independently verified by citation-verifier either)</td>
+<td>Reports 82 COPD loci from UK Biobank + ICGC; this locus's specific presence among the 82 loci was NOT confirmed by the researcher (abstract/metadata-level check only, exact "82 loci" figure and full locus list not independently verified by citation-verifier either)</td>
 <td>Sakornsakolpat et al. 2019, Nat Genet. PMID 30804561, DOI 10.1038/s41588-018-0342-2</td>
 <td>Same open verification gap as above</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GSDMC</td>
+<td class="gene">GSDMC</td>
 <td>Inflammatory/immune — bioinformatic transcriptomic (correlative, not mechanistic)</td>
-<td>GSDMC is one of 8 up-regulated &quot;pyroptosis-related genes&quot; (CASP4, CASP5, CHMP7, GZMB, IL1B, AIM2, CASP6, GSDMC) differentially expressed in COPD small airway epithelium (GEO datasets, WGCNA), entering a gene module correlated with COPD immune-environment changes</td>
+<td>GSDMC is one of 8 up-regulated "pyroptosis-related genes" (CASP4, CASP5, CHMP7, GZMB, IL1B, AIM2, CASP6, GSDMC) differentially expressed in COPD small airway epithelium (GEO datasets, WGCNA), entering a gene module correlated with COPD immune-environment changes</td>
 <td>Liu, Huang, Xu 2023, BMC Pulm Med. PMID 37194062, DOI 10.1186/s12890-023-02408-5</td>
-<td>CONTESTED (gene-level verdict; skeptic notes this is correlative/bioinformatic, not causal/mechanistic, and is one of the few claims about GSDMC that survived verification intact)</td>
+<td><span class="tag-warning">CONTESTED</span> (gene-level verdict; skeptic notes this is correlative/bioinformatic, not causal/mechanistic, and is one of the few claims about GSDMC that survived verification intact)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GSDMC</td>
+<td class="gene">GSDMC</td>
 <td>Mechanistic/structural — non-lung, foundational GSDM-family biology</td>
-<td>GSDMC is expressed in differentiating/differentiated gastric epithelial cells and functions as a growth-inhibitory (&quot;tumor suppressor-like&quot;) gene in gastric cancer cell colony-formation assays, distinct from GSDMB's growth-promoting behavior</td>
+<td>GSDMC is expressed in differentiating/differentiated gastric epithelial cells and functions as a growth-inhibitory ("tumor suppressor-like") gene in gastric cancer cell colony-formation assays, distinct from GSDMB's growth-promoting behavior</td>
 <td>Saeki et al. 2009, Genes Chromosomes Cancer. PMID 19051310, DOI 10.1002/gcc.20636</td>
-<td>CONTESTED (gene-level); establishes baseline epithelial-differentiation biology only — not lung-specific, not disease-genetic evidence</td>
+<td><span class="tag-warning">CONTESTED</span> (gene-level); establishes baseline epithelial-differentiation biology only — not lung-specific, not disease-genetic evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GSDMC</td>
+<td class="gene">GSDMC</td>
 <td>Oncology — alternative-hypothesis / disease-association context (non-COPD)</td>
 <td>GSDM-family genes (GSDMC among them) correlate with CD4+/CD8+ T-cell, neutrophil, macrophage, and dendritic-cell infiltration in gastric cancer (bioinformatic TCGA/GEO analysis)</td>
 <td>Xu et al. 2024, Braz J Med Biol Res. PMID 39607202, DOI 10.1590/1414-431X2024e13817</td>
-<td>CONTESTED (gene-level); cited by researcher/skeptic as reinforcing that GSDMC's best-established human-disease role is oncological, not pulmonary — cautionary/alternative-hypothesis evidence, not COPD-supportive</td>
+<td><span class="tag-warning">CONTESTED</span> (gene-level); cited by researcher/skeptic as reinforcing that GSDMC's best-established human-disease role is oncological, not pulmonary — cautionary/alternative-hypothesis evidence, not COPD-supportive</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CCDC26 / LINC00977</td>
+<td class="gene">CCDC26 / LINC00977</td>
 <td>Statistical genetics — oncology (non-COPD)</td>
 <td>rs4295627 (a CCDC26 intronic variant) replicated as associated with glioma risk in a pooled US case-control study (357 cases / 822 controls)</td>
 <td>Wang et al. 2011, Am J Epidemiol. PMID 21920947, DOI 10.1093/aje/kwr184</td>
-<td>CONTESTED (gene-level); different variant from this locus's lead SNP (rs10095076); demonstrates the CCDC26 gene body's best-replicated disease association is oncological, not COPD</td>
+<td><span class="tag-warning">CONTESTED</span> (gene-level); different variant from this locus's lead SNP (rs10095076); demonstrates the CCDC26 gene body's best-replicated disease association is oncological, not COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CCDC26 / LINC00977</td>
+<td class="gene">CCDC26 / LINC00977</td>
 <td>Statistical genetics — pleiotropy (oncology/hematology, non-COPD)</td>
 <td>CCDC26 glioma-risk alleles show differential distribution in IDH1-mutant vs. IDH2-mutant/IDH-unmutated myeloid malignancies (AML/CML)</td>
 <td>Lasho et al. 2011, Leukemia (letter). PMID 22116548, DOI 10.1038/leu.2011.336</td>
-<td>CONTESTED (gene-level); extends the region's pleiotropy into leukemia, still no COPD/lung link</td>
+<td><span class="tag-warning">CONTESTED</span> (gene-level); extends the region's pleiotropy into leukemia, still no COPD/lung link</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CCDC26 / LINC00977</td>
+<td class="gene">CCDC26 / LINC00977</td>
 <td>Mechanistic — regulatory DNA (non-COPD, but directly relevant precedent for interpreting this locus)</td>
 <td>The region's flagship characterized glioma-risk variant, rs55705857 (within the CCDC26 gene body, a DIFFERENT variant from this locus's lead SNP rs10095076; exact LD relationship to this locus not confirmed this session), shows baseline enhancer activity specifically on the MYC promoter (~1.4 Mb away), with the risk allele further increasing enhancer activity in vitro; CCDC26 RNA itself was rarely expressed and did not differ by genotype; no somatic mutations/copy-number differences were found. Authors conclude the causal mechanism is long-range enhancer-driven MYC deregulation, not CCDC26 transcript function</td>
 <td>Oktay et al. 2016, Sci Rep. PMID 27282637, DOI 10.1038/srep27569</td>
-<td>CONTESTED (gene-level); red-team-skeptic identifies this as the single most important piece of evidence in the whole dossier, arguing it is a verified, on-point precedent that DNA elements within the CCDC26 gene body in this region act via distal long-range enhancer mechanisms rather than through the CCDC26 transcript itself — direct contesting evidence against a &quot;CCDC26-as-effector-gene&quot; interpretation</td>
+<td><span class="tag-warning">CONTESTED</span> (gene-level); red-team-skeptic identifies this as the single most important piece of evidence in the whole dossier, arguing it is a verified, on-point precedent that DNA elements within the CCDC26 gene body in this region act via distal long-range enhancer mechanisms rather than through the CCDC26 transcript itself — direct contesting evidence against a "CCDC26-as-effector-gene" interpretation</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CCDC26 / LINC00977</td>
+<td class="gene">CCDC26 / LINC00977</td>
 <td>Statistical genetics — unrelated trait (non-COPD, included for completeness)</td>
 <td>A genome-wide-significant variant, rs78144262, near LINC00977 was identified among ten loci in a schizophrenia GWAS in a small Taiwanese cohort (137 patients / 26,129 controls)</td>
 <td>Huang et al. 2024, Medicina. PMID 39202552, DOI 10.3390/medicina60081271</td>
-<td>CONTESTED (gene-level); unrelated to lung/COPD biology; included only for completeness per researcher</td>
+<td><span class="tag-warning">CONTESTED</span> (gene-level); unrelated to lung/COPD biology; included only for completeness per researcher</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CCDC26 / LINC00977</td>
+<td class="gene">CCDC26 / LINC00977</td>
 <td>Expression — oncology/hematology (non-lung, included for completeness)</td>
 <td>LINC00977 is one of several lncRNAs differentially expressed (RT-PCR validated) in pediatric T-cell acute lymphoblastic leukemia versus controls</td>
 <td>Sharma et al. 2024, Cancer Cell Int. PMID 38336706, DOI 10.1186/s12935-024-03255-y</td>
-<td>CONTESTED (gene-level); unrelated to lung/COPD biology; included only for completeness per researcher</td>
+<td><span class="tag-warning">CONTESTED</span> (gene-level); unrelated to lung/COPD biology; included only for completeness per researcher</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
 <ul>
 <li><strong>GSDMC</strong> (ENSG00000147697, protein-coding): Not LoF-constrained in gnomAD (o/e=0.881,
 90% CI 0.681–1.150; missense o/e=1.059; synonymous o/e=1.064). COPD disease-association
-score in Open Targets = 0.014, contributed <strong>entirely</strong> by the &quot;literature&quot; datatype —
-<strong>zero contribution from the &quot;genetic_association&quot; datatype</strong>. GSDMC's strongest
+score in Open Targets = 0.014, contributed <strong>entirely</strong> by the "literature" datatype —
+<strong>zero contribution from the "genetic_association" datatype</strong>. GSDMC's strongest
 genetic-association-backed disease signals are musculoskeletal (osteoarthritis hip 0.475,
 back pain 0.468, vertebral column disorder 0.429, total hip arthroplasty 0.410,
 musculoskeletal system disorder 0.399) and oncological (CNS cancer/glioma 0.429–0.392,
@@ -513,13 +197,13 @@ excluded from this tool alone. Full detail: <code>evidence_tables/_status/8_1291
 survives scrutiny as a clear pulmonary-biology explanation for this signal — both were
 independently marked CONTESTED by red-team-skeptic (see rows above and
 <code>audits/8_129150001-129400000_audit.md</code>). I am naming GSDMC as the marginally better-supported
-pick for the study team's consideration, but this should be read as &quot;least-bad, most-testable
-candidate,&quot; not a confident causal call, for the following reasons:</p>
+pick for the study team's consideration, but this should be read as "least-bad, most-testable
+candidate," not a confident causal call, for the following reasons:</p>
 <ul>
 <li><strong>For GSDMC:</strong> it is the nearest protein-coding gene and the FLAMES-prioritized gene, and
 it retains the only verified, COPD-tissue-specific correlative evidence in this dossier
 — Liu, Huang, Xu 2023 (PMID 37194062), which places GSDMC among 8 up-regulated
-&quot;pyroptosis-related genes&quot; in a WGCNA-derived module in COPD small airway epithelium.
+"pyroptosis-related genes" in a WGCNA-derived module in COPD small airway epithelium.
 Gasdermin-family pore-forming pyroptosis biology is mechanistically plausible for
 inflammatory/cell-death programs relevant to COPD in principle. However, three
 independent attempts to substantiate a more specific GSDMC-COPD mechanistic pathway
@@ -559,5 +243,7 @@ either GSDMC or CCDC26/LINC00977 — this was flagged by red-team-skeptic as an 
 alternative hypothesis not pursued by the researcher in this pass.</li>
 </ul>
 
+        </div>
+    </div>
 </body>
 </html>

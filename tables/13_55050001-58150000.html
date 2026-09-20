@@ -1,376 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>13_55050001-58150000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 13:55,050,001-58,150,000 (GRCh38)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-1355050001-58150000-grch38">Evidence table — locus 13:55,050,001-58,150,000 (GRCh38)</h1>
-<p><strong>Lead variant:</strong> rs9316807 (13:55,507,257, intergenic_variant, MODIFIER; PIP=0.0249)
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-1355050001-58150000-grch38">Evidence table — locus 13:55,050,001-58,150,000 (GRCh38)</h1><div class="summary"><p><strong>Lead variant:</strong> rs9316807 (13:55,507,257, intergenic_variant, MODIFIER; PIP=0.0249)
 <strong>Credible set:</strong> 394 variants (ABF fine-mapping); no missense, splice-donor, or splice-acceptor variants present (confirmed by VEP consequence review of the full set — all intergenic/intronic/non-coding-transcript/upstream/downstream). Credible-set variants span ~13:55.1-56.3 Mb.
 <strong>Candidate genes from internal pipeline:</strong> nearest gene = LOC124903233; FLAMES/MAGMA/PoPS/ABC all NA (no computational gene-prioritization support for this locus).
-<strong>Orchestrator note:</strong> This 3.1 Mb window is almost entirely a gene desert (pseudogenes, uncharacterized lncRNAs, an uncharacterized paralog cluster PRR20A-E). Positional review identified only 3 plausible candidate genes, researched below: LOC124903233 (the pipeline's own nearest-gene call, though its coordinates fall ~63 kb outside the stated window), LINC02335 (heaviest positional overlap with the credible set), and PCDH17 (the only conventional protein-coding gene physically in the window, but &gt;1.3 Mb from the nearest credible-set variant).</p>
-<table>
+<strong>Orchestrator note:</strong> This 3.1 Mb window is almost entirely a gene desert (pseudogenes, uncharacterized lncRNAs, an uncharacterized paralog cluster PRR20A-E). Positional review identified only 3 plausible candidate genes, researched below: LOC124903233 (the pipeline's own nearest-gene call, though its coordinates fall ~63 kb outside the stated window), LINC02335 (heaviest positional overlap with the credible set), and PCDH17 (the only conventional protein-coding gene physically in the window, but &gt;1.3 Mb from the nearest credible-set variant).</p></div>
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -383,47 +67,47 @@ code {
 </thead>
 <tbody>
 <tr>
-<td>LOC124903233</td>
+<td class="gene">LOC124903233</td>
 <td>Literature search</td>
-<td>No PubMed literature exists under this gene symbol; no functional, genetic, or disease association identified. Gene coordinates (13:54,940,092-54,986,718) fall ~63 kb outside the stated locus window (55,050,001-58,150,000). Ensembl/Open Targets annotate biotype as lncRNA; NCBI RefSeq annotates as &quot;uncharacterized protein&quot; — unresolved conflict.</td>
-<td>n/a (absence of literature; PubMed query &quot;LOC124903233&quot; 2026-09-11)</td>
-<td>CONTESTED (skeptic: not a viable candidate — no literature, coordinates fall outside stated window, unresolved biotype; possible upstream locus-boundary/nearest-gene QC issue)</td>
+<td>No PubMed literature exists under this gene symbol; no functional, genetic, or disease association identified. Gene coordinates (13:54,940,092-54,986,718) fall ~63 kb outside the stated locus window (55,050,001-58,150,000). Ensembl/Open Targets annotate biotype as lncRNA; NCBI RefSeq annotates as "uncharacterized protein" — unresolved conflict.</td>
+<td>n/a (absence of literature; PubMed query "LOC124903233" 2026-09-11)</td>
+<td><span class="tag-warning">CONTESTED</span> (skeptic: not a viable candidate — no literature, coordinates fall outside stated window, unresolved biotype; possible upstream locus-boundary/nearest-gene QC issue)</td>
 <td>n/a — no citation to verify</td>
 </tr>
 <tr>
-<td>LINC02335</td>
+<td class="gene">LINC02335</td>
 <td>Literature search</td>
 <td>No PubMed literature exists under this gene symbol; no expression, functional, or disease-association data found. Candidacy rests entirely on physical overlap: dozens of credible-set variants (all individually PIP &lt;0.0003, intronic/non-coding-transcript, MODIFIER impact) fall within this lncRNA's introns.</td>
-<td>n/a (absence of literature; PubMed query &quot;LINC02335&quot; 2026-09-11)</td>
-<td>CONTESTED (skeptic: positional overlap only; zero functional/expression/disease literature to support any biological role, COPD-relevant or otherwise)</td>
+<td>n/a (absence of literature; PubMed query "LINC02335" 2026-09-11)</td>
+<td><span class="tag-warning">CONTESTED</span> (skeptic: positional overlap only; zero functional/expression/disease literature to support any biological role, COPD-relevant or otherwise)</td>
 <td>n/a — no citation to verify</td>
 </tr>
 <tr>
-<td>PCDH17</td>
+<td class="gene">PCDH17</td>
 <td>Genetic association (neuropsychiatric, off-target phenotype)</td>
 <td>Large multi-cohort study (29,557 cases/32,056 controls) reports PCDH17-region SNPs as genome-wide-significant risk loci for major mood disorders (bipolar disorder, MDD); risk allele associated with impaired cognition, altered amygdala volume/function, increased PCDH17 mRNA in postmortem/bipolar brain tissue, and reduced dendritic spine density on overexpression.</td>
 <td>Chang H et al., Mol Psychiatry 2017, PMID 28070120, DOI 10.1038/mp.2016.231</td>
-<td>VERIFIED (citation accurate); WEAKENED at locus level — real biology, but CNS/neurodevelopmental, not pulmonary; no mechanistic bridge to airflow obstruction established</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED (citation accurate);  at locus level — real biology, but CNS/neurodevelopmental, not pulmonary; no mechanistic bridge to airflow obstruction established</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PCDH17</td>
+<td class="gene">PCDH17</td>
 <td>Mechanistic/structural (neurodevelopmental)</td>
 <td>PCDH17 regulates dendritic-spine actin cytoskeleton via ROCK2/LIMK1/cofilin signaling and modulates emotional (anxiety/depression-like) behavior in mice; hippocampal, not pulmonary.</td>
 <td>Yu L et al., Zool Res 2024, PMID 38747058, PMC PMC11188600, DOI 10.24272/j.issn.2095-8137.2024.055</td>
-<td>VERIFIED (citation accurate); WEAKENED at locus level — mechanistic follow-up of the mood-disorder finding above, still CNS-only, no lung relevance</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED (citation accurate);  at locus level — mechanistic follow-up of the mood-disorder finding above, still CNS-only, no lung relevance</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PCDH17</td>
+<td class="gene">PCDH17</td>
 <td>Immune/biomarker</td>
 <td>Cross-sectional study (n=370): PCDH17 CpG-site (cg03865667) methylation significantly lower in rheumatoid arthritis patients' peripheral blood vs. healthy controls and other autoimmune-disease comparators; negatively correlates with CRP.</td>
 <td>Zhao F et al., Sci Rep 2025, PMID 40410297, PMC PMC12102364, DOI 10.1038/s41598-025-02236-z</td>
-<td>VERIFIED (citation accurate); WEAKENED/noted as weak — peripheral-blood biomarker in a non-COPD autoimmune disease, no cell-type or program specificity to any COPD-relevant inflammatory pathway (skeptic: &quot;should be read as noise/weak signal&quot;)</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED (citation accurate); /noted as weak — peripheral-blood biomarker in a non-COPD autoimmune disease, no cell-type or program specificity to any COPD-relevant inflammatory pathway (skeptic: "should be read as noise/weak signal")</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PCDH17</td>
+<td class="gene">PCDH17</td>
 <td>Oncology (tumor suppressor)</td>
 <td>PCDH17 acts as a prognostic marker (with p53/Beclin-1) in urinary bladder cancer outcome.</td>
 <td>Chen L et al., J Cancer 2019, PMID 31772653, DOI 10.7150/jca.37335</td>
@@ -431,7 +115,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PCDH17</td>
+<td class="gene">PCDH17</td>
 <td>Oncology (tumor suppressor)</td>
 <td>PCDH17 increases colorectal cancer sensitivity to 5-fluorouracil via apoptosis and JNK-dependent autophagic cell death.</td>
 <td>Liu S et al., Signal Transduct Target Ther 2019, PMID 31815010, DOI 10.1038/s41392-019-0087-0</td>
@@ -439,7 +123,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PCDH17</td>
+<td class="gene">PCDH17</td>
 <td>Oncology (tumor suppressor)</td>
 <td>PCDH17 downregulation correlates with elevated angiogenesis/hypoxia markers in breast cancer.</td>
 <td>El-Benhawy SA et al., Cancer Biomark 2021, PMID 33896826, DOI 10.3233/CBM-201593</td>
@@ -447,7 +131,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PCDH17</td>
+<td class="gene">PCDH17</td>
 <td>Oncology (tumor suppressor)</td>
 <td>PCDH17 promoter methylation studied in Egyptian epithelial ovarian cancer cohort; methylation elevated in cases vs. controls.</td>
 <td>Elsharkawi SM et al., BMC Cancer 2023, PMID 36698136, DOI 10.1186/s12885-023-10549-3</td>
@@ -455,7 +139,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PCDH17</td>
+<td class="gene">PCDH17</td>
 <td>Oncology (degradation mechanism)</td>
 <td>NEDD4 ubiquitinates and degrades PCDH17 protein, promoting hepatocellular carcinoma cell proliferation via ERK signaling.</td>
 <td>Liu Z et al., J Biol Chem 2023, PMID 38145746, DOI 10.1016/j.jbc.2023.105593</td>
@@ -463,7 +147,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PCDH17</td>
+<td class="gene">PCDH17</td>
 <td>Oncology (tumor suppressor)</td>
 <td>PCDH17 overexpression reduces lenvatinib resistance in liver cancer by inducing ferroptosis.</td>
 <td>Yang J et al., Exp Cell Res 2025, PMID 40049312, DOI 10.1016/j.yexcr.2025.114495</td>
@@ -471,7 +155,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PCDH17</td>
+<td class="gene">PCDH17</td>
 <td>Oncology (context-dependent oncogene)</td>
 <td>PCDH17 is upregulated in Ewing sarcoma, associated with worse survival; depletion suppresses malignant phenotypes in vitro (pro-tumorigenic role in this context).</td>
 <td>Zhou L et al., Discov Oncol 2026, PMID 42047911, DOI 10.1007/s12672-026-05093-y</td>
@@ -479,15 +163,15 @@ code {
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="excluded-from-table-above-see-audit-appendix-for-full-detail">Excluded from table above (see audit appendix for full detail)</h2>
 <ul>
 <li>PMID 30863170 (He Y et al., PCDH17 nasopharyngeal carcinoma tumor-suppressor claim) — <strong>RETRACTED</strong>, excluded from evidence table.</li>
-<li>PMID 32066663 (Niarchou et al., UK Biobank dietary-intake GWAS) — cited by researcher as the sole external phenotype association for lead variant rs9316807 (&quot;fish- and plant-related diet&quot; trait, female-specific) — <strong>CLAIM_MISMATCH</strong>, excluded from evidence table. This leaves the lead variant with zero verified external phenotype associations.</li>
+<li>PMID 32066663 (Niarchou et al., UK Biobank dietary-intake GWAS) — cited by researcher as the sole external phenotype association for lead variant rs9316807 ("fish- and plant-related diet" trait, female-specific) — <strong>CLAIM_MISMATCH</strong>, excluded from evidence table. This leaves the lead variant with zero verified external phenotype associations.</li>
 </ul>
-<hr>
+<hr/>
 <h2 id="open-targets-summary-structured-database-lookup--not-verified-literature-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT verified literature; did not go through citation-verifier or red-team-skeptic)</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -500,15 +184,15 @@ code {
 </thead>
 <tbody>
 <tr>
-<td>LOC124903233</td>
+<td class="gene">LOC124903233</td>
 <td>ENSG00000277047</td>
-<td>lncRNA (per Open Targets/Ensembl; conflicts with NCBI's &quot;uncharacterized protein&quot; label)</td>
+<td>lncRNA (per Open Targets/Ensembl; conflicts with NCBI's "uncharacterized protein" label)</td>
 <td>None — <code>associatedDiseases</code> query returned count=0, no rows</td>
 <td>None found</td>
 <td>Not available (empty <code>geneticConstraint</code> array)</td>
 </tr>
 <tr>
-<td>LINC02335</td>
+<td class="gene">LINC02335</td>
 <td>ENSG00000278630</td>
 <td>lncRNA</td>
 <td>None — <code>associatedDiseases</code> query returned count=0, no rows</td>
@@ -516,7 +200,7 @@ code {
 <td>Not available (empty <code>geneticConstraint</code> array; expected for a lncRNA)</td>
 </tr>
 <tr>
-<td>PCDH17</td>
+<td class="gene">PCDH17</td>
 <td>ENSG00000118946</td>
 <td>protein_coding</td>
 <td>None — <code>associatedDiseases</code> query returned count=0, no rows</td>
@@ -524,9 +208,9 @@ code {
 <td>LoF: score 0.9998, oe=0.295 (90% CI 0.208-0.425) — strongly constrained, top decile. Missense: score 1.74, oe=0.883 (0.845-0.922) — mildly constrained. Synonymous: score 0.083, oe=0.994 (0.934-1.058) — neutral, as expected.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Data completeness note:</strong> Open Targets returned zero COPD-specific disease-association evidence (L2G or otherwise) for all three genes queried, including the pipeline's own designated nearest gene and the gene most heavily overlapped by the credible set. This absence is itself informative: no existing Open Targets genetic-evidence integration supports any gene at this locus for COPD.</p>
-<hr>
+<hr/>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>Gene: none — INSUFFICIENT confidence for any single gene.</strong></p>
 <p>This locus lacks a credible candidate gene under the evidence gathered. None of the three genes investigated has support that would justify a HIGH, MODERATE, or even a confident LOW call:</p>
@@ -542,5 +226,7 @@ code {
 <p><strong>What would resolve this:</strong> lung-tissue eQTL or promoter-capture Hi-C/chromatin-interaction data connecting credible-set variants to LINC02335, PCDH17, or any other gene; a colocalization analysis against lung-function (FEV1/FEV1-FVC) GWAS; or resolution of the LOC124903233 boundary/annotation discrepancy upstream. Absent that, this locus should be reported to the study team as <strong>not resolved to a single credible candidate gene</strong>, rather than assigned to PCDH17 or any other gene by default.</p>
 <p><strong>Confidence: INSUFFICIENT.</strong></p>
 
+        </div>
+    </div>
 </body>
 </html>

@@ -1,374 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>8_73700001-74000000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 8:73,700,001-74,000,000 (nearest gene UBE2W)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-873700001-74000000-nearest-gene-ube2w">Evidence table — Locus 8:73,700,001-74,000,000 (nearest gene UBE2W)</h1>
-<p><strong>Lead variant:</strong> rs34485744 (8:73,768,054, GRCh38, intergenic). <strong>Credible set:</strong> 31 variants (ABF fine-mapping), ~85% of cumulative PIP mass in UBE2W introns/3'UTR/downstream region; remainder intergenic/non-coding-transcript; one very-low-PIP variant (rs35687905, PIP=0.0016) annotated to the pseudogene GYG1P1. <strong>Candidate genes tagged by internal pipeline:</strong> UBE2W (nearest gene), TCEB1/ELOC (FLAMES), KCNB2 (PoPS). <strong>Additional candidates identified by mandatory region enumeration (not tagged by any internal method):</strong> LY96 (MD-2), STAU2, TMEM70.</p>
-<p>Only citations with a citation-verifier verdict of VERIFIED are included below. Two citations returned CLAIM_MISMATCH and are excluded — see the audit appendix (<code>audits/8_73700001-74000000_audit.md</code>) for details.</p>
-<table>
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-873700001-74000000-nearest-gene-ube2w">Evidence table — Locus 8:73,700,001-74,000,000 (nearest gene UBE2W)</h1><div class="summary"><p><strong>Lead variant:</strong> rs34485744 (8:73,768,054, GRCh38, intergenic). <strong>Credible set:</strong> 31 variants (ABF fine-mapping), ~85% of cumulative PIP mass in UBE2W introns/3'UTR/downstream region; remainder intergenic/non-coding-transcript; one very-low-PIP variant (rs35687905, PIP=0.0016) annotated to the pseudogene GYG1P1. <strong>Candidate genes tagged by internal pipeline:</strong> UBE2W (nearest gene), TCEB1/ELOC (FLAMES), KCNB2 (PoPS). <strong>Additional candidates identified by mandatory region enumeration (not tagged by any internal method):</strong> LY96 (MD-2), STAU2, TMEM70.</p><p>Only citations with a citation-verifier verdict of VERIFIED are included below. Two citations returned CLAIM_MISMATCH and are excluded — see the audit appendix (<code>audits/8_73700001-74000000_audit.md</code>) for details.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -381,124 +65,124 @@ code {
 </thead>
 <tbody>
 <tr>
-<td>UBE2W</td>
+<td class="gene">UBE2W</td>
 <td>Structural (tissue expression)</td>
 <td>Polyclonal antibody shows UBE2W widely expressed across mouse tissues (lung, brain, muscle, heart, liver, spleen, kidney, testis), with highest/most stage-specific expression in adult testis; no lung-specific enrichment or functional data.</td>
 <td>PMID 18616160 (DOI attached to this record by the verifier is likely an artifact — see audit)</td>
-<td>WEAKENED (gene-level)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>UBE2W</td>
+<td class="gene">UBE2W</td>
 <td>Immune (innate antiviral)</td>
 <td>UBE2W primes the antiviral cytosolic antibody receptor TRIM21 for K63-linked polyubiquitination (with UBE2N/UBE2V2), required for TRIM21's antibody-virus neutralization and NF-κB innate immune signaling.</td>
 <td>PMID 26150489 / DOI 10.1073/pnas.1507534112</td>
-<td>WEAKENED (gene-level)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>UBE2W</td>
+<td class="gene">UBE2W</td>
 <td>Immune (innate antiviral)</td>
 <td>UBE2W is required by the antiviral restriction factor TRIM5α (auto-monoubiquitination anchoring K63 chains) for retroviral restriction.</td>
 <td>PMID 26101372 / DOI 10.15252/embj.201490361</td>
-<td>WEAKENED (gene-level)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>UBE2W</td>
+<td class="gene">UBE2W</td>
 <td>Immune (tangential mechanistic)</td>
 <td>The <em>Legionella pneumophila</em> effector LubX can activate UBE2W in vitro among several other E2 enzymes, characterizing UBE2W's promiscuity as a bacterial-virulence-factor E2 substrate.</td>
 <td>PMID 26146184 / DOI 10.1016/j.str.2015.05.020</td>
-<td>WEAKENED (gene-level)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>UBE2W</td>
+<td class="gene">UBE2W</td>
 <td>Immune (tangential, oncology)</td>
 <td>In breast cancer, UBE2W expression correlates with tumor-infiltrating immune cell composition and DNA mismatch-repair/BRCA1/2-pathway gene expression.</td>
 <td>PMID 33931024 / DOI 10.1186/s12885-021-08234-4</td>
-<td>WEAKENED (gene-level)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>UBE2W</td>
+<td class="gene">UBE2W</td>
 <td>Structural (proteostasis background)</td>
 <td>UBE2W is an atypical E2 conjugating enzyme that works with the E3 ligase CHIP to ubiquitinate Hsp70/Hsc70 substrates (general cell-biology background, not lung-specific).</td>
 <td>PMID 26010904 / DOI 10.1371/journal.pone.0128240</td>
-<td>WEAKENED (gene-level)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCEB1 / ELOC</td>
+<td class="gene">TCEB1 / ELOC</td>
 <td>Structural (background)</td>
 <td>Mutational survey found no somatic HIF1A or CUL2 mutations in 47 lung cancers examined (nor other cancer types surveyed).</td>
 <td>PMID 20078552 / DOI 10.1111/j.1600-0463.2009.02550.x</td>
-<td>WEAKENED, bordering null</td>
+<td><span class="tag-warning">WEAKENED</span>, bordering null</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCEB1 / ELOC</td>
+<td class="gene">TCEB1 / ELOC</td>
 <td>Structural (background review)</td>
 <td>Review of hereditary kidney cancer genetics describing the VHL-Elongin B/C-Cul2 E3 ligase complex's role in HIF regulation; notes Birt-Hogg-Dubé syndrome (a different gene, FLCN) as a cause of pulmonary cysts — not an ELOC-specific finding.</td>
 <td>PMID 15448018 / DOI 10.1158/1078-0432.CCR-050013</td>
-<td>WEAKENED, bordering null</td>
+<td><span class="tag-warning">WEAKENED</span>, bordering null</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KCNB2</td>
+<td class="gene">KCNB2</td>
 <td>Structural (neuronal physiology)</td>
 <td>Kv2.2 (KCNB2), with Kv2.1, forms ER-plasma membrane junctions in neurons and is modulated by AMIGO auxiliary subunits.</td>
 <td>PMID 34137443 / DOI 10.1242/jcs.256339</td>
-<td>CONTESTED (physical coordinate mismatch with locus — see audit)</td>
+<td><span class="tag-warning">CONTESTED</span> (physical coordinate mismatch with locus — see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KCNB2</td>
+<td class="gene">KCNB2</td>
 <td>Structural (neuronal physiology)</td>
 <td>PKC phosphorylation of Kv2.2 (KCNB2) regulates cortical pyramidal neuron excitability.</td>
 <td>PMID 34542799 / DOI 10.1007/s12264-021-00773-x</td>
-<td>CONTESTED (physical coordinate mismatch with locus — see audit)</td>
+<td><span class="tag-warning">CONTESTED</span> (physical coordinate mismatch with locus — see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GYG1P1</td>
+<td class="gene">GYG1P1</td>
 <td>Statgen (negative-control confirmation)</td>
-<td>Confirms that a differentially-expressed gastric-cancer gene, &quot;glycogenin 2 pseudogene 1,&quot; is GYG2P1 — a <em>different</em> pseudogene from the locus's GYG1P1 — i.e., this paper is NOT evidence about GYG1P1. Cited only to rule out an initial ambiguous hit.</td>
+<td>Confirms that a differentially-expressed gastric-cancer gene, "glycogenin 2 pseudogene 1," is GYG2P1 — a <em>different</em> pseudogene from the locus's GYG1P1 — i.e., this paper is NOT evidence about GYG1P1. Cited only to rule out an initial ambiguous hit.</td>
 <td>PMID 31793655 / DOI 10.3892/ijo.2019.4885</td>
-<td>HOLDS (correctly deprioritized, non-informative)</td>
+<td><span class="tag-hold">HOLDS</span> (correctly deprioritized, non-informative)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LY96 (MD-2)</td>
+<td class="gene">LY96 (MD-2)</td>
 <td>Statgen + immune (gene-environment interaction)</td>
 <td>In 408 agricultural workers, an MD-2/LY96 SNP (rs10808798 T/C) significantly modified the association between occupational endotoxin exposure and wheeze (recessive-model interaction, p=0.05-0.006, marginal after multiple-comparison correction); CD14 SNPs similarly modified the endotoxin-FEV1 relationship. Not a COPD case-control/population GWAS finding; SNP not confirmed to be in this locus's credible set.</td>
 <td>PMID 21389010 / DOI 10.1136/oem.2010.060038</td>
-<td>CONTESTED (compelling biology, no fine-mapping link to this locus — see audit)</td>
+<td><span class="tag-warning">CONTESTED</span> (compelling biology, no fine-mapping link to this locus — see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LY96 (MD-2)</td>
+<td class="gene">LY96 (MD-2)</td>
 <td>Structural + immune (mechanistic, disease model)</td>
 <td>MD2 (LY96) is upregulated in lungs of COPD patients and cigarette-smoke-exposed mice; MD2 knockout alleviates airway inflammation and pulmonary ferroptosis in cigarette-smoke-induced COPD and LPS-induced acute-exacerbation-COPD mouse models; MD2 forms a TLR4/MyD88 complex in cigarette-smoke-extract-stimulated bronchial epithelial cells (BEAS-2B), driving NF-κB-mediated inflammation and ferroptosis.</td>
 <td>PMID 41177411 / DOI 10.1016/j.bbadis.2025.168099</td>
-<td>CONTESTED (compelling biology, no fine-mapping link to this locus; also directionally conflicts with PMID 26068048 below — see audit)</td>
+<td><span class="tag-warning">CONTESTED</span> (compelling biology, no fine-mapping link to this locus; also directionally conflicts with PMID 26068048 below — see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LY96 (MD-2)</td>
+<td class="gene">LY96 (MD-2)</td>
 <td>Structural + immune (human ex vivo)</td>
 <td>In human surgical airway specimens, MD2 protein is <em>reduced</em> in epithelium/submucosa of large (not small) airways in current-smoker COPD patients and smokers without COPD vs. non-smoker controls; cigarette smoke extract dose-dependently increases TLR4 but decreases MD2 in bronchial epithelial cells (16-HBE) in vitro — opposite direction of effect from PMID 41177411 above.</td>
 <td>PMID 26068048 / DOI 10.1007/s11010-015-2476-1</td>
-<td>CONTESTED (compelling biology, no fine-mapping link to this locus; directionally conflicts with PMID 41177411 above — see audit)</td>
+<td><span class="tag-warning">CONTESTED</span> (compelling biology, no fine-mapping link to this locus; directionally conflicts with PMID 41177411 above — see audit)</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
 <ul>
 <li><strong>UBE2W (ENSG00000104343):</strong> gnomAD constraint — syn score 0.22 (oe 0.94), mis score 2.04 (oe 0.50, mildly missense-constrained), lof score 0.001 (oe 0.80, <strong>not</strong> LoF-constrained). Aggregated disease association: 187 diseases scored, <strong>none is COPD (MONDO_0005002) or FEV1/FEV1-FVC (EFO_0004314)</strong>. Top associations: neurodegenerative disease (0.35), diabetes mellitus/T2D (0.32/0.24), insomnia (0.25), obesity (0.19), familial hypercholesterolemia (0.17). At the lead variant (8_73768054_G_A / rs34485744), Open Targets indexes 14 GWAS/eQTL credible sets — all for body mass index (8 cohorts), insomnia, HDL cholesterol (2 cohorts), type 2 diabetes, or obesity — <strong>none for COPD or lung function</strong>. UBE2W is the consistent top L2G gene in every one of these (score 0.50-0.72), beating the only other scored gene, STAU2 (0.06-0.15).</li>
 <li><strong>TCEB1 / ELOC (ENSG00000154582):</strong> gnomAD lof score 0.985 (oe 0, essentially fully LoF-intolerant). 95 diseases scored, none COPD/FEV1. Top associations: HIV infectious disease (0.59), metabolic disease (0.29), hypercholesterolemia (0.22), renal cell carcinoma/VHL disease (0.10/0.05/0.02). Not among L2G predictions at the lead variant.</li>
-<li><strong>KCNB2 (ENSG00000182674):</strong> gnomAD lof score 1.0 (oe 0.23, strongly LoF-constrained). 161 diseases scored, none COPD/FEV1 directly, but &quot;smoking initiation&quot; (EFO_0005670) scores 0.405 (rank 8/161) — a database-level flag consistent with this pipeline's smoking-mediation prior, not corroborated by any literature found by the researcher. Also low scores for respiratory tract infectious disorder, childhood-onset asthma, lung carcinoma. Not among L2G predictions at the lead variant. <strong>Physical coordinates (chr8:72,537,220-72,938,349, per Ensembl REST) do not overlap the stated locus window (8:73,700,001-74,000,000) at all</strong> — see audit.</li>
+<li><strong>KCNB2 (ENSG00000182674):</strong> gnomAD lof score 1.0 (oe 0.23, strongly LoF-constrained). 161 diseases scored, none COPD/FEV1 directly, but "smoking initiation" (EFO_0005670) scores 0.405 (rank 8/161) — a database-level flag consistent with this pipeline's smoking-mediation prior, not corroborated by any literature found by the researcher. Also low scores for respiratory tract infectious disorder, childhood-onset asthma, lung carcinoma. Not among L2G predictions at the lead variant. <strong>Physical coordinates (chr8:72,537,220-72,938,349, per Ensembl REST) do not overlap the stated locus window (8:73,700,001-74,000,000) at all</strong> — see audit.</li>
 <li><strong>GYG1P1 (ENSG00000251633):</strong> no Open Targets data available at all (constraint metrics empty, 0 disease associations) — consistent with this being a processed pseudogene with no independent functional annotation.</li>
 <li><strong>LY96 / STAU2 / TMEM70:</strong> not queried in Open Targets during the structured lookup stage (identified later, via the researcher's mandatory region-enumeration step); no L2G/constraint data pulled for these genes in this pipeline run.</li>
 </ul>
@@ -508,5 +192,7 @@ code {
 <p><strong>Why not the alternatives:</strong> TCEB1/ELOC has no credible-set variant annotated to it, is not among Open Targets L2G predictions at the lead variant, and its only literature is generic VHL/HIF-pathway biology dominated by renal cell carcinoma — verdict WEAKENED, bordering null. KCNB2's physical coordinates (confirmed via Ensembl REST) do not overlap this locus's stated window or any credible-set variant at all (~760kb-1.2Mb gap) — its only claim to inclusion is being named the PoPS-prioritized gene in the input file, which the red-team critique judged a likely pipeline/window-definition discrepancy; verdict CONTESTED, and it should be treated as effectively excluded from this locus pending upstream resolution rather than as a genuine competing candidate. LY96 (MD-2) has by far the most compelling COPD- and cigarette-smoke-specific mechanistic literature of any gene considered here (verified papers showing TLR4/MD2/MyD88 axis perturbation in cigarette-smoke-exposed mouse and human COPD airway tissue), and is a <strong>runner-up worth flagging explicitly</strong> — but it was not identified by any of the four internal prioritization methods, no credible-set variant maps to it, its physical overlap with the stated window is only the first ~9kb of a 41kb gene at the extreme 3' edge, and the nearest actual credible-set variants sit 120-240kb away with no colocalization or eQTL evidence offered to bridge that gap. Its own mechanistic literature is also internally contradictory on direction of effect (MD2 up in COPD per PMID 41177411 vs. MD2 down in smoker/COPD airway epithelium per PMID 26068048), further weakening confidence in it as a clean story even on its own terms. GYG1P1, STAU2, and TMEM70 have no COPD/lung-relevant literature and are appropriately deprioritized (verdict HOLDS as non-informative).</p>
 <p><strong>What would resolve this:</strong> (1) a COPD-specific or lung-function (FEV1/FEV1-FVC) GWAS colocalization or eQTL-in-lung-tissue analysis directly testing UBE2W vs. LY96 vs. neighboring genes at this credible set; (2) clarification from the upstream pipeline of why KCNB2 was named PoPS-prioritized for a window it does not physically overlap; (3) an independent literature search (not completed in this run due to the red-team-skeptic's search-budget exhaustion) explicitly probing for COPD/smoking-behavior literature on UBE2W and LY96 beyond what was found here; (4) resolution of the directional conflict between the two LY96/MD2 COPD-tissue papers. Absent that, this call should be treated as provisional and low-confidence, not as a settled assignment.</p>
 
+        </div>
+    </div>
 </body>
 </html>

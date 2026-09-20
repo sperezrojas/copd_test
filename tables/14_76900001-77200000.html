@@ -1,391 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>14_76900001-77200000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 14:76,900,001-77,200,000 (nearest gene CIPC)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-1476900001-77200000-nearest-gene-cipc">Evidence table — locus 14:76,900,001-77,200,000 (nearest gene CIPC)</h1>
-<p><strong>Lead variant:</strong> rs204983 (14:77,088,533, PIP=0.39, downstream_gene_variant, no gene=
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-1476900001-77200000-nearest-gene-cipc">Evidence table — locus 14:76,900,001-77,200,000 (nearest gene CIPC)</h1><div class="summary"><p><strong>Lead variant:</strong> rs204983 (14:77,088,533, PIP=0.39, downstream_gene_variant, no gene=
 annotation in the credible set). Second-highest-PIP variant rs204984 (PIP=0.29, same
 consequence, no gene= annotation). Both sit intergenically, ~10-12 kb upstream of CIPC and
 ~2-12 kb downstream of the 3' ends of LINC02288/LINC02289. <strong>No missense, splice-donor, or
 splice-acceptor variant exists in this credible set.</strong> PubMed search found zero
-variant-specific literature for either dominant-PIP variant.</p>
-<p><strong>Candidate genes evaluated:</strong> CIPC (nearest gene), ESRRB (PoPS-prioritized), LINC02289 and
+variant-specific literature for either dominant-PIP variant.</p><p><strong>Candidate genes evaluated:</strong> CIPC (nearest gene), ESRRB (PoPS-prioritized), LINC02289 and
 LINC02288 (credible-set <code>gene=</code> annotations for many low-PIP variants — LINC02288 is also
-the resolved modern identity of the ABC-prioritized placeholder symbol &quot;LOC283575&quot;, per an
+the resolved modern identity of the ABC-prioritized placeholder symbol "LOC283575", per an
 unverified NCBI Gene ID database cross-reference), ZDHHC22 and TMEM63C (additional
 protein-coding genes physically in/near the region, not flagged by any prioritization
 method), and IRF2BPL (<strong>not listed in the original locus-prioritization file</strong> — added
 because Open Targets' locus-to-gene analysis picked it as the consistent top L2G hit across
 many GWAS credible sets overlapping this region, including a directly COPD-relevant
-FEV/FVC-ratio GWAS).</p>
-<p>All 34 citations produced by the researcher were checked by citation-verifier; <strong>all 34
+FEV/FVC-ratio GWAS).</p><p>All 34 citations produced by the researcher were checked by citation-verifier; <strong>all 34
 returned VERIFIED</strong> — there are no rejected (RETRACTED/NOT_FOUND/CLAIM_MISMATCH) citations
 for this locus (see <code>audits/14_76900001-77200000_audit.md</code> for the full record and one
-metadata correction the verifier made).</p>
-<table>
+metadata correction the verifier made).</p></div>
+
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -398,239 +82,239 @@ metadata correction the verifier made).</p>
 </thead>
 <tbody>
 <tr>
-<td>CIPC</td>
+<td class="gene">CIPC</td>
 <td>Statistical genetics (TWAS, non-pulmonary)</td>
 <td>Cross-tissue TWAS (UTMOST) of an ASD GWAS meta-analysis found CIPC significantly associated with ASD at the brain-tissue level</td>
 <td>PMID 33931583 / DOI 10.1038/s41398-021-01378-8</td>
-<td>WEAKENED (see below)</td>
+<td><span class="tag-warning">WEAKENED</span> (see below)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CIPC</td>
+<td class="gene">CIPC</td>
 <td>Structural/immune, class-level analogy (not CIPC itself)</td>
 <td>CRY1/CRY2 double-knockout mice spontaneously develop emphysema-like pathology via impaired alveolar epithelial proliferation, with heightened macrophage LPS responsiveness</td>
 <td>PMID 42239331 / DOI 10.64898/2026.05.19.726266 (bioRxiv preprint, not peer-reviewed)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CIPC</td>
+<td class="gene">CIPC</td>
 <td>Structural/immune, class-level analogy (not CIPC itself)</td>
 <td>BMAL1 knockout mice infected with influenza A show enhanced emphysema, disrupted pulmonary function rhythms, and increased inflammatory/pro-fibrotic responses</td>
 <td>PMID 25923474 / DOI 10.1038/srep09927</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CIPC</td>
+<td class="gene">CIPC</td>
 <td>Structural/immune, class-level review (not CIPC itself)</td>
 <td>Molecular clock components (BMAL1, PER2, REV-ERBα, RORα) regulate immune/inflammatory responses, DNA damage response, senescence, glucocorticoid sensitivity in lung; disrupted by cigarette smoke and chronic airway disease</td>
 <td>PMID 25938935 / DOI 10.1165/rcmb.2014-0476TR</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CIPC</td>
+<td class="gene">CIPC</td>
 <td>Structural/immune, class-level review (not CIPC itself)</td>
 <td>Lung peripheral clocks coordinate airway tone, immune surveillance, inflammatory signaling, epithelial repair, metabolism; clock disruption contributes to COPD, asthma, IPF</td>
 <td>PMID 42093908 / DOI 10.17179/excli2026-9372</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CIPC</td>
+<td class="gene">CIPC</td>
 <td>Structural/immune, class-level review (not CIPC itself)</td>
 <td>Circadian clock dysregulation contributes to chronic inflammation and COPD risk/progression (HIV-comorbidity context)</td>
 <td>PMID 37298092 / DOI 10.3390/ijms24119140</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CIPC</td>
+<td class="gene">CIPC</td>
 <td>Structural, class-level review (not CIPC itself)</td>
 <td>BMAL1/PER1/PER2 oscillation dysregulation linked to autophagy imbalance in COPD pathogenesis</td>
 <td>PMID 34733115 / DOI 10.1155/2021/2689600</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CIPC</td>
+<td class="gene">CIPC</td>
 <td>Structural, class-level review (not CIPC itself)</td>
 <td>Clock components disrupted in COPD/asthma/IPF; regulate airway epithelial immune/DNA-damage responses</td>
 <td>PMID 32344623 / DOI 10.3390/ijms21083013</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CIPC</td>
+<td class="gene">CIPC</td>
 <td>Structural, basic mechanism (cross-species, non-lung)</td>
 <td>Conserved function of the CIPC ortholog as a repressor of CLOCK-CYCLE (mammalian CLOCK-BMAL1) transcription in Drosophila</td>
 <td>PMID 34331859 / DOI 10.1016/j.cub.2021.07.017</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CIPC</td>
+<td class="gene">CIPC</td>
 <td>Functional, non-pulmonary (cancer)</td>
 <td>CIPC overexpression in AML associated with overall survival</td>
 <td>PMID 40700255 / DOI 10.3390/clockssleep7030033</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF2BPL (Open-Targets-elevated, not pipeline-listed)</td>
+<td class="gene">IRF2BPL (Open-Targets-elevated, not pipeline-listed)</td>
 <td>Alternative-explanation literature: NEDAMSS neurodevelopmental disease gene</td>
 <td>32-participant patient-reported survey; truncating variants associate with more severe disease than missense variants</td>
 <td>PMID 42629971 / DOI 10.1002/ajmg.b.70032</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF2BPL</td>
+<td class="gene">IRF2BPL</td>
 <td>Alternative-explanation literature: NEDAMSS</td>
 <td>Disease mutations disrupt IRF2BPL liquid-liquid phase separation, causing aberrant cytoplasmic condensates, nuclear depletion, WNT1 upregulation</td>
 <td>PMID 41760624 / DOI 10.1038/s41467-026-69781-7</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF2BPL</td>
+<td class="gene">IRF2BPL</td>
 <td>Alternative-explanation literature: NEDAMSS</td>
 <td>IRF2BPL is an intronless gene at 14q24.3; NEDAMSS case series/review</td>
 <td>PMID 40184118 / DOI 10.1097/MD.0000000000041078</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF2BPL</td>
+<td class="gene">IRF2BPL</td>
 <td>Alternative-explanation literature: NEDAMSS</td>
 <td>Postmortem neuropathology shows polyglutamine inclusions resembling DRPLA</td>
 <td>PMID 39224955 / DOI 10.1002/mds.29938</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF2BPL</td>
+<td class="gene">IRF2BPL</td>
 <td>Alternative-explanation literature: NEDAMSS</td>
 <td>Systematic review of 32 NEDAMSS cases plus new case; psychiatric/catatonia phenotype overlap</td>
 <td>PMID 39031186 / DOI 10.1007/s00787-024-02522-7</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF2BPL</td>
+<td class="gene">IRF2BPL</td>
 <td>Alternative-explanation literature: NEDAMSS</td>
 <td>Review of 34 known IRF2BPL patients and CRISPR-based therapeutic strategies</td>
 <td>PMID 38903604 / DOI 10.3389/fnins.2024.1426177</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF2BPL</td>
+<td class="gene">IRF2BPL</td>
 <td>Alternative-explanation literature: NEDAMSS</td>
 <td>Zebrafish irf2bpl crispants show reduced body length and spontaneous seizure-like discharges, functionally validating a neurodevelopmental role</td>
 <td>PMID 38481258 / DOI 10.1186/s13023-024-03130-z</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINC02289</td>
+<td class="gene">LINC02289</td>
 <td>Functional, non-pulmonary (tangential)</td>
 <td>LINC02289 one of nine lncRNAs differentially expressed (low) in serum of leishmaniasis patients vs. uninfected controls</td>
 <td>PMID 36379256 / DOI 10.1016/j.actatropica.2022.106738</td>
-<td>HOLDS (as low-priority)</td>
+<td><span class="tag-hold">HOLDS</span> (as low-priority)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINC02288</td>
+<td class="gene">LINC02288</td>
 <td>Functional, non-pulmonary (tangential, immune)</td>
 <td>LINC02288 top upregulated lncRNA in osteoarthritis cartilage; promotes IL-1β-induced chondrocyte apoptosis and pro-inflammatory cytokine production via miR-374a-3p/RTN3</td>
 <td>PMID 33491257 / DOI 10.1002/jgm.3314</td>
-<td>HOLDS (as low-priority)</td>
+<td><span class="tag-hold">HOLDS</span> (as low-priority)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZDHHC22</td>
+<td class="gene">ZDHHC22</td>
 <td>Structural/developmental, non-pulmonary (CNS)</td>
 <td>Zdhhc22 predominantly neuronal, expressed in cortical Cajal-Retzius cells and multiple brain regions</td>
 <td>PMID 41569336 / DOI 10.1007/s00429-026-03075-y</td>
-<td>HOLDS (as low-priority)</td>
+<td><span class="tag-hold">HOLDS</span> (as low-priority)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZDHHC22</td>
+<td class="gene">ZDHHC22</td>
 <td>Functional, non-pulmonary (oncology)</td>
 <td>ZDHHC22 palmitoylates and destabilizes mTOR, restraining breast cancer proliferation and tamoxifen resistance</td>
 <td>PMID 35541896 / DOI 10.7150/ijbs.70544</td>
-<td>HOLDS (as low-priority)</td>
+<td><span class="tag-hold">HOLDS</span> (as low-priority)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZDHHC22</td>
+<td class="gene">ZDHHC22</td>
 <td>Functional, airway cell line (negative result)</td>
 <td>ZDHHC22 broadly expressed in A549/Calu airway cell lines, upregulated by influenza NS1, but knockout did not alter viral hemagglutinin/M2 acylation or replication</td>
 <td>PMID 33629465 / DOI 10.1111/cmi.13322</td>
-<td>HOLDS (negative evidence against a lung role)</td>
+<td><span class="tag-hold">HOLDS</span> (negative evidence against a lung role)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZDHHC22</td>
+<td class="gene">ZDHHC22</td>
 <td>Functional, non-pulmonary (basic enzymology)</td>
 <td>ZDHHC22 palmitoylates CCN3 (secreted neuronal growth-regulatory protein)</td>
 <td>PMID 29287726 / DOI 10.1016/j.bbrc.2017.12.128</td>
-<td>HOLDS (as low-priority)</td>
+<td><span class="tag-hold">HOLDS</span> (as low-priority)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ZDHHC22</td>
+<td class="gene">ZDHHC22</td>
 <td>Functional, non-pulmonary (basic enzymology)</td>
 <td>ZDHHC22 palmitoylates BK potassium channels</td>
 <td>PMID 22399288 / DOI 10.1074/jbc.M111.335547</td>
-<td>HOLDS (as low-priority)</td>
+<td><span class="tag-hold">HOLDS</span> (as low-priority)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMEM63C</td>
+<td class="gene">TMEM63C</td>
 <td>Structural, non-pulmonary (neurodegenerative)</td>
 <td>Biallelic TMEM63C variants cause autosomal recessive hereditary spastic paraplegia via disrupted ER-mitochondria contact site morphology</td>
 <td>PMID 35718349 / DOI 10.1093/brain/awac123</td>
-<td>HOLDS (as low-priority)</td>
+<td><span class="tag-hold">HOLDS</span> (as low-priority)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMEM63C</td>
+<td class="gene">TMEM63C</td>
 <td>Functional, non-pulmonary (renal)</td>
 <td>TGF-β induces TMEM63C expression in podocytes; knockdown alters EMT markers</td>
 <td>PMID 33080601 / DOI 10.1159/000508477</td>
-<td>HOLDS (as low-priority)</td>
+<td><span class="tag-hold">HOLDS</span> (as low-priority)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMEM63C</td>
+<td class="gene">TMEM63C</td>
 <td>Functional, non-pulmonary (renal)</td>
 <td>TMEM63C is a pro-survival factor in podocytes under angiotensin-II stress, NFκB-dependent</td>
 <td>PMID 32750436 / DOI 10.1016/j.lfs.2020.118175</td>
-<td>HOLDS (as low-priority)</td>
+<td><span class="tag-hold">HOLDS</span> (as low-priority)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMEM63C</td>
+<td class="gene">TMEM63C</td>
 <td>Functional, non-pulmonary (oncology bioinformatics)</td>
 <td>TMEM63C listed among a prognostic biomarker gene panel for breast cancer</td>
 <td>PMID 39770537 / DOI 10.3390/ph17121695</td>
-<td>HOLDS (as low-priority)</td>
+<td><span class="tag-hold">HOLDS</span> (as low-priority)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMEM63C</td>
+<td class="gene">TMEM63C</td>
 <td>Functional, non-pulmonary (oncology bioinformatics)</td>
 <td>TMEM63C listed among a prognostic biomarker gene panel for papillary thyroid carcinoma</td>
 <td>PMID 35152572 / DOI 10.1002/cam4.4602</td>
-<td>HOLDS (as low-priority)</td>
+<td><span class="tag-hold">HOLDS</span> (as low-priority)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CIPC / IRF2BPL / ESRRB / ZDHHC22 / TMEM63C</td>
+<td class="gene">CIPC / IRF2BPL / ESRRB / ZDHHC22 / TMEM63C</td>
 <td>Background check (negative finding)</td>
 <td>None of these five candidate genes is named in the abstracts of five major lung-function/COPD GWAS meta-analyses searched</td>
 <td>PMID 23284291; 30061609; 35104449; 39649580; 39509417</td>
@@ -638,13 +322,13 @@ metadata correction the verifier made).</p>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>ESRRB has no citations</strong> — its candidacy rests entirely on a single-method (PoPS)
 statistical flag with zero corroborating Open Targets L2G evidence, zero COPD literature,
 and zero lung-function literature (targeted PubMed searches returned zero hits). The
 skeptic's verdict of HOLDS applies to the researcher's honest characterization of ESRRB as
 weak, not to ESRRB itself as a strong candidate.</p>
-<p><strong>Structural/immune &quot;class-level&quot; caveat (applies to all 9 CIPC rows above marked
+<p><strong>Structural/immune "class-level" caveat (applies to all 9 CIPC rows above marked
 WEAKENED):</strong> These citations are genuine, verified, and do support the claims as stated —
 but every one of them studies BMAL1, CRY1/2, PER1/2, REV-ERBα, or RORα, never CIPC itself.
 Per the red-team-skeptic's critique, CIPC is a peripheral CLOCK-BMAL1-interacting repressor,
@@ -656,7 +340,7 @@ CIPC.</p>
 <p>This section is a <strong>structured database lookup</strong>, not a literature citation — it did not
 go through citation-verifier or red-team-skeptic. Full detail in
 <code>evidence_tables/_status/14_76900001-77200000/opentargets.md</code>.</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -667,57 +351,57 @@ go through citation-verifier or red-team-skeptic. Full detail in
 </thead>
 <tbody>
 <tr>
-<td>CIPC</td>
-<td>COPD disease-association score = 0 (verified against HHIP positive control). Top L2G hit for diastolic blood pressure (0.467); secondary hit (0.13-0.45) in a pleiotropic metabolic/anthropometric credible-set cluster; low L2G (0.078) in a FinnGen &quot;Ever smoker&quot; credible set. <strong>Absent from the L2G list for the one directly pulmonary GWAS credible set found (FEV/FVC ratio, GCST90244094).</strong></td>
+<td class="gene">CIPC</td>
+<td>COPD disease-association score = 0 (verified against HHIP positive control). Top L2G hit for diastolic blood pressure (0.467); secondary hit (0.13-0.45) in a pleiotropic metabolic/anthropometric credible-set cluster; low L2G (0.078) in a FinnGen "Ever smoker" credible set. <strong>Absent from the L2G list for the one directly pulmonary GWAS credible set found (FEV/FVC ratio, GCST90244094).</strong></td>
 <td>Lead variant rs204983/rs204984 credible sets are eQTL-only (blood, muscle, adipose, monocyte), no L2G computed.</td>
 <td>LoF o/e=0.39 (CI 0.25-0.64); missense o/e=0.81; not strongly constrained.</td>
 </tr>
 <tr>
-<td>IRF2BPL (not pipeline-listed)</td>
+<td class="gene">IRF2BPL (not pipeline-listed)</td>
 <td>Not queried directly against COPD as a disease score. Consistent top L2G hit across dozens of GWAS credible sets in this region for metabolic/anthropometric traits AND for FEV/FVC ratio (score 0.533, sole target).</td>
 <td>Same shared credible-set cluster as CIPC (rs10873301, rs11159247, rs2661830).</td>
 <td>LoF o/e=0.34 (CI 0.22-0.54) — moderately LoF-constrained, consistent with its established role as a de novo-intolerant disease gene.</td>
 </tr>
 <tr>
-<td>ESRRB</td>
+<td class="gene">ESRRB</td>
 <td>COPD disease-association score = 0. Never appears in any L2G prediction row for GWAS credible sets overlapping this locus.</td>
 <td>No L2G/coloc evidence found.</td>
 <td>LoF o/e=0.37 (CI 0.25-0.56); missense o/e=0.80.</td>
 </tr>
 <tr>
-<td>LINC02289</td>
+<td class="gene">LINC02289</td>
 <td>COPD disease-association score = 0. Target of numerous eQTL credible sets (muscle, adipose, breast, spleen, blood, neutrophil, brain, iPSC) but never selected as L2G target in any GWAS credible set.</td>
 <td>eQTL-only; no GWAS L2G.</td>
 <td>Not scored (lncRNA).</td>
 </tr>
 <tr>
-<td>LINC02288</td>
+<td class="gene">LINC02288</td>
 <td>COPD disease-association score = 0. eQTL target gene in multiple GTEx tissues; never picked as L2G target even in the diastolic-blood-pressure GWAS credible set whose lead SNP (rs158099) sits in its intron (CIPC/ZDHHC22/IRF2BPL are the L2G hits there instead).</td>
 <td>eQTL-only; no GWAS L2G.</td>
 <td>Not scored (lncRNA).</td>
 </tr>
 <tr>
-<td>LOC283575 (ABC-prioritized)</td>
+<td class="gene">LOC283575 (ABC-prioritized)</td>
 <td>Could not be resolved to an Ensembl target ID via Open Targets <code>search_entities</code>. Researcher's independent NCBI Entrez cross-reference (UNVERIFIED database inference, not literature) resolves Entrez Gene ID 283575 to current symbol <strong>LINC02288</strong> — see LINC02288 row above.</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
 <tr>
-<td>ZDHHC22</td>
+<td class="gene">ZDHHC22</td>
 <td>COPD disease-association score not separately queried; appears only as a secondary L2G hit (0.097) in the diastolic blood pressure credible set, behind CIPC.</td>
 <td>No COPD/pulmonary L2G evidence.</td>
 <td>Not queried.</td>
 </tr>
 <tr>
-<td>TMEM63C</td>
+<td class="gene">TMEM63C</td>
 <td>Not mentioned anywhere in the Open Targets structured context returned for this locus (no credible set or L2G row selected it).</td>
 <td>None found.</td>
 <td>Not queried.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Query mechanics were validated against a known positive-control COPD gene (HHIP,
-ENSG00000164161, association score 0.485) before concluding &quot;no data&quot;/&quot;score=0&quot; for the
+ENSG00000164161, association score 0.485) before concluding "no data"/"score=0" for the
 candidates above — these are genuine absences of curated evidence, not a broken query.</p>
 <h2 id="prioritized-gene-synthesis">Prioritized-gene synthesis</h2>
 <p><strong>Prioritized gene: CIPC</strong>
@@ -734,7 +418,7 @@ downstream_gene_variant with zero variant-specific literature, sitting in an int
 roughly equidistant between CIPC and the 3' ends of LINC02288/LINC02289. Per the
 red-team-skeptic, gene assignment at the lead-variant level is genuinely unresolved, not
 merely under-annotated — nearest-gene status for CIPC is a naming convention here, not a
-demonstrated mechanism, and this is exactly the &quot;LD-block, multiple plausible genes&quot;
+demonstrated mechanism, and this is exactly the "LD-block, multiple plausible genes"
 scenario described in this pipeline's prior #1 guidance.</p>
 <p>CIPC is named the top pick because it is (a) the pipeline's nearest-gene call, (b) a
 CLOCK-BMAL1-interacting circadian repressor sitting within a genomic neighborhood (and,
@@ -787,5 +471,7 @@ this locus is treated as fully resolved. Given all of the above, this pick is ma
 <strong>LOW confidence</strong>, not higher, and the study team should weigh CIPC and IRF2BPL as
 roughly comparably (weakly) supported pending the above follow-up.</p>
 
+        </div>
+    </div>
 </body>
 </html>

@@ -1,370 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>9_14000001-14300000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 9:14,000,001-14,300,000 (nearest gene: NFIB)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
 <h1 id="evidence-table--locus-914000001-14300000-nearest-gene-nfib">Evidence table — Locus 9:14,000,001-14,300,000 (nearest gene: NFIB)</h1>
 <ul>
 <li><strong>Lead variant:</strong> rs6474816 (PIP=0.568, 9:14,076,238, intergenic_variant)</li>
@@ -377,7 +61,7 @@ literature search was required beyond the lead variant per pipeline scope rules;
 PubMed search for rs6474816 itself returned zero literature hits (confirmed
 independently by both the researcher and the citation-verifier).</li>
 </ul>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -390,23 +74,23 @@ independently by both the researcher and the citation-verifier).</li>
 </thead>
 <tbody>
 <tr>
-<td>NFIB</td>
+<td class="gene">NFIB</td>
 <td>Statistical genetics (locus context)</td>
 <td>Large COPD GWAS (35,735 cases/222,076 controls) identifies 82 COPD risk loci (35 new), 13 of the new loci also associated with lung function in SpiroMeta; whether NFIB/9p23 is specifically among the 82 loci, or among the 13 lung-function-replicated new loci, could not be confirmed from the abstract or (in a follow-up independent full-text search) from the indexed article body</td>
 <td>Sakornsakolpat et al., Nat Genet 2019, PMID 30804561, DOI 10.1038/s41588-018-0342-2</td>
-<td>WEAKENED — gene-specific presence in this study's loci list remains unconfirmed despite two independent search attempts; treat as general field context, not locus-specific confirmation</td>
+<td><span class="tag-warning">WEAKENED</span> — gene-specific presence in this study's loci list remains unconfirmed despite two independent search attempts; treat as general field context, not locus-specific confirmation</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NFIB</td>
+<td class="gene">NFIB</td>
 <td>Statistical genetics (locus context)</td>
-<td>Lung-function GWAS in 400,102 individuals defines 279 signals (139 new), generalizable across smokers/never-smokers; whether NFIB/9p23 is among these 279 signals could not be confirmed from the abstract or a follow-up full-text search (zero hits for &quot;NFIB&quot; in indexed article body)</td>
+<td>Lung-function GWAS in 400,102 individuals defines 279 signals (139 new), generalizable across smokers/never-smokers; whether NFIB/9p23 is among these 279 signals could not be confirmed from the abstract or a follow-up full-text search (zero hits for "NFIB" in indexed article body)</td>
 <td>Shrine et al., Nat Genet 2019, PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
-<td>WEAKENED — this is the single most important unresolved question for this locus (independent FEV1/FEV1-FVC support for NFIB) and remains unresolved; combined with Open Targets showing zero FEV1 credible-set evidence for NFIB, absence of confirmation here is itself informative</td>
+<td><span class="tag-warning">WEAKENED</span> — this is the single most important unresolved question for this locus (independent FEV1/FEV1-FVC support for NFIB) and remains unresolved; combined with Open Targets showing zero FEV1 credible-set evidence for NFIB, absence of confirmation here is itself informative</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NFIB</td>
+<td class="gene">NFIB</td>
 <td>Statistical genetics (pleiotropy, ruled-out locus)</td>
 <td>A chromosome 9 FEV1 signal in this smoker-focused GWAS maps to DBH (9q34), a different chr9 locus from NFIB (9p23) — confirms this is unrelated, not a duplicate signal</td>
 <td>Lutz et al., BMC Genetics 2015, PMID 26634245, DOI 10.1186/s12863-015-0299-4</td>
@@ -414,7 +98,7 @@ independently by both the researcher and the citation-verifier).</li>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NFIB</td>
+<td class="gene">NFIB</td>
 <td>Statistical genetics (pleiotropy)</td>
 <td>Frailty-associated SNP rs518054 in the broader 9p21-23 region is in silico annotated to an NFIB enhancer in elderly Ashkenazi Jewish adults</td>
 <td>Sathyan et al., Front Med 2018, PMID 29765957, DOI 10.3389/fmed.2018.00105</td>
@@ -422,7 +106,7 @@ independently by both the researcher and the citation-verifier).</li>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NFIB</td>
+<td class="gene">NFIB</td>
 <td>Statistical genetics (pleiotropy)</td>
 <td>Genome-wide-significant variant rs71321981 in the regulatory region of NFIB (9p22.3) is associated with sciatica susceptibility, replicated in an independent Finnish sample</td>
 <td>Lemmelä et al., PLoS ONE 2016, PMID 27764105, DOI 10.1371/journal.pone.0163877</td>
@@ -430,7 +114,7 @@ independently by both the researcher and the citation-verifier).</li>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NFIB</td>
+<td class="gene">NFIB</td>
 <td>Statistical genetics + functional</td>
 <td>rs7034162 in NFIB is associated with osteosarcoma metastasis; the risk allele lowers NFIB expression, and reduced NFIB increases cell migration/proliferation/colony formation in vitro, with supporting mouse transposon-screen data</td>
 <td>Mirabello et al., Cancer Discovery 2015, PMID 26084801, DOI 10.1158/2159-8290.CD-15-0125</td>
@@ -438,31 +122,31 @@ independently by both the researcher and the citation-verifier).</li>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NFIB</td>
+<td class="gene">NFIB</td>
 <td>Statistical genetics (smoking-mediation question)</td>
-<td>Landmark tobacco/alcohol-use GWAS (566 variants, 406 loci) for initiation, cessation, heaviness; candidate source study for Open Targets' smoking-initiation credible-set signal at NFIB, but whether NFIB/9p23 is specifically named among its loci could not be confirmed from the abstract, and a follow-up independent full-text search found zero hits for &quot;NFIB&quot; in the indexed article body</td>
+<td>Landmark tobacco/alcohol-use GWAS (566 variants, 406 loci) for initiation, cessation, heaviness; candidate source study for Open Targets' smoking-initiation credible-set signal at NFIB, but whether NFIB/9p23 is specifically named among its loci could not be confirmed from the abstract, and a follow-up independent full-text search found zero hits for "NFIB" in the indexed article body</td>
 <td>Liu et al. (GSCAN), Nat Genet 2019, PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
-<td>WEAKENED — could not confirm NFIB is the gene underlying the Open Targets smoking-initiation L2G signal from this or the companion paper below; independent search found rs6474816 itself absent from GWAS Catalog and Europe PMC full text entirely, consistent with it being a fine-mapped credible-set variant rather than an originally reported lead SNP</td>
+<td><span class="tag-warning">WEAKENED</span> — could not confirm NFIB is the gene underlying the Open Targets smoking-initiation L2G signal from this or the companion paper below; independent search found rs6474816 itself absent from GWAS Catalog and Europe PMC full text entirely, consistent with it being a fine-mapped credible-set variant rather than an originally reported lead SNP</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NFIB</td>
+<td class="gene">NFIB</td>
 <td>Statistical genetics (smoking-mediation question)</td>
 <td>Larger, more diverse follow-up tobacco/alcohol-use GWAS (3.4M individuals, 3,823 variants/2,143 loci); another candidate source for the Open Targets smoking-initiation signal at NFIB; NFIB naming not confirmed from abstract or follow-up full-text search (zero hits)</td>
 <td>Saunders et al., Nature 2022, PMID 36477530, DOI 10.1038/s41586-022-05477-4</td>
-<td>WEAKENED — same unresolved attribution issue as above</td>
+<td><span class="tag-warning">WEAKENED</span> — same unresolved attribution issue as above</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NFIB</td>
+<td class="gene">NFIB</td>
 <td>Structural/developmental lung biology</td>
 <td>Nfib-null mice die at birth with severe lung maturation defects: excess proliferation, failed saccularization, reduced Aqp5/Sftpc/Scgb1a1/Foxj1 differentiation markers; mesenchyme-specific conditional knockout (Dermo1-Cre) recapitulates the phenotype and affects ECM/cell-adhesion/FGF-signaling gene expression</td>
 <td>Hsu et al., Dev Biol 2011, PMID 21513708, DOI 10.1016/j.ydbio.2011.04.002</td>
-<td>WEAKENED as COPD evidence specifically — this is complete-knockout fetal/perinatal organogenesis biology, a fundamentally different regime from a common noncoding variant's partial dosage effect on adult airflow obstruction; no mechanistic bridge to adult COPD/emphysema is established</td>
+<td><span class="tag-warning">WEAKENED</span> as COPD evidence specifically — this is complete-knockout fetal/perinatal organogenesis biology, a fundamentally different regime from a common noncoding variant's partial dosage effect on adult airflow obstruction; no mechanistic bridge to adult COPD/emphysema is established</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NFIB</td>
+<td class="gene">NFIB</td>
 <td>Structural/developmental lung biology</td>
 <td>NFIB ChIP-seq in E16.5 mouse lung shows NFIB binds an NFI motif enriched in genes under-expressed in Nfib-knockout lungs; 52 genes are co-regulated by NFIB and the glucocorticoid receptor (Nr3c1), whose knockout produces a similar lung-immaturity phenotype</td>
 <td>Lajoie et al., BMC Genomics 2014, PMID 24661679, DOI 10.1186/1471-2164-15-231</td>
@@ -470,7 +154,7 @@ independently by both the researcher and the citation-verifier).</li>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NFIB</td>
+<td class="gene">NFIB</td>
 <td>Structural/developmental lung biology</td>
 <td>In Igf1-null mice with hypoplastic/immature lungs, Nfib is upregulated (with reduced Klf2/Egr1/Ctgf); IGF1 add-back restores septal remodeling/maturation together with Nfib/Klf2 upregulation; the paper also notes increased inflammatory-marker expression in Igf1-deficient lungs</td>
 <td>Pais et al., PLoS ONE 2013, PMID 24391734, DOI 10.1371/journal.pone.0083028</td>
@@ -478,15 +162,15 @@ independently by both the researcher and the citation-verifier).</li>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NFIB</td>
+<td class="gene">NFIB</td>
 <td>Structural/developmental lung biology</td>
-<td>Reviews the NFI-family knockout literature noting Nfib-deficient mice have lung maturation defects (in addition to forebrain/corpus callosum agenesis); the primary source for the Nfib-knockout lung-lethality phenotype is Steele-Perkins et al. 2005 (&quot;Loss of the transcription factor Nfib causes a severe lung maturation defect and perinatal lethality&quot;), independently located and verified by the citation-verifier</td>
+<td>Reviews the NFI-family knockout literature noting Nfib-deficient mice have lung maturation defects (in addition to forebrain/corpus callosum agenesis); the primary source for the Nfib-knockout lung-lethality phenotype is Steele-Perkins et al. 2005 ("Loss of the transcription factor Nfib causes a severe lung maturation defect and perinatal lethality"), independently located and verified by the citation-verifier</td>
 <td>Campbell et al., BMC Dev Biol 2008, PMID 18477394, DOI 10.1186/1471-213X-8-52; primary source: Steele-Perkins et al., Mol Cell Biol 2005, PMID 15632069</td>
 <td>Same developmental-biology caveat applies to both</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NFIB</td>
+<td class="gene">NFIB</td>
 <td>Structural/adult pulmonary biology (smoke-responsive)</td>
 <td>NFI-A and NFI-B are the only NFI-family members expressed in rat lung fibroblasts and bind functional sites in the lysyl oxidase (LOX) gene promoter (an elastin/collagen-crosslinking enzyme central to emphysema ECM biology); this NFI-LOX promoter interaction is sensitively modulated by exogenous stimuli including cigarette smoke condensate</td>
 <td>Gao et al., J Biol Chem 2007, PMID 17597074, DOI 10.1074/jbc.M610108200</td>
@@ -494,7 +178,7 @@ independently by both the researcher and the citation-verifier).</li>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NFIB</td>
+<td class="gene">NFIB</td>
 <td>Inflammatory/immune (weak/tangential)</td>
 <td>In chicken HD11 macrophage-like cells, NFIB binds the RIP2 promoter; NFIB overexpression increases apoptosis, inflammatory cytokine levels, and NF-κB pathway activation following avian pathogenic E. coli infection</td>
 <td>Sun et al., Int J Mol Sci 2022, PMID 35409172, DOI 10.3390/ijms23073814</td>
@@ -502,15 +186,15 @@ independently by both the researcher and the citation-verifier).</li>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NFIB</td>
+<td class="gene">NFIB</td>
 <td>Alternative/pleiotropic disease mechanism (non-COPD)</td>
-<td>NFIB haploinsufficiency (9p23-p22.2 microdeletions or truncating/inactivating point variants) causes a human neurodevelopmental disorder: mild intellectual disability, macrocephaly, behavioral issues (&quot;Malan syndrome&quot;-type phenotype), corroborated by cortex-specific Nfib conditional-knockout mice showing cortical enlargement</td>
+<td>NFIB haploinsufficiency (9p23-p22.2 microdeletions or truncating/inactivating point variants) causes a human neurodevelopmental disorder: mild intellectual disability, macrocephaly, behavioral issues ("Malan syndrome"-type phenotype), corroborated by cortex-specific Nfib conditional-knockout mice showing cortical enlargement</td>
 <td>Schanze et al., Am J Hum Genet 2018, PMID 30388402, DOI 10.1016/j.ajhg.2018.10.006</td>
 <td>Important competing hypothesis, not mere background: this is NFIB's most robustly established human dosage-sensitivity phenotype, and it is a CNS/behavioral phenotype that sits naturally alongside the smoking-initiation signal at this same locus — raises the possibility of a smoking-behavior/neurodevelopmental mechanism rather than a lung-restricted one</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NFIB</td>
+<td class="gene">NFIB</td>
 <td>Alternative/pleiotropic disease mechanism (non-COPD)</td>
 <td>Review summarizing overlapping NFIA/NFIB/NFIX haploinsufficiency phenotypes (macrocephaly, brain anomalies, developmental delay)</td>
 <td>Zenker et al., Am J Med Genet C 2019, PMID 31730271, DOI 10.1002/ajmg.c.31747</td>
@@ -518,15 +202,15 @@ independently by both the researcher and the citation-verifier).</li>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP5PDP3</td>
+<td class="gene">ATP5PDP3</td>
 <td>Basic diligence</td>
 <td>Zero PubMed-indexed literature exists for ATP5PDP3 under this symbol; Ensembl REST API confirms it is a processed pseudogene (9:14,068,932-14,069,417); no plausible protein-coding mechanism</td>
 <td>Researcher direct-database check (Ensembl REST API; PubMed null-result); not a citable literature source</td>
-<td>HOLDS (as excluded) — skeptic suggests labeling this EXCLUDED explicitly</td>
+<td><span class="tag-hold">HOLDS</span> (as excluded) — skeptic suggests labeling this EXCLUDED explicitly</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="excluded--not-independently-verified-see-audit-file-for-full-detail">Excluded / not independently verified (see audit file for full detail)</h2>
 <p>Three incidental PMIDs (41054698, 41136382, 40554316; NFIB-clozapine-metabolism-in-smokers
 pharmacogenomics) surfaced only as an unverified aside during the red-team follow-up search
@@ -540,13 +224,13 @@ diseases are macrocephaly/neurodevelopmental phenotypes consistent with NFIB
 haploinsufficiency syndrome). Datatype breakdown for COPD: genetic_association = 0.583,
 animal_model = 0.747.</li>
 <li>Colocalization/L2G-style evidence (<code>gwas_credible_sets</code> datasource) for COPD: <strong>2 rows,
-scores 0.783 and 0.702</strong> (both above the ~0.5 &quot;likely causal&quot; L2G threshold). Study/
+scores 0.783 and 0.702</strong> (both above the ~0.5 "likely causal" L2G threshold). Study/
 variant identity for these two rows was not exposed by the API (a known data-source
 completeness limitation) — cannot confirm whether they represent independent
 replication or overlapping evidence.</li>
 <li>Same datasource for smoking initiation (EFO_0005670): <strong>2 rows, scores 0.571 each</strong> —
 comparable in magnitude to the COPD evidence.</li>
-<li>Same datasource for FEV1 (EFO_0004314) and &quot;pulmonary function measurement&quot;
+<li>Same datasource for FEV1 (EFO_0004314) and "pulmonary function measurement"
 (EFO_0003892): <strong>0 rows for both</strong> — no direct credible-set-to-gene evidence linking
 NFIB to spirometric lung-function traits.</li>
 <li>Same datasource for nicotine dependence (MONDO_0008575): <strong>0 rows</strong>.</li>
@@ -588,7 +272,7 @@ Two independent red-team-skeptic passes (the second specifically chasing this qu
 via Europe PMC/GWAS Catalog/Semantic Scholar after the first pass's web searches failed
 on budget exhaustion) could not confirm NFIB's presence in either the Sakornsakolpat
 2019 COPD-loci table or the Shrine 2019 lung-function-signal table, and found zero
-full-text mentions of &quot;NFIB&quot; in either smoking-initiation GWAS paper (GSCAN 2019,
+full-text mentions of "NFIB" in either smoking-initiation GWAS paper (GSCAN 2019,
 Saunders 2022) — so it remains unconfirmed which trait's discovery literature the Open
 Targets credible-set evidence actually derives from.</li>
 <li><strong>All of the strong, citation-dense mechanistic literature for NFIB (Hsu 2011, Lajoie
@@ -610,7 +294,7 @@ in the assembled evidence rules this out.</li>
 <li>Per pipeline guidance, this is exactly the situation where naming a single best pick
 while being explicit about why the call is close is required, rather than manufacturing
 unwarranted certainty. There is no realistic runner-up gene at this locus (ATP5PDP3 is
-not a serious contender), so the &quot;close call&quot; here is not between two genes but between
+not a serious contender), so the "close call" here is not between two genes but between
 two <em>mechanisms</em> for the same gene: direct pulmonary/developmental biology vs.
 smoking-behavior-mediated (possibly via the same CNS/neurodevelopmental pathway
 responsible for Malan syndrome). What would resolve this: (1) direct access to the
@@ -629,5 +313,7 @@ smoking-mediation rather than the developmental-lung-biology narrative that domi
 the literature search by citation count alone.</li>
 </ul>
 
+        </div>
+    </div>
 </body>
 </html>

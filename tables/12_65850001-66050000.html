@@ -1,378 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>12_65850001-66050000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 12:65,850,001-66,050,000 (nearest gene HMGA2)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-1265850001-66050000-nearest-gene-hmga2">Evidence table — Locus 12:65,850,001-66,050,000 (nearest gene HMGA2)</h1>
-<p>Lead variant: rs113744258 (12:65,979,721, intergenic, PIP=0.627). Credible set spans 11
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-1265850001-66050000-nearest-gene-hmga2">Evidence table — Locus 12:65,850,001-66,050,000 (nearest gene HMGA2)</h1><div class="summary"><p>Lead variant: rs113744258 (12:65,979,721, intergenic, PIP=0.627). Credible set spans 11
 variants; besides the lead variant and second-highest rs4338565 (intergenic, PIP=0.123),
 several lower-PIP credible-set variants are annotated to HMGA2 (downstream_gene_variant,
 3_prime_UTR_variant, intron_variant; all MODIFIER impact) and are rolled into gene-level
 HMGA2 evidence below per pipeline scope. No FLAMES/MAGMA/PoPS/ABC prioritized genes are
-listed for this locus; HMGA2 is the only candidate gene considered.</p>
-<table>
+listed for this locus; HMGA2 is the only candidate gene considered.</p></div>
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -385,31 +69,31 @@ listed for this locus; HMGA2 is the only candidate gene considered.</p>
 </thead>
 <tbody>
 <tr>
-<td>HMGA2</td>
+<td class="gene">HMGA2</td>
 <td>Genetic association (anthropometric)</td>
 <td>Common variant rs1042725 (HMGA2 3' UTR, itself in this locus's credible set, PIP=0.035) is a genome-wide-significant, replicated common-variant association with adult and childhood height (~0.4 cm/allele); rare, severe HMGA2 mutations alter body size in mice and humans</td>
 <td>PMID 17767157 / DOI 10.1038/ng2121</td>
-<td>Accurate as stated; cited by red-team-skeptic as key evidence for a competing height-confounding hypothesis at this locus (see CONTESTED verdict below)</td>
+<td><span class="tag-warning">CONTESTED</span>Accurate as stated; cited by red-team-skeptic as key evidence for a competing height-confounding hypothesis at this locus (see  verdict below)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HMGA2</td>
+<td class="gene">HMGA2</td>
 <td>Comparative genetic epidemiology (height-lung-function confounding, indirect comparator)</td>
-<td>Independent study of a different gene (SERPINA1) explicitly benchmarks against &quot;the 'top' common height SNP in HMGA2&quot; (SERPINA1 height effect ~4x greater) and shows height is a known, strong correlate of FEV1/FVC that only partially (~50%) explains a lung-function association; does not directly test height-mediation of the HMGA2 locus itself</td>
+<td>Independent study of a different gene (SERPINA1) explicitly benchmarks against "the 'top' common height SNP in HMGA2" (SERPINA1 height effect ~4x greater) and shows height is a known, strong correlate of FEV1/FVC that only partially (~50%) explains a lung-function association; does not directly test height-mediation of the HMGA2 locus itself</td>
 <td>PMID 26831755 / DOI 10.1136/jmedgenet-2015-103342</td>
 <td>Accurate as stated; skeptic and researcher agree this is an indirect comparator only, not a direct test of this locus</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HMGA2</td>
+<td class="gene">HMGA2</td>
 <td>Statistical genetics — lung-function GWAS (verified negative finding, added after red-team critique)</td>
 <td>In a large (n=400,102), height-adjusted quantitative lung-function GWAS (UK Biobank + SpiroMeta) defining 279 genome-wide-significant signals for FEV1, FVC, FEV1/FVC, and PEF, HMGA2/12q14.3 does not appear among the reported signals — high-confidence absence based on complete absence from the main text/gene discussions (including the paper's own dedicated discussion of its 85 height-associated signals, where a canonical height locus like HMGA2 would be expected to surface if included) and no GWAS Catalog entries tagging this PMID to any HMGA2-locus credible-set SNP for any lung-function trait</td>
 <td>PMID 30804560 / DOI 10.1038/s41588-018-0321-7</td>
-<td>Directly supports red-team-skeptic's CONTESTED verdict; this locus is not corroborated by the primary quantitative lung-function GWAS literature despite that GWAS being well-powered and height-adjusted</td>
+<td><span class="tag-warning">CONTESTED</span>Directly supports red-team-skeptic's  verdict; this locus is not corroborated by the primary quantitative lung-function GWAS literature despite that GWAS being well-powered and height-adjusted</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HMGA2</td>
+<td class="gene">HMGA2</td>
 <td>Structural/developmental lung biology (chromatin/TGF-β, IPF-focused, not COPD)</td>
 <td>HMGA2 induces DNA nicks at transcription start sites required for FACT-complex-mediated nucleosome incorporation (H2A.X); authors frame biological relevance specifically to TGFB1 signaling and idiopathic pulmonary fibrosis (IPF)</td>
 <td>PMID 33594057 / DOI 10.1038/s41467-021-21227-y</td>
@@ -417,15 +101,15 @@ listed for this locus; HMGA2 is the only candidate gene considered.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HMGA2</td>
+<td class="gene">HMGA2</td>
 <td>Structural/developmental lung biology (alveolar epithelial identity, lung adenocarcinoma, not COPD)</td>
-<td>HMGA2 marks a de-differentiated &quot;Hmga2-high&quot; alveolar type 2 (AT2) cell state (vs. an AT2-identity-retaining &quot;SPC-high&quot; state) in murine Kras/p53-driven lung adenocarcinoma organoids; Hmga2-high cells show lower tumorigenic capacity than SPC-high cells</td>
+<td>HMGA2 marks a de-differentiated "Hmga2-high" alveolar type 2 (AT2) cell state (vs. an AT2-identity-retaining "SPC-high" state) in murine Kras/p53-driven lung adenocarcinoma organoids; Hmga2-high cells show lower tumorigenic capacity than SPC-high cells</td>
 <td>PMID 39930268 (EMBO J 2025, DOI 10.1038/s44318-025-00376-6; originally circulated as Research Square preprint PMID 36993454, now superseded by this peer-reviewed publication)</td>
 <td>Accurate as stated; skeptic notes this is a lung-adenocarcinoma/tumorigenesis paper, not COPD/emphysema-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HMGA2</td>
+<td class="gene">HMGA2</td>
 <td>Immunology/inflammation (non-lung, hepatic tissue)</td>
 <td>HMGA2 promotes pro-inflammatory cytokine release (TNF-α, IL-6, IL-1β) via NF-κB in Kupffer cell/RAW264.7 macrophage models of acute liver injury</td>
 <td>PMID 28502886 / DOI 10.1016/j.taap.2017.05.005</td>
@@ -433,7 +117,7 @@ listed for this locus; HMGA2 is the only candidate gene considered.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HMGA2</td>
+<td class="gene">HMGA2</td>
 <td>Immunology/inflammation (non-lung, dermatologic tissue)</td>
 <td>An lncRNA/miRNA/HMGA2 axis (DSG1-AS1/miR-125b-5p/HMGA2) promotes neutrophil extracellular trap (NET) formation and keratinocyte inflammation in atopic dermatitis</td>
 <td>PMID 41398699 / DOI 10.1186/s40001-025-03459-6</td>
@@ -441,7 +125,7 @@ listed for this locus; HMGA2 is the only candidate gene considered.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HMGA2</td>
+<td class="gene">HMGA2</td>
 <td>Immunology/inflammation (non-lung, peripheral-nerve tissue)</td>
 <td>HMGA2 modulates inflammatory cytokines (IL-6, IL-1β, COX-2) in a rat chronic-constriction-injury neuropathic-pain model via neuroinflammation</td>
 <td>PMID 30659647 / DOI 10.1002/jcb.28320</td>
@@ -449,7 +133,7 @@ listed for this locus; HMGA2 is the only candidate gene considered.</p>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Variant-level findings (not a citable row, reported narratively):</strong> No PubMed-indexed
 publication specific to either the lead credible-set variant rs113744258 or the
 second-highest variant rs4338565 was found despite a dedicated search — neither has
@@ -469,7 +153,7 @@ was found for any of these variants, and none were tagged to either major COPD (
 <p>This section reports a structured lookup against the Open Targets Platform GraphQL API,
 performed directly by the orchestrator. It did NOT go through citation-verifier or
 red-team-skeptic and must not be read as peer-reviewed literature evidence.</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -482,22 +166,22 @@ red-team-skeptic and must not be read as peer-reviewed literature evidence.</p>
 </thead>
 <tbody>
 <tr>
-<td>HMGA2 (ENSG00000149948)</td>
+<td class="gene">HMGA2 (ENSG00000149948)</td>
 <td>0.672</td>
 <td>0.249</td>
 <td>genetic_association 0.409; literature 0.012 (all other datatypes ~0)</td>
-<td>Not retrievable via this API query (schema limitation — treat as &quot;not retrieved,&quot; not &quot;absent&quot;)</td>
+<td>Not retrievable via this API query (schema limitation — treat as "not retrieved," not "absent")</td>
 <td>pLoF observed/expected = 0.803 (95% CI 0.391-1.688); missense oe = 1.055 (CI 0.879-1.270); synonymous oe = 1.46 (CI 1.15-1.835). Wide CIs reflect small expected counts (~5 pLoF variants) — inconclusive/underpowered constraint signal, not evidence of tolerance or intolerance either way.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>No Open Targets association data was found for HMGA2 under the FEV1 EFO term queried
-(EFO_0004314) — reported as &quot;no data available via this lookup,&quot; not as evidence against a
+(EFO_0004314) — reported as "no data available via this lookup," not as evidence against a
 lung-function role.</p>
 <p><strong>Important caveat carried over from red-team-skeptic critique:</strong> the L2G score of 0.672
 should NOT be read as independent corroboration of a COPD-specific pulmonary mechanism.
 L2G-style models are driven largely by distance-to-gene and regulatory/QTL features that
-answer &quot;which gene,&quot; not &quot;via which trait or pathway.&quot; In a single-gene desert locus like
+answer "which gene," not "via which trait or pathway." In a single-gene desert locus like
 this one, HMGA2 will score as the top gene assignment for essentially any genome-wide-
 significant signal here — height, aortic diameter, type 2 diabetes, or COPD — because
 those architecture features are trait-agnostic. The high L2G score confirms only that
@@ -511,7 +195,7 @@ biological/functional literature converging on HMGA2-COPD specifically.</p>
 <p>HMGA2 is named because it is the only physically plausible candidate gene at this locus —
 this is a genuine gene desert (HMGA2 plus the non-coding antisense HMGA2-AS1 are the only
 genes overlapping the 200 kb window), so there is no competing gene-assignment ambiguity
-of the classic &quot;LD block, several genes&quot; kind. On pure gene identity, confidence would be
+of the classic "LD block, several genes" kind. On pure gene identity, confidence would be
 HIGH. But the prioritization question this pipeline asks is broader than gene assignment —
 it is whether the evidence supports HMGA2 acting through COPD-relevant pulmonary or
 immune biology, and here the verified evidence base is weak and substantially contested:</p>
@@ -568,5 +252,7 @@ this locus reflects COPD-relevant pulmonary/immune biology, or is substantially 
 anthropometric (height) pleiotropy artifact of the case-control definition, is unresolved
 and should be weighed accordingly by the study team.</p>
 
+        </div>
+    </div>
 </body>
 </html>

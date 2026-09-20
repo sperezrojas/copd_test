@@ -1,381 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>9_116900001-117100000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 9:116,900,001-117,100,000 (nearest gene ASTN2)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-9116900001-117100000-nearest-gene-astn2">Evidence table — locus 9:116,900,001-117,100,000 (nearest gene ASTN2)</h1>
-<p><strong>Lead variant:</strong> rs7034049 (PIP=0.28, intronic, ASTN2). Full 23-variant credible set is
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-9116900001-117100000-nearest-gene-astn2">Evidence table — locus 9:116,900,001-117,100,000 (nearest gene ASTN2)</h1><div class="summary"><p><strong>Lead variant:</strong> rs7034049 (PIP=0.28, intronic, ASTN2). Full 23-variant credible set is
 entirely intronic/synonymous within ASTN2 (no missense/splice variants). Candidate genes from
 internal pipeline: ASTN2 (nearest gene, FLAMES-prioritized), COL27A1 (PoPS-prioritized; MAGMA
-and ABC returned NA for both).</p>
-<p>All rows below use ONLY citations with a VERIFIED verdict from citation-verifier. Two
+and ABC returned NA for both).</p><p>All rows below use ONLY citations with a VERIFIED verdict from citation-verifier. Two
 citations (Sakornsakolpat 2019, PMID 30804561; Shrine 2019, PMID 30804560) were excluded from
 this table because the specific sub-claim needed here — that ASTN2/rs7034049 appears among
 their reported loci — could not be confirmed by the verifier (NOT_FOUND for that sub-claim);
-see audit appendix.</p>
-<table>
+see audit appendix.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -388,31 +72,31 @@ see audit appendix.</p>
 </thead>
 <tbody>
 <tr>
-<td>ASTN2</td>
+<td class="gene">ASTN2</td>
 <td>Genetic association — spirometry GWAS</td>
 <td>One of 14 novel genome-wide-significant loci (P&lt;5x10⁻⁸) for FEV1/FVC/FEV1-FVC in a GWAS of ~38,199 Europeans (follow-up n=54,550)</td>
 <td>Soler Artigas et al. 2015, Nat Commun, PMID 26635082, DOI 10.1038/ncomms9658</td>
-<td>VERIFIED; independently replicated signal for pulmonary-function biology (satisfies prior #2), but this is the only independently-confirmed gene-specific spirometry hit — not &quot;multi-study&quot; as originally framed</td>
+<td>VERIFIED; independently replicated signal for pulmonary-function biology (satisfies prior #2), but this is the only independently-confirmed gene-specific spirometry hit — not "multi-study" as originally framed</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ASTN2 / TRIM32 (gene-ambiguous)</td>
+<td class="gene">ASTN2 / TRIM32 (gene-ambiguous)</td>
 <td>Genetic association — COPD, sex-stratified gene-based test</td>
-<td>Sex-stratified gene-based GWAS of COPD in UK Biobank (male 12,958 cases/95,631 controls; female 11,311/123,714) finds sex-specific gene-level association at &quot;ASTN2/TRIM32&quot; on 9q33.1</td>
+<td>Sex-stratified gene-based GWAS of COPD in UK Biobank (male 12,958 cases/95,631 controls; female 11,311/123,714) finds sex-specific gene-level association at "ASTN2/TRIM32" on 9q33.1</td>
 <td>Joo &amp; Himes 2022, AMIA Annu Symp Proc, PMID 35308900</td>
-<td>CONTESTED — verified as stated, but this is a conference-proceedings paper (not peer-reviewed journal), unreplicated, and the gene-based test cannot statistically distinguish ASTN2 from TRIM32 (TRIM32 was not in this pipeline's own candidate-gene list; see audit)</td>
+<td><span class="tag-warning">CONTESTED</span> — verified as stated, but this is a conference-proceedings paper (not peer-reviewed journal), unreplicated, and the gene-based test cannot statistically distinguish ASTN2 from TRIM32 (TRIM32 was not in this pipeline's own candidate-gene list; see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ASTN2</td>
+<td class="gene">ASTN2</td>
 <td>Genetic association — smoking-behavior GWAS (study-existence only)</td>
 <td>GSCAN meta-analysis (up to 1.2M individuals) identified 566 variants across 406 loci for tobacco initiation/cessation/heaviness and alcohol use</td>
 <td>Liu et al. 2019 (GSCAN), Nat Genet, PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
-<td>WEAKENED — study itself verified, but researcher/verifier could NOT confirm rs7034049 or the ASTN2 locus is actually among GSCAN's 406 reported loci; this is inference from an Open Targets aggregate trait score, not a locus-specific literature finding</td>
+<td><span class="tag-warning">WEAKENED</span> — study itself verified, but researcher/verifier could NOT confirm rs7034049 or the ASTN2 locus is actually among GSCAN's 406 reported loci; this is inference from an Open Targets aggregate trait score, not a locus-specific literature finding</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ASTN2</td>
+<td class="gene">ASTN2</td>
 <td>Genetic association — candidate-gene, neurobehavioral</td>
 <td>Candidate-gene study of 63 ASTN2 SNPs found nominal (uncorrected) association with ADHD/comorbid anxiety, but results do NOT support a major ASTN2 role in ADHD after multiple-testing correction</td>
 <td>Freitag et al. 2016, J Neural Transm, PMID 27138430, DOI 10.1007/s00702-016-1553-2</td>
@@ -420,7 +104,7 @@ see audit appendix.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ASTN2</td>
+<td class="gene">ASTN2</td>
 <td>Functional/mechanistic — neurodevelopmental</td>
 <td>ASTN2 forms a complex with ASTN1 and regulates ASTN1 surface trafficking during glial-guided neuronal migration in the developing cerebellum</td>
 <td>Wilson et al. 2010, J Neurosci, PMID 20573900, DOI 10.1523/JNEUROSCI.0032-10.2010</td>
@@ -428,7 +112,7 @@ see audit appendix.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ASTN2</td>
+<td class="gene">ASTN2</td>
 <td>Functional/mechanistic — review</td>
 <td>Astrotactins function in glial-guided neuronal migration and hair-follicle planar cell polarity; documented disease associations limited to brain disorders, neurodegeneration, cancer — no lung/airway role described</td>
 <td>Chang 2017, IUBMB Life, PMID 28517363, DOI 10.1002/iub.1641</td>
@@ -436,7 +120,7 @@ see audit appendix.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ASTN2</td>
+<td class="gene">ASTN2</td>
 <td>Functional/mechanistic — biochemistry</td>
 <td>ASTN1/ASTN2 membrane topology and proteolytic (signal peptidase) maturation characterized in neuronal adhesion/trafficking and skin planar-polarity context</td>
 <td>Lara et al. 2019, J Biol Chem, PMID 30696770, DOI 10.1074/jbc.RA118.007093</td>
@@ -444,7 +128,7 @@ see audit appendix.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ASTN2 / TRIM32 (gene-ambiguous)</td>
+<td class="gene">ASTN2 / TRIM32 (gene-ambiguous)</td>
 <td>Genetic — rare-variant CNV, neurodevelopmental</td>
 <td>Clinical CNV screen (~90,000 individuals) found 3'-terminal ASTN2 deletions (some co-deleting adjacent gene TRIM32) significantly enriched (P=0.002) in males with neurodevelopmental disorders (autism, ADHD, speech delay) vs. population controls; no pulmonary phenotype reported in this cohort</td>
 <td>Lionel et al. 2013, Hum Mol Genet, PMID 24381304, DOI 10.1093/hmg/ddt669</td>
@@ -452,7 +136,7 @@ see audit appendix.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ASTN2 (paralog gene ASTN1)</td>
+<td class="gene">ASTN2 (paralog gene ASTN1)</td>
 <td>Functional/mechanistic — neurodevelopmental (paralog)</td>
 <td>ASTN1 (ASTN2's paralog/binding partner) bi-allelic variants cause diverse neurodevelopmental disorders with brain malformation</td>
 <td>Levine et al. 2026, Am J Hum Genet, PMID 41544630, DOI 10.1016/j.ajhg.2025.12.011</td>
@@ -460,23 +144,23 @@ see audit appendix.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>COL27A1</td>
+<td class="gene">COL27A1</td>
 <td>Functional/expression</td>
-<td>Mouse col27a1 mRNA expression high in cartilage, eye, ear, &quot;but also in lung and colon&quot;</td>
+<td>Mouse col27a1 mRNA expression high in cartilage, eye, ear, "but also in lung and colon"</td>
 <td>Pace et al. 2003, Matrix Biol, PMID 12714037, DOI 10.1016/s0945-053x(03)00007-6</td>
 <td>VERIFIED — establishes baseline lung expression plausibility, though framing is chondrogenesis-centric</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>COL27A1</td>
+<td class="gene">COL27A1</td>
 <td>Functional/mouse model</td>
 <td>Mouse collagen XXVII 87-amino-acid collagenous-domain-deletion homozygotes exhibited severe chondrodysplasia and died perinatally from a lung defect (heterozygotes phenotypically normal)</td>
 <td>Plumb et al. 2011, PLoS ONE, PMID 22206015, DOI 10.1371/journal.pone.0029422</td>
-<td>CONTESTED — verified as stated, but the exact nature of the lung defect is not specified in the abstract; researcher's interpretation that this is a secondary skeletal/chest-wall mechanism (not primary airway/parenchymal) is plausible but explicitly unconfirmed from full text</td>
+<td><span class="tag-warning">CONTESTED</span> — verified as stated, but the exact nature of the lung defect is not specified in the abstract; researcher's interpretation that this is a secondary skeletal/chest-wall mechanism (not primary airway/parenchymal) is plausible but explicitly unconfirmed from full text</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>COL27A1</td>
+<td class="gene">COL27A1</td>
 <td>Mendelian disease</td>
 <td>COL27A1 loss-of-function causes Steel syndrome (autosomal recessive osteochondrodysplasia: short stature, joint dislocation/dysplasia, scoliosis, carpal coalition); no primary pulmonary component reported</td>
 <td>Gonzaga-Jauregui et al. 2015, Eur J Hum Genet, PMID 24986830, DOI 10.1038/ejhg.2014.107</td>
@@ -484,7 +168,7 @@ see audit appendix.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>COL27A1</td>
+<td class="gene">COL27A1</td>
 <td>Mendelian disease case report</td>
 <td>Steel syndrome phenotype expanded to include ocular colobomata and sensorineural hearing loss; no lung phenotype reported</td>
 <td>Pölsler et al. 2020, Am J Med Genet A, PMID 31913554, DOI 10.1002/ajmg.a.61478</td>
@@ -492,7 +176,7 @@ see audit appendix.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>COL27A1</td>
+<td class="gene">COL27A1</td>
 <td>Mendelian disease case report</td>
 <td>Additional Steel syndrome case confirming skeletal dysplasia phenotype spectrum; no respiratory phenotype described</td>
 <td>Thakur et al. 2023, J Postgrad Med, PMID 36695248, DOI 10.4103/jpgm.jpgm_1153_21</td>
@@ -500,23 +184,23 @@ see audit appendix.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>COL27A1</td>
+<td class="gene">COL27A1</td>
 <td>Expression/disease-association — IPF (not COPD)</td>
 <td>RNA-seq of lung fibroblasts from idiopathic pulmonary fibrosis (IPF) patients found COL27A1 among 14 collagen genes significantly upregulated vs. controls; COL27A1 was NOT independently associated with survival in Cox models (COL4A4 was)</td>
 <td>Seo et al. 2026, Sarcoidosis Vasc Diffuse Lung Dis, PMID 42329017, DOI 10.36141/svdld.2026.18053</td>
-<td>CONTESTED — verified as stated, but this is idiopathic pulmonary fibrosis, a mechanistically distinct fibrotic lung disease, not COPD/emphysema; should not be extended to a COPD mechanism</td>
+<td><span class="tag-warning">CONTESTED</span> — verified as stated, but this is idiopathic pulmonary fibrosis, a mechanistically distinct fibrotic lung disease, not COPD/emphysema; should not be extended to a COPD mechanism</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>COL27A1</td>
+<td class="gene">COL27A1</td>
 <td>Functional — CRISPR screen, fibrosis/EMT (not COPD)</td>
 <td>Genome-wide CRISPR screen for TGF-β1-induced EMT/pulmonary fibrosis regulators in airway epithelial (BEAS-2B) cells lists COL27A1 among candidate genes from pathway/enrichment analysis; validated knockout hits described in the paper center on other genes</td>
 <td>Tan et al. 2025, Front Mol Biosci, PMID 40034336, DOI 10.3389/fmolb.2025.1507163</td>
-<td>CONTESTED — verified as stated, but COL27A1's inclusion is enrichment-analysis-level, not a directly validated functional hit, and again in a fibrosis/EMT (not COPD) model</td>
+<td><span class="tag-warning">CONTESTED</span> — verified as stated, but COL27A1's inclusion is enrichment-analysis-level, not a directly validated functional hit, and again in a fibrosis/EMT (not COPD) model</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
 <ul>
 <li>
@@ -605,5 +289,7 @@ appendix.</p>
 substitute for it — particularly given how much of the case rests on unresolved ASTN2/TRIM32
 gene-ambiguity and an untested smoking-mediation alternative.</p>
 
+        </div>
+    </div>
 </body>
 </html>

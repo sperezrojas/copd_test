@@ -1,372 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>11_16150001-16450000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 11:16,150,001-16,450,000 (nearest/FLAMES/MAGMA/PoPS gene: SOX6)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-1116150001-16450000-nearestflamesmagmapops-gene-sox6">Evidence table — Locus 11:16,150,001-16,450,000 (nearest/FLAMES/MAGMA/PoPS gene: SOX6)</h1>
-<p>Lead variant: rs7932056 (11:16,360,775, GRCh38, upstream_gene_variant, PIP=0.16, top-PIP variant
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-1116150001-16450000-nearestflamesmagmapops-gene-sox6">Evidence table — Locus 11:16,150,001-16,450,000 (nearest/FLAMES/MAGMA/PoPS gene: SOX6)</h1><div class="summary"><p>Lead variant: rs7932056 (11:16,360,775, GRCh38, upstream_gene_variant, PIP=0.16, top-PIP variant
 in a 35-variant credible set). All 35 credible-set variants are annotated gene=SOX6
 (intron_variant/upstream_gene_variant, all MODIFIER impact — no missense/splice-donor/
 splice-acceptor variants, so no per-variant literature search beyond the lead variant was
@@ -374,9 +57,10 @@ required). SOX6 is the only candidate gene at this locus: nearest gene, and unan
 FLAMES-, MAGMA-, and PoPS-prioritized. ABC prioritization is NA. SOX6 is a very large gene
 (~16.0–16.6 Mb on chr11) that spans essentially the entire interval, so the locus is
 intragenic/immediately flanking to SOX6 itself; no second candidate gene was identified in the
-region.</p>
+region.</p></div>
+
 <h2 id="evidence-table">Evidence table</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -389,7 +73,7 @@ region.</p>
 </thead>
 <tbody>
 <tr>
-<td>SOX6</td>
+<td class="gene">SOX6</td>
 <td>Statistical genetics (smoking behavior)</td>
 <td>Tobacco/alcohol-use GWAS (406 loci, up to 1.2M individuals) — general existence citation, background context for the smoking-behavior GWAS literature; SOX6-specific locus membership not confirmed</td>
 <td>Liu M et al. 2019, Nat Genet. PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
@@ -397,7 +81,7 @@ region.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SOX6</td>
+<td class="gene">SOX6</td>
 <td>Statistical genetics (smoking behavior)</td>
 <td>Multi-ancestry tobacco/alcohol-use GWAS (2,143 loci, 3.4M individuals) — general existence citation, background context; SOX6-specific mention not confirmed</td>
 <td>Saunders GRB et al. 2022, Nature. PMID 36477530, DOI 10.1038/s41586-022-05477-4</td>
@@ -405,7 +89,7 @@ region.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SOX6</td>
+<td class="gene">SOX6</td>
 <td>Structural/developmental biology (general, non-lung)</td>
 <td>SOX5 and SOX6 (SOXD group) cooperate with SOX9 (SOXE group) to control chondrocyte differentiation and skeletogenesis</td>
 <td>Lefebvre V. 2019, Curr Top Dev Biol. PMID 30902252, DOI 10.1016/bs.ctdb.2019.01.007</td>
@@ -413,7 +97,7 @@ region.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SOX6</td>
+<td class="gene">SOX6</td>
 <td>Structural/developmental biology (general, non-lung)</td>
 <td>Runx1/Sox5/Sox6/Sox9 cooperate in articular cartilage maintenance</td>
 <td>Yano F et al. 2019, Sci Rep. PMID 31113964, DOI 10.1038/s41598-019-43948-3</td>
@@ -421,7 +105,7 @@ region.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SOX6</td>
+<td class="gene">SOX6</td>
 <td>Structural/developmental lung biology (load-bearing)</td>
 <td>Human embryonic lung scRNA-seq (Carnegie stages 12–21, 169,686 cells) identifies SOX6 (with ETV1) as a novel transcriptional regulator of DISTAL (alveolar) epithelial patterning, in contrast to THRB/EGR3 marking proximal (airway) epithelium</td>
 <td>Cao S et al. 2023, Cell Res. PMID 37085732, DOI 10.1038/s41422-023-00802-6</td>
@@ -429,7 +113,7 @@ region.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SOX6</td>
+<td class="gene">SOX6</td>
 <td>Structural biology (lung epithelial, oncology-context)</td>
 <td>SOX6 is frequently down-regulated in lung adenocarcinoma tissue and functions as a tumor suppressor in lung epithelial (A549) cells via p53/p21CIP1/cyclin D1/β-catenin; establishes SOX6 is expressed/functionally active in adult lung epithelium (oncology-focused, not COPD-specific)</td>
 <td>Lv L et al. 2019/2020, FEBS Open Bio. PMID 31729835, DOI 10.1002/2211-5463.12762 (erratum PMID 32118367 exists; does not affect core conclusions per citation-verifier)</td>
@@ -437,7 +121,7 @@ region.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SOX6</td>
+<td class="gene">SOX6</td>
 <td>Structural/erythroid biology (background, not lung/immune)</td>
 <td>SOX6 co-occupies the beta-globin cluster with BCL11A and GATA1, cooperating to silence gamma-globin transcription in the fetal-to-adult hemoglobin switch</td>
 <td>Xu J et al. 2010, Genes Dev. PMID 20395365, DOI 10.1101/gad.1897310</td>
@@ -445,7 +129,7 @@ region.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SOX6</td>
+<td class="gene">SOX6</td>
 <td>Structural/erythroid biology (background)</td>
 <td>Pomalidomide reprograms a BCL11A/SOX6/IKZF1/KLF1 regulatory network to reactivate fetal hemoglobin</td>
 <td>Dulmovits BM et al. 2015, Blood. PMID 26679864, DOI 10.1182/blood-2015-09-667923</td>
@@ -453,7 +137,7 @@ region.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SOX6</td>
+<td class="gene">SOX6</td>
 <td>Structural/erythroid biology (background)</td>
 <td>Branched-chain amino acid metabolites repress SOX6/BCL11A and induce fetal hemoglobin</td>
 <td>Karkashon S et al. 2015, Blood Cells Mol Dis. PMID 26142333, DOI 10.1016/j.bcmd.2015.05.006</td>
@@ -461,15 +145,15 @@ region.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SOX6</td>
+<td class="gene">SOX6</td>
 <td>Immune/inflammatory biology (load-bearing, exploratory)</td>
 <td>In vitro PBMC-stimulation study: SOX6 (with STAT4, IL1RL1) significantly induced specifically in COPD-patient PBMCs (not asthma or healthy controls) after LPS stimulation</td>
 <td>Pniewska E et al. 2015, Int Arch Allergy Immunol. PMID 25634111, DOI 10.1159/000370067</td>
-<td>VERIFIED, but skeptic flags as OVERCLAIMED if read as &quot;SOX6 has COPD-specific immune biology&quot; — single exploratory study, PBMCs not lung tissue, LPS is a generic non-COPD-specific stimulus, no replication, vulnerable to smoking-status confounding. See audit appendix.</td>
+<td>VERIFIED, but skeptic flags as OVERCLAIMED if read as "SOX6 has COPD-specific immune biology" — single exploratory study, PBMCs not lung tissue, LPS is a generic non-COPD-specific stimulus, no replication, vulnerable to smoking-status confounding. See audit appendix.</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SOX6</td>
+<td class="gene">SOX6</td>
 <td>Negative-control / locus-disambiguation</td>
 <td>11p15.2-3 smoking-by-ancestry admixture-mapping lung-function locus in African-American COPDGene participants harbors PARVA and RAB17 — explicitly NOT SOX6 (confirms this is a distinct, nearby signal, not to be conflated with the SOX6 locus)</td>
 <td>Ziyatdinov A et al. 2019/2020, Eur J Hum Genet. PMID 31836859, DOI 10.1038/s41431-019-0545-8</td>
@@ -477,13 +161,13 @@ region.</p>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Independently re-confirmed primary-database finding (EBI GWAS Catalog REST API, cross-checked twice — by both the researcher and red-team-skeptic, in addition to the Open Targets lookup in step 1 — concordant results; reported here as corroborating structured-database evidence, not as a stand-alone journal citation):</strong> The lead credible-set variant rs7932056 has exactly one curated association in the entire GWAS Catalog — smoking cessation (EFO_0004319), P=1×10⁻⁹, OR=0.969 per G allele, mapped gene SOX6, study GCST011702 (Xu K et al. 2020, Nat Commun, PMID 33082346). The COPD GWAS study GCST007692 (Sakornsakolpat et al. 2019) has 41 curated genome-wide-significant associations, none mapping to SOX6 or chr11:16.15–16.45 Mb. rs7932056 has no curated genome-wide-significant lung-function (FEV1/FEV1-FVC) association anywhere in the GWAS Catalog either.</p>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
 <p><strong>GENE: SOX6</strong></p>
 <ul>
 <li><strong>Genetic constraint</strong> (gnomAD, via <code>target.geneticConstraint</code>): synonymous score 0.853 (oe 0.920); missense score 3.295 (oe 0.723) — missense-constrained; pLoF score 1, oe 0.0947 (0.056–0.165) — <strong>strongly LoF-intolerant</strong>, consistent with a dosage-sensitive developmental transcription factor.</li>
-<li><strong>Overall target-disease association score</strong> (aggregated across all Open Targets evidence types, 0–1 scale): COPD (MONDO_0005002) = <strong>0.307</strong>, ranked ~36th of 380 associated diseases — lower than smoking cessation (0.488), essential hypertension (0.472), craniosynostosis (0.548), and nicotine dependence (0.317, just above COPD). No FEV1, FEV1/FVC, or &quot;lung function&quot; trait appears anywhere in SOX6's full 380-entry associated-disease list.</li>
+<li><strong>Overall target-disease association score</strong> (aggregated across all Open Targets evidence types, 0–1 scale): COPD (MONDO_0005002) = <strong>0.307</strong>, ranked ~36th of 380 associated diseases — lower than smoking cessation (0.488), essential hypertension (0.472), craniosynostosis (0.548), and nicotine dependence (0.317, just above COPD). No FEV1, FEV1/FVC, or "lung function" trait appears anywhere in SOX6's full 380-entry associated-disease list.</li>
 <li><strong>Locus-to-gene (L2G) and colocalization at the lead variant rs7932056</strong>: Open Targets indexes 8 GWAS-Catalog fine-mapped credible sets containing this exact variant. ALL 8 are smoking-behavior or mood/personality-trait GWAS (lifetime smoking index, smoking cessation ×3, cigarettes-per-day-correlated, mood swings ×2, mood instability, hair color). SOX6 is the dominant L2G gene in every one, score ≈0.89–0.90 (next-best candidate gene PLEKHA7, ≤0.07). <strong>None of the 8 is a COPD or FEV1/FEV1-FVC GWAS.</strong></li>
 <li><strong>COPD-study cross-check</strong>: <code>study(GCST007692)</code>'s own 67 fine-mapped credible sets contain none on chromosome 11 near 16.15–16.45 Mb — Open Targets' own COPD fine-mapping pipeline does not register a credible set at this locus at all.</li>
 <li><strong><code>target.credibleSets</code></strong> (QTL-anchored, e.g. GTEx liver/adrenal eQTL, ROSMAP brain transcript-usage credible sets where SOX6 is the QTL gene): top colocalizing traits were blood pressure, eGFR, bioimpedance, lipid/bone-density traits, and (for the brain transcript set) multisite chronic pain, PTSD, and mood traits — again, no COPD/FEV1 colocalization partners.</li>
@@ -533,5 +217,7 @@ airway-epithelium eQTL/expression study for SOX6 in COPD cases vs. controls (non
 this search), or a COPD/FEV1 GWAS credible set at this locus independent of smoking-behavior
 conditioning (none currently exists in Open Targets' indexing).</p>
 
+        </div>
+    </div>
 </body>
 </html>

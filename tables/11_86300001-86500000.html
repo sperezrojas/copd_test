@@ -1,380 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>11_86300001-86500000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPD locus evidence table — 11:86,300,001-86,500,000 (GRCh38)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="copd-locus-evidence-table--1186300001-86500000-grch38">COPD locus evidence table — 11:86,300,001-86,500,000 (GRCh38)</h1>
-<p>Lead variant: rs11234628 (PIP=0.865, intron_variant in CCDC81). Credible set: 27 variants,
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="copd-locus-evidence-table--1186300001-86500000-grch38">COPD locus evidence table — 11:86,300,001-86,500,000 (GRCh38)</h1><div class="summary"><p>Lead variant: rs11234628 (PIP=0.865, intron_variant in CCDC81). Credible set: 27 variants,
 all intron_variant / upstream_gene_variant / downstream_gene_variant, MODIFIER impact
 (none missense/splice) — annotated overwhelmingly to CCDC81, with a handful of low-PIP
 variants annotated to ME3 and two annotated to no gene. Candidate genes evaluated: CCDC81
-(nearest gene / lead-variant gene), PRSS23 (FLAMES-prioritized), ME3 (PoPS-prioritized).</p>
-<p>All rows below use only citations with verifier verdict VERIFIED. See
-<code>audits/11_86300001-86500000_audit.md</code> for excluded citations and CONTESTED-gene reasoning.</p>
+(nearest gene / lead-variant gene), PRSS23 (FLAMES-prioritized), ME3 (PoPS-prioritized).</p><p>All rows below use only citations with verifier verdict VERIFIED. See
+<code>audits/11_86300001-86500000_audit.md</code> for excluded citations and CONTESTED-gene reasoning.</p></div>
+
+
 <h2 id="locus-level-background-not-gene-specific">Locus-level background (not gene-specific)</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -387,7 +71,7 @@ variants annotated to ME3 and two annotated to no gene. Candidate genes evaluate
 </thead>
 <tbody>
 <tr>
-<td>(locus background)</td>
+<td class="gene">(locus background)</td>
 <td>Statistical genetics</td>
 <td>Foundational COPD GWAS meta-analysis (35,735 cases/222,076 controls) identifying 82 COPD loci and 13 new lung-function loci; used only as regional/background context, does not itself name CCDC81/PRSS23/ME3</td>
 <td>Sakornsakolpat et al. 2019, PMID 30804561, DOI 10.1038/s41588-018-0342-2</td>
@@ -395,7 +79,7 @@ variants annotated to ME3 and two annotated to no gene. Candidate genes evaluate
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>(locus background)</td>
+<td class="gene">(locus background)</td>
 <td>Statistical genetics</td>
 <td>Foundational lung-function GWAS (400,102 individuals) defining 279 lung-function signals (139 new), generalizable across smokers and never-smokers; used only as regional/background context</td>
 <td>Shrine et al. 2019, PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
@@ -403,10 +87,10 @@ variants annotated to ME3 and two annotated to no gene. Candidate genes evaluate
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="gene-ccdc81-nearest-gene--lead-variant-gene">GENE: CCDC81 (nearest gene / lead-variant gene)</h2>
-<p><strong>Skeptic overall verdict: WEAKENED, bordering on CONTESTED for the causal-gene claim</strong> — see audit appendix. The purely descriptive claim (&quot;credible set sits in/near CCDC81&quot;) stands; the inferential leap to &quot;CCDC81 is the functional gene&quot; does not survive the Open Targets L2G=0 finding (see Open Targets summary below) unaddressed.</p>
-<table>
+<p><strong>Skeptic overall verdict: WEAKENED, bordering on CONTESTED for the causal-gene claim</strong> — see audit appendix. The purely descriptive claim ("credible set sits in/near CCDC81") stands; the inferential leap to "CCDC81 is the functional gene" does not survive the Open Targets L2G=0 finding (see Open Targets summary below) unaddressed.</p>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -419,55 +103,55 @@ variants annotated to ME3 and two annotated to no gene. Candidate genes evaluate
 </thead>
 <tbody>
 <tr>
-<td>CCDC81</td>
+<td class="gene">CCDC81</td>
 <td>Structural/developmental</td>
 <td>CCDC81 is a centrosome protein; silencing reduces frequency/length of primary cilia; Ccdc81 mRNA markedly elevated in mouse testis, lung, trachea, fallopian tube (motile-cilia-rich tissues); CRISPR KO mice generated</td>
 <td>Liu, Liu, Nai 2025, PMID 40751511, DOI 10.1002/cm.70021</td>
-<td>WEAKENED — genuine lung/trachea expression signal, but no statistical link to this GWAS signal (L2G=0); most direct lung-relevant CCDC81 paper found</td>
+<td><span class="tag-warning">WEAKENED</span> — genuine lung/trachea expression signal, but no statistical link to this GWAS signal (L2G=0); most direct lung-relevant CCDC81 paper found</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CCDC81</td>
+<td class="gene">CCDC81</td>
 <td>Structural (basic cell biology, non-lung)</td>
 <td>CCDC81-domain-containing protein is a microtubule inner protein localized in the proximal region of doublet microtubules in Tetrahymena thermophila</td>
 <td>Gao, Tong et al. 2024, PMID 38754431, DOI 10.1016/j.str.2024.04.017 (preprint PMID 38077012, DOI 10.1101/2023.11.28.569001)</td>
-<td>WEAKENED — basic axonemal structural biology, non-lung organism</td>
+<td><span class="tag-warning">WEAKENED</span> — basic axonemal structural biology, non-lung organism</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CCDC81</td>
+<td class="gene">CCDC81</td>
 <td>Structural (basic cell biology, non-lung)</td>
 <td>CCDC81 identified via mass spectrometry of mammalian sperm centriole proteome; confirmed centrosome-associated in cultured cells</td>
 <td>Firat-Karalar, Sante, Elliott, Stearns 2014, PMID 25074808, DOI 10.1242/jcs.157008</td>
-<td>WEAKENED — non-lung basic characterization</td>
+<td><span class="tag-warning">WEAKENED</span> — non-lung basic characterization</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CCDC81</td>
+<td class="gene">CCDC81</td>
 <td>Structural (basic cell biology, non-lung)</td>
 <td>CCDC81 is prototype of a novel eukaryotic HU/IHF-superfamily clade, proposed role in centrosome organization and as Dynein-VII cargo-binding protein</td>
 <td>Burroughs, Kaur, Zhang, Aravind 2017, PMID 28441108, DOI 10.1080/15384101.2017.1315494</td>
-<td>WEAKENED — computational/comparative-genomics, non-lung</td>
+<td><span class="tag-warning">WEAKENED</span> — computational/comparative-genomics, non-lung</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CCDC81</td>
+<td class="gene">CCDC81</td>
 <td>Structural (disease-analogy background, not CCDC81-specific)</td>
 <td>Motile-cilia/axonemal dysfunction (primary ciliary dyskinesia) causes chronic bronchitis, bronchiectasis, impaired mucociliary clearance</td>
 <td>Leigh et al. 2009, PMID 19606528, DOI 10.1097/GIM.0b013e3181a53562</td>
-<td>CONTESTED — per skeptic, PCD is a distinct Mendelian ciliopathy with different genetic architecture than common-variant COPD; using it to bridge &quot;ciliogenesis gene → COPD-relevant&quot; is a leap the paper itself does not support</td>
+<td><span class="tag-warning">CONTESTED</span> — per skeptic, PCD is a distinct Mendelian ciliopathy with different genetic architecture than common-variant COPD; using it to bridge "ciliogenesis gene → COPD-relevant" is a leap the paper itself does not support</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CCDC81</td>
+<td class="gene">CCDC81</td>
 <td>Immune (nonspecific/weak)</td>
-<td>CCDC81 is one of 17 methylation &quot;driver genes&quot; in a bioinformatic lung adenocarcinoma prognostic model; CCDC81 itself is not characterized as immune-related in this paper</td>
+<td>CCDC81 is one of 17 methylation "driver genes" in a bioinformatic lung adenocarcinoma prognostic model; CCDC81 itself is not characterized as immune-related in this paper</td>
 <td>Ren et al. 2020, PMID 33552145, DOI 10.3389/fgene.2020.634634</td>
-<td>WEAKENED — nonspecific, incidental inclusion, not an immune finding for CCDC81</td>
+<td><span class="tag-warning">WEAKENED</span> — nonspecific, incidental inclusion, not an immune finding for CCDC81</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CCDC81</td>
+<td class="gene">CCDC81</td>
 <td>Statistical genetics (negative finding)</td>
 <td>COPD lung-tissue TWAS identifying 12 new candidate genes (CAMK2A, DMPK, MYO15A, TNFRSF10A, BTN3A2, TRBV30); CCDC81 (and PRSS23, ME3) not named</td>
 <td>Lamontagne et al. 2018, PMID 29547942, DOI 10.1093/hmg/ddy091</td>
@@ -475,11 +159,11 @@ variants annotated to ME3 and two annotated to no gene. Candidate genes evaluate
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="gene-prss23-flames-prioritized">GENE: PRSS23 (FLAMES-prioritized)</h2>
 <p><strong>Important positional caveat (researcher finding, not disputed by skeptic):</strong> PRSS23 (GRCh38 11:86,791,059-86,954,151) does <strong>not</strong> physically overlap the 11:86,300,001-86,500,000 window or the credible set — it lies ~300-470 kb telomeric to the nearest credible-set variant. Its FLAMES prioritization rests on a longer-range statistical/regulatory link, not direct credible-set overlap.</p>
 <p><strong>Skeptic overall verdict: CONTESTED</strong> — see audit appendix for full reasoning (CLAIM_MISMATCH citation within this section, no lung-tissue data, reverse-causation-confounded EWAS evidence, FLAMES/L2G non-independence).</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -492,98 +176,98 @@ variants annotated to ME3 and two annotated to no gene. Candidate genes evaluate
 </thead>
 <tbody>
 <tr>
-<td>PRSS23</td>
+<td class="gene">PRSS23</td>
 <td>Smoking-mediated (epigenetic, not germline)</td>
 <td>In an EWAS of urinary total nicotine equivalents (n=1994), the PRSS23 CpG was among the top significant differentially methylated sites (decreasing methylation with increasing nicotine dose), alongside AHRR/F2RL3/RARA/GPR15</td>
 <td>Huang, Binder et al. 2024, PMID 38367619, DOI 10.1016/j.ajhg.2024.01.012</td>
-<td>CONTESTED — per skeptic, cannot distinguish germline mQTL mechanism from reverse causation (smoke exposure driving methylation) or disease-state-associated methylation; should not be read as supporting a causal germline role at this locus</td>
+<td><span class="tag-warning">CONTESTED</span> — per skeptic, cannot distinguish germline mQTL mechanism from reverse causation (smoke exposure driving methylation) or disease-state-associated methylation; should not be read as supporting a causal germline role at this locus</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PRSS23</td>
+<td class="gene">PRSS23</td>
 <td>Smoking-mediated (epigenetic) + structural, COPD-stratified</td>
 <td>Biomass-smoke exposure graded-reduces PRSS23 promoter CpG (cg23771366) methylation, lowest in biomass-exposed women with COPD; paper frames PRSS23 as ECM-remodeling-relevant in COPD</td>
 <td>Pérez-Rubio, Falfán-Valencia et al. 2025, PMID 40278569, DOI 10.3390/toxics13040253</td>
-<td>CONTESTED — most directly COPD-relevant PRSS23 paper found, but observational/epigenetic (not genetic-causal); same reverse-causation concern as above</td>
+<td><span class="tag-warning">CONTESTED</span> — most directly COPD-relevant PRSS23 paper found, but observational/epigenetic (not genetic-causal); same reverse-causation concern as above</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PRSS23</td>
+<td class="gene">PRSS23</td>
 <td>Smoking-mediated (cardiovascular, nonspecific immune)</td>
 <td>PRSS23 (with PTGDR, PYHIN1) consistently differentially expressed in both smoking exposure and acute myocardial infarction blood transcriptome; pathway enrichment in immune response/inflammation</td>
 <td>Liu, Yan, Zhang, Li 2025, PMID 39845197, DOI 10.1155/mi/2431090</td>
-<td>WEAKENED — cardiovascular disease context, not pulmonary; pathway-level, not cell-type-specific immune signal</td>
+<td><span class="tag-warning">WEAKENED</span> — cardiovascular disease context, not pulmonary; pathway-level, not cell-type-specific immune signal</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PRSS23</td>
+<td class="gene">PRSS23</td>
 <td>Structural (non-lung)</td>
 <td>PRSS23 knockdown inhibits TGF-β-induced, Snail-dependent endothelial-to-mesenchymal transition during zebrafish cardiac valvulogenesis and in human aortic endothelial cells</td>
 <td>Chen, Wang, Hsieh, Huang, Yeh, Chuang 2012, PMID 23213106, DOI 10.1093/cvr/cvs355</td>
-<td>WEAKENED — cardiac valve tissue, not lung; analogical extrapolation to airway remodeling only</td>
+<td><span class="tag-warning">WEAKENED</span> — cardiac valve tissue, not lung; analogical extrapolation to airway remodeling only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PRSS23</td>
+<td class="gene">PRSS23</td>
 <td>Structural (review, non-lung)</td>
 <td>Review of PRSS23 protease/EMT biology across cancer and scleroderma myofibroblast contexts</td>
 <td>Schulten 2025, PMID 40917042, DOI 10.31083/FBL27294</td>
-<td>WEAKENED — secondary review, non-lung</td>
+<td><span class="tag-warning">WEAKENED</span> — secondary review, non-lung</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PRSS23</td>
+<td class="gene">PRSS23</td>
 <td>Structural (non-lung)</td>
 <td>PRSS23 (with THBS1) among earliest globally upregulated transcriptome markers in systemic sclerosis dermal fibroblast scRNA-seq</td>
 <td>Tabib et al. 2021, PMID 34282151, DOI 10.1038/s41467-021-24607-6</td>
-<td>WEAKENED — skin, not lung</td>
+<td><span class="tag-warning">WEAKENED</span> — skin, not lung</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PRSS23</td>
+<td class="gene">PRSS23</td>
 <td>Structural + immune (non-lung)</td>
 <td>SFRP4/PRSS23+ myofibroblast-like subcluster in localized scleroderma skin expresses CXCL9/10/11; cell-communication analysis suggests macrophage influence</td>
 <td>Werner, Sanyal, Mirizio et al. 2023, PMID 37372943, DOI 10.3390/ijms24129796</td>
-<td>WEAKENED — skin, not lung; suggestive not established</td>
+<td><span class="tag-warning">WEAKENED</span> — skin, not lung; suggestive not established</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PRSS23</td>
+<td class="gene">PRSS23</td>
 <td>Structural + immune (non-lung)</td>
 <td>PRSS23 significantly upregulated in systemic sclerosis skin fibroblasts; overexpression reduces H2O2-induced apoptosis and increases IL-6/TNF-α secretion</td>
 <td>Yuan et al. 2025, PMID 41131761, DOI 10.19723/j.issn.1671-167X.2025.05.014</td>
-<td>WEAKENED — skin, not lung</td>
+<td><span class="tag-warning">WEAKENED</span> — skin, not lung</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PRSS23</td>
+<td class="gene">PRSS23</td>
 <td>Structural (oncology, non-lung, general biology only)</td>
 <td>PRSS23-eIF4E-c-Myc axis promotes gastric cancer growth</td>
 <td>Zhou et al. 2025, PMID 39920289, DOI 10.1038/s41388-025-03294-3</td>
-<td>WEAKENED — oncology mechanism, not COPD-relevant; included for completeness only</td>
+<td><span class="tag-warning">WEAKENED</span> — oncology mechanism, not COPD-relevant; included for completeness only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PRSS23</td>
+<td class="gene">PRSS23</td>
 <td>Structural (oncology, non-lung, general biology only)</td>
 <td>PRSS23-Hippo-YAP axis drives pancreatic ductal adenocarcinoma proliferation</td>
 <td>Liu et al. 2025, PMID 41421221, DOI 10.1016/j.bbrc.2025.153157</td>
-<td>WEAKENED — oncology mechanism, not COPD-relevant; included for completeness only</td>
+<td><span class="tag-warning">WEAKENED</span> — oncology mechanism, not COPD-relevant; included for completeness only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PRSS23</td>
+<td class="gene">PRSS23</td>
 <td>Structural (oncology, non-lung, general biology only)</td>
 <td>Lnc-PRSS23-AS1/miR-3176/YBX1 axis promotes breast cancer</td>
 <td>Huang et al. 2025, PMID 40707772, DOI 10.1038/s41417-025-00943-3</td>
-<td>WEAKENED — oncology mechanism, not COPD-relevant; included for completeness only</td>
+<td><span class="tag-warning">WEAKENED</span> — oncology mechanism, not COPD-relevant; included for completeness only</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="gene-me3-pops-prioritized">GENE: ME3 (PoPS-prioritized)</h2>
 <p><strong>Skeptic overall verdict: WEAKENED</strong> (not contested — no contradicting evidence found against ME3, but essentially zero direct/independent literature beyond its Open Targets structured score).</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -596,28 +280,28 @@ variants annotated to ME3 and two annotated to no gene. Candidate genes evaluate
 </thead>
 <tbody>
 <tr>
-<td>ME3</td>
+<td class="gene">ME3</td>
 <td>Structural/metabolic (oncology, non-lung)</td>
 <td>ME3 downregulation in gastric carcinoma reduces NADPH/NADP+ ratio and α-ketoglutarate, increases ROS under hypoxia, stabilizes HIF-1α, promoting tumor progression</td>
 <td>Huang et al. 2024, PMID 39212717, DOI 10.1007/s00018-024-05388-9</td>
-<td>WEAKENED — generic redox/oxidative-stress mechanism, gastric-cancer-derived, not lung-specific; per skeptic, this narrative would apply about equally to many redox-pathway genes genome-wide</td>
+<td><span class="tag-warning">WEAKENED</span> — generic redox/oxidative-stress mechanism, gastric-cancer-derived, not lung-specific; per skeptic, this narrative would apply about equally to many redox-pathway genes genome-wide</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ME3</td>
+<td class="gene">ME3</td>
 <td>Structural/metabolic (oncology, non-lung)</td>
 <td>ME3 (unlike ME1) is constitutively activated by superenhancers (not NRF2-regulated) in hepatocellular carcinoma, providing antioxidant/NADPH defense against ROS</td>
 <td>Lee, Zhang, Tsang et al. 2021, PMID 33619771, DOI 10.1002/hep.31761</td>
-<td>WEAKENED — liver-cancer-derived, generic redox mechanism, not lung-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — liver-cancer-derived, generic redox mechanism, not lung-specific</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="additional-gene-considered-not-in-original-candidate-list-hikeshi">Additional gene considered, not in original candidate list: HIKESHI</h2>
 <p>Physically within the locus window (86,302,181-86,346,246) but annotated to zero credible-set
 variants and not flagged by MAGMA/PoPS/ABC/FLAMES/nearest-gene in the pipeline outputs.
 Researched for thoroughness; no lung/COPD-relevant literature found.</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -630,7 +314,7 @@ Researched for thoroughness; no lung/COPD-relevant literature found.</p>
 </thead>
 <tbody>
 <tr>
-<td>HIKESHI</td>
+<td class="gene">HIKESHI</td>
 <td>Structural (unrelated Mendelian disease)</td>
 <td>HIKESHI is the dedicated nuclear-import carrier for HSP70 during heat shock; biallelic loss-of-function causes a severe recessive infantile hypomyelinating leukoencephalopathy — a CNS phenotype, not lung/immune</td>
 <td>Vasilescu et al. 2016, PMID 28000699, DOI 10.1038/ejhg.2016.189</td>
@@ -638,12 +322,12 @@ Researched for thoroughness; no lung/COPD-relevant literature found.</p>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
-<hr>
+</table></div>
+<hr/>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
 <p>Queried via Open Targets Platform GraphQL API against MONDO_0005002 (COPD) and EFO_0004314
 (forced expiratory volume, FEV1).</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -655,28 +339,28 @@ Researched for thoroughness; no lung/COPD-relevant literature found.</p>
 </thead>
 <tbody>
 <tr>
-<td>CCDC81</td>
+<td class="gene">CCDC81</td>
 <td>no data (0 evidence rows)</td>
 <td>no data (0 evidence rows)</td>
 <td>0.910 (0.741-1.125) — not LoF-constrained</td>
 <td>0.449 — weakly constrained</td>
 </tr>
 <tr>
-<td>PRSS23</td>
+<td class="gene">PRSS23</td>
 <td>0.482</td>
 <td>0.702, 0.567, 0.533, 0.468, 0.399, 0.193 (6 rows)</td>
 <td>0.684 (0.497-0.955) — mild LoF depletion</td>
 <td>0.946</td>
 </tr>
 <tr>
-<td>ME3</td>
+<td class="gene">ME3</td>
 <td>0.636 (highest of the three)</td>
 <td>0.713, 0.703, 0.694, 0.641, 0.589, 0.562 (6 rows, highest/most consistent cluster)</td>
 <td>0.657 (0.511-0.853)</td>
 <td>1.752 — most missense-constrained of the three</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Despite CCDC81 being the nearest gene and the annotation gene for nearly all credible-set
 variants (including the PIP=0.865 lead variant), Open Targets' own locus-to-gene (L2G)
 pipeline assigns it <strong>zero evidence</strong> for either COPD or FEV1 at this locus — a genuine
@@ -686,7 +370,7 @@ model, not simply unmeasured signal). ME3 has the strongest and most consistent 
 of the three candidates for both traits; PRSS23 has moderate support despite not physically
 overlapping the credible-set window. Colocalization detail beyond the L2G evidence-row
 scores above was not separately retrievable via the API fields queried.</p>
-<hr>
+<hr/>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>ME3 — confidence LOW.</strong></p>
 <p>This call is close and should be read as such. Of the three candidates, ME3 has (a) the
@@ -708,7 +392,7 @@ expressed in mouse lung/trachea — directly relevant to the mucociliary-clearan
 COPD structural biology). However, its Open Targets L2G score is exactly zero for both COPD
 and FEV1, which — per the red-team critique — is a meaningful negative data point (L2G
 models incorporate positional/distance features, so a zero score for the nearest gene is
-evidence of active deprioritization by an integrative model, not simply &quot;no data yet&quot;), and
+evidence of active deprioritization by an integrative model, not simply "no data yet"), and
 its remaining functional literature is non-lung basic cell biology (sperm centrioles,
 Tetrahymena, HU/IHF superfamily structural biology) bridged to COPD relevance largely via a
 primary-ciliary-dyskinesia background citation that the skeptic judged does more rhetorical
@@ -727,8 +411,10 @@ from the Open Targets fields queried); an explicit methylation-QTL analysis test
 the PRSS23 smoking-associated CpGs are under control of the credible-set variants (to
 distinguish germline mechanism from reverse causation); and the contradicting/alternative-
 gene literature search flagged as incomplete by the red-team skeptic (searches for rs11234628
-or &quot;11p13 lung function&quot; naming a gene other than these three). Until any of that is done,
+or "11p13 lung function" naming a gene other than these three). Until any of that is done,
 this recommendation should be treated as provisional and low-confidence, not a settled call.</p>
 
+        </div>
+    </div>
 </body>
 </html>

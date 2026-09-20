@@ -1,383 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>8_22500001-22750000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 8:22,500,001-22,750,000 (nearest gene BIN3)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-822500001-22750000-nearest-gene-bin3">Evidence table — locus 8:22,500,001-22,750,000 (nearest gene BIN3)</h1>
-<p><strong>Lead variant:</strong> rs6558173 (8:22,634,590, GRCh38; intron_variant in BIN3; credible-set
-PIP = 0.220, the single highest-PIP variant in this locus's credible set).</p>
-<p><strong>Candidate genes evaluated:</strong> BIN3 (nearest gene), CCAR2 (ABC-prioritized), PEBP4
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-822500001-22750000-nearest-gene-bin3">Evidence table — locus 8:22,500,001-22,750,000 (nearest gene BIN3)</h1><div class="summary"><p><strong>Lead variant:</strong> rs6558173 (8:22,634,590, GRCh38; intron_variant in BIN3; credible-set
+PIP = 0.220, the single highest-PIP variant in this locus's credible set).</p><p><strong>Candidate genes evaluated:</strong> BIN3 (nearest gene), CCAR2 (ABC-prioritized), PEBP4
 (PoPS-prioritized), PDLIM2, EGR3, C8orf58 (all physically within/adjacent to the credible
 set). PPP3CC and SORBS3 were identified by the researcher as additional genes physically
 in the queried region but were deprioritized after an initial scan found no credible-set
-variant assignment and no apparent lung/immune biology signal — see audit appendix.</p>
-<p>Only citations with a verifier verdict of <strong>VERIFIED</strong> are included in the table below.
+variant assignment and no apparent lung/immune biology signal — see audit appendix.</p><p>Only citations with a verifier verdict of <strong>VERIFIED</strong> are included in the table below.
 Citations verified as CLAIM_MISMATCH, along with genes/claims the red-team-skeptic marked
 CONTESTED/WEAKENED, are listed in the companion audit file (see
-<code>audits/8_22500001-22750000_audit.md</code>), not here.</p>
-<table>
+<code>audits/8_22500001-22750000_audit.md</code>), not here.</p></div>
+
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -390,157 +74,157 @@ CONTESTED/WEAKENED, are listed in the companion audit file (see
 </thead>
 <tbody>
 <tr>
-<td>BIN3</td>
+<td class="gene">BIN3</td>
 <td>Structural/developmental biology (muscle, mouse)</td>
 <td>Bin3 (N-BAR domain, amphiphysin family) regulates Rac1- and Cdc42-dependent myoblast migration/fusion and myofiber size in mouse skeletal muscle</td>
 <td>Simionescu-Bankston et al. 2013, PMID 23872330, DOI 10.1016/j.ydbio.2013.07.004</td>
-<td>WEAKENED (real finding, but muscle-tissue, not lung)</td>
+<td><span class="tag-warning">WEAKENED</span> (real finding, but muscle-tissue, not lung)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BIN3</td>
+<td class="gene">BIN3</td>
 <td>General cell-biology background (review)</td>
 <td>Amphiphysin-family genes (Bin1/Bin3) regulate membrane/actin dynamics, cell polarity, and stress signaling with tumor-suppressor-like function</td>
 <td>Prendergast et al. 2008, PMID 18930786, DOI 10.1016/j.bbcan.2008.09.001</td>
-<td>WEAKENED (general background only, not lung- or COPD-specific)</td>
+<td><span class="tag-warning">WEAKENED</span> (general background only, not lung- or COPD-specific)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BIN3</td>
+<td class="gene">BIN3</td>
 <td>Mouse knockout phenotype</td>
 <td>Bin3(-/-) mice develop cataracts and increased lymphoma susceptibility with aging; no lung phenotype reported through 1 year of age</td>
 <td>Ramalingam et al. 2008, PMID 18339847, DOI 10.1158/0008-5472.CAN-07-6072</td>
-<td>WEAKENED (whole-body knockout not designed to assay lung phenotype; weak/inconclusive re: pulmonary biology either way)</td>
+<td><span class="tag-warning">WEAKENED</span> (whole-body knockout not designed to assay lung phenotype; weak/inconclusive re: pulmonary biology either way)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CCAR2</td>
+<td class="gene">CCAR2</td>
 <td>Mechanistic (liver, mouse)</td>
 <td>DBC1 (CCAR2) negatively regulates SIRT1 activity in vivo; Dbc1-knockout mice are protected from diet-induced liver steatosis/inflammation</td>
 <td>Escande et al. 2010, PMID 20071779, DOI 10.1172/JCI39319</td>
-<td>WEAKENED (tissue mismatch — liver, not lung)</td>
+<td><span class="tag-warning">WEAKENED</span> (tissue mismatch — liver, not lung)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CCAR2</td>
+<td class="gene">CCAR2</td>
 <td>Immune/inflammatory (adipose, human)</td>
 <td>DBC1 knockdown reduces NF-κB(p65)-driven inflammatory cytokine expression (TNF, IL6, MCP1) in adipocytes; DBC1 correlates with senescence markers in human adipose tissue from obese subjects</td>
 <td>Moreno-Navarrete et al. 2015, PMID 25682741, DOI 10.1002/oby.20999</td>
-<td>WEAKENED (tissue mismatch — adipose, not lung; &quot;in principle&quot; relevance to COPD inflammaging only)</td>
+<td><span class="tag-warning">WEAKENED</span> (tissue mismatch — adipose, not lung; "in principle" relevance to COPD inflammaging only)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CCAR2</td>
+<td class="gene">CCAR2</td>
 <td>General mechanism (review)</td>
 <td>CCAR2 has dual tumor-suppressor/tumor-promoter roles via p53 activation, DNA-repair regulation, and epigenetic-modifier regulation</td>
 <td>Kim et al. 2023, PMID 37524873, DOI 10.1038/s12276-023-01058-1</td>
-<td>WEAKENED (general cancer-biology background, not lung/COPD-specific)</td>
+<td><span class="tag-warning">WEAKENED</span> (general cancer-biology background, not lung/COPD-specific)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CCAR2</td>
+<td class="gene">CCAR2</td>
 <td>General mechanism (review)</td>
 <td>CCAR2 functions in DNA-damage response, nuclear-receptor signaling, and Wnt signaling with tissue/context-dependent tumor-suppressor/promoter duality</td>
 <td>Johnson et al. 2020, PMID 33403784, DOI 10.1111/cas.14579</td>
-<td>WEAKENED (general cancer-biology background, not lung/COPD-specific)</td>
+<td><span class="tag-warning">WEAKENED</span> (general cancer-biology background, not lung/COPD-specific)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDLIM2</td>
+<td class="gene">PDLIM2</td>
 <td>Immune/inflammatory (human COPD/ILD lung tissue + mouse)</td>
 <td>PDLIM2 expression is repressed in lungs of human COPD and ILD/IPF patients (correlating with disease severity); myeloid(macrophage/neutrophil)-specific PDLIM2 knockout mice show increased susceptibility to LPS-induced acute lung injury, with exacerbated pro-inflammatory/diminished anti-inflammatory signaling, altered NET formation and phagocytosis</td>
 <td>Gao et al. 2025 (Front Immunol), PMID 41346604, DOI 10.3389/fimmu.2025.1669117</td>
-<td>WEAKENED (most COPD-specific/cell-type-resolved finding at this locus, but no locus-level genetic-association evidence ties the GWAS signal to PDLIM2 at all; this paper and #12/#13 below share overlapping authorship — treat as one research group's narrative pending independent replication)</td>
+<td><span class="tag-warning">WEAKENED</span> (most COPD-specific/cell-type-resolved finding at this locus, but no locus-level genetic-association evidence ties the GWAS signal to PDLIM2 at all; this paper and #12/#13 below share overlapping authorship — treat as one research group's narrative pending independent replication)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDLIM2</td>
+<td class="gene">PDLIM2</td>
 <td>Immune/inflammatory (multi-cell-type, viral infection)</td>
 <td>PDLIM2 is repressed by SARS-CoV-2/influenza infection in a severity-correlated manner across lung/immune cell types (macrophages, monocytes, neutrophils, T cells, alveolar epithelial cells, airway epithelial cells, fibroblasts), negatively associated with NF-κB/STAT3 activity</td>
 <td>Gao et al. 2026 (ImmunoHorizons), PMID 41904702, DOI 10.1093/immhor/vlag010</td>
-<td>WEAKENED (overlapping authorship with #11 above — not independent replication; viral-infection model, not COPD directly)</td>
+<td><span class="tag-warning">WEAKENED</span> (overlapping authorship with #11 above — not independent replication; viral-infection model, not COPD directly)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDLIM2</td>
+<td class="gene">PDLIM2</td>
 <td>Immune/inflammatory (senescent lung cells, mouse)</td>
 <td>PDLIM2 (an E3 ubiquitin ligase regulating p65/RelA degradation) is reduced in senescent lung cells via ROS accumulation, contributing to excess NF-κB activation and inflammatory tissue damage in aged lungs during viral infection; restoring PDLIM2 suppressed inflammation</td>
 <td>Tian et al. 2025, PMID 41152908, DOI 10.1186/s12964-025-02466-8</td>
-<td>WEAKENED (part of same narrow 2024-2026 PDLIM2/lung-inflammation literature cluster; viral-infection/senescence model, not COPD directly)</td>
+<td><span class="tag-warning">WEAKENED</span> (part of same narrow 2024-2026 PDLIM2/lung-inflammation literature cluster; viral-infection/senescence model, not COPD directly)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDLIM2</td>
+<td class="gene">PDLIM2</td>
 <td>Structural/mechanistic (lung cancer, human tissue + cell lines)</td>
 <td>PDLIM2 is commonly downregulated in NSCLC tissue/cell lines (partly via promoter methylation); PDLIM2 re-expression suppresses NF-κB p65 activity and tumor growth</td>
 <td>Shi et al. 2020, PMID 32621848, DOI 10.1016/j.mcp.2020.101628</td>
-<td>WEAKENED (cancer context, not COPD; but establishes PDLIM2 as an NF-κB-repressing tumor suppressor in lung epithelium specifically)</td>
+<td><span class="tag-warning">WEAKENED</span> (cancer context, not COPD; but establishes PDLIM2 as an NF-κB-repressing tumor suppressor in lung epithelium specifically)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EGR3</td>
+<td class="gene">EGR3</td>
 <td>Immune/inflammatory (mouse, lung)</td>
 <td>Egr3-overexpressing transgenic mice show increased γδ T-cell development and Th17-skewed differentiation, and are more susceptible to bleomycin-induced lung inflammation</td>
 <td>Parkinson et al. 2014, PMID 24475259, DOI 10.1371/journal.pone.0087265</td>
-<td>WEAKENED (bleomycin pulmonary-fibrosis model, a different disease process from COPD/emphysema; one-off, non-replicated finding)</td>
+<td><span class="tag-warning">WEAKENED</span> (bleomycin pulmonary-fibrosis model, a different disease process from COPD/emphysema; one-off, non-replicated finding)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EGR3</td>
+<td class="gene">EGR3</td>
 <td>Immune background (review, EGR family)</td>
 <td>The EGR1/EGR2/EGR3 transcription-factor family is recognized as critical for T-cell function (anergy, Th1 differentiation)</td>
 <td>Mookerjee-Basu et al. 2020, PMID 32212315, DOI 10.15252/embr.201948904</td>
-<td>WEAKENED (background-framing only; primary data in this paper concerns EGR4, not EGR3)</td>
+<td><span class="tag-warning">WEAKENED</span> (background-framing only; primary data in this paper concerns EGR4, not EGR3)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EGR3</td>
+<td class="gene">EGR3</td>
 <td>Immune/inflammatory (human lung epithelial cells, preprint)</td>
 <td>EGR3 was significantly upregulated in SARS-CoV-1-infected human lung epithelial cells</td>
 <td>de Almeida et al. 2020/2021, PMID 32587961, DOI 10.1101/2020.06.16.155267 (bioRxiv; later formally published as DOI 10.1093/nargab/lqac020)</td>
-<td>WEAKENED (originally a bioRxiv preprint; SARS-CoV-1 infection model, not COPD)</td>
+<td><span class="tag-warning">WEAKENED</span> (originally a bioRxiv preprint; SARS-CoV-1 infection model, not COPD)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EGR3</td>
+<td class="gene">EGR3</td>
 <td>Structural/developmental (zebrafish heart, non-lung)</td>
 <td>Egr3 promotes cardiac myofibroblast differentiation in a zebrafish heart-regeneration model</td>
 <td>Wang et al. 2024, PMID 39612288, DOI 10.1242/dev.203028</td>
-<td>WEAKENED (non-lung tissue; tangential relevance to airway/parenchymal remodeling only)</td>
+<td><span class="tag-warning">WEAKENED</span> (non-lung tissue; tangential relevance to airway/parenchymal remodeling only)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PEBP4</td>
+<td class="gene">PEBP4</td>
 <td>Structural/developmental (human myoblasts)</td>
 <td>PEBP4 acts as a scaffold protein modulating RAF1-MEK-ERK signaling during human myoblast differentiation (contrasting with RKIP, which disrupts this interaction)</td>
 <td>Garcia et al. 2009, PMID 19197339, DOI 10.1038/embor.2009.4</td>
-<td>WEAKENED (muscle-tissue, not lung; PEBP4 has zero locus-specific genetic evidence at this locus per Open Targets)</td>
+<td><span class="tag-warning">WEAKENED</span> (muscle-tissue, not lung; PEBP4 has zero locus-specific genetic evidence at this locus per Open Targets)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PEBP4</td>
+<td class="gene">PEBP4</td>
 <td>Structural/mechanistic (hepatocellular carcinoma, cell lines)</td>
 <td>PEBP4 promotes Akt/mTORC1/mTORC2 signaling and malignant behavior in HCC cells</td>
 <td>Chen et al. 2022, PMID 35955931, DOI 10.3390/ijms23158798</td>
-<td>WEAKENED (liver-cancer context, not lung/COPD)</td>
+<td><span class="tag-warning">WEAKENED</span> (liver-cancer context, not lung/COPD)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PEBP4</td>
+<td class="gene">PEBP4</td>
 <td>Structural/mechanistic (NSCLC, human tissue + cell lines)</td>
 <td>PEBP4 is highly expressed in human lung cancer tissue/NSCLC cell lines and promotes EMT via Sonic Hedgehog signaling in NSCLC</td>
 <td>Jian et al. 2018, PMID 30367510, DOI 10.1002/jcb.27817</td>
-<td>WEAKENED (lung-cancer EMT context, not COPD/airway remodeling)</td>
+<td><span class="tag-warning">WEAKENED</span> (lung-cancer EMT context, not COPD/airway remodeling)</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — not a verified literature citation)</h2>
 <p>This section is a <strong>structured database lookup</strong> from the Open Targets Platform GraphQL
 API (queried 2026-09-11). It did not go through citation-verifier or red-team-skeptic and
 should not be read as a literature claim. Full detail in
 <code>evidence_tables/_status/8_22500001-22750000/opentargets.md</code>.</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -553,7 +237,7 @@ should not be read as a literature claim. Full detail in
 </thead>
 <tbody>
 <tr>
-<td>BIN3</td>
+<td class="gene">BIN3</td>
 <td>0.246 overall (genetic_assoc 0.390)</td>
 <td><strong>0.642 (top gene)</strong></td>
 <td><strong>0.368 (top gene)</strong></td>
@@ -561,7 +245,7 @@ should not be read as a literature claim. Full detail in
 <td>1.12 (tolerant)</td>
 </tr>
 <tr>
-<td>CCAR2</td>
+<td class="gene">CCAR2</td>
 <td>0.094 overall (genetic_assoc 0.155)</td>
 <td>0.255 (2nd)</td>
 <td>0.278 (2nd)</td>
@@ -569,7 +253,7 @@ should not be read as a literature claim. Full detail in
 <td>0.20 (strongly constrained)</td>
 </tr>
 <tr>
-<td>PDLIM2</td>
+<td class="gene">PDLIM2</td>
 <td>0.057 overall (literature-only, no genetic_assoc score)</td>
 <td>not in COPD credible-set L2G rows</td>
 <td>not in FEV/FVC credible-set L2G rows</td>
@@ -577,7 +261,7 @@ should not be read as a literature claim. Full detail in
 <td>1.24 (tolerant)</td>
 </tr>
 <tr>
-<td>EGR3</td>
+<td class="gene">EGR3</td>
 <td>0.048 overall (genetic_assoc 0.037, literature 0.349)</td>
 <td>0.061 (minor)</td>
 <td>not in FEV/FVC credible-set L2G rows</td>
@@ -585,7 +269,7 @@ should not be read as a literature claim. Full detail in
 <td>0.17 (strongly constrained)</td>
 </tr>
 <tr>
-<td>PEBP4</td>
+<td class="gene">PEBP4</td>
 <td><strong>no data at all</strong> (absent from disease-association result set)</td>
 <td><strong>absent from all ~165 credible sets at the lead variant</strong></td>
 <td>absent</td>
@@ -593,7 +277,7 @@ should not be read as a literature claim. Full detail in
 <td>0.88 (tolerant)</td>
 </tr>
 <tr>
-<td>C8orf58</td>
+<td class="gene">C8orf58</td>
 <td>0.020 overall (genetic_assoc 0.032)</td>
 <td>0.053 (minor)</td>
 <td>0.108 (minor)</td>
@@ -601,7 +285,7 @@ should not be read as a literature claim. Full detail in
 <td>0.81 (mildly constrained)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Additional structured findings: the COPD-study credible set at the lead variant
 colocalises (COLOC_PIP_ECAVIAR) with a vital-capacity (FVC) GWAS study locus at h4=0.90,
 and with several non-pulmonary trait loci (systolic blood pressure h4=0.83, insomnia
@@ -659,5 +343,7 @@ should weigh BIN3 as the best current statistical bet while recognizing the real
 possibility that CCAR2 or PDLIM2 could be more directly causal, pending the additional
 evidence described above.</p>
 
+        </div>
+    </div>
 </body>
 </html>

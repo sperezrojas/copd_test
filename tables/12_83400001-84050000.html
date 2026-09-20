@@ -1,373 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>12_83400001-84050000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 12:83,400,001-84,050,000 (lead variant rs324768)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-1283400001-84050000-lead-variant-rs324768">Evidence table — locus 12:83,400,001-84,050,000 (lead variant rs324768)</h1>
-<p>Candidate gene(s) evaluated: <strong>TMTC2</strong> (nearest gene; FLAMES-prioritized; PoPS-prioritized; MAGMA and ABC gave no pick). SLC6A15 is noted in the appendix as flanking gene context only — it was not independently researched as a full candidate (see audit appendix).</p>
-<table>
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-1283400001-84050000-lead-variant-rs324768">Evidence table — locus 12:83,400,001-84,050,000 (lead variant rs324768)</h1><div class="summary"><p>Candidate gene(s) evaluated: <strong>TMTC2</strong> (nearest gene; FLAMES-prioritized; PoPS-prioritized; MAGMA and ABC gave no pick). SLC6A15 is noted in the appendix as flanking gene context only — it was not independently researched as a full candidate (see audit appendix).</p></div>
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -380,23 +64,23 @@ code {
 </thead>
 <tbody>
 <tr>
-<td>TMTC2</td>
+<td class="gene">TMTC2</td>
 <td>Statistical genetics (GWAS, pediatric allergic disease)</td>
-<td>Meta-analysis found genome-wide-significant association (rs993226, OR 1.58, P=5.3×10⁻⁹) for combined childhood eczema-plus-asthma &quot;atopic march&quot; phenotype, located in the intergenic interval between TMTC2 and SLC6A15 on 12q21.3; the paper does not identify which flanking gene is causal</td>
+<td>Meta-analysis found genome-wide-significant association (rs993226, OR 1.58, P=5.3×10⁻⁹) for combined childhood eczema-plus-asthma "atopic march" phenotype, located in the intergenic interval between TMTC2 and SLC6A15 on 12q21.3; the paper does not identify which flanking gene is causal</td>
 <td>PMID 26542096 / DOI 10.1038/ncomms9804</td>
-<td>VERIFIED (citation); WEAKENED as gene-specific evidence — locus-level only, does not distinguish TMTC2 from SLC6A15, and the phenotype (pediatric allergic eczema→asthma) is mechanistically distinct from adult smoking-related COPD</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED (citation);  as gene-specific evidence — locus-level only, does not distinguish TMTC2 from SLC6A15, and the phenotype (pediatric allergic eczema→asthma) is mechanistically distinct from adult smoking-related COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMTC2</td>
+<td class="gene">TMTC2</td>
 <td>Epigenetic/environmental association (non-genetic, COPD patients)</td>
 <td>In 95 male COPD patients, TMTC2 was the single most strongly differentially-methylated gene associated with cumulative PM2.5 exposure (P=1.63×10⁻¹¹, R=0.656); functional enrichment of associated genes pointed to neurodegenerative-disease/cancer pathways, not a lung-remodeling or inflammatory mechanism</td>
 <td>PMID 39251997 / DOI 10.1186/s12931-024-02955-3</td>
-<td>VERIFIED (citation); WEAKENED as causal evidence — indirect, correlative EWAS in cases only, not a genetic-variant/causal-gene test, and its own pathway enrichment argues against a lung-specific mechanism</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED (citation);  as causal evidence — indirect, correlative EWAS in cases only, not a genetic-variant/causal-gene test, and its own pathway enrichment argues against a lung-specific mechanism</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMTC2</td>
+<td class="gene">TMTC2</td>
 <td>Statistical genetics (cross-species eQTL/GWAS, cattle)</td>
 <td>cis-eQTL/GWAS/fine-mapping in Chinese Holstein cattle implicates TMTC2 as a candidate gene for body-conformation traits</td>
 <td>PMID 40383388 / DOI 10.3168/jds.2025-26361</td>
@@ -404,7 +88,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMTC2</td>
+<td class="gene">TMTC2</td>
 <td>Statistical genetics (cross-species eQTL/GWAS/MR, cattle)</td>
 <td>cis-eQTL/GWAS/MR/colocalization in Simmental beef cattle implicates TMTC2 for body-size/carcass (backfat) traits</td>
 <td>PMID 37165455 / DOI 10.1186/s40104-023-00876-7</td>
@@ -412,7 +96,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMTC2</td>
+<td class="gene">TMTC2</td>
 <td>Molecular/cell biology (gene function)</td>
 <td>CRISPR knockouts in HEK293 cells identify TMTC1-4 as a paralogous family of O-mannosyltransferases that glycosylate cadherin/protocadherin extracellular domains, independent of the classical POMT1/POMT2 pathway; no lung, airway, or alveolar phenotype was reported or tested</td>
 <td>PMID 28973932 / DOI 10.1073/pnas.1708319114</td>
@@ -420,7 +104,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMTC2</td>
+<td class="gene">TMTC2</td>
 <td>Structural/computational biology</td>
 <td>Computational 3D structural modeling supports TMTC1-4 as genuine sugar-transferring (GT-C/PMT clan) enzymes binding dolichyl-phosphate-mannose and a divalent metal ion; no tissue-specific or disease-phenotype data</td>
 <td>PMID 33436046 / DOI 10.1186/s13062-021-00291-w</td>
@@ -428,15 +112,15 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMTC2</td>
+<td class="gene">TMTC2</td>
 <td>Clinical genetics (non-pulmonary organ phenotype)</td>
 <td>A fully penetrant TMTC2 coding variant (rs35725509, 12q21) segregates with autosomal-dominant progressive sensorineural hearing loss in a 6-generation family, replicated in an independent 363-person cohort (P=7×10⁻⁴)</td>
 <td>PMID 27311106 / DOI 10.1001/jamaoto.2016.1444</td>
-<td>VERIFIED (citation); establishes that TMTC2 disruption CAN cause a genuine tissue-specific human phenotype (cochlear), somewhat undercutting a &quot;pure pleiotropy, no real biology&quot; interpretation of TMTC2 broadly — but this phenotype and its causal variant are unrelated to the lung and to this locus's noncoding credible-set variants</td>
+<td>VERIFIED (citation); establishes that TMTC2 disruption CAN cause a genuine tissue-specific human phenotype (cochlear), somewhat undercutting a "pure pleiotropy, no real biology" interpretation of TMTC2 broadly — but this phenotype and its causal variant are unrelated to the lung and to this locus's noncoding credible-set variants</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMTC2</td>
+<td class="gene">TMTC2</td>
 <td>Clinical genetics (replication, non-pulmonary)</td>
 <td>Independent replication of the rs35725509 TMTC2 variant as a cause of sensorineural hearing loss/auditory neuropathy spectrum disorder in a second family</td>
 <td>PMID 29671961 / DOI 10.1002/mgg3.397</td>
@@ -444,7 +128,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMTC2</td>
+<td class="gene">TMTC2</td>
 <td>Clinical outcomes (non-pulmonary)</td>
 <td>Clinical outcomes study of 10 TMTC2-variant (rs35725509) carriers undergoing cochlear implantation</td>
 <td>PMID 38769084 / DOI 10.1097/MAO.0000000000004208</td>
@@ -452,8 +136,8 @@ code {
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
-<p><strong>Note on GWAS/spirometry literature coverage:</strong> No PubMed-indexed COPD case-control GWAS, fine-mapping, or colocalization publication naming TMTC2 was found by the researcher, and no PubMed-indexed spirometry (FEV1/FEV1-FVC) GWAS publication specifically naming TMTC2 was retrievable by keyword search either. The red-team-skeptic flagged this as a likely search-methodology gap rather than a true absence: large spirometry GWAS meta-analyses (e.g., Shrine et al. 2019-type efforts) typically report gene-desert loci by genomic position with their own nearest-gene call in supplementary tables, which a &quot;TMTC2&quot; keyword search would not surface. <strong>This is an open item for the study team</strong> — a position-based (chr12:83.4-84.4 Mb), not gene-name-based, check of major published spirometry/COPD GWAS supplementary loci tables was recommended by the skeptic but not completed in this pipeline run.</p>
+</table></div>
+<p><strong>Note on GWAS/spirometry literature coverage:</strong> No PubMed-indexed COPD case-control GWAS, fine-mapping, or colocalization publication naming TMTC2 was found by the researcher, and no PubMed-indexed spirometry (FEV1/FEV1-FVC) GWAS publication specifically naming TMTC2 was retrievable by keyword search either. The red-team-skeptic flagged this as a likely search-methodology gap rather than a true absence: large spirometry GWAS meta-analyses (e.g., Shrine et al. 2019-type efforts) typically report gene-desert loci by genomic position with their own nearest-gene call in supplementary tables, which a "TMTC2" keyword search would not surface. <strong>This is an open item for the study team</strong> — a position-based (chr12:83.4-84.4 Mb), not gene-name-based, check of major published spirometry/COPD GWAS supplementary loci tables was recommended by the skeptic but not completed in this pipeline run.</p>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — not a verified literature citation)</h2>
 <p>Source: Open Targets Platform GraphQL API, queried directly by the orchestrator. This section did <strong>not</strong> go through citation-verifier or red-team-skeptic.</p>
 <ul>
@@ -467,8 +151,10 @@ code {
 <p><strong>TMTC2 — Confidence: LOW.</strong></p>
 <p>TMTC2 is named as the candidate gene here essentially by elimination, not by direct mechanistic or gene-specific statistical support: it is the only protein-coding gene within ~1.5 Mb of a locus that is itself a gene desert (no protein-coding genes in the 650-kb window; only lncRNAs), and it does not physically overlap the locus at all (265-950 kb away). The strongest positive evidence is locus-level, not gene-specific: near-perfect FEV1/FVC colocalisation (h4&gt;0.9, Open Targets summary above), consistent with this pipeline's prior #2 that spirometric concordance strengthens prioritization — this locus almost certainly harbors a genuine pulmonary-function-associated variant. However, as the red-team-skeptic emphasized, h4&gt;0.9 colocalization establishes that the <em>locus</em> affects lung function; it does not establish that <em>TMTC2</em> is the mediating gene. Against a TMTC2-specific mechanism: zero lung eQTLs/sQTLs in GTEx v8 despite robust thyroid/liver eQTLs (evidence table Open Targets/eQTL findings above); no PubMed-indexed COPD or spirometry GWAS names TMTC2 directly (though this may be a search-methodology gap rather than true absence, per the skeptic's note above); TMTC2's only established tissue-specific human disease phenotype is autosomal-dominant sensorineural hearing loss (PMID 27311106, 29671961, 38769084) via a distinct coding variant unrelated to this locus's noncoding credible set; and its known molecular function (ER O-mannosyltransferase glycosylating cadherin/protocadherin domains, PMID 28973932, 33436046) has no demonstrated lung-remodeling or airway-epithelial role — this remains an untested hypothesis, not a finding.</p>
 <p>On this pipeline's prior #1 (smoking-mediation): the locus's lead variant also sits in smoking-initiation and smoking-cessation credible sets (L2G ≈0.57 each), but colocalisation between these smoking traits and FEV1/FVC is only moderate (h4≈0.49-0.69) — clearly weaker than the FEV1-FVC intra-trait colocalisation (h4&gt;0.9). This evidence does not cleanly support either a pure smoking-behavior-mediated mechanism or a pure lung-intrinsic mechanism; it is ambiguous. Compounding this, the locus colocalizes broadly across numerous non-respiratory UK Biobank traits (educational attainment, occupational prestige, walking pace, frailty, age at first birth/sexual intercourse, CRP, WBC count, lipids, eGFR, glaucoma) and is recurrently identified in cross-species (cattle) GWAS/eQTL studies for body-size/conformation traits (PMID 40383388, 37165455) — a pattern the red-team-skeptic characterized as more consistent with a general socioeconomic/behavioral/constitutional pleiotropy hub (with well-known confounding risks — assortative mating, social stratification, smoking-correlated SES) than with COPD-specific pulmonary biology.</p>
-<p>No credible alternative candidate gene emerged: SLC6A15 (a neuronal/renal amino-acid transporter ~825 kb-1.7 Mb from the credible set) was named only as the other gene flanking an unrelated, phenotypically distinct pediatric &quot;atopic march&quot; (eczema→asthma) GWAS signal (PMID 26542096) in the same broad intergenic interval; that paper does not identify a causal gene, and SLC6A15 receives no Open Targets L2G support at this locus. It is not a serious rival candidate on current evidence, only a noted absence-of-alternative.</p>
+<p>No credible alternative candidate gene emerged: SLC6A15 (a neuronal/renal amino-acid transporter ~825 kb-1.7 Mb from the credible set) was named only as the other gene flanking an unrelated, phenotypically distinct pediatric "atopic march" (eczema→asthma) GWAS signal (PMID 26542096) in the same broad intergenic interval; that paper does not identify a causal gene, and SLC6A15 receives no Open Targets L2G support at this locus. It is not a serious rival candidate on current evidence, only a noted absence-of-alternative.</p>
 <p>The red-team-skeptic's formal verdict was <strong>WEAKENED</strong> (not CONTESTED, since no source argues against TMTC2 or substitutes a better-supported rival gene) — this pipeline's synthesis concurs: TMTC2 remains the best-supported single candidate by default (sole protein-coding gene in range, sole L2G recipient, and the only gene with a documented human organ-specific disease mechanism at all, even if that organ is the ear, not the lung), but confidence should be marked <strong>LOW</strong>, not moderate or high. What would resolve this: (1) a position-based (not gene-name) re-check of major published spirometry/COPD GWAS supplementary loci tables at chr12:83.4-84.4 Mb, since gene-desert loci are systematically missed by keyword search (skeptic's recommendation, not completed in this run); (2) lung/airway-epithelium-specific single-cell eQTL or chromatin-conformation (e.g., Hi-C/ABC) data connecting the credible-set region to TMTC2's promoter, since bulk-tissue GTEx lung shows no eQTL signal; (3) any functional study of TMTC2 in airway epithelial or immune cells, which does not currently exist in the literature reviewed.</p>
 
+        </div>
+    </div>
 </body>
 </html>

@@ -1,378 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>9_107350001-107500000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 9:107,350,001-107,500,000 (nearest gene RAD23B)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-9107350001-107500000-nearest-gene-rad23b">Evidence table — Locus 9:107,350,001-107,500,000 (nearest gene RAD23B)</h1>
-<p>Lead variant: rs12004443 (9:107404822, GRCh38, intergenic_variant). Credible set (ABF
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-9107350001-107500000-nearest-gene-rad23b">Evidence table — Locus 9:107,350,001-107,500,000 (nearest gene RAD23B)</h1><div class="summary"><p>Lead variant: rs12004443 (9:107404822, GRCh38, intergenic_variant). Credible set (ABF
 fine-mapping) is entirely intergenic/upstream-gene (MODIFIER impact) variants clustered
 ~107.40-107.41 Mb, between RAD23B and KLF4. Candidate genes per internal pipeline:
 nearest gene RAD23B; PoPS-prioritized OR13C5. No FLAMES/MAGMA/ABC prioritization at this
-locus.</p>
+locus.</p></div>
+
 <h2 id="evidence-table">Evidence table</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -385,15 +69,15 @@ locus.</p>
 </thead>
 <tbody>
 <tr>
-<td>RAD23B</td>
+<td class="gene">RAD23B</td>
 <td>Statistical genetics (lung function GWAS, general methodology)</td>
 <td>Primary FEV1/FEV1-FVC lung-function GWAS meta-analysis (400,102 individuals, 279 signals); reports generalizability of a lung-function polygenic score to COPD across smokers and never-smokers. Whether this exact 9:107.4Mb locus is named in the paper's own tables is UNCONFIRMED (locus-attribution not verified).</td>
 <td>Shrine N et al. 2019, Nat Genet. PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
-<td>VERIFIED (paper); locus-attribution UNVERIFIED; WEAKENED/CONTESTED per skeptic (does not resolve RAD23B vs. KLF4)</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED (paper); locus-attribution UNVERIFIED; /CONTESTED per skeptic (does not resolve RAD23B vs. KLF4)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAD23B</td>
+<td class="gene">RAD23B</td>
 <td>Statistical genetics (erratum)</td>
 <td>Author Correction to the above.</td>
 <td>Shrine N et al. 2024, Nat Genet. PMID 38641645, DOI 10.1038/s41588-024-01752-4</td>
@@ -401,15 +85,15 @@ locus.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAD23B</td>
+<td class="gene">RAD23B</td>
 <td>Statistical genetics (COPD case-control GWAS, general methodology)</td>
 <td>Companion COPD case-control GWAS (35,735 cases/222,076 controls, UK Biobank + ICGC, 82 loci, 35 new, 13 also lung-function-associated). Whether the 9:107.4Mb RAD23B/KLF4 region is among the 82 reported COPD loci is UNCONFIRMED (locus-attribution not verified).</td>
 <td>Sakornsakolpat P et al. 2019, Nat Genet. PMID 30804561, DOI 10.1038/s41588-018-0342-2</td>
-<td>VERIFIED (paper); locus-attribution UNVERIFIED; WEAKENED/CONTESTED per skeptic</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED (paper); locus-attribution UNVERIFIED; /CONTESTED per skeptic</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAD23B</td>
+<td class="gene">RAD23B</td>
 <td>Statistical genetics (smoking-behavior GWAS, general methodology; Prior 1)</td>
 <td>GSCAN consortium GWAS of smoking initiation/cessation/heaviness and alcohol use (~1.2M individuals, 406 loci). Whether this 9:107.4Mb region reaches genome-wide significance for smoking initiation specifically is UNCONFIRMED.</td>
 <td>Liu M et al. 2019, Nat Genet. PMID 30643251, DOI 10.1038/s41588-018-0307-5 (DOI corrected by verifier; researcher's original DOI 10.1038/s41588-018-0193-3 was incorrect)</td>
@@ -417,7 +101,7 @@ locus.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAD23B</td>
+<td class="gene">RAD23B</td>
 <td>Structural/mechanistic (smoking-carcinogenesis, tangential)</td>
 <td>RAD23B codon-249 Val allele (Ala249Val) associated with ~2-fold increased lung cancer risk in a PAH-exposed Chinese cohort (OR=1.91). Lung CANCER risk, not COPD/airflow obstruction; different (coding) variant than this locus's credible set.</td>
 <td>Shen M et al. 2005, Int J Cancer. PMID 15849729, DOI 10.1002/ijc.21117</td>
@@ -425,7 +109,7 @@ locus.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAD23B</td>
+<td class="gene">RAD23B</td>
 <td>Structural/mechanistic (smoking-carcinogenesis, tangential)</td>
 <td>RAD23B Ala249Val modifies laryngeal cancer risk in heavy smokers/drinkers (OR=1.6 in heavy smokers).</td>
 <td>Abbasi R et al. 2009, Int J Cancer. PMID 19444904, DOI 10.1002/ijc.24442</td>
@@ -433,7 +117,7 @@ locus.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAD23B</td>
+<td class="gene">RAD23B</td>
 <td>Structural/mechanistic (smoking-carcinogenesis, tangential)</td>
 <td>NER pathway variants/haplotypes (including RAD23B) modestly associated with lung cancer risk, smoking-interaction dependent, in Latinos/African Americans.</td>
 <td>Chang JS et al. 2008, Int J Cancer. PMID 18709642, DOI 10.1002/ijc.23801</td>
@@ -441,7 +125,7 @@ locus.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAD23B</td>
+<td class="gene">RAD23B</td>
 <td>Structural/mechanistic (candidate-gene, tangential)</td>
 <td>RAD23B rs1805329 associated with non-Hodgkin lymphoma risk (hair-dye-exposure interaction).</td>
 <td>Guo H et al. 2014, Cancer Causes Control. PMID 25178586, DOI 10.1007/s10552-014-0423-1</td>
@@ -449,7 +133,7 @@ locus.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAD23B</td>
+<td class="gene">RAD23B</td>
 <td>Structural/mechanistic (candidate-gene, tangential)</td>
 <td>High-order gene-gene interaction among NER genes (including RAD23B) with bladder cancer risk; ~30-fold increased risk in smokers with variant alleles (small-cell-count high-order interaction).</td>
 <td>Chen M et al. 2007, Carcinogenesis. PMID 17728339, DOI 10.1093/carcin/bgm167</td>
@@ -457,7 +141,7 @@ locus.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAD23B</td>
+<td class="gene">RAD23B</td>
 <td>Structural/mechanistic (candidate-gene, tangential)</td>
 <td>RAD23B Ala249Val borderline/null association with oral premalignant lesions (OR=0.67, CI crosses 1).</td>
 <td>Wang Y et al. 2007, Clin Cancer Res. PMID 17575242, DOI 10.1158/1078-0432.CCR-06-1911</td>
@@ -465,7 +149,7 @@ locus.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAD23B</td>
+<td class="gene">RAD23B</td>
 <td>Structural/mechanistic (candidate-gene, tangential)</td>
 <td>RAD23B intronic variant (IVS5-15A&gt;G) associated with bladder cancer risk (OR=1.3).</td>
 <td>García-Closas M et al. 2006, Cancer Epidemiol Biomarkers Prev. PMID 16537713, DOI 10.1158/1055-9965.EPI-05-0749</td>
@@ -473,7 +157,7 @@ locus.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAD23B</td>
+<td class="gene">RAD23B</td>
 <td>Structural/mechanistic (candidate-gene, tangential, weak RAD23B role)</td>
 <td>NER pathway (primarily XPC, RAD23B mentioned) and colorectal adenoma risk, smoking interaction.</td>
 <td>Huang WY et al. 2006, Cancer Epidemiol Biomarkers Prev. PMID 16492920, DOI 10.1158/1055-9965.EPI-05-0751</td>
@@ -481,7 +165,7 @@ locus.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAD23B</td>
+<td class="gene">RAD23B</td>
 <td>Structural/mechanistic (candidate-gene, tangential)</td>
 <td>NER genes (including RAD23B) x smoking interaction in breast cancer risk (African American women).</td>
 <td>Mechanic LE et al. 2006, Carcinogenesis. PMID 16399771, DOI 10.1093/carcin/bgi330</td>
@@ -489,7 +173,7 @@ locus.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAD23B</td>
+<td class="gene">RAD23B</td>
 <td>Structural/mechanistic (lung cell line, tangential)</td>
 <td>In A549 lung adenocarcinoma cells, hHR23/RAD23 is upregulated by cisplatin via MEK/ERK-driven translational control; RAD23B knockdown reduces NER-mediated DNA-repair capacity and cell survival after DNA damage. Chemotherapy-resistance model, not COPD/airway-remodeling biology.</td>
 <td>Shen YH et al. 2011, Toxicol Lett. PMID 21742020, DOI 10.1016/j.toxlet.2011.06.028</td>
@@ -497,7 +181,7 @@ locus.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RAD23B (context only — competing gene KLF4, not an official candidate at this locus)</td>
+<td class="gene">RAD23B (context only — competing gene KLF4, not an official candidate at this locus)</td>
 <td>Structural/mechanistic (airway epithelium, surfaced by red-team-skeptic)</td>
 <td>KLF4 and KLF5 are direct HIF targets that promote basal and secretory cell fates in human lung epithelium — a mechanistically specific, disease-relevant link (airway epithelial differentiation, goblet-cell/secretory-cell fate) for the locus's competing L2G gene KLF4.</td>
 <td>Dong Z et al. 2025, Cell Stem Cell. PMID 41075787, DOI 10.1016/j.stem.2025.09.007</td>
@@ -505,15 +189,15 @@ locus.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>OR13C5</td>
+<td class="gene">OR13C5</td>
 <td>Immune/infectious-disease (tangential, weak/indirect)</td>
 <td>In a whole-exome case-control study of infants hospitalized with severe RSV bronchiolitis, a coding variant in OR13C5 (rs199665292) was the top candidate variant for RSV disease susceptibility (OR=5.56), alongside HLA and mucin (MUC4) gene variants. Pediatric acute viral infection, not COPD; variant not in this locus's GWAS credible set.</td>
 <td>Salas A et al. 2017, Sci Rep. PMID 29162850, DOI 10.1038/s41598-017-15752-4</td>
-<td>VERIFIED; skeptic judges this &quot;genuinely tangential&quot; / very weak indirect evidence at most</td>
+<td>VERIFIED; skeptic judges this "genuinely tangential" / very weak indirect evidence at most</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not passed through citation-verifier or red-team-skeptic)</h2>
 <ul>
 <li><strong>RAD23B (ENSG00000119318, nearest gene):</strong> No COPD-specific L2G/credible-set found.
@@ -522,8 +206,8 @@ at this locus (GCST007080, GCST90244094), competing with KLF4 (0.317-0.535) — 
 order flips across the two studies. Strong colocalization with independent FEV1/FVC and
 FEV1 GWAS signals (H4 0.60-0.99). Does not appear in Open Targets' top ~24 targets
 ranked by aggregate association score against COPD directly. RAD23B's own top
-cross-trait associations (all diseases) are headed by &quot;alcohol drinking&quot; and &quot;smoking
-initiation.&quot; Strongly LoF-constrained in gnomAD (oe=0.098).</li>
+cross-trait associations (all diseases) are headed by "alcohol drinking" and "smoking
+initiation." Strongly LoF-constrained in gnomAD (oe=0.098).</li>
 <li><strong>OR13C5 (ENSG00000277556, PoPS-prioritized):</strong> No L2G support found at this locus in
 either FEV1/FVC credible set queried (only RAD23B and KLF4 ranked). No colocalization
 evidence resolved specifically for OR13C5. Essentially unconstrained in gnomAD
@@ -545,7 +229,7 @@ colocalization evidence, is essentially LoF-unconstrained (consistent with typic
 olfactory-receptor-gene biology), and its only literature hit (Salas et al. 2017,
 PMID 29162850) concerns a different variant, a different age group (infants), and a
 different disease (acute RSV bronchiolitis) than COPD. Both red-team-skeptic passes
-independently concur OR13C5 is &quot;WEAKENED... bordering on effectively non-viable.&quot;</p>
+independently concur OR13C5 is "WEAKENED... bordering on effectively non-viable."</p>
 <p>That leaves RAD23B as the only remaining official candidate, but the evidence for RAD23B
 itself is genuinely thin and does not clearly distinguish it from its physical neighbor
 KLF4 (out of scope as an official candidate at this locus, since it was not flagged by
@@ -566,8 +250,8 @@ disease-relevant literature (10 of 15 verified citations) concerns smoking- and
 alcohol-associated cancer risk (lung, laryngeal, bladder, colorectal, breast,
 non-Hodgkin lymphoma) via its role in nucleotide excision repair — a genotoxic-
 carcinogenesis axis, not an airflow-obstruction/emphysema axis.</li>
-<li>RAD23B's own top Open Targets cross-trait associations are &quot;smoking initiation&quot; and
-&quot;alcohol drinking,&quot; raising Prior 1 (smoking-behavior mediation) as a live, unresolved
+<li>RAD23B's own top Open Targets cross-trait associations are "smoking initiation" and
+"alcohol drinking," raising Prior 1 (smoking-behavior mediation) as a live, unresolved
 alternative to direct pulmonary biology — this was not ruled out by any citation found.</li>
 <li>By contrast, the competing gene KLF4 has an established, disease-relevant mechanistic
 story in human lung epithelium (Dong et al. 2025, PMID 41075787: KLF4/KLF5 are direct
@@ -594,5 +278,7 @@ candidates, not as a resolved finding — confidence is marked <strong>LOW</stro
 should weigh whether KLF4 (despite being outside this locus's original candidate list)
 warrants separate follow-up.</p>
 
+        </div>
+    </div>
 </body>
 </html>

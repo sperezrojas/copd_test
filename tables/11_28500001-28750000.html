@@ -1,378 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>11_28500001-28750000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPD GWAS locus evidence table — 11:28,500,001-28,750,000 (GRCh38)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="copd-gwas-locus-evidence-table--1128500001-28750000-grch38">COPD GWAS locus evidence table — 11:28,500,001-28,750,000 (GRCh38)</h1>
-<p><strong>Lead variant:</strong> rs10835362 (PIP=0.244, 11:28,605,239). <strong>Credible set:</strong> 29 variants (ABF
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="copd-gwas-locus-evidence-table--1128500001-28750000-grch38">COPD GWAS locus evidence table — 11:28,500,001-28,750,000 (GRCh38)</h1><div class="summary"><p><strong>Lead variant:</strong> rs10835362 (PIP=0.244, 11:28,605,239). <strong>Credible set:</strong> 29 variants (ABF
 fine-mapping), all <code>intergenic_variant</code>/MODIFIER impact, spanning ~11:28,582,122-28,621,106; none
 missense/splice. <strong>Candidate genes from internal pipeline:</strong> nearest gene = METTL15,
 FLAMES-prioritized = METTL15; MAGMA/PoPS/ABC = NA (no other gene was prioritized by any method at
-this locus).</p>
+this locus).</p></div>
+
 <h2 id="evidence-table">Evidence table</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -385,15 +69,15 @@ this locus).</p>
 </thead>
 <tbody>
 <tr>
-<td>METTL15</td>
+<td class="gene">METTL15</td>
 <td>Statistical genetics — behavioral/psychiatric GWAS</td>
-<td>Independent MVP GWAS of suicidal thoughts and behaviors (633,778 veterans) reports a European-ancestry, genome-wide-significant, replicated locus named &quot;METTL15/LINC02758&quot; (one of 2 replicated loci among 7 regions).</td>
+<td>Independent MVP GWAS of suicidal thoughts and behaviors (633,778 veterans) reports a European-ancestry, genome-wide-significant, replicated locus named "METTL15/LINC02758" (one of 2 replicated loci among 7 regions).</td>
 <td>Kimbrel NA et al. 2023, JAMA Psychiatry 80(2):135-145. PMID 36515925, DOI 10.1001/jamapsychiatry.2022.3896</td>
-<td>VERIFIED — but red-team notes this and the two ADHD papers below converge on general neurobehavioral pleiotropy (suicidality, ADHD), not smoking specifically; folding all three into a single &quot;smoking-behavior&quot; bucket blurs distinct hypotheses.</td>
+<td>VERIFIED — but red-team notes this and the two ADHD papers below converge on general neurobehavioral pleiotropy (suicidality, ADHD), not smoking specifically; folding all three into a single "smoking-behavior" bucket blurs distinct hypotheses.</td>
 <td>2023-02</td>
 </tr>
 <tr>
-<td>METTL15</td>
+<td class="gene">METTL15</td>
 <td>Statistical genetics — TWAS</td>
 <td>Prenatal-brain-expression TWAS (FUSION, ADHD GWAS n=225,534) identified METTL15 as 1 of 10 genes significantly associated with ADHD via cis-regulated prenatal brain expression.</td>
 <td>Deng MG et al. 2024, J Am Acad Child Adolesc Psychiatry 64(9):1080-1091. PMID 39510315, DOI 10.1016/j.jaac.2024.10.013</td>
@@ -401,7 +85,7 @@ this locus).</p>
 <td>2024-10</td>
 </tr>
 <tr>
-<td>METTL15</td>
+<td class="gene">METTL15</td>
 <td>Statistical genetics — imaging genetics (exploratory)</td>
 <td>Imaging-genetics deep-learning model in pediatric ADHD cohort found METTL15 (with CAMK1D, MAP2K4) associated with white-matter microstructure in cerebral peduncle/posterior limb of internal capsule, in a gene set annotated as regulating neural apoptotic processes.</td>
 <td>Zhao Y et al. 2025, Transl Psychiatry 15(1):320. PMID 40858546, DOI 10.1038/s41398-025-03493-2</td>
@@ -409,7 +93,7 @@ this locus).</p>
 <td>2025-01</td>
 </tr>
 <tr>
-<td>METTL15</td>
+<td class="gene">METTL15</td>
 <td>Molecular function (mitochondrial)</td>
 <td>METTL15 is the mitochondrial 12S rRNA N4-methylcytidine (m4C839) methyltransferase; loss reduces mitochondrial protein synthesis, decreases OXPHOS protein levels, impairs mitoribosome small-subunit assembly.</td>
 <td>Van Haute L et al. 2019, Nucleic Acids Res 47(19):10267-10281. PMID 31665743, DOI 10.1093/nar/gkz735</td>
@@ -417,7 +101,7 @@ this locus).</p>
 <td>2019-10</td>
 </tr>
 <tr>
-<td>METTL15</td>
+<td class="gene">METTL15</td>
 <td>Molecular function (mitochondrial)</td>
 <td>Independent confirmation that METTL15 mediates 12S mt-rRNA m4C839 methylation; depletion impairs mitochondrial mRNA translation and decreases respiration capacity.</td>
 <td>Chen H et al. 2020, J Biol Chem 295(25):8505-8513. PMID 32371392, DOI 10.1074/jbc.RA119.012127</td>
@@ -425,7 +109,7 @@ this locus).</p>
 <td>2020-06</td>
 </tr>
 <tr>
-<td>METTL15</td>
+<td class="gene">METTL15</td>
 <td>Molecular function (mitochondrial)</td>
 <td>Mouse Mettl15 forms the m4C840 modification via interaction with an RBFA-containing mtSSU assembly intermediate; Mettl15 inactivation perturbs mitochondrial translation machinery composition.</td>
 <td>Laptev I et al. 2020, Nucleic Acids Res 48(14):8022-8034. PMID 32573735, DOI 10.1093/nar/gkaa522</td>
@@ -433,7 +117,7 @@ this locus).</p>
 <td>2020-07</td>
 </tr>
 <tr>
-<td>METTL15</td>
+<td class="gene">METTL15</td>
 <td>Molecular function (structural)</td>
 <td>Cryo-EM structural study places METTL15 within the sequential mitoribosome SSU assembly pathway (after TFB1M/RBFA binding, before mtIF3/mS37/mtIF2).</td>
 <td>Itoh Y et al. 2022, Nature 606(7914):603-608. PMID 35676484, DOI 10.1038/s41586-022-04795-x</td>
@@ -441,7 +125,7 @@ this locus).</p>
 <td>2022-06</td>
 </tr>
 <tr>
-<td>METTL15</td>
+<td class="gene">METTL15</td>
 <td>Molecular function (structural/metabolic)</td>
 <td>Crystal structures of human METTL15-hsRBFA-h44-SAM complexes; METTL15 deficiency causes increased ROS, decreased mitochondrial membrane potential, altered metabolic state, and increased histone lactylation (H4K12la, H3K9la) via elevated lactate.</td>
 <td>Lv M et al. 2024, Cell Discov 10(1):11. PMID 38291322, DOI 10.1038/s41421-023-00634-z</td>
@@ -449,7 +133,7 @@ this locus).</p>
 <td>2024-01</td>
 </tr>
 <tr>
-<td>METTL15</td>
+<td class="gene">METTL15</td>
 <td>Molecular function</td>
 <td>The mC catalytic modification itself is dispensable for SSU biogenesis; METTL15 has an essential chaperone-like (non-catalytic) function.</td>
 <td>Mutti CD et al. 2024, RNA Biol 21(1):23-30. PMID 38913872, DOI 10.1080/15476286.2024.2369374</td>
@@ -457,7 +141,7 @@ this locus).</p>
 <td>2024-06</td>
 </tr>
 <tr>
-<td>METTL15</td>
+<td class="gene">METTL15</td>
 <td>Molecular function (structural)</td>
 <td>Mettl17 recruits Mettl15 to an intermediate SSU assembly stage; Mettl15 then undergoes a conformational change enabling substrate recognition and eventual replacement by translation initiation factors.</td>
 <td>Zgadzay Y et al. 2025, Structure 33(11):1904-1915.e3. PMID 40882632, DOI 10.1016/j.str.2025.08.002 (supersedes bioRxiv preprint PMID 39896671, DOI 10.1101/2024.12.18.629302)</td>
@@ -465,7 +149,7 @@ this locus).</p>
 <td>2025-09 (Aug 2025 print)</td>
 </tr>
 <tr>
-<td>METTL15</td>
+<td class="gene">METTL15</td>
 <td>In vivo phenotype (mouse knockout)</td>
 <td>Homozygous Mettl15-knockout mice are viable (milder phenotype than other mt-rRNA methyltransferase KOs); phenotypes: lower post-exercise blood glucose, suboptimal muscle performance, decreased Cox3 protein in oxidative soleus muscle, decreased learning capability. No lung/airway phenotype reported.</td>
 <td>Averina OA et al. 2022, Int J Mol Sci 23(11):6056. PMID 35682734, DOI 10.3390/ijms23116056</td>
@@ -473,7 +157,7 @@ this locus).</p>
 <td>2022-06</td>
 </tr>
 <tr>
-<td>METTL15</td>
+<td class="gene">METTL15</td>
 <td>Immune/inflammation (tangential, cancer-specific)</td>
 <td>A circular RNA transcribed from the METTL15 locus (circ-METTL15 — distinct from linear METTL15 mRNA/protein) sponges miR-1299 to upregulate PD-L1 in lung cancer cells, promoting proliferation, metastasis, and tumor immune escape in a xenograft model.</td>
 <td>Zhang R et al. 2021, Autoimmunity 55(1):8-20. PMID 34796777, DOI 10.1080/08916934.2021.2001801</td>
@@ -481,7 +165,7 @@ this locus).</p>
 <td>2021-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>No missense/splice-donor/splice-acceptor variant exists in this locus's credible set, so no
 separate lead-variant/coding-variant literature search was performed beyond the lead variant
 rs10835362 itself (zero PubMed hits found for rs10835362 directly).</p>
@@ -497,7 +181,7 @@ datatype score 0.318). Across 89 disease/trait associations for METTL15 genome-w
 below skeletal abnormality (0.319), hypertensive disorder (0.313), obesity disorder (0.302),
 wheezing (0.270), ADHD (0.270), atrial fibrillation (0.258), and smoking initiation (0.248).</li>
 <li><strong>GWAS credible-set evidence / L2G:</strong> One <code>gwas_credible_sets</code> evidence entry, from Open
-Targets study GCST90476027 (&quot;Chronic airway obstruction, PheCode 496&quot;), PMID 39024449
+Targets study GCST90476027 ("Chronic airway obstruction, PheCode 496"), PMID 39024449
 (Verma et al. 2024, Million Veteran Program), lead/credible-set variant rs11030399
 (11:28,644,793, GRCh38; ~40kb from this pipeline's own lead variant rs10835362, same broad LD
 block but not confirmed to be the same causal signal), SuSiE-inf fine-mapped. <strong>L2G score for
@@ -519,7 +203,7 @@ pair, not as a null/negative colocalization result.</li>
 oe=0.908 (90% CI 0.687-1.214); missense oe=0.896; synonymous oe=0.988. METTL15 shows little to
 no evidence of LOF intolerance — a haploinsufficiency mechanism is not well supported by
 constraint metrics.</li>
-<li><strong>Data completeness:</strong> the <code>evidences(efoIds: [&quot;MONDO_0005002&quot;])</code> query returned exactly one
+<li><strong>Data completeness:</strong> the <code>evidences(efoIds: ["MONDO_0005002"])</code> query returned exactly one
 evidence row (the gwas_credible_sets entry above) — no ClinVar, Gene2Phenotype, PanelApp,
 animal-model, or literature-text-mining evidence rows were present for METTL15-COPD in Open
 Targets at the time of this query.</li>
@@ -565,7 +249,7 @@ proposed by any reviewed paper at this locus.</p>
 <p><strong>What would resolve this call:</strong> (1) a formal pairwise LD/colocalization check between this
 pipeline's own COPD credible set (lead rs10835362) and the MVP PheCode-496 credible set (lead
 rs11030399) to establish whether they represent the same causal signal, rather than assuming
-&quot;same broad LD block&quot; implies shared causality; (2) direct spirometric (FEV1, FEV1/FVC) GWAS
+"same broad LD block" implies shared causality; (2) direct spirometric (FEV1, FEV1/FVC) GWAS
 lookup or colocalization at this locus, which is currently simply absent from the data reviewed;
 (3) lung/airway-tissue expression or phenotyping data for METTL15 (e.g., GTEx lung eQTL,
 airway-epithelial single-cell data, or a lung-specific conditional knockout), none of which was
@@ -579,5 +263,7 @@ mitochondrial-oxidative-stress) — METTL15 itself is mechanistically responsibl
 COPD association, as opposed to the locus's GWAS signal reflecting pleiotropic
 neurobehavioral/smoking-propensity biology with no specific pulmonary role for METTL15 at all.</p>
 
+        </div>
+    </div>
 </body>
 </html>

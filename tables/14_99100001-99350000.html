@@ -1,380 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>14_99100001-99350000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 14:99100001-99350000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-1499100001-99350000-bcl11b">Evidence table — Locus 14:99100001-99350000 (BCL11B)</h1>
-<p><strong>Lead variant:</strong> rs807734 (14:99,222,333, GRCh38). <strong>Credible set:</strong> 35 variants, all
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-1499100001-99350000-bcl11b">Evidence Table — Locus 14:99100001-99350000</h1><div class="summary"><p><strong>Lead variant:</strong> rs807734 (14:99,222,333, GRCh38). <strong>Credible set:</strong> 35 variants, all
 intron_variant/MODIFIER, all annotated to BCL11B. <strong>Candidate genes:</strong> BCL11B (nearest
 gene, FLAMES prioritized), C14orf177 (PoPS prioritized; current HGNC symbol <strong>LINC02914</strong>,
-biotype lncRNA).</p>
-<p>Only citations with citation-verifier verdict <strong>VERIFIED</strong> are included below. Citations
+biotype lncRNA).</p><p>Only citations with citation-verifier verdict <strong>VERIFIED</strong> are included below. Citations
 with CLAIM_MISMATCH or NOT_FOUND verdicts, and genes/claims flagged CONTESTED or WEAKENED
 by red-team-skeptic, are documented in the companion audit file (see
-<code>audits/14_99100001-99350000_audit.md</code>), not omitted silently.</p>
-<table>
+<code>audits/14_99100001-99350000_audit.md</code>), not omitted silently.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -387,15 +71,15 @@ by red-team-skeptic, are documented in the companion audit file (see
 </thead>
 <tbody>
 <tr>
-<td>BCL11B</td>
+<td class="gene">BCL11B</td>
 <td>Locus pleiotropy (statgen)</td>
-<td>A 14q32.2 linkage signal for familial late-onset Alzheimer's disease places C14orf177 within the 1-LOD interval, but identity-by-descent analysis flags BCL11B (&quot;a regulator of brain-derived neurotrophic signaling&quot;) as the more mechanistically plausible candidate gene. Not COPD/lung-relevant; illustrates locus pleiotropy only.</td>
+<td>A 14q32.2 linkage signal for familial late-onset Alzheimer's disease places C14orf177 within the 1-LOD interval, but identity-by-descent analysis flags BCL11B ("a regulator of brain-derived neurotrophic signaling") as the more mechanistically plausible candidate gene. Not COPD/lung-relevant; illustrates locus pleiotropy only.</td>
 <td>Kunkle et al. 2016, Alzheimers Dement, PMID 26365416, DOI 10.1016/j.jalz.2015.05.020</td>
-<td>VERIFIED (citation); reviewed by red-team — see critique, BCL11B marked CONTESTED overall</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED (citation); reviewed by red-team — see critique, BCL11B marked  overall</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BCL11B</td>
+<td class="gene">BCL11B</td>
 <td>Structural/immune (airway epithelium, asthma model — not COPD)</td>
 <td>LINC00158 targets BCL11B in human bronchial epithelial cells (BEAS-2B); LINC00158/BCL11B overexpression suppresses EMT markers and reduces airway hyperresponsiveness, remodeling, and Th2-driven inflammation in an OVA/LPS mouse severe-asthma model.</td>
 <td>Mao et al. 2024, Int Immunopharmacol, PMID 38442574, DOI 10.1016/j.intimp.2024.111739</td>
@@ -403,7 +87,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BCL11B</td>
+<td class="gene">BCL11B</td>
 <td>Epithelial barrier / immune (skin, not lung)</td>
 <td>Keratinocyte-specific Ctip2/Bcl11b ablation causes epidermal barrier defects and triggers Th2-type atopic-dermatitis-like skin inflammation via TSLP de-repression. Establishes a general epithelial-barrier/homeostatic principle, not a lung-specific finding.</td>
 <td>Wang et al. 2012, PLoS One, PMID 23284675, DOI 10.1371/journal.pone.0051262</td>
@@ -411,7 +95,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BCL11B</td>
+<td class="gene">BCL11B</td>
 <td>Immune (basic T-cell developmental biology, mouse)</td>
 <td>BCL11B is a critical regulator of T-lineage commitment, driving large-scale chromatin reorganization at the DN2-to-DN3 thymocyte transition.</td>
 <td>Hu et al. 2018, Immunity, PMID 29466755, DOI 10.1016/j.immuni.2018.01.013</td>
@@ -419,7 +103,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BCL11B</td>
+<td class="gene">BCL11B</td>
 <td>Immune (review)</td>
 <td>Review discussing BCL11B among core T-cell transcription factors (with TCF-1, PU.1, STAT3/5, AP-1, IRF4) governing chromatin accessibility and enhancer-promoter interactions in T-cell development/differentiation.</td>
 <td>Li &amp; Leonard 2018, Front Immunol, PMID 30524449, DOI 10.3389/fimmu.2018.02738</td>
@@ -427,7 +111,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BCL11B</td>
+<td class="gene">BCL11B</td>
 <td>Immune (Th17/Tc17-relevant program, mouse, thymus and lung)</td>
 <td>BCL11B is positioned upstream of PLZF and RORγt, controlling thymic development of the MAIT17 (IL-17-producing mucosal-associated invariant T cell) program; MAIT cells reside in lung tissue in this model. No COPD or airway-disease model tested.</td>
 <td>Drashansky et al. 2021, iScience, PMID 33870128, DOI 10.1016/j.isci.2021.102307</td>
@@ -435,7 +119,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BCL11B</td>
+<td class="gene">BCL11B</td>
 <td>Immune (ILC2 program, mouse)</td>
 <td>RelB restrains group 2 innate lymphoid cells (ILC2) and type-2 lung pathology largely by suppressing Bcl11b activity; Relb-deficient mice show markedly expanded ILC2s and prominent type-2 lung pathology.</td>
 <td>Zhang et al. 2020, Cell Mol Immunol, PMID 32203192, DOI 10.1038/s41423-020-0404-0</td>
@@ -443,7 +127,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BCL11B</td>
+<td class="gene">BCL11B</td>
 <td>Immune (ILC2 development, background citation)</td>
 <td>Bcl11b is named (with GATA3, RORα, GFI1) among transcription factors required for ILC2 development.</td>
 <td>Huang et al. 2024, Sci Immunol, PMID 38820141, DOI 10.1126/sciimmunol.adj2654</td>
@@ -451,7 +135,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BCL11B</td>
+<td class="gene">BCL11B</td>
 <td>Immune (ILC2 developmental checkpoint; acute lung inflammation models, mouse)</td>
 <td>Bcl11b deficiency abolishes a PD-1+ILC2 developmental checkpoint in mice; PD-1 antibody blockade reduced acute lung inflammation (papain model) and influenza-associated cytokine levels.</td>
 <td>Yu et al. 2016, Nature, PMID 27749818, DOI 10.1038/nature20105</td>
@@ -459,7 +143,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BCL11B</td>
+<td class="gene">BCL11B</td>
 <td>Immune/tumor immunology (lung metastasis model, mouse — not COPD)</td>
 <td>Bcl11b deletion in CD4+ T cells (TNF-α-dependent) reduces lung metastatic tumor burden via increased NK-cell and myeloid populations.</td>
 <td>Uddin et al. 2014, J Immunol, PMID 24446520, DOI 10.4049/jimmunol.1301976</td>
@@ -467,7 +151,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BCL11B</td>
+<td class="gene">BCL11B</td>
 <td>Immune (ILC1/NK progenitor definition; lung metastasis model, mouse — not COPD)</td>
 <td>Bcl11b expression status is used to define a novel ILC1/NK progenitor population (aceNKPs) that ameliorates tumor burden in a lung metastasis model.</td>
 <td>Rodriguez-Rodriguez et al. 2022, PNAS, PMID 36442116, DOI 10.1073/pnas.2203454119</td>
@@ -475,7 +159,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BCL11B</td>
+<td class="gene">BCL11B</td>
 <td>CNS developmental biology (not lung; speculative bridge to smoking behavior only)</td>
 <td>Ctip2 (Bcl11b) knockout mice show a critical defect in corticospinal motor neuron axonal projection to the spinal cord, establishing Bcl11b as a core corticospinal-neuron identity gene.</td>
 <td>Arlotta et al. 2005, Neuron, PMID 15664173, DOI 10.1016/j.neuron.2004.12.036</td>
@@ -483,7 +167,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BCL11B</td>
+<td class="gene">BCL11B</td>
 <td>CNS developmental biology (not lung)</td>
 <td>CTIP2 (BCL11B) is highly expressed in early human fetal motor/frontal neocortex (8-12 post-conceptional weeks), marking corticospinal/corticofugal projection-neuron differentiation.</td>
 <td>Ip et al. 2010, Cereb Cortex, PMID 21060114, DOI 10.1093/cercor/bhq219</td>
@@ -491,7 +175,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BCL11B</td>
+<td class="gene">BCL11B</td>
 <td>CNS developmental biology (not lung)</td>
 <td>CTIP2 (BCL11B) expression persists in mature layer-5 motor-cortex projection neurons, distinguishing pyramidal-tract from intratelencephalic projection-neuron subtypes.</td>
 <td>Tantirigama et al. 2015, J Comp Neurol, PMID 26234885, DOI 10.1002/cne.23875</td>
@@ -499,7 +183,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BCL11B</td>
+<td class="gene">BCL11B</td>
 <td>CNS developmental biology (not lung)</td>
 <td>CB1 cannabinoid receptor signaling regulates Ctip2 (Bcl11b)-dependent corticospinal motor neuron generation, linking BCL11B to a receptor system with known reward/addiction-circuitry interactions.</td>
 <td>Díaz-Alonso et al. 2012, J Neurosci, PMID 23175820, DOI 10.1523/JNEUROSCI.0681-12.2012</td>
@@ -507,7 +191,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BCL11B</td>
+<td class="gene">BCL11B</td>
 <td>Locus/bystander genomics (AML, not COPD)</td>
 <td>A recurrent 14q32 focal amplification spanning BCL11B, CCNK, C14orf177, and SETD3 was found in AML; only BCL11B (not C14orf177) showed consistently elevated mRNA expression in the affected cases — evidence that C14orf177 behaves as a transcriptional bystander relative to BCL11B at this locus, at least in this tissue/disease context.</td>
 <td>Abbas et al. 2014, Haematologica, PMID 24441149, DOI 10.3324/haematol.2013.095604</td>
@@ -515,15 +199,15 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>C14orf177 (LINC02914)</td>
+<td class="gene">C14orf177 (LINC02914)</td>
 <td>Statistical genetics (independent GWAS, lung-relevant but not COPD)</td>
 <td>A GWAS of primary spontaneous pneumothorax (2,223 cases / 3,838 controls, Chinese Han population) identified a genome-wide-significant novel locus at 14q32.2 that the authors attribute to <strong>C14orf177</strong>, not BCL11B, among four novel loci reported (the others being 15q26.3/CHSY1, 16q23.1/CFDP1, and 22q13.1/CBX7 — the paper's main functionally-validated gene). No functional follow-up was performed on the C14orf177/14q32.2 signal in this paper.</td>
 <td>Xu et al. 2025, Eur Respir J, PMID 40473309, DOI 10.1183/13993003.02110-2024</td>
-<td>VERIFIED by citation-verifier, with the researcher's original (uncertain) claim corrected: the paper's title is &quot;...reveals CBX7 as a novel susceptibility gene...&quot; and its 14q32.2 signal is attributed to C14orf177. Red-team notes this is the most consequential new evidence in this locus review but flags: (i) no confirmed LD/positional overlap has been checked between this signal and the rs807734 COPD credible set — 14q32.2 is a broad cytogenetic band; (ii) pneumothorax is mechanistically distinct from airflow obstruction/COPD; (iii) single population; (iv) no functional validation of C14orf177 itself. Gene marked WEAKENED (not fully contested) overall — see critique.</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED by citation-verifier, with the researcher's original (uncertain) claim corrected: the paper's title is "...reveals CBX7 as a novel susceptibility gene..." and its 14q32.2 signal is attributed to C14orf177. Red-team notes this is the most consequential new evidence in this locus review but flags: (i) no confirmed LD/positional overlap has been checked between this signal and the rs807734 COPD credible set — 14q32.2 is a broad cytogenetic band; (ii) pneumothorax is mechanistically distinct from airflow obstruction/COPD; (iii) single population; (iv) no functional validation of C14orf177 itself. Gene marked  (not fully contested) overall — see critique.</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>C14orf177 (LINC02914)</td>
+<td class="gene">C14orf177 (LINC02914)</td>
 <td>Locus pleiotropy (statgen, not COPD-relevant)</td>
 <td>Same 14q32.2 familial-Alzheimer's linkage signal described above for BCL11B places C14orf177 within the 1-LOD linkage interval, but the paper's own IBD analysis favors BCL11B as the more mechanistically plausible gene.</td>
 <td>Kunkle et al. 2016, Alzheimers Dement, PMID 26365416, DOI 10.1016/j.jalz.2015.05.020</td>
@@ -531,7 +215,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>C14orf177 (LINC02914)</td>
+<td class="gene">C14orf177 (LINC02914)</td>
 <td>Locus/bystander genomics (AML, not COPD)</td>
 <td>Same 14q32 AML amplicon described above for BCL11B; C14orf177 itself did NOT show elevated mRNA expression despite being within the amplified region, arguing against it being the operative transcript in that context.</td>
 <td>Abbas et al. 2014, Haematologica, PMID 24441149, DOI 10.3324/haematol.2013.095604</td>
@@ -539,9 +223,9 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -554,7 +238,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 </thead>
 <tbody>
 <tr>
-<td>BCL11B (ENSG00000127152)</td>
+<td class="gene">BCL11B (ENSG00000127152)</td>
 <td>Strongly LoF-constrained: LOEUF ≈0.27 (obs 10 vs exp 36.73 LoF variants); modest missense constraint (oe 0.89)</td>
 <td><strong>0 evidence rows</strong> for MONDO_0005002 (COPD) or OBA_2055786 (age of onset of COPD)</td>
 <td>FEV/FVC ratio (EFO_0004713): 1 row, score 0.79. FEV1 (EFO_0004314): 2 rows, scores 0.42 &amp; 0.56</td>
@@ -562,7 +246,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>Top-25 <code>associatedDiseases</code> list is dominated by neuropsychiatric/behavioral traits (intellectual developmental disorder with speech delay/dysmorphic facies/T-cell abnormalities, immunodeficiency 49, schizophrenia, bipolar disorder, autism spectrum disorder, restless legs syndrome) and BCL11B's own Mendelian immunodeficiency syndrome; no COPD or spirometric trait appears in the top 25</td>
 </tr>
 <tr>
-<td>C14orf177 / LINC02914 (ENSG00000176605)</td>
+<td class="gene">C14orf177 / LINC02914 (ENSG00000176605)</td>
 <td>Not applicable — lncRNA, <code>geneticConstraint</code> empty</td>
 <td>0 evidence rows</td>
 <td>0 evidence rows</td>
@@ -570,7 +254,7 @@ by red-team-skeptic, are documented in the companion audit file (see
 <td>Only 6 total <code>associatedDiseases</code> rows, all with negligible scores (0.0015–0.0022): neurodegenerative disease, acute myeloid leukemia, early-onset Alzheimer disease, hypertension</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Note: the Open Targets deployment queried here does not expose a separate colocalization
 field or per-evidence studyId/variantRsId for the <code>gwas_credible_sets</code> datasource, so we
 cannot confirm from this database alone whether the BCL11B smoking-initiation and
@@ -605,7 +289,7 @@ newly surfaced during this review (Xu et al. 2025, pneumothorax) actually points
 <strong>runner-up gene, C14orf177</strong>, not BCL11B, at this same cytogenetic locus — though it is
 a different phenotype (pneumothorax, not COPD), a single population, and has no functional
 follow-up, and no LD/positional overlap with the rs807734 credible set has been confirmed.
-The &quot;smoking-mediated&quot; hypothesis for BCL11B is plausible (Open Targets smoking-initiation
+The "smoking-mediated" hypothesis for BCL11B is plausible (Open Targets smoking-initiation
 scores exceed its pulmonary-function scores) but likewise rests on an unconfirmed
 variant-level literature claim (rs807734 in GSCAN) per citation-verifier.</p>
 <p><strong>Runner-up: C14orf177/LINC02914</strong>, on the strength of the independent Xu et al. 2025
@@ -622,5 +306,7 @@ C14orf177/LINC02914 in airway or lung tissue, which is currently entirely absent
 literature under either gene name. The study team should weigh this LOW-confidence call
 accordingly and treat both genes as open candidates pending that follow-up.</p>
 
+        </div>
+    </div>
 </body>
 </html>

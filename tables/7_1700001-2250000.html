@@ -1,373 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>7_1700001-2250000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 7:1700001-2250000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-71700001-2250000-lead-variant-rs55810445-nearestflamesmagmapops-gene-mad1l1">Evidence table — Locus 7:1700001-2250000 (lead variant rs55810445; nearest/FLAMES/MAGMA/PoPS gene: MAD1L1)</h1>
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-71700001-2250000-lead-variant-rs55810445-nearestflamesmagmapops-gene-mad1l1">Evidence Table — Locus 7:1700001-2250000</h1>
 <h2 id="evidence-table">Evidence table</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -380,15 +64,15 @@ code {
 </thead>
 <tbody>
 <tr>
-<td>MAD1L1</td>
+<td class="gene">MAD1L1</td>
 <td>Structural/lung-disease GWAS</td>
-<td>IPF (idiopathic pulmonary fibrosis) susceptibility GWAS identified new genome-wide-significant signals implicating DEPTOR, MAD1L1, and KIF15, suggesting &quot;a possible role of mitotic spindle-assembly genes in IPF susceptibility.&quot;</td>
+<td>IPF (idiopathic pulmonary fibrosis) susceptibility GWAS identified new genome-wide-significant signals implicating DEPTOR, MAD1L1, and KIF15, suggesting "a possible role of mitotic spindle-assembly genes in IPF susceptibility."</td>
 <td>Allen RJ et al., Am J Respir Crit Care Med 2020, PMID 31710517, DOI 10.1164/rccm.201905-1017OC</td>
-<td>VERIFIED by citation-verifier; red-team-skeptic notes this is mildly overweighted as &quot;structural lung evidence&quot; since IPF (fibrotic/restrictive) is pathophysiologically distinct from COPD/emphysema (obstructive) — weak circumstantial support at best that MAD1L1 can act in lung tissue at all, not COPD-mechanism evidence</td>
+<td>VERIFIED by citation-verifier; red-team-skeptic notes this is mildly overweighted as "structural lung evidence" since IPF (fibrotic/restrictive) is pathophysiologically distinct from COPD/emphysema (obstructive) — weak circumstantial support at best that MAD1L1 can act in lung tissue at all, not COPD-mechanism evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAD1L1</td>
+<td class="gene">MAD1L1</td>
 <td>Structural/cell-cycle mechanism</td>
 <td>A MAD1L1 missense variant (Arg558His) interacts multiplicatively with smoking to increase colorectal cancer risk (interaction P=0.019), demonstrating MAD1L1's role in genome-instability/smoking-interaction biology generally (not lung-specific).</td>
 <td>Zhong R et al., Sci Rep 2015, PMID 26183163, DOI 10.1038/srep12202</td>
@@ -396,7 +80,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAD1L1</td>
+<td class="gene">MAD1L1</td>
 <td>Structural/cell-cycle mechanism, smoking-adjacent</td>
 <td>MAD1L1 is among mitosis genes (with PMF1, CENPN) whose common variants associate with mosaic loss of chromosome Y (mLOY); the paper separately infers a causal effect of smoking on mLOY but does not link MAD1L1 itself directly to smoking exposure.</td>
 <td>Wright DJ et al., Nat Genet 2017, PMID 28346444, DOI 10.1038/ng.3821</td>
@@ -404,7 +88,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAD1L1</td>
+<td class="gene">MAD1L1</td>
 <td>Statistical genetics (COPD case-control GWAS)</td>
 <td>Primary 82-locus COPD case-control GWAS (UK Biobank + ICGC); 13 of 35 novel loci replicated with FEV1/FEV1-FVC in SpiroMeta, all 82 loci directionally consistent with lung function. Whether MAD1L1/this specific 7:1.7-2.25Mb region is among the 82 loci, and its FEV1 replication status, could NOT be confirmed from full text by either researcher or citation-verifier.</td>
 <td>Sakornsakolpat P et al., Nat Genet 2019, PMID 30804561, DOI 10.1038/s41588-018-0342-2</td>
@@ -412,7 +96,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAD1L1</td>
+<td class="gene">MAD1L1</td>
 <td>Smoking-mediated / developmental</td>
 <td>Multi-ancestry strabismus GWAS identified MAD1L1 as one of five loci for a strabismus subtype, in a locus list separately including CHRNA4 (nicotinic-receptor gene); central finding is Mendelian-randomization evidence that maternal smoking is a causal risk factor for offspring strabismus. Does not itself show a direct MAD1L1-smoking genetic association.</td>
 <td>He W et al., Nat Commun 2025, PMID 40849414, DOI 10.1038/s41467-025-62456-9</td>
@@ -420,15 +104,15 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAD1L1</td>
+<td class="gene">MAD1L1</td>
 <td>Smoking-mediated (epigenetic)</td>
-<td>DNA methylation at MAD1L1 associated with ADHD &quot;has a relation with parental smoking behavior&quot; in a twin cohort — an epigenetic, not genetic-variant, association.</td>
+<td>DNA methylation at MAD1L1 associated with ADHD "has a relation with parental smoking behavior" in a twin cohort — an epigenetic, not genetic-variant, association.</td>
 <td>Hubers N et al., Am J Med Genet B Neuropsychiatr Genet 2023, PMID 37534875, DOI 10.1002/ajmg.b.32955</td>
 <td>VERIFIED</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAD1L1</td>
+<td class="gene">MAD1L1</td>
 <td>Smoking-mediated (epigenetic)</td>
 <td>MAD1L1 (with CAMTA1, ALDH1A2) among genes whose differential cord-blood DNA methylation mediates the association between prenatal tobacco/alcohol exposure and child neurodevelopmental delay.</td>
 <td>Abrishamcar S et al., Transl Psychiatry 2022, PMID 36180424, DOI 10.1038/s41398-022-02195-3</td>
@@ -436,7 +120,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAD1L1</td>
+<td class="gene">MAD1L1</td>
 <td>Neuropsychiatric GWAS (smoking-adjacent pathway)</td>
 <td>MAD1L1 one of five genome-wide-significant regions (with CACNA1C, IFI44L, MHC, TRANK1) shared across a combined bipolar disorder + schizophrenia GWAS.</td>
 <td>Ruderfer DM et al., Mol Psychiatry 2013, PMID 24280982, DOI 10.1038/mp.2013.138</td>
@@ -444,7 +128,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAD1L1</td>
+<td class="gene">MAD1L1</td>
 <td>Neuropsychiatric GWAS, cross-population replication</td>
 <td>Two independent SNPs in MAD1L1 significantly associated with bipolar disorder in an independent Han Chinese case-control sample, supported by haplotype analysis.</td>
 <td>Zhao L et al., Transl Psychiatry 2018, PMID 30531795, DOI 10.1038/s41398-018-0337-x</td>
@@ -452,15 +136,15 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAD1L1</td>
+<td class="gene">MAD1L1</td>
 <td>Neuropsychiatric GWAS — same variant as this locus's credible set</td>
-<td>The chr7 MAD1L1-region locus, specifically variant rs56226325 (which is itself a member of this locus's own 33-variant COPD credible set, PIP=0.0072), &quot;may have implications for genetic vulnerability across several psychiatric disorders,&quot; previously identified in bipolar disorder and schizophrenia GWAS.</td>
+<td>The chr7 MAD1L1-region locus, specifically variant rs56226325 (which is itself a member of this locus's own 33-variant COPD credible set, PIP=0.0072), "may have implications for genetic vulnerability across several psychiatric disorders," previously identified in bipolar disorder and schizophrenia GWAS.</td>
 <td>Levey DF et al., Am J Psychiatry 2020, PMID 31906708, DOI 10.1176/appi.ajp.2019.19030256</td>
-<td>VERIFIED. Red-team-skeptic highlights this as the single most important piece of evidence for the smoking/neurobehavioral-mediated hypothesis: this is not a merely &quot;nearby&quot; pleiotropic locus but literal shared-variant overlap between this locus's own COPD credible set and a cross-psychiatric-disorder risk signal</td>
+<td>VERIFIED. Red-team-skeptic highlights this as the single most important piece of evidence for the smoking/neurobehavioral-mediated hypothesis: this is not a merely "nearby" pleiotropic locus but literal shared-variant overlap between this locus's own COPD credible set and a cross-psychiatric-disorder risk signal</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAD1L1</td>
+<td class="gene">MAD1L1</td>
 <td>Neurodevelopmental mechanism</td>
 <td>MAD1L1 significantly down-regulated (qPCR fold-change=0.72, P=0.0003) following miR-137 (a schizophrenia-risk microRNA) over-expression in human neural progenitor cells, proposed as a mechanism for MIR137-locus regulation of MAD1L1 in neurodevelopment.</td>
 <td>Hill MJ et al., Schizophr Res 2014, PMID 24556472, DOI 10.1016/j.schres.2014.01.034</td>
@@ -468,7 +152,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAD1L1</td>
+<td class="gene">MAD1L1</td>
 <td>COPD-specific (host transcriptome-microbiome correlation)</td>
 <td>In a COPD sputum metagenomics + host-transcriptomics cohort, host gene expression of MAD1L1 (with NUDT1) correlated with relative abundance of the airway commensal/pathobiont Veillonella parvula among COPD patients.</td>
 <td>Gao J et al., Respir Res 2024, PMID 38622589, DOI 10.1186/s12931-024-02805-2</td>
@@ -476,14 +160,14 @@ code {
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="excluded-from-table">Excluded from table</h2>
 <p>See <code>audits/7_1700001-2250000_audit.md</code> for the one CLAIM_MISMATCH citation excluded from this table (Chang S et al., PLoS One 2015, PMID 26193471) and full red-team-skeptic reasoning.</p>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
 <p>Lead variant rs55810445 = 7_2064104_C_T (GRCh38). COPD disease term used: MONDO_0005002.</p>
 <p><strong>MAD1L1 (ENSG00000002822):</strong></p>
 <ul>
-<li><strong>L2G (locus-to-gene):</strong> Top-ranked gene at the lead variant across all 85 overlapping GWAS credible sets in Open Targets, consistently far ahead of flanking genes NUDT1 (L2G 0.10–0.29) and MRM2 (0.06–0.16). At the directly COPD-relevant credible set (study GCST90476027, &quot;Chronic airway obstruction,&quot; mapped to MONDO_0005002): <strong>MAD1L1 L2G = 0.627</strong> vs. NUDT1 = 0.204, MRM2 = 0.107. Also top L2G gene at respiratory-symptom credible sets (dyspnea, shortness of breath, &quot;other symptoms of respiratory system,&quot; obstructive sleep apnea) and at a large cluster of anthropometric and neuropsychiatric/behavioral-trait credible sets at the same variant.</li>
+<li><strong>L2G (locus-to-gene):</strong> Top-ranked gene at the lead variant across all 85 overlapping GWAS credible sets in Open Targets, consistently far ahead of flanking genes NUDT1 (L2G 0.10–0.29) and MRM2 (0.06–0.16). At the directly COPD-relevant credible set (study GCST90476027, "Chronic airway obstruction," mapped to MONDO_0005002): <strong>MAD1L1 L2G = 0.627</strong> vs. NUDT1 = 0.204, MRM2 = 0.107. Also top L2G gene at respiratory-symptom credible sets (dyspnea, shortness of breath, "other symptoms of respiratory system," obstructive sleep apnea) and at a large cluster of anthropometric and neuropsychiatric/behavioral-trait credible sets at the same variant.</li>
 <li><strong>Colocalization:</strong> No formal colocalization statistic beyond L2G score was retrievable via the categories queried; L2G itself integrates fine-mapping/functional-genomic features and is the closest available proxy in this API.</li>
 <li><strong>Overall target-disease association score (COPD):</strong> 0.233 (rank ~296 of 6323 targets genome-wide with any COPD evidence), composed of genetic_association=0.381 and literature=0.035 — i.e. driven almost entirely by genetic evidence, with minimal independent literature-datatype support.</li>
 <li><strong>Full disease/trait association profile (223 entries, exhaustive):</strong> strongest associations are neuropsychiatric/behavioral — schizophrenia (0.432), bipolar disorder (0.412), major depressive disorder (0.404), PTSD (0.375), ADHD (0.366) — and smoking initiation (0.320 overall, 0.526 genetic_association sub-score, one of MAD1L1's highest sub-scores of any trait). Respiratory entries are present but weaker: COPD (0.233), obstructive sleep apnea (0.280), shortness of breath (0.279), dyspnea (0.276), chronic bronchitis (0.152), idiopathic pulmonary fibrosis (0.268); pulmonary emphysema scores near zero (0.0030, literature-only, no genetic_association datatype). No FEV1, FEV1/FVC, or lung-function-measurement trait appears anywhere in this list.</li>
@@ -493,9 +177,11 @@ code {
 <p><strong>MRM2 (ENSG00000122687)</strong> — flanking gene, consistently ranked #3 by L2G at the lead variant, further behind MAD1L1 than NUDT1. Same caveat as NUDT1.</p>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>MAD1L1 — Confidence: MODERATE</strong></p>
-<p>MAD1L1 is, with high confidence, the correct <strong>gene assignment</strong> at this locus: nearest gene, FLAMES, MAGMA, and PoPS unanimously agree, there is no ABC-implicated alternative, the 33-variant credible set is 100% intronic to MAD1L1, and Open Targets' L2G scoring places MAD1L1 far ahead of the flanking genes NUDT1 and MRM2 across all 85 credible sets overlapping the lead variant — including at a credible set specifically mapped to &quot;chronic airway obstruction&quot; / COPD (L2G 0.627 vs. 0.204 and 0.107). No literature or database evidence anywhere makes a case for NUDT1 or MRM2 as the causal gene here (see Open Targets summary and researcher's runner-up-gene notes). On gene identity alone, this would merit HIGH confidence.</p>
-<p>However, this pipeline evaluates genes as candidates for the COPD <em>mechanism</em>, and the mechanistic story at this locus is genuinely unresolved — which is why overall confidence is downgraded to MODERATE rather than HIGH. The verified evidence base is heavily weighted toward a smoking-behavior/neuropsychiatric-mediated interpretation rather than a pulmonary-structural or immune-inflammatory one, consistent with this pipeline's prior #1: MAD1L1's strongest disease associations in Open Targets are schizophrenia, bipolar disorder, MDD, and PTSD, its smoking-initiation genetic-association sub-score (0.526) is among its highest of any trait, and — most tellingly — variant rs56226325, which is itself a member of this locus's own COPD credible set (PIP=0.0072), is independently reported (Levey et al. 2020, PMID 31906708) as a cross-psychiatric-disorder risk signal. This is not merely a neighboring pleiotropic locus; it is literal shared-variant overlap between this locus's COPD signal and psychiatric-disease risk. Meanwhile, no FEV1/FEV1-FVC association for MAD1L1 was found anywhere (neither in Open Targets nor in a direct literature search), the gene shows no genetic constraint against loss-of-function variation (gnomAD oe≈1.0-1.2, arguing against a haploinsufficiency-driven mechanism), the one substantive &quot;structural lung disease&quot; finding (Allen et al. 2020, PMID 31710517) is for IPF — a fibrotic disease pathophysiologically distinct from COPD/emphysema — and the one COPD-specific host-expression finding (Gao et al. 2024, PMID 38622589) is a cross-sectional microbiome-transcriptome correlation that red-team-skeptic judges confounding-prone and non-mechanistic. No dedicated COPD colocalization, functional knockout, or mouse-model study of MAD1L1 exists in the literature reviewed.</p>
+<p>MAD1L1 is, with high confidence, the correct <strong>gene assignment</strong> at this locus: nearest gene, FLAMES, MAGMA, and PoPS unanimously agree, there is no ABC-implicated alternative, the 33-variant credible set is 100% intronic to MAD1L1, and Open Targets' L2G scoring places MAD1L1 far ahead of the flanking genes NUDT1 and MRM2 across all 85 credible sets overlapping the lead variant — including at a credible set specifically mapped to "chronic airway obstruction" / COPD (L2G 0.627 vs. 0.204 and 0.107). No literature or database evidence anywhere makes a case for NUDT1 or MRM2 as the causal gene here (see Open Targets summary and researcher's runner-up-gene notes). On gene identity alone, this would merit HIGH confidence.</p>
+<p>However, this pipeline evaluates genes as candidates for the COPD <em>mechanism</em>, and the mechanistic story at this locus is genuinely unresolved — which is why overall confidence is downgraded to MODERATE rather than HIGH. The verified evidence base is heavily weighted toward a smoking-behavior/neuropsychiatric-mediated interpretation rather than a pulmonary-structural or immune-inflammatory one, consistent with this pipeline's prior #1: MAD1L1's strongest disease associations in Open Targets are schizophrenia, bipolar disorder, MDD, and PTSD, its smoking-initiation genetic-association sub-score (0.526) is among its highest of any trait, and — most tellingly — variant rs56226325, which is itself a member of this locus's own COPD credible set (PIP=0.0072), is independently reported (Levey et al. 2020, PMID 31906708) as a cross-psychiatric-disorder risk signal. This is not merely a neighboring pleiotropic locus; it is literal shared-variant overlap between this locus's COPD signal and psychiatric-disease risk. Meanwhile, no FEV1/FEV1-FVC association for MAD1L1 was found anywhere (neither in Open Targets nor in a direct literature search), the gene shows no genetic constraint against loss-of-function variation (gnomAD oe≈1.0-1.2, arguing against a haploinsufficiency-driven mechanism), the one substantive "structural lung disease" finding (Allen et al. 2020, PMID 31710517) is for IPF — a fibrotic disease pathophysiologically distinct from COPD/emphysema — and the one COPD-specific host-expression finding (Gao et al. 2024, PMID 38622589) is a cross-sectional microbiome-transcriptome correlation that red-team-skeptic judges confounding-prone and non-mechanistic. No dedicated COPD colocalization, functional knockout, or mouse-model study of MAD1L1 exists in the literature reviewed.</p>
 <p>In short: MAD1L1 is very likely the correct gene at this locus, but whether its COPD association reflects genuine pulmonary/immune biology or is substantially a downstream readout of a smoking-initiation/neurobehavioral pathway (per this pipeline's prior #1) remains unresolved with current evidence, and the balance of what evidence exists leans toward the latter. The single highest-value follow-up identified by both researcher and red-team-skeptic is resolving whether MAD1L1/this specific 7:1.7-2.25Mb region is among the 13 FEV1/FEV1-FVC-replicated novel loci in Sakornsakolpat et al. 2019 (PMID 30804561) — this could not be confirmed from the retrieved full text by either the researcher or the citation-verifier, and would meaningfully shift this call toward pulmonary-structural (if confirmed) or further toward smoking-mediated/uncertain (if it is not one of the replicating loci). The study team should weigh this distinction — gene identity vs. causal pathway — explicitly when using this locus for downstream prioritization (e.g., functional follow-up should probably test both a pulmonary-epithelial and a CNS/behavioral hypothesis rather than assuming the former).</p>
 
+        </div>
+    </div>
 </body>
 </html>

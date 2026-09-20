@@ -1,386 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>7_73950001-74250000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 7:73,950,001-74,250,000 (nearest gene ELN)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-773950001-74250000-nearest-gene-eln">Evidence table — locus 7:73,950,001-74,250,000 (nearest gene ELN)</h1>
-<p><strong>Update (2026-09-11): targeted re-opening.</strong> The study team discovered a genome-build
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-773950001-74250000-nearest-gene-eln">Evidence table — locus 7:73,950,001-74,250,000 (nearest gene ELN)</h1><div class="summary"><p><strong>Update (2026-09-11): targeted re-opening.</strong> The study team discovered a genome-build
 error in the internal MAGMA/PoPS gene-location merge file used to generate the original
 candidate-gene lists. A corrected re-merge surfaced a new candidate gene at this locus,
 <strong>RFC2</strong>, never evaluated in the original review. This update adds RFC2 to the record
 below. All original findings for ELN, LIMK1, GTF2I, and GTF2IRD1 are unchanged and were
 not re-verified or re-critiqued in this pass (see original text preserved below the RFC2
 addition). The final call (ELN, confidence MODERATE) is unchanged by this update — see
-the revised Prioritized gene section.</p>
-<p>Lead variant: rs34208922 (PIP 0.6972804, GRCh38 chr7:74,069,201, 3_prime_UTR_variant, gene=ELN).
+the revised Prioritized gene section.</p><p>Lead variant: rs34208922 (PIP 0.6972804, GRCh38 chr7:74,069,201, 3_prime_UTR_variant, gene=ELN).
 Credible set also includes intronic/downstream variants annotated to LIMK1 (PIP ≤4.2%) and
 two intergenic variants with no gene annotation. Candidate genes carried forward by the
 internal pipeline: ELN (nearest gene), GTF2I (MAGMA-prioritized), GTF2IRD1
 (PoPS-prioritized), LIMK1 (credible-set gene annotation), and — as of this update —
-RFC2 (surfaced by the corrected genome-build re-merge).</p>
-<p><strong>Structural/build caveat (applies to the whole table, not a literature claim):</strong> Ensembl
+RFC2 (surfaced by the corrected genome-build re-merge).</p><p><strong>Structural/build caveat (applies to the whole table, not a literature claim):</strong> Ensembl
 REST lookups (GRCh38) place only ELN (chr7:74,027,773-74,069,909) and LIMK1
 (chr7:74,082,933-74,122,527) physically inside this locus window. GTF2I
 (chr7:74,650,226-74,760,706, GRCh38) and GTF2IRD1 (chr7:74,452,463-74,602,619, GRCh38) fall
@@ -389,8 +70,7 @@ coordinates — though both genes' GRCh37 coordinates do fall inside the numeric
 window. This strongly suggests the internal MAGMA/PoPS gene-to-locus assignment used
 GRCh37 gene models against a GRCh38-defined locus/credible-set window. Both
 red-team-skeptic and the researcher flag this as a likely methodological artifact, not
-biological evidence — see Prioritized gene section.</p>
-<p><strong>RFC2 build/positional note (added 2026-09-11):</strong> RFC2 (chr7:74,223,231-74,254,458,
+biological evidence — see Prioritized gene section.</p><p><strong>RFC2 build/positional note (added 2026-09-11):</strong> RFC2 (chr7:74,223,231-74,254,458,
 GRCh38) was independently re-confirmed by orchestration via Ensembl REST to genuinely and
 correctly overlap this locus window in matched GRCh38 coordinates (~26.8 kb of the gene
 body falls inside 73,950,001-74,250,000) — this is NOT the same GRCh37/GRCh38
@@ -399,11 +79,15 @@ actual fine-mapped credible-set variant span (74,069,201-74,127,285); its neares
 ~96 kb further telomeric, sitting at the far edge of the locus window downstream of
 LIMK1. Red-team-skeptic noted that no LD data (r² between rs34208922 and RFC2-region
 variants) was computed in this pass — this remains an open, unaddressed gap that could
-further firm up (but was not needed to reach) the conclusion below.</p>
-<p>Only citations verified as VERIFIED by citation-verifier appear below. Every RETRACTED /
+further firm up (but was not needed to reach) the conclusion below.</p><p>Only citations verified as VERIFIED by citation-verifier appear below. Every RETRACTED /
 NOT_FOUND / CLAIM_MISMATCH citation, and every CONTESTED gene call, is documented in the
-companion audit file (<code>audits/7_73950001-74250000_audit.md</code>), not omitted silently.</p>
-<table>
+companion audit file (<code>audits/7_73950001-74250000_audit.md</code>), not omitted silently.</p></div>
+
+
+
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -416,47 +100,47 @@ companion audit file (<code>audits/7_73950001-74250000_audit.md</code>), not omi
 </thead>
 <tbody>
 <tr>
-<td>ELN</td>
+<td class="gene">ELN</td>
 <td>Negative/comparator GWAS evidence</td>
 <td>UK BiLEVE (2015) FEV1-extremes and smoking-behavior GWAS reported novel loci at KANSL1, TSEN54, TET2, RBM19/TBX5 (FEV1) and NCAM1 (smoking behavior); this ELN/LIMK1/7q11.23 region was NOT among the novel discoveries reported</td>
 <td>PMID 26423011 (DOI 10.1016/S2213-2600(15)00283-0)</td>
-<td>WEAKENED — correctly used as negative evidence; does not itself support ELN, but is a legitimate negative data point about lack of confirmed spirometric/smoking-behavior concordance at this locus in an earlier study</td>
+<td><span class="tag-warning">WEAKENED</span> — correctly used as negative evidence; does not itself support ELN, but is a legitimate negative data point about lack of confirmed spirometric/smoking-behavior concordance at this locus in an earlier study</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ELN</td>
+<td class="gene">ELN</td>
 <td>Mechanistic/Mendelian rare-variant review</td>
 <td>Rare variants in cutis-laxa genes causing defective elastin synthesis are a documented cause of early-onset emphysema in infants and children</td>
 <td>PMID 41224373 (DOI 10.1183/16000617.0125-2025)</td>
-<td>WEAKENED — genuine elastin-emphysema mechanism, but describes rare/Mendelian high-penetrance variants, not the common regulatory 3'UTR credible-set variant at this locus; plausibility support only, not locus-specific evidence</td>
+<td><span class="tag-warning">WEAKENED</span> — genuine elastin-emphysema mechanism, but describes rare/Mendelian high-penetrance variants, not the common regulatory 3'UTR credible-set variant at this locus; plausibility support only, not locus-specific evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ELN</td>
+<td class="gene">ELN</td>
 <td>Rare-variant genetic association (familial)</td>
 <td>A functional terminal-exon elastin mutation (c.2318G&gt;A, G773D) segregates with severe, early-onset COPD in an affected pedigree</td>
 <td>PMID 16081882 (DOI 10.1165/rcmb.2005-0206OC)</td>
-<td>WEAKENED — genuine ELN-COPD genetic link, but a different variant (rare coding G773D vs. common 3'UTR rs34208922) and different clinical context (severe familial early-onset COPD vs. common adult COPD GWAS) — different genetic architecture, not direct evidence for this locus's common-variant signal</td>
+<td><span class="tag-warning">WEAKENED</span> — genuine ELN-COPD genetic link, but a different variant (rare coding G773D vs. common 3'UTR rs34208922) and different clinical context (severe familial early-onset COPD vs. common adult COPD GWAS) — different genetic architecture, not direct evidence for this locus's common-variant signal</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ELN</td>
+<td class="gene">ELN</td>
 <td>Mechanistic biology (vascular tissue, gene-dosage)</td>
 <td>ELN haploinsufficiency (heterozygous deletion, as in Williams-Beuren syndrome) causes arterial elastic-fiber pathology (supravalvular aortic stenosis, arterial stiffness/arteriopathy)</td>
 <td>PMID 36362244; PMID 19850904; PMID 18173368; PMID 15863465; PMID 14597767; PMID 12095400; PMID 10885576; PMID 9506657</td>
-<td>WEAKENED — confirms ELN is genuinely dosage-sensitive in principle, but only in arterial/vascular tissue via whole-gene heterozygous deletion, not lung parenchyma and not a common 3'UTR SNP — general gene-dosage-biology context, not locus- or tissue-specific evidence</td>
+<td><span class="tag-warning">WEAKENED</span> — confirms ELN is genuinely dosage-sensitive in principle, but only in arterial/vascular tissue via whole-gene heterozygous deletion, not lung parenchyma and not a common 3'UTR SNP — general gene-dosage-biology context, not locus- or tissue-specific evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GTF2I</td>
+<td class="gene">GTF2I</td>
 <td>Structured-database L2G source literature (cross-trait GWAS)</td>
 <td>Zhu et al. 2019 report a genome-wide COPD-cardiovascular cross-trait analysis, curated by Open Targets as the literature source for GTF2I's gwas_credible_sets L2G-style evidence at this locus; the paper's own abstract does not name GTF2I specifically or confirm gene assignment at this exact locus</td>
 <td>PMID 30940143 (DOI 10.1186/s12931-019-1036-8)</td>
-<td>CONTESTED — real paper, but (a) does not itself verify GTF2I's involvement at this locus by name, (b) is a different underlying source than the paper backing ELN/LIMK1's L2G evidence, and (c) GTF2I's GRCh38 coordinates lie ~400-500 kb outside this locus window (see build caveat above), casting doubt on whether GTF2I belongs at this locus at all</td>
+<td><span class="tag-warning">CONTESTED</span> — real paper, but (a) does not itself verify GTF2I's involvement at this locus by name, (b) is a different underlying source than the paper backing ELN/LIMK1's L2G evidence, and (c) GTF2I's GRCh38 coordinates lie ~400-500 kb outside this locus window (see build caveat above), casting doubt on whether GTF2I belongs at this locus at all</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>No genes with rows above:</strong> LIMK1 and GTF2IRD1 have no VERIFIED literature citations
 supporting a COPD/lung-function/airway-biology connection. LIMK1's only literature
 citation (PMID 40155373) was CLAIM_MISMATCH (see audit). GTF2IRD1's ten searched
@@ -477,7 +161,7 @@ represented as evidence-table rows — see the audit file for the full list and 
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
 <p>Disease nodes used: chronic obstructive pulmonary disease = MONDO_0005002; pulmonary
 emphysema = MONDO_0004849. Full detail in <code>evidence_tables/_status/7_73950001-74250000/opentargets.md</code>.</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -490,7 +174,7 @@ emphysema = MONDO_0004849. Full detail in <code>evidence_tables/_status/7_739500
 </thead>
 <tbody>
 <tr>
-<td>ELN</td>
+<td class="gene">ELN</td>
 <td>ENSG00000049540</td>
 <td>0.7105 (curated source PMID 40155373 — literature claim CLAIM_MISMATCH per verifier)</td>
 <td>0.2936 (genetic_association 0.4319; literature 0.8524; animal_model 0.3807)</td>
@@ -498,7 +182,7 @@ emphysema = MONDO_0004849. Full detail in <code>evidence_tables/_status/7_739500
 <td>score ~0 (NOT LoF-constrained; oe 0.56)</td>
 </tr>
 <tr>
-<td>GTF2I</td>
+<td class="gene">GTF2I</td>
 <td>ENSG00000263001</td>
 <td>0.7504 (curated source PMID 30940143 — different paper than ELN/LIMK1's; real paper but doesn't name GTF2I in abstract)</td>
 <td>0.2787 (genetic_association 0.4562; literature 0.0456)</td>
@@ -506,7 +190,7 @@ emphysema = MONDO_0004849. Full detail in <code>evidence_tables/_status/7_739500
 <td>score ~1 (strongly LoF-constrained; oe 0.04)</td>
 </tr>
 <tr>
-<td>GTF2IRD1</td>
+<td class="gene">GTF2IRD1</td>
 <td>ENSG00000006704</td>
 <td>no evidence returned</td>
 <td>no data available (absent, not just low)</td>
@@ -514,7 +198,7 @@ emphysema = MONDO_0004849. Full detail in <code>evidence_tables/_status/7_739500
 <td>score 1 (fully LoF-constrained; oe 0.20)</td>
 </tr>
 <tr>
-<td>LIMK1</td>
+<td class="gene">LIMK1</td>
 <td>ENSG00000106683</td>
 <td>0.1619 (same curated source PMID 40155373 as ELN)</td>
 <td>0.0609 (genetic_association 0.0984; literature 0.0365)</td>
@@ -522,7 +206,7 @@ emphysema = MONDO_0004849. Full detail in <code>evidence_tables/_status/7_739500
 <td>score 1 (fully LoF-constrained; oe 0.22)</td>
 </tr>
 <tr>
-<td>RFC2 (added 2026-09-11)</td>
+<td class="gene">RFC2 (added 2026-09-11)</td>
 <td>ENSG00000049541</td>
 <td>no evidence returned (count 0)</td>
 <td>no data available (absent, count 0 — complete absence, same profile as GTF2IRD1)</td>
@@ -530,7 +214,7 @@ emphysema = MONDO_0004849. Full detail in <code>evidence_tables/_status/7_739500
 <td>score ~0.0008 (NOT LoF-constrained; oe 0.82) — also missense-tolerant (oe 0.95) and synonymous-tolerant (oe 1.14); i.e., dosage-tolerant across the board</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Note: the gwas_credible_sets resourceScore ranking (GTF2I &gt; ELN &gt; LIMK1 &gt; GTF2IRD1) does
 NOT track physical proximity to the credible set in true GRCh38 coordinates — GTF2I's
 top-ranked score is attached to a different source publication than ELN's and LIMK1's, and
@@ -543,7 +227,7 @@ evidence, despite RFC2's physical overlap with the locus window being genuine
 <p><strong>Prioritized gene: ELN</strong>
 <strong>Confidence: MODERATE (unchanged by the 2026-09-11 RFC2 addition)</strong></p>
 <p>ELN is the best-supported candidate at this locus, but the case is weaker than the classical
-&quot;elastin causes emphysema&quot; mechanistic prior alone would suggest, and this table does not
+"elastin causes emphysema" mechanistic prior alone would suggest, and this table does not
 overclaim beyond what verifier + skeptic actually support.</p>
 <p>In favor: ELN is the only candidate gene at this locus with (a) a physically confirmed
 GRCh38 position inside the locus window, (b) the lead credible-set variant (rs34208922,
@@ -592,15 +276,15 @@ connects RFC2 to COPD, lung function, smoking-behavior traits, or airway/immune 
 of any kind; (4) gnomAD constraint data show RFC2 is dosage-tolerant (pLoF oe 0.82,
 missense oe 0.95), which argues against — rather than for — a haploinsufficiency-style
 mechanism that might otherwise make a passenger gene near a GWAS signal more plausible.
-Red-team-skeptic reviewed this dossier and concluded RFC2 is &quot;WEAKENED, bordering on
-non-candidate,&quot; explicitly declining to mark it CONTESTED only because no independent
+Red-team-skeptic reviewed this dossier and concluded RFC2 is "WEAKENED, bordering on
+non-candidate," explicitly declining to mark it CONTESTED only because no independent
 contradicting citation was in hand (its own search budget was exhausted), not because a
 genuine case for RFC2 exists. Per pipeline convention this is treated as an
 evaluated-and-rejected candidate, not a genuine competitor to ELN — this is not a tie: the
 evidentiary gap between ELN (Open Targets COPD score 0.29, lead variant in gene body,
 weakened-but-real disease-biology literature) and RFC2 (COPD score absent entirely, no
 credible-set overlap, no relevant literature at all) is large and one-directional. Note
-explicitly: the classical &quot;elastin causes emphysema&quot; mechanistic prior that supports ELN's
+explicitly: the classical "elastin causes emphysema" mechanistic prior that supports ELN's
 plausibility does not apply to, and was not applied to, RFC2 (a DNA-replication
 clamp-loader subunit) — RFC2 was evaluated strictly on its own merits, and none were
 found.</p>
@@ -622,5 +306,7 @@ positional/fine-mapping case is the strongest of the now-five candidates evaluat
 locus, but the locus-specific literature record is thinner, once verified, than the
 classical elastin-emphysema mechanistic prior might suggest at first glance.</p>
 
+        </div>
+    </div>
 </body>
 </html>

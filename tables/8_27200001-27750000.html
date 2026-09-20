@@ -1,378 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>8_27200001-27750000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 8:27200001-27750000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-827200001-27750000-nearest-gene-clu-lead-variant-rs73229093">Evidence table — Locus 8:27200001-27750000 (nearest gene CLU; lead variant rs73229093)</h1>
-<p>Candidate genes evaluated: CLU (nearest, PoPS), CCDC25 (MAGMA), GULOP (credible-set-overlapping
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-827200001-27750000-nearest-gene-clu-lead-variant-rs73229093">Evidence Table — Locus 8:27200001-27750000</h1><div class="summary"><p>Candidate genes evaluated: CLU (nearest, PoPS), CCDC25 (MAGMA), GULOP (credible-set-overlapping
 pseudogene), plus CHRNA2 and EPHX2 (physically in the region, not flagged by any of the
 internal pipeline's four prioritization methods, but researched per standard practice since no
 method other than nearest/PoPS flagged a gene here). PTK2B, TRIM35, STMN4, and SCARA3 were also
 screened; no verified COPD-relevant citation was found for PTK2B (general macrophage-kinase
-biology asserted but not sourced) so it has no table row.</p>
-<table>
+biology asserted but not sourced) so it has no table row.</p></div>
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -385,103 +69,103 @@ biology asserted but not sourced) so it has no table row.</p>
 </thead>
 <tbody>
 <tr>
-<td>CLU</td>
+<td class="gene">CLU</td>
 <td>Statistical genetics (general background, not locus-specific)</td>
 <td>82-locus COPD GWAS (UK Biobank + ICGC); functional enrichment in lung tissue/smooth muscle/lung cell types</td>
 <td>PMID 30804561 / 10.1038/s41588-018-0342-2</td>
-<td>WEAKENED (general background only; not locus-specific)</td>
+<td><span class="tag-warning">WEAKENED</span> (general background only; not locus-specific)</td>
 <td>2019-02-25</td>
 </tr>
 <tr>
-<td>CLU</td>
+<td class="gene">CLU</td>
 <td>Statistical genetics (general background, not locus-specific)</td>
 <td>COPDGene review: &gt;20 genetic loci associated with COPD affection status and related phenotypes</td>
 <td>PMID 30908940 / 10.1164/rccm.201808-1455SO</td>
-<td>WEAKENED (general background only; not locus-specific)</td>
+<td><span class="tag-warning">WEAKENED</span> (general background only; not locus-specific)</td>
 <td>2019-09-15</td>
 </tr>
 <tr>
-<td>CLU</td>
+<td class="gene">CLU</td>
 <td>Structural / biomarker</td>
 <td>CLU/clusterin elevated in GOLD II-IV COPD patients, correlates with FEV1 (R=-0.77), RV/TLC, CT-emphysema; CSE increases CLU in bronchial epithelial cells; CLU silencing partially reverses CSE-induced fibroblast activation/inflammatory response/collagen deposition/apoptosis</td>
 <td>PMID 35191419 / 10.1097/CM9.0000000000002065</td>
-<td>WEAKENED (correlational; partial rescue only; doesn't establish locus-specific causality; direction of causation not established)</td>
+<td><span class="tag-warning">WEAKENED</span> (correlational; partial rescue only; doesn't establish locus-specific causality; direction of causation not established)</td>
 <td>2022-05-05</td>
 </tr>
 <tr>
-<td>CLU</td>
+<td class="gene">CLU</td>
 <td>Structural / biomarker</td>
 <td>Serum clusterin elevated with COPD severity/hypoxemia/FEV1 in severe disease; associated with comorbid cognitive impairment</td>
 <td>PMID 23207572 / 10.1159/000342970</td>
-<td>WEAKENED (correlational biomarker study)</td>
+<td><span class="tag-warning">WEAKENED</span> (correlational biomarker study)</td>
 <td>2012-11-30</td>
 </tr>
 <tr>
-<td>CLU</td>
+<td class="gene">CLU</td>
 <td>Structural (lung injury/repair, IPF context)</td>
 <td>Divergent CLU roles: extracellular CLU promotes epithelial cell death in fibrotic tissue; intracellular CLU regulates DNA-repair proteins during regeneration; CLU-deficient mice show persistent fibrosis</td>
 <td>PMID 29133960 / (Sci Rep 2017;7:15444)</td>
-<td>HOLDS as general lung-biology support (not COPD-specific, not locus-specific)</td>
+<td><span class="tag-hold">HOLDS</span> as general lung-biology support (not COPD-specific, not locus-specific)</td>
 <td>2017-11-13</td>
 </tr>
 <tr>
-<td>CCDC25</td>
+<td class="gene">CCDC25</td>
 <td>Immune</td>
 <td>CCDC25 is a transmembrane NET-DNA receptor (ILK-β-parvin pathway) enabling NET-driven cancer metastasis; knockout abrogates this</td>
 <td>PMID 32528174 / 10.1038/s41586-020-2394-6</td>
-<td>WEAKENED/bordering CONTESTED — real receptor biology, but disease context is cancer metastasis, not COPD</td>
+<td><span class="tag-warning">WEAKENED</span>/bordering CONTESTED — real receptor biology, but disease context is cancer metastasis, not COPD</td>
 <td>2020-06-11</td>
 </tr>
 <tr>
-<td>CCDC25</td>
+<td class="gene">CCDC25</td>
 <td>Immune / structural</td>
 <td>NETs promote pulmonary-artery smooth-muscle-cell proliferation via CCDC25/ILK/β-parvin/RAC1 in pulmonary arterial hypertension</td>
 <td>PMID 38664728 / 10.1186/s12931-024-02813-2</td>
-<td>WEAKENED/bordering CONTESTED — vascular remodeling in PAH, not airway remodeling in COPD</td>
+<td><span class="tag-warning">WEAKENED</span>/bordering CONTESTED — vascular remodeling in PAH, not airway remodeling in COPD</td>
 <td>2024-04-25</td>
 </tr>
 <tr>
-<td>CCDC25</td>
+<td class="gene">CCDC25</td>
 <td>Immune</td>
 <td>CCDC25 (with α5β1 integrin) mediates lung-cancer-cell adhesion to NETs and Notch1-driven EMT</td>
 <td>PMID 39430758 / 10.3389/fimmu.2024.1470620</td>
-<td>WEAKENED/bordering CONTESTED — lung cancer context, not COPD</td>
+<td><span class="tag-warning">WEAKENED</span>/bordering CONTESTED — lung cancer context, not COPD</td>
 <td>2024-10-04</td>
 </tr>
 <tr>
-<td>CCDC25</td>
+<td class="gene">CCDC25</td>
 <td>Immune</td>
 <td>Pan-cancer bioinformatic analysis: CCDC25 expression correlates with CD4 memory T-cell/mast cell/dendritic cell/Tfh/M2 macrophage/neutrophil tumor infiltration</td>
 <td>PMID 37841944 / 10.1002/hsr2.1621</td>
-<td>WEAKENED/bordering CONTESTED — tumor-microenvironment correlation, not COPD</td>
+<td><span class="tag-warning">WEAKENED</span>/bordering CONTESTED — tumor-microenvironment correlation, not COPD</td>
 <td>2023-10-12</td>
 </tr>
 <tr>
-<td>CCDC25</td>
+<td class="gene">CCDC25</td>
 <td>Immune</td>
 <td>CCDC25 on endothelial cells mediates NET-induced angiogenesis in gastric cancer</td>
 <td>PMID 37480055 / 10.1186/s12964-023-01196-z</td>
-<td>WEAKENED/bordering CONTESTED — gastric cancer context, not COPD</td>
+<td><span class="tag-warning">WEAKENED</span>/bordering CONTESTED — gastric cancer context, not COPD</td>
 <td>2023-07-21</td>
 </tr>
 <tr>
-<td>CHRNA2 (not in 4-method list)</td>
+<td class="gene">CHRNA2 (not in 4-method list)</td>
 <td>Statistical genetics (smoking/nicotine dependence)</td>
 <td>CHRNA2 and CHRNA6 variants/haplotypes significantly associated with nicotine dependence severity in European American and African American smokers</td>
 <td>PMID 24253422 / (Hum Genet 2014;133(5):575-86)</td>
-<td>STRENGTHENS smoking-mediation hypothesis for this locus; CONTESTED as evidence of a direct lung mechanism</td>
+<td><span class="tag-warning">CONTESTED</span>STRENGTHENS smoking-mediation hypothesis for this locus;  as evidence of a direct lung mechanism</td>
 <td>2014-05</td>
 </tr>
 <tr>
-<td>CHRNA2 (not in 4-method list)</td>
+<td class="gene">CHRNA2 (not in 4-method list)</td>
 <td>Statistical genetics (colocalization)</td>
 <td>CHRNA2 GWAS signal colocalizes between schizophrenia and smoking-behavior traits; cannabis-use-disorder signal at CHRNA2 also colocalizes with both</td>
 <td>PMID 33454625 / (Drug Alcohol Depend 2021;220:108517)</td>
-<td>STRENGTHENS smoking-mediation hypothesis; CONTESTED as evidence of a direct lung mechanism</td>
+<td><span class="tag-warning">CONTESTED</span>STRENGTHENS smoking-mediation hypothesis;  as evidence of a direct lung mechanism</td>
 <td>2021-03</td>
 </tr>
 <tr>
-<td>CHRNA2 (not in 4-method list)</td>
+<td class="gene">CHRNA2 (not in 4-method list)</td>
 <td>Statistical genetics (lung cancer GWAS)</td>
 <td>CHRNA2 named among newly identified lung-cancer-susceptibility loci, confirmed distinct from the well-known chr15 CHRNA5-CHRNA3-CHRNB4 cluster</td>
 <td>PMID 28604730 / (Nat Genet 2017;49(7):1126-1132)</td>
@@ -489,7 +173,7 @@ biology asserted but not sourced) so it has no table row.</p>
 <td>2017-07</td>
 </tr>
 <tr>
-<td>CHRNA2 (not in 4-method list)</td>
+<td class="gene">CHRNA2 (not in 4-method list)</td>
 <td>Statistical genetics (smoking cessation)</td>
 <td>CHRNA2 rs2472553 genotyped alongside CHRNA3/CHRNA5/CHRNB3 in a smoking-cessation cohort (rs2472553 itself not significant in this study)</td>
 <td>PMID 29621993 / (BMC Med Genet 2018;19(1):55)</td>
@@ -497,7 +181,7 @@ biology asserted but not sourced) so it has no table row.</p>
 <td>2018-04-05</td>
 </tr>
 <tr>
-<td>CHRNA2 (not in 4-method list)</td>
+<td class="gene">CHRNA2 (not in 4-method list)</td>
 <td>Statistical genetics (pneumonia GWAS)</td>
 <td>CHRNA2 named among 8 novel loci in a 12-locus pneumonia-risk GWAS (110,881 Finnish/Estonian cases)</td>
 <td>PMID 41579494 / (EBioMedicine 2026;124:106136)</td>
@@ -505,7 +189,7 @@ biology asserted but not sourced) so it has no table row.</p>
 <td>2026-02</td>
 </tr>
 <tr>
-<td>CHRNA2 (not in 4-method list)</td>
+<td class="gene">CHRNA2 (not in 4-method list)</td>
 <td>Statistical genetics (cross-trait pleiotropy)</td>
 <td>CHRNA2 identified as a pleiotropic hub gene shared between substance-use traits and cancer risk (97 pleiotropic loci)</td>
 <td>PMID 41645249 / (BMC Med 2026;24(1):124)</td>
@@ -513,71 +197,71 @@ biology asserted but not sourced) so it has no table row.</p>
 <td>2026-02-05</td>
 </tr>
 <tr>
-<td>EPHX2 (not in 4-method list)</td>
+<td class="gene">EPHX2 (not in 4-method list)</td>
 <td>Structural / immune (in vivo knockout)</td>
 <td>Ephx2-deficient mice exposed to 12 weeks of cigarette smoke show less pronounced inflammation, less autophagy, milder emphysema, and restored lung function vs wild-type</td>
 <td>PMID 28028752 / 10.1007/s10753-016-0495-z</td>
-<td>WEAKENED as a locus-causal claim — strong mechanism, but no eQTL/colocalization ties this GWAS signal to EPHX2 expression</td>
+<td><span class="tag-warning">WEAKENED</span> as a locus-causal claim — strong mechanism, but no eQTL/colocalization ties this GWAS signal to EPHX2 expression</td>
 <td>2017-04</td>
 </tr>
 <tr>
-<td>EPHX2 (not in 4-method list)</td>
+<td class="gene">EPHX2 (not in 4-method list)</td>
 <td>Structural (in vivo knockout, ferroptosis)</td>
 <td>Independent Ephx2-knockout cigarette-smoke study: less emphysema, better-preserved lung function, less ferroptosis via cystine/glutathione/GPX4 axis</td>
 <td>PMID 41944769 / 10.3967/bes2026.012</td>
-<td>WEAKENED as a locus-causal claim — corroborates mechanism, same locus-specificity gap</td>
+<td><span class="tag-warning">WEAKENED</span> as a locus-causal claim — corroborates mechanism, same locus-specificity gap</td>
 <td>2026-03-20</td>
 </tr>
 <tr>
-<td>EPHX2 (not in 4-method list)</td>
+<td class="gene">EPHX2 (not in 4-method list)</td>
 <td>Structural / immune (pharmacology)</td>
 <td>Soluble epoxide hydrolase (EPHX2) inhibitor GSK2256294A reduced cigarette-smoke-induced pulmonary leukocyte infiltration and CXCL1 in mice</td>
 <td>PMID 23434473 / 10.1016/j.prostaglandins.2013.02.001</td>
-<td>WEAKENED as a locus-causal claim — pharmacologic corroboration, no locus link</td>
+<td><span class="tag-warning">WEAKENED</span> as a locus-causal claim — pharmacologic corroboration, no locus link</td>
 <td>2013-02-19</td>
 </tr>
 <tr>
-<td>EPHX2 (not in 4-method list)</td>
+<td class="gene">EPHX2 (not in 4-method list)</td>
 <td>Structural (pharmacology, multi-target herbal formula)</td>
 <td>Qingfei Tongluo Formula improves pulmonary function/histopathology in a COPD rat model partly via EPHX2 downregulation, reduced pro-inflammatory cytokines and ferroptosis markers</td>
 <td>PMID 42184495 / 10.1016/j.phymed.2026.158302</td>
-<td>WEAKENED — multi-target formula, EPHX2-specific contribution not cleanly isolated</td>
+<td><span class="tag-warning">WEAKENED</span> — multi-target formula, EPHX2-specific contribution not cleanly isolated</td>
 <td>2026-05-16</td>
 </tr>
 <tr>
-<td>EPHX2 (not in 4-method list)</td>
+<td class="gene">EPHX2 (not in 4-method list)</td>
 <td>Structural (review)</td>
 <td>Ephx2/sEH is an estrogen-regulated gene relevant to sex differences in pulmonary vascular disease and female susceptibility to COPD/asthma</td>
 <td>PMID 33788190 / 10.1007/978-3-030-63046-1_7</td>
-<td>HOLDS as background/review context</td>
+<td><span class="tag-hold">HOLDS</span> as background/review context</td>
 <td>2021</td>
 </tr>
 <tr>
-<td>TRIM35 (not in 4-method list)</td>
+<td class="gene">TRIM35 (not in 4-method list)</td>
 <td>Structural (cardiac, not pulmonary)</td>
 <td>TRIM35 (E3 ubiquitin ligase) drives cardiac fibroblast remodeling via SLC7A5/mTORC1</td>
 <td>PMID 39304904 / 10.1186/s12964-024-01826-0</td>
-<td>HOLDS as off-target evidence; weak/speculative analogy to lung, not claimed as direct COPD evidence</td>
+<td><span class="tag-hold">HOLDS</span> as off-target evidence; weak/speculative analogy to lung, not claimed as direct COPD evidence</td>
 <td>2024-09-20</td>
 </tr>
 <tr>
-<td>TRIM35 (not in 4-method list)</td>
+<td class="gene">TRIM35 (not in 4-method list)</td>
 <td>Immune (avian, not human)</td>
 <td>Duck TRIM35 interferes with RIG-I-mediated antiviral signaling</td>
 <td>PMID 36445078 / 10.1128/spectrum.03858-22</td>
-<td>HOLDS as off-target evidence; avian model, not human/mammalian</td>
+<td><span class="tag-hold">HOLDS</span> as off-target evidence; avian model, not human/mammalian</td>
 <td>2022-11-29</td>
 </tr>
 <tr>
-<td>SCARA3 (not in 4-method list)</td>
+<td class="gene">SCARA3 (not in 4-method list)</td>
 <td>Structural (lipid biology)</td>
 <td>SCARA3 (unlike other SCARA family members) lacks a C-terminal globular domain and shows no detectable lipoprotein (LDL/VLDL) binding</td>
 <td>PMID 34252459 / 10.1016/j.jbc.2021.100948</td>
-<td>HOLDS — undercuts, rather than supports, an atherosclerosis/lipid-handling analogy for SCARA3</td>
+<td><span class="tag-hold">HOLDS</span> — undercuts, rather than supports, an atherosclerosis/lipid-handling analogy for SCARA3</td>
 <td>2021-07-09</td>
 </tr>
 <tr>
-<td>GULOP (credible-set gene)</td>
+<td class="gene">GULOP (credible-set gene)</td>
 <td>—</td>
 <td>No functional/regulatory-role literature found (searched specifically; pseudogene, no protein product)</td>
 <td>—</td>
@@ -585,15 +269,15 @@ biology asserted but not sourced) so it has no table row.</p>
 <td>—</td>
 </tr>
 <tr>
-<td>STMN4 (not in 4-method list)</td>
+<td class="gene">STMN4 (not in 4-method list)</td>
 <td>—</td>
 <td>General stathmin-family biology (neuronal cytoskeleton, zebrafish/human tissue expression); no COPD- or lung-relevant finding</td>
 <td>PMID 27819330, PMID 21061380, PMID 12676564</td>
-<td>HOLDS as a negative/no-relevance finding</td>
+<td><span class="tag-hold">HOLDS</span> as a negative/no-relevance finding</td>
 <td>2016-11-07 / 2010-12 / 2003-04</td>
 </tr>
 <tr>
-<td>Cross-gene (counter-evidence)</td>
+<td class="gene">Cross-gene (counter-evidence)</td>
 <td>Statistical genetics (lung-tissue TWAS, lung cancer not COPD)</td>
 <td>Large lung-tissue TWAS (~1,038 samples) names IREB2 (15q25) and AQP3 (9p13.3) as top hits; does NOT name CLU, EPHX2, CCDC25, or CHRNA2 among significant expression-level findings</td>
 <td>PMID 31696517 / (Int J Cancer 2020;146(7):1862-1878)</td>
@@ -601,15 +285,15 @@ biology asserted but not sourced) so it has no table row.</p>
 <td>2020-04-01</td>
 </tr>
 </tbody>
-</table>
-<hr>
+</table></div>
+<hr/>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did">Open Targets summary (structured database lookup — NOT a verified literature citation; did</h2>
 <h2 id="not-go-through-citation-verifier-or-red-team-skeptic">not go through citation-verifier or red-team-skeptic)</h2>
 <ul>
 <li><strong>CLU</strong> (ENSG00000120885): gnomAD LoF o/e 0.516 (not strongly constrained). COPD association
 score 0.109 (genetic_association sub-score 0.153). L2G at lead variant rs73229093: 0.137 for
-both COPD-labeled GCST studies (second to CHRNA2's 0.164); 0.182/0.166 for &quot;chronic airway
-obstruction&quot; (essentially tied with or exceeding CHRNA2); 0.087 for &quot;chronic bronchitis&quot;
+both COPD-labeled GCST studies (second to CHRNA2's 0.164); 0.182/0.166 for "chronic airway
+obstruction" (essentially tied with or exceeding CHRNA2); 0.087 for "chronic bronchitis"
 (behind EPHX2's 0.228). CLU is the single highest-L2G gene at this locus for monocyte count
 (0.69, the highest score for any gene/trait pair in the whole dataset) and atherosclerosis
 (0.37) — both non-pulmonary traits. No spirometry/FEV1/FEV1-FVC credible set found among ~40
@@ -623,14 +307,14 @@ gene beyond its biotype classification.</li>
 <li><strong>CHRNA2</strong> (ENSG00000120903, flagged by Open Targets L2G, not by the internal pipeline): the
 single highest overall COPD disease-association score of any gene at this locus (0.376;
 genetic_association sub-score 0.618, vs. CLU's 0.153). Top or tied-top L2G gene for the two
-COPD-labeled GCST studies (0.164) and for &quot;chronic airway obstruction&quot; (0.182). Also the
+COPD-labeled GCST studies (0.164) and for "chronic airway obstruction" (0.182). Also the
 most frequent top L2G gene across the ~40 shared credible sets, nearly all of which are
 labeled as smoking-behavior/nicotine-dependence/substance-use/psychiatric traits. gnomAD:
 missense z 0.90, LoF essentially unconstrained.</li>
 <li><strong>EPHX2</strong> (ENSG00000120915, flagged by Open Targets L2G, not by the internal pipeline): top
-L2G gene for &quot;chronic bronchitis&quot; specifically (0.228) and near-top for COPD-medication-use
+L2G gene for "chronic bronchitis" specifically (0.228) and near-top for COPD-medication-use
 (0.186, second to CLU's 0.212). Overall COPD disease-association score 0.150
-(genetic_association 0.224; the only gene of those examined with a nonzero &quot;clinical&quot;
+(genetic_association 0.224; the only gene of those examined with a nonzero "clinical"
 datatype sub-score, 0.061). gnomAD: essentially unconstrained (missense z 0.02, LoF z ~0).</li>
 <li><strong>SCARA3</strong> (ENSG00000168077): consistent but minor (~0.06-0.08) L2G contributor across most
 traits at this locus, never top-ranked. COPD disease-association score 0.040 (low). gnomAD
@@ -641,7 +325,7 @@ credible sets are overwhelmingly smoking-behavior/nicotine-dependence/substance-
 psychiatric traits, plus COPD-diagnosis-based phenotypes (COPD, chronic airway obstruction,
 chronic bronchitis, COPD medication use), plus monocyte count and atherosclerosis.</li>
 </ul>
-<hr>
+<hr/>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>Gene: CHRNA2</strong>
 <strong>Confidence: LOW</strong></p>
@@ -653,7 +337,7 @@ candidates). Given that constraint, CHRNA2 is the best-supported single pick, fo
 convergent reasons documented in the table above: (1) among Open Targets' structured L2G
 scores (informational context, not literature), CHRNA2 has the single highest overall COPD
 disease-association score of any gene at this locus (0.376 vs. CLU's 0.109) and ties or beats
-CLU on L2G for both COPD-labeled GWAS studies and for &quot;chronic airway obstruction&quot;; (2) unlike
+CLU on L2G for both COPD-labeled GWAS studies and for "chronic airway obstruction"; (2) unlike
 CLU and EPHX2, CHRNA2's candidacy is corroborated by independently-verified primary literature
 (PMID 24253422, PMID 33454625, PMID 28604730, PMID 41579494, PMID 41645249) establishing it —
 distinct from the far more famous chr15 CHRNA5-CHRNA3-CHRNB4 cluster — as a genuine
@@ -703,5 +387,7 @@ the CHRNA2/smoking-mediation story. The study team should weigh this LOW-confide
 accordingly — it is a best-supported recommendation given real evidentiary gaps, not a settled
 conclusion.</p>
 
+        </div>
+    </div>
 </body>
 </html>

@@ -1,380 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>9_30050001-30500000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 9:30,050,001-30,500,000 (GRCh38)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-930050001-30500000-grch38">Evidence table — locus 9:30,050,001-30,500,000 (GRCh38)</h1>
-<p><strong>Lead variant:</strong> rs2031830 (9:30,314,034; intron_variant/non_coding_transcript_variant;
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-930050001-30500000-grch38">Evidence table — locus 9:30,050,001-30,500,000 (GRCh38)</h1><div class="summary"><p><strong>Lead variant:</strong> rs2031830 (9:30,314,034; intron_variant/non_coding_transcript_variant;
 PIP=0.0944, the highest-PIP variant in a poorly resolved ~110-variant credible set).
 <strong>Nearest gene (internal pipeline):</strong> intergenic. <strong>FLAMES/MAGMA/PoPS/ABC prioritized genes:</strong>
 all NA. This locus sits in a large gene desert on chr9p21.2/9p21.3; the region 9:30,050,001-
 30,500,000 itself contains no protein-coding genes (only the lncRNA LINC01242 and two unnamed
 lncRNAs). Candidate genes evaluated below are the two nearest flanking protein-coding genes
 (LINGO2, ~836 kb upstream; ACO1, ~1.88 Mb downstream) and LINC01242 (the only gene the credible
-set itself annotates, via five variants totaling &lt;2% combined PIP).</p>
-<table>
+set itself annotates, via five variants totaling &lt;2% combined PIP).</p></div>
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -387,15 +71,15 @@ set itself annotates, via five variants totaling &lt;2% combined PIP).</p>
 </thead>
 <tbody>
 <tr>
-<td>LINGO2</td>
+<td class="gene">LINGO2</td>
 <td>Statistical genetics (COPD-cohort GWAS, claim partially unverifiable)</td>
-<td>GWAS of airway/methacholine responsiveness in COPD smokers (Lung Health Study) found a genome-wide-significant chr9p21.2 intergenic signal in the broad region near LINGO2; however, the specific SNP IDs, exact p-value, and &quot;function unclear&quot; quote attributed to this paper could not be confirmed from accessible text, and the significant SNPs (~chr9:29.55 Mb) do not spatially overlap this locus's credible-set interval (~30.05-30.5 Mb) — they sit closer to LINGO2 itself.</td>
+<td>GWAS of airway/methacholine responsiveness in COPD smokers (Lung Health Study) found a genome-wide-significant chr9p21.2 intergenic signal in the broad region near LINGO2; however, the specific SNP IDs, exact p-value, and "function unclear" quote attributed to this paper could not be confirmed from accessible text, and the significant SNPs (~chr9:29.55 Mb) do not spatially overlap this locus's credible-set interval (~30.05-30.5 Mb) — they sit closer to LINGO2 itself.</td>
 <td>Hansel NN et al., Am J Respir Cell Mol Biol 2015;53(2):226-234, PMID 25514360, DOI 10.1165/rcmb.2014-0198OC</td>
-<td>CLAIM_MISMATCH (verifier) / CONTESTED — treat as non-supporting, not weak support (skeptic)</td>
+<td><span class="tag-warning">CONTESTED</span>CLAIM_MISMATCH (verifier) /  — treat as non-supporting, not weak support (skeptic)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINGO2</td>
+<td class="gene">LINGO2</td>
 <td>Statistical genetics (behavioral trait, not pulmonary)</td>
 <td>An intronic LINGO2 SNP (with CADM2, EP300) was associated with neuroticism, replicated P&lt;0.05, n=170,911 — supports LINGO2's neurobehavioral genetic-association profile, not a lung phenotype.</td>
 <td>Lo MT et al., Hum Mol Genet 2017;26(22):4530-4539, PMID 28973307, DOI 10.1093/hmg/ddx340</td>
@@ -403,7 +87,7 @@ set itself annotates, via five variants totaling &lt;2% combined PIP).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINGO2 (paralog LINGO1)</td>
+<td class="gene">LINGO2 (paralog LINGO1)</td>
 <td>Statistical genetics (movement disorder, not pulmonary)</td>
 <td>LINGO1 variant rs9652490 associated with essential tremor (P=0.026) and Parkinson disease (P=0.016) in North American cohorts.</td>
 <td>Vilariño-Güell C et al., Neurogenetics 2010;11(4):401-408, PMID 20369371, DOI 10.1007/s10048-010-0241-x</td>
@@ -411,7 +95,7 @@ set itself annotates, via five variants totaling &lt;2% combined PIP).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINGO2</td>
+<td class="gene">LINGO2</td>
 <td>Statistical genetics (movement disorder, not pulmonary)</td>
 <td>LINGO2 variants rs7033345/rs10812774 associated with Parkinson disease/essential tremor risk in Asian cohorts.</td>
 <td>Wu YW et al., Hum Genet 2011;129(6):611-615, PMID 21287203, DOI 10.1007/s00439-011-0955-3</td>
@@ -419,7 +103,7 @@ set itself annotates, via five variants totaling &lt;2% combined PIP).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINGO2/LINGO1</td>
+<td class="gene">LINGO2/LINGO1</td>
 <td>Statistical genetics (review, not pulmonary)</td>
 <td>Review discussing LINGO1/LINGO2 as essential-tremor/Parkinson-disease candidate genes.</td>
 <td>Jasinska-Myga B &amp; Wider C, Parkinsonism Relat Disord 2012;18(Suppl1):S138-139, PMID 22166413</td>
@@ -427,7 +111,7 @@ set itself annotates, via five variants totaling &lt;2% combined PIP).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINGO1 (not LINGO2)</td>
+<td class="gene">LINGO1 (not LINGO2)</td>
 <td>Protein expression (movement disorder, not pulmonary)</td>
 <td>LINGO1 (explicitly not LINGO2) protein significantly increased in essential-tremor cerebellar cortex vs. controls.</td>
 <td>Delay C et al., Mov Disord 2014;29(13):1637-1647, PMID 24531928, DOI 10.1002/mds.25819</td>
@@ -435,7 +119,7 @@ set itself annotates, via five variants totaling &lt;2% combined PIP).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINGO1 (not LINGO2)</td>
+<td class="gene">LINGO1 (not LINGO2)</td>
 <td>Meta-analysis (movement disorder, not pulmonary)</td>
 <td>Only a marginal, non-replicated trend for LINGO1 (not LINGO2) rs9652490 with essential tremor; general lack of replication across candidate genes.</td>
 <td>Siokas V et al., Tremor Other Hyperkinet Mov (N Y) 2020;10:4, PMID 32775018, DOI 10.5334/tohm.67</td>
@@ -443,31 +127,31 @@ set itself annotates, via five variants totaling &lt;2% combined PIP).</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ACO1</td>
+<td class="gene">ACO1</td>
 <td>Structural/mechanistic (wrong disease category — IPF, not COPD)</td>
 <td>ACO1 protein upregulated in idiopathic pulmonary fibrosis (IPF, a restrictive fibrotic disease) lower-lobe vasculature and in bleomycin-fibrosis mouse lungs.</td>
 <td>Fukumoto J et al., Front Pharmacol 2022;13:890380, PMID 35910393, DOI 10.3389/fphar.2022.890380</td>
-<td>VERIFIED; WEAKENED relevance — off-disease-category (IPF is restrictive, not COPD/obstructive), carries little weight for a COPD locus (skeptic)</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED;  relevance — off-disease-category (IPF is restrictive, not COPD/obstructive), carries little weight for a COPD locus (skeptic)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ACO1</td>
+<td class="gene">ACO1</td>
 <td>Mechanistic (tangential; primarily about paralog ACO2)</td>
-<td>Primarily an ACO2/NSCLC tumor-biology paper; shows ACO1/IRP1 activity responds to ACO2 level changes (&quot;ACO2-iron axis&quot;) in lung cancer cells.</td>
+<td>Primarily an ACO2/NSCLC tumor-biology paper; shows ACO1/IRP1 activity responds to ACO2 level changes ("ACO2-iron axis") in lung cancer cells.</td>
 <td>Mirhadi S et al., Mol Cancer Res 2023;21(1):36-50, PMID 36214668, DOI 10.1158/1541-7786.MCR-22-0163</td>
-<td>VERIFIED; WEAKENED relevance — off-target (different paralog, cancer biology, not COPD) (skeptic)</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED;  relevance — off-target (different paralog, cancer biology, not COPD) (skeptic)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ACO1</td>
+<td class="gene">ACO1</td>
 <td>Review (non-specific mention)</td>
 <td>General ferritinophagy/organ-injury review lists ACO1/IRP1 among iron-homeostasis regulators and mentions COPD among organ-injury contexts discussed, with no ACO1-COPD-specific mechanistic claim.</td>
 <td>Shao N et al., Autophagy 2026;22(6):1171-1185, PMID 41692973, DOI 10.1080/15548627.2026.2633246</td>
-<td>VERIFIED (confirmed real despite unusually high PMID); WEAKENED — glossary-level mention only, no specific claim</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED (confirmed real despite unusually high PMID);  — glossary-level mention only, no specific claim</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>No citations were produced for <strong>LINC01242</strong> — a PubMed exact-match search for the gene symbol
 returned zero results. No citation exists for the lead variant <strong>rs2031830</strong> either — it is not
 indexed in any PubMed full-text/abstract-searchable article. Both are reported as genuine
@@ -556,5 +240,7 @@ resolved expression data (lung epithelium, airway smooth muscle, immune cells) f
 that current literature does not provide. Given the current state of evidence, this locus should
 be treated as unresolved by the study team pending such data, not assigned to any single gene.</p>
 
+        </div>
+    </div>
 </body>
 </html>

@@ -1,383 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>8_8150001-11050000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 8:8,150,001-11,050,000 (GRCh38; nearest gene PRAG1)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-88150001-11050000-grch38-nearest-gene-prag1">Evidence table — Locus 8:8,150,001-11,050,000 (GRCh38; nearest gene PRAG1)</h1>
-<p>Lead variant: rs2979192 (8:8480637, PIP=0.413, intron/non-coding-transcript variant, no gene assigned). No
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-88150001-11050000-grch38-nearest-gene-prag1">Evidence table — Locus 8:8,150,001-11,050,000 (GRCh38; nearest gene PRAG1)</h1><div class="summary"><p>Lead variant: rs2979192 (8:8480637, PIP=0.413, intron/non-coding-transcript variant, no gene assigned). No
 PubMed literature exists for this rsID. Credible set: 529 variants spanning ~2.9 Mb (unusually large; one of
 the largest in the dataset) — per pipeline scope rules, only the lead variant and the locus's two missense
 credible-set variants (both on RP1L1: rs74990397 PIP=0.000235, rs35602868 PIP=0.0000275) received dedicated
 variant-level literature search; all other credible-set variants are rolled into gene-level evidence below.
 Pipeline-prioritized genes: PRAG1 (nearest), XKR6 (MAGMA), TNKS (PoPS), CLDN23 (ABC). Additional genes carrying
 substantial credible-set variant share or otherwise queried: PINX1, MFHAS1, MSRA, SOX7, RP1L1 (missense
-carrier), plus PPP1R3B, C8orf74, PRSS51, PRSS55, ERI1 (region overlap, no citable COPD/lung connection found).</p>
-<p>Only citations with citation-verifier verdict <strong>VERIFIED</strong> appear below. One citation (SOX7, PMID 41859020) was
+carrier), plus PPP1R3B, C8orf74, PRSS51, PRSS55, ERI1 (region overlap, no citable COPD/lung connection found).</p><p>Only citations with citation-verifier verdict <strong>VERIFIED</strong> appear below. One citation (SOX7, PMID 41859020) was
 marked CLAIM_MISMATCH and is excluded from this table — see <code>audits/8_8150001-11050000_audit.md</code>. All rows
-verified 2026-09-11.</p>
-<table>
+verified 2026-09-11.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -390,215 +74,215 @@ verified 2026-09-11.</p>
 </thead>
 <tbody>
 <tr>
-<td>PRAG1</td>
+<td class="gene">PRAG1</td>
 <td>Statistical genetics (structural biology, non-lung)</td>
 <td>PEAK2/SgK223 (PRAG1) is a pseudokinase scaffold regulating Src-family signaling, cell adhesion, and migration via homo/heterotypic association with PEAK1/PEAK3; generic cell-signaling biology, not lung-specific</td>
 <td>PMID 39321525 / DOI 10.1016/j.sbi.2024.102932</td>
-<td>WEAKENED — no lung-specific mechanism; Open Targets L2G profile (cig/day 0.89 &gt; COPD 0.80 &gt; FEV1/FVC 0.55 &gt; FEV1 0.48) is at least as consistent with smoking-mediation as direct pulmonary biology</td>
+<td><span class="tag-warning">WEAKENED</span> — no lung-specific mechanism; Open Targets L2G profile (cig/day 0.89 &gt; COPD 0.80 &gt; FEV1/FVC 0.55 &gt; FEV1 0.48) is at least as consistent with smoking-mediation as direct pulmonary biology</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PRAG1</td>
+<td class="gene">PRAG1</td>
 <td>Immune-adjacent (non-lung)</td>
 <td>PEAK3 (a PRAG1/PEAK2 paralog, not PRAG1 itself) drives oncogenic AKT/GRB2/PYK2 signaling in AML/THP1 leukemic cell lines</td>
 <td>PMID 34944965 / DOI 10.3390/cancers13246344</td>
-<td>WEAKENED — paralog-only evidence, not PRAG1-specific, not lung/immune-relevant to COPD</td>
+<td><span class="tag-warning">WEAKENED</span> — paralog-only evidence, not PRAG1-specific, not lung/immune-relevant to COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>XKR6</td>
+<td class="gene">XKR6</td>
 <td>Statistical genetics (cardiometabolic, non-lung)</td>
 <td>A different XKR6 variant (rs7819412, not in this locus's credible set) is associated with serum triglyceride/cholesterol levels and CAD/ischemic-stroke risk in a Han Chinese cohort</td>
 <td>PMID 31429711 / DOI 10.1186/s12872-019-1179-z</td>
-<td>WEAKENED — establishes XKR6 pleiotropy but no lung/COPD relevance; Open Targets shows XKR6 has zero COPD L2G evidence and its dominant signal is smoking initiation</td>
+<td><span class="tag-warning">WEAKENED</span> — establishes XKR6 pleiotropy but no lung/COPD relevance; Open Targets shows XKR6 has zero COPD L2G evidence and its dominant signal is smoking initiation</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TNKS</td>
+<td class="gene">TNKS</td>
 <td>Structural biology (telomere maintenance, general)</td>
 <td>Tankyrase 1 (TNKS), TIN2, and PINX1 are interacting partners of TRF1 that jointly regulate telomere length via control of POT1 loading onto telomeric single-stranded DNA</td>
 <td>PMID 12768206 / DOI 10.1038/nature01688</td>
-<td>WEAKENED — telomere/shelterin biology is essentially universal across cell types and supplies no COPD- or lung-specific rationale; should be read as background biology, not independent support</td>
+<td><span class="tag-warning">WEAKENED</span> — telomere/shelterin biology is essentially universal across cell types and supplies no COPD- or lung-specific rationale; should be read as background biology, not independent support</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CLDN23</td>
+<td class="gene">CLDN23</td>
 <td>Structural biology (intestinal epithelium, non-lung)</td>
 <td>Claudin-23 is enriched in luminal intestinal epithelial cells, associates with CLDN3/CLDN4, and regulates tight-junction paracellular permeability/barrier architecture</td>
 <td>PMID 37798277 / DOI 10.1038/s41467-023-41999-9</td>
-<td>HOLDS as correctly characterized weak/low-priority candidate; all functional literature is intestinal, not airway</td>
+<td><span class="tag-hold">HOLDS</span> as correctly characterized weak/low-priority candidate; all functional literature is intestinal, not airway</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CLDN23</td>
+<td class="gene">CLDN23</td>
 <td>Structural biology (intestinal epithelium, non-lung)</td>
 <td>The microbial metabolite n-butyrate upregulates intestinal claudin-23 expression via SP1/AMPK pathways</td>
 <td>PMID 37467886 / DOI 10.1016/j.lfs.2023.121952</td>
-<td>HOLDS (same caveat as above)</td>
+<td><span class="tag-hold">HOLDS</span> (same caveat as above)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CLDN23</td>
+<td class="gene">CLDN23</td>
 <td>Structural/immune biology (intestinal, ulcerative colitis)</td>
 <td>CLDN23 is transcriptionally downregulated in active ulcerative colitis and implicated in mast-cell-exosome-mediated intestinal barrier regulation</td>
 <td>PMID 41089340 / DOI 10.1039/d5na00707k</td>
-<td>HOLDS (same caveat; gut, not airway, immunology)</td>
+<td><span class="tag-hold">HOLDS</span> (same caveat; gut, not airway, immunology)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PINX1</td>
+<td class="gene">PINX1</td>
 <td>Structural biology (telomere maintenance, general)</td>
 <td>TNKS, TIN2, and PINX1 jointly regulate telomere length via POT1 loading (same paper as TNKS row above)</td>
 <td>PMID 12768206 / DOI 10.1038/nature01688</td>
-<td>WEAKENED — same &quot;generic biology, not COPD-specific&quot; caveat as the TNKS row</td>
+<td><span class="tag-warning">WEAKENED</span> — same "generic biology, not COPD-specific" caveat as the TNKS row</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PINX1</td>
+<td class="gene">PINX1</td>
 <td>Statistical genetics / immune (COPD lung transcriptomics, correlational)</td>
-<td>Machine-learning analysis of bulk and single-cell COPD lung transcriptomic data identified PINX1 as one of 14 hub &quot;R-loop regulator&quot; genes distinguishing COPD immune subtypes (differing neutrophil/immune-microenvironment composition); RT-PCR confirmed altered PINX1 expression in COPD mouse lung tissue</td>
+<td>Machine-learning analysis of bulk and single-cell COPD lung transcriptomic data identified PINX1 as one of 14 hub "R-loop regulator" genes distinguishing COPD immune subtypes (differing neutrophil/immune-microenvironment composition); RT-PCR confirmed altered PINX1 expression in COPD mouse lung tissue</td>
 <td>PMID 39798034 / DOI 10.1007/s10753-024-02232-x</td>
-<td>WEAKENED — correlational/expression-clustering evidence, not a GWAS/fine-mapping/causal-mechanism paper; should not be weighted as strongly as an experimental/causal finding</td>
+<td><span class="tag-warning">WEAKENED</span> — correlational/expression-clustering evidence, not a GWAS/fine-mapping/causal-mechanism paper; should not be weighted as strongly as an experimental/causal finding</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PINX1</td>
+<td class="gene">PINX1</td>
 <td>Structural biology (lung tissue, rat model)</td>
 <td>In a rat LPS-induced acute lung injury model, PINX1 expression and its regulation of telomerase(TERT) activity modulate lung injury severity, inflammatory factor levels, apoptosis, and cell senescence differently across acute vs. convalescent phases</td>
 <td>PMID 33819185 / DOI 10.18632/aging.202779</td>
-<td>WEAKENED — genuine lung-tissue data (a real point in PINX1's favor versus other candidates) but an acute-injury model, not COPD-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — genuine lung-tissue data (a real point in PINX1's favor versus other candidates) but an acute-injury model, not COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PINX1</td>
+<td class="gene">PINX1</td>
 <td>Immune/inflammatory biology (airway smooth muscle, asthma-relevant)</td>
 <td>PINX1 and telomerase/TERT are required for TNF-α-induced chemokine gene expression in airway smooth muscle cells via NF-κB(p65) activity; PINX1 physically associates with p65 and amplifies NF-κB-driven chemokine transcription</td>
 <td>PMID 29305433 / DOI 10.4049/jimmunol.1700414</td>
-<td>WEAKENED — directly airway-tissue and mechanistically specific (again a real positive for PINX1), but studied in an asthma model, not COPD</td>
+<td><span class="tag-warning">WEAKENED</span> — directly airway-tissue and mechanistically specific (again a real positive for PINX1), but studied in an asthma model, not COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PINX1</td>
+<td class="gene">PINX1</td>
 <td>Structural biology (lung cancer, smoking-confounded)</td>
 <td>PinX1 depletion is associated with non-small-cell lung cancer tumorigenesis and correlates with smoking status, tumor stage, and overall survival via a p15/cyclin D1 cell-cycle pathway</td>
 <td>PMID 28372542 / DOI 10.1186/s12943-017-0637-4</td>
-<td>WEAKENED — smoking-status correlation raises an unresolved reverse-causation/confounding question (is PinX1 depletion a driver or a downstream consequence of smoking-induced senescence?)</td>
+<td><span class="tag-warning">WEAKENED</span> — smoking-status correlation raises an unresolved reverse-causation/confounding question (is PinX1 depletion a driver or a downstream consequence of smoking-induced senescence?)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MFHAS1</td>
+<td class="gene">MFHAS1</td>
 <td>Immune/inflammatory biology (macrophage TLR signaling, non-lung)</td>
 <td>In a genome-wide RNAi screen of leucine-rich-repeat proteins, MFHAS1 was shown to regulate Toll-like receptor (TLR)-dependent signaling in human primary macrophages</td>
 <td>PMID 20616063 / DOI 10.1073/pnas.1000093107</td>
-<td>WEAKENED — mechanistically specific and consistent with prior #3 (macrophage inflammatory programs), but demonstrated in a non-lung experimental system; &quot;compelling candidate&quot; framing in the underlying research overstates directness</td>
+<td><span class="tag-warning">WEAKENED</span> — mechanistically specific and consistent with prior #3 (macrophage inflammatory programs), but demonstrated in a non-lung experimental system; "compelling candidate" framing in the underlying research overstates directness</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MFHAS1</td>
+<td class="gene">MFHAS1</td>
 <td>Immune/inflammatory biology (sepsis, non-lung)</td>
 <td>Blood MFHAS1 is significantly elevated in septic patients and mediates a biphasic (inhibitory then stimulatory) effect on TLR2/NF-κB signaling and JNK/p38 phosphorylation in macrophages/monocytes following TLR2 ligand stimulation</td>
 <td>PMID 26599367 / DOI 10.1371/journal.pone.0143662</td>
-<td>WEAKENED (same caveat — systemic/sepsis model, not lung tissue)</td>
+<td><span class="tag-warning">WEAKENED</span> (same caveat — systemic/sepsis model, not lung tissue)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MFHAS1</td>
+<td class="gene">MFHAS1</td>
 <td>Immune/inflammatory biology (macrophage polarization, non-lung)</td>
 <td>Ubiquitination of MFHAS1 by the E3 ligase praja2 promotes M1 (pro-inflammatory) macrophage polarization and M2-to-M1 transformation via JNK/p38 pathway activation downstream of TLR2</td>
 <td>PMID 28471450 / DOI 10.1038/cddis.2017.102</td>
-<td>WEAKENED (same caveat)</td>
+<td><span class="tag-warning">WEAKENED</span> (same caveat)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MSRA</td>
+<td class="gene">MSRA</td>
 <td>Statistical genetics / structural biology (COPD, alpha-1-antitrypsin pathway)</td>
 <td>In a Serbian COPD case-control study, the MSRA rs10903323 polymorphism was not itself associated with COPD case status, but the minor allele was associated with increased oxidized alpha-1-antitrypsin (A1AT) and reduced A1AT elastase-inhibitory activity in COPD patients who smoke, particularly in severe/very-severe (GOLD 3-4) disease</td>
 <td>PMID 34674978 / DOI 10.1016/j.pulmoe.2021.09.003</td>
-<td>HOLDS as the most mechanistically COPD-pathway-specific evidence at this locus, BUT MSRA's credible-set variants sit ~1.7-2.1 Mb from the lead variant at the far distal edge of this unusually wide window, all PIP&lt;0.00026 — skeptic and researcher concur this more likely reflects a separate, adjacent GWAS signal swept into the credible set than a gene mechanistically tied to the lead variant; possible evidence the 2.9 Mb credible set merges two distinct signals</td>
+<td><span class="tag-hold">HOLDS</span> as the most mechanistically COPD-pathway-specific evidence at this locus, BUT MSRA's credible-set variants sit ~1.7-2.1 Mb from the lead variant at the far distal edge of this unusually wide window, all PIP&lt;0.00026 — skeptic and researcher concur this more likely reflects a separate, adjacent GWAS signal swept into the credible set than a gene mechanistically tied to the lead variant; possible evidence the 2.9 Mb credible set merges two distinct signals</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MSRA</td>
+<td class="gene">MSRA</td>
 <td>Structural biology (alpha-1-antitrypsin/elastase, foundational)</td>
 <td>Human methionine sulfoxide-peptide reductase activity, present in lung homogenates/neutrophils/alveolar type II cells, can reactivate alpha-1-proteinase inhibitor oxidized by myeloperoxidase-type systems in vitro (though not A1AT inactivated by cigarette-smoke-plus-peroxide); COPD patients in this 1983 study had normal levels of this neutrophil enzyme activity</td>
 <td>PMID 6600900 / DOI 10.1164/arrd.1983.127.3.301</td>
-<td>HOLDS (same distinct-signal caveat as above)</td>
+<td><span class="tag-hold">HOLDS</span> (same distinct-signal caveat as above)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MSRA</td>
+<td class="gene">MSRA</td>
 <td>Structural biology (general biochemistry, non-lung; background only)</td>
 <td>MSRA and STARD3 jointly mediate cholesterol-hydroperoxide detoxification (general biochemistry, not lung-specific)</td>
 <td>PMID 37507014 / DOI 10.1016/j.jbc.2023.105099</td>
-<td>HOLDS — background biology only, not COPD-specific</td>
+<td><span class="tag-hold">HOLDS</span> — background biology only, not COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MSRA</td>
+<td class="gene">MSRA</td>
 <td>Structural biology (general, non-lung; background only)</td>
 <td>MSRA knockout-mouse study of ischemia-reperfusion injury (general oxidative-stress biology)</td>
 <td>PMID 37290581 / DOI 10.1016/j.freeradbiomed.2023.05.028</td>
-<td>HOLDS — background biology only</td>
+<td><span class="tag-hold">HOLDS</span> — background biology only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MSRA</td>
+<td class="gene">MSRA</td>
 <td>Structural biology (general aging biology, non-lung; background only)</td>
 <td>General MSRA longevity/aging biology study in mice</td>
 <td>PMID 27821326 / DOI 10.1016/j.redox.2016.10.012</td>
-<td>HOLDS — background biology only</td>
+<td><span class="tag-hold">HOLDS</span> — background biology only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SOX7</td>
+<td class="gene">SOX7</td>
 <td>Literature search (no qualifying evidence)</td>
 <td>No verified literature evidence connects SOX7 to COPD or lung function at this locus; the sole candidate citation (PMID 41859020) was excluded as CLAIM_MISMATCH (see audit appendix — its colocalization signal is on chromosome 4, not chromosome 8)</td>
 <td>N/A</td>
-<td>WEAKENED to near-null — evidentiary base is effectively empty once the mismatched citation is removed</td>
+<td><span class="tag-warning">WEAKENED</span> to near-null — evidentiary base is effectively empty once the mismatched citation is removed</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RP1L1</td>
+<td class="gene">RP1L1</td>
 <td>Structural biology (retina, non-lung)</td>
 <td>The RP1L1 R45W variant (a different variant from this locus's two missense credible-set variants) causes toxic gain-of-function hyperactive microtubule binding underlying retinal degeneration in occult macular dystrophy</td>
 <td>PMID 41555797 / DOI 10.1242/jcs.264447</td>
-<td>CONTESTED — see audit appendix; skeptic recommends this gene be excluded as a candidate despite carrying this locus's only missense credible-set variants</td>
+<td><span class="tag-warning">CONTESTED</span> — see audit appendix; skeptic recommends this gene be excluded as a candidate despite carrying this locus's only missense credible-set variants</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RP1L1</td>
+<td class="gene">RP1L1</td>
 <td>Structural biology (retina, non-lung)</td>
 <td>Review of RP1L1-associated occult macular dystrophy and related hereditary retinal disorders characterized by abnormal electroretinograms with normal fundus appearance</td>
 <td>PMID 40507975 / DOI 10.3390/ijms26115166</td>
-<td>CONTESTED (same reasoning)</td>
+<td><span class="tag-warning">CONTESTED</span> (same reasoning)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PRSS51 / PRSS55</td>
+<td class="gene">PRSS51 / PRSS55</td>
 <td>Structural biology (spermatogenesis, non-lung)</td>
 <td>Prss55, but not Prss51, is required for male fertility in mice, stabilizing the sperm membrane protein ADAM3 for uterotubal-junction migration and zona-pellucida binding</td>
 <td>PMID 32301961 / DOI 10.1093/biolre/ioaa041</td>
-<td>HOLDS as correctly-characterized no-connection finding; included only for regional completeness, no plausible COPD link</td>
+<td><span class="tag-hold">HOLDS</span> as correctly-characterized no-connection finding; included only for regional completeness, no plausible COPD link</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ERI1</td>
+<td class="gene">ERI1</td>
 <td>Structural biology (general RNA metabolism, non-lung)</td>
 <td>ERI1 (3'hExo) has a general role in replication-dependent histone mRNA degradation during the cell cycle</td>
 <td>PMID 30397106 / DOI 10.1098/rstb.2018.0170</td>
-<td>HOLDS as correctly-characterized no-connection finding; regional completeness only</td>
+<td><span class="tag-hold">HOLDS</span> as correctly-characterized no-connection finding; regional completeness only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ERI1</td>
+<td class="gene">ERI1</td>
 <td>Structural biology (general RNA biology review, non-lung)</td>
 <td>General review of ERI1/histone-mRNA decay biology</td>
 <td>PMID 24692427 / DOI 10.1002/wrna.1232</td>
-<td>HOLDS (same)</td>
+<td><span class="tag-hold">HOLDS</span> (same)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>Locus-wide context (smoking-behavior reference)</td>
+<td class="gene">Locus-wide context (smoking-behavior reference)</td>
 <td>Statistical genetics (reference GWAS, not locus-specific)</td>
 <td>The GSCAN study is the standard large-scale GWAS of smoking/alcohol behavioral traits (smoking initiation, cigarettes per day, cessation, age of initiation, drinks per week), used here only as background reference for interpreting this locus's smoking-trait Open Targets scores, not as a locus-specific finding</td>
 <td>PMID 30643251 / DOI 10.1038/s41588-018-0307-5</td>
@@ -606,14 +290,14 @@ verified 2026-09-11.</p>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — not a verified literature citation)</h2>
 <p>Source: Open Targets Platform GraphQL API, queried 2026-09-11. Disease term: chronic obstructive pulmonary
 disease = MONDO_0005002. Trait terms: FEV1 = EFO_0004314; FEV1/FVC ratio = EFO_0004713; smoking initiation =
 EFO_0005670; cigarettes per day = EFO_0006525; nicotine dependence = MONDO_0008575 (no evidence returned for
-any gene). &quot;L2G score&quot; = <code>resourceScore</code> for the <code>gwas_credible_sets</code> datasource. This did not go through
+any gene). "L2G score" = <code>resourceScore</code> for the <code>gwas_credible_sets</code> datasource. This did not go through
 citation-verifier or red-team-skeptic.</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -627,7 +311,7 @@ citation-verifier or red-team-skeptic.</p>
 </thead>
 <tbody>
 <tr>
-<td>PRAG1</td>
+<td class="gene">PRAG1</td>
 <td>0.803</td>
 <td>0.478 / 0.465 / 0.465</td>
 <td>0.549</td>
@@ -636,7 +320,7 @@ citation-verifier or red-team-skeptic.</p>
 <td>1.08 [0.91–1.29] (tolerant)</td>
 </tr>
 <tr>
-<td>XKR6</td>
+<td class="gene">XKR6</td>
 <td>no data (0)</td>
 <td>0.167 / 0.162</td>
 <td>0.477</td>
@@ -645,7 +329,7 @@ citation-verifier or red-team-skeptic.</p>
 <td>0.447 [0.319–0.639] (constrained)</td>
 </tr>
 <tr>
-<td>TNKS</td>
+<td class="gene">TNKS</td>
 <td>no data (0)</td>
 <td>0.705 / 0.646 / 0.642</td>
 <td>0.779</td>
@@ -654,7 +338,7 @@ citation-verifier or red-team-skeptic.</p>
 <td>0.508 [0.407–0.639] (constrained)</td>
 </tr>
 <tr>
-<td>CLDN23</td>
+<td class="gene">CLDN23</td>
 <td>0.094</td>
 <td>up to 0.378 (mostly &lt;0.1)</td>
 <td>up to 0.077</td>
@@ -663,7 +347,7 @@ citation-verifier or red-team-skeptic.</p>
 <td>1.99 [0.94–1.96] (tolerant)</td>
 </tr>
 <tr>
-<td>PINX1</td>
+<td class="gene">PINX1</td>
 <td>no L2G (literature-only, PMID 39798034)</td>
 <td>0.864 (x2)</td>
 <td>0.181</td>
@@ -672,7 +356,7 @@ citation-verifier or red-team-skeptic.</p>
 <td>1.48 [0.97–1.92] (tolerant)</td>
 </tr>
 <tr>
-<td>MFHAS1</td>
+<td class="gene">MFHAS1</td>
 <td>0.768</td>
 <td>up to 0.759 (several rows 0.52–0.72)</td>
 <td>0.666 / 0.642</td>
@@ -681,7 +365,7 @@ citation-verifier or red-team-skeptic.</p>
 <td>0.673 [0.532–0.859] (constrained)</td>
 </tr>
 <tr>
-<td>MSRA</td>
+<td class="gene">MSRA</td>
 <td>no L2G (literature-only, PMIDs 34674978, 6600900)</td>
 <td>up to 0.833</td>
 <td>0.490</td>
@@ -690,7 +374,7 @@ citation-verifier or red-team-skeptic.</p>
 <td>1.87 [1.44–1.98] (tolerant)</td>
 </tr>
 <tr>
-<td>SOX7</td>
+<td class="gene">SOX7</td>
 <td>weak literature-only (0.007-0.06)</td>
 <td>0.155 (x2)</td>
 <td>—</td>
@@ -699,7 +383,7 @@ citation-verifier or red-team-skeptic.</p>
 <td>0.936 [0.652–1.373] (tolerant)</td>
 </tr>
 <tr>
-<td>RP1L1</td>
+<td class="gene">RP1L1</td>
 <td>no data (0)</td>
 <td>no data (0)</td>
 <td>no data (0)</td>
@@ -708,7 +392,7 @@ citation-verifier or red-team-skeptic.</p>
 <td>1.63 [1.18–1.94] LoF; 1.53 [1.50–1.57] missense (both tolerant)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Note: PINX1 also has a second, near-identical Ensembl gene ID (ENSG00000258724) with the same constraint/
 COPD-literature profile but zero FEV1/FEV1-FVC/smoking evidence rows — treated as a duplicate annotation, not
 a distinct paralog. PPP1R3B, C8orf74, PRSS51, PRSS55, and ERI1 were not queried against Open Targets (no
@@ -760,5 +444,7 @@ L2G; TNKS has strong smoking-independent spirometry concordance but zero lung-sp
 L2G; CLDN23 and SOX7 have weak-to-null evidence across the board; MSRA is flagged as a likely distinct, adjacent
 signal rather than this locus's causal gene.</p>
 
+        </div>
+    </div>
 </body>
 </html>

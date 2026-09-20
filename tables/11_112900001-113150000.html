@@ -1,376 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>11_112900001-113150000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 11:112,900,001-113,150,000 (GRCh38)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-11112900001-113150000-grch38">Evidence table — locus 11:112,900,001-113,150,000 (GRCh38)</h1>
-<p><strong>Lead variant:</strong> rs7943198 (11:113,011,457, intron_variant, NCAM1, PIP=0.0505 — highest in a broad, flat credible set of ~63 variants)
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-11112900001-113150000-grch38">Evidence table — locus 11:112,900,001-113,150,000 (GRCh38)</h1><div class="summary"><p><strong>Lead variant:</strong> rs7943198 (11:113,011,457, intron_variant, NCAM1, PIP=0.0505 — highest in a broad, flat credible set of ~63 variants)
 <strong>Candidate genes (input file):</strong> NCAM1 (nearest gene, FLAMES, MAGMA, and PoPS prioritized; ABC = NA). NCAM1 is the only candidate gene listed in <code>loci/11_112900001-113150000.md</code>.
-<strong>Note on adjacent genes:</strong> This locus sits immediately adjacent to (but, per the researcher's assessment of the stated window boundaries, does not include) the well-known TTC12/ANKK1/DRD2 &quot;addiction genetics&quot; gene cluster at 11q23.2. TTC12/ANKK1/DRD2 are discussed below only as pleiotropy/interpretive context, not as independently scored candidate genes, per pipeline instructions not to manufacture candidates absent from the locus input file.</p>
+<strong>Note on adjacent genes:</strong> This locus sits immediately adjacent to (but, per the researcher's assessment of the stated window boundaries, does not include) the well-known TTC12/ANKK1/DRD2 "addiction genetics" gene cluster at 11q23.2. TTC12/ANKK1/DRD2 are discussed below only as pleiotropy/interpretive context, not as independently scored candidate genes, per pipeline instructions not to manufacture candidates absent from the locus input file.</p></div>
+
 <h2 id="evidence-table">Evidence table</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -383,7 +67,7 @@ code {
 </thead>
 <tbody>
 <tr>
-<td>NCAM1</td>
+<td class="gene">NCAM1</td>
 <td>Statistical genetics — smoking behavior GWAS</td>
 <td>UK BiLEVE/UK Biobank study reports a genome-wide-significant NCAM1 variant associated with smoking behavior, plus a chromosome-2 variant with a trans-eQTL effect on NCAM1 expression in brain tissue</td>
 <td>Wain et al. 2015, Lancet Respir Med, PMID 26423011</td>
@@ -391,7 +75,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NCAM1</td>
+<td class="gene">NCAM1</td>
 <td>Statistical genetics — background COPD GWAS landscape</td>
 <td>Large COPD GWAS (35,735 cases/222,076 controls) identified 82 COPD risk loci with cell-type-heterogeneous enrichment; NCAM1/11q23 is NOT among the loci specifically named in this paper</td>
 <td>Sakornsakolpat et al. 2019, Nat Genet, PMID 30804561</td>
@@ -399,7 +83,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NCAM1</td>
+<td class="gene">NCAM1</td>
 <td>Statistical genetics — background COPD GWAS landscape</td>
 <td>22 COPD loci identified (15,256 cases/47,936 controls); NCAM1/11q23 is NOT among the loci specifically named</td>
 <td>Hobbs et al. 2017, Nat Genet, PMID 28166215</td>
@@ -407,7 +91,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NCAM1</td>
+<td class="gene">NCAM1</td>
 <td>Statistical genetics — background lung-function GWAS landscape</td>
 <td>97 independent lung-function signals identified via extremes-of-distribution UK Biobank design, enriched for development/elastic-fiber/epigenetic genes; NCAM1 NOT specifically named</td>
 <td>Wain et al. 2017, Nat Genet, PMID 28166213</td>
@@ -415,7 +99,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NCAM1</td>
+<td class="gene">NCAM1</td>
 <td>Statistical genetics — background WGS lung-function/COPD landscape</td>
 <td>TOPMed multi-ethnic WGS analysis identifies 22 novel lung-function/COPD loci (PIAS1, RGN, FTO); NCAM1 NOT named</td>
 <td>Zhao et al. 2020, Nat Commun, PMID 33057025</td>
@@ -423,15 +107,15 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NCAM1 (11q23 cluster context)</td>
+<td class="gene">NCAM1 (11q23 cluster context)</td>
 <td>Statistical genetics — candidate-gene era, nicotine dependence</td>
-<td>Family-based linkage/association study: strongest nicotine-dependence signal in the NCAM1-TTC12-ANKK1-DRD2 cluster maps to TTC12/ANKK1; &quot;relatively weak evidence&quot; for the flanking DRD2 and NCAM1 markers</td>
+<td>Family-based linkage/association study: strongest nicotine-dependence signal in the NCAM1-TTC12-ANKK1-DRD2 cluster maps to TTC12/ANKK1; "relatively weak evidence" for the flanking DRD2 and NCAM1 markers</td>
 <td>Gelernter et al. 2006, Hum Mol Genet, PMID 17085484</td>
 <td>VERIFIED — important nuance/tension noted by skeptic (see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NCAM1 (11q23 cluster context)</td>
+<td class="gene">NCAM1 (11q23 cluster context)</td>
 <td>Statistical genetics — candidate-gene era, alcohol/drug dependence</td>
 <td>Strongest comorbid alcohol+drug-dependence signal centers on TTC12 exon 3 and the ANKK1-DRD2 junction; NCAM1 exon 12 markers reached global significance in both study designs but only haplotype-specific significance in the family sample; NCAM1 intron 14-18 associated with alcohol dependence alone</td>
 <td>Yang et al. 2008, Alcohol Clin Exp Res, PMID 18828801</td>
@@ -439,15 +123,15 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NCAM1</td>
+<td class="gene">NCAM1</td>
 <td>Statistical genetics — modern multi-omic fine-mapping, psychiatric GWAS</td>
-<td>Large multi-ancestry PTSD GWAS (95 loci) names NCAM1 (not TTC12/ANKK1/DRD2) among 43 candidate causal genes via convergent multi-omic fine-mapping, grouped among &quot;synaptic structure and function&quot; genes</td>
+<td>Large multi-ancestry PTSD GWAS (95 loci) names NCAM1 (not TTC12/ANKK1/DRD2) among 43 candidate causal genes via convergent multi-omic fine-mapping, grouped among "synaptic structure and function" genes</td>
 <td>Nievergelt et al. 2024, Nat Genet, PMID 38637617</td>
 <td>VERIFIED</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NCAM1</td>
+<td class="gene">NCAM1</td>
 <td>Statistical genetics — modern fine-mapping, shared smoking/schizophrenia genetic signal</td>
 <td>Fine-mapping of the genetic signal shared between cannabis use, cigarette smoking, and schizophrenia at this same chromosome-11 locus (top fine-mapped variant rs7945073 — itself a member of this locus's own credible set, PIP=0.004) implicates NCAM1 specifically (not TTC12/ANKK1/DRD2) among risk genes</td>
 <td>Song et al. 2022, Psychiatry Research, PMID 35235886</td>
@@ -455,7 +139,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NCAM1</td>
+<td class="gene">NCAM1</td>
 <td>Structural/developmental lung biology — neuroendocrine cell marker</td>
 <td>CD56 (NCAM1 protein product), together with synaptophysin/chromogranin, is a recommended immunohistochemical marker of pulmonary neuroendocrine differentiation; also detectable in some non-neuroendocrine lung adenocarcinoma/squamous carcinoma</td>
 <td>Kriegsmann et al. 2021, BMC Cancer, PMID 33933015</td>
@@ -463,7 +147,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NCAM1</td>
+<td class="gene">NCAM1</td>
 <td>Structural biology — pulmonary vascular remodeling (mechanistic)</td>
 <td>NCAM1 knockdown ameliorates hypoxia-induced pulmonary hypertension in vivo; NCAM1 expression is upregulated by PDGF-BB in pulmonary arterial smooth muscle cells (PASMCs), driving proliferation/migration via ERK1/2 signaling</td>
 <td>Chen et al. 2024, Respiratory Research, PMID 39696429</td>
@@ -471,15 +155,15 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NCAM1</td>
+<td class="gene">NCAM1</td>
 <td>Immunology/inflammation — CD56+ cytotoxic lymphocytes (marker-level)</td>
 <td>CD56+ (NK and CD56+ T) lung lymphocytes from resected lung tissue (n=60) spontaneously kill autologous lung cells; this cytotoxicity is increased in severe COPD and inversely correlates with FEV1% predicted</td>
 <td>Freeman et al. 2014, PLoS One, PMID 25078269</td>
-<td>VERIFIED, but skeptic downgrades this from &quot;competing/complementary immune mechanism&quot; to &quot;unlinked biological plausibility, no genetic evidence&quot; — see audit</td>
+<td>VERIFIED, but skeptic downgrades this from "competing/complementary immune mechanism" to "unlinked biological plausibility, no genetic evidence" — see audit</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NCAM1</td>
+<td class="gene">NCAM1</td>
 <td>Immunology/inflammation — lung NK-cell characterization (marker-level)</td>
 <td>Human lung NK cells (CD56-defined subsets, n=132) are more differentiated and functionally hyporesponsive than blood NK cells</td>
 <td>Marquardt et al. 2017, J Allergy Clin Immunol, PMID 27670241</td>
@@ -487,7 +171,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-literature-citations-not-passed-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT literature citations, NOT passed through citation-verifier or red-team-skeptic)</h2>
 <p>All figures below are from a live Open Targets GraphQL query performed 2026-09-11 (see <code>evidence_tables/_status/11_112900001-113150000/opentargets.md</code> for full detail).</p>
 <ul>
@@ -495,7 +179,7 @@ code {
 <ul>
 <li>Genetic constraint: LOF oe=0.139 (90% CI 0.091-0.217), constraint score=1 — LOF-intolerant/constrained.</li>
 <li>Overall target-disease association score for COPD (MONDO_0005002): 0.342 (genetic_association=0.521, literature=0.829).</li>
-<li>Locus-to-gene (L2G) at lead variant rs7943198: consistently ~0.77-0.86 across all 185 registered GWAS credible sets at this exact variant, including the credible set explicitly labeled &quot;Chronic airway obstruction&quot; (COPD, L2G=0.857) and FEV1/FVC ratio (L2G=0.77-0.79). The same near-constant high L2G score recurs across a very large number of smoking-behavior and psychiatric/behavioral traits (lifetime smoking index, smoking initiation, smoking status, nicotine dependence, cannabis use, alcohol/substance use disorder, depressive symptoms, PTSD, neuroticism, mood instability, cognitive performance, blood pressure traits, traumatic brain injury, and more).</li>
+<li>Locus-to-gene (L2G) at lead variant rs7943198: consistently ~0.77-0.86 across all 185 registered GWAS credible sets at this exact variant, including the credible set explicitly labeled "Chronic airway obstruction" (COPD, L2G=0.857) and FEV1/FVC ratio (L2G=0.77-0.79). The same near-constant high L2G score recurs across a very large number of smoking-behavior and psychiatric/behavioral traits (lifetime smoking index, smoking initiation, smoking status, nicotine dependence, cannabis use, alcohol/substance use disorder, depressive symptoms, PTSD, neuroticism, mood instability, cognitive performance, blood pressure traits, traumatic brain injury, and more).</li>
 <li>Colocalization: Strong GWAS-GWAS colocalization (COLOC_PIP_ECAVIAR, h4 0.85-0.92) between the COPD-labeled credible set and numerous other trait credible sets at this locus (smoking status, lifetime smoking index, depressive symptoms, neuroticism, blood pressure, mood swings, age at first intercourse), consistent with one shared pleiotropic regulatory signal. No molecular-QTL (eQTL/pQTL/sQTL) colocalization was surfaced in the (partial, 25-of-219-row) query performed — this is an incomplete survey, not a confirmed absence.</li>
 <li>Tractability: not small-molecule druggable; some antibody/other-modality tractability flags, unrelated to COPD specifically (reflects NCAM1/CD56's general use as a cell-surface marker).</li>
 </ul>
@@ -505,9 +189,11 @@ code {
 </ul>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>NCAM1 — Confidence: MODERATE</strong></p>
-<p>NCAM1 is the only candidate gene named by any prioritization method (nearest gene, FLAMES, MAGMA, PoPS) for this locus, and Open Targets' own L2G algorithm independently and consistently favors NCAM1 by roughly a 10-fold margin over its nearest neighbors DRD2 and ANKK1 across all 185 GWAS credible sets registered at the lead variant rs7943198 — including the credible sets explicitly labeled COPD (&quot;chronic airway obstruction,&quot; L2G=0.857) and FEV1/FVC ratio (L2G=0.77-0.79). This is corroborated by verified literature specific to NCAM1 itself (not merely the surrounding gene cluster): a GWAS-significant NCAM1 variant tied to smoking behavior with a brain trans-eQTL effect on NCAM1 (Wain et al. 2015, PMID 26423011); NCAM1 (not TTC12/ANKK1/DRD2) independently named as a candidate causal gene via multi-omic fine-mapping in a large PTSD GWAS (Nievergelt et al. 2024, PMID 38637617); and NCAM1 specifically implicated (via a variant, rs7945073, that is itself a member of this locus's own credible set) in fine-mapping of a genetic signal shared between smoking, cannabis use, and schizophrenia (Song et al. 2022, PMID 35235886). A newly identified mechanistic paper also shows NCAM1 has a direct functional role in pulmonary arterial smooth muscle cell proliferation/migration relevant to pulmonary hypertension (Chen et al. 2024, PMID 39696429) — genuine, non-marker-level lung-vascular biology for this gene, albeit in a pulmonary-hypertension (WHO Group 3-adjacent) rather than classic airway-obstruction/emphysema context.</p>
-<p>Confidence is capped at MODERATE, not HIGH, for reasons the red-team-skeptic raised that are not fully resolved by the verified evidence: (1) the mechanism by which this locus drives the COPD association remains genuinely unsettled — the credible set's flat PIP distribution (lead PIP only 0.05 across ~63 variants) is equally consistent with a single pleiotropic regulatory variant or with multiple partially-LD'd signals, and no molecular-QTL (eQTL/pQTL) colocalization tying the variant to NCAM1 expression in lung tissue was found in either the Open Targets lookup or the literature search — only GWAS-GWAS colocalization, which cannot itself distinguish &quot;one causal variant&quot; from &quot;two nearby causal variants in strong LD.&quot; (2) Older candidate-gene-era literature (Gelernter et al. 2006, PMID 17085484; Yang et al. 2008, PMID 18828801) localizes the historically strongest nicotine-dependence and alcohol/drug-dependence signal in this exact gene cluster to TTC12/ANKK1 rather than NCAM1, an unresolved tension with the modern fine-mapping literature that favors NCAM1 — plausibly reconciled by NCAM1 occupying far more physical/LD space in this locus than the smaller TTC12/ANKK1 genes (a large-gene absorption effect), but this was not definitively resolved. (3) Per the skeptic's critique, the FEV1/FVC ratio concordance should NOT be read as independent evidence for a direct-pulmonary-biology hypothesis distinct from smoking-mediation — a variant that increases smoking initiation/heaviness would be expected to produce FEV1/FVC association simply through smoking-induced lung damage, and no cited study adjusts for smoking exposure to test whether the FEV1/FVC signal survives independently. (4) The CD56+ cytotoxic-lymphocyte immune evidence (Freeman et al. 2014, PMID 25078269; Marquardt et al. 2017, PMID 27670241) is real but marker-level only — CD56 is used purely as a flow-cytometry gating marker in both papers, with no measurement of NCAM1 genetic variation or expression; this should be treated as unlinked biological plausibility rather than a competing mechanistic pathway for this locus.</p>
+<p>NCAM1 is the only candidate gene named by any prioritization method (nearest gene, FLAMES, MAGMA, PoPS) for this locus, and Open Targets' own L2G algorithm independently and consistently favors NCAM1 by roughly a 10-fold margin over its nearest neighbors DRD2 and ANKK1 across all 185 GWAS credible sets registered at the lead variant rs7943198 — including the credible sets explicitly labeled COPD ("chronic airway obstruction," L2G=0.857) and FEV1/FVC ratio (L2G=0.77-0.79). This is corroborated by verified literature specific to NCAM1 itself (not merely the surrounding gene cluster): a GWAS-significant NCAM1 variant tied to smoking behavior with a brain trans-eQTL effect on NCAM1 (Wain et al. 2015, PMID 26423011); NCAM1 (not TTC12/ANKK1/DRD2) independently named as a candidate causal gene via multi-omic fine-mapping in a large PTSD GWAS (Nievergelt et al. 2024, PMID 38637617); and NCAM1 specifically implicated (via a variant, rs7945073, that is itself a member of this locus's own credible set) in fine-mapping of a genetic signal shared between smoking, cannabis use, and schizophrenia (Song et al. 2022, PMID 35235886). A newly identified mechanistic paper also shows NCAM1 has a direct functional role in pulmonary arterial smooth muscle cell proliferation/migration relevant to pulmonary hypertension (Chen et al. 2024, PMID 39696429) — genuine, non-marker-level lung-vascular biology for this gene, albeit in a pulmonary-hypertension (WHO Group 3-adjacent) rather than classic airway-obstruction/emphysema context.</p>
+<p>Confidence is capped at MODERATE, not HIGH, for reasons the red-team-skeptic raised that are not fully resolved by the verified evidence: (1) the mechanism by which this locus drives the COPD association remains genuinely unsettled — the credible set's flat PIP distribution (lead PIP only 0.05 across ~63 variants) is equally consistent with a single pleiotropic regulatory variant or with multiple partially-LD'd signals, and no molecular-QTL (eQTL/pQTL) colocalization tying the variant to NCAM1 expression in lung tissue was found in either the Open Targets lookup or the literature search — only GWAS-GWAS colocalization, which cannot itself distinguish "one causal variant" from "two nearby causal variants in strong LD." (2) Older candidate-gene-era literature (Gelernter et al. 2006, PMID 17085484; Yang et al. 2008, PMID 18828801) localizes the historically strongest nicotine-dependence and alcohol/drug-dependence signal in this exact gene cluster to TTC12/ANKK1 rather than NCAM1, an unresolved tension with the modern fine-mapping literature that favors NCAM1 — plausibly reconciled by NCAM1 occupying far more physical/LD space in this locus than the smaller TTC12/ANKK1 genes (a large-gene absorption effect), but this was not definitively resolved. (3) Per the skeptic's critique, the FEV1/FVC ratio concordance should NOT be read as independent evidence for a direct-pulmonary-biology hypothesis distinct from smoking-mediation — a variant that increases smoking initiation/heaviness would be expected to produce FEV1/FVC association simply through smoking-induced lung damage, and no cited study adjusts for smoking exposure to test whether the FEV1/FVC signal survives independently. (4) The CD56+ cytotoxic-lymphocyte immune evidence (Freeman et al. 2014, PMID 25078269; Marquardt et al. 2017, PMID 27670241) is real but marker-level only — CD56 is used purely as a flow-cytometry gating marker in both papers, with no measurement of NCAM1 genetic variation or expression; this should be treated as unlinked biological plausibility rather than a competing mechanistic pathway for this locus.</p>
 <p><strong>Net call:</strong> given four independent prioritization methods, an order-of-magnitude L2G margin over both plausible neighboring genes, and multiple independently verified literature sources naming NCAM1 itself (not just the gene cluster) in modern GWAS fine-mapping, NCAM1 is confidently the correct <strong>physically/statistically implicated gene</strong> at this locus. What remains genuinely uncertain — and is the reason this is MODERATE rather than HIGH confidence — is whether NCAM1's contribution to COPD risk here is substantially mediated through smoking-related neurobiology (the best-supported hypothesis, consistent with biological prior #1 and this locus's extensive, repeated footprint in addiction/psychiatric GWAS) versus a direct pulmonary mechanism (for which the strongest candidate evidence, the PASMC/pulmonary-hypertension paper, does not address classic airway-obstruction biology). No specific alternative gene is nominated by any source as a stronger candidate than NCAM1; TTC12 and ANKK1 are the only plausible alternatives raised (via the historical addiction-genetics literature), but they lie outside the credible set and outside the locus window as defined in the input file, so this is not treated as a true tied contest requiring a runner-up call — it is a mechanism-of-action uncertainty, not a gene-identity uncertainty.</p>
 
+        </div>
+    </div>
 </body>
 </html>

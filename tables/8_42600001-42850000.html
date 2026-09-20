@@ -1,379 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>8_42600001-42850000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 8:42600001-42850000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table-locus-842600001-42850000-nearest-gene-chrnb3">Evidence table: locus 8:42600001-42850000 (nearest gene CHRNB3)</h1>
-<p><strong>Region:</strong> 8:42600001-42850000 (GRCh38) | <strong>Lead variant:</strong> rs7837296 (8:42671751, intergenic,
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table-locus-842600001-42850000-nearest-gene-chrnb3">Evidence Table — Locus 8:42600001-42850000</h1><div class="summary"><p><strong>Region:</strong> 8:42600001-42850000 (GRCh38) | <strong>Lead variant:</strong> rs7837296 (8:42671751, intergenic,
 PIP=0.197) | <strong>Candidate genes:</strong> CHRNB3 (nearest, ABC-prioritized), THAP1 (MAGMA- and
 PoPS-prioritized), CHRNA6 (assigned to one low-PIP credible-set variant, rs7001753, PIP=0.0015).
 55-variant credible set, overwhelmingly intergenic/upstream/intronic relative to CHRNB3; no
-missense or splice-donor/acceptor variants present.</p>
-<p>Only citations with verifier verdict VERIFIED are included below. See
-<code>audits/8_42600001-42850000_audit.md</code> for excluded citations and full skeptic reasoning.</p>
-<table>
+missense or splice-donor/acceptor variants present.</p><p>Only citations with verifier verdict VERIFIED are included below. See
+<code>audits/8_42600001-42850000_audit.md</code> for excluded citations and full skeptic reasoning.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -386,135 +70,135 @@ missense or splice-donor/acceptor variants present.</p>
 </thead>
 <tbody>
 <tr>
-<td>CHRNB3</td>
+<td class="gene">CHRNB3</td>
 <td>Statgen (smoking behavior)</td>
 <td>ENGAGE Consortium GWAS meta-analysis (n=31,266 smokers): 8p11 SNP rs6474412 near CHRNB3-CHRNA6 genome-wide significant for cigarettes-per-day (P=1.4e-8); nominal lung cancer association (P=0.04)</td>
 <td>Thorgeirsson et al. 2010, Nat Genet, PMID 20418888, DOI 10.1038/ng.573</td>
-<td>WEAKENED (gene-level; see audit — robust smoking-behavior signal, no independent pulmonary evidence)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; see audit — robust smoking-behavior signal, no independent pulmonary evidence)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNB3</td>
+<td class="gene">CHRNB3</td>
 <td>Statgen (smoking behavior)</td>
 <td>Dense SNP coverage of all 16 CHRN genes identifies CHRNB3-CHRNA6 cluster as a distinct nicotine-dependence risk locus, independent of the CHRNA5-CHRNA3-CHRNB4 (15q25) signal</td>
 <td>Saccone et al. 2009, Am J Med Genet B, PMID 19259974, DOI 10.1002/ajmg.b.30828</td>
-<td>WEAKENED (gene-level; see audit)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNB3</td>
+<td class="gene">CHRNB3</td>
 <td>Statgen (smoking behavior)</td>
 <td>CHRNB3-CHRNA6 (and CHRNB1) associate with nicotine dependence risk in at least one of two populations studied (African American, European American)</td>
 <td>Saccone et al. 2010, Genes Brain Behav, PMID 20584212, DOI 10.1111/j.1601-183X.2010.00608.x</td>
-<td>WEAKENED (gene-level; see audit)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNB3</td>
+<td class="gene">CHRNB3</td>
 <td>Statgen (non-replication)</td>
 <td>In Finnish smokers, the strongest CHRN-family hit for cigarettes-per-day/serum cotinine was at CHRNG/CHRND, NOT CHRNB3/CHRNA6 — a direct non-replication at this locus in an independent cohort</td>
 <td>Keskitalo-Vuokko et al. 2011, Nicotine Tob Res, PMID 21498873, DOI 10.1093/ntr/ntr059</td>
-<td>WEAKENED (gene-level; flagged by skeptic as a genuine non-replication that should be weighted, not just noted)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; flagged by skeptic as a genuine non-replication that should be weighted, not just noted)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNB3</td>
+<td class="gene">CHRNB3</td>
 <td>Statgen (smoking behavior, phenotype-dependent)</td>
 <td>CHRNB3 SNP rs1451240 genome-wide significant for Fagerstrom Test-defined nicotine dependence (P=2.4e-8) but NOT for cigarettes-per-day (P=0.0004, not genome-wide significant) — association is phenotype-definition-dependent</td>
 <td>Rice et al. 2012, Addiction, PMID 22524403, DOI 10.1111/j.1360-0443.2012.03922.x</td>
-<td>WEAKENED (gene-level; skeptic notes this shows the signal tracks a specific dependence construct, not smoking heaviness generally)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; skeptic notes this shows the signal tracks a specific dependence construct, not smoking heaviness generally)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNB3</td>
+<td class="gene">CHRNB3</td>
 <td>Statgen (addiction pleiotropy)</td>
 <td>CHRNB3-CHRNA6 variants also associate with DSM-5 cocaine use disorder, interpreted as general addiction/reward-pathway pleiotropy rather than lung-specific biology</td>
 <td>Sadler et al. 2014, Sci Rep, PMID 24675634, DOI 10.1038/srep04497</td>
-<td>WEAKENED (gene-level; see audit)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA6</td>
+<td class="gene">CHRNA6</td>
 <td>Statgen (lung cancer, smoking-independent)</td>
 <td>Two 8p11 tag SNPs (rs16891561, rs4236926) show protective associations with lung cancer risk, particularly in non-smokers, and correlate with lower smoking pack-years (Chinese Han population)</td>
 <td>Zhang XB et al. 2011, Yi Chuan, PMID 21831805, DOI 10.3724/sp.j.1005.2011.00886</td>
-<td>WEAKENED (gene-level; skeptic notes this is the one piece of evidence not smoking-confounded, but is lung cancer not COPD, single population, unreplicated)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; skeptic notes this is the one piece of evidence not smoking-confounded, but is lung cancer not COPD, single population, unreplicated)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA6</td>
+<td class="gene">CHRNA6</td>
 <td>Immune (lung cancer tumor-microenvironment, bioinformatic)</td>
 <td>CHRNA6 expression correlates with immune cell infiltration, antigen-presentation pathway activity, and immunotherapy response in small-cell lung cancer (CIBERSORT/TIDE/IPS deconvolution)</td>
 <td>Zhao et al. 2024, Heliyon, PMID 39398083, DOI 10.1016/j.heliyon.2024.e38572</td>
-<td>WEAKENED (gene-level; skeptic and researcher agree this is lung-cancer-context bioinformatics, not COPD-relevant neutrophilic/CD8+/Th1/Th17/macrophage biology)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; skeptic and researcher agree this is lung-cancer-context bioinformatics, not COPD-relevant neutrophilic/CD8+/Th1/Th17/macrophage biology)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA6</td>
+<td class="gene">CHRNA6</td>
 <td>Immune (lung cancer tumor-microenvironment, bioinformatic)</td>
 <td>CHRNA6 expression correlates with Treg, M1 macrophage, and mast cell infiltrate proportions and with prognosis/immunotherapy response in lung squamous cell carcinoma</td>
 <td>Zhang F et al. 2023, Curr Pharm Des, PMID 37680128, DOI 10.2174/1381612829666230901143203</td>
-<td>WEAKENED (gene-level; same caveat — cancer-context, not COPD-relevant)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; same caveat — cancer-context, not COPD-relevant)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA6</td>
+<td class="gene">CHRNA6</td>
 <td>Immune (lung cancer tumor-microenvironment, bioinformatic)</td>
 <td>CHRNA6 is one component of a 7-gene immune-related prognostic signature in lung adenocarcinoma derived from immune-infiltration-based differential expression analysis</td>
 <td>Li et al. 2021, Front Immunol, PMID 34887858, DOI 10.3389/fimmu.2021.752643</td>
-<td>WEAKENED (gene-level; same caveat — cancer-context, not COPD-relevant)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; same caveat — cancer-context, not COPD-relevant)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CHRNA6</td>
+<td class="gene">CHRNA6</td>
 <td>Statgen/structural (tumor expression, smoking-stratified)</td>
 <td>CHRNA6 expression is significantly higher in NSCLC tumor tissue than normal lung tissue (p&lt;0.0001), with upregulation particularly notable in never-smokers</td>
 <td>Szymanowska-Narloch et al. 2013, Adv Med Sci, PMID 24451080, DOI 10.2478/ams-2013-0025</td>
-<td>WEAKENED (gene-level; lung cancer context, not COPD)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; lung cancer context, not COPD)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>THAP1</td>
+<td class="gene">THAP1</td>
 <td>Structural (non-lung; vascular/endothelial)</td>
 <td>THAP1 is a physiologic regulator of endothelial cell proliferation, acting via repression of pRB/E2F cell-cycle target genes (postcapillary venule endothelium)</td>
 <td>Cayrol et al. 2006, Blood, PMID 17003378, DOI 10.1182/blood-2006-03-012013</td>
-<td>WEAKENED (gene-level; plausible but untested bridge to pulmonary vascular biology — not lung-specific)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; plausible but untested bridge to pulmonary vascular biology — not lung-specific)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>THAP1</td>
+<td class="gene">THAP1</td>
 <td>Structural (molecular/biochemical, non-tissue-specific)</td>
 <td>Biochemical characterization of the THAP zinc-finger domain as a zinc-dependent, sequence-specific DNA-binding module, shared across THAP-family proteins</td>
 <td>Clouaire et al. 2005, PNAS, PMID 15863623, DOI 10.1073/pnas.0406882102</td>
-<td>WEAKENED (gene-level; foundational molecular biology, not disease- or tissue-specific)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; foundational molecular biology, not disease- or tissue-specific)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>THAP1</td>
+<td class="gene">THAP1</td>
 <td>Structural/general genetics (non-pulmonary; neurological disease)</td>
 <td>Missense THAP1 mutations impair DNA binding and cause DYT6 primary torsion dystonia (haploinsufficiency mechanism) in Amish-Mennonite and German families</td>
 <td>Fuchs et al. 2009, Nat Genet, PMID 19182804, DOI 10.1038/ng.304</td>
-<td>WEAKENED (gene-level; well-established disease mechanism but non-pulmonary)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; well-established disease mechanism but non-pulmonary)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>THAP1</td>
+<td class="gene">THAP1</td>
 <td>Structural/general genetics (non-pulmonary; neurological disease)</td>
 <td>Further THAP1 mutations identified in dystonia patients with a laryngeal/spasmodic-dysphonia phenotype progressing to generalised dystonia</td>
 <td>Djarmati et al. 2009, Lancet Neurol, PMID 19345148, DOI 10.1016/S1474-4422(09)70083-3</td>
-<td>WEAKENED (gene-level; laryngeal, not lower-airway, structural biology)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; laryngeal, not lower-airway, structural biology)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>THAP1</td>
+<td class="gene">THAP1</td>
 <td>Structural/general genetics (non-pulmonary; in-vivo model)</td>
 <td>Thap1 knock-in and null mouse models show motor, transcriptional, and cerebellar structural abnormalities consistent with a haploinsufficiency mechanism in neurons; no lung phenotype was examined or reported</td>
 <td>Ruiz et al. 2015, Hum Mol Genet, PMID 26376866, DOI 10.1093/hmg/ddv384</td>
-<td>WEAKENED (gene-level; absence of lung phenotype is weak negative evidence — study wasn't designed to look for one)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; absence of lung phenotype is weak negative evidence — study wasn't designed to look for one)</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary">Open Targets summary</h2>
 <p><strong>Structured database lookup — NOT a verified literature citation; not passed through
 citation-verifier or red-team-skeptic.</strong> Queried directly via the Open Targets GraphQL API,
@@ -584,5 +268,7 @@ any signal survives independent of smoking mediation. Absent that, this locus sh
 the study team as a smoking-behavior-mediated candidate with CHRNB3 as the best single-gene guess,
 not as a resolved pulmonary-biology finding.</p>
 
+        </div>
+    </div>
 </body>
 </html>

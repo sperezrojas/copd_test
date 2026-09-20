@@ -1,383 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>7_32150001-32400000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 7:32,150,001-32,400,000 (PDE1C)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-732150001-32400000-pde1c">Evidence table — Locus 7:32,150,001-32,400,000 (PDE1C)</h1>
-<p>Lead variant: rs12701207 (7:32,251,979, GRCh38, intron_variant, PIP=0.075). All high-PIP
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-732150001-32400000-pde1c">Evidence table — Locus 7:32,150,001-32,400,000 (PDE1C)</h1><div class="summary"><p>Lead variant: rs12701207 (7:32,251,979, GRCh38, intron_variant, PIP=0.075). All high-PIP
 credible-set variants annotate to PDE1C as intronic; no missense/splice-donor/acceptor
 variant is present in the credible set. Candidate gene (nearest/FLAMES/MAGMA/PoPS,
-ABC=NA): <strong>PDE1C</strong> — the only candidate gene at this locus.</p>
-<p>Only citations with a VERIFIED verdict from citation-verifier are included below. One
+ABC=NA): <strong>PDE1C</strong> — the only candidate gene at this locus.</p><p>Only citations with a VERIFIED verdict from citation-verifier are included below. One
 citation (Schuit et al. 2017, Cochrane, PMID 28884473) was found to be RETRACTED and is
 excluded — see <code>audits/7_32150001-32400000_audit.md</code>. One citation (Shrine et al. 2019,
 PMID 30804560) is VERIFIED as a real, non-retracted paper but its specific locus-level
 sub-claim could not be confirmed (CLAIM_MISMATCH on that sub-claim); it is included below
 only for its general, verified scope statement, not for any claim about this locus's
-presence/absence in that GWAS.</p>
-<table>
+presence/absence in that GWAS.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -390,39 +74,39 @@ presence/absence in that GWAS.</p>
 </thead>
 <tbody>
 <tr>
-<td>PDE1C</td>
+<td class="gene">PDE1C</td>
 <td>Statistical genetics (context)</td>
 <td>Major multi-ancestry lung-function GWAS (~400,102 individuals, 279 signals) — general scope only; whether this locus is among the 279 significant FEV1/FEV1-FVC signals could not be confirmed from the accessible abstract/supplement</td>
 <td>Shrine et al. 2019, PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
-<td>WEAKENED — locus-specific sub-claim unconfirmed; use only for general scope, not as evidence this locus has (or lacks) an independent lung-function signal</td>
+<td><span class="tag-warning">WEAKENED</span> — locus-specific sub-claim unconfirmed; use only for general scope, not as evidence this locus has (or lacks) an independent lung-function signal</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE1C</td>
+<td class="gene">PDE1C</td>
 <td>Statistical genetics (smoking behavior)</td>
 <td>GSCAN meta-analysis of tobacco/alcohol use identified 566 variants/406 loci for smoking initiation, cessation, and heaviness; PDE1C's specific membership in this paper's loci table is NOT confirmed — its relevance here is inferred only from Open Targets credible-set overlap at the lead variant, not from the source paper directly</td>
 <td>Liu et al. 2019 (GSCAN), PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
-<td>WEAKENED — treat as general background on the trait category, not as a locus-specific citation</td>
+<td><span class="tag-warning">WEAKENED</span> — treat as general background on the trait category, not as a locus-specific citation</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE1C</td>
+<td class="gene">PDE1C</td>
 <td>Statistical genetics (smoking-gene interaction, different variant)</td>
 <td>rs215605 in PDE1C (NOT the lead variant rs12701207 of this locus) significantly interacted with smoking status on melanoma risk (interaction P=0.005) in a candidate-SNP study (2,298 cases/6,654 controls)</td>
 <td>Wu et al. 2016, PMID 27344179, DOI 10.18632/oncotarget.10144</td>
-<td>WEAKENED/downweighted — different variant than the locus lead; shows a SNP×smoking interaction on melanoma risk, not an association between PDE1C and a smoking-behavior phenotype itself; should not be counted as an independent smoking-behavior pillar</td>
+<td><span class="tag-warning">WEAKENED</span>/downweighted — different variant than the locus lead; shows a SNP×smoking interaction on melanoma risk, not an association between PDE1C and a smoking-behavior phenotype itself; should not be counted as an independent smoking-behavior pillar</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE1C</td>
+<td class="gene">PDE1C</td>
 <td>Structural/vascular biology</td>
-<td>PDE1C is selectively induced in proliferating (&quot;synthetic phenotype&quot;) human arterial smooth muscle cells and absent in quiescent aorta</td>
+<td>PDE1C is selectively induced in proliferating ("synthetic phenotype") human arterial smooth muscle cells and absent in quiescent aorta</td>
 <td>Rybalkin et al. 1997, PMID 9366577, DOI 10.1172/JCI119805</td>
 <td>Not separately contested; part of a coherent, verified mechanistic literature bucket flagged by skeptic as real but distinct from airway/alveolar COPD biology</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE1C</td>
+<td class="gene">PDE1C</td>
 <td>Structural/vascular biology</td>
 <td>Antisense/pharmacologic PDE1C inhibition suppresses human arterial SMC proliferation; PDE1C expressed in fetal but not newborn aorta</td>
 <td>Rybalkin et al. 2002, PMID 11834707, DOI 10.1161/hh0202.104108</td>
@@ -430,7 +114,7 @@ presence/absence in that GWAS.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE1C</td>
+<td class="gene">PDE1C</td>
 <td>Structural/vascular biology (review)</td>
 <td>Review of cGMP/cAMP phosphodiesterases in smooth muscle; PDE1C induction described as a permissive step for SMC proliferation after vessel injury</td>
 <td>Rybalkin et al. 2003, PMID 12933699, DOI 10.1161/01.RES.0000087541.15600.2B</td>
@@ -438,15 +122,15 @@ presence/absence in that GWAS.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE1C</td>
+<td class="gene">PDE1C</td>
 <td>Structural/vascular biology (pulmonary)</td>
 <td>PDE1A/PDE1C/PDE3B/PDE5A expression enhanced in pulmonary artery smooth muscle cells (PASMC) from idiopathic/secondary pulmonary hypertension patients vs. controls; PDE1C-targeted siRNA enhances cAMP and preferentially inhibits proliferation in PHT PASMC</td>
 <td>Murray et al. 2006, PMID 16980375, DOI 10.1152/ajplung.00190.2006</td>
-<td>Verified and mechanistically coherent, but skeptic flags: PAH-type pulmonary vascular remodeling in COPD is generally a downstream consequence of chronic hypoxia in advanced disease, not an established upstream driver of airflow obstruction — treat as hypothesis-generating for a COPD/PH-comorbidity subgroup mechanism, not as direct COPD-causal evidence</td>
+<td><span class="tag">Verified</span> and mechanistically coherent, but skeptic flags: PAH-type pulmonary vascular remodeling in COPD is generally a downstream consequence of chronic hypoxia in advanced disease, not an established upstream driver of airflow obstruction — treat as hypothesis-generating for a COPD/PH-comorbidity subgroup mechanism, not as direct COPD-causal evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE1C</td>
+<td class="gene">PDE1C</td>
 <td>Structural/vascular biology (pulmonary, human tissue)</td>
 <td>Strong PDE1C upregulation (mRNA + protein) specifically in pulmonary arterial vessels of explanted idiopathic PAH human lungs vs. healthy donor lungs; PDE1 inhibition reverses structural pulmonary vascular remodeling and right-heart hypertrophy in hypoxic/monocrotaline rodent PAH models</td>
 <td>Schermuly et al. 2007, PMID 17438150, DOI 10.1161/CIRCULATIONAHA.106.676809</td>
@@ -454,63 +138,63 @@ presence/absence in that GWAS.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE1C</td>
+<td class="gene">PDE1C</td>
 <td>Structural/vascular biology</td>
 <td>PDE1C regulates PDGFRβ receptor stability/degradation via LRP1, driving SMC proliferation/migration/neointimal hyperplasia; PDE1C-knockout mice show attenuated injury-induced neointimal formation</td>
 <td>Cai et al. 2015, PMID 25608528, DOI 10.1161/CIRCRESAHA.116.304408</td>
-<td>Verified; general vascular mechanism, not lung/COPD-specific</td>
+<td><span class="tag">Verified</span>; general vascular mechanism, not lung/COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE1C</td>
+<td class="gene">PDE1C</td>
 <td>Structural/vascular biology (editorial)</td>
 <td>Editorial commentary on Cai et al. 2015 (PDGFR/PDE1C mechanism)</td>
 <td>Satoh et al. 2015, PMID 25814676, DOI 10.1161/CIRCRESAHA.115.306139 (note: originally cited with an incorrect CIRCULATIONAHA-prefixed DOI; corrected here to the CIRCRESAHA-prefixed DOI per citation-verifier)</td>
-<td>Verified (with DOI correction)</td>
+<td><span class="tag">Verified</span> (with DOI correction)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE1C</td>
+<td class="gene">PDE1C</td>
 <td>Structural/vascular biology (isoform specificity)</td>
 <td>The beta-catenin/TCF-signaling effect in proliferating VSMCs is mediated specifically by PDE1A, NOT PDE1C, in this pathway</td>
 <td>Jeon et al. 2010, PMID 21078118, DOI 10.1111/j.1742-4658.2010.07908.x</td>
-<td>Verified; included for completeness/isoform specificity — this citation argues AGAINST a PDE1C role in this particular signaling axis</td>
+<td><span class="tag">Verified</span>; included for completeness/isoform specificity — this citation argues AGAINST a PDE1C role in this particular signaling axis</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE1C</td>
+<td class="gene">PDE1C</td>
 <td>Structural/vascular biology (aging)</td>
 <td>PDE1C levels increased in lung and aorta of a mouse model of genomic instability/premature aging (Ercc1(d/-)); senescent human VSMCs show elevated PDE1C mRNA. (Note: this same paper's own human GWAS analysis links PDE1A, not PDE1C, to diastolic blood pressure and carotid intima-media thickness.)</td>
 <td>Bautista Niño et al. 2015, PMID 26464516, DOI 10.1042/CS20140753</td>
-<td>Verified, including the PDE1A (not PDE1C) GWAS attribution — direct evidence of PDE1C expression/regulation in mouse lung tissue in an aging/senescence context, but not a COPD or human-GWAS-confirmed lung-function link</td>
+<td><span class="tag">Verified</span>, including the PDE1A (not PDE1C) GWAS attribution — direct evidence of PDE1C expression/regulation in mouse lung tissue in an aging/senescence context, but not a COPD or human-GWAS-confirmed lung-function link</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE1C</td>
+<td class="gene">PDE1C</td>
 <td>Structural/vascular biology (editorial)</td>
 <td>Editorial commentary on Bautista Niño et al. 2015 (PDE1/vascular aging)</td>
 <td>Yan 2015, PMID 26374857, DOI 10.1042/CS20150605</td>
-<td>Verified</td>
+<td><span class="tag">Verified</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE1C</td>
+<td class="gene">PDE1C</td>
 <td>Structural/cardiac biology (non-pulmonary, general context)</td>
 <td>PDE1C upregulated in failing human/mouse myocardium; PDE1C-knockout mice protected from pressure-overload-induced cardiac remodeling/dysfunction</td>
 <td>Knight et al. 2016, PMID 27791092, DOI 10.1073/pnas.1607728113</td>
-<td>Verified; cardiac, not pulmonary — included only as general organ-level PDE1C biology context, not COPD-relevant evidence</td>
+<td><span class="tag">Verified</span>; cardiac, not pulmonary — included only as general organ-level PDE1C biology context, not COPD-relevant evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDE1C</td>
+<td class="gene">PDE1C</td>
 <td>Structural/vascular biology (review)</td>
 <td>Review noting PDE4/PDE1C upregulation during VSMC proliferation; proposes selective PDE1C inhibition as a potential therapy for vascular-proliferation disorders including pulmonary hypertension and post-angioplasty restenosis</td>
 <td>Li et al. 2010, PMID 21416994 (Chinese-language review)</td>
-<td>Verified</td>
+<td><span class="tag">Verified</span></td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Immunology/inflammation:</strong> No verified (or even unverified) citations were produced for
 this domain. The researcher found zero PubMed literature connecting PDE1C to T-cell,
 neutrophil, macrophage, or cytokine/chemokine biology across multiple search combinations,
@@ -631,5 +315,7 @@ alveolar, or COPD-relevant immune-cell PDE1C expression/functional data, which i
 absent from the current record; (d) a search of PDE1C's CNS/neuronal/reward-pathway
 biology, given the locus's dominant behavioral-trait profile.</p>
 
+        </div>
+    </div>
 </body>
 </html>

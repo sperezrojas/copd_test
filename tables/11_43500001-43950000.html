@@ -1,376 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>11_43500001-43950000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 11:43,500,001-43,950,000 (GRCh38)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-1143500001-43950000-grch38">Evidence table — Locus 11:43,500,001-43,950,000 (GRCh38)</h1>
-<p><strong>Lead variant:</strong> rs7117036 (11:43,718,307, intronic in HSD17B12, PIP=0.156)
-<strong>Candidate genes evaluated:</strong> HSD17B12 (nearest gene; FLAMES/MAGMA/PoPS/ABC-prioritized), MIR670HG (lncRNA overlapping a large fraction of the credible set), and flanking genes ALKBH3, TTC17, ACCS (evaluated for completeness via Open Targets L2G neighbor comparison).</p>
-<p>All rows below carry a Skeptic verdict of VERIFIED (citation exists, not retracted, claim accurately represents the source) unless otherwise noted; the &quot;Skeptic verdict&quot; column reflects red-team-skeptic's assessment of the <em>evidentiary weight/context</em> of the (citation-verified) claim for this locus's COPD prioritization, not a re-litigation of citation accuracy.</p>
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-1143500001-43950000-grch38">Evidence table — Locus 11:43,500,001-43,950,000 (GRCh38)</h1><div class="summary"><p><strong>Lead variant:</strong> rs7117036 (11:43,718,307, intronic in HSD17B12, PIP=0.156)
+<strong>Candidate genes evaluated:</strong> HSD17B12 (nearest gene; FLAMES/MAGMA/PoPS/ABC-prioritized), MIR670HG (lncRNA overlapping a large fraction of the credible set), and flanking genes ALKBH3, TTC17, ACCS (evaluated for completeness via Open Targets L2G neighbor comparison).</p><p>All rows below carry a Skeptic verdict of VERIFIED (citation exists, not retracted, claim accurately represents the source) unless otherwise noted; the "Skeptic verdict" column reflects red-team-skeptic's assessment of the <em>evidentiary weight/context</em> of the (citation-verified) claim for this locus's COPD prioritization, not a re-litigation of citation accuracy.</p></div>
+
+
 <h2 id="evidence-table">Evidence table</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -383,31 +67,31 @@ code {
 </thead>
 <tbody>
 <tr>
-<td>HSD17B12</td>
+<td class="gene">HSD17B12</td>
 <td>Statistical genetics — pulmonary function</td>
-<td>GWAS meta-analysis of forced vital capacity (FVC; 52,253 individuals, follow-up ~32,917 more) identified a genome-wide-significant novel locus &quot;MIR129-2–HSD17B12&quot; at this exact chr11p11.2 region among six new FVC loci (P&lt;5e-8); transcripts for HSD17B12 detected in human lung tissue. Independent of, and pre-dating, the COPD case-control GWAS and any smoking-behavior GWAS.</td>
+<td>GWAS meta-analysis of forced vital capacity (FVC; 52,253 individuals, follow-up ~32,917 more) identified a genome-wide-significant novel locus "MIR129-2–HSD17B12" at this exact chr11p11.2 region among six new FVC loci (P&lt;5e-8); transcripts for HSD17B12 detected in human lung tissue. Independent of, and pre-dating, the COPD case-control GWAS and any smoking-behavior GWAS.</td>
 <td>PMID 24929828 / DOI 10.1038/ng.3011 (Loth et al., Nat Genet 2014)</td>
 <td>VERIFIED — strongest single piece of pulmonary-function evidence at this locus per pipeline prior #2</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HSD17B12</td>
+<td class="gene">HSD17B12</td>
 <td>Statistical genetics — COPD GWAS (general)</td>
 <td>Landmark COPD case-control GWAS (35,735 cases/222,076 controls) identified 82 genome-wide-significant COPD loci (47 previously known). <strong>Caveat (skeptic-flagged):</strong> whether this specific chr11:43.5-43.95Mb region/HSD17B12 is actually among the 82 loci, or was implicated by the paper's own lung-eQTL S-PrediXcan analysis, is UNCONFIRMED — do not read this row as locus-specific COPD replication.</td>
 <td>PMID 30804561 / DOI 10.1038/s41588-018-0342-2 (Sakornsakolpat et al., Nat Genet 2019)</td>
-<td>WEAKENED — general claim verified, but the locus-specific sub-claim is unconfirmed; must not be presented as established</td>
+<td><span class="tag-warning">WEAKENED</span> — general claim verified, but the locus-specific sub-claim is unconfirmed; must not be presented as established</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HSD17B12</td>
+<td class="gene">HSD17B12</td>
 <td>Structural — lung xenobiotic/carcinogen metabolism</td>
 <td>HSD17B12 is the most highly expressed lung microsomal reductase (of those screened) and the only one with activity against NNK, the principal tobacco-specific nitrosamine carcinogen, converting it to (R)-NNAL; siRNA knockdown decreased (R)-NNAL formation. Lung-intrinsic, expression-confirmed mechanism, but operates downstream of/conditional on smoke exposure (exposure/heaviness-mediated, not neurobiological initiation).</td>
 <td>PMID 29788210 / DOI 10.1093/carcin/bgy065 (Ashmore et al., Carcinogenesis 2018)</td>
-<td>WEAKENED-but-relevant — genuine lung biology, but addresses smoking-heaviness mediation, not initiation; does not fully resolve the smoking-vs-pulmonary-biology question (see Prioritized gene section)</td>
+<td><span class="tag-warning">WEAKENED</span>-but-relevant — genuine lung biology, but addresses smoking-heaviness mediation, not initiation; does not fully resolve the smoking-vs-pulmonary-biology question (see Prioritized gene section)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HSD17B12</td>
+<td class="gene">HSD17B12</td>
 <td>Structural — lipid metabolism (non-lung)</td>
 <td>HSD17B12 is involved in elongation of very-long-chain fatty acids (VLCFA); knockdown in breast carcinoma cells caused growth inhibition rescued by VLCFA (not estrogen), indicating VLCFA-elongation is the dominant functional role.</td>
 <td>PMID 19190350 / DOI 10.1158/0008-5472.CAN-08-0821 (Nagasaki et al., Cancer Res 2009)</td>
@@ -415,7 +99,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HSD17B12</td>
+<td class="gene">HSD17B12</td>
 <td>Structural — transcriptional regulation</td>
 <td>HSD17B12 is transcriptionally regulated by SREBP-1, a master regulator of lipid-metabolism genes.</td>
 <td>PMID 19533843 / DOI 10.1016/j.mce.2009.04.002 (Nagasaki et al., Mol Cell Endocrinol 2009)</td>
@@ -423,7 +107,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HSD17B12</td>
+<td class="gene">HSD17B12</td>
 <td>Structural — developmental/essential-gene biology</td>
 <td>Homozygous Hsd17b12 knockout is embryonic lethal in mice (attributed to loss of VLCFA-elongation activity, not steroid function); heterozygotes viable with reduced sex-steroid levels. Consistent with the credible set here containing no missense/LoF variant (regulatory/expression-modulating mechanism plausible, not full loss-of-function).</td>
 <td>PMID 25961203 / DOI 10.1515/HMBCI.2010.036 (Bellemare et al., Horm Mol Biol Clin Investig 2010)</td>
@@ -431,7 +115,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HSD17B12</td>
+<td class="gene">HSD17B12</td>
 <td>Pleiotropy — non-lung (brain/vascular)</td>
 <td>Brain pQTL colocalization of HSD17B12 with ischemic stroke risk (PP.H4&gt;0.75); phenome-wide MR association of HSD17B12 with essential hypertension.</td>
 <td>PMID 40923186 / DOI 10.1002/brb3.70857 (Gao et al., Brain and Behavior 2025)</td>
@@ -439,23 +123,23 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MIR670HG</td>
+<td class="gene">MIR670HG</td>
 <td>Immune — liver macrophage (non-lung)</td>
-<td>MIR670HG suppresses tumor liver metastasis by enhancing Kupffer-cell (liver-resident macrophage) phagocytosis of tumor cells via an m6A/FXR1/TET1-dependent mechanism that epigenetically suppresses CD24 (a &quot;don't eat me&quot; phagocytosis checkpoint). Entirely a hepatocellular-carcinoma/liver-metastasis model; no lung/airway macrophage data.</td>
+<td>MIR670HG suppresses tumor liver metastasis by enhancing Kupffer-cell (liver-resident macrophage) phagocytosis of tumor cells via an m6A/FXR1/TET1-dependent mechanism that epigenetically suppresses CD24 (a "don't eat me" phagocytosis checkpoint). Entirely a hepatocellular-carcinoma/liver-metastasis model; no lung/airway macrophage data.</td>
 <td>PMID 40293529 / DOI 10.1007/s00018-025-05700-1 (Lu et al., Cell Mol Life Sci 2025)</td>
-<td>WEAKENED — tissue/disease-context-mismatched (liver oncology, not lung/COPD); should not be weighted comparably to HSD17B12's lung-specific evidence</td>
+<td><span class="tag-warning">WEAKENED</span> — tissue/disease-context-mismatched (liver oncology, not lung/COPD); should not be weighted comparably to HSD17B12's lung-specific evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MIR670HG</td>
+<td class="gene">MIR670HG</td>
 <td>Immune — CNS microglia (non-lung)</td>
 <td>MIR670HG (Mir670hg) is confirmed as one of six hub lncRNAs correlated with activated-microglia gene expression in a mouse transcriptome study of neuroinflammation after experimental ischemic stroke.</td>
 <td>PMID 34188516 / DOI 10.2147/JIR.S315281 (Jin et al., J Inflamm Res 2021)</td>
-<td>WEAKENED — tissue/disease-context-mismatched (CNS microglia/stroke, not lung/COPD); suggestive of general immune-modulatory potential only</td>
+<td><span class="tag-warning">WEAKENED</span> — tissue/disease-context-mismatched (CNS microglia/stroke, not lung/COPD); suggestive of general immune-modulatory potential only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TTC17</td>
+<td class="gene">TTC17</td>
 <td>Structural — ciliogenesis (non-airway)</td>
 <td>TTC17 interacts with C2orf62; depletion in human ciliated cells interferes with actin polymerization and reduces primary cilia number (without changing length); zebrafish knockdown produces ciliogenesis defects.</td>
 <td>PMID 24475127 / DOI 10.1371/journal.pone.0086476 (Bontems et al., PLoS ONE 2014)</td>
@@ -463,7 +147,7 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TTC17</td>
+<td class="gene">TTC17</td>
 <td>Structural — ciliopathy (hepatobiliary, non-lung)</td>
 <td>Review lists TTC17 among cilia-related genes (with PKD1L1, KIF3B, CPLANE complex members) implicated by genetic analyses in biliary atresia patients with laterality defects.</td>
 <td>PMID 41405813 / DOI 10.1007/s12072-025-10995-0 (Shi et al., Hepatology International 2025)</td>
@@ -471,19 +155,19 @@ code {
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ACCS</td>
+<td class="gene">ACCS</td>
 <td>Structural — basic enzymology</td>
-<td>Human ACCS does not have canonical plant-type ACC-synthase (ethylene-biosynthesis) activity as assumed by homology; newly characterized as possessing cysteine S-conjugate sulfoxide β-lyase activity instead; authors describe its physiological &quot;true function&quot; as having remained obscure until this study.</td>
+<td>Human ACCS does not have canonical plant-type ACC-synthase (ethylene-biosynthesis) activity as assumed by homology; newly characterized as possessing cysteine S-conjugate sulfoxide β-lyase activity instead; authors describe its physiological "true function" as having remained obscure until this study.</td>
 <td>PMID 39876065 / DOI 10.1111/febs.17419 (Gao et al., FEBS Journal 2025)</td>
 <td>VERIFIED — no lung/COPD/immune connection identified; disfavored by Open Targets L2G at this locus</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
-<p><strong>Excluded from this table (see audit appendix):</strong> citation #7 in the researcher's original findings (Liu et al./GSCAN, Nat Genet 2019, PMID 30643251) — verdict CLAIM_MISMATCH, excluded per protocol. ALKBH3 — no citation carried a specific, reviewable claim (researcher listed several PMIDs as &quot;general DNA-repair literature exists&quot; without individual review or a lung/COPD-relevant claim attached); excluded from the table as not evidentiary for this locus, see audit appendix.</p>
+</table></div>
+<p><strong>Excluded from this table (see audit appendix):</strong> citation #7 in the researcher's original findings (Liu et al./GSCAN, Nat Genet 2019, PMID 30643251) — verdict CLAIM_MISMATCH, excluded per protocol. ALKBH3 — no citation carried a specific, reviewable claim (researcher listed several PMIDs as "general DNA-repair literature exists" without individual review or a lung/COPD-relevant claim attached); excluded from the table as not evidentiary for this locus, see audit appendix.</p>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — not a verified literature citation)</h2>
 <p>This section is a <strong>structured database lookup</strong> via the Open Targets Platform GraphQL API, performed directly by the synthesis lead. It did <strong>not</strong> go through citation-verifier or red-team-skeptic and should not be cited as a literature source. Full detail: <code>evidence_tables/_status/11_43500001-43950000/opentargets.md</code>.</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -496,23 +180,23 @@ code {
 </thead>
 <tbody>
 <tr>
-<td>HSD17B12</td>
-<td>Consistently top-ranked gene at this variant across ~25+ credible sets, L2G 0.43-0.82, far outscoring neighbors (ALKBH3/TTC17/ACCS at 0.05-0.11). Notably high for &quot;cigarettes smoked per day&quot; (0.64-0.70) and &quot;smoking behaviour/pack-years&quot; (0.48).</td>
+<td class="gene">HSD17B12</td>
+<td>Consistently top-ranked gene at this variant across ~25+ credible sets, L2G 0.43-0.82, far outscoring neighbors (ALKBH3/TTC17/ACCS at 0.05-0.11). Notably high for "cigarettes smoked per day" (0.64-0.70) and "smoking behaviour/pack-years" (0.48).</td>
 <td>Available in principle per credible set (h4 posteriors) but not exhaustively pulled for all 35 credible sets due to response-size limits; not reported to avoid fabricating unretrieved precision.</td>
 <td>pLoF oe=0.75 (not constrained); missense oe=0.87 (not constrained); gene tolerates LoF variation reasonably well in gnomAD.</td>
 <td><strong>None</strong> — 0 of 110 OT-associated diseases for HSD17B12 is COPD; genetic_association evidence query restricted to COPD returned count=0.</td>
-<td>Cardiometabolic cluster (T2D 0.60, hypertension ~0.51-0.56, obesity 0.54, GERD 0.53, heart failure 0.48, CAD 0.39), &quot;smoking initiation&quot; (0.20), pathway-level neurodegenerative-disease cluster (Alzheimer's/MS/Parkinson's, ~0.46, likely nonspecific &quot;affected_pathway&quot; artifact from shared lipid-pathway membership). No FEV1/FEV1-FVC association in top ~110.</td>
+<td>Cardiometabolic cluster (T2D 0.60, hypertension ~0.51-0.56, obesity 0.54, GERD 0.53, heart failure 0.48, CAD 0.39), "smoking initiation" (0.20), pathway-level neurodegenerative-disease cluster (Alzheimer's/MS/Parkinson's, ~0.46, likely nonspecific "affected_pathway" artifact from shared lipid-pathway membership). No FEV1/FEV1-FVC association in top ~110.</td>
 </tr>
 <tr>
-<td>MIR670HG</td>
+<td class="gene">MIR670HG</td>
 <td>Not a notable L2G gene in any credible set pulled at this variant (HSD17B12 dominates throughout).</td>
 <td>Not queried (no meaningful L2G signal to follow up).</td>
 <td>Not applicable — lncRNA biotype, gnomAD constraint metrics not computed.</td>
-<td><strong>None</strong> — only 2 total OT disease associations of any kind (&quot;neoplasm&quot; 0.025, &quot;colorectal carcinoma&quot; 0.004, both literature-only datatype); genetic_association query restricted to COPD returned count=0.</td>
+<td><strong>None</strong> — only 2 total OT disease associations of any kind ("neoplasm" 0.025, "colorectal carcinoma" 0.004, both literature-only datatype); genetic_association query restricted to COPD returned count=0.</td>
 <td>None relevant. Genomic footprint (chr11:43,556,394-43,673,393) confirmed via Open Targets <code>genomicLocation</code> field to be non-overlapping with HSD17B12 (chr11:43,680,509-43,857,741) — a ~7.1kb gap separates them; MIR670HG is a separate adjacent gene, not a host-gene transcript nested within HSD17B12.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>HSD17B12 — Confidence: MODERATE.</strong></p>
 <p>HSD17B12 is the best-supported candidate gene at this locus, but the evidence stops short of HIGH confidence for two specific, skeptic-flagged reasons, so this call is made with those caveats stated explicitly rather than glossed over.</p>
@@ -521,18 +205,20 @@ code {
 <li>HSD17B12 is the nearest gene and is independently prioritized by FLAMES, MAGMA, PoPS, and ABC — full concordance across the pipeline's own orthogonal methods.</li>
 <li>Open Targets' own L2G model, run independently of this pipeline, strongly and consistently resolves the lead variant rs7117036 to HSD17B12 (L2G 0.43-0.82) over all neighboring genes (ALKBH3/TTC17/ACCS, L2G 0.05-0.11) across dozens of shared-variant GWAS traits (see Open Targets summary table above).</li>
 <li>Independent, pre-COPD-era genetic evidence directly supports pulmonary biology at this exact region: Loth et al. 2014 (PMID 24929828) found this locus genome-wide significant for FVC, with lung-tissue transcript detection — this satisfies the pipeline's prior #2 (pulmonary-function concordance strengthens prioritization) with real, gene-adjacent spirometric evidence, not just COPD case-control association.</li>
-<li>HSD17B12 has a genuine, lung-expressed enzymatic function (Ashmore et al. 2018, PMID 29788210): it is the dominant lung microsomal enzyme metabolizing the tobacco carcinogen NNK. This is real pulmonary tissue biology, though — per the skeptic's critique — it argues for a smoking-exposure-conditional (&quot;heaviness-mediated&quot;) mechanism rather than ruling out smoking-mediation altogether.</li>
+<li>HSD17B12 has a genuine, lung-expressed enzymatic function (Ashmore et al. 2018, PMID 29788210): it is the dominant lung microsomal enzyme metabolizing the tobacco carcinogen NNK. This is real pulmonary tissue biology, though — per the skeptic's critique — it argues for a smoking-exposure-conditional ("heaviness-mediated") mechanism rather than ruling out smoking-mediation altogether.</li>
 <li>The credible set contains no missense or splice-altering variant in either HSD17B12 or MIR670HG, consistent with a regulatory/expression-modulating mechanism (supported indirectly by Bellemare et al. 2010's finding that complete HSD17B12 loss-of-function is embryonic lethal — full LoF is not what a common regulatory GWAS variant would produce).</li>
 <li>MIR670HG, the only other locus-native candidate, is confirmed via Open Targets' <code>genomicLocation</code> field to be a genomically separate, non-overlapping gene (not a host gene nested within HSD17B12), and its only substantive supporting literature (Kupffer-cell/liver-macrophage phagocytosis; CNS-microglial neuroinflammation) is 0-for-2 on lung/airway tissue context and carries essentially no Open Targets signal (COPD-specific evidence count = 0, no meaningful L2G at this variant). MIR670HG is the runner-up only in the sense of being the other locus-native gene — the evidentiary gap between it and HSD17B12 is large.</li>
 </ul>
 <p>Explicitly weighed against HIGH confidence (per skeptic critique, preserved here rather than smoothed over):</p>
 <ul>
 <li>Sakornsakolpat et al. 2019 (PMID 30804561), the landmark COPD case-control GWAS, is real and its general findings are verified, but citation-verifier could <strong>not</strong> confirm that this specific locus/HSD17B12 is actually among its 82 genome-wide-significant loci, nor that the paper's own lung-eQTL S-PrediXcan analysis implicated HSD17B12. Direct, locus-specific COPD case-control replication in prior literature (independent of the present GWAS) therefore remains <strong>unconfirmed</strong>, not established.</li>
-<li>The smoking-mediation question (pipeline prior #1) is not fully resolved. Open Targets' L2G model independently assigns substantial confidence to HSD17B12 for smoking-heaviness traits (cigarettes/day L2G 0.64-0.70; pack-years L2G 0.48) at this same lead variant — a real, nontrivial competing/co-occurring signal. The literature found (Ashmore et al.) supports a lung-intrinsic, exposure-conditional mechanism rather than a neurobiological smoking-initiation mechanism, and Loth et al. supports smoking-independent pulmonary-function biology — but no single piece of evidence cleanly separates &quot;this locus affects COPD risk via smoking-heaviness-dependent carcinogen handling&quot; from &quot;this locus affects COPD risk via a smoking-independent pulmonary-function pathway.&quot; Both mechanisms are plausible and evidentially supported; they are not mutually exclusive, and the true balance between them is not resolved by current evidence.</li>
+<li>The smoking-mediation question (pipeline prior #1) is not fully resolved. Open Targets' L2G model independently assigns substantial confidence to HSD17B12 for smoking-heaviness traits (cigarettes/day L2G 0.64-0.70; pack-years L2G 0.48) at this same lead variant — a real, nontrivial competing/co-occurring signal. The literature found (Ashmore et al.) supports a lung-intrinsic, exposure-conditional mechanism rather than a neurobiological smoking-initiation mechanism, and Loth et al. supports smoking-independent pulmonary-function biology — but no single piece of evidence cleanly separates "this locus affects COPD risk via smoking-heaviness-dependent carcinogen handling" from "this locus affects COPD risk via a smoking-independent pulmonary-function pathway." Both mechanisms are plausible and evidentially supported; they are not mutually exclusive, and the true balance between them is not resolved by current evidence.</li>
 <li>No literature search was found (by researcher or skeptic) specifically testing for contradicting evidence (a null COPD association, or a competing gene assignment) at this locus — an absence of contradicting evidence that reflects a search gap rather than a confirmed clean negative.</li>
 </ul>
 <p><strong>What would resolve this to HIGH confidence:</strong> (1) direct confirmation (e.g., from the Sakornsakolpat 2019 supplementary locus table, or a subsequent COPD GWAS) that this exact region is a genome-wide-significant COPD locus independent of the present study, ideally with the S-PrediXcan/eQTL analysis specifically implicating HSD17B12; (2) a COPD- or FEV1-specific colocalization (h4) analysis at rs7117036, since Open Targets holds no COPD-specific credible set for this variant in its own database; (3) lung-tissue eQTL data (e.g., GTEx lung, or a dedicated airway-epithelium eQTL study) directly tying rs7117036 or this credible set to HSD17B12 expression in lung, to adjudicate between the smoking-heaviness-mediated and pulmonary-independent mechanisms.</p>
 <p><strong>Runner-up:</strong> MIR670HG — evidentially much weaker (no COPD/lung-tissue evidence of any kind, genomically confirmed as a separate gene from HSD17B12), retained as runner-up only because it is the other gene natively overlapped by a substantial fraction of the credible set's PIP mass, not because current evidence meaningfully supports it as competitive with HSD17B12.</p>
 
+        </div>
+    </div>
 </body>
 </html>

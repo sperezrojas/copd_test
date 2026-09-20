@@ -1,383 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>10_74200001-74450000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPD locus evidence table — 10:74,200,001-74,450,000 (lead variant rs7919010; nearest gene ADK)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="copd-locus-evidence-table--1074200001-74450000-lead-variant-rs7919010-nearest-gene-adk">COPD locus evidence table — 10:74,200,001-74,450,000 (lead variant rs7919010; nearest gene ADK)</h1>
-<p>Region: GRCh38 10:74,200,001-74,450,000. Lead variant: rs7919010 (10:74,351,379, PIP=0.151,
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="copd-locus-evidence-table--1074200001-74450000-lead-variant-rs7919010-nearest-gene-adk">COPD locus evidence table — 10:74,200,001-74,450,000 (lead variant rs7919010; nearest gene ADK)</h1><div class="summary"><p>Region: GRCh38 10:74,200,001-74,450,000. Lead variant: rs7919010 (10:74,351,379, PIP=0.151,
 intron_variant/MODIFIER in ADK). Credible set: 34 ABF-finemapped variants, all intronic to
 ADK, no missense/splice variant present. Candidate genes: nearest gene <strong>ADK</strong> (only
 protein-coding gene physically within the credible-set interval — confirmed via Ensembl REST
 overlap lookup); MAGMA/PoPS-prioritized <strong>MICU1</strong> (confirmed ~1.5 Mb outside the interval, not
 supported by physical proximity or ABC linkage). No FLAMES or ABC-prioritized gene listed for
-this locus.</p>
-<p>Only citations with verifier verdict <strong>VERIFIED</strong> are included below. Citations verdicted
+this locus.</p><p>Only citations with verifier verdict <strong>VERIFIED</strong> are included below. Citations verdicted
 RETRACTED / NOT_FOUND / CLAIM_MISMATCH / PARTIAL_VERIFIED, and the full reasoning behind any
 CONTESTED/WEAKENED gene-level verdicts, are preserved in the companion audit file (see
-<code>audits/10_74200001-74450000_audit.md</code>), not repeated here.</p>
-<table>
+<code>audits/10_74200001-74450000_audit.md</code>), not repeated here.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -390,31 +74,31 @@ CONTESTED/WEAKENED gene-level verdicts, are preserved in the companion audit fil
 </thead>
 <tbody>
 <tr>
-<td>ADK</td>
+<td class="gene">ADK</td>
 <td>Structural/mechanistic — pathway-level (studies ADA, not ADK)</td>
 <td>In Ada−/− mice (elevated tissue adenosine), adenosine drives osteopontin-dependent neutrophilia and alveolar airspace enlargement (emphysema-like); COPD patients show increased osteopontin in distal airways</td>
 <td>Schneider et al. 2010, FASEB J. PMID 19720619, DOI 10.1096/fj.09-140772</td>
-<td>WEAKENED — pathway plausibility only; the gene actually studied (ADA) is not ADK, and directional inference to ADK is untested</td>
+<td><span class="tag-warning">WEAKENED</span> — pathway plausibility only; the gene actually studied (ADA) is not ADK, and directional inference to ADK is untested</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADK</td>
+<td class="gene">ADK</td>
 <td>Structural/mechanistic — pathway-level (studies ADORA2B, not ADK)</td>
 <td>Adenosine/ADORA2B are elevated in chronic lung disease including combined pulmonary fibrosis and emphysema (CPFE), and drive hyaluronan-dependent fibrosis and pulmonary hypertension in a mouse CPFE model</td>
 <td>Collum et al. 2019, Dis Model Mech. PMID 31036697, DOI 10.1242/dmm.038711</td>
-<td>WEAKENED — same pathway-level caveat as above</td>
+<td><span class="tag-warning">WEAKENED</span> — same pathway-level caveat as above</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADK</td>
+<td class="gene">ADK</td>
 <td>Structural — metabolic, non-pulmonary</td>
 <td>Hepatocyte-specific ADK disruption protects mice from diet-induced hepatic fat deposition/inflammation; ADK overexpression increases body weight and adiposity</td>
 <td>Li et al. 2022, Gastroenterology. PMID 36181835, DOI 10.1053/j.gastro.2022.09.027</td>
-<td>WEAKENED (as pulmonary evidence) / supports BMI-mediation alternative — skeptic judges this class of evidence, combined with L2G and MR data below, makes adiposity-mediation the better-supported explanation for any COPD signal at this locus, not merely a caveat</td>
+<td><span class="tag-warning">WEAKENED</span> (as pulmonary evidence) / supports BMI-mediation alternative — skeptic judges this class of evidence, combined with L2G and MR data below, makes adiposity-mediation the better-supported explanation for any COPD signal at this locus, not merely a caveat</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADK</td>
+<td class="gene">ADK</td>
 <td>Structural — metabolic, non-pulmonary</td>
 <td>Endothelial Adk ablation in high-fat-diet mice improves glucose tolerance/insulin sensitivity and decreases adiposity/adipose inflammation</td>
 <td>Xu et al. 2019, J Endocrinol. PMID 31189131, DOI 10.1530/JOE-19-0126</td>
@@ -422,7 +106,7 @@ CONTESTED/WEAKENED gene-level verdicts, are preserved in the companion audit fil
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADK</td>
+<td class="gene">ADK</td>
 <td>Structural — metabolic, non-pulmonary</td>
 <td>Beta-cell-specific ADK disruption protects against high-fat-diet-induced glucose intolerance</td>
 <td>Navarro et al. 2017, Diabetes. PMID 28468960, DOI 10.2337/db16-0816</td>
@@ -430,15 +114,15 @@ CONTESTED/WEAKENED gene-level verdicts, are preserved in the companion audit fil
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADK</td>
+<td class="gene">ADK</td>
 <td>Mendelian disease, non-pulmonary</td>
-<td>Human ADK loss-of-function (adenosine kinase deficiency) causes a CNS/dysmorphic syndrome (hypermethioninemia, developmental delay, hypotonia); &quot;respiratory difficulties&quot; occur only as a nonspecific neonatal sepsis-like presentation, not an airway/emphysema phenotype</td>
+<td>Human ADK loss-of-function (adenosine kinase deficiency) causes a CNS/dysmorphic syndrome (hypermethioninemia, developmental delay, hypotonia); "respiratory difficulties" occur only as a nonspecific neonatal sepsis-like presentation, not an airway/emphysema phenotype</td>
 <td>Alhusani et al. 2018, Neuropediatrics. PMID 30477030, DOI 10.1055/s-0038-1676053</td>
 <td>Not contested — supports absence of a primary lung phenotype for ADK loss-of-function</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADK</td>
+<td class="gene">ADK</td>
 <td>Mendelian/neuropsychiatric, non-pulmonary</td>
 <td>ADK deletion case report linked to schizophrenia, parkinsonism, and epilepsy</td>
 <td>Kimura et al. 2018, Int J Neuropsychopharmacol. PMID 29126171, DOI 10.1093/ijnp/pyx103</td>
@@ -446,7 +130,7 @@ CONTESTED/WEAKENED gene-level verdicts, are preserved in the companion audit fil
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADK (locus-level BMI-mediation hypothesis)</td>
+<td class="gene">ADK (locus-level BMI-mediation hypothesis)</td>
 <td>Statistical genetics — Mendelian randomization</td>
 <td>Bidirectional MR: genetically instrumented BMI causally reduces lung function (FEV1, FVC, FEV1/FVC)</td>
 <td>Wielscher et al. 2021, Genome Med. PMID 34154662, DOI 10.1186/s13073-021-00914-x</td>
@@ -454,7 +138,7 @@ CONTESTED/WEAKENED gene-level verdicts, are preserved in the companion audit fil
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADK (locus-level BMI-mediation hypothesis)</td>
+<td class="gene">ADK (locus-level BMI-mediation hypothesis)</td>
 <td>Statistical genetics — Mendelian randomization</td>
 <td>MR: genetically determined body fat mass/percentage has a negative causal effect on FEV1/FVC and increases COPD risk (e.g. OR=1.936 per 1.9 kg increase in leg fat mass)</td>
 <td>Zhang Q et al. 2025, Int J Chron Obstruct Pulmon Dis. PMID 40191267, DOI 10.2147/COPD.S488523</td>
@@ -462,7 +146,7 @@ CONTESTED/WEAKENED gene-level verdicts, are preserved in the companion audit fil
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADK (locus-level BMI-mediation hypothesis)</td>
+<td class="gene">ADK (locus-level BMI-mediation hypothesis)</td>
 <td>Statistical genetics — Mendelian randomization</td>
 <td>MR in the SAPALDIA cohort: genetically rooted BMI causally reduces FEV1/FVC and small-airway function (FEF25-75%), independent of smoking pack-years</td>
 <td>Probst-Hensch et al. 2021, Front Public Health. PMID 34046380, DOI 10.3389/fpubh.2021.584955</td>
@@ -470,7 +154,7 @@ CONTESTED/WEAKENED gene-level verdicts, are preserved in the companion audit fil
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MICU1</td>
+<td class="gene">MICU1</td>
 <td>Mendelian disease, non-pulmonary</td>
 <td>Biallelic MICU1 loss-of-function causes proximal myopathy, learning difficulties, and a progressive extrapyramidal movement disorder via primary mitochondrial Ca2+ signaling defects</td>
 <td>Logan et al. 2013, Nat Genet. PMID 24336167, DOI 10.1038/ng.2851</td>
@@ -478,7 +162,7 @@ CONTESTED/WEAKENED gene-level verdicts, are preserved in the companion audit fil
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MICU1</td>
+<td class="gene">MICU1</td>
 <td>Mendelian disease case series, non-pulmonary</td>
 <td>Deep-phenotyping case series of 61 MICU1-deficiency patients: common symptoms learning difficulties (72%), myopathy (51%), speech impairment (51%); no respiratory/pulmonary phenotype reported among characterized features</td>
 <td>Beheshti et al. 2025, Clin Genet. PMID 40898676, DOI 10.1111/cge.70062</td>
@@ -486,7 +170,7 @@ CONTESTED/WEAKENED gene-level verdicts, are preserved in the companion audit fil
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MICU1</td>
+<td class="gene">MICU1</td>
 <td>Structural — skeletal muscle, non-pulmonary</td>
 <td>MICU1 loss impairs mitochondrial Ca2+ uptake during excitation-contraction coupling and sarcolemmal repair in skeletal muscle, driving muscle weakness/wasting</td>
 <td>Debattisti et al. 2019, Cell Rep. PMID 31665639, DOI 10.1016/j.celrep.2019.09.063</td>
@@ -494,7 +178,7 @@ CONTESTED/WEAKENED gene-level verdicts, are preserved in the companion audit fil
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MICU1</td>
+<td class="gene">MICU1</td>
 <td>Immune-adjacent — systemic inflammation, skeletal muscle (not lung)</td>
 <td>Sepsis/systemic inflammation reduces the MICU1:MCU protein ratio and impairs mitochondrial Ca2+ uptake, contributing to skeletal muscle weakness</td>
 <td>Li X et al. 2023, Shock. PMID 37695737, DOI 10.1097/SHK.0000000000002221</td>
@@ -502,15 +186,15 @@ CONTESTED/WEAKENED gene-level verdicts, are preserved in the companion audit fil
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MICU1</td>
+<td class="gene">MICU1</td>
 <td>Structural — pulmonary, cell-type specific (genuine lung biology, surfaced by red-team critique, not the original researcher)</td>
 <td>AT2 (alveolar type 2)-cell-specific MICU1 deletion in mice impairs AT2-to-AT1 differentiation during steady-state maintenance and alveolar epithelial regeneration after bacterial (S. pneumoniae) lung injury, via mitochondrial-calcium-uniporter-dependent gatekeeping</td>
 <td>Ali M et al. 2022, JCI Insight. PMID 35050901, DOI 10.1172/jci.insight.154447</td>
-<td>New evidence, WEAKENS the researcher's original &quot;no lung literature for MICU1&quot; claim, but does NOT overcome MICU1's ~1.5 Mb physical distance from the credible-set interval / lack of L2G or colocalization support at this locus — skeptic judges the exclusion-from-this-locus conclusion still holds despite this genuine biology existing</td>
+<td>New evidence, WEAKENS the researcher's original "no lung literature for MICU1" claim, but does NOT overcome MICU1's ~1.5 Mb physical distance from the credible-set interval / lack of L2G or colocalization support at this locus — skeptic judges the exclusion-from-this-locus conclusion still holds despite this genuine biology existing</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PLAU (regional neighbor, ~290 kb outside the credible-set interval; upstream of ADK)</td>
+<td class="gene">PLAU (regional neighbor, ~290 kb outside the credible-set interval; upstream of ADK)</td>
 <td>Protein/tissue-expression evidence (not genetic association)</td>
 <td>uPA, uPAR, and PAI-1 protein levels are significantly altered in structural lung cells and pulmonary macrophages from COPD patients vs. controls; uPA levels positively correlate with degree of emphysema and collagen/fibrosis</td>
 <td>Zhang Y et al. 2012, J Int Med Res. PMID 22906270, DOI 10.1177/147323001204000316</td>
@@ -518,30 +202,32 @@ CONTESTED/WEAKENED gene-level verdicts, are preserved in the companion audit fil
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not reviewed by citation-verifier or red-team-skeptic)</h2>
 <p><strong>ADK (ENSG00000156110):</strong></p>
 <ul>
-<li><strong>L2G at lead variant (rs7919010, 10_74351379_C_T):</strong> 55 indexed GWAS/QTL credible sets overlap this exact variant in Open Targets. None is a COPD or lung-function (FEV1, FEV1/FVC) study. All GWAS-trait credible sets are anthropometric/cardiometabolic — BMI (multiple UKB/GCST studies), body fat percentage/mass (leg/arm fat mass, body fat %), body weight, height, bioimpedance (&quot;abnormality of skeletal system&quot; UKB fields), pulse rate, pulse pressure, frailty-metabolic factor, and multivariate adiposity. ADK is the <strong>top-scoring L2G gene in every one of these credible sets that returned a prediction</strong>, with scores ranging ~0.19-0.75 (frequently 0.5-0.75 for BMI and leg/arm fat-mass traits). Recurrent lower-scoring neighbors: AP3M1 (~0.11-0.45), VCL (~0.05-0.09), CAMK2G (~0.05-0.08), KAT6B (~0.05-0.37), PLAU (~0.05-0.07).</li>
+<li><strong>L2G at lead variant (rs7919010, 10_74351379_C_T):</strong> 55 indexed GWAS/QTL credible sets overlap this exact variant in Open Targets. None is a COPD or lung-function (FEV1, FEV1/FVC) study. All GWAS-trait credible sets are anthropometric/cardiometabolic — BMI (multiple UKB/GCST studies), body fat percentage/mass (leg/arm fat mass, body fat %), body weight, height, bioimpedance ("abnormality of skeletal system" UKB fields), pulse rate, pulse pressure, frailty-metabolic factor, and multivariate adiposity. ADK is the <strong>top-scoring L2G gene in every one of these credible sets that returned a prediction</strong>, with scores ranging ~0.19-0.75 (frequently 0.5-0.75 for BMI and leg/arm fat-mass traits). Recurrent lower-scoring neighbors: AP3M1 (~0.11-0.45), VCL (~0.05-0.09), CAMK2G (~0.05-0.08), KAT6B (~0.05-0.37), PLAU (~0.05-0.07).</li>
 <li><strong>Colocalization:</strong> not separately queried beyond the L2G/credible-set data above; no COPD/lung-function credible set exists at this variant to colocalize against.</li>
 <li><strong>COPD disease-association score (MONDO_0005002):</strong> 0.00955, composed entirely of a <code>literature</code> (text-mining) datatype score (0.0785) — <strong>no <code>genetic_association</code> datatype evidence</strong> links ADK to COPD in Open Targets.</li>
-<li><strong>Broader disease profile (top 25 of 428 total):</strong> dominated by ADK's own Mendelian &quot;adenosine kinase deficiency&quot; (score 0.78, genetic_association 0.85), then neurodevelopmental/neurodegenerative disease, arthropathy, Alzheimer disease, ovarian dysfunction, diabetic retinopathy, essential hypertension, scoliosis, liver disorder, menstrual disorder, pain, skeletal abnormality, hypertensive disorder, kidney failure, diabetes/T2D, obesity disorder. No respiratory/lung-function term in the top 25.</li>
+<li><strong>Broader disease profile (top 25 of 428 total):</strong> dominated by ADK's own Mendelian "adenosine kinase deficiency" (score 0.78, genetic_association 0.85), then neurodevelopmental/neurodegenerative disease, arthropathy, Alzheimer disease, ovarian dysfunction, diabetic retinopathy, essential hypertension, scoliosis, liver disorder, menstrual disorder, pain, skeletal abnormality, hypertensive disorder, kidney failure, diabetes/T2D, obesity disorder. No respiratory/lung-function term in the top 25.</li>
 <li><strong>Constraint (gnomAD):</strong> LoF oe=0.608 (90% CI 0.423-0.893, score 2.17e-4) — moderately LoF-constrained. Missense oe=0.753 (CI 0.682-0.833). Synonymous oe=0.906 (near-neutral).</li>
 </ul>
 <p><strong>MICU1 (ENSG00000107745):</strong></p>
 <ul>
 <li><strong>L2G at lead variant:</strong> never returned among top L2G predictions for any of the 55 credible sets overlapping rs7919010.</li>
 <li><strong>COPD disease-association score:</strong> 0 rows returned — no association evidence of any datatype (genetic or literature) linking MICU1 to COPD.</li>
-<li><strong>Broader disease profile (top 15 of 913 total):</strong> dominated by MICU1's own Mendelian &quot;proximal myopathy with extrapyramidal signs&quot; (score 0.79), then neurodevelopmental disorder, mitochondrial disease, hereditary disease, nervous-system abnormality, ureterolithiasis, alcohol drinking, atrial fibrillation, stroke, neurodegenerative disease, neoplasm, cardiac hypertrophy, T2D, Miyoshi myopathy. No respiratory term in the top 15.</li>
+<li><strong>Broader disease profile (top 15 of 913 total):</strong> dominated by MICU1's own Mendelian "proximal myopathy with extrapyramidal signs" (score 0.79), then neurodevelopmental disorder, mitochondrial disease, hereditary disease, nervous-system abnormality, ureterolithiasis, alcohol drinking, atrial fibrillation, stroke, neurodegenerative disease, neoplasm, cardiac hypertrophy, T2D, Miyoshi myopathy. No respiratory term in the top 15.</li>
 <li><strong>Constraint (gnomAD):</strong> LoF oe=0.755 (CI 0.567-1.019, score ~1.1e-8) — CI spans 1, weaker/less certain LoF constraint than ADK. Missense oe=0.808 (CI 0.744-0.877). Synonymous oe=0.936.</li>
 <li><strong>Physical position:</strong> confirmed via researcher's independent Ensembl REST lookup to sit ~1.5 Mb outside the credible-set interval (10:72,355,297-72,626,134 vs. interval 10:74,200,001-74,450,000) — flagged as a candidate only by MAGMA/PoPS statistical methods, not by positional overlap or ABC linkage.</li>
 </ul>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>ADK — Confidence: LOW.</strong></p>
 <p>ADK is the only protein-coding gene physically within the credible-set interval (confirmed by Ensembl REST overlap lookup — all 34 fine-mapped credible-set variants, including the PIP=0.151 lead SNP rs7919010, are intronic to ADK), and it is the consistent, dominant top locus-to-gene (L2G) prediction at the lead variant across all 55 independent GWAS/QTL credible sets Open Targets has indexed there. On pure positional and statistical-genetic fine-mapping grounds, ADK is the clear candidate gene at this locus, and MICU1 — the only competing candidate nominated by this pipeline's MAGMA/PoPS methods — is convincingly de-prioritized: it sits ~1.5 Mb outside the credible-set interval, was never a top L2G gene at the lead variant, and has zero Open Targets COPD disease-association evidence of any kind (see Open Targets summary above). That exclusion holds even after red-team critique surfaced a genuine, previously-missed piece of MICU1 lung biology (Ali et al. 2022, PMID 35050901 — MICU1 required for AT2-to-AT1 alveolar regeneration) — real cell-type-specific biology, but not evidence that this specific fine-mapped signal acts through MICU1 rather than through ADK.</p>
-<p>The LOW confidence qualifier reflects that the case for ADK is strong on &quot;which gene is physically/statistically implicated&quot; but weak on &quot;via what pathway, and is it lung biology at all.&quot; Both the researcher and red-team-skeptic agree: (1) the two citations that would most directly establish or rule out ADK as a genome-wide-significant COPD/lung-function locus (Sakornsakolpat 2019 COPD GWAS, Shrine 2019 lung-function GWAS) came back CLAIM_MISMATCH — the researcher's negative claim about ADK's absence from those loci tables was not actually confirmed from accessible text, so this pipeline has no verified statement either way from the two largest published COPD/lung-function GWAS; (2) Open Targets' own indexed evidence at the exact lead SNP is overwhelmingly BMI/adiposity/cardiometabolic, not pulmonary, and carries zero genetic-association-datatype evidence for COPD; (3) ADK's own best-established, VERIFIED literature is metabolic/adiposity-regulating (hepatocyte, endothelial, beta-cell knockout studies), not pulmonary; (4) the only pulmonary-mechanistic literature identified studies a related pathway gene (ADA) or receptor (ADORA2B), not ADK itself, and is explicitly pathway-level, directionally-plausible-but-untested support, per the skeptic's WEAKENED verdict; (5) three independent VERIFIED Mendelian-randomization studies establish that BMI/body-fat causally reduces lung function and increases COPD risk — per the skeptic, this makes an adiposity-mediated pathway (real, causal, but indirect pulmonary physiology) currently the <em>better-supported</em> explanation for any COPD association at this locus than a direct lung-tissue mechanism specific to ADK.</p>
+<p>The LOW confidence qualifier reflects that the case for ADK is strong on "which gene is physically/statistically implicated" but weak on "via what pathway, and is it lung biology at all." Both the researcher and red-team-skeptic agree: (1) the two citations that would most directly establish or rule out ADK as a genome-wide-significant COPD/lung-function locus (Sakornsakolpat 2019 COPD GWAS, Shrine 2019 lung-function GWAS) came back CLAIM_MISMATCH — the researcher's negative claim about ADK's absence from those loci tables was not actually confirmed from accessible text, so this pipeline has no verified statement either way from the two largest published COPD/lung-function GWAS; (2) Open Targets' own indexed evidence at the exact lead SNP is overwhelmingly BMI/adiposity/cardiometabolic, not pulmonary, and carries zero genetic-association-datatype evidence for COPD; (3) ADK's own best-established, VERIFIED literature is metabolic/adiposity-regulating (hepatocyte, endothelial, beta-cell knockout studies), not pulmonary; (4) the only pulmonary-mechanistic literature identified studies a related pathway gene (ADA) or receptor (ADORA2B), not ADK itself, and is explicitly pathway-level, directionally-plausible-but-untested support, per the skeptic's WEAKENED verdict; (5) three independent VERIFIED Mendelian-randomization studies establish that BMI/body-fat causally reduces lung function and increases COPD risk — per the skeptic, this makes an adiposity-mediated pathway (real, causal, but indirect pulmonary physiology) currently the <em>better-supported</em> explanation for any COPD association at this locus than a direct lung-tissue mechanism specific to ADK.</p>
 <p>A secondary, unresolved gap: PLAU (urokinase, ~290 kb outside the interval, upstream of ADK) was flagged by the red-team-skeptic as likely under-searched by the researcher (probable search-term artifact missing the well-established uPA/uPAR protein literature in COPD/emphysema — see evidence table above). PLAU was not assessed for L2G/colocalization support at this locus and should not be treated as ruled out; it is not, however, competitive with ADK on current positional/L2G evidence, so it does not change the top pick here.</p>
-<p><strong>What would resolve this:</strong> (a) direct confirmation (full locus-table check, not abstract-only) of whether rs7919010/ADK reaches genome-wide significance in the Sakornsakolpat 2019 COPD meta-analysis or Shrine 2019 lung-function GWAS; (b) a colocalization or multivariable-MR analysis formally testing whether this locus's COPD association (if any exists in the internal GWAS driving this pipeline) is mediated by BMI/adiposity rather than acting directly on lung tissue; (c) an ADK-specific (not ADA/ADORA2B pathway-level) functional study in airway or alveolar tissue; (d) a proper re-search and L2G/positional evaluation of PLAU. Until then, ADK should be reported to the study team as &quot;the locus's implicated gene by fine-mapping and L2G, but with a live, currently better-evidenced alternative hypothesis that this is a metabolic/adiposity locus with only indirect, BMI-mediated relevance to COPD&quot; rather than as a confirmed pulmonary-biology COPD gene.</p>
+<p><strong>What would resolve this:</strong> (a) direct confirmation (full locus-table check, not abstract-only) of whether rs7919010/ADK reaches genome-wide significance in the Sakornsakolpat 2019 COPD meta-analysis or Shrine 2019 lung-function GWAS; (b) a colocalization or multivariable-MR analysis formally testing whether this locus's COPD association (if any exists in the internal GWAS driving this pipeline) is mediated by BMI/adiposity rather than acting directly on lung tissue; (c) an ADK-specific (not ADA/ADORA2B pathway-level) functional study in airway or alveolar tissue; (d) a proper re-search and L2G/positional evaluation of PLAU. Until then, ADK should be reported to the study team as "the locus's implicated gene by fine-mapping and L2G, but with a live, currently better-evidenced alternative hypothesis that this is a metabolic/adiposity locus with only indirect, BMI-mediated relevance to COPD" rather than as a confirmed pulmonary-biology COPD gene.</p>
 
+        </div>
+    </div>
 </body>
 </html>

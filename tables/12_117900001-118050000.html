@@ -1,379 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>12_117900001-118050000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 12:117900001-118050000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-12117900001-118050000-nearest-gene-ksr2">Evidence table — Locus 12:117900001-118050000 (nearest gene KSR2)</h1>
-<p>Lead variant: rs12424627 (12:117953795, PIP=0.967, intron of KSR2). Credible set: 13
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-12117900001-118050000-nearest-gene-ksr2">Evidence Table — Locus 12:117900001-118050000</h1><div class="summary"><p>Lead variant: rs12424627 (12:117953795, PIP=0.967, intron of KSR2). Credible set: 13
 variants, 12 annotated to KSR2 (intron/upstream), 1 intergenic. Candidate genes: nearest =
-KSR2; FLAMES = NOS1; PoPS = KSR2; MAGMA = NA; ABC = NA.</p>
-<p>All rows below use only citations with citation-verifier verdict <strong>VERIFIED</strong> (28/28
+KSR2; FLAMES = NOS1; PoPS = KSR2; MAGMA = NA; ABC = NA.</p><p>All rows below use only citations with citation-verifier verdict <strong>VERIFIED</strong> (28/28
 citations returned by the researcher were VERIFIED; none were RETRACTED, NOT_FOUND, or
 CLAIM_MISMATCH — see <code>audits/12_117900001-118050000_audit.md</code> for the full verification
-log and one minor journal-attribution correction).</p>
-<table>
+log and one minor journal-attribution correction).</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -386,223 +70,223 @@ log and one minor journal-attribution correction).</p>
 </thead>
 <tbody>
 <tr>
-<td>KSR2</td>
+<td class="gene">KSR2</td>
 <td>Statistical genetics (pleiotropy)</td>
 <td>SNP rs7964157 near KSR2 associated with reduced metabolic syndrome risk (OR=0.53) in trans-ethnic African GWAS; KSR2 locus shows pleiotropic association with triglycerides and blood pressure (distinct SNP from lead variant, not a lung-function finding)</td>
 <td>Tekola-Ayele et al. 2015, PMID 26507551, DOI 10.1016/j.ymgme.2015.10.008</td>
-<td>WEAKENED (gene-level, see critique)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level, see critique)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KSR2</td>
+<td class="gene">KSR2</td>
 <td>Statistical genetics (obesity GWAS)</td>
 <td>Rare KSR2 variant p.Arg525Gln (rs56214831) increases body weight in large exome-wide BMI GWAS</td>
 <td>PMID 29273807, DOI 10.1038/s41588-017-0011-x (Nature Genetics — corrected from researcher's guessed journal)</td>
-<td>WEAKENED (gene-level)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KSR2</td>
+<td class="gene">KSR2</td>
 <td>Statistical genetics (penetrance)</td>
 <td>Population-based UK Biobank analysis: obesity penetrance among heterozygous KSR2 LoF carriers (8-29%, median 23%) not significantly different from non-carriers</td>
 <td>Jia et al. 2025, PMID 40036808, DOI 10.1210/clinem/dgaf132</td>
-<td>WEAKENED (gene-level)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KSR2</td>
+<td class="gene">KSR2</td>
 <td>Structural/metabolic (human)</td>
 <td>Rare KSR2 variants disrupt Raf-MEK-ERK signaling, impair cellular fatty-acid/glucose oxidation, cause childhood hyperphagia, low basal metabolic rate, severe insulin resistance</td>
 <td>Pearce et al. 2013, Cell, PMID 24209692, DOI 10.1016/j.cell.2013.09.058</td>
-<td>WEAKENED (gene-level)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KSR2</td>
+<td class="gene">KSR2</td>
 <td>Structural/metabolic (mouse)</td>
 <td>Ksr2-knockout mice hyperphagic/leptin-unresponsive, obese, glucose intolerant, via increased hypothalamic mTOR activity</td>
 <td>Revelli et al. 2011, PMID 21127480, DOI 10.1038/oby.2010.282</td>
-<td>WEAKENED (gene-level)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KSR2</td>
+<td class="gene">KSR2</td>
 <td>Structural/metabolic (mouse, tissue-specific)</td>
 <td>Brain-specific (Nestin-Cre) KSR2 deletion reproduces most of the global-knockout obesity/glucose-intolerance phenotype, localizing KSR2's energy-balance function to CNS, not periphery/lung</td>
 <td>Guo et al. 2016, PMID 28180061, DOI 10.1016/j.molmet.2016.12.004</td>
-<td>WEAKENED (gene-level)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KSR2</td>
+<td class="gene">KSR2</td>
 <td>Structural/metabolic (bone, pleiotropy)</td>
 <td>KSR2 also regulates bone marrow adiposity/osteoblast differentiation, independent of hypothalamic feeding role — illustrates pleiotropy across metabolic/skeletal tissue, no lung involvement reported</td>
 <td>Gomez et al. 2022, eLife, PMID 36342465, DOI 10.7554/eLife.82810</td>
-<td>WEAKENED (gene-level)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KSR2</td>
+<td class="gene">KSR2</td>
 <td>Structural/metabolic (clinical case series)</td>
 <td>Autosomal-dominant KSR2 variants cause monogenic severe early-onset obesity in pediatric Qatari cohort; no pulmonary phenotype reported/assessed</td>
 <td>Abu-Rub et al. 2024, PMID 39202327, DOI 10.3390/genes15080966</td>
-<td>WEAKENED (gene-level)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KSR2</td>
+<td class="gene">KSR2</td>
 <td>Statistical genetics (background, phenotype-level, not KSR2-specific)</td>
 <td>Two-sample MR of insulin resistance vs. COPD gives inconsistent IVW vs. MR-Egger estimates with significant horizontal pleiotropy — current MR evidence does NOT support an independent causal role of insulin resistance on COPD risk</td>
 <td>Jiang et al. 2026, PMID 42040645, DOI 10.2147/COPD.S587160</td>
-<td>WEAKENED (undermines KSR2's obesity-mediated hypothesis)</td>
+<td><span class="tag-warning">WEAKENED</span> (undermines KSR2's obesity-mediated hypothesis)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KSR2</td>
+<td class="gene">KSR2</td>
 <td>Statistical genetics (background, phenotype-level, not KSR2-specific)</td>
 <td>Systematic review: MR evidence does not consistently support causal relationships between metabolic dysfunction and most respiratory conditions including COPD (exception: OSA)</td>
 <td>Georgakopoulou et al. 2026, PMID 41995935, DOI 10.1007/s13679-026-00713-8</td>
-<td>WEAKENED (undermines KSR2's obesity-mediated hypothesis)</td>
+<td><span class="tag-warning">WEAKENED</span> (undermines KSR2's obesity-mediated hypothesis)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KSR2</td>
+<td class="gene">KSR2</td>
 <td>Statistical genetics (negative control for smoking hypothesis)</td>
 <td>GSCAN-summary-statistics-based polygenic-risk study of substance use does NOT report any locus-level KSR2 association — confirms this paper cannot be used to support a KSR2-smoking-initiation link</td>
 <td>Chang et al. 2019, PMID 30875648, DOI 10.1016/j.drugalcdep.2019.01.015</td>
-<td>WEAKENED (documents unresolved smoking-mediation gap, see critique)</td>
+<td><span class="tag-warning">WEAKENED</span> (documents unresolved smoking-mediation gap, see critique)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NOS1</td>
+<td class="gene">NOS1</td>
 <td>Statistical genetics (gene-by-environment)</td>
 <td>NOS1 genetic association with reduced FEV1 specifically in the setting of occupational pesticide exposure (Dutch GRIAC cohort) — exposure-conditional, single-cohort research letter</td>
 <td>de Jong et al. 2014, PMID 25398110, DOI 10.1164/rccm.201404-0697LE</td>
-<td>CONTESTED (gene-level, see critique)</td>
+<td><span class="tag-warning">CONTESTED</span> (gene-level, see critique)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NOS1</td>
+<td class="gene">NOS1</td>
 <td>Statistical genetics (negative, replication)</td>
 <td>Variants in NOS1/NOS2/NOS3 NOT associated with lung function or COPD status across Lung Health Study cohort + four COPD case-control replication cohorts</td>
 <td>Aminuddin et al. 2013, PMID 24192154, DOI 10.1186/1471-2466-13-64</td>
-<td>CONTESTED — this is active contradicting evidence against NOS1</td>
+<td><span class="tag-warning">CONTESTED</span> — this is active contradicting evidence against NOS1</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NOS1</td>
+<td class="gene">NOS1</td>
 <td>Statistical genetics (negative)</td>
 <td>NOS1 tested as candidate modifier gene for airflow obstruction in severe alpha-1-antitrypsin deficiency; significant modifier hits were IL10 and TNF, not NOS1</td>
 <td>Demeo et al. 2007, PMID 17690329, DOI 10.1165/rcmb.2007-0107OC</td>
-<td>CONTESTED — contradicting evidence</td>
+<td><span class="tag-warning">CONTESTED</span> — contradicting evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NOS1</td>
+<td class="gene">NOS1</td>
 <td>Structural/mechanistic (mouse)</td>
 <td>nNOS(NOS1)-knockout mice show ~40% reduced exhaled NO and significantly lower methacholine airway responsiveness vs wild-type</td>
 <td>De Sanctis et al. 1997, PMID 9357865, DOI 10.1152/ajplung.1997.273.4.L883</td>
-<td>CONTESTED — mechanistic plausibility, asthma model, not COPD-specific genetics</td>
+<td><span class="tag-warning">CONTESTED</span> — mechanistic plausibility, asthma model, not COPD-specific genetics</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NOS1</td>
+<td class="gene">NOS1</td>
 <td>Structural/mechanistic/immune (mouse)</td>
 <td>NOS1-deficient and NOS1/NOS3 double-deficient mice show less airway hyperresponsiveness than WT/NOS2-deficient mice in ovalbumin-asthma model; NOS2 upregulation alone did not drive hyperresponsiveness</td>
 <td>De Sanctis et al. 1999, PMID 10330441, DOI 10.1084/jem.189.10.1621</td>
-<td>CONTESTED — mechanistic plausibility, asthma model, not COPD-specific genetics</td>
+<td><span class="tag-warning">CONTESTED</span> — mechanistic plausibility, asthma model, not COPD-specific genetics</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NOS1</td>
+<td class="gene">NOS1</td>
 <td>Structural/mechanistic (guinea pig)</td>
 <td>Increased arginase activity impairs nNOS-mediated (iNANC-nerve) airway smooth-muscle relaxation in allergic asthma, competing for L-arginine substrate</td>
 <td>Maarsingh et al. 2006, PMID 16409620, DOI 10.1186/1465-9921-7-6</td>
-<td>CONTESTED — mechanistic plausibility only</td>
+<td><span class="tag-warning">CONTESTED</span> — mechanistic plausibility only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NOS1</td>
+<td class="gene">NOS1</td>
 <td>Structural/mechanistic (guinea pig)</td>
 <td>NO generated within airway smooth muscle (consistent with nNOS activity) counteracts neurokinin-A-induced bronchoconstriction, epithelium-independent</td>
 <td>Imasaki et al. 2001, PMID 11587561, DOI 10.1006/niox.2001.0361</td>
-<td>CONTESTED — mechanistic plausibility only</td>
+<td><span class="tag-warning">CONTESTED</span> — mechanistic plausibility only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NOS1</td>
+<td class="gene">NOS1</td>
 <td>Structural (emphysema model, negative for related isoforms)</td>
 <td>In elastase-induced murine emphysema, neither eNOS nor iNOS germline deletion affected emphysema development; NOS1 knockout not tested in this study — NOS1's specific emphysema role left untested</td>
 <td>Boyer et al. 2010, PMID 20956973, DOI 10.1038/labinvest.2010.169</td>
-<td>CONTESTED — does not test NOS1 directly</td>
+<td><span class="tag-warning">CONTESTED</span> — does not test NOS1 directly</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NOS1</td>
+<td class="gene">NOS1</td>
 <td>Structural/mechanistic review</td>
 <td>NOS1/NOS3-derived NO is homeostatic/bronchoprotective; NO/soluble-guanylyl-cyclase/cGMP pathway is candidate therapeutic target in obstructive airway disease generally</td>
 <td>Dupont et al. 2016, PMID 25043200, DOI 10.1016/j.pupt.2014.07.004</td>
-<td>CONTESTED — general review, not NOS1-specific data</td>
+<td><span class="tag-warning">CONTESTED</span> — general review, not NOS1-specific data</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NOS1</td>
+<td class="gene">NOS1</td>
 <td>Immune/mechanistic review</td>
 <td>Constitutive NOS1/NOS3-derived NO maintains bronchodilation homeostasis; excess NOS2(iNOS)-derived reactive nitrogen species drive inflammation, oxidative stress, MMP activation, antiprotease inactivation in COPD — pathogenic role attributed to NOS2, not NOS1</td>
 <td>Sugiura &amp; Ichinose 2011, PMID 21440655, DOI 10.1016/j.niox.2011.03.079</td>
-<td>CONTESTED — positions NOS1 as protective, not disease-driving</td>
+<td><span class="tag-warning">CONTESTED</span> — positions NOS1 as protective, not disease-driving</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NOS1</td>
+<td class="gene">NOS1</td>
 <td>Immune/statistical genetics (negative)</td>
 <td>In large French cohort (EGEA, n=1277) testing 121 SNPs across NOS1/NOS2/NOS3, significant FeNO-related-phenotype associations found for NOS2 and NOS3 SNPs; no significant NOS1 association</td>
 <td>Bouzigon et al. 2012, PMID 22590587, DOI 10.1371/journal.pone.0036672</td>
-<td>CONTESTED — contradicting evidence</td>
+<td><span class="tag-warning">CONTESTED</span> — contradicting evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NOS1</td>
+<td class="gene">NOS1</td>
 <td>Immune/statistical genetics (negative)</td>
-<td>In Swedish general-population sample (n=1737) testing 49 SNPs across all three NOS genes, independent FeNO associations found in NOS2 and NOS3, explicitly not NOS1; &quot;NOS2 is the major NOS gene determining variability in exhaled nitric oxide&quot;</td>
+<td>In Swedish general-population sample (n=1737) testing 49 SNPs across all three NOS genes, independent FeNO associations found in NOS2 and NOS3, explicitly not NOS1; "NOS2 is the major NOS gene determining variability in exhaled nitric oxide"</td>
 <td>Dahgam et al. 2012, PMID 22368302, DOI 10.1136/jmedgenet-2011-100584</td>
-<td>CONTESTED — contradicting evidence</td>
+<td><span class="tag-warning">CONTESTED</span> — contradicting evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NOS1</td>
+<td class="gene">NOS1</td>
 <td>Immune/structural (COPD comorbidity, skeletal muscle)</td>
 <td>In COPD patients, quadriceps (limb) NOS1 protein expression correlated negatively with %FEV1 predicted and positively with nitrosative-stress marker 3-nitrotyrosine — implicates NOS1 in COPD-associated skeletal-muscle dysfunction, not airway tissue; small single-center study (n=12 COPD, 6 controls)</td>
 <td>Barreiro et al. 2003, PMID 12816735, DOI 10.1165/rcmb.2003-0138OC</td>
-<td>CONTESTED — COPD-comorbidity mechanism, not airway/causal-locus mechanism</td>
+<td><span class="tag-warning">CONTESTED</span> — COPD-comorbidity mechanism, not airway/causal-locus mechanism</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NOS1</td>
+<td class="gene">NOS1</td>
 <td>Structural/immune (COPD-pulmonary hypertension)</td>
 <td>miR-4640-5p upregulated in lung tissue of COPD-associated pulmonary-hypertension patients directly targets/suppresses NOS1; miR-4640-5p inhibition (raising NOS1) suppressed pulmonary-artery smooth-muscle proliferation and ameliorated hypoxia-induced pulmonary hypertension in rats — positions NOS1 as protective against vascular remodeling in a specific COPD-PH complication</td>
 <td>Yang et al. 2023, PMID 36964568, DOI 10.1186/s12931-023-02387-5</td>
-<td>CONTESTED — specific COPD-PH complication, not general airway obstruction</td>
+<td><span class="tag-warning">CONTESTED</span> — specific COPD-PH complication, not general airway obstruction</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NOS1</td>
+<td class="gene">NOS1</td>
 <td>Immune/mechanistic review</td>
 <td>NOS1 localizes primarily to neuronal structures mediating inhibitory NANC bronchomotor tone; NOS3 to endothelium; NOS2 (inducible) is the isoform most induced in inflammatory diseases like allergic asthma</td>
 <td>Fischer et al. 2002, PMID 12090780, DOI 10.1006/pupt.2001.0332</td>
-<td>CONTESTED — reinforces NOS2, not NOS1, as inflammatory driver</td>
+<td><span class="tag-warning">CONTESTED</span> — reinforces NOS2, not NOS1, as inflammatory driver</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NOS1</td>
+<td class="gene">NOS1</td>
 <td>Immune/statistical genetics (negative, related isoform context)</td>
 <td>NOS2 (not NOS1) promoter polymorphisms are the significant susceptibility signal for allergic asthma/FeNO; other NOS polymorphisms tested showed no association</td>
 <td>Nowakowska et al. 2021, PMID 34946286, DOI 10.3390/medicina57121341</td>
-<td>CONTESTED — contradicting evidence for NOS1 specifically</td>
+<td><span class="tag-warning">CONTESTED</span> — contradicting evidence for NOS1 specifically</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RFC5 (in-region, not a pipeline-prioritized candidate; L2G runner-up ~0.10)</td>
+<td class="gene">RFC5 (in-region, not a pipeline-prioritized candidate; L2G runner-up ~0.10)</td>
 <td>Background only</td>
 <td>General review of RFC family's role in DNA replication/genome maintenance in cancer biology — no lung, COPD, or immune biology identified for RFC5 in this brief check</td>
 <td>Li et al. 2018, PMID 30210909</td>
@@ -610,7 +294,7 @@ log and one minor journal-attribution correction).</p>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-verified-literature-not-run-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT verified literature, not run through citation-verifier or red-team-skeptic)</h2>
 <p><strong>KSR2 (ENSG00000171435):</strong></p>
 <ul>
@@ -637,7 +321,7 @@ o/e = 0.703.</li>
 <li>Locus-to-gene: does not appear in L2G predictions at rs12424627 at all.</li>
 <li>Disease association (2,167 diseases total): top hits are cervical carcinoma, PTSD,
 neurotic disorder, preeclampsia, type 2 diabetes — none lung/COPD-specific. Two weak
-Europe PMC text-mining (&quot;literature&quot; datatype, not genetic-association) hits for
+Europe PMC text-mining ("literature" datatype, not genetic-association) hits for
 pulmonary emphysema, scores 0.20 and 0.05. Zero genetic-association evidence for any
 COPD/lung-function trait.</li>
 </ul>
@@ -698,5 +382,7 @@ resolved, KSR2 remains the best-supported single candidate but confidence should
 and the study team should treat this locus as needing targeted follow-up before being
 presented with higher confidence.</p>
 
+        </div>
+    </div>
 </body>
 </html>

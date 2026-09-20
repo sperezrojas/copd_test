@@ -1,376 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>8_141050001-141300000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 8:141050001-141300000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-8141050001-141300000-nearest-gene-dennd3">Evidence table — Locus 8:141050001-141300000 (nearest gene DENND3)</h1>
-<p><strong>Lead variant:</strong> rs4961255 (8:141198149, GRCh38, downstream_gene_variant/MODIFIER, PIP=0.501)
-<strong>Candidate genes:</strong> DENND3 (nearest gene), TRAPPC9 (FLAMES/MAGMA/PoPS-prioritized), SLC45A4 (ABC-prioritized; also hosts the sole missense [rs3739238] and sole splice-region [rs3739235] credible-set variants)</p>
-<p>Only citations with verifier verdict <strong>VERIFIED</strong> are included below. One citation returned
-CLAIM_MISMATCH and is excluded here — see <code>audits/8_141050001-141300000_audit.md</code>.</p>
-<table>
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-8141050001-141300000-nearest-gene-dennd3">Evidence Table — Locus 8:141050001-141300000</h1><div class="summary"><p><strong>Lead variant:</strong> rs4961255 (8:141198149, GRCh38, downstream_gene_variant/MODIFIER, PIP=0.501)
+<strong>Candidate genes:</strong> DENND3 (nearest gene), TRAPPC9 (FLAMES/MAGMA/PoPS-prioritized), SLC45A4 (ABC-prioritized; also hosts the sole missense [rs3739238] and sole splice-region [rs3739235] credible-set variants)</p><p>Only citations with verifier verdict <strong>VERIFIED</strong> are included below. One citation returned
+CLAIM_MISMATCH and is excluded here — see <code>audits/8_141050001-141300000_audit.md</code>.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -383,120 +67,120 @@ CLAIM_MISMATCH and is excluded here — see <code>audits/8_141050001-141300000_a
 </thead>
 <tbody>
 <tr>
-<td>DENND3</td>
+<td class="gene">DENND3</td>
 <td>Statgen (absence check)</td>
 <td>DENND3 is the nearest gene to the lead credible-set variant (rs4961255, PIP=0.501, highest PIP in the set); no independent COPD/lung-function GWAS, TWAS, MR, or colocalization study names DENND3 — confirmed directly against two major published COPD genetic-association studies, neither of which names DENND3 or SLC45A4 among their reported loci</td>
 <td>PMID 30804561 (DOI 10.1038/s41588-018-0342-2); PMID 33057025 (DOI 10.1038/s41467-020-18334-7)</td>
-<td>WEAKENED</td>
+<td><span class="tag-warning">WEAKENED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>DENND3</td>
+<td class="gene">DENND3</td>
 <td>Structural</td>
 <td>ULK-mediated phosphorylation of DENND3 activates its Rab12 GEF activity, driving autophagosome trafficking in starvation-induced autophagy (HEK293 cells; no lung tissue tested)</td>
 <td>PMID 25925668 / DOI 10.15252/embr.201440006</td>
-<td>WEAKENED (off-target-tissue evidence only; general cell-biology mechanism, not lung-tested)</td>
+<td><span class="tag-warning">WEAKENED</span> (off-target-tissue evidence only; general cell-biology mechanism, not lung-tested)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>DENND3</td>
+<td class="gene">DENND3</td>
 <td>Structural</td>
 <td>DENND3 p.L708V activating variant drives RAB12/TFR2 signaling causing hereditary hemochromatosis via lysosomal TFR2 degradation and hepcidin downregulation (liver, not lung)</td>
 <td>PMID 36729283 / DOI 10.1007/s12072-022-10474-w (note: verifier corrected publication year 2022→2023)</td>
-<td>WEAKENED (off-target-tissue)</td>
+<td><span class="tag-warning">WEAKENED</span> (off-target-tissue)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>DENND3</td>
+<td class="gene">DENND3</td>
 <td>Structural</td>
 <td>DENND3 p.R534S disrupts cardiac dyadic membrane microdomain architecture via Rab11b/BIN1, causing arrhythmia in iPSC-cardiomyocytes (heart, not lung)</td>
 <td>PMID 42639838 / DOI 10.1093/europace/euag193</td>
-<td>WEAKENED (off-target-tissue; a companion paper claimed to show the same mechanism was found CLAIM_MISMATCH and is excluded — see audit)</td>
+<td><span class="tag-warning">WEAKENED</span> (off-target-tissue; a companion paper claimed to show the same mechanism was found CLAIM_MISMATCH and is excluded — see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>DENND3</td>
+<td class="gene">DENND3</td>
 <td>Immune</td>
-<td>DENND3 is one of 8 genes causally (Mendelian randomization) and negatively associated with Alzheimer's disease risk, and is &quot;the sole gene significantly correlated with monocyte abundance&quot; among those 8 in a perivascular-macrophage single-cell analysis (brain immune cells, Alzheimer's context, not lung/COPD)</td>
+<td>DENND3 is one of 8 genes causally (Mendelian randomization) and negatively associated with Alzheimer's disease risk, and is "the sole gene significantly correlated with monocyte abundance" among those 8 in a perivascular-macrophage single-cell analysis (brain immune cells, Alzheimer's context, not lung/COPD)</td>
 <td>PMID 40976895 / DOI 10.2174/011570159X417328250908080404</td>
-<td>WEAKENED (nonspecific, cross-disease bioinformatic association)</td>
+<td><span class="tag-warning">WEAKENED</span> (nonspecific, cross-disease bioinformatic association)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>DENND3</td>
+<td class="gene">DENND3</td>
 <td>Immune</td>
 <td>DENND3 (with CBFA2T3) associated with M2-macrophage-infiltration/cancer-stemness signature in lung adenocarcinoma; upregulated in A549/H2122 cell lines by qRT-PCR</td>
 <td>PMID 37662825 / DOI 10.1016/j.heliyon.2023.e19114</td>
-<td>WEAKENED (lung tissue, but cancer biology, not COPD/airway inflammation)</td>
+<td><span class="tag-warning">WEAKENED</span> (lung tissue, but cancer biology, not COPD/airway inflammation)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>DENND3</td>
+<td class="gene">DENND3</td>
 <td>Immune</td>
-<td>DENND3 surfaces as a &quot;hub gene&quot; in a gastric-cancer lymph-node-metastasis DEG/bioinformatics analysis</td>
+<td>DENND3 surfaces as a "hub gene" in a gastric-cancer lymph-node-metastasis DEG/bioinformatics analysis</td>
 <td>PMID 40272615 / DOI 10.1007/s12672-025-02360-2</td>
-<td>WEAKENED (nonspecific bioinformatic hit, unrelated disease)</td>
+<td><span class="tag-warning">WEAKENED</span> (nonspecific bioinformatic hit, unrelated disease)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>DENND3</td>
+<td class="gene">DENND3</td>
 <td>Immune</td>
 <td>DENND3 surfaces as a lysosome-related biomarker gene with a T-lymphocyte/neutrophil/NK-cell immune-infiltration signature in moyamoya disease</td>
 <td>PMID 39104482 / DOI 10.1016/j.heliyon.2024.e34432</td>
-<td>WEAKENED (nonspecific, unrelated disease)</td>
+<td><span class="tag-warning">WEAKENED</span> (nonspecific, unrelated disease)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>DENND3</td>
+<td class="gene">DENND3</td>
 <td>Immune</td>
 <td>DENND3 is upregulated in a Treg-related gene screen in a primary-sclerosing-cholangitis mouse model</td>
 <td>PMID 39496776 / DOI 10.1038/s41435-024-00304-4</td>
-<td>WEAKENED (nonspecific, unrelated disease)</td>
+<td><span class="tag-warning">WEAKENED</span> (nonspecific, unrelated disease)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC45A4</td>
+<td class="gene">SLC45A4</td>
 <td>Statgen (cross-species)</td>
 <td>SLC45A4 (and DENND3) are listed among ~20 candidate genes near a bovine milk-lactation-curve GWAS locus</td>
 <td>PMID 42092548 / DOI 10.3168/jds.2026-28386</td>
-<td>WEAKENED (cross-species, uninformative for human lung biology)</td>
+<td><span class="tag-warning">WEAKENED</span> (cross-species, uninformative for human lung biology)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TRAPPC9</td>
+<td class="gene">TRAPPC9</td>
 <td>Statgen</td>
-<td>A genome-wide-significant locus &quot;near TRAPPC9&quot; was identified in a multi-cohort (COPDGene/ECLIPSE/GenKOLS, n=11,532) GWAS of CT-based emphysema spatial distribution (a COPD subphenotype), alongside HHIP, CHRNA5, SOWAHB, KIAA1462</td>
+<td>A genome-wide-significant locus "near TRAPPC9" was identified in a multi-cohort (COPDGene/ECLIPSE/GenKOLS, n=11,532) GWAS of CT-based emphysema spatial distribution (a COPD subphenotype), alongside HHIP, CHRNA5, SOWAHB, KIAA1462</td>
 <td>PMID 27669027 / DOI 10.1164/rccm.201605-0997OC</td>
-<td>CONTESTED — genomic identity/overlap of this reported TRAPPC9-region signal with this locus's lead variant (rs4961255) could not be confirmed from the abstract; TRAPPC9's gene body sits ~590kb outside this locus window with no credible-set variant annotated to it, so this may be an independent, non-overlapping association (see audit)</td>
+<td><span class="tag-warning">CONTESTED</span> — genomic identity/overlap of this reported TRAPPC9-region signal with this locus's lead variant (rs4961255) could not be confirmed from the abstract; TRAPPC9's gene body sits ~590kb outside this locus window with no credible-set variant annotated to it, so this may be an independent, non-overlapping association (see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TRAPPC9</td>
+<td class="gene">TRAPPC9</td>
 <td>Statgen/Immune</td>
 <td>A TRAPPC9 gene-body CpG site (cg18989722) was among 22 replicated CpG sites where BMI × metabolic-health-score interaction associated with DNA methylation, in genes related to NF-κB signaling</td>
 <td>PMID 34937574 / DOI 10.1186/s13148-021-01194-3</td>
-<td>CONTESTED (metabolic/epigenetic evidence, not lung; see audit)</td>
+<td><span class="tag-warning">CONTESTED</span> (metabolic/epigenetic evidence, not lung; see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TRAPPC9</td>
+<td class="gene">TRAPPC9</td>
 <td>Structural</td>
-<td>Loss-of-function TRAPPC9 mutations cause autosomal-recessive intellectual disability with postnatal microcephaly via disrupted cortical neuronal development (&quot;NIBP syndrome&quot;)</td>
+<td>Loss-of-function TRAPPC9 mutations cause autosomal-recessive intellectual disability with postnatal microcephaly via disrupted cortical neuronal development ("NIBP syndrome")</td>
 <td>PMID 20004763 / DOI 10.1016/j.ajhg.2009.10.027</td>
-<td>CONTESTED (establishes TRAPPC9 CNS developmental biology; not lung-relevant; see audit)</td>
+<td><span class="tag-warning">CONTESTED</span> (establishes TRAPPC9 CNS developmental biology; not lung-relevant; see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TRAPPC9</td>
+<td class="gene">TRAPPC9</td>
 <td>Structural/Immune</td>
-<td>Review: TRAPPC9/NIBP is an NF-κB-pathway scaffold protein (NIK/IKK2-binding protein) and TRAPP-complex trafficking-protein member, expressed in central/enteric nervous system; &quot;NIBP syndrome&quot; features intellectual disability, obesity, microcephaly, facial dysmorphia</td>
+<td>Review: TRAPPC9/NIBP is an NF-κB-pathway scaffold protein (NIK/IKK2-binding protein) and TRAPP-complex trafficking-protein member, expressed in central/enteric nervous system; "NIBP syndrome" features intellectual disability, obesity, microcephaly, facial dysmorphia</td>
 <td>PMID 32434006 / DOI 10.1016/j.trsl.2020.05.001</td>
-<td>CONTESTED (mechanistically plausible NF-κB/inflammation link per general COPD biology priors, but never demonstrated in airway/lung immune cells; see audit)</td>
+<td><span class="tag-warning">CONTESTED</span> (mechanistically plausible NF-κB/inflammation link per general COPD biology priors, but never demonstrated in airway/lung immune cells; see audit)</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
-<hr>
+</table></div>
+<hr/>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — NOT a verified literature citation)</h2>
 <p>This section is a structured database lookup from the Open Targets Platform GraphQL API
 (queried 2026-09-11). It did <strong>not</strong> go through citation-verifier or red-team-skeptic and
@@ -590,5 +274,7 @@ its missense variant rs3739238; (4) lung-tissue-specific eQTL colocalization for
 SLC45A4 at this locus; (5) independent confirmation (beyond the structured Open Targets
 attribution) of the smoking-initiation co-localization claim.</p>
 
+        </div>
+    </div>
 </body>
 </html>

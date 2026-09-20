@@ -1,383 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>10_122300001-122600000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPD locus evidence table — 10:122,300,001-122,600,000 (nearest gene HTRA1)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="copd-locus-evidence-table--10122300001-122600000-nearest-gene-htra1">COPD locus evidence table — 10:122,300,001-122,600,000 (nearest gene HTRA1)</h1>
-<p><strong>Lead variant:</strong> rs10887154 (10:122,495,824, GRCh38, intron_variant, HTRA1)
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="copd-locus-evidence-table--10122300001-122600000-nearest-gene-htra1">COPD locus evidence table — 10:122,300,001-122,600,000 (nearest gene HTRA1)</h1><div class="summary"><p><strong>Lead variant:</strong> rs10887154 (10:122,495,824, GRCh38, intron_variant, HTRA1)
 <strong>Region:</strong> 10q26 — the classic ARMS2/HTRA1/PLEKHA1 age-related macular degeneration (AMD) locus.
 <strong>Credible set:</strong> ~35 fine-mapped variants (ABF), almost entirely intronic/downstream_gene_variant,
 MODIFIER impact, no missense/splice-donor/splice-acceptor variants. Top-PIP variants
 (rs10887154 PIP=0.219, rs2268351 PIP=0.193, rs1009326 PIP=0.193, rs17103659 PIP=0.162) are
 annotated to HTRA1. A cluster of much lower-PIP variants (highest PIP=0.0021) is annotated to
-PLEKHA1. Several intergenic variants carry no gene annotation.</p>
-<p>Candidate genes evaluated: HTRA1 (nearest gene to lead variant), PPAPDC1A/PLPP4 (PoPS-prioritized),
+PLEKHA1. Several intergenic variants carry no gene annotation.</p><p>Candidate genes evaluated: HTRA1 (nearest gene to lead variant), PPAPDC1A/PLPP4 (PoPS-prioritized),
 PLEKHA1 (multiple low-PIP credible-set variants), plus ARMS2, DMBT1, and BTBD16 (identified via
-Ensembl region lookup, not in the internal pipeline's prioritized-gene lists).</p>
+Ensembl region lookup, not in the internal pipeline's prioritized-gene lists).</p></div>
+
+
 <h2 id="evidence-table">Evidence table</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -390,191 +74,191 @@ Ensembl region lookup, not in the internal pipeline's prioritized-gene lists).</
 </thead>
 <tbody>
 <tr>
-<td>HTRA1</td>
+<td class="gene">HTRA1</td>
 <td>Statistical genetics (transcriptomic, not genetic-association)</td>
 <td>WGCNA analysis of lung mRNA from 10 emphysema-phenotype COPD patients vs. 8 controls identifies HTRA1 as one of several hub genes (with FCRLA, MS4A1, CD19, FKBP10, C1S) in modules enriched for immune response, ECM organization, and NF-κB/TGF-β signaling</td>
 <td>Zuo et al. 2021, Aging (Albany NY), PMID 33535173</td>
-<td>Part of CONTESTED gene verdict — small (n=18), correlative, not genetic/functional evidence</td>
+<td><span class="tag-warning">CONTESTED</span>Part of  gene verdict — small (n=18), correlative, not genetic/functional evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HTRA1</td>
+<td class="gene">HTRA1</td>
 <td>Statistical genetics (negative evidence)</td>
 <td>Earlier, smaller lung-function GWAS (16 novel loci: ENSA, RNU5F-1, KCNS3, AK097794, ASTN2, LHX3, CCDC91, TBX3, TRIP11, RIN3, TEKT5, LTBP4, MN1, AP1S2, NPNT, GPR126) does NOT include HTRA1/PLEKHA1/10q26</td>
 <td>Soler Artigas et al. 2015, Nat Commun, PMID 26635082</td>
-<td>Contributes to CONTESTED verdict (locus absent from earlier lung-function GWAS)</td>
+<td><span class="tag-warning">CONTESTED</span>Contributes to  verdict (locus absent from earlier lung-function GWAS)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HTRA1</td>
+<td class="gene">HTRA1</td>
 <td>Statistical genetics (negative evidence)</td>
 <td>Candidate-gene re-analysis of ~130 previously reported lung-function genes in SpiroMeta (n=20,288); top hits MACROD2, CNTN5, TRPV4, SERPINA1, PDE4D, ABCC1, ESR1 — HTRA1/PLEKHA1/ARMS2/10q26 not discussed</td>
 <td>Obeidat et al. 2011, PLoS One, PMID 21625484</td>
-<td>Contributes to CONTESTED verdict</td>
+<td><span class="tag-warning">CONTESTED</span>Contributes to  verdict</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HTRA1</td>
+<td class="gene">HTRA1</td>
 <td>Structural biology (non-pulmonary tissue)</td>
 <td>HTRA1-/- mice show intimal thickening, abnormal elastic lamina, and vasodilation in cerebral arteries, with accumulation of HTRA1 substrates fibronectin and LTBP-4 (latent TGF-β binding protein 4)</td>
 <td>Kato et al. 2021, J Clin Invest, PMID 34779414</td>
-<td>CONTESTED (mechanism real but cerebrovascular, not pulmonary)</td>
+<td><span class="tag-warning">CONTESTED</span> (mechanism real but cerebrovascular, not pulmonary)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HTRA1</td>
+<td class="gene">HTRA1</td>
 <td>Structural biology (non-pulmonary tissue)</td>
 <td>Loss-of-function HTRA1 p.R302Q rat model (CARASIL) shows cerebral arteriolar wall thickening, altered elastic composition, and RNA-seq changes in TGF-β signaling/ECM remodeling pathways</td>
 <td>Monte et al. 2025, Cereb Circ Cogn Behav, PMID 41142321</td>
-<td>CONTESTED (cerebrovascular, not pulmonary)</td>
+<td><span class="tag-warning">CONTESTED</span> (cerebrovascular, not pulmonary)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HTRA1</td>
+<td class="gene">HTRA1</td>
 <td>Structural biology (non-pulmonary tissue)</td>
 <td>HTRA1 loss-of-function causes upregulated TGF-β/Smad2/Smad3 signaling and cerebral vascular wall pathology in a CARASIL mouse model</td>
 <td>Chuanfen et al. 2022, Brain Behav, PMID 35841197</td>
-<td>CONTESTED (cerebrovascular, not pulmonary)</td>
+<td><span class="tag-warning">CONTESTED</span> (cerebrovascular, not pulmonary)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HTRA1</td>
+<td class="gene">HTRA1</td>
 <td>Structural biology (review, general mechanism)</td>
-<td>HTRA1 is a TGF-β/Wnt/Notch-regulating, ECM-remodeling secreted serine protease with dose-dependent &quot;double-edged sword&quot; pathogenicity (both loss and gain of function pathogenic)</td>
+<td>HTRA1 is a TGF-β/Wnt/Notch-regulating, ECM-remodeling secreted serine protease with dose-dependent "double-edged sword" pathogenicity (both loss and gain of function pathogenic)</td>
 <td>Hjæresen et al. 2026, Prog Neurobiol, PMID 41932381</td>
-<td>CONTESTED (general/brain-focused review, no lung content)</td>
+<td><span class="tag-warning">CONTESTED</span> (general/brain-focused review, no lung content)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HTRA1</td>
+<td class="gene">HTRA1</td>
 <td>Structural biology (bioinformatic, IPF not COPD)</td>
 <td>HTRA1 is one of seven ML-selected prognostic biomarker genes (with TLR2, PDCD1LG2, AKT3, SLC1A4, ANTXR2, TIMP1) in an idiopathic pulmonary fibrosis (IPF) risk score from GEO expression data; immune infiltration showed B-cell and monocyte/NK-cell correlations</td>
 <td>Sun et al. 2025, J Thorac Dis, PMID 41158409</td>
-<td>CONTESTED (correlative bioinformatics, different disease from COPD)</td>
+<td><span class="tag-warning">CONTESTED</span> (correlative bioinformatics, different disease from COPD)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HTRA1</td>
+<td class="gene">HTRA1</td>
 <td>Structural biology (bioinformatic, IPF not COPD)</td>
 <td>HTRA1 is one of four genes (with TLR2, CCR2, SFN) in a BAL-cell-derived IPF prognostic signature from WGCNA modules enriched for inflammation/immune response</td>
 <td>Xia et al. 2021, Int Immunopharmacol, PMID 33493738</td>
-<td>CONTESTED (correlative bioinformatics, different disease)</td>
+<td><span class="tag-warning">CONTESTED</span> (correlative bioinformatics, different disease)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HTRA1</td>
+<td class="gene">HTRA1</td>
 <td>Immunology (non-pulmonary tissue)</td>
 <td>Monocytes from homozygous carriers of the 10q26 AMD-risk haplotype express high HTRA1; HTRA1 promotes monocyte persistence in subretinal space by hydrolyzing thrombospondin-1 (TSP1), impairing CD47-mediated clearance and inducing pro-inflammatory osteopontin expression in macrophages</td>
 <td>Beguier et al. 2020, Immunity, PMID 32814029</td>
-<td>CONTESTED (single strongest mechanistic HTRA1-macrophage paper genome-wide, but retinal/choroidal tissue, not lung)</td>
+<td><span class="tag-warning">CONTESTED</span> (single strongest mechanistic HTRA1-macrophage paper genome-wide, but retinal/choroidal tissue, not lung)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HTRA1</td>
+<td class="gene">HTRA1</td>
 <td>Immunology (non-pulmonary tissue)</td>
 <td>HTRA1-overexpressing transgenic mice show increased macrophage/monocyte infiltration in retina/choroid and increased peripheral blood monocyte subpopulations</td>
 <td>Ahamed et al. 2022, Int J Mol Sci, PMID 36142120</td>
-<td>CONTESTED (ocular tissue, not lung)</td>
+<td><span class="tag-warning">CONTESTED</span> (ocular tissue, not lung)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HTRA1</td>
+<td class="gene">HTRA1</td>
 <td>Immunology (non-pulmonary tissue)</td>
 <td>MIF (macrophage migration inhibitory factor) is an endogenous inhibitor of HTRA1 proteolytic activity in astrocytes/CNS</td>
 <td>Fex Svenningsen et al. 2017, Cell Mol Life Sci, PMID 28726057</td>
-<td>CONTESTED (CNS tissue, not lung)</td>
+<td><span class="tag-warning">CONTESTED</span> (CNS tissue, not lung)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HTRA1 / ARMS2 / PLEKHA1</td>
+<td class="gene">HTRA1 / ARMS2 / PLEKHA1</td>
 <td>AMD causal-gene genetics (same 10q26 locus, different disease)</td>
 <td>Original 10q26 AMD linkage/association study; concludes PLEKHA1/ARMS2(LOC387715) SNPs, NOT HTRA1(PRSS11) coding SNPs, most likely account for the association signal (OR ~5.0 per risk allele)</td>
 <td>Jakobsdottir et al. 2005, Am J Hum Genet, PMID 16080115</td>
-<td>CONTESTED — directly undercuts &quot;HTRA1 is the best-supported gene&quot; framing</td>
+<td><span class="tag-warning">CONTESTED</span> — directly undercuts "HTRA1 is the best-supported gene" framing</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>HTRA1</td>
+<td class="gene">HTRA1</td>
 <td>AMD causal-gene genetics (different disease)</td>
 <td>HTRA1 promoter SNP rs11200638 (NOT in this COPD locus's credible set) is a putative causal regulatory variant increasing HTRA1 transcript/protein in AMD macular lesions</td>
 <td>Chan et al. 2007, Trans Am Ophthalmol Soc, PMID 18427598</td>
-<td>CONTESTED — variant distinct from this locus's credible-set variants; LD unknown</td>
+<td><span class="tag-warning">CONTESTED</span> — variant distinct from this locus's credible-set variants; LD unknown</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ARMS2 (not in input file; found via region lookup)</td>
+<td class="gene">ARMS2 (not in input file; found via region lookup)</td>
 <td>AMD causal-gene genetics</td>
-<td>AMD risk haplotypes at 10q26 affect ARMS2 expression specifically, NOT HTRA1 expression, &quot;making ARMS2 the best candidate for being the genuine AMD gene within this locus&quot;</td>
+<td>AMD risk haplotypes at 10q26 affect ARMS2 expression specifically, NOT HTRA1 expression, "making ARMS2 the best candidate for being the genuine AMD gene within this locus"</td>
 <td>Kortvely &amp; Ueffing 2016, Adv Exp Med Biol, PMID 26427389</td>
-<td>WEAKENED (ARMS2 under-explored due to VEP annotation bias toward overlapping HTRA1 transcript; no COPD-specific evidence either way)</td>
+<td><span class="tag-warning">WEAKENED</span> (ARMS2 under-explored due to VEP annotation bias toward overlapping HTRA1 transcript; no COPD-specific evidence either way)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ARMS2</td>
+<td class="gene">ARMS2</td>
 <td>Mechanistic (AMD context)</td>
 <td>ARMS2/LOC387715 A69S variant (rs10490924) encodes a 12-kDa protein localizing to the mitochondrial outer membrane; likely functional AMD variant</td>
 <td>Kanda et al. 2007, PNAS, PMID 17884985</td>
-<td>WEAKENED (AMD mechanism, no COPD evidence)</td>
+<td><span class="tag-warning">WEAKENED</span> (AMD mechanism, no COPD evidence)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ARMS2</td>
+<td class="gene">ARMS2</td>
 <td>Mechanistic (AMD context)</td>
 <td>Deletion-insertion polymorphism removes the ARMS2 polyadenylation signal, destabilizing ARMS2 mRNA in AMD risk-haplotype carriers</td>
 <td>Fritsche et al. 2008, Nat Genet, PMID 18511946</td>
-<td>WEAKENED (AMD mechanism, no COPD evidence)</td>
+<td><span class="tag-warning">WEAKENED</span> (AMD mechanism, no COPD evidence)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ARMS2</td>
+<td class="gene">ARMS2</td>
 <td>Genetics (AMD context)</td>
 <td>Mitochondrial haplogroup JTU cluster shows additive AMD risk with ARMS2/LOC387715 A69S variant</td>
 <td>Kenney et al. 2013, BMC Med Genet, PMID 23302509</td>
-<td>WEAKENED (AMD-only, existence-verified, not COPD-relevant)</td>
+<td><span class="tag-warning">WEAKENED</span> (AMD-only, existence-verified, not COPD-relevant)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PLEKHA1</td>
+<td class="gene">PLEKHA1</td>
 <td>Statistical genetics</td>
 <td>Multiple credible-set variants (rs7072204, rs4612730, rs10887150, rs4311997, rs2292626, rs10887151) annotated to PLEKHA1, but all low PIP (highest 0.0021, ~100-fold below the top HTRA1-annotated variants)</td>
 <td>Locus input file (ABF fine-mapping, internal pipeline)</td>
-<td>WEAKENED (statistically weak within this credible set)</td>
+<td><span class="tag-warning">WEAKENED</span> (statistically weak within this credible set)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PLEKHA1</td>
+<td class="gene">PLEKHA1</td>
 <td>Mechanistic (general, non-lung)</td>
 <td>PLEKHA1/TAPP1 is a phosphoinositide-binding adaptor protein that is a direct target of PI3K signaling, negatively regulating insulin/PI3K pathways; recruits to plasma membrane/F-actin-rich membrane ruffles</td>
 <td>Wullschleger et al. 2011, Biochem J, PMID 21204784; Marshall et al. 2002, Mol Cell Biol, PMID 12101241</td>
-<td>WEAKENED (on-topic PLEKHA1 biochemistry, but no lung/immune content)</td>
+<td><span class="tag-warning">WEAKENED</span> (on-topic PLEKHA1 biochemistry, but no lung/immune content)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PPAPDC1A / PLPP4</td>
+<td class="gene">PPAPDC1A / PLPP4</td>
 <td>Structural biology (oncology, not COPD)</td>
 <td>PLPP4 (=PPAPDC1A) is overexpressed in lung adenocarcinoma/squamous cell carcinoma and promotes tumor proliferation via a Ca2+-permeable cationic channel mechanism</td>
 <td>Zhang et al. 2017, Mol Cancer, PMID 28851360</td>
-<td>WEAKENED (oncogenic proliferation biology, no COPD relevance)</td>
+<td><span class="tag-warning">WEAKENED</span> (oncogenic proliferation biology, no COPD relevance)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PPAPDC1A / PLPP4</td>
+<td class="gene">PPAPDC1A / PLPP4</td>
 <td>Structural biology (oncology, gastric, not COPD)</td>
 <td>TACC2-PPAPDC1A gene fusion is a recurrent, prognostic driver alteration in diffuse gastric cancer</td>
 <td>Yang et al. 2018, Nat Commun, PMID 30361512</td>
-<td>WEAKENED (unrelated oncology finding)</td>
+<td><span class="tag-warning">WEAKENED</span> (unrelated oncology finding)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>DMBT1 (not in input file)</td>
+<td class="gene">DMBT1 (not in input file)</td>
 <td>Immunology (negative finding, COPD context)</td>
 <td>Study of bronchial secretions/BAL fluid from COPD patients discusses DMBT1 (gp340) as a mucosal innate-immunity glycoprotein family member, but did NOT find evidence of direct TFF3-FCGBP interaction with DMBT1 or MUC5AC in the COPD samples examined</td>
 <td>Weste et al. 2022, Int J Mol Sci, PMID 36499686</td>
-<td>HOLDS (negative/deprioritizing finding, correctly excludes DMBT1)</td>
+<td><span class="tag-hold">HOLDS</span> (negative/deprioritizing finding, correctly excludes DMBT1)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>Locus-wide</td>
+<td class="gene">Locus-wide</td>
 <td>Epidemiological comorbidity (not genetic pleiotropy)</td>
 <td>COPD patients have ~1.25x higher AMD incidence than non-COPD controls (adjusted HR=1.20, 95% CI 1.10-1.32) in a population cohort, attributed to COPD-induced systemic inflammation/hypoxia — i.e. proposed directionality is COPD→AMD, not a shared causal germline variant</td>
 <td>Bair et al. 2021, Sci Rep, PMID 34302051</td>
@@ -582,7 +266,7 @@ Ensembl region lookup, not in the internal pipeline's prioritized-gene lists).</
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>Locus-wide</td>
+<td class="gene">Locus-wide</td>
 <td>Statistical genetics (primary source GWAS, locus-membership NOT independently confirmed)</td>
 <td>Primary COPD case-control GWAS meta-analysis (UK Biobank + ICGC, 35,735 cases/222,076 controls, 82 genome-wide loci)</td>
 <td>Sakornsakolpat et al. 2019, Nat Genet, PMID 30804561</td>
@@ -590,7 +274,7 @@ Ensembl region lookup, not in the internal pipeline's prioritized-gene lists).</
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>Locus-wide</td>
+<td class="gene">Locus-wide</td>
 <td>Statistical genetics (primary source GWAS, locus-membership NOT independently confirmed)</td>
 <td>GWAS of FEV1, FVC, FEV1/FVC in 400,102 individuals of European ancestry, defining 279 lung-function signals</td>
 <td>Shrine et al. 2019, Nat Genet, PMID 30804560</td>
@@ -598,7 +282,7 @@ Ensembl region lookup, not in the internal pipeline's prioritized-gene lists).</
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>Locus-wide</td>
+<td class="gene">Locus-wide</td>
 <td>Smoking-behavior GWAS (inconclusive)</td>
 <td>Large GWAS (1.2M individuals) of tobacco/alcohol use identifying 566 variants in 406 loci</td>
 <td>Liu et al. 2019, Nat Genet (GSCAN), PMID 30643251</td>
@@ -606,7 +290,7 @@ Ensembl region lookup, not in the internal pipeline's prioritized-gene lists).</
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-pass-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not pass through citation-verifier or red-team-skeptic)</h2>
 <ul>
 <li><strong>HTRA1 (ENSG00000166033):</strong> Genetic constraint (gnomAD): moderately LoF-constrained
@@ -670,7 +354,7 @@ this locus is actually famous for — the resolution has trended AWAY from HTRA1
 Jakobsdottir et al. 2005 (PMID 16080115) linkage paper favored PLEKHA1/ARMS2 over HTRA1 coding
 variants, and later mechanistic work (Fritsche 2008 PMID 18511946; Kanda 2007 PMID 17884985;
 summarized explicitly in Kortvely &amp; Ueffing 2016, PMID 26427389: AMD risk haplotypes affect
-ARMS2 expression specifically, &quot;making ARMS2 the best candidate...within this locus,&quot; NOT HTRA1)
+ARMS2 expression specifically, "making ARMS2 the best candidate...within this locus," NOT HTRA1)
 argues the regulatory effect belongs to ARMS2. ARMS2 itself has no credible-set variant annotated
 to it in this COPD locus, but per the skeptic this may reflect a known VEP/annotation bias toward
 the larger overlapping HTRA1 transcript rather than genuine absence of an ARMS2 regulatory
@@ -717,5 +401,7 @@ smoking-mediated (rather than direct pulmonary) mechanism regardless of which ge
 neighbors (ARMS2, PLEKHA1) rather than a settled HTRA1 assignment, pending the LD and
 locus-membership checks above.</p>
 
+        </div>
+    </div>
 </body>
 </html>

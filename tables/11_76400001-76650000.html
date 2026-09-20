@@ -1,372 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>11_76400001-76650000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 11:76,400,001-76,650,000 (nearest gene EMSY)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-1176400001-76650000-nearest-gene-emsy">Evidence table — locus 11:76,400,001-76,650,000 (nearest gene EMSY)</h1>
-<p><strong>Lead variant:</strong> rs7926914 (PIP=0.247, 11:76,590,211, upstream_gene_variant)
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-1176400001-76650000-nearest-gene-emsy">Evidence table — locus 11:76,400,001-76,650,000 (nearest gene EMSY)</h1><div class="summary"><p><strong>Lead variant:</strong> rs7926914 (PIP=0.247, 11:76,590,211, upstream_gene_variant)
 <strong>Credible set (ABF fine-mapping):</strong> rs7926914 (PIP=0.247), rs6592645 (PIP=0.228),
 rs7927894 (PIP=0.214), rs7927997 (PIP=0.152), rs7130588 (PIP=0.141), rs11236797
 (PIP=0.006) — all six variants are upstream_gene_variant or
@@ -378,15 +61,16 @@ Targets lookup stage because Open Targets' own locus-to-gene pipeline repeatedly
 nominates it, not EMSY, at this exact interval for other traits — see Open Targets
 summary below), GVQW3 (uncharacterized gene minimally overlapping the window's edge,
 found by the researcher's gene-in-region enumeration; included for completeness only, no
-internal-pipeline prioritization support).</p>
-<p><strong>Important locus-level caveat (see Prioritized-gene section for full discussion):</strong>
+internal-pipeline prioritization support).</p><p><strong>Important locus-level caveat (see Prioritized-gene section for full discussion):</strong>
 EMSY and LRRC32 both sit just outside or at the edge of the literal stated window
 (EMSY body ends at 76,553,625, inside; LRRC32 body starts at 76,657,524, ~7.5 kb outside
 the window's stated end of 76,650,000), and the credible-set interval (76,559,639-
 76,590,331) sits in the intergenic space between them. Nearly every cited discovery paper
-names this locus jointly as &quot;C11orf30(EMSY)/LRRC32,&quot; reflecting an unresolved gene
-assignment in the field, not a pipeline artifact specific to this review.</p>
-<table>
+names this locus jointly as "C11orf30(EMSY)/LRRC32," reflecting an unresolved gene
+assignment in the field, not a pipeline artifact specific to this review.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -399,15 +83,15 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 </thead>
 <tbody>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>Statistical genetics (GWAS)</td>
-<td>Credible-set variant rs7130588 (PIP=0.141) was the genome-wide-significant lead SNP (OR 1.09, P=1.8e-8) for asthma in a GWAS + meta-analysis (Australian GWAS + GABRIEL consortium, n=57,800), mapping to chr11q13.5 &quot;near LRRC32/GARP&quot;; locus significantly more associated with atopic than non-atopic asthma (OR 1.33, P=7e-4)</td>
+<td>Credible-set variant rs7130588 (PIP=0.141) was the genome-wide-significant lead SNP (OR 1.09, P=1.8e-8) for asthma in a GWAS + meta-analysis (Australian GWAS + GABRIEL consortium, n=57,800), mapping to chr11q13.5 "near LRRC32/GARP"; locus significantly more associated with atopic than non-atopic asthma (OR 1.33, P=7e-4)</td>
 <td>Ferreira MAR et al., Lancet 2011, PMID 21907864, DOI 10.1016/S0140-6736(11)60874-X</td>
-<td>VERIFIED (citation); WEAKENED as EMSY-specific evidence — original paper names LRRC32, not EMSY, as nearest gene; locus association is with atopic asthma, not COPD/spirometry</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED (citation);  as EMSY-specific evidence — original paper names LRRC32, not EMSY, as nearest gene; locus association is with atopic asthma, not COPD/spirometry</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>Statistical genetics (candidate-gene case-control)</td>
 <td>EMSY SNPs rs2508746, rs12278256, rs1892953 (not credible-set variants) and an EMSY haplotype associated with adult asthma susceptibility (300 cases/418 controls, Chinese Han)</td>
 <td>Zhang M et al., BMC Pulm Med 2020, PMID 33213402, DOI 10.1186/s12890-020-01334-0</td>
@@ -415,7 +99,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>Statistical genetics (GWAS)</td>
 <td>Credible-set variants rs7130588 and rs7927894 (PIP=0.214) associated with increased risk of childhood allergic rhinitis (esp. moderate-severe) in a Chinese pediatric case-control study; haplotype rs7130588-rs2155219-rs7927894 also significant</td>
 <td>Li Y et al., Cytokine 2018, PMID 30170133, DOI 10.1016/j.cyto.2018.08.022</td>
@@ -423,15 +107,15 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>Statistical genetics + expression (GWAS/eQTL)</td>
-<td>Credible-set variant rs7927894 (with rs7936070) in &quot;C11orf30(EMSY)-LRRC32 region&quot; associated with childhood asthma risk and elevated total IgE (n=732/824, Chinese); serum C11orf30 mRNA lower in patients, inversely correlated with total IgE</td>
+<td>Credible-set variant rs7927894 (with rs7936070) in "C11orf30(EMSY)-LRRC32 region" associated with childhood asthma risk and elevated total IgE (n=732/824, Chinese); serum C11orf30 mRNA lower in patients, inversely correlated with total IgE</td>
 <td>Chen J et al., Allergol Immunopathol (Madr) 2019, PMID 31812328, DOI 10.1016/j.aller.2019.09.002</td>
 <td>VERIFIED (citation); frames locus jointly as C11orf30(EMSY)-LRRC32, gene assignment unresolved</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>Statistical genetics (GWAS meta-analysis)</td>
 <td>C11orf30(EMSY) reaches genome-wide significance (P=7.5e-10) as a risk locus for food allergy/peanut allergy in a multi-population meta-analysis</td>
 <td>Asai Y et al., J Allergy Clin Immunol 2017, PMID 29030101, DOI 10.1016/j.jaci.2017.09.015</td>
@@ -439,15 +123,15 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>Statistical genetics (meta-GWAS)</td>
-<td>C11orf30/LRRC32 (11q13.5) confirmed as genome-wide-significant susceptibility locus for the eczema-to-asthma &quot;atopic march&quot; (12-population meta-analysis)</td>
+<td>C11orf30/LRRC32 (11q13.5) confirmed as genome-wide-significant susceptibility locus for the eczema-to-asthma "atopic march" (12-population meta-analysis)</td>
 <td>Marenholz I et al., Nat Commun 2015, PMID 26542096, DOI 10.1038/ncomms9804</td>
 <td>VERIFIED (citation); atopic-disease trait, gene assignment joint (EMSY/LRRC32)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>Statistical genetics + expression</td>
 <td>Non-credible-set variant C11orf30-rs2155219 doubled risk of poly-sensitization (ECRHS cohort) and was associated with higher C11orf30/EMSY expression, proposed to act via transcriptional repression of interferon-stimulated genes</td>
 <td>Amaral AFS et al., Allergy 2014, PMID 25546184, DOI 10.1111/all.12557</td>
@@ -455,7 +139,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EMSY / LRRC32</td>
+<td class="gene">EMSY / LRRC32</td>
 <td>Review (GWAS synthesis)</td>
 <td>Review names C11orf30/LRRC32 as one of few loci shared across more than two allergic phenotypes in GWAS to date</td>
 <td>Li J et al., Curr Opin Allergy Clin Immunol 2015, PMID 25304232, DOI 10.1097/ACI.0000000000000124</td>
@@ -463,23 +147,23 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>Structural/functional (skin epithelial barrier)</td>
 <td>siRNA knockdown of EMSY in organotypic keratinocyte culture enhances epidermal barrier formation (more filaggrin, filaggrin-2, long-chain ceramides); EMSY overexpression reduces barrier markers; atopic dermatitis skin biopsies show increased nuclear EMSY staining</td>
 <td>Elias MS et al., J Allergy Clin Immunol 2019, PMID 31158401, DOI 10.1016/j.jaci.2019.05.024</td>
-<td>VERIFIED (citation); WEAKENED as airway-relevant evidence — skin-only study; skeptic flags &quot;directly analogous to airway epithelium&quot; as an overclaim, since airway epithelial barrier biology (tight junctions, mucociliary clearance) differs mechanistically from stratum corneum/filaggrin-ceramide skin barrier biology; untested in airway tissue</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED (citation);  as airway-relevant evidence — skin-only study; skeptic flags "directly analogous to airway epithelium" as an overclaim, since airway epithelial barrier biology (tight junctions, mucociliary clearance) differs mechanistically from stratum corneum/filaggrin-ceramide skin barrier biology; untested in airway tissue</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>Mechanistic (lung cancer, non-COPD)</td>
 <td>In KEAP1-mutant NSCLC, EMSY accumulation suppresses the type I interferon response and impairs innate immune signaling, promoting immune evasion</td>
 <td>Marzio A et al., Cell 2021, PMID 34963055, DOI 10.1016/j.cell.2021.12.005</td>
-<td>VERIFIED (citation); WEAKENED as COPD-relevant evidence — lung cancer mechanism, not COPD; skeptic downgrades the researcher's proposed &quot;interferon-repression through-line&quot; (linking this to Amaral 2014's atopy mechanism) to hypothesis-generating only, since no study directly connects the two contexts or tests it in COPD-relevant tissue</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED (citation);  as COPD-relevant evidence — lung cancer mechanism, not COPD; skeptic downgrades the researcher's proposed "interferon-repression through-line" (linking this to Amaral 2014's atopy mechanism) to hypothesis-generating only, since no study directly connects the two contexts or tests it in COPD-relevant tissue</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>Mechanistic (lung cancer, non-COPD)</td>
 <td>Commentary confirming EMSY stabilization in KEAP1-mutant lung cancer disrupts genome stability and type I interferon signaling</td>
 <td>Sheban D &amp; Merbl Y, Cell Death Differ 2023, PMID 36959246, DOI 10.1038/s41418-023-01150-z</td>
@@ -487,7 +171,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>Mechanistic (lung cancer, non-COPD)</td>
 <td>EMSY-CCND1 co-amplification in NSCLC</td>
 <td>Baykara O et al., Int J Med Sci 2017, PMID 28824300, DOI 10.7150/ijms.19355</td>
@@ -495,7 +179,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>Background (structural biology, non-lung)</td>
 <td>Crystal structure of the ENT domain of human EMSY</td>
 <td>Chavali GB et al., J Mol Biol 2005, PMID 15978617, DOI 10.1016/j.jmb.2005.05.047</td>
@@ -503,7 +187,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>Background (structural biology, non-lung)</td>
 <td>Crystal structure of the HP1-EMSY complex</td>
 <td>Huang Y et al., Structure 2006, PMID 16615912, DOI 10.1016/j.str.2006.01.007</td>
@@ -511,7 +195,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>Background (oncology, non-lung)</td>
 <td>EMSY maps ~100 kb centromeric to the GARP (LRRC32) gene; EMSY amplification in sporadic breast cancer linked to negative outcome</td>
 <td>Rodriguez C et al., Clin Cancer Res 2004, PMID 15355907, DOI 10.1158/1078-0432.CCR-03-0410</td>
@@ -519,7 +203,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>Background (molecular biology, non-lung)</td>
 <td>EMSY overexpression disrupts the BRCA2/RAD51 DNA-repair pathway</td>
 <td>Cousineau I &amp; Belmaaza A, Mol Genet Genomics 2011, PMID 21409565, DOI 10.1007/s00438-011-0612-5</td>
@@ -527,7 +211,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>Background (developmental biology, non-lung)</td>
 <td>Loss of Xenopus tropicalis EMSY impairs gastrulation and upregulates p53, indicating an essential developmental role</td>
 <td>Rana AA et al., New Biotechnol 2010, PMID 21056705, DOI 10.1016/j.nbt.2010.10.010</td>
@@ -535,7 +219,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LRRC32</td>
+<td class="gene">LRRC32</td>
 <td>Statistical genetics (GWAS)</td>
 <td>Original discovery paper names LRRC32/GARP (not EMSY) as the gene nearest the genome-wide-significant asthma lead SNP rs7130588 (credible-set variant, PIP=0.141), with effect driven by atopic asthma</td>
 <td>Ferreira MAR et al., Lancet 2011, PMID 21907864, DOI 10.1016/S0140-6736(11)60874-X</td>
@@ -543,15 +227,15 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LRRC32</td>
+<td class="gene">LRRC32</td>
 <td>Statistical genetics + expression</td>
-<td>Credible-set variant rs7927894 (with rs7936070) in &quot;C11orf30-LRRC32 region&quot; associated with childhood asthma and elevated IgE</td>
+<td>Credible-set variant rs7927894 (with rs7936070) in "C11orf30-LRRC32 region" associated with childhood asthma and elevated IgE</td>
 <td>Chen J et al., Allergol Immunopathol (Madr) 2019, PMID 31812328, DOI 10.1016/j.aller.2019.09.002</td>
 <td>VERIFIED (citation); joint gene naming, gene assignment unresolved</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LRRC32</td>
+<td class="gene">LRRC32</td>
 <td>Statistical genetics (GWAS meta-analysis)</td>
 <td>GARP (LRRC32) 11q13.5 identified as a novel genome-wide-significant susceptibility locus for alopecia areata (autoimmune disease, 3,253 cases/7,543 controls); pathway integration implicates TGF-beta/Treg signaling</td>
 <td>Betz RC et al., Nat Commun 2015, PMID 25608926, DOI 10.1038/ncomms6966</td>
@@ -559,7 +243,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LRRC32</td>
+<td class="gene">LRRC32</td>
 <td>Review (GWAS synthesis)</td>
 <td>Review names C11orf30/LRRC32 as one of few loci shared across more than two allergic phenotypes</td>
 <td>Li J et al., Curr Opin Allergy Clin Immunol 2015, PMID 25304232, DOI 10.1097/ACI.0000000000000124</td>
@@ -567,7 +251,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LRRC32</td>
+<td class="gene">LRRC32</td>
 <td>Immune/functional (airway inflammation, humanized mouse model)</td>
 <td>GARP (LRRC32) inhibition reduces allergic airway inflammation in a humanized mouse model</td>
 <td>Meyer-Martin H et al., Allergy 2016, PMID 26990894, DOI 10.1111/all.12883</td>
@@ -575,7 +259,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ACER3</td>
+<td class="gene">ACER3</td>
 <td>Statistical prioritization only</td>
 <td>ACER3 nominated as a COPD candidate gene by the internal pipeline's MAGMA gene-based test and PoPS similarity score</td>
 <td>Locus input file (loci/11_76400001-76650000.md); not a literature citation</td>
@@ -583,7 +267,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ACER3</td>
+<td class="gene">ACER3</td>
 <td>Mechanistic (colitis, non-lung)</td>
 <td>In a murine model, Acer3 deficiency (via accumulation of pro-inflammatory C18:1-ceramide) aggravates LPS-driven pro-inflammatory cytokine production and worsens DSS-induced colitis/colitis-associated tumorigenesis</td>
 <td>Wang K et al., Cell Death Dis 2016, PMID 26938296, DOI 10.1038/cddis.2016.36</td>
@@ -591,7 +275,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ACER3</td>
+<td class="gene">ACER3</td>
 <td>Background (CNS, non-lung)</td>
 <td>Rare recessive ACER3 loss-of-function mutation causes progressive infantile leukodystrophy</td>
 <td>Edvardson S et al., J Med Genet 2016, PMID 26792856, DOI 10.1136/jmedgenet-2015-103457</td>
@@ -599,7 +283,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ACER3</td>
+<td class="gene">ACER3</td>
 <td>Background (liver, non-lung)</td>
 <td>Targeting ACER3 attenuates cholestasis in a mouse liver-disease model</td>
 <td>Liao L et al., Nat Commun 2025, PMID 40025008, DOI 10.1038/s41467-025-57330-7</td>
@@ -607,7 +291,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ACER3</td>
+<td class="gene">ACER3</td>
 <td>Background (biomarker, pulmonary infection but not COPD)</td>
 <td>ACER3 (with UGCG, GBA) used as part of a blood-based sphingolipid-gene diagnostic signature for pneumonia-induced sepsis</td>
 <td>Wu J et al., Sci Rep 2025, PMID 40394027, DOI 10.1038/s41598-025-01150-8</td>
@@ -615,7 +299,7 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GVQW3</td>
+<td class="gene">GVQW3</td>
 <td>Background (incidental mention, rheumatoid arthritis, non-lung)</td>
 <td>GVQW3 flagged incidentally (alongside LMNA, SCO2, GIMAP family) in a transcriptomic regulatory-network analysis of methotrexate response in rheumatoid arthritis PBMCs; not a functional characterization of GVQW3</td>
 <td>Preglej T et al., Ann Rheum Dis 2026, PMID 42270499, DOI 10.1016/j.ard.2026.05.018</td>
@@ -623,18 +307,18 @@ assignment in the field, not a pipeline artifact specific to this review.</p>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="excluded-from-table-verified-but-not-evidentiary-for-lungcopd-biology--background-only-itemized-in-audit">Excluded from table (verified but not evidentiary for lung/COPD biology — background only, itemized in audit)</h2>
 <p>Several VERIFIED background-biology citations for EMSY (crystal-structure/molecular
 chromatin-biology papers already listed above) were retained in the table since they
 support the constraint/essentiality context; no citations were excluded for
 RETRACTED/NOT_FOUND/CLAIM_MISMATCH reasons at this locus — see audit file for the full
 excluded/contested appendix.</p>
-<hr>
+<hr/>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
 <p>Source: Open Targets Platform GraphQL API, queried directly by the orchestrator on
 2026-09-11. Full detail in <code>evidence_tables/_status/11_76400001-76650000/opentargets.md</code>.</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -648,7 +332,7 @@ excluded/contested appendix.</p>
 </thead>
 <tbody>
 <tr>
-<td>EMSY</td>
+<td class="gene">EMSY</td>
 <td>0.074 (driven entirely by genetic_association datatype = 0.122; no literature/clinical/animal-model contribution)</td>
 <td>none found</td>
 <td>Secondary target, L2G 0.05-0.42 across ~15 immune/atopic-trait studies sharing this interval (highest for a Crohn's-disease FinnGen study)</td>
@@ -657,7 +341,7 @@ excluded/contested appendix.</p>
 <td>1.00 (strongly constrained/LoF-intolerant)</td>
 </tr>
 <tr>
-<td>ACER3</td>
+<td class="gene">ACER3</td>
 <td>No data (count = 0)</td>
 <td>none found</td>
 <td>Never nominated in any of ~15 GWAS credible sets checked at this interval</td>
@@ -666,19 +350,19 @@ excluded/contested appendix.</p>
 <td>0.30 (not significantly constrained/LoF-tolerant)</td>
 </tr>
 <tr>
-<td>LRRC32</td>
+<td class="gene">LRRC32</td>
 <td>0.021 (genetic_association = 0.035)</td>
 <td>none found</td>
 <td>Dominant target, L2G 0.13-0.39 across immune/atopic-trait studies (Crohn's, IBD, atopic dermatitis, asthma, neutrophil %)</td>
 <td>One <code>gwas_credible_sets</code> evidence row, L2G = 0.201; study ID and variant ID unresolvable via the API (returned null) — suggestive only, not confirmed to originate from this locus's lead variant</td>
-<td>Strong (h4 &gt; 0.9) across several immune/atopic-trait pairs at this interval; notably h4 = 0.973 between a neutrophil-percentage credible set here and a FinnGen &quot;Asthma/COPD&quot; overlap phenotype (KELA code 203)</td>
+<td>Strong (h4 &gt; 0.9) across several immune/atopic-trait pairs at this interval; notably h4 = 0.973 between a neutrophil-percentage credible set here and a FinnGen "Asthma/COPD" overlap phenotype (KELA code 203)</td>
 <td>0.59 (moderately constrained)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>GVQW3 was not queried in Open Targets (outside the scope of the structured lookup; added
 later by the researcher's own gene-in-region enumeration and judged very low priority).</p>
-<hr>
+<hr/>
 <h2 id="prioritized-gene-synthesis">Prioritized-gene synthesis</h2>
 <p><strong>Prioritized gene: EMSY, but with LOW confidence and a genuinely unresolved runner-up
 (LRRC32).</strong></p>
@@ -686,7 +370,7 @@ later by the researcher's own gene-in-region enumeration and judged very low pri
 here, and that ambiguity should be stated plainly rather than smoothed over. Both EMSY
 and LRRC32 are plausible, and the literature itself — nearly every discovery paper for
 this GWAS interval (Ferreira 2011, Chen 2019, Li 2015 review) — names the locus jointly
-as &quot;C11orf30(EMSY)/LRRC32,&quot; which reflects a genuine, long-standing unresolved gene
+as "C11orf30(EMSY)/LRRC32," which reflects a genuine, long-standing unresolved gene
 assignment in the field, not a gap specific to this review.</p>
 <p><strong>Case for EMSY:</strong> it is the nearest gene and the only one of the three candidates whose
 gene body falls inside the literal stated locus window (76,444,887-76,553,625, versus
@@ -744,5 +428,7 @@ LD/gene-density contamination from its physically closer neighbors (EMSY, LRRC32
 this review process is designed to catch — see audit file for the red-team-skeptic's
 CONTESTED verdict on ACER3.</p>
 
+        </div>
+    </div>
 </body>
 </html>

@@ -1,388 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>8_114050001-114850000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 8:114,050,001-114,850,000 (GRCh38)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-8114050001-114850000-grch38">Evidence table — locus 8:114,050,001-114,850,000 (GRCh38)</h1>
-<p><strong>Lead variant:</strong> rs290632 (8:114,438,248, intron_variant, PIP=0.176, MAF~0.45; part of a
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-8114050001-114850000-grch38">Evidence table — locus 8:114,050,001-114,850,000 (GRCh38)</h1><div class="summary"><p><strong>Lead variant:</strong> rs290632 (8:114,438,248, intron_variant, PIP=0.176, MAF~0.45; part of a
 broad 137-variant credible set spanning ~8:114,182,962-114,779,937). No missense,
 splice-donor, or splice-acceptor variant is present anywhere in the credible set (all 137
 variants are intronic/intergenic/upstream/downstream/non-coding-transcript annotations),
 so per pipeline scope rules no variant beyond the lead variant required dedicated
-variant-level literature search.</p>
-<p><strong>Candidate genes:</strong> TRPS1 (nearest gene), CSMD3 (MAGMA-prioritized and PoPS-prioritized).
-No FLAMES or ABC-prioritized gene was returned for this locus.</p>
-<p><strong>Locus architecture note (Ensembl REST lookup, structured database query, not a
+variant-level literature search.</p><p><strong>Candidate genes:</strong> TRPS1 (nearest gene), CSMD3 (MAGMA-prioritized and PoPS-prioritized).
+No FLAMES or ABC-prioritized gene was returned for this locus.</p><p><strong>Locus architecture note (Ensembl REST lookup, structured database query, not a
 literature claim):</strong> this is a genuine intergenic gene desert. No protein-coding gene
 physically overlaps the 800kb locus or the credible set — only lncRNAs/pseudogenes do.
 CSMD3 (chr8:112,222,928-113,436,939) ends ~1.0 Mb centromeric of the locus; TRPS1
 (chr8:115,408,496-115,809,673) begins ~0.97-1.37 Mb telomeric of it. This explains why ABC
 prioritization returned NA for both genes, and reframes both the nearest-gene call (TRPS1)
 and the MAGMA/PoPS call (CSMD3) as distance/window-based rather than gene-body-overlap
-calls.</p>
-<table>
+calls.</p></div>
+
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -395,15 +79,15 @@ calls.</p>
 </thead>
 <tbody>
 <tr>
-<td>CSMD3</td>
+<td class="gene">CSMD3</td>
 <td>Statistical genetics / regulatory (locus-specific)</td>
-<td>In the CAMP childhood-asthma cohort (n=581), intergenic SNP rs4445257 (chr8:114,070,041 — ~113kb outside this locus's credible-set boundary but inside the broader 800kb window) was associated with a &quot;normal growth with early decline&quot; lung-function trajectory (verifier-corrected p=6.7×10⁻⁹, OR 2.8), and was examined in a COPD meta-analysis cohort for replication (replication outcome not stated in the source). Chromosome-conformation-capture (3C) showed this region physically contacts the CSMD3 promoter across &gt;1Mb.</td>
+<td>In the CAMP childhood-asthma cohort (n=581), intergenic SNP rs4445257 (chr8:114,070,041 — ~113kb outside this locus's credible-set boundary but inside the broader 800kb window) was associated with a "normal growth with early decline" lung-function trajectory (verifier-corrected p=6.7×10⁻⁹, OR 2.8), and was examined in a COPD meta-analysis cohort for replication (replication outcome not stated in the source). Chromosome-conformation-capture (3C) showed this region physically contacts the CSMD3 promoter across &gt;1Mb.</td>
 <td>PMID 27367781 / DOI 10.1164/rccm.201602-0250OC (McGeachie et al. 2016, Am J Respir Crit Care Med)</td>
-<td>CLAIM_MISMATCH on p-value only (researcher stated 6.7×10⁻⁸; actual is 6.7×10⁻⁹, i.e. more significant, not less) — chromatin-interaction and cohort/design facts confirmed accurate by citation-verifier. Red-team-skeptic: WEAKENED — single, modest-sized (n=581), unreplicated-in-COPD (replication outcome unstated), asthma- (not COPD-) primary-phenotype finding; the interacting variant is outside the stated credible set. Best single piece of locus-specific evidence found for either gene, but not sufficient alone to establish causality.</td>
+<td><span class="tag-warning">WEAKENED</span>CLAIM_MISMATCH on p-value only (researcher stated 6.7×10⁻⁸; actual is 6.7×10⁻⁹, i.e. more significant, not less) — chromatin-interaction and cohort/design facts confirmed accurate by citation-verifier. Red-team-skeptic:  — single, modest-sized (n=581), unreplicated-in-COPD (replication outcome unstated), asthma- (not COPD-) primary-phenotype finding; the interacting variant is outside the stated credible set. Best single piece of locus-specific evidence found for either gene, but not sufficient alone to establish causality.</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CSMD3</td>
+<td class="gene">CSMD3</td>
 <td>Structural / airway epithelium (smoke-exposure-relevant)</td>
 <td>CSMD3 was transcriptionally downregulated in BEAS-2B human bronchial epithelial cells after chronic benzo[a]pyrene (smoke-carcinogen) exposure, alongside ECM/adhesion genes (COL14A1, ADAMTS2, CADM3).</td>
 <td>PMID 41892355 / DOI 10.3390/cells15060566 (Andrade-Madrigal et al. 2026, Cells)</td>
@@ -411,7 +95,7 @@ calls.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CSMD3</td>
+<td class="gene">CSMD3</td>
 <td>Immune/inflammatory (cancer genomics — flagged as confounded)</td>
 <td>CSMD3 co-mutation associates with elevated CD8 T-cell infiltration and higher tumor mutational burden in a lung-cancer TCGA/bioinformatics cohort.</td>
 <td>PMID 42724489 / DOI 10.21037/tcr-2026-1534 (Han D et al. 2026, Transl Cancer Res)</td>
@@ -419,7 +103,7 @@ calls.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CSMD3</td>
+<td class="gene">CSMD3</td>
 <td>Immune/inflammatory (cancer genomics — flagged as confounded)</td>
 <td>CSMD3 mutations associate with improved survival via increased NK-cell and follicular-helper-T-cell infiltration, specifically in hormone-receptor-positive lung adenocarcinoma.</td>
 <td>PMID 42327582 / DOI 10.7150/jca.134792 (Shao Z et al. 2026, J Cancer)</td>
@@ -427,23 +111,23 @@ calls.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CSMD3</td>
+<td class="gene">CSMD3</td>
 <td>Statistical genetics (gene-size confound, self-flagged)</td>
-<td>CSMD3 spans &gt;1.2Mb, is one of the largest human genes, and is one of the most frequently somatically mutated (&quot;passenger&quot;) genes in lung/other cancer genomes — an effect widely attributed to gene size rather than driver biology. Gene-based tests (MAGMA) and PoPS are known to be susceptible to size-driven inflation independent of causal signal.</td>
+<td>CSMD3 spans &gt;1.2Mb, is one of the largest human genes, and is one of the most frequently somatically mutated ("passenger") genes in lung/other cancer genomes — an effect widely attributed to gene size rather than driver biology. Gene-based tests (MAGMA) and PoPS are known to be susceptible to size-driven inflation independent of causal signal.</td>
 <td>Researcher/red-team-skeptic synthesis (general field knowledge, not a single-citation claim)</td>
-<td>Red-team-skeptic: this confound plausibly explains the MAGMA/PoPS prioritization of CSMD3 at this locus and, combined with a near-zero Open Targets genetic-association signal (see Open Targets summary below), supports marking CSMD3's causal-gene candidacy CONTESTED.</td>
+<td><span class="tag-warning">CONTESTED</span>Red-team-skeptic: this confound plausibly explains the MAGMA/PoPS prioritization of CSMD3 at this locus and, combined with a near-zero Open Targets genetic-association signal (see Open Targets summary below), supports marking CSMD3's causal-gene candidacy .</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TRPS1</td>
+<td class="gene">TRPS1</td>
 <td>Statistical genetics</td>
-<td>No PubMed hits for &quot;TRPS1 AND COPD,&quot; TRPS1 + spirometry/FEV1/GWAS terms, or TRPS1 + smoking-initiation/nicotine terms (zero results across all searches). Gene body does not physically overlap this locus; no eQTL or chromatin-interaction literature found connecting this desert region to TRPS1.</td>
+<td>No PubMed hits for "TRPS1 AND COPD," TRPS1 + spirometry/FEV1/GWAS terms, or TRPS1 + smoking-initiation/nicotine terms (zero results across all searches). Gene body does not physically overlap this locus; no eQTL or chromatin-interaction literature found connecting this desert region to TRPS1.</td>
 <td>Researcher literature search (absence of evidence, not a citation)</td>
-<td>Red-team-skeptic: total absence of disease-relevant literature, not just weak evidence — supports WEAKENED / bordering CONTESTED status for TRPS1's candidacy at this locus.</td>
+<td><span class="tag-warning">WEAKENED</span>Red-team-skeptic: total absence of disease-relevant literature, not just weak evidence — supports  / bordering CONTESTED status for TRPS1's candidacy at this locus.</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TRPS1</td>
+<td class="gene">TRPS1</td>
 <td>Diagnostic pathology (lung-tissue expression, contradicting)</td>
 <td>TRPS1 immunohistochemistry distinguishes metastatic breast carcinoma from primary lung carcinoma in pleural effusions — TRPS1 expression is high in breast carcinoma but low/absent in primary lung carcinoma.</td>
 <td>PMID 40170411 / DOI 10.1111/cyt.13489 (Davidson et al. 2025, Cytopathology)</td>
@@ -451,7 +135,7 @@ calls.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TRPS1</td>
+<td class="gene">TRPS1</td>
 <td>Diagnostic pathology</td>
 <td>Same TRPS1-as-breast-vs-lung IHC marker claim.</td>
 <td>PMID 38041048 / DOI 10.1186/s12885-023-11563-1 (Ren et al. 2023, BMC Cancer)</td>
@@ -459,7 +143,7 @@ calls.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TRPS1</td>
+<td class="gene">TRPS1</td>
 <td>Cancer biology (off-target tissue)</td>
 <td>A Sleeping Beauty transposon mutagenesis screen identified TRPS1 as a tumor suppressor in Pten-mutant triple-negative breast cancer; TRPS1 loss promotes epithelial-mesenchymal transition.</td>
 <td>PMID 27849608 / DOI 10.1073/pnas.1613859113 (Rangel et al. 2016, PNAS)</td>
@@ -467,7 +151,7 @@ calls.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TRPS1</td>
+<td class="gene">TRPS1</td>
 <td>Developmental/structural biology (mouse model, weak analogy)</td>
 <td>Homozygous Trps1 GATA-domain-deletion mice die of neonatal respiratory failure due to thoracic-spine/rib skeletal abnormalities.</td>
 <td>PMID 12446778 (mouse Trps1 knockout study)</td>
@@ -475,7 +159,7 @@ calls.</p>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary">Open Targets summary</h2>
 <p>Structured database lookup via the Open Targets Platform GraphQL API — NOT a verified
 literature citation; did not go through citation-verifier or red-team-skeptic.</p>
@@ -526,15 +210,15 @@ alone to establish causality. Countering it: Open Targets shows a near-zero aggr
 COPD genetic-association score for CSMD3 with no genetic_association datatype score and
 no independent L2G/credible-set record at all; CSMD3's status as one of the largest
 human genes is a documented, self-acknowledged confound for MAGMA/PoPS gene-based
-prioritization (and for its frequent appearance as a &quot;passenger&quot; gene in cancer mutation
-catalogs) independent of true causal biology; and the &quot;immune infiltration&quot;
+prioritization (and for its frequent appearance as a "passenger" gene in cancer mutation
+catalogs) independent of true causal biology; and the "immune infiltration"
 cancer-genomics literature (PMID 42724489, PMID 42327582) is non-mechanistic and
 contributes no germline-immunology evidence per red-team-skeptic. Red-team-skeptic
 verdict: <strong>CONTESTED</strong>.</li>
 <li><strong>TRPS1</strong> (evidence table rows 6-9): zero PubMed hits tie it to COPD, spirometry, or
 smoking behavior at all; its only lung-tissue-relevant data point (IHC marker studies,
 PMID 40170411) shows LOW/absent TRPS1 expression in lung tissue relative to breast —
-mild evidence against, not for, a prominent native lung role; its strongest &quot;respiratory&quot;
+mild evidence against, not for, a prominent native lung role; its strongest "respiratory"
 literature (PMID 12446778) is a severe homozygous knockout mouse dying of a mechanical
 thoracic-skeletal defect, a poor analogy for a common regulatory variant of modest
 effect. Red-team-skeptic verdict: <strong>WEAKENED, bordering CONTESTED</strong>.</li>
@@ -559,5 +243,7 @@ proxies, and for any other genes further outside the two ~1Mb windows examined t
 be better regulatory targets of this desert.</p>
 <p><strong>Confidence: INSUFFICIENT.</strong></p>
 
+        </div>
+    </div>
 </body>
 </html>

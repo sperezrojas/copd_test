@@ -1,384 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>10_8900001-9250000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPD GWAS Locus Evidence Table — 10:8,900,001-9,250,000 (GATA3)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="copd-gwas-locus-evidence-table--108900001-9250000-gata3">COPD GWAS Locus Evidence Table — 10:8,900,001-9,250,000 (GATA3)</h1>
-<p><strong>Lead variant:</strong> rs12413578 (10:9,007,290, GRCh38; PIP=0.99707404; intron_variant/non_coding_transcript_variant,
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="copd-gwas-locus-evidence-table--108900001-9250000-gata3">COPD GWAS Locus Evidence Table — 10:8,900,001-9,250,000 (GATA3)</h1><div class="summary"><p><strong>Lead variant:</strong> rs12413578 (10:9,007,290, GRCh38; PIP=0.99707404; intron_variant/non_coding_transcript_variant,
 impact=MODIFIER, gene=- per VEP/credible-set annotation).
 <strong>Candidate genes evaluated:</strong> GATA3 (nearest gene per internal pipeline; FLAMES/MAGMA/PoPS/ABC all NA for this
 locus). The researcher independently confirmed via Ensembl REST API that no protein-coding gene lies within the
 stated locus interval (10:8,900,001-9,250,000) — only lncRNAs and LINC02676 — and that GATA3's own gene body
 (chr10:8,045,315-8,075,198, GRCh38) sits ~930 kb upstream of/outside the interval, with the lead variant located
 within a long-range GATA3 enhancer region. GATA3 was therefore the only plausible protein-coding candidate
-searched.</p>
-<p>All citations below carry a VERIFIED verdict from citation-verifier (one is VERIFIED with a partial/conditional
+searched.</p><p>All citations below carry a VERIFIED verdict from citation-verifier (one is VERIFIED with a partial/conditional
 caveat, noted in its row). See <code>evidence_tables/_status/10_8900001-9250000/verified_citations.md</code> for the full
-verification report and <code>audits/10_8900001-9250000_audit.md</code> for excluded/contested material.</p>
+verification report and <code>audits/10_8900001-9250000_audit.md</code> for excluded/contested material.</p></div>
+
+
 <h2 id="evidence-table">Evidence table</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -391,47 +75,47 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 </thead>
 <tbody>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Statistical genetics (GWAS, asthma)</td>
 <td>rs10905284 in GATA3 (OR 0.90) identified as a novel genome-wide-significant signal for moderate-to-severe asthma; controls explicitly excluded emphysema/chronic bronchitis, so this is an asthma-specific, not COPD, signal by design.</td>
 <td>Shrine et al. 2019, Lancet Respir Med. PMID 30552067, DOI 10.1016/S2213-2600(18)30389-8</td>
-<td>CONTESTED (see synthesis) — asthma-specific evidence, not COPD evidence</td>
+<td><span class="tag-warning">CONTESTED</span> (see synthesis) — asthma-specific evidence, not COPD evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Statistical genetics (TWAS, asthma)</td>
 <td>TWAS fine-mapping (FABIO) prioritized GATA3 as a likely causal gene for asthma in UK Biobank.</td>
 <td>Zhang et al. 2024, PLoS Genet. PMID 39621803, DOI 10.1371/journal.pgen.1011503</td>
-<td>CONTESTED — asthma-specific, not COPD</td>
+<td><span class="tag-warning">CONTESTED</span> — asthma-specific, not COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Statistical genetics (review)</td>
 <td>Review reiterates GATA3, MUC5AC, KIAA1109 as novel severe-asthma loci from Shrine 2019.</td>
 <td>Raby 2019, Curr Opin Pediatr. PMID 31090575</td>
-<td>CONTESTED — asthma-specific, secondary source</td>
+<td><span class="tag-warning">CONTESTED</span> — asthma-specific, secondary source</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Functional genomics (enhancer/CRISPR)</td>
-<td>Studied the ~900kb-downstream GATA3 enhancer region (&quot;hG900&quot;) containing rs12413578. CRISPR deletion of the sequence around rs12413578 itself showed NO effect on GATA3 expression in human Th2 cells; a nearby SNP (rs725861) produced a mild decrease. Mice lacking the orthologous enhancer region show impaired Th2 development in HDM-induced allergic airway inflammation.</td>
+<td>Studied the ~900kb-downstream GATA3 enhancer region ("hG900") containing rs12413578. CRISPR deletion of the sequence around rs12413578 itself showed NO effect on GATA3 expression in human Th2 cells; a nearby SNP (rs725861) produced a mild decrease. Mice lacking the orthologous enhancer region show impaired Th2 development in HDM-induced allergic airway inflammation.</td>
 <td>Kumagai et al. 2024, PNAS. PMID 38923989, DOI 10.1073/pnas.2320727121</td>
-<td>CONTESTED — the fine-mapped lead variant itself has a null functional effect on GATA3, weakening (not supporting) the causal chain from this specific credible-set variant to GATA3</td>
+<td><span class="tag-warning">CONTESTED</span> — the fine-mapped lead variant itself has a null functional effect on GATA3, weakening (not supporting) the causal chain from this specific credible-set variant to GATA3</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Statistical genetics (multi-trait genetic correlation, 2026, very recent)</td>
-<td>LDSC/genomic SEM across COPD, asthma, bronchiectasis, and CRSsNP found positive genetic correlations (0.508-0.685) and support for a single shared latent &quot;unified airway disease&quot; genetic factor; PoPS prioritization named GATA3 (with SMAD3, IL1R1, RUNX3, STAT6) for this shared factor.</td>
+<td>LDSC/genomic SEM across COPD, asthma, bronchiectasis, and CRSsNP found positive genetic correlations (0.508-0.685) and support for a single shared latent "unified airway disease" genetic factor; PoPS prioritization named GATA3 (with SMAD3, IL1R1, RUNX3, STAT6) for this shared factor.</td>
 <td>Tu et al. 2026, Int J Mol Sci. PMID 42653451, DOI 10.3390/ijms27167450</td>
-<td>CONTESTED — frames the COPD signal as part of a shared factor with asthma, not COPD-specific; very recent, independent replication not yet available</td>
+<td><span class="tag-warning">CONTESTED</span> — frames the COPD signal as part of a shared factor with asthma, not COPD-specific; very recent, independent replication not yet available</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Statistical genetics (lung-function/COPD GWAS, general reference)</td>
 <td>Largest multi-ancestry lung-function GWAS to date (588,452 participants), 1,020 signals, 559 putative causal genes, 8 smoking-driven signals excluded. Cited as general background; GATA3's specific inclusion among the 559 prioritized genes could NOT be confirmed by researcher or citation-verifier from accessible text.</td>
 <td>Shrine et al. 2023, Nat Genet. PMID 36914875, DOI 10.1038/s41588-023-01314-0</td>
@@ -439,7 +123,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Statistical genetics (negative replication)</td>
 <td>Candidate-gene study found GATA3 variants NOT associated with asthma/atopic disease in German children (older, candidate-gene design, predates modern GWAS).</td>
 <td>Suttner et al. 2009, J Allergy Clin Immunol. PMID 19342088</td>
@@ -447,7 +131,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Statistical genetics (lung function, candidate gene)</td>
 <td>A GATA3-region SNP showed only a non-significant/moderate association with pre-bronchodilator FEV1% predicted after multiple-testing correction in adult ever-asthma patients.</td>
 <td>Accordini et al. 2016, PLoS One. PMID 26986948, DOI 10.1371/journal.pone.0151292</td>
@@ -455,7 +139,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Statistical genetics (pleiotropy, non-lung disease)</td>
 <td>PLACO/colocalization/MAGMA/SMR found strong colocalization (PPH4&gt;0.8) at 10p14 across keratoconus and four allergic diseases; rs17686636 (GATA3) flagged as candidate regulatory/deleterious pleiotropic variant.</td>
 <td>Li et al. 2026, Sci Rep. PMID 41526633, DOI 10.1038/s41598-025-34146-5</td>
@@ -463,7 +147,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Statistical genetics + epigenomics (ILC2 cell-type specificity)</td>
 <td>&gt;300 asthma-associated GWAS SNPs localize to H3K4me2-marked ILC2 regulatory elements; GATA3 central to the ILC2 epigenome/superenhancer landscape; refined causal-variant set enriched specifically in ILC2 (innate), not conventional Th2 (adaptive), regulatory regions.</td>
 <td>Stadhouders et al. 2018, J Allergy Clin Immunol. PMID 29486229</td>
@@ -471,7 +155,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Statistical genetics (dedicated ACO GWAS, absence of replication)</td>
 <td>Dedicated GWAS of asthma-COPD overlap (ACO), 8,068 ACO cases / 40,360 controls, UK Biobank. Identified 8 genome-wide-significant ACO loci (FAM105A, GLB1, PHB, TSLP — asthma-predominant; IL17RD, C5orf56, HLA-DQB1 — fixed-airflow-obstruction-predominant; one novel chr5 intergenic signal). <strong>GATA3/10p14 is NOT among the 8 significant loci.</strong> Flagged by red-team-skeptic; verified separately.</td>
 <td>John et al. 2022, Chest. PMID 35104449, DOI 10.1016/j.chest.2021.12.674</td>
@@ -479,7 +163,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Structural/airway remodeling biology (asthma mouse model)</td>
 <td>Transgenic GATA-3 overexpression enhanced allergen-induced subepithelial fibrosis and airway smooth muscle hyperplasia (Th2-biased remodeling) in mice; T-bet overexpression (Th1-biased) reduced goblet cell hyperplasia/mucus.</td>
 <td>Kiwamoto et al. 2006, Am J Respir Crit Care Med. PMID 16614350, DOI 10.1164/rccm.200601-079OC</td>
@@ -487,7 +171,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Structural/airway remodeling biology (asthma mouse model)</td>
 <td>Montelukast (cysLT1 antagonist) suppressed GATA-3-overexpression-driven airway smooth muscle hyperplasia/fibrosis in the same allergic mouse model.</td>
 <td>Kiwamoto et al. 2011, Clin Exp Allergy. PMID 20636401, DOI 10.1111/j.1365-2222.2010.03571.x</td>
@@ -495,7 +179,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Structural/immune biology (review)</td>
 <td>GATA3 (with NF-κB) identified as a key transcription factor orchestrating allergic inflammation, affecting epithelial cells, fibroblasts, and airway smooth muscle cells.</td>
 <td>Barnes 2011, Immunol Rev. PMID 21682737, DOI 10.1111/j.1600-065X.2011.01020.x</td>
@@ -503,7 +187,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Structural/airway remodeling biology (asthma mouse model)</td>
 <td>HSP70/CD80 DNA vaccine regulated GATA-3/T-bet balance and inhibited airway remodeling (subepithelial collagen, smooth-muscle proliferation) in chronic OVA-asthma mouse model.</td>
 <td>Yan et al. 2013, Arch Med Sci. PMID 24273578, DOI 10.5114/aoms.2013.33180</td>
@@ -511,7 +195,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Immune biology (core mechanism)</td>
 <td>GATA3 is the master transcription factor required for maintenance of Th2 CD4+ T-cell identity (genome-wide expression profiling). Does NOT describe macrophage biology (corrects a mismatched citation in original briefing).</td>
 <td>Sasaki et al. 2013, PLoS One. PMID 23824597, DOI 10.1371/journal.pone.0066468</td>
@@ -519,7 +203,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Immune biology (macrophage/tissue repair)</td>
 <td>GATA3 required for IL-33-induced differentiation of pro-resolving alternatively-activated macrophages (AAMs) and tissue repair after injury in mice; conditional GATA3 deletion in mononuclear phagocytes abrogated this. Non-lung (muscle-injury) mouse model.</td>
 <td>Faas et al. 2021, Immunity. PMID 34644537, DOI 10.1016/j.immuni.2021.09.010</td>
@@ -527,15 +211,15 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Immune biology (human COPD lung tissue, strongest single COPD-specific piece of evidence)</td>
 <td>Surgical lung tissue from COPD patients (GOLD I-IV) vs smoker/never-smoker controls: tissue eosinophils/basophils increased significantly in very severe COPD, with a patchy, focal eosinophil-rich microenvironment spatially linked to GATA3+ cells (Th2 lymphocytes/ILC2s) and CCL11+/CCL24+ cells. Tissue basophilia identified as a novel feature of advanced COPD.</td>
 <td>Jogdand et al. 2020, Eur Respir J. PMID 32060064, DOI 10.1183/13993003.00110-2019</td>
-<td>Supports a genuine, spatially localized minority &quot;eosinophilic/Th2-high COPD&quot; endotype, not the dominant neutrophilic COPD phenotype</td>
+<td>Supports a genuine, spatially localized minority "eosinophilic/Th2-high COPD" endotype, not the dominant neutrophilic COPD phenotype</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Immune biology (human RCT, direct clinical/translational evidence)</td>
 <td>RCT of inhaled GATA3-specific DNAzyme (SB010) in COPD patients pre-selected for sputum eosinophilia (≥2.5%): SB010 significantly decreased sputum eosinophils vs placebo over 28 days, but lung function and symptoms were NOT significantly affected.</td>
 <td>Greulich et al. 2018, Respir Res. PMID 29615049, DOI 10.1186/s12931-018-0751-x</td>
@@ -543,15 +227,15 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Immune biology (human ACOS clustering, contested/counter-intuitive)</td>
-<td>K-means clustering of TBX21(Th1)/GATA3(Th2)/RORC(Th17)/FOXP3(Treg) PBMC mRNA in asthma (n=152)/COPD (n=50) patients identified an &quot;asthma-COPD overlap phenotype&quot; cluster with high IgE, high blood eosinophils, FEV1/FVC&lt;0.67, ≥10 pack-years — paradoxically characterized by a HIGHER TBX21/GATA3 ratio (i.e., relatively Th2-LOW) despite peripheral eosinophilia.</td>
+<td>K-means clustering of TBX21(Th1)/GATA3(Th2)/RORC(Th17)/FOXP3(Treg) PBMC mRNA in asthma (n=152)/COPD (n=50) patients identified an "asthma-COPD overlap phenotype" cluster with high IgE, high blood eosinophils, FEV1/FVC&lt;0.67, ≥10 pack-years — paradoxically characterized by a HIGHER TBX21/GATA3 ratio (i.e., relatively Th2-LOW) despite peripheral eosinophilia.</td>
 <td>Hirai et al. 2017, Clin Exp Allergy. PMID 28658564, DOI 10.1111/cea.12970</td>
-<td>Direct contested evidence against a simple &quot;GATA3 drives ACOS/COPD&quot; narrative</td>
+<td>Direct contested evidence against a simple "GATA3 drives ACOS/COPD" narrative</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Immune biology (mouse ACOS model, mixed programs)</td>
 <td>Mouse ACOS model (house dust mite + cigarette smoke) measuring GATA3/STAT6/IL-4/IL-5/IL-13 alongside Th17 and Th1/Treg markers confirmed GATA3/Th2 is one of several concurrently active immune programs, not a dominant/exclusive signal.</td>
 <td>Vasconcelos et al. 2023, Probiotics Antimicrob Proteins. PMID 37837484, DOI 10.1007/s12602-023-10167-2</td>
@@ -559,7 +243,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Immune biology (human PBMC, AECOPD)</td>
 <td>Increased ILC2s and Th2 cells in peripheral blood of acute-exacerbation-COPD (AECOPD) patients vs stable COPD/healthy controls; Notch1-Hes1-GATA3 signaling axis in ILC2s drives Th2 differentiation.</td>
 <td>Jiang et al. 2021, Front Immunol. PMID 34354706, DOI 10.3389/fimmu.2021.685400</td>
@@ -567,7 +251,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Immune biology (human PBMC, AECOPD)</td>
 <td>Th2/Th1 ratio shifted toward Th2 in AECOPD peripheral blood; ILC2s upregulate MHC-II/CD80 and act as antigen-presenting cells promoting Th2 skewing (in vitro coculture confirmed).</td>
 <td>Jiang et al. 2019, Mediators Inflamm. PMID 31320835, DOI 10.1155/2019/3140183</td>
@@ -575,7 +259,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Immune biology (human, IL-33/ILC2 axis in COPD)</td>
 <td>IL-33 elevated in COPD serum; drives ILC2 proliferation and GATA3/ROR-α/ST2/CRTH2 expression and Th2 cytokine secretion, blocked by anti-ST2.</td>
 <td>Jiang et al. 2019, Exp Ther Med. PMID 31572551, DOI 10.3892/etm.2019.7924</td>
@@ -583,7 +267,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Immune biology (human sputum + mouse, preprint)</td>
 <td>Human sputum flow cytometry: COPD characterized by emergence of GATA3+ ILC2s (not T-bet+ ILC1s or RORγt+ ILC3s); patients with elevated sputum ILC2s had worse spirometry and mixed neutrophilic+eosinophilic sputum inflammation; mechanistically linked (SP-D-deficient mice) to ILC2 plasticity toward IL-17A co-production.</td>
 <td>Flayer et al., medRxiv preprint. PMID 38045302, DOI 10.1101/2023.11.21.23298837</td>
@@ -591,7 +275,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Immune biology (rat, air-pollution model, not smoking)</td>
 <td>Air-pollution particulate-matter-exposure rat model of COPD: GATA3 binds/regulates a lncRNA (MHC-R) implicated in dendritic-cell antigen presentation.</td>
 <td>He et al. 2022, J Hazard Mater. PMID 35780733, DOI 10.1016/j.jhazmat.2022.129459</td>
@@ -599,7 +283,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Immune biology (mouse, ozone/infection model, not smoking)</td>
 <td>Ozone-induced COPD mouse model with P. aeruginosa superinfection: early Th1 (T-bet) response shifted to a later Th2 (GATA3) response over infection course, alongside sustained Th17 markers.</td>
 <td>Han et al. 2022, Biomed Pharmacother. PMID 35453008, DOI 10.1016/j.biopha.2022.112980</td>
@@ -607,7 +291,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GATA3</td>
+<td class="gene">GATA3</td>
 <td>Immune biology (mouse + human ILC2, microbiome)</td>
 <td>Gut-microbiota-derived butyrate suppressed pulmonary ILC2 proliferation, GATA3 expression, and IL-5/IL-13 production in a murine COPD model.</td>
 <td>Jiang et al. 2024, Mediators Inflamm. PMID 39015676, DOI 10.1155/2024/6263447</td>
@@ -615,7 +299,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="notes-on-evidence-weight-and-confound-handling">Notes on evidence weight and confound handling</h2>
 <ul>
 <li><strong>Smoking-mediation check:</strong> No PubMed evidence was found linking GATA3 or this locus to smoking-behavior
@@ -628,7 +312,7 @@ researcher and red-team-skeptic. The locus is overwhelmingly an asthma/allergic-
 locus by GWAS credible-set membership (per Open Targets, see summary below) and by the independently
 verified literature above. The one GWAS specifically designed to separate asthma-predominant from
 COPD-predominant genetic signal in asthma-COPD overlap (John et al. 2022, PMID 35104449) did NOT find GATA3
-among its significant loci. Whether the &quot;COPD&quot; cases in the underlying COPD GWAS cohorts were
+among its significant loci. Whether the "COPD" cases in the underlying COPD GWAS cohorts were
 spirometry-confirmed (GOLD-defined) versus self-report/ICD-code-defined — which would bear directly on how
 much of this signal could reflect misclassified/comorbid asthma — was not resolved by either the researcher
 or the skeptic and is flagged as an open question for the study team.</li>
@@ -647,7 +331,7 @@ monogenic GATA3-LoF disease). Asthma scores 0.556; several other allergic-diseas
 COPD-specific signal is negligible.</li>
 <li><strong>Locus-to-gene (L2G) at the lead variant (rs12413578):</strong> No L2G prediction was returned for GATA3 (or any
 gene) for the COPD, FEV1, or FEV1/FVC credible sets at this locus. The only locus-specific L2G evidence
-available names GATA3 for &quot;allergic asthma&quot; (score 0.615, FinnGen) and a Crohn's-disease medication-use
+available names GATA3 for "allergic asthma" (score 0.615, FinnGen) and a Crohn's-disease medication-use
 trait (score 0.571) — not for COPD or lung function.</li>
 <li><strong>Colocalization:</strong> The COPD credible set at this locus colocalizes at very high posterior probability
 (h4 &gt; 0.99) with FEV1, eosinophil count, childhood-onset asthma, and a composite UKB
@@ -688,16 +372,16 @@ trial, PMID 29615049, in COPD patients pre-selected for sputum eosinophilia) eng
 (eosinophils fell) but did not improve lung function or symptoms.</li>
 <li>The one study that directly clustered the asthma-COPD-overlap phenotype by transcription-factor expression
 (Hirai et al. 2017, PMID 28658564) found that phenotype was paradoxically Th2-LOW by TBX21/GATA3 ratio,
-undercutting a simple &quot;GATA3 drives ACOS&quot; narrative.</li>
+undercutting a simple "GATA3 drives ACOS" narrative.</li>
 <li>Countervailing this: a genuine, if minority, GATA3+/ILC2-driven eosinophilic-COPD endotype is measurable in
 human COPD lung tissue (Jogdand et al. 2020, PMID 32060064) independent of asthma comorbidity in that
-cohort, so a &quot;purely an asthma-misclassification artifact, zero COPD-relevant biology&quot; reading would also
+cohort, so a "purely an asthma-misclassification artifact, zero COPD-relevant biology" reading would also
 overreach in the other direction.</li>
 </ul>
 <p>There is no credible alternative candidate gene to name as a runner-up at this specific locus — the
 Ensembl-interval search found no other protein-coding gene — so this is not a two-gene tie in the usual sense.
-Rather, the uncertainty is about whether <em>any</em> single gene at this locus should be described as &quot;the COPD
-gene&quot; at all, versus the locus being better characterized as a pleiotropic asthma/Th2-allergic locus with a
+Rather, the uncertainty is about whether <em>any</em> single gene at this locus should be described as "the COPD
+gene" at all, versus the locus being better characterized as a pleiotropic asthma/Th2-allergic locus with a
 secondary, likely non-causal, statistical footprint in COPD GWAS. Confidence is marked LOW (not
 INSUFFICIENT, since GATA3 is not merely unstudied — it has been extensively studied and the evidence
 specifically weighs against a COPD-intrinsic mechanism rather than being silent on it). What would resolve
@@ -707,5 +391,7 @@ COPD-specific (not lung-function-general) eQTL/pQTL colocalization analysis at t
 available in Open Targets; (3) independent replication of the ILC2/GATA3-in-COPD mechanistic literature
 outside the one research group that produced most of it.</p>
 
+        </div>
+    </div>
 </body>
 </html>

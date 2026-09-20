@@ -1,372 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>15_77800001-78050000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPD locus evidence table — 15:77,800,001-78,050,000 (nearest gene TBC1D2B)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="copd-locus-evidence-table--1577800001-78050000-nearest-gene-tbc1d2b">COPD locus evidence table — 15:77,800,001-78,050,000 (nearest gene TBC1D2B)</h1>
-<p>Lead variant: rs12899237. Candidate genes: TBC1D2B (nearest gene), LINGO1 (MAGMA- and
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="copd-locus-evidence-table--1577800001-78050000-nearest-gene-tbc1d2b">COPD locus evidence table — 15:77,800,001-78,050,000 (nearest gene TBC1D2B)</h1><div class="summary"><p>Lead variant: rs12899237. Candidate genes: TBC1D2B (nearest gene), LINGO1 (MAGMA- and
 PoPS-prioritized). No FLAMES or ABC prioritized gene. The entire 84-variant ABF-finemapped
 credible set is intergenic (all variants annotated <code>gene=-</code>; consequences limited to
 upstream/downstream_gene_variant, intron_variant/non_coding_transcript_variant, and
@@ -374,9 +57,10 @@ non_coding_transcript_exon_variant — no missense or splice-donor/acceptor vari
 dedicated variant-level literature search beyond the lead variant was required per pipeline
 scope). All 24 citations below carry a VERIFIED verdict from citation-verifier (checked
 2026-09-11). Both candidate genes were independently marked <strong>CONTESTED</strong> by two
-red-team-skeptic passes — see the &quot;Skeptic verdict&quot; column and the audit file for full
-reasoning; this is reflected in every row's skeptic-verdict note below.</p>
-<table>
+red-team-skeptic passes — see the "Skeptic verdict" column and the audit file for full
+reasoning; this is reflected in every row's skeptic-verdict note below.</p></div>
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -389,199 +73,199 @@ reasoning; this is reflected in every row's skeptic-verdict note below.</p>
 </thead>
 <tbody>
 <tr>
-<td>LINGO1</td>
+<td class="gene">LINGO1</td>
 <td>Statistical genetics (GWAS)</td>
 <td>Original GWAS: LINGO1 variant rs9652490 genome-wide significantly associated with essential tremor (P=1.2×10⁻⁹, OR=1.55); not a COPD/spirometry trait.</td>
 <td>PMID 19182806 / DOI 10.1038/ng.299</td>
-<td>VERIFIED citation; CONTESTED gene — LINGO1's only robust genome-wide-significant signal is a CNS movement disorder, not COPD/lung function</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — LINGO1's only robust genome-wide-significant signal is a CNS movement disorder, not COPD/lung function</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINGO1</td>
+<td class="gene">LINGO1</td>
 <td>Statistical genetics (review)</td>
 <td>Review naming LINGO1 (with FUS, TENM4) as one of the more reproducible essential-tremor genetic associations, though reproducibility/pathogenicity remain contentious.</td>
 <td>PMID 26411503 / DOI 10.1016/j.parkreldis.2015.09.022</td>
-<td>VERIFIED citation; CONTESTED gene — off-topic for COPD, and flags contested reproducibility even within LINGO1's own home phenotype</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — off-topic for COPD, and flags contested reproducibility even within LINGO1's own home phenotype</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINGO1</td>
+<td class="gene">LINGO1</td>
 <td>Statistical genetics (meta-analysis, negative)</td>
 <td>Meta-analysis of 12 studies (6053 PD cases/5997 controls) found NO association between LINGO1 rs9652490 and Parkinson's disease.</td>
 <td>PMID 22710005 / DOI 10.1016/j.neulet.2012.06.018</td>
-<td>VERIFIED citation; CONTESTED gene — negative result in a related CNS phenotype, undermines general robustness of LINGO1 GWAS signals</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — negative result in a related CNS phenotype, undermines general robustness of LINGO1 GWAS signals</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINGO1</td>
+<td class="gene">LINGO1</td>
 <td>Statistical genetics (review/brief report)</td>
 <td>Brief report contextualizing the LINGO1-essential-tremor finding alongside a second ET-associated locus, SLC1A2.</td>
 <td>PMID 23596072 / DOI 10.1212/WNL.0b013e31828f1903</td>
-<td>VERIFIED citation; CONTESTED gene — off-topic for COPD</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — off-topic for COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINGO1</td>
+<td class="gene">LINGO1</td>
 <td>Smoking-related (epigenetics, tangential)</td>
 <td>Pilot RRBS methylation study (n=16 preterm children) found differential methylation, including hypermethylation, at an intronic region of LINGO1 associated with prenatal tobacco smoke exposure.</td>
 <td>PMID 41012410 / DOI 10.3390/toxics13090789</td>
-<td>VERIFIED citation (full text confirms LINGO1 is named); CONTESTED gene — small pediatric pilot methylation study, not a genetic-association study; too underpowered/indirect to establish a COPD-relevant mechanism</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation (full text confirms LINGO1 is named);  gene — small pediatric pilot methylation study, not a genetic-association study; too underpowered/indirect to establish a COPD-relevant mechanism</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINGO1</td>
+<td class="gene">LINGO1</td>
 <td>Structural (tangential, general review)</td>
 <td>Review noting LINGO1 as one of several BK-channel regulatory (γ) subunits; BK channel dysregulation is implicated in hypoxia-associated conditions including COPD (general review claim, not LINGO1-COPD-specific testing).</td>
 <td>PMID 35002762 / DOI 10.3389/fphys.2021.780206</td>
-<td>VERIFIED citation; CONTESTED gene — general review, does not test LINGO1 in any COPD/airway assay</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — general review, does not test LINGO1 in any COPD/airway assay</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINGO1</td>
+<td class="gene">LINGO1</td>
 <td>Structural (paralog, not LINGO1 itself)</td>
 <td>Describes LINGO2 (LINGO1 paralog) as a BK-channel inactivation modulator; mentions LINGO1 only as a related family member, does not test LINGO1 itself.</td>
 <td>PMID 36738787 / DOI 10.1016/j.jbc.2023.102975</td>
-<td>VERIFIED citation; CONTESTED gene — paralog-conflation risk flagged explicitly by red-team; not LINGO1-specific evidence</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — paralog-conflation risk flagged explicitly by red-team; not LINGO1-specific evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINGO1</td>
+<td class="gene">LINGO1</td>
 <td>Structural/neurobiology (review)</td>
 <td>Review of LINGO-1 as a negative regulator of neuronal survival/oligodendrocyte differentiation/axon regeneration, and as an anti-LINGO-1 antibody therapeutic target in MS, PD, and essential tremor.</td>
 <td>PMID 25862159 / DOI 10.1517/14728222.2015.1028360</td>
-<td>VERIFIED citation; CONTESTED gene — confirms LINGO1's biology is CNS-restricted, not pulmonary/immune</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — confirms LINGO1's biology is CNS-restricted, not pulmonary/immune</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINGO1</td>
+<td class="gene">LINGO1</td>
 <td>Statistical genetics (negative, tangential)</td>
 <td>LINGO1 rs9652490 correlated with cerebellar atrophy but was NOT correlated with valproic-acid-induced tremor itself.</td>
 <td>PMID 34718848 / DOI 10.1007/s00213-021-06004-5</td>
-<td>VERIFIED citation; CONTESTED gene — another mixed/negative result even within LINGO1's CNS home domain</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — another mixed/negative result even within LINGO1's CNS home domain</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TBC1D2B</td>
+<td class="gene">TBC1D2B</td>
 <td>Statistical genetics (population/eQTL)</td>
 <td>Using eQTL/enhancer mapping of a European lung-cancer GWAS, TBC1D2B was one of only 5 genes (with CHRNA5, IDH3A, PSMA4, an lncRNA) whose signal was shared across all 3 lung cancer subtypes (LUAD/LUSC/SCLC) — implying possible shared regulatory architecture with the classic 15q25 CHRNA5/IDH3A/PSMA4 smoking-and-lung-cancer locus.</td>
 <td>PMID 29486777 / DOI 10.1186/s13073-018-0522-9</td>
-<td>VERIFIED citation (author O'Brien TD et al., confirmed by citation-verifier; a red-team pass mis-recalled the author as &quot;Zhu et al.&quot; — same PMID, no re-verification needed); CONTESTED gene — lung-cancer, not COPD; exact positional relationship of the cited signal to this locus's 15:77.8-78.05Mb window is unconfirmed (open gap, see audit)</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation (author O'Brien TD et al., confirmed by citation-verifier; a red-team pass mis-recalled the author as "Zhu et al." — same PMID, no re-verification needed);  gene — lung-cancer, not COPD; exact positional relationship of the cited signal to this locus's 15:77.8-78.05Mb window is unconfirmed (open gap, see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TBC1D2B</td>
+<td class="gene">TBC1D2B</td>
 <td>Statistical genetics (population genetics, non-specific)</td>
-<td>Identifies TBC1D2B as a gene with extreme cross-population allele-frequency differences, annotated as an &quot;autophagy mediator&quot;; overall disease enrichment (not TBC1D2B-specific) includes asthma, T1D, alcohol consumption, ADHD.</td>
+<td>Identifies TBC1D2B as a gene with extreme cross-population allele-frequency differences, annotated as an "autophagy mediator"; overall disease enrichment (not TBC1D2B-specific) includes asthma, T1D, alcohol consumption, ADHD.</td>
 <td>PMID 27699474 / DOI 10.1007/s00439-016-1734-y</td>
-<td>VERIFIED citation; CONTESTED gene — general population-genetics context only, no TBC1D2B-specific disease link</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — general population-genetics context only, no TBC1D2B-specific disease link</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TBC1D2B</td>
+<td class="gene">TBC1D2B</td>
 <td>Structural (lung epithelial, cancer context)</td>
 <td>ZEB1/NuRD complex transcriptionally suppresses TBC1D2B (a Rab22 GAP) in NSCLC; loss of TBC1D2B permits E-cadherin internalization, promoting EMT/invasion/metastasis.</td>
 <td>PMID 31719531 / DOI 10.1038/s41467-019-12832-z</td>
-<td>VERIFIED citation; CONTESTED gene — NSCLC/metastasis biology, mechanistically distinct from COPD's inflammatory/emphysematous processes</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — NSCLC/metastasis biology, mechanistically distinct from COPD's inflammatory/emphysematous processes</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TBC1D2B</td>
+<td class="gene">TBC1D2B</td>
 <td>Structural (basic cell biology)</td>
 <td>Original identification of TBC1D2B (as mKIAA1055) as a Rab22-binding GTPase-activating protein in a systematic Rab-effector screen.</td>
 <td>PMID 20070612 / DOI 10.1111/j.1600-0854.2010.01038.x</td>
-<td>VERIFIED citation; CONTESTED gene — general cell biology, not tissue- or disease-specific</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — general cell biology, not tissue- or disease-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TBC1D2B</td>
+<td class="gene">TBC1D2B</td>
 <td>Structural (basic cell biology)</td>
 <td>RAB31 recruits TBC1D2B to inactivate RAB7, preventing MVE-lysosome fusion and enabling exosome secretion.</td>
 <td>PMID 32958903 / DOI 10.1038/s41422-020-00409-1</td>
-<td>VERIFIED citation; CONTESTED gene — general cell biology (HeLa-type systems), not lung/COPD-specific</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — general cell biology (HeLa-type systems), not lung/COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TBC1D2B</td>
+<td class="gene">TBC1D2B</td>
 <td>Structural (basic cell biology)</td>
 <td>RAB22A recruits TBC1D2B (a RAB7A GAP) to inactivate RAB7A, redirecting EGFR to recycling/microvesicle release instead of degradation.</td>
 <td>PMID 39051763 / DOI 10.1002/jev2.12494</td>
-<td>VERIFIED citation; CONTESTED gene — general cell biology, not lung/COPD-specific</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — general cell biology, not lung/COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TBC1D2B</td>
+<td class="gene">TBC1D2B</td>
 <td>Structural (basic cell biology, autophagy)</td>
 <td>TBC1D2B binds LC3/GABARAP and ATG12 machinery via a LIR motif, undergoes liquid-liquid phase separation to promote autophagy initiation, and is itself autophagy-degraded.</td>
 <td>PMID 38226533 / DOI 10.1002/jcb.30481</td>
-<td>VERIFIED citation; CONTESTED gene — plausible background relevance to COPD/emphysema autophagy biology in principle, but not tested in lung tissue or COPD models</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — plausible background relevance to COPD/emphysema autophagy biology in principle, but not tested in lung tissue or COPD models</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TBC1D2B</td>
+<td class="gene">TBC1D2B</td>
 <td>Rare disease/Mendelian (contradicting evidence)</td>
 <td>First description of biallelic TBC1D2B loss-of-function causing a neurodevelopmental disorder with seizures and gingival overgrowth (NEDSGO); impaired EGFR endocytosis and reduced viability in knockout HeLa cells; no pulmonary phenotype reported.</td>
 <td>PMID 32623794 / DOI 10.1002/humu.24071</td>
-<td>VERIFIED citation; CONTESTED gene — absence of pulmonary phenotype in complete LoF cases is genuine negative evidence against a major TBC1D2B lung-structural role (per red-team)</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — absence of pulmonary phenotype in complete LoF cases is genuine negative evidence against a major TBC1D2B lung-structural role (per red-team)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TBC1D2B</td>
+<td class="gene">TBC1D2B</td>
 <td>Rare disease/Mendelian (contradicting evidence)</td>
 <td>Expands the NEDSGO phenotype to 10 subjects; progressive cerebral/cerebellar atrophy; proposes disrupted autophagy/endolysosomal function as mechanism; no pulmonary phenotype reported.</td>
 <td>PMID 38374468 / DOI 10.1038/s41431-024-01563-5</td>
-<td>VERIFIED citation; CONTESTED gene — same &quot;no pulmonary phenotype&quot; pattern</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — same "no pulmonary phenotype" pattern</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TBC1D2B</td>
+<td class="gene">TBC1D2B</td>
 <td>Rare disease/Mendelian (contradicting evidence)</td>
 <td>Two siblings with a novel biallelic TBC1D2B frameshift variant, progressive gingival overgrowth, facial fibrous dysplasia, mental deterioration; no pulmonary phenotype reported.</td>
 <td>PMID 36029130 / DOI 10.1111/cge.14215</td>
-<td>VERIFIED citation; CONTESTED gene — same &quot;no pulmonary phenotype&quot; pattern</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — same "no pulmonary phenotype" pattern</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TBC1D2B</td>
+<td class="gene">TBC1D2B</td>
 <td>Rare disease/Mendelian (contradicting evidence)</td>
 <td>Further TBC1D2B variants identified in Ramon syndrome/hereditary gingival fibromatosis (also implicates KREMEN2); no pulmonary phenotype reported.</td>
 <td>PMID 39201553 / DOI 10.3390/ijms25168867</td>
-<td>VERIFIED citation; CONTESTED gene — same &quot;no pulmonary phenotype&quot; pattern</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — same "no pulmonary phenotype" pattern</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TBC1D2B</td>
+<td class="gene">TBC1D2B</td>
 <td>Rare disease/Mendelian (contradicting evidence)</td>
 <td>Consanguineous family with a novel truncating TBC1D2B variant causing NEDSGO; structural modeling shows loss of Rab-GAP-TBC, coiled-coil, and PH domains; no pulmonary phenotype reported.</td>
 <td>PMID 40898781 / DOI 10.1002/dneu.22998</td>
-<td>VERIFIED citation; CONTESTED gene — same &quot;no pulmonary phenotype&quot; pattern</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — same "no pulmonary phenotype" pattern</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TBC1D2B</td>
+<td class="gene">TBC1D2B</td>
 <td>Rare disease/Mendelian (contradicting evidence)</td>
 <td>Further case series/review of TBC1D2B neurodevelopmental phenotype, adding movement-disorder features; no pulmonary phenotype reported.</td>
 <td>PMID 42375022 / DOI 10.14802/jmd.26091</td>
-<td>VERIFIED citation; CONTESTED gene — same &quot;no pulmonary phenotype&quot; pattern</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — same "no pulmonary phenotype" pattern</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TBC1D2B</td>
+<td class="gene">TBC1D2B</td>
 <td>Rare disease/Mendelian (contradicting evidence)</td>
 <td>Further phenotypic expansion case report (hypertrichosis, white matter abnormalities, progressive neurological decline); no pulmonary phenotype reported.</td>
 <td>PMID 41817446 / DOI 10.1097/MCD.0000000000000556</td>
-<td>VERIFIED citation; CONTESTED gene — same &quot;no pulmonary phenotype&quot; pattern</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — same "no pulmonary phenotype" pattern</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TBC1D2B</td>
+<td class="gene">TBC1D2B</td>
 <td>Immune (weak/tangential, unrelated disease)</td>
-<td>Bioinformatic (WGCNA/ML) analysis nominating TBC1D2B as one of six &quot;optimal feature genes&quot; for thyroid-associated ophthalmopathy (an unrelated autoimmune orbital disease); immune-infiltration correlations reported for the gene signature as a whole, not TBC1D2B individually.</td>
+<td>Bioinformatic (WGCNA/ML) analysis nominating TBC1D2B as one of six "optimal feature genes" for thyroid-associated ophthalmopathy (an unrelated autoimmune orbital disease); immune-infiltration correlations reported for the gene signature as a whole, not TBC1D2B individually.</td>
 <td>PMID 37900130 / DOI 10.3389/fendo.2023.1203120</td>
-<td>VERIFIED citation; CONTESTED gene — weak, non-specific, purely computational association in an unrelated disease; does not establish a COPD-relevant immune mechanism for TBC1D2B</td>
+<td><span class="tag-warning">CONTESTED</span>VERIFIED citation;  gene — weak, non-specific, purely computational association in an unrelated disease; does not establish a COPD-relevant immune mechanism for TBC1D2B</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — not a verified literature citation)</h2>
 <p>This section reports a structured Open Targets Platform GraphQL API lookup performed
 directly by the orchestrator on 2026-09-11. It did <strong>not</strong> go through citation-verifier or
@@ -596,8 +280,8 @@ score 0.2593; no other datatype contributes).</li>
 resolving to Open Targets credible set <code>499cb48fd6d0fd936ec8bdc8ade428fe</code> — lead variant
 rs56280304 (15:78,086,842), <strong>outside</strong> this locus's stated window (~37kb telomeric),
 from GCST90570621, an <strong>MTAG study combining COPD with colon polyp</strong>, fine-mapped by
-the lower-resolution <strong>PICS</strong> method (OT's own confidence flag: &quot;PICS fine-mapped
-credible set based on reported top hit&quot;).</li>
+the lower-resolution <strong>PICS</strong> method (OT's own confidence flag: "PICS fine-mapped
+credible set based on reported top hit").</li>
 <li>L2G at that credible set: <strong>SH2D7 ranked 1st (0.735)</strong>, TBC1D2B 2nd (0.426). SH2D7 is
 not a candidate gene in this locus's internal pipeline output and was not reviewed.</li>
 <li>Colocalization at that credible set: 0 rows (none returned).</li>
@@ -683,5 +367,7 @@ INSUFFICIENT) because there is at least some locus-adjacent, gene-specific struc
 evidence (Open Targets L2G/eQTL) distinguishing the two genes, even though it does not rise
 to a settled call.</p>
 
+        </div>
+    </div>
 </body>
 </html>
