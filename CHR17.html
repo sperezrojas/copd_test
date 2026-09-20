@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chromosome 18</title>
+    <title>Chromosome 17</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,8 +37,8 @@
     <a class="nav-link" href="CHR14.html">CHR14</a>
     <a class="nav-link" href="CHR15.html">CHR15</a>
     <a class="nav-link" href="CHR16.html">CHR16</a>
-    <a class="nav-link" href="CHR17.html">CHR17</a>
-    <a class="nav-link active" href="CHR18.html">CHR18</a>
+    <a class="nav-link active" href="CHR17.html">CHR17</a>
+    <a class="nav-link" href="CHR18.html">CHR18</a>
     <a class="nav-link" href="CHR19.html">CHR19</a>
     <a class="nav-link" href="CHR20.html">CHR20</a>
     <a class="nav-link" href="CHR21.html">CHR21</a>
@@ -48,7 +48,7 @@
 
     <div id="main-content">
         <div id="display-area" class="content-card">
-            <h1>Chromosome 18</h1>
+            <h1>Chromosome 17</h1>
 
             <div class="controls">
 
@@ -68,7 +68,7 @@
             </div>
 
             <div class="image-container">
-                <img id="plotImage" src="" alt="Regional Association plot for Chromosome 18" style="display: none;" onerror="handleImageError()">
+                <img id="plotImage" src="" alt="Regional Association plot for Chromosome 17" style="display: none;" onerror="handleImageError()">
                 <div id="placeholder" class="placeholder-text">
                     Select a locus to view.
                 </div>
@@ -110,11 +110,12 @@
 <script>
     // Configuration of plots available for each item
     const dataset = {
-        "chr18": [
-            { id: 1, name: "18:37450001-37750000", filename: "plots/chr18-37450001-37750000.png" },
-            { id: 2, name: "18:52750001-53450000", filename: "plots/chr18-52750001-53450000.png" },
-            { id: 3, name: "18:55400001-55650000", filename: "plots/chr18-55400001-55650000.png" },
-            { id: 4, name: "18:79700001-79900000", filename: "plots/chr18-79700001-79900000.png" }
+        "chr17": [
+            { id: 1, name: "17:32000001-32150000", filename: "plots/chr17-32000001-32150000.png" },
+            { id: 2, name: "17:34500001-34650000", filename: "plots/chr17-34500001-34650000.png" },
+            { id: 3, name: "17:39150001-40150000", filename: "plots/chr17-39150001-40150000.png" },
+            { id: 4, name: "17:45850001-46100000", filename: "plots/chr17-45850001-46100000.png" },
+            { id: 5, name: "17:49200001-49450000", filename: "plots/chr17-49200001-49450000.png" }
         ]
     };
 
@@ -137,7 +138,7 @@
 
     // Populate plot dropdown based on selected item
     function updatePlotOptions() {
-        const plots = dataset["chr18"] || [];
+        const plots = dataset["chr17"] || [];
         
         plotSelect.innerHTML = '';
         plots.forEach((plot, index) => {
@@ -153,14 +154,14 @@
     // Load and display the current selected plot image
     function displayPlot() {
         const plotIndex = parseInt(plotSelect.value, 10);
-        const plots = dataset["chr18"] || [];
+        const plots = dataset["chr1"] || [];
 
         if (plots && plots[plotIndex]) {
             const currentPlot = plots[plotIndex];
             const plotFileKey = currentPlot.filename
                 .replace(/^plots\//, '')
                 .replace(/\.png$/, '')
-                .replace('chr18-', ''); // Remove "chr1" prefix if present
+                .replace('chr17-', ''); // Remove "chr1" prefix if present
             plotImage.src = currentPlot.filename;
             plotImage.style.display = 'block';
             placeholder.style.display = 'none';
@@ -211,12 +212,12 @@
      */
     function getEvidenceTablePath(plotFileKey) {
     // e.g. "LOC001" → "files/LOC001_evidence_table.html"
-    return `tables/18_${plotFileKey}.html`;
+    return `tables/17_${plotFileKey}.html`;
     }
 
     function getAuditReportPath(plotFileKey) {
     // e.g. "LOC001" → "files/LOC001_audit_report.html"
-    return `audits/18_${plotFileKey}_audit_report.html`;
+    return `audits/17_${plotFileKey}_audit_report.html`;
     }
 
     /**
