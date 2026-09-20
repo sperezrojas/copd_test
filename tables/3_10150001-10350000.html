@@ -1,381 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>3_10150001-10350000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 3:10150001-10350000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-310150001-10350000-chr3-grch38">Evidence table — locus 3:10150001-10350000 (chr3, GRCh38)</h1>
-<p><strong>Lead variant:</strong> rs2543459 (PIP=0.871, upstream_gene_variant, annotated to TATDN2)
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-310150001-10350000-chr3-grch38">Evidence Table — Locus 3:10150001-10350000</h1><div class="summary"><p><strong>Lead variant:</strong> rs2543459 (PIP=0.871, upstream_gene_variant, annotated to TATDN2)
 <strong>Candidate genes:</strong> TATDN2 (nearest gene, dominant credible-set PIP mass); IRAK2 (MAGMA- and
 PoPS-prioritized, overlapped only by low-PIP intronic credible-set variants); ATP2B2 (added via
 targeted re-opening after a genome-build correction to the study team's MAGMA/PoPS gene-location
-merge file surfaced it as a previously-unevaluated candidate — see &quot;ATP2B2 addendum&quot; note below).</p>
-<p>All rows below use only citations verdict VERIFIED by citation-verifier. Two researcher-cited
+merge file surfaced it as a previously-unevaluated candidate — see "ATP2B2 addendum" note below).</p><p>All rows below use only citations verdict VERIFIED by citation-verifier. Two researcher-cited
 sources were excluded as CLAIM_MISMATCH — PMID 29848961 (original review) and PMID 42570138
-(ATP2B2 addendum) — see audit appendix (<code>audits/3_10150001-10350000_audit.md</code>).</p>
-<h2 id="atp2b2-addendum-note-read-before-the-table">ATP2B2 addendum note (read before the table)</h2>
-<p>This locus's review was originally completed as a two-gene contest (TATDN2 vs. IRAK2, both
+(ATP2B2 addendum) — see audit appendix (<code>audits/3_10150001-10350000_audit.md</code>).</p><p>This locus's review was originally completed as a two-gene contest (TATDN2 vs. IRAK2, both
 CONTESTED, final call IRAK2/LOW confidence). It was subsequently re-opened after the study team
 discovered a genome-build error in the MAGMA/PoPS gene-location merge file; the corrected re-merge
 surfaced <strong>ATP2B2</strong> (PMCA2) as a candidate never evaluated in the original review. The orchestrator
@@ -388,8 +68,12 @@ prioritization. A full targeted literature search and red-team critique were non
 (per the study team's request) and are included below for completeness and traceability, but the
 red-team-skeptic's verdict is <strong>RULED OUT</strong> for ATP2B2 (see Prioritized-gene synthesis and audit
 appendix for full reasoning) — its inclusion is assessed as most likely a window-boundary artifact
-of the merge-file correction rather than genuine evidence of causal involvement at this locus.</p>
-<table>
+of the merge-file correction rather than genuine evidence of causal involvement at this locus.</p></div>
+
+
+<h2 id="atp2b2-addendum-note-read-before-the-table">ATP2B2 addendum note (read before the table)</h2>
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -402,175 +86,175 @@ of the merge-file correction rather than genuine evidence of causal involvement 
 </thead>
 <tbody>
 <tr>
-<td>TATDN2</td>
+<td class="gene">TATDN2</td>
 <td>Molecular function</td>
 <td>Human TATDN2 has RNA 3' exonuclease/endonuclease activity, resolves R-loops (RNA:DNA hybrids) at stalled replication forks, required for survival of BRCA1-deficient cancer cells (general biology, no established COPD/lung link)</td>
 <td>PMID 37953292 / DOI 10.1093/nar/gkad952</td>
-<td>CONTESTED (gene-level; see below)</td>
+<td><span class="tag-warning">CONTESTED</span> (gene-level; see below)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TATDN2</td>
+<td class="gene">TATDN2</td>
 <td>Molecular function (review)</td>
 <td>Review discussing TATDN2 among nucleases mitigating replication stress from R-loop accumulation in BRCA1-defective cells</td>
 <td>PMID 38069223 / DOI 10.3390/ijms242316903</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TATDN2</td>
+<td class="gene">TATDN2</td>
 <td>Developmental biology (model organism, non-pulmonary)</td>
 <td>Zebrafish/medaka Tatdn2 required for DNA repair/genome stability in primordial germ cells; knockout causes infertility via germ-cell depletion/apoptosis</td>
 <td>PMID 41404808 / DOI 10.1093/nar/gkaf1289</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TATDN2</td>
+<td class="gene">TATDN2</td>
 <td>Statistical genetics (candidate-gene/eQTL; distinct variants from this locus's credible set)</td>
 <td>TATDN2 missense variant rs394558 (not a credible-set variant here) flagged in small Kuwaiti familial type-1-diabetes linkage study; same paper reports via GTEx that a different nearby SNP, rs942379 (also not a credible-set variant here), is a cis-eQTL for IRAK2 expression</td>
 <td>PMID 37696853 / DOI 10.1038/s41598-023-42255-2</td>
-<td>CONTESTED — small candidate-gene/linkage design; supports IRAK2-regulatory hypothesis but via different SNPs than this locus's credible set</td>
+<td><span class="tag-warning">CONTESTED</span> — small candidate-gene/linkage design; supports IRAK2-regulatory hypothesis but via different SNPs than this locus's credible set</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TATDN2</td>
+<td class="gene">TATDN2</td>
 <td>Genomic architecture</td>
 <td>TATDN2's 3' UTR/terminal exon overlaps antisense ncRNA GHRLOS, chimeric with TATDN2 transcripts, spanning the GHRL (ghrelin) promoter</td>
 <td>PMID 18954468 / DOI 10.1186/1471-2199-9-95</td>
-<td>CONTESTED — architecture note only, not a disease-biology claim</td>
+<td><span class="tag-warning">CONTESTED</span> — architecture note only, not a disease-biology claim</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TATDN2</td>
+<td class="gene">TATDN2</td>
 <td>Oncology bystander (non-pulmonary)</td>
 <td>TATDN2 is 1 of 6 genes in an endoplasmic-reticulum-stress gene signature associated with tumor immune infiltration in head-and-neck squamous cell carcinoma</td>
 <td>PMID 37087456 / DOI 10.1186/s13000-023-01338-4</td>
-<td>CONTESTED — no lung relevance</td>
+<td><span class="tag-warning">CONTESTED</span> — no lung relevance</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRAK2</td>
+<td class="gene">IRAK2</td>
 <td>Molecular mechanism (foundational)</td>
 <td>IRAK2 is a Myddosome (MyD88-IRAK4-IRAK2) component; dominant-negative IRAK2 blocks LPS/IL-1-induced NF-κB activation in monocytes/endothelial cells</td>
 <td>PMID 10075645 / DOI 10.1074/jbc.274.12.7611</td>
-<td>CONTESTED (gene-level; see below)</td>
+<td><span class="tag-warning">CONTESTED</span> (gene-level; see below)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRAK2</td>
+<td class="gene">IRAK2</td>
 <td>COPD/asthma airway biomarker (direct COPD relevance)</td>
 <td>IL-1 pathway gene expression in induced sputum from COPD and asthma patients; IRAK2 sputum expression elevated in patients with frequent exacerbations (≥2/year) and predicted future frequent exacerbations (AUC=68.6%, p=0.004)</td>
 <td>PMID 28223794 / DOI 10.2147/COPD.S119443</td>
-<td>CONTESTED — correlative/transcriptomic biomarker evidence in a mixed asthma+COPD cohort, not genetic association; direction of causality (cause vs. consequence of inflammation) unresolved</td>
+<td><span class="tag-warning">CONTESTED</span> — correlative/transcriptomic biomarker evidence in a mixed asthma+COPD cohort, not genetic association; direction of causality (cause vs. consequence of inflammation) unresolved</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRAK2</td>
+<td class="gene">IRAK2</td>
 <td>Airway epithelial inflammatory response</td>
 <td>poly(I:C) (TLR3 ligand) stimulation of primary small airway epithelial cells increased IRAK2 and MyD88 gene expression alongside a broad proinflammatory cytokine/chemokine/MMP response; proposed mechanism for viral exacerbations of COPD/asthma</td>
 <td>PMID 16316467 / DOI 10.1186/1476-9255-2-16</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRAK2</td>
+<td class="gene">IRAK2</td>
 <td>Asthma model (not COPD) — extrapolated</td>
 <td>PELI1-mediated K63-ubiquitination degrades IRAK2 in airway epithelial cells; reduced PELI1 (higher IRAK2) activates p38-MAPK/NF-κB, promotes airway inflammation/remodeling in a house-dust-mite pediatric asthma mouse model; IRAK2 overexpression in 16HBE cells reversed PELI1's protective effect</td>
 <td>PMID 40986758 / DOI 10.1165/rcmb.2024-0573OC</td>
-<td>CONTESTED — asthma/pediatric model, extrapolated to COPD by the researcher, not stated in the paper</td>
+<td><span class="tag-warning">CONTESTED</span> — asthma/pediatric model, extrapolated to COPD by the researcher, not stated in the paper</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRAK2</td>
+<td class="gene">IRAK2</td>
 <td>Pediatric asthma, peripheral blood — extrapolated</td>
 <td>IRAK2 (with IL-1RN, IL-1β, IL-1RAP, IRAK3, IL-1R1, MYD88, PELI1) upregulated in peripheral blood of children with asthma vs. healthy controls</td>
 <td>PMID 33025692 / DOI 10.1111/pai.13388</td>
-<td>CONTESTED — pediatric asthma, blood not airway tissue, not COPD</td>
+<td><span class="tag-warning">CONTESTED</span> — pediatric asthma, blood not airway tissue, not COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRAK2</td>
+<td class="gene">IRAK2</td>
 <td>Asthma model, mechanistic/pharmacologic — extrapolated</td>
 <td>Small-molecule mimetics of the IRAK2 α-helical domain disrupt Myddosome (MyD88-IRAK4-IRAK2) formation and attenuate IL-33/ST2-driven airway inflammation in asthma-like mouse models</td>
 <td>PMID 29728508 / DOI 10.4049/jimmunol.1700693</td>
-<td>CONTESTED — asthma models, not COPD</td>
+<td><span class="tag-warning">CONTESTED</span> — asthma models, not COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRAK2</td>
+<td class="gene">IRAK2</td>
 <td>COPD transcriptomic network (direct COPD relevance)</td>
 <td>IRAK2 identified as a hub gene in a COPD blood/lung-tissue shared differentially-expressed-gene network linked to protein degradation, inflammatory cytokine production, airway remodeling, and immune cell activity</td>
 <td>PMID 36194576 / DOI 10.1371/journal.pone.0274629</td>
-<td>CONTESTED — bioinformatic co-expression &quot;hub gene,&quot; not genetic-causal evidence</td>
+<td><span class="tag-warning">CONTESTED</span> — bioinformatic co-expression "hub gene," not genetic-causal evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRAK2</td>
+<td class="gene">IRAK2</td>
 <td>Rare-variant immunodeficiency (non-pulmonary)</td>
 <td>Germline IRAK2 mutations impairing TRAF6 ubiquitination/TNF-α production found in two patients with severe, recurrent invasive infections</td>
 <td>PMID 39299377 / DOI 10.1016/j.ijid.2024.107245</td>
-<td>CONTESTED — n=2 case report, general infection susceptibility, not lung-specific</td>
+<td><span class="tag-warning">CONTESTED</span> — n=2 case report, general infection susceptibility, not lung-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRAK2</td>
+<td class="gene">IRAK2</td>
 <td>Autoimmune candidate-gene association (non-pulmonary)</td>
 <td>IRAK2 candidate-SNP association with systemic lupus erythematosus (rs708035, rs3844283) in a Tunisian case-control study (n=142 cases/149 controls)</td>
 <td>PMID 31650390 / DOI 10.1007/s10067-019-04781-1</td>
-<td>CONTESTED — small candidate-gene study, no stated multiple-testing correction/replication</td>
+<td><span class="tag-warning">CONTESTED</span> — small candidate-gene study, no stated multiple-testing correction/replication</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRAK2</td>
+<td class="gene">IRAK2</td>
 <td>Subthreshold GWAS (non-pulmonary)</td>
 <td>IRAK2 flagged (subthreshold, not genome-wide significant) in a GWAS of sepsis in extremely premature infants for Gram-positive sepsis susceptibility, with IRAK2-related pathway enrichment for Gram-negative sepsis</td>
 <td>PMID 28283553 / DOI 10.1136/archdischild-2016-311545</td>
-<td>CONTESTED — subthreshold signal, neonatal sepsis, not COPD/lung function</td>
+<td><span class="tag-warning">CONTESTED</span> — subthreshold signal, neonatal sepsis, not COPD/lung function</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRAK2</td>
+<td class="gene">IRAK2</td>
 <td>Mechanistic (sepsis/LPS models, non-pulmonary)</td>
 <td>4-1BBL-TLR4 late-phase signaling requires IRAK2</td>
 <td>PMID 24084649 / DOI 10.1126/scisignal.2004431</td>
-<td>CONTESTED — generic innate-immune mechanism</td>
+<td><span class="tag-warning">CONTESTED</span> — generic innate-immune mechanism</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRAK2</td>
+<td class="gene">IRAK2</td>
 <td>Mechanistic (sepsis models, non-pulmonary)</td>
 <td>OTUD5 regulates MyD88-IRAK2 Myddosome formation in LPS/CLP sepsis mouse models</td>
 <td>PMID 38605168 / DOI 10.1038/s41418-024-01293-7</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRAK2</td>
+<td class="gene">IRAK2</td>
 <td>Mechanistic (sepsis models, non-pulmonary)</td>
 <td>lncRNA NEAT1-miR-370-3p-Irak2 axis relevant in sepsis cell models</td>
 <td>PMID 32414769 / DOI 10.1242/bio.049353</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRAK2</td>
+<td class="gene">IRAK2</td>
 <td>Mechanistic (peritonitis/sepsis model, non-pulmonary)</td>
 <td>IRAK2 among upregulated TLR-signaling genes in a peritonitis/sepsis model</td>
 <td>PMID 21696761</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRAK2</td>
+<td class="gene">IRAK2</td>
 <td>Mechanistic (LPS/inflammation model, non-pulmonary)</td>
 <td>IRAK2 shows rapid transcriptional activation during acute LPS-induced inflammation</td>
 <td>PMID 19284987</td>
-<td>CONTESTED</td>
+<td><span class="tag-warning">CONTESTED</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GHRL (background only — not credible-set overlapped, not prioritized by any method)</td>
+<td class="gene">GHRL (background only — not credible-set overlapped, not prioritized by any method)</td>
 <td>Physiology (COPD cachexia, non-genetic)</td>
 <td>In a cigarette-smoke-exposed rat COPD model, plasma ghrelin levels significantly increased alongside decreased body weight and muscle strength/increased catabolic markers</td>
 <td>PMID 25770835</td>
@@ -578,7 +262,7 @@ of the merge-file correction rather than genuine evidence of causal involvement 
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GHRL (background only)</td>
+<td class="gene">GHRL (background only)</td>
 <td>Physiology (review, non-genetic)</td>
 <td>Ghrelin discussed as an orexigenic peptide relevant to cachexia/wasting in COPD and other chronic conditions</td>
 <td>PMID 20164318</td>
@@ -586,23 +270,23 @@ of the merge-file correction rather than genuine evidence of causal involvement 
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP2B2 (addendum — marginal 3'-end window overlap only, no credible-set overlap; see note above)</td>
+<td class="gene">ATP2B2 (addendum — marginal 3'-end window overlap only, no credible-set overlap; see note above)</td>
 <td>Molecular function (general PMCA-family biology, non-pulmonary)</td>
-<td>Basal cytosolic Ca2+ in airway smooth muscle is regulated by SERCA2b, &quot;plasma membrane Ca2+-ATPase 1 or 4,&quot; and Na+/Ca2+ exchanger — i.e., PMCA1/PMCA4, not PMCA2, named as the ASM-expressed isoforms</td>
+<td>Basal cytosolic Ca2+ in airway smooth muscle is regulated by SERCA2b, "plasma membrane Ca2+-ATPase 1 or 4," and Na+/Ca2+ exchanger — i.e., PMCA1/PMCA4, not PMCA2, named as the ASM-expressed isoforms</td>
 <td>PMID 30280184 / DOI 10.3892/ijmm.2018.3910</td>
 <td>RULED OUT (gene-level; see below)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP2B2</td>
+<td class="gene">ATP2B2</td>
 <td>Structural/developmental (cochlea, non-pulmonary)</td>
-<td>PMCA2 (Atp2b2) is the primary Ca2+-clearance mechanism in cochlear/vestibular hair-cell stereocilia; loss-of-function &quot;deafwaddler&quot; mouse alleles cause deafness/vestibular dysfunction via genetic interaction with Cdh23</td>
+<td>PMCA2 (Atp2b2) is the primary Ca2+-clearance mechanism in cochlear/vestibular hair-cell stereocilia; loss-of-function "deafwaddler" mouse alleles cause deafness/vestibular dysfunction via genetic interaction with Cdh23</td>
 <td>PMID 23792079 / DOI 10.1016/j.heares.2013.06.003</td>
 <td>RULED OUT</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP2B2</td>
+<td class="gene">ATP2B2</td>
 <td>Human genetic association (hearing loss, non-pulmonary)</td>
 <td>ATP2B2 polymorphism rs3209637 associated with noise-induced hearing loss risk in Chinese textile workers; smoking/drinking examined as interacting environmental risk factors for the hearing-loss outcome (not a smoking-behavior or lung-function finding)</td>
 <td>PMID 31886164 / DOI 10.1155/2019/5048943</td>
@@ -610,7 +294,7 @@ of the merge-file correction rather than genuine evidence of causal involvement 
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP2B2</td>
+<td class="gene">ATP2B2</td>
 <td>Structural/developmental (cerebellum, non-pulmonary)</td>
 <td>PMCA2 is the most abundantly expressed PMCA isoform in cerebellar Purkinje cells; PMCA2 heterozygous mice show altered AMPA-receptor Ca2+ transients, glutamate-receptor dysregulation, and delayed Purkinje cell death</td>
 <td>PMID 22789621 / DOI 10.1016/j.mcn.2012.07.001</td>
@@ -618,7 +302,7 @@ of the merge-file correction rather than genuine evidence of causal involvement 
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP2B2</td>
+<td class="gene">ATP2B2</td>
 <td>Cardiovascular bystander (non-pulmonary)</td>
 <td>ATP2B2 listed among calcium-regulation genes with CHD-associated CpG sites in a blood-leukocyte DNA-methylation study of incident coronary heart disease</td>
 <td>PMID 31424985 / DOI 10.1161/CIRCULATIONAHA.118.039357</td>
@@ -626,7 +310,7 @@ of the merge-file correction rather than genuine evidence of causal involvement 
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP2B2</td>
+<td class="gene">ATP2B2</td>
 <td>Paralog-differentiation (airway smooth muscle, non-pulmonary-for-PMCA2)</td>
 <td>Rat airway smooth muscle cells express PMCA1 and PMCA4 mRNA by PCR (PMCA4 downregulated in proliferating vs. resting cells); no PMCA2 signal reported</td>
 <td>PMID 24912144 / DOI 10.1016/j.ejphar.2014.05.055</td>
@@ -634,7 +318,7 @@ of the merge-file correction rather than genuine evidence of causal involvement 
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP2B2</td>
+<td class="gene">ATP2B2</td>
 <td>Paralog-differentiation (airway smooth muscle, non-pulmonary-for-PMCA2)</td>
 <td>Guinea-pig airway smooth muscle expresses PMCA1 and PMCA4 by Western blot; 17β-estradiol inhibits PMCA to produce airway hyperresponsiveness (proposed mechanism for sex differences in asthma severity)</td>
 <td>PMID 38763427 / DOI 10.1016/j.mce.2024.112273</td>
@@ -642,7 +326,7 @@ of the merge-file correction rather than genuine evidence of causal involvement 
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP2B2</td>
+<td class="gene">ATP2B2</td>
 <td>Paralog-differentiation (general ASM Ca2+ signaling review, non-pulmonary-for-PMCA2)</td>
 <td>Review of calcium-regulatory/mechanosensitive-channel interactions in asthma pathophysiology discusses SERCA/SOCE/IP3R without naming any PMCA isoform</td>
 <td>PMID 37905552 / DOI 10.1080/17476348.2023.2276732</td>
@@ -650,7 +334,7 @@ of the merge-file correction rather than genuine evidence of causal involvement 
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP2B2</td>
+<td class="gene">ATP2B2</td>
 <td>Paralog-differentiation (ASM Ca2+/Na+ handling, non-pulmonary-for-PMCA2)</td>
 <td>Airway smooth muscle Na+/K+-ATPase and Na+/Ca2+ exchanger (NCX) relevant to bronchoconstriction/airway tone, without implicating PMCA2</td>
 <td>PMID 28534960 / DOI 10.3892/ijmm.2017.2993</td>
@@ -658,7 +342,7 @@ of the merge-file correction rather than genuine evidence of causal involvement 
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP2B2</td>
+<td class="gene">ATP2B2</td>
 <td>Paralog-differentiation (ASM Ca2+ handling, non-pulmonary-for-PMCA2)</td>
 <td>TRPV4-IP3R-NCX complex regulates tracheal smooth muscle tension, without implicating PMCA2</td>
 <td>PMID 31866874 / DOI 10.3389/fphys.2019.01471</td>
@@ -666,7 +350,7 @@ of the merge-file correction rather than genuine evidence of causal involvement 
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP2B2</td>
+<td class="gene">ATP2B2</td>
 <td>Paralog-differentiation (pulmonary vascular remodeling, non-pulmonary-airway)</td>
 <td>PMCA4 (not PMCA2) downregulation via PDGF/MEK/ERK axis impairs Ca2+ clearance and promotes pulmonary arterial smooth muscle cell proliferation/vascular remodeling in a pulmonary arterial hypertension model</td>
 <td>PMID 32966125 / DOI 10.1152/ajpcell.00290.2020</td>
@@ -674,7 +358,7 @@ of the merge-file correction rather than genuine evidence of causal involvement 
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP2B2</td>
+<td class="gene">ATP2B2</td>
 <td>Paralog-differentiation (T-cell calcium signaling, non-pulmonary-for-PMCA2)</td>
 <td>STIM1 recruits PMCA4 (not PMCA2) to inhibit Ca2+ clearance during T-cell activation, sustaining Ca2+ elevation required for NFAT activity/IL-2 induction in Jurkat T cells</td>
 <td>PMID 27528628 / DOI 10.1096/fj.201600532R</td>
@@ -682,7 +366,7 @@ of the merge-file correction rather than genuine evidence of causal involvement 
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATP2B2</td>
+<td class="gene">ATP2B2</td>
 <td>Paralog-differentiation (T-cell immunoregulation, non-pulmonary-for-PMCA2)</td>
 <td>CD147 physically associates with PMCA4 (not PMCA2); PMCA4 required for CD147-mediated, calcium-independent suppression of IL-2 expression in human T cells</td>
 <td>PMID 26729804 / DOI 10.4049/jimmunol.1501889</td>
@@ -690,7 +374,7 @@ of the merge-file correction rather than genuine evidence of causal involvement 
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not reviewed by citation-verifier or red-team-skeptic)</h2>
 <ul>
 <li><strong>TATDN2</strong> (ENSG00000157014): No L2G score or colocalization evidence for COPD (MONDO_0005002) or FEV1/FVC ratio (EFO_0004713) — both disease-association queries returned zero hits. Open Targets' only credible set at the lead-variant position (rs2543459 / 3_10247090_C_A) is an unrelated GTEx LCL exon-eQTL for a different, non-overlapping gene — not a COPD/lung-function GWAS credible set, and not colocalized with TATDN2. General (non-COPD) disease associations (count=304) are dominated by ocular/retinal degenerative disease and hearing loss via the <code>animal_model</code> (mouse-knockout) datatype, not genetic_association or literature evidence, and are not biologically relevant to this locus. Genetic constraint: pLoF oe=0.708 (oeLower 0.555, oeUpper 0.910, score≈5.3e-11) — significant, moderate LoF depletion. Not essential; no small-molecule binder; no ligand/pocket. Genomic location (confirmed during ATP2B2 addendum re-check): chr3:10,248,023-10,281,218 (strand +1) — consistent with the credible-set variant range.</li>
@@ -725,10 +409,10 @@ ATP2B2's real top disease associations (hearing loss, neurodevelopmental disorde
 with any pulmonary phenotype. The red-team-skeptic's explicit verdict for ATP2B2 is <strong>RULED OUT</strong>,
 with the assessment that its surfacing by the corrected merge file most likely reflects a
 window-boundary artifact (the fix changed which genes' coordinate ranges are flagged as
-&quot;overlapping the analysis window,&quot; not new evidence of a mechanistic role at this locus) — a
+"overlapping the analysis window," not new evidence of a mechanistic role at this locus) — a
 finding the orchestrator flags to the study team as worth checking systematically across other loci
 reprocessed by the same corrected merge file, since a gene clipped only at its 3'/5' terminus by a
-window boundary is a materially different (and much weaker) kind of &quot;candidate&quot; than a gene
+window boundary is a materially different (and much weaker) kind of "candidate" than a gene
 overlapped by credible-set variants or fine-mapping signal.</p>
 <p>With ATP2B2 ruled out, the original two-gene TATDN2-vs-IRAK2 tension stands exactly as before, and
 the reasoning for the IRAK2/LOW call is unchanged from the original review: the credible-set
@@ -749,7 +433,7 @@ confidence remains LOW rather than MODERATE: (1) MAGMA and PoPS are not independ
 statistical-genetic evidence on the order of fine-mapping or colocalization — MAGMA's gene-based
 window may not be statistically distinguishable from the same TATDN2-dominant association signal
 given the genes' physical proximity, and PoPS is known to favor well-annotated, biologically
-&quot;compelling&quot; genes (which IRAK2, a well-studied innate-immune gene, certainly is) independent of
+"compelling" genes (which IRAK2, a well-studied innate-immune gene, certainly is) independent of
 whether it is the true local causal gene; (2) the two direct-COPD citations are correlative
 transcriptomic/expression evidence, not genetic association, and cannot establish that IRAK2
 dysregulation is causally upstream of COPD risk rather than a downstream consequence of airway
@@ -777,5 +461,7 @@ overlap (as with ATP2B2 here) rather than credible-set-span overlap at other rep
 study team should weigh this recommendation accordingly and treat it as provisional pending that
 follow-up work.</p>
 
+        </div>
+    </div>
 </body>
 </html>

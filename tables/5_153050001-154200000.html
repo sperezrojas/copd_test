@@ -1,385 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>5_153050001-154200000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 5:153,050,001-154,200,000 (GRCh38), nearest gene GRIA1</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-5153050001-154200000-grch38-nearest-gene-gria1">Evidence table — locus 5:153,050,001-154,200,000 (GRCh38), nearest gene GRIA1</h1>
-<p>Lead variant: rs57976819 (5:153,205,072), intronic to LINC01470, MODIFIER impact. The
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-5153050001-154200000-grch38-nearest-gene-gria1">Evidence table — locus 5:153,050,001-154,200,000 (GRCh38), nearest gene GRIA1</h1><div class="summary"><p>Lead variant: rs57976819 (5:153,205,072), intronic to LINC01470, MODIFIER impact. The
 ~89-variant ABF fine-mapping credible set is essentially entirely annotated to LINC01470
 (intron_variant / non_coding_transcript_variant, one upstream_gene_variant); no missense or
 splice-donor/acceptor variants are in the credible set. Internal pipeline candidate genes:
 nearest gene / FLAMES / PoPS = GRIA1; MAGMA = SAP30L; ABC = NA. Two additional protein-coding
 genes physically inside the locus (FAM114A2, MFAP3) and one at the boundary (GALNT10) were
 identified by the researcher via direct Ensembl region query and are included below for
-completeness, though none were flagged by any internal prioritization method.</p>
-<p>All citations below carry verdict VERIFIED from citation-verifier (23/23 verified, 0
+completeness, though none were flagged by any internal prioritization method.</p><p>All citations below carry verdict VERIFIED from citation-verifier (23/23 verified, 0
 retracted, 0 not-found, 0 claim-mismatch; see <code>evidence_tables/_status/5_153050001-154200000/verified_citations.md</code>).
-The &quot;Skeptic verdict&quot; column reflects red-team-skeptic's scientific-interpretation critique
+The "Skeptic verdict" column reflects red-team-skeptic's scientific-interpretation critique
 (citation existence is separate from and already covered by the VERIFIED status of every
-row) — see <code>audits/5_153050001-154200000_audit.md</code> for full reasoning per gene.</p>
-<table>
+row) — see <code>audits/5_153050001-154200000_audit.md</code> for full reasoning per gene.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -392,191 +76,191 @@ row) — see <code>audits/5_153050001-154200000_audit.md</code> for full reasoni
 </thead>
 <tbody>
 <tr>
-<td>GRIA1</td>
+<td class="gene">GRIA1</td>
 <td>Statgen (COPD GWAS, indirect)</td>
 <td>82-locus ICGC/UK Biobank COPD GWAS (source-cohort candidate); abstract does not itself confirm this 5q33/GRIA1 region is among the 82 reported loci</td>
 <td>Sakornsakolpat et al. 2019, Nat Genet 51:494-505. PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
-<td>WEAKENED (no confirmed locus-specific overlap)</td>
+<td><span class="tag-warning">WEAKENED</span> (no confirmed locus-specific overlap)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GRIA1</td>
+<td class="gene">GRIA1</td>
 <td>Statgen (lung function/COPD GWAS, indirect)</td>
 <td>1,020-signal / 559-gene multi-ancestry lung-function/COPD GWAS; does not confirm GRIA1 specifically is among the 559 genes</td>
 <td>Shrine et al. 2023, Nat Genet 55:410-422. PMID 36914875 / DOI 10.1038/s41588-023-01314-0</td>
-<td>WEAKENED (no confirmed locus-specific overlap)</td>
+<td><span class="tag-warning">WEAKENED</span> (no confirmed locus-specific overlap)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GRIA1</td>
+<td class="gene">GRIA1</td>
 <td>Statgen (smoking-behavior GWAS, indirect)</td>
 <td>2,143-locus tobacco/alcohol-use GWAS (GSCAN); does not confirm this GRIA1 locus is among reported loci</td>
 <td>Saunders et al. 2022, Nature 612:720-724. PMID 36477530 / DOI 10.1038/s41586-022-05477-4</td>
-<td>WEAKENED (smoking-mediation hypothesis not directly confirmed at this locus)</td>
+<td><span class="tag-warning">WEAKENED</span> (smoking-mediation hypothesis not directly confirmed at this locus)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GRIA1</td>
+<td class="gene">GRIA1</td>
 <td>Statgen (psychiatric GWAS, direct gene-level)</td>
-<td>Multi-ancestry PTSD GWAS (95 loci) explicitly names GRIA1 among 43 prioritized candidate causal genes, classified &quot;neurotransmitter and ion channel synaptic regulator&quot;</td>
+<td>Multi-ancestry PTSD GWAS (95 loci) explicitly names GRIA1 among 43 prioritized candidate causal genes, classified "neurotransmitter and ion channel synaptic regulator"</td>
 <td>Nievergelt et al. 2024, Nat Genet 56:792-808. PMID 38637617 / DOI 10.1038/s41588-024-01707-9</td>
-<td>WEAKENED (real GRIA1-specific signal, but for a different phenotype, not COPD/lung/smoking)</td>
+<td><span class="tag-warning">WEAKENED</span> (real GRIA1-specific signal, but for a different phenotype, not COPD/lung/smoking)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GRIA1</td>
+<td class="gene">GRIA1</td>
 <td>Statgen (paralog, smoking-behavior)</td>
 <td>GRIA4 (AMPA-receptor paralog of GRIA1) is a genome-wide-significant risk locus for comorbid nicotine dependence and major depression</td>
 <td>Zhou et al. 2018, Transl Psychiatry 8:208. PMID 30287806 / DOI 10.1038/s41398-018-0258-8</td>
-<td>WEAKENED (paralog-level evidence only, not GRIA1 itself)</td>
+<td><span class="tag-warning">WEAKENED</span> (paralog-level evidence only, not GRIA1 itself)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GRIA1</td>
+<td class="gene">GRIA1</td>
 <td>Immune/structural (receptor-subtype mismatch)</td>
 <td>NMDA (not AMPA/GRIA1) ionotropic glutamate receptors mediate contractile responses in human airway smooth muscle</td>
 <td>Anaparti et al. 2015, Am J Physiol Lung Cell Mol Physiol 308:L1253-64. PMID 25888577 / DOI 10.1152/ajplung.00402.2014</td>
-<td>WEAKENED / off-target (wrong receptor subtype, GRIN not GRIA)</td>
+<td><span class="tag-warning">WEAKENED</span> / off-target (wrong receptor subtype, GRIN not GRIA)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GRIA1</td>
+<td class="gene">GRIA1</td>
 <td>Immune/structural (receptor-subtype mismatch)</td>
 <td>TNF modulates NMDA receptor subunit expression/calcium responses in airway smooth muscle, linking glutamatergic signaling to inflammation-associated airway hyperreactivity</td>
 <td>Anaparti et al. 2016, Am J Physiol Lung Cell Mol Physiol 311:L467-80. PMID 27371735 / DOI 10.1152/ajplung.00382.2015</td>
-<td>WEAKENED / off-target (wrong receptor subtype)</td>
+<td><span class="tag-warning">WEAKENED</span> / off-target (wrong receptor subtype)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GRIA1</td>
+<td class="gene">GRIA1</td>
 <td>Immune/structural (receptor-subtype mismatch)</td>
 <td>Guinea-pig model: NMDA receptor agonists/antagonists modulate airway hyperreactivity</td>
 <td>Strapkova &amp; Antosova 2012, Gen Physiol Biophys 31:93-100. PMID 22447835 / DOI 10.4149/gpb_2012_012</td>
-<td>WEAKENED / off-target (wrong receptor subtype)</td>
+<td><span class="tag-warning">WEAKENED</span> / off-target (wrong receptor subtype)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GRIA1</td>
+<td class="gene">GRIA1</td>
 <td>Behavioral/neurobiology (direct gene-level, non-pulmonary)</td>
 <td>Gria1-conditional-knockout mice: GluA1 in dopamine-system neurons mediates the alcohol deprivation effect (relapse-like behavior) but not cue-induced reinstatement</td>
 <td>Eisenhardt et al. 2015, J Neurosci 35:15523-38. PMID 26609150 / DOI 10.1523/JNEUROSCI.2970-15.2015</td>
-<td>WEAKENED (CNS/behavioral phenotype, not lung)</td>
+<td><span class="tag-warning">WEAKENED</span> (CNS/behavioral phenotype, not lung)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SAP30L</td>
+<td class="gene">SAP30L</td>
 <td>Structural/developmental (non-pulmonary)</td>
 <td>SAP30L knockdown in zebrafish causes cardiac insufficiency and defective erythrocyte hemoglobinization via nkx2.5/TGF-beta/Wnt pathway changes</td>
 <td>Teittinen et al. 2012, J Cell Biochem 113:3843-52. PMID 22821512 / DOI 10.1002/jcb.24298</td>
-<td>CONTESTED (wrong organ system; no lung phenotype)</td>
+<td><span class="tag-warning">CONTESTED</span> (wrong organ system; no lung phenotype)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SAP30L</td>
+<td class="gene">SAP30L</td>
 <td>Molecular biology (no disease claim)</td>
 <td>SAP30L interacts with the Sin3A corepressor complex and targets Sin3A to the nucleolus</td>
 <td>Viiri et al. 2006, Nucleic Acids Res 34:3288-98. PMID 16820529 / DOI 10.1093/nar/gkl401</td>
-<td>CONTESTED (basic biochemistry, no disease/tissue relevance)</td>
+<td><span class="tag-warning">CONTESTED</span> (basic biochemistry, no disease/tissue relevance)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SAP30L</td>
+<td class="gene">SAP30L</td>
 <td>Molecular biology (no disease claim)</td>
 <td>Alternative mRNA splicing of SAP30L regulates its transcriptional repression activity</td>
 <td>Korkeamäki et al. 2007, FEBS Lett 582:379-84. PMID 18070604 / DOI 10.1016/j.febslet.2007.11.084</td>
-<td>CONTESTED (basic biochemistry)</td>
+<td><span class="tag-warning">CONTESTED</span> (basic biochemistry)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SAP30L</td>
+<td class="gene">SAP30L</td>
 <td>Molecular biology (no disease claim)</td>
 <td>DNA-binding and -bending activities of SAP30L/SAP30 mediated by a zinc-dependent module and monophosphoinositides</td>
 <td>Viiri et al. 2008, Mol Cell Biol 29:342-56. PMID 19015240 / DOI 10.1128/MCB.01213-08</td>
-<td>CONTESTED (basic biochemistry)</td>
+<td><span class="tag-warning">CONTESTED</span> (basic biochemistry)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SAP30L</td>
+<td class="gene">SAP30L</td>
 <td>Molecular biology (no disease claim)</td>
 <td>Redox-dependent disulfide bond formation in the SAP30L zinc finger as a regulatory mechanism</td>
 <td>Laitaoja et al. 2015, Protein Sci 25:572-86. PMID 26609676 / DOI 10.1002/pro.2849</td>
-<td>CONTESTED (basic biochemistry)</td>
+<td><span class="tag-warning">CONTESTED</span> (basic biochemistry)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SAP30L</td>
+<td class="gene">SAP30L</td>
 <td>Structural proteomics (no disease claim)</td>
 <td>SAP30L shows unique proteomic associations with the proteasome and myelin sheath, distinct from paralog SAP30</td>
 <td>Banks et al. 2018, PMID 29599190 / DOI 10.1074/mcp.TIR118.000661</td>
-<td>CONTESTED (basic proteomics, no disease/tissue relevance)</td>
+<td><span class="tag-warning">CONTESTED</span> (basic proteomics, no disease/tissue relevance)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SAP30L</td>
+<td class="gene">SAP30L</td>
 <td>Structural proteomics (no disease claim)</td>
 <td>Cross-linking mass spectrometry structural characterization of the Sin3/HDAC complex</td>
 <td>Banks et al. 2020, PMID 32294434 / DOI 10.1016/j.celrep.2020.03.080</td>
-<td>CONTESTED (basic proteomics)</td>
+<td><span class="tag-warning">CONTESTED</span> (basic proteomics)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FAM114A2</td>
+<td class="gene">FAM114A2</td>
 <td>Statgen + immune (different disease)</td>
 <td>GWAS in IBD identified rs34767465 (a FAM114A2 multi-tissue eQTL) associated with anti-TNFalpha primary nonresponse (OR 2.07, replication OR 1.8); FAM114A2 knockdown in THP-1 macrophages increased TNFalpha secretion via impaired autophagy-pathway genes</td>
 <td>De et al. 2022, Pharmacogenetics and Genomics 32:1-9. PMID 34380996 / DOI 10.1097/FPC.0000000000000445</td>
-<td>WEAKENED (different disease/variant; no LD check vs. this locus's credible set)</td>
+<td><span class="tag-warning">WEAKENED</span> (different disease/variant; no LD check vs. this locus's credible set)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FAM114A2</td>
+<td class="gene">FAM114A2</td>
 <td>Immune (different disease context)</td>
 <td>FAM114A2 is a direct binding target mediating HIV-1 latency reversal via PKC-beta-NF-kB signaling in T-cell models</td>
 <td>Ding et al. 2025, J Proteome Res 24:5439-5452. PMID 41131870 / DOI 10.1021/acs.jproteome.5c00242</td>
-<td>WEAKENED (unrelated disease context)</td>
+<td><span class="tag-warning">WEAKENED</span> (unrelated disease context)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MFAP3</td>
+<td class="gene">MFAP3</td>
 <td>Structural (wrong tissue)</td>
 <td>MFAP3 protein localizes to microfibrils in ocular zonules; gene maps to 5q32-q33.2 near FBN2</td>
 <td>Abrams et al. 1995, Genomics 26:47-54. PMID 7782085 / DOI 10.1016/0888-7543(95)80081-v</td>
-<td>CONTESTED (eye tissue, not lung; no disease association)</td>
+<td><span class="tag-warning">CONTESTED</span> (eye tissue, not lung; no disease association)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MFAP3</td>
+<td class="gene">MFAP3</td>
 <td>Structural (paralog mismatch)</td>
-<td>Review of MFAP1-5 family: MFAP4-deficient (not MFAP3) mice show emphysema-like pathology and impaired neointimal hyperplasia; MFAP3 itself is &quot;more ubiquitously expressed,&quot; no MFAP3-specific lung phenotype reported</td>
+<td>Review of MFAP1-5 family: MFAP4-deficient (not MFAP3) mice show emphysema-like pathology and impaired neointimal hyperplasia; MFAP3 itself is "more ubiquitously expressed," no MFAP3-specific lung phenotype reported</td>
 <td>Zhu et al. 2020, J Cell Physiol 236:41-48. PMID 32572962 / DOI 10.1002/jcp.29893</td>
-<td>CONTESTED (paralog's phenotype, not MFAP3's)</td>
+<td><span class="tag-warning">CONTESTED</span> (paralog's phenotype, not MFAP3's)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GALNT10</td>
+<td class="gene">GALNT10</td>
 <td>Oncology (unrelated organ)</td>
 <td>GALNT10 promotes gastric cancer proliferation/metastasis and reduces 5-FU sensitivity via HOXD13 activation</td>
 <td>Xu et al. 2020, Eur Rev Med Pharmacol Sci 24:11610-11619. PMID 33275228 / DOI 10.26355/eurrev_202011_23804</td>
-<td>CONTESTED (unrelated organ/disease)</td>
+<td><span class="tag-warning">CONTESTED</span> (unrelated organ/disease)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GALNT10</td>
+<td class="gene">GALNT10</td>
 <td>Oncology (unrelated organ)</td>
 <td>lncRNA DLGAP1-AS2/miR-505/GALNT10 axis promotes cholangiocarcinoma progression</td>
 <td>Liu et al. 2020, FEBS Open Bio 11:413-422. PMID 33301605 / DOI 10.1002/2211-5463.13061</td>
-<td>CONTESTED (unrelated organ/disease)</td>
+<td><span class="tag-warning">CONTESTED</span> (unrelated organ/disease)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GALNT10</td>
+<td class="gene">GALNT10</td>
 <td>Oncology (unrelated organ)</td>
 <td>Decreased Hnf4alpha/miR-122 axis in HBV-associated HCC enhances oncogenic GALNT10 activity via EGFR-driven O-glycosylation</td>
 <td>Wu et al. 2014/2015, J Biol Chem 290:1170-85. PMID 25422324 / DOI 10.1074/jbc.M114.601203</td>
-<td>CONTESTED (unrelated organ/disease)</td>
+<td><span class="tag-warning">CONTESTED</span> (unrelated organ/disease)</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Note: LINC01470 has no citations in this table because a systematic PubMed search found
 zero published literature under this gene symbol (statgen, structural, or immune). This
 absence is itself recorded — see Open Targets summary and Prioritized-gene synthesis below,
@@ -584,7 +268,7 @@ and the audit appendix for the researcher's inference (explicitly labeled specul
 its likely role as a positional/bystander annotation.</p>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not reviewed by citation-verifier or red-team-skeptic)</h2>
 <p>Source: Open Targets Platform GraphQL API, queried 2026-09-11, disease context MONDO_0005002
-(&quot;chronic obstructive pulmonary disease&quot;). Full detail in
+("chronic obstructive pulmonary disease"). Full detail in
 <code>evidence_tables/_status/5_153050001-154200000/opentargets.md</code>.</p>
 <ul>
 <li><strong>GRIA1</strong> (ENSG00000155511): Overall target-disease association score 0.236; genetic-
@@ -608,7 +292,7 @@ structured Open Targets L2G/constraint data was pulled for these three genes in 
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>GRIA1 — confidence: LOW.</strong></p>
 <p>GRIA1 is the best-supported candidate at this locus, but only by elimination and by a
-&quot;least-bad&quot; margin, not because the evidence is strong. It is independently flagged by two
+"least-bad" margin, not because the evidence is strong. It is independently flagged by two
 orthogonal computational methods (FLAMES, PoPS) plus nearest-gene proximity, and carries the
 only non-trivial Open Targets genetic-association signal at this locus (score 0.388, two
 L2G-like evidence rows ~0.56/0.32) among the six genes evaluated — SAP30L and LINC01470 both
@@ -617,8 +301,8 @@ above). GRIA1 also shows detectable gnomAD pLoF constraint (O/E 0.326), consiste
 being a gene where damaging variation is at least moderately selected against.</p>
 <p>However, red-team-skeptic's critique (audit file) is decisive on how far this can be
 pushed: every COPD/lung-function statgen citation for GRIA1 (Sakornsakolpat PMID 30804561,
-Shrine PMID 36914875, Saunders/GSCAN PMID 36477530) is a &quot;could not confirm locus-specific
-overlap from the abstract&quot; citation, not a direct positive hit. The one citation that
+Shrine PMID 36914875, Saunders/GSCAN PMID 36477530) is a "could not confirm locus-specific
+overlap from the abstract" citation, not a direct positive hit. The one citation that
 directly and explicitly names GRIA1 as a prioritized causal gene (Nievergelt et al. 2024,
 PMID 38637617) does so for PTSD, not COPD or lung function. No structural or immune
 lung-biology literature exists for GRIA1 itself; the only glutamate-receptor/airway
@@ -663,5 +347,7 @@ these, GRIA1 is offered as the best-supported single recommendation, but confide
 and the smoking-mediated-versus-direct-pulmonary-biology question at this locus should be
 treated as open.</p>
 
+        </div>
+    </div>
 </body>
 </html>

@@ -1,381 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>4_111200001-111650000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 4:111,200,001-111,650,000 (GRCh38)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-4111200001-111650000-grch38">Evidence table — locus 4:111,200,001-111,650,000 (GRCh38)</h1>
-<p>Lead variant: rs72678859 (PIP=0.556, intergenic, 4:111,485,805). Credible set also
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-4111200001-111650000-grch38">Evidence table — locus 4:111,200,001-111,650,000 (GRCh38)</h1><div class="summary"><p>Lead variant: rs72678859 (PIP=0.556, intergenic, 4:111,485,805). Credible set also
 includes rs11729080 (PIP=0.226, intronic/non-coding-transcript) and rs72678864 (PIP=0.202,
 intergenic). Candidate genes evaluated: FAM241A (nearest gene) / C4orf32 (FLAMES
 prioritized) — confirmed to be the SAME Ensembl gene (ENSG00000174749); ENPEP (MAGMA
 prioritized); PITX2 (PoPS prioritized). No ABC-prioritized gene. This locus is a gene
 desert: none of the three candidate genes physically overlap the stated window; it sits
 immediately adjacent to the well-known chr4q25 PITX2/atrial-fibrillation long-range
-regulatory desert.</p>
+regulatory desert.</p></div>
+
 <h2 id="locus-wide-evidence-applies-across-all-candidate-genes">Locus-wide evidence (applies across all candidate genes)</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -388,7 +72,7 @@ regulatory desert.</p>
 </thead>
 <tbody>
 <tr>
-<td>Locus-wide (smoking-mediation check)</td>
+<td class="gene">Locus-wide (smoking-mediation check)</td>
 <td>GWAS Catalog structured lookup + verified source studies</td>
 <td>All three credible-set variants (rs72678859, rs11729080, rs72678864) have GWAS Catalog hits for smoking initiation/cessation/status and correlated behavioral traits (educational attainment, risk tolerance, age at first sexual intercourse); no credible-set variant showed a direct GWAS Catalog hit for FEV1, FEV1/FVC, or COPD case-control status.</td>
 <td>Liu M et al. 2019, Nat Genet, PMID 30643251, DOI 10.1038/s41588-018-0307-5 (GSCAN tobacco/alcohol GWAS)</td>
@@ -396,7 +80,7 @@ regulatory desert.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>Locus-wide (smoking-mediation check)</td>
+<td class="gene">Locus-wide (smoking-mediation check)</td>
 <td>GWAS Catalog structured lookup + verified source study</td>
 <td>Same as above</td>
 <td>Karlsson Linnér R et al. 2019, Nat Genet, PMID 30643258, DOI 10.1038/s41588-018-0309-3 (risk tolerance GWAS)</td>
@@ -404,7 +88,7 @@ regulatory desert.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>Locus-wide (smoking-mediation check)</td>
+<td class="gene">Locus-wide (smoking-mediation check)</td>
 <td>GWAS Catalog structured lookup + verified source study</td>
 <td>Same as above</td>
 <td>Saunders GRB et al. 2022, Nature, PMID 36477530, DOI 10.1038/s41586-022-05477-4 (multi-ancestry tobacco/alcohol GWAS)</td>
@@ -412,9 +96,9 @@ regulatory desert.</p>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="pitx2">PITX2</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -427,88 +111,88 @@ regulatory desert.</p>
 </thead>
 <tbody>
 <tr>
-<td>PITX2</td>
+<td class="gene">PITX2</td>
 <td>StatGen (bioinformatic/network, hypothesis-generating)</td>
 <td>Information-theoretic gene-network analysis of COPD lung expression data nominated PITX2 (with COL4A3, CFLAR, GULP1, PDCD1, CASP10, PAX3, BOK, HSPD1, PML) via a T-box-transcription-factor/senescence axis in COPD</td>
 <td>Acquaah-Mensah GK et al. 2012, PLoS Comput Biol, PMID 22829758, PMC3400575, DOI 10.1371/journal.pcbi.1002597</td>
-<td>CONTESTED (see gene-level verdict below)</td>
+<td><span class="tag-warning">CONTESTED</span> (see gene-level verdict below)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PITX2</td>
+<td class="gene">PITX2</td>
 <td>StatGen (AF, not COPD)</td>
 <td>PITX2-locus SNP rs6817105 shows age-dependent atrial fibrillation risk in the AFGen Consortium (genome-wide significant interaction)</td>
 <td>Weng LC et al. 2017, Sci Rep, PMID 28900195, PMC5595875, DOI 10.1038/s41598-017-09396-7</td>
-<td>CONTESTED — confirms depth of PITX2/AF signal, not COPD evidence</td>
+<td><span class="tag-warning">CONTESTED</span> — confirms depth of PITX2/AF signal, not COPD evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PITX2</td>
+<td class="gene">PITX2</td>
 <td>StatGen (comorbidity/MR)</td>
 <td>Bidirectional MR found limited direct genetic causal evidence between COPD/CRD and AF/CVD; genetically predicted lifetime smoking and shared IL6R/IL1RN inflammatory pathways better explain the comorbidity</td>
 <td>Naesilla / Quint / Zuber 2026, Thorax, PMID 41241414, PMC13151528, DOI 10.1136/thorax-2024-222908</td>
-<td>CONTESTED — this paper argues AGAINST a shared cardiopulmonary mechanism, undercutting the naive &quot;PITX2 drives both AF and COPD&quot; pleiotropy story</td>
+<td><span class="tag-warning">CONTESTED</span> — this paper argues AGAINST a shared cardiopulmonary mechanism, undercutting the naive "PITX2 drives both AF and COPD" pleiotropy story</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PITX2</td>
+<td class="gene">PITX2</td>
 <td>Structural/developmental (general, non-COPD-specific)</td>
 <td>Pitx2 regulates organogenesis (pituitary, heart, gut, lung, among others) via Wnt/beta-catenin-pathway growth-control genes</td>
 <td>Tran L, Kioussi C 2021, Cell Mol Life Sci, PMID 33844046, PMC11073205, DOI 10.1007/s00018-021-03833-7</td>
-<td>CONTESTED — general developmental biology, not adult COPD pathophysiology</td>
+<td><span class="tag-warning">CONTESTED</span> — general developmental biology, not adult COPD pathophysiology</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PITX2</td>
+<td class="gene">PITX2</td>
 <td>Structural/developmental (direct, non-AF, non-cancer)</td>
 <td>PITX2 expression (repressed via PARP1 and a nearby lncRNA) is required for correct distal-proximal patterning of human iPSC-derived lung progenitors</td>
 <td>Banerjee K et al. 2018, Stem Cells, PMID 29143419, DOI 10.1002/stem.2740</td>
-<td>CONTESTED — genuine embryonic lung-developmental role, but not adult COPD pathophysiology (no protease-antiprotease, emphysema, or airway-remodeling evidence)</td>
+<td><span class="tag-warning">CONTESTED</span> — genuine embryonic lung-developmental role, but not adult COPD pathophysiology (no protease-antiprotease, emphysema, or airway-remodeling evidence)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PITX2</td>
+<td class="gene">PITX2</td>
 <td>Structural (lung cancer, not COPD)</td>
 <td>PITX1/PITX2 mRNA and protein levels higher in lung adenocarcinoma than normal lung tissue</td>
 <td>Zhang H et al. 2021, Medicine (Baltimore), PMID 33530195, PMC7850728, DOI 10.1097/MD.0000000000023936</td>
-<td>CONTESTED — cancer-specific, not COPD</td>
+<td><span class="tag-warning">CONTESTED</span> — cancer-specific, not COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PITX2</td>
+<td class="gene">PITX2</td>
 <td>Structural (lung cancer, not COPD)</td>
 <td>PITX2B isoform promotes lung cancer cell tumorigenesis/progression and anti-autophagy survival in vitro and in xenografts</td>
 <td>Wang Y et al. 2021, Am J Cancer Res, PMID 34765299, PMC8569349 (no DOI assigned)</td>
-<td>CONTESTED — cancer-specific, not COPD</td>
+<td><span class="tag-warning">CONTESTED</span> — cancer-specific, not COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PITX2</td>
+<td class="gene">PITX2</td>
 <td>Structural (cancer marker, not immune/COPD)</td>
 <td>Pitx2 is a useful immunohistochemical marker of midgut-derived neuroendocrine tumors</td>
 <td>Soukup J et al. 2022, Histopathology, PMID 36089904, DOI 10.1111/his.14789</td>
-<td>CONTESTED — cancer-marker use only, no immune or COPD relevance</td>
+<td><span class="tag-warning">CONTESTED</span> — cancer-marker use only, no immune or COPD relevance</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PITX2</td>
+<td class="gene">PITX2</td>
 <td>Structural/dosage (cardiac, not pulmonary)</td>
 <td>PITX2 dosage-dependent changes in pacemaker cell state underlie sinus node dysfunction and atrial arrhythmias</td>
 <td>van der Maarel LE et al. 2025, Nat Commun, PMID 41350282, PMC12712101, DOI 10.1038/s41467-025-66959-3</td>
-<td>CONTESTED — reinforces PITX2's best-characterized dosage-sensitivity phenotype is cardiac, not pulmonary/immune</td>
+<td><span class="tag-warning">CONTESTED</span> — reinforces PITX2's best-characterized dosage-sensitivity phenotype is cardiac, not pulmonary/immune</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Gene-level skeptic verdict for PITX2: CONTESTED.</strong> Strongest genetic score of the three
 candidates (see Open Targets summary below) but genetics-heavy/biology-empty: despite being
 an extensively studied gene, no non-genetic COPD corroboration surfaces in Open Targets'
 own corpus; no spirometry (FEV1/FEV1-FVC) concordance was found; all credible-set variants
 hit smoking-behavior GWAS traits rather than lung-function traits; and a verified
-bidirectional-MR paper (PMID 41241414) directly undercuts the &quot;PITX2 drives both AF and
-COPD via shared cardiopulmonary biology&quot; interpretation. See critique for full reasoning.</p>
+bidirectional-MR paper (PMID 41241414) directly undercuts the "PITX2 drives both AF and
+COPD via shared cardiopulmonary biology" interpretation. See critique for full reasoning.</p>
 <h2 id="enpep">ENPEP</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -521,23 +205,23 @@ COPD via shared cardiopulmonary biology&quot; interpretation. See critique for f
 </thead>
 <tbody>
 <tr>
-<td>ENPEP</td>
+<td class="gene">ENPEP</td>
 <td>Structural (baseline expression) + Immune (B-lymphopoiesis, not COPD-relevant)</td>
 <td>Human ENPEP/aminopeptidase-A transcript (4.1 kb) detected across many normal tissues including lung; ENPEP originally identified as murine B-lymphocyte differentiation antigen BP-1/6C3 on early B-lineage cells, bone-marrow/thymic stromal cells, and capillary endothelial cells</td>
 <td>Li C, Wang B, Cooper MD 1993, Genomics, PMID 8244382, DOI 10.1006/geno.1993.1386</td>
-<td>WEAKENED (see gene-level verdict below)</td>
+<td><span class="tag-warning">WEAKENED</span> (see gene-level verdict below)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ENPEP</td>
+<td class="gene">ENPEP</td>
 <td>Structural (expression atlas, COVID/ACE2-focused, not COPD)</td>
 <td>ENPEP expressed at low levels in lower respiratory epithelium, most highly (within lung) in para-alveolar fibroblasts; broadly expressed in vascular smooth muscle/pericyte-like cells, heart, kidney cortex, small intestine</td>
 <td>Arppo A, Barker H, Parkkila S 2024, PLoS ONE, PMID 39661628, PMC11633960, DOI 10.1371/journal.pone.0307731</td>
-<td>WEAKENED — COVID-cofactor-focused atlas paper, incidental lung finding only</td>
+<td><span class="tag-warning">WEAKENED</span> — COVID-cofactor-focused atlas paper, incidental lung finding only</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Gene-level skeptic verdict for ENPEP: WEAKENED.</strong> Weakest genetic score of the two
 non-desert-adjacent candidates evaluated in depth (single Open Targets row, score 0.093);
 essentially LoF-tolerant (argues against dosage-sensitive mechanism); literature offered is
@@ -545,8 +229,8 @@ honestly non-COPD (B-lymphopoiesis marker role, COVID-focused expression atlas);
 unresolved hypertension/blood-pressure-genetics pleiotropy alternative (9 PMIDs, not
 individually verified — see audit) parallels the PITX2/AF situation and was flagged but not
 resolved.</p>
-<h2 id="fam241a--c4orf32-ensg00000174749--one-gene-listed-twice-in-locus-input-as-nearest-gene-and-flames-prioritized">FAM241A / C4orf32 (ENSG00000174749 — one gene, listed twice in locus input as &quot;nearest gene&quot; and &quot;FLAMES prioritized&quot;)</h2>
-<table>
+<h2 id="fam241a--c4orf32-ensg00000174749--one-gene-listed-twice-in-locus-input-as-nearest-gene-and-flames-prioritized">FAM241A / C4orf32 (ENSG00000174749 — one gene, listed twice in locus input as "nearest gene" and "FLAMES prioritized")</h2>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -559,35 +243,35 @@ resolved.</p>
 </thead>
 <tbody>
 <tr>
-<td>FAM241A/C4orf32</td>
+<td class="gene">FAM241A/C4orf32</td>
 <td>StatGen (lung cancer MR+coloc, not COPD)</td>
 <td>MR + colocalization drug-target screen nominated FAM241A as 1 of 7 candidate causal genes for lung cancer risk (with SERPING1, TDRD9, GBAP1, ZKSCAN4, ZKSCAN3, Z94721.1)</td>
 <td>Huang, Geng, Zhang 2025, Sci Rep, PMID 41436647, PMC12848082, DOI 10.1038/s41598-025-33574-7</td>
-<td>CONTESTED (see gene-level verdict below)</td>
+<td><span class="tag-warning">CONTESTED</span> (see gene-level verdict below)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FAM241A/C4orf32</td>
+<td class="gene">FAM241A/C4orf32</td>
 <td>Structural (bioinformatic ceRNA network, lung cancer, not COPD)</td>
-<td>FAM241A identified as part of a computationally predicted &quot;tumor suppressive&quot; regulatory axis (ANXA2P1/miR-20b-5p/FAM241A) correlating with lung cancer prognosis in Cr(VI)-transformed bronchial epithelial cells</td>
+<td>FAM241A identified as part of a computationally predicted "tumor suppressive" regulatory axis (ANXA2P1/miR-20b-5p/FAM241A) correlating with lung cancer prognosis in Cr(VI)-transformed bronchial epithelial cells</td>
 <td>Sweef O, Yang J, Wang Y 2022, Biomedicines, PMID 36289596, PMC9598927, DOI 10.3390/biomedicines10102334</td>
-<td>CONTESTED — correlative/computational, lung-cancer-specific, not COPD</td>
+<td><span class="tag-warning">CONTESTED</span> — correlative/computational, lung-cancer-specific, not COPD</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Gene-level skeptic verdict for FAM241A/C4orf32: CONTESTED.</strong> Zero COPD genetic evidence
 of any kind (weakest of the three candidates by a wide margin); functionally
 uncharacterized beyond two lung-cancer bioinformatic correlation papers; and — most
-importantly — its &quot;nearest gene&quot; status is undercut by the fact that this exact gene
+importantly — its "nearest gene" status is undercut by the fact that this exact gene
 desert has a well-established, different, competing regulatory target (PITX2, via
 long-range enhancer architecture), which the pipeline's own structural context supplies as
 a directly competing explanation for the same locus.</p>
-<hr>
+<hr/>
 <h2 id="open-targets-summary-structured-database-lookup--not-verified-literature-see-below">Open Targets summary (structured database lookup — NOT verified literature, see below)</h2>
 <p>Queried via Open Targets Platform GraphQL API on 2026-09-11. This section is a structured
 database lookup and has NOT been through citation-verifier or red-team-skeptic.</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -599,33 +283,33 @@ database lookup and has NOT been through citation-verifier or red-team-skeptic.<
 </thead>
 <tbody>
 <tr>
-<td>PITX2 (ENSG00000164093)</td>
+<td class="gene">PITX2 (ENSG00000164093)</td>
 <td>5 evidence rows, scores 0.782 / 0.778 / 0.736 / 0.683 / 0.580 — strongest of the three</td>
 <td>Did not rank in top 50 of 6,323 (cutoff &gt;= 0.456)</td>
 <td>pLoF obs/exp = 0.195 (0.101-0.410), notably constrained; missense obs/exp = 0.709 (0.645-0.778), moderately constrained</td>
 <td>Not separately retrievable via available schema fields this session</td>
 </tr>
 <tr>
-<td>ENPEP (ENSG00000138792)</td>
+<td class="gene">ENPEP (ENSG00000138792)</td>
 <td>1 evidence row, score 0.093</td>
 <td>Did not rank in top 50 of 6,323 (cutoff &gt;= 0.456)</td>
 <td>pLoF obs/exp = 0.857 (0.718-1.026), essentially unconstrained</td>
 <td>Not separately retrievable</td>
 </tr>
 <tr>
-<td>FAM241A/C4orf32 (ENSG00000174749)</td>
+<td class="gene">FAM241A/C4orf32 (ENSG00000174749)</td>
 <td>0 evidence rows</td>
 <td>Did not rank in top 50 of 6,323 (cutoff &gt;= 0.456)</td>
 <td>pLoF obs/exp = 0.567 (0.296-1.192), unremarkable/wide CI</td>
 <td>Not separately retrievable</td>
 </tr>
 </tbody>
-</table>
-<p>Note: FAM241A and C4orf32 (listed as separate candidates — &quot;nearest gene&quot; and &quot;FLAMES
-prioritized&quot; — in the locus input file) resolve to the identical Ensembl gene ID
+</table></div>
+<p>Note: FAM241A and C4orf32 (listed as separate candidates — "nearest gene" and "FLAMES
+prioritized" — in the locus input file) resolve to the identical Ensembl gene ID
 (ENSG00000174749) and are therefore one candidate, not two. For full detail including
 exact query methodology and caveats, see <code>evidence_tables/_status/4_111200001-111650000/opentargets.md</code>.</p>
-<hr>
+<hr/>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>Recommended candidate: PITX2 — Confidence: LOW.</strong></p>
 <p>Reasoning: Among the three candidates, PITX2 has the strongest and most repeated
@@ -658,7 +342,7 @@ COPD-relevant inflammatory program).</p>
 <p>Runner-up: <strong>ENPEP</strong>, which is weaker on every axis assessed (single weak Open Targets
 evidence row, LoF-tolerant, no COPD-specific literature, and its own unresolved
 hypertension/blood-pressure pleiotropy alternative), and <strong>FAM241A/C4orf32</strong>, which despite
-being the &quot;nearest gene&quot; by linear distance has zero COPD genetic evidence of any kind and
+being the "nearest gene" by linear distance has zero COPD genetic evidence of any kind and
 no established biological function beyond two unrelated lung-cancer bioinformatic
 correlation papers — its nearest-gene status is specifically undercut here by the
 well-characterized competing PITX2 long-range regulatory architecture at this same desert.</p>
@@ -676,5 +360,7 @@ since the well-established long-range regulatory evidence in the literature is
 cardiac-tissue-specific, not lung-tissue-specific. The study team should weigh this
 recommendation accordingly and treat it as a starting hypothesis, not a settled call.</p>
 
+        </div>
+    </div>
 </body>
 </html>

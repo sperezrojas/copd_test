@@ -1,387 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>5_132150001-132750000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 5:132150001-132750000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-5132150001-132750000-chr5q311-lead-variant-rs2057656-nearest-gene-irf1">Evidence table — Locus 5:132150001-132750000 (chr5q31.1, lead variant rs2057656, nearest gene IRF1)</h1>
-<p>Region: 5:132,150,001-132,750,000 (GRCh38). Internal pipeline candidate genes: nearest gene
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-5132150001-132750000-chr5q311-lead-variant-rs2057656-nearest-gene-irf1">Evidence Table — Locus 5:132150001-132750000</h1><div class="summary"><p>Region: 5:132,150,001-132,750,000 (GRCh38). Internal pipeline candidate genes: nearest gene
 IRF1; MAGMA-prioritized AFF4; PoPS-prioritized HSPA4; ABC-prioritized IRF1; credible-set
 nearest gene CARINH (lncRNA, formerly IRF1-AS1). All 8 credible-set variants (rs2057656,
 rs3857440, rs3846730, rs1023518, rs2548993, rs7713065, rs10077785, rs11748326) are
 intronic/non-coding-transcript variants annotated to CARINH; none is missense/splice, so no
 additional per-variant literature search beyond the lead variant was performed, per pipeline
-scope rules.</p>
-<p>Two additional genes — SLC22A5 (OCTN2) and SLC22A4 (OCTN1) — were added as full candidates
+scope rules.</p><p>Two additional genes — SLC22A5 (OCTN2) and SLC22A4 (OCTN1) — were added as full candidates
 after the Open Targets structured L2G lookup (see summary below) showed them outscoring the
 internal pipeline's nominated genes for the COPD phenotype specifically. Seven further
 physically nearby Th2-cluster/region genes (IL3, IL4, IL5, IL13, CSF2, RAD50, KIF3A) were
 screened at a shallower level and are documented in the audit appendix rather than the main
-table, since none showed a locus-specific signal (see audit file).</p>
-<p>Only VERIFIED citations appear below. One citation (PMID 33067719) returned CLAIM_MISMATCH
-and is excluded — see <code>audits/5_132150001-132750000_audit.md</code>.</p>
-<table>
+table, since none showed a locus-specific signal (see audit file).</p><p>Only VERIFIED citations appear below. One citation (PMID 33067719) returned CLAIM_MISMATCH
+and is excluded — see <code>audits/5_132150001-132750000_audit.md</code>.</p></div>
+
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -394,95 +78,95 @@ and is excluded — see <code>audits/5_132150001-132750000_audit.md</code>.</p>
 </thead>
 <tbody>
 <tr>
-<td>IRF1</td>
+<td class="gene">IRF1</td>
 <td>Statistical genetics (variant-level, null result)</td>
 <td>rs2057656 (this locus's lead variant) directly genotyped as an IRF1 tag-SNP in a Chinese tuberculosis case-control study; no significant association with tuberculosis found for rs2057656 or any of 7 IRF1 tagSNPs tested</td>
 <td>PMID 22879909 / DOI 10.1371/journal.pone.0042104</td>
-<td>WEAKENED — null result for a different disease, but undercuts assuming rs2057656 reliably tags a functional IRF1 effect</td>
+<td><span class="tag-warning">WEAKENED</span> — null result for a different disease, but undercuts assuming rs2057656 reliably tags a functional IRF1 effect</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF1</td>
+<td class="gene">IRF1</td>
 <td>Structural/mechanistic (human COPD tissue + organoid)</td>
 <td>In smoking-related human COPD lung tissue, <em>Stenotrophomonas maltophilia</em> expansion correlates with IRF1 expression and emphysema progression; IRF1 transcriptionally activates ZBP1, driving PANoptosis of alveolar epithelial cells and impairing alveolar organoid formation; targeting IRF1 mitigated organoid injury</td>
 <td>PMID 38582189 / DOI 10.1016/j.envpol.2024.123913</td>
-<td>WEAKENED overall for IRF1 candidacy (see note), but this single paper is the strongest tissue-specific, smoking-context, COPD-relevant mechanistic evidence for any gene at this locus</td>
+<td><span class="tag-warning">WEAKENED</span> overall for IRF1 candidacy (see note), but this single paper is the strongest tissue-specific, smoking-context, COPD-relevant mechanistic evidence for any gene at this locus</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF1</td>
+<td class="gene">IRF1</td>
 <td>Immunology (mouse model, muco-obstructive lung disease)</td>
 <td>In Scnn1b-transgenic mice, enhanced Irf1 function/expression in airway macrophages impairs efferocytosis/phagocytosis and produces excessive inflammatory responses; mucus induces this Irf1-dependent reprogramming ex vivo</td>
 <td>PMID 34764283 / DOI 10.1038/s41467-021-26777-9</td>
-<td>CONTESTED — directionally opposite to Veerati et al. 2020 below (gain- vs. loss-of-function-flavored phenotype); tension not resolved in the literature reviewed</td>
+<td><span class="tag-warning">CONTESTED</span> — directionally opposite to Veerati et al. 2020 below (gain- vs. loss-of-function-flavored phenotype); tension not resolved in the literature reviewed</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF1</td>
+<td class="gene">IRF1</td>
 <td>Immunology (human COPD/asthma donor airway epithelium)</td>
 <td>Rhinovirus-induced innate antiviral gene induction (including IRF1/IRF3/IRF7) is delayed, not deficient, in airway epithelial cells from COPD/asthma donors versus healthy donors</td>
 <td>PMID 32499788 / DOI 10.3389/fimmu.2020.00974</td>
-<td>CONTESTED — directionally opposite to Hey et al. 2021 above; see note</td>
+<td><span class="tag-warning">CONTESTED</span> — directionally opposite to Hey et al. 2021 above; see note</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF1</td>
+<td class="gene">IRF1</td>
 <td>Immunology (mechanistic, airway epithelium)</td>
 <td>EGFR activation induced by influenza/rhinovirus/RSV suppresses IRF1-dependent CXCL10 production in airway epithelium</td>
 <td>PMID 24838750 / DOI 10.1152/ajplung.00368.2013</td>
-<td>WEAKENED — general antiviral mechanism, not COPD-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — general antiviral mechanism, not COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF1</td>
+<td class="gene">IRF1</td>
 <td>Immunology (smoking-context mechanism)</td>
 <td>Cigarette smoke extract inhibits rhinovirus-induced IRF-1 nuclear translocation/DNA binding and CXCL10 transcription in airway epithelium</td>
 <td>PMID 24127910 / DOI 10.1165/rcmb.2013-0129OC</td>
-<td>WEAKENED — supports smoking as an environmental modifier of IRF1 pathway activity but does not establish genetic causality at this locus</td>
+<td><span class="tag-warning">WEAKENED</span> — supports smoking as an environmental modifier of IRF1 pathway activity but does not establish genetic causality at this locus</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF1</td>
+<td class="gene">IRF1</td>
 <td>Immunology (mechanistic)</td>
 <td>Nitric oxide donors inhibit rhinovirus-induced IRF-1/NF-κB-dependent CXCL10 in airway epithelial cells; discussed as relevant to viral exacerbations of asthma/COPD</td>
 <td>PMID 18986693 / DOI 10.1016/j.jaci.2008.09.041</td>
-<td>WEAKENED — general mechanism, asthma/COPD relevance is discussion-level, not locus-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — general mechanism, asthma/COPD relevance is discussion-level, not locus-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF1</td>
+<td class="gene">IRF1</td>
 <td>Immunology (mechanistic, bronchial epithelium)</td>
 <td>IRF-1 is essential for CCL5/RANTES production in human bronchial epithelial cells; lysophosphatidic acid blocks this via IRF-1</td>
 <td>PMID 20861350 / DOI 10.4049/jimmunol.1000904</td>
-<td>WEAKENED — allergic/asthma-oriented mechanism, not COPD-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — allergic/asthma-oriented mechanism, not COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF1</td>
+<td class="gene">IRF1</td>
 <td>Immunology (mechanistic background)</td>
 <td>dsRNA activates NF-κB and IRF-1 in airway epithelial cells; IRF-1 is a transcriptional mediator of NOS2/STAT1 signaling downstream of viral dsRNA/IFN-γ</td>
 <td>PMID 11415937; PMID 11350796; PMID 10878375; PMID 14578356</td>
-<td>WEAKENED — general innate-immune mechanistic background, not COPD-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — general innate-immune mechanistic background, not COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF1</td>
+<td class="gene">IRF1</td>
 <td>Immunology (mouse RSV model)</td>
 <td>RelA depletion in nonciliated bronchiolar epithelium reduces Irf1/Irf7 expression and neutrophilic infiltration during RSV infection</td>
 <td>PMID 29593031 / DOI 10.1128/JVI.00441-18</td>
-<td>WEAKENED — pediatric/RSV mouse model, not COPD</td>
+<td><span class="tag-warning">WEAKENED</span> — pediatric/RSV mouse model, not COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IRF1</td>
+<td class="gene">IRF1</td>
 <td>Immunology (cystic fibrosis airway epithelium)</td>
 <td>IRF-1 drives cathepsin S expression in CF airway epithelium; miR-31 suppresses IRF-1 and cathepsin S</td>
 <td>PMID 24940638 / DOI 10.1164/rccm.201311-1986OC</td>
-<td>WEAKENED — cystic fibrosis context, not COPD</td>
+<td><span class="tag-warning">WEAKENED</span> — cystic fibrosis context, not COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>AFF4</td>
+<td class="gene">AFF4</td>
 <td>Structural/developmental (rare monogenic syndrome)</td>
 <td>CHOPS syndrome (rare, de novo missense in the ALF-homology domain of AFF4) has pulmonary involvement in ~70% of 11 reported cases</td>
 <td>PMID 31058441 / DOI 10.1002/ajmg.a.61174</td>
@@ -490,7 +174,7 @@ and is excluded — see <code>audits/5_132150001-132750000_audit.md</code>.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>AFF4</td>
+<td class="gene">AFF4</td>
 <td>Structural/developmental (case report)</td>
 <td>Further CHOPS syndrome case (AFF4 missense variant) with pulmonary and vascular involvement</td>
 <td>PMID 33248856 / DOI 10.1016/j.braindev.2020.11.004</td>
@@ -498,79 +182,79 @@ and is excluded — see <code>audits/5_132150001-132750000_audit.md</code>.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CARINH</td>
+<td class="gene">CARINH</td>
 <td>Immunology (leukemia ceRNA network, non-lung)</td>
 <td>IRF1-AS1 (CARINH) is an upregulated lncRNA in an acute lymphoblastic leukemia competing-endogenous-RNA network, associated with inflammation-related pathway subnets</td>
 <td>PMID 37303492 / DOI 10.32604/or.2022.027904</td>
-<td>SUPPORTED (as evidence CARINH itself has no lung-specific role) — oncology/hematology context, not lung; consistent with &quot;transcript overlap with IRF1, not an independent causal gene&quot; interpretation</td>
+<td>SUPPORTED (as evidence CARINH itself has no lung-specific role) — oncology/hematology context, not lung; consistent with "transcript overlap with IRF1, not an independent causal gene" interpretation</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC22A5</td>
-<td>Statistical genetics (cross-disease pleiotropy, &quot;IBD5&quot; haplotype)</td>
-<td>SLC22A4/SLC22A5 &quot;IBD5&quot; haplotype meta-analysis (26 studies) associated with Crohn's disease (OCTN1 OR=1.23, OCTN2 OR=1.20) and, in a recessive model, ulcerative colitis</td>
+<td class="gene">SLC22A5</td>
+<td>Statistical genetics (cross-disease pleiotropy, "IBD5" haplotype)</td>
+<td>SLC22A4/SLC22A5 "IBD5" haplotype meta-analysis (26 studies) associated with Crohn's disease (OCTN1 OR=1.23, OCTN2 OR=1.20) and, in a recessive model, ulcerative colitis</td>
 <td>PMID 21279723 / DOI 10.1007/s00439-011-0952-6</td>
-<td>WEAKENED — real cross-disease pleiotropy precedent for this genomic interval, but haplotype-level, not resolved to SLC22A5 individually; different organ system (gut) than COPD</td>
+<td><span class="tag-warning">WEAKENED</span> — real cross-disease pleiotropy precedent for this genomic interval, but haplotype-level, not resolved to SLC22A5 individually; different organ system (gut) than COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC22A5</td>
-<td>Statistical genetics (&quot;IBD5&quot;, Swedish cohort)</td>
+<td class="gene">SLC22A5</td>
+<td>Statistical genetics ("IBD5", Swedish cohort)</td>
 <td>SLC22A4 1672T allele and SLC22A4/SLC22A5 TC haplotype associated with Crohn's disease; no independent association found for the SLC22A5 variant alone</td>
 <td>PMID 17340776 / DOI 10.1080/00365520600842278</td>
-<td>WEAKENED — explicitly fails to isolate SLC22A5 as independently causal even within this haplotype/disease</td>
+<td><span class="tag-warning">WEAKENED</span> — explicitly fails to isolate SLC22A5 as independently causal even within this haplotype/disease</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC22A5</td>
-<td>Statistical genetics (&quot;IBD5&quot;, Spanish cohort)</td>
+<td class="gene">SLC22A5</td>
+<td>Statistical genetics ("IBD5", Spanish cohort)</td>
 <td>SLC22A4/SLC22A5 double-mutant haplotype associated with Crohn's disease; results argue against an exclusive etiological role of the OCTN variants alone</td>
 <td>PMID 16333318 / DOI 10.1038/sj.ejhg.5201529</td>
-<td>WEAKENED — same haplotype-resolution caveat</td>
+<td><span class="tag-warning">WEAKENED</span> — same haplotype-resolution caveat</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC22A5</td>
-<td>Statistical genetics (&quot;IBD5&quot;, pediatric IBD, UK)</td>
+<td class="gene">SLC22A5</td>
+<td>Statistical genetics ("IBD5", pediatric IBD, UK)</td>
 <td>OCTN1/2 variants associated with pediatric IBD/CD and growth-index differences, not independent of the background IBD5 haplotype</td>
 <td>PMID 16469794 / DOI 10.1136/gut.2005.082107</td>
-<td>WEAKENED — same caveat</td>
+<td><span class="tag-warning">WEAKENED</span> — same caveat</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC22A5</td>
-<td>Statistical genetics (&quot;IBD5&quot;, pediatric CD, US)</td>
+<td class="gene">SLC22A5</td>
+<td>Statistical genetics ("IBD5", pediatric CD, US)</td>
 <td>SLC22A4/SLC22A5 association confirmed in pediatric Crohn's disease, but no independent association beyond the extended IBD5 haplotype</td>
 <td>PMID 16771961 / DOI 10.1111/j.1572-0241.2006.00564.x</td>
-<td>WEAKENED — same caveat</td>
+<td><span class="tag-warning">WEAKENED</span> — same caveat</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC22A5</td>
-<td>Statistical genetics (&quot;IBD5&quot;, Ashkenazi Jewish pediatric cohort)</td>
+<td class="gene">SLC22A5</td>
+<td>Statistical genetics ("IBD5", Ashkenazi Jewish pediatric cohort)</td>
 <td>IBD5 locus SNPs associated with Crohn's disease; tight LD precludes identifying the single causal IBD5 variant/gene</td>
 <td>PMID 19412005 / DOI 10.1097/MPG.0b013e318183138a</td>
-<td>WEAKENED — explicitly states the causal gene cannot be resolved from this LD block</td>
+<td><span class="tag-warning">WEAKENED</span> — explicitly states the causal gene cannot be resolved from this LD block</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC22A5</td>
+<td class="gene">SLC22A5</td>
 <td>Structural (Mendelian disease mechanism)</td>
 <td>Biallelic loss-of-function SLC22A5 mutation causes primary carnitine deficiency, presenting with cardiomyopathy/skeletal myopathy</td>
 <td>PMID 38585546 / DOI 10.1159/000534932</td>
-<td>WEAKENED — systemic, autosomal-recessive, complete-LoF mechanism; poor mechanistic analog for a common heterozygous regulatory GWAS variant</td>
+<td><span class="tag-warning">WEAKENED</span> — systemic, autosomal-recessive, complete-LoF mechanism; poor mechanistic analog for a common heterozygous regulatory GWAS variant</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC22A5</td>
+<td class="gene">SLC22A5</td>
 <td>Structural (Mendelian disease mechanism, case report)</td>
 <td>Biallelic SLC22A5 mutations (compound heterozygote) cause primary carnitine deficiency</td>
 <td>PMID 34032155 / DOI 10.1177/23247096211019543</td>
-<td>WEAKENED — same caveat</td>
+<td><span class="tag-warning">WEAKENED</span> — same caveat</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC22A4</td>
+<td class="gene">SLC22A4</td>
 <td>Statistical genetics (cross-disease pleiotropy, rheumatoid arthritis)</td>
 <td>SLC22A4 is among the replicated non-HLA rheumatoid arthritis susceptibility genes</td>
 <td>PMID 16309943 / DOI 10.1016/j.jbspin.2005.09.001</td>
@@ -578,23 +262,23 @@ and is excluded — see <code>audits/5_132150001-132750000_audit.md</code>.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC22A4</td>
+<td class="gene">SLC22A4</td>
 <td>Statistical genetics (negative control, disease-specificity)</td>
 <td>IBD5-locus (SLC22A4-region) variants tested for association with type 1 diabetes; no significant association found</td>
 <td>PMID 16519819 / DOI 10.1186/1471-2350-7-20</td>
-<td>SUPPORTED — demonstrates this locus's immune pleiotropy is disease-specific/context-dependent, not a generic &quot;immune gene&quot; effect; argues against assuming automatic COPD relevance</td>
+<td>SUPPORTED — demonstrates this locus's immune pleiotropy is disease-specific/context-dependent, not a generic "immune gene" effect; argues against assuming automatic COPD relevance</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC22A4</td>
+<td class="gene">SLC22A4</td>
 <td>Structural/immunology (review)</td>
 <td>Review of OCTN1/SLC22A4 ergothioneine transport, oxidative stress, and inflammation control in vital organs including lung</td>
 <td>PMID 42070023</td>
-<td>WEAKENED — general review, no COPD-specific data reported in researcher's search</td>
+<td><span class="tag-warning">WEAKENED</span> — general review, no COPD-specific data reported in researcher's search</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL5 (screened, not a locus-specific candidate)</td>
+<td class="gene">IL5 (screened, not a locus-specific candidate)</td>
 <td>Clinical/therapeutic (not locus genetics)</td>
 <td>Anti-IL-5 (mepolizumab) reduced exacerbations in two phase-3 trials (METREX/METREO) in eosinophilic-phenotype COPD patients</td>
 <td>PMID 28893134 / DOI 10.1056/NEJMoa1708208</td>
@@ -602,7 +286,7 @@ and is excluded — see <code>audits/5_132150001-132750000_audit.md</code>.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KIF3A (screened, distinct sub-locus)</td>
+<td class="gene">KIF3A (screened, distinct sub-locus)</td>
 <td>Statistical genetics (nearby but distinct locus)</td>
 <td>KIF3A rs12186803 risk allele interacts with allergic sensitization/early eczema to increase asthma risk in children</td>
 <td>PMID 30830718</td>
@@ -610,12 +294,12 @@ and is excluded — see <code>audits/5_132150001-132750000_audit.md</code>.</p>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not">Open Targets summary (structured database lookup — NOT a verified literature citation; not</h2>
 <p>reviewed by citation-verifier or red-team-skeptic)</p>
 <p>Disease context: MONDO_0005002 (chronic obstructive pulmonary disease). L2G = locus-to-gene score
 for the lead variant rs2057656's credible sets, per study.</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -628,7 +312,7 @@ for the lead variant rs2057656's credible sets, per study.</p>
 </thead>
 <tbody>
 <tr>
-<td>IRF1</td>
+<td class="gene">IRF1</td>
 <td>ENSG00000125347</td>
 <td>0.053 (3rd)</td>
 <td>~0.12-0.24 across GCST90399694 COPD, FEV1/FVC GWAS, asthma GWAS (often top or near-top)</td>
@@ -636,7 +320,7 @@ for the lead variant rs2057656's credible sets, per study.</p>
 <td>mis oe=0.566 (constrained); lof oe=0.334, score=0.942 (fairly LoF-intolerant)</td>
 </tr>
 <tr>
-<td>AFF4</td>
+<td class="gene">AFF4</td>
 <td>ENSG00000072364</td>
 <td>not top-3 in any study</td>
 <td>not top-3 in any study</td>
@@ -644,7 +328,7 @@ for the lead variant rs2057656's credible sets, per study.</p>
 <td>lof oe=0.058, score=1 (highly LoF-intolerant)</td>
 </tr>
 <tr>
-<td>HSPA4</td>
+<td class="gene">HSPA4</td>
 <td>ENSG00000170606</td>
 <td>not top-3 in any study</td>
 <td>not top-3 in any study</td>
@@ -652,7 +336,7 @@ for the lead variant rs2057656's credible sets, per study.</p>
 <td>lof oe=0.191, score=1 (LoF-intolerant)</td>
 </tr>
 <tr>
-<td>CARINH</td>
+<td class="gene">CARINH</td>
 <td>ENSG00000197536</td>
 <td>not top-3 in any study</td>
 <td>not top-3 in any study</td>
@@ -660,7 +344,7 @@ for the lead variant rs2057656's credible sets, per study.</p>
 <td>not assessed (non-coding gene)</td>
 </tr>
 <tr>
-<td>SLC22A5</td>
+<td class="gene">SLC22A5</td>
 <td>ENSG00000197375</td>
 <td><strong>0.316 (1st)</strong></td>
 <td>~0.13 (roughly tied w/ IRF1) for COPD GCST90399694, FEV1/FVC GWAS incl. never-smoker-stratified</td>
@@ -668,7 +352,7 @@ for the lead variant rs2057656's credible sets, per study.</p>
 <td>lof oe=0.732, score~0 (LoF-tolerant; consistent with recessive-only disease)</td>
 </tr>
 <tr>
-<td>SLC22A4</td>
+<td class="gene">SLC22A4</td>
 <td>ENSG00000197208</td>
 <td>0.080 (2nd)</td>
 <td>not top-3 elsewhere</td>
@@ -676,7 +360,7 @@ for the lead variant rs2057656's credible sets, per study.</p>
 <td>lof oe=0.720, score~0 (LoF-tolerant)</td>
 </tr>
 <tr>
-<td>IL3</td>
+<td class="gene">IL3</td>
 <td>ENSG00000164399</td>
 <td>not top-3</td>
 <td>not top-3</td>
@@ -684,7 +368,7 @@ for the lead variant rs2057656's credible sets, per study.</p>
 <td>lof oe=0.930, score~0 (tolerant)</td>
 </tr>
 <tr>
-<td>IL4</td>
+<td class="gene">IL4</td>
 <td>ENSG00000113520</td>
 <td>not top-3</td>
 <td>not top-3</td>
@@ -692,7 +376,7 @@ for the lead variant rs2057656's credible sets, per study.</p>
 <td>lof oe=0.404, score=0.340 (moderate)</td>
 </tr>
 <tr>
-<td>IL5</td>
+<td class="gene">IL5</td>
 <td>ENSG00000113525</td>
 <td>3rd place, ~0.05-0.065 (consistent, likely regional LD)</td>
 <td>same</td>
@@ -700,7 +384,7 @@ for the lead variant rs2057656's credible sets, per study.</p>
 <td>lof oe=0.591, score=0.021 (weak)</td>
 </tr>
 <tr>
-<td>IL13</td>
+<td class="gene">IL13</td>
 <td>ENSG00000169194</td>
 <td>not top-3</td>
 <td>not top-3</td>
@@ -708,7 +392,7 @@ for the lead variant rs2057656's credible sets, per study.</p>
 <td>lof oe=0.758, score=0.004 (tolerant)</td>
 </tr>
 <tr>
-<td>CSF2</td>
+<td class="gene">CSF2</td>
 <td>ENSG00000164400</td>
 <td>not top-3</td>
 <td>not top-3</td>
@@ -716,7 +400,7 @@ for the lead variant rs2057656's credible sets, per study.</p>
 <td>lof oe=0.271, score=0.854 (fairly LoF-intolerant)</td>
 </tr>
 <tr>
-<td>RAD50</td>
+<td class="gene">RAD50</td>
 <td>ENSG00000113522</td>
 <td>not top-3</td>
 <td>not top-3</td>
@@ -724,7 +408,7 @@ for the lead variant rs2057656's credible sets, per study.</p>
 <td>mis oe=0.843, score=2.292 (constrained); lof oe=0.769, score~0</td>
 </tr>
 <tr>
-<td>KIF3A</td>
+<td class="gene">KIF3A</td>
 <td>ENSG00000131437</td>
 <td>not top-3</td>
 <td>not top-3</td>
@@ -732,7 +416,7 @@ for the lead variant rs2057656's credible sets, per study.</p>
 <td>mis oe=0.618, score=3.693 (strongly constrained); lof oe=0.181, score=1 (LoF-intolerant)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Full detail: <code>evidence_tables/_status/5_132150001-132750000/opentargets.md</code>.</p>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>Prioritized gene: IRF1</strong> — Confidence: <strong>LOW</strong></p>
@@ -769,10 +453,10 @@ heterozygous regulatory variant, and by no dedicated peer-reviewed COPD paper na
 <li><strong>Unresolved alternative hypothesis (per red-team-skeptic, not independently confirmed further
 here): asthma-COPD overlap / phenotype misclassification.</strong> This locus sits in the classical
 chr5q31.1 Th2-cytokine-cluster asthma/atopy region. IRF1's L2G edges ahead of SLC22A5
-specifically for asthma GWAS and for &quot;Asthma-COPD overlap syndrome&quot; as a queried trait; KIF3A
+specifically for asthma GWAS and for "Asthma-COPD overlap syndrome" as a queried trait; KIF3A
 has documented (if locus-distinct) asthma/atopic-dermatitis genetics nearby; and IL5's high
 Open Targets clinical score reflects eosinophilic-COPD/asthma biologic trials. It remains a live,
-unresolved possibility that part of this locus's &quot;COPD&quot; GWAS signal (particularly in
+unresolved possibility that part of this locus's "COPD" GWAS signal (particularly in
 registry/ICD-code-based cohorts such as FinnGen) reflects asthma/atopy biology or
 asthma-COPD-overlap-syndrome case misclassification rather than COPD/emphysema-specific
 biology — for either IRF1 or SLC22A5. This was not resolved by any evidence gathered in this
@@ -792,5 +476,7 @@ GWAS used, to rule out asthma-COPD-overlap confounding. Given the closeness of t
 unresolved directional and phenotype-misclassification issues above, this recommendation should be
 treated as provisional by the study team, not a settled result.</p>
 
+        </div>
+    </div>
 </body>
 </html>

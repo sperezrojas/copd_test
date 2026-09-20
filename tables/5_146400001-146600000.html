@@ -1,379 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>5_146400001-146600000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPD locus evidence table: 5:146,400,001-146,600,000 (nearest gene TCERG1)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="copd-locus-evidence-table-5146400001-146600000-nearest-gene-tcerg1">COPD locus evidence table: 5:146,400,001-146,600,000 (nearest gene TCERG1)</h1>
-<p><strong>Lead variant:</strong> rs73793188 (5:146,486,090, GRCh38, PIP=0.114, intron_variant in TCERG1)
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="copd-locus-evidence-table-5146400001-146600000-nearest-gene-tcerg1">COPD locus evidence table: 5:146,400,001-146,600,000 (nearest gene TCERG1)</h1><div class="summary"><p><strong>Lead variant:</strong> rs73793188 (5:146,486,090, GRCh38, PIP=0.114, intron_variant in TCERG1)
 <strong>Candidate genes:</strong> TCERG1 (nearest gene; bulk of 55-variant credible set), PPP2R2B
 (MAGMA + PoPS prioritized; gene body &gt;200kb from credible set), GPR151 (tagged only by 2
-variants of PIP&lt;0.001 at the edge of the credible set). FLAMES/ABC = NA.</p>
-<p>All rows below use only citations with a <strong>VERIFIED</strong> verdict from citation-verifier. One
+variants of PIP&lt;0.001 at the edge of the credible set). FLAMES/ABC = NA.</p><p>All rows below use only citations with a <strong>VERIFIED</strong> verdict from citation-verifier. One
 citation returned by the researcher (Liu et al. 2019 GSCAN, PMID 30643251) was excluded —
-see the audit appendix (<code>audits/5_146400001-146600000_audit.md</code>) for why.</p>
-<table>
+see the audit appendix (<code>audits/5_146400001-146600000_audit.md</code>) for why.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -386,71 +70,71 @@ see the audit appendix (<code>audits/5_146400001-146600000_audit.md</code>) for 
 </thead>
 <tbody>
 <tr>
-<td>TCERG1</td>
+<td class="gene">TCERG1</td>
 <td>Neurodegenerative genetics (non-lung)</td>
 <td>A hexamer repeat in TCERG1 exon 4 modifies age at motor onset in Huntington's disease, explaining a previously reported chr5 SNP association (rs79727797)</td>
 <td>PMID 36064847 / DOI 10.1038/s41525-022-00317-w</td>
-<td>WEAKENED — non-lung trait; shows TCERG1 is a genuine, repeatedly-replicated genetic hit outside pulmonary biology</td>
+<td><span class="tag-warning">WEAKENED</span> — non-lung trait; shows TCERG1 is a genuine, repeatedly-replicated genetic hit outside pulmonary biology</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCERG1</td>
+<td class="gene">TCERG1</td>
 <td>Neurodegenerative genetics (non-lung)</td>
 <td>A TCERG1 microsatellite shows a non-significant trend toward association with Huntington's disease residual age of onset in Venezuelan kindreds</td>
 <td>PMID 17018562 / DOI 10.1136/jmg.2006.045153</td>
-<td>WEAKENED — non-significant, non-lung</td>
+<td><span class="tag-warning">WEAKENED</span> — non-significant, non-lung</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCERG1</td>
+<td class="gene">TCERG1</td>
 <td>Structural/developmental lung (indirect)</td>
 <td>TCERG1 protein is one of 9 plasma extracellular-vesicle proteins in a machine-learning signature distinguishing preterm infants who develop bronchopulmonary dysplasia (BPD) from those who don't</td>
 <td>PMID 41552916 / DOI 10.1152/function.090.2025</td>
-<td>WEAKENED — biomarker/proteomic association only, not functional or genetic; BPD (preterm, developmental) is biologically distinct from adult smoking-related COPD</td>
+<td><span class="tag-warning">WEAKENED</span> — biomarker/proteomic association only, not functional or genetic; BPD (preterm, developmental) is biologically distinct from adult smoking-related COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCERG1</td>
+<td class="gene">TCERG1</td>
 <td>Molecular biology background (immune-adjacent)</td>
 <td>CA150/TCERG1 splice isoforms identified, with noted expression in mouse CD4+ T cells, liver, and blood</td>
 <td>PMID 10578054 / DOI 10.1093/oxfordjournals.jbchem.a022547</td>
-<td>WEAKENED — general expression survey, not lung/COPD-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — general expression survey, not lung/COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCERG1</td>
+<td class="gene">TCERG1</td>
 <td>Molecular biology background</td>
 <td>CA150 (TCERG1) WW domains interact with U2 snRNP/SF1/U2AF spliceosome components; CA150 depletion reduces splicing efficiency in vivo</td>
 <td>PMID 15456888 / DOI 10.1128/MCB.24.20.9176-9185.2004</td>
-<td>WEAKENED — core molecular function, not lung/COPD-specific</td>
+<td><span class="tag-warning">WEAKENED</span> — core molecular function, not lung/COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCERG1</td>
+<td class="gene">TCERG1</td>
 <td>Molecular biology background (neuronal)</td>
 <td>TCERG1 regulates splicing of cytoskeleton/neurite-outgrowth genes and is required for neurite outgrowth in neuroblastoma cells and primary neurons</td>
 <td>PMID 27844289 / DOI 10.1007/s12035-016-0284-6</td>
-<td>WEAKENED — neuronal context, not lung</td>
+<td><span class="tag-warning">WEAKENED</span> — neuronal context, not lung</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TCERG1</td>
+<td class="gene">TCERG1</td>
 <td>Immune/inflammatory (indirect, non-lung)</td>
 <td>TCERG1 modulates Bcl-x and Fas/CD95 alternative splicing to regulate apoptosis in HEK293/HeLa/Jurkat (T-cell line) cells</td>
 <td>PMID 26462236 / DOI 10.1371/journal.pone.0139812</td>
-<td>WEAKENED — general apoptosis mechanism; a plausible but untested/speculative link to TCERG1's neutrophil/WBC-count colocalization at this locus, not a direct finding</td>
+<td><span class="tag-warning">WEAKENED</span> — general apoptosis mechanism; a plausible but untested/speculative link to TCERG1's neutrophil/WBC-count colocalization at this locus, not a direct finding</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GPR151</td>
+<td class="gene">GPR151</td>
 <td>Smoking-mediated effects (prior #1)</td>
 <td>GPR151 is one of the genes with highest, most habenula-specific expression; genes from genetic studies of smoking/nicotine response are enriched in habenula; habenula shows a neuroimmune transcriptional signature and enrichment for genes linked to diseases comorbid with addiction, including pneumonia and pulmonary fibrosis</td>
 <td>PMID 30429765 / DOI 10.3389/fnins.2018.00742</td>
-<td>WEAKENED — the pneumonia/pulmonary-fibrosis link is a comorbidity gene-set enrichment finding, not a GPR151-specific pulmonary finding; risk of being over-read as &quot;GPR151 linked to lung disease&quot;</td>
+<td><span class="tag-warning">WEAKENED</span> — the pneumonia/pulmonary-fibrosis link is a comorbidity gene-set enrichment finding, not a GPR151-specific pulmonary finding; risk of being over-read as "GPR151 linked to lung disease"</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GPR151</td>
+<td class="gene">GPR151</td>
 <td>Smoking-mediated effects / structural background</td>
 <td>Review confirming GPR151 is highly enriched in the habenula complex, spinal cord, and dorsal root ganglia; implicated in pain modulation and reward/addiction-related behavior</td>
 <td>PMID 40295925 / DOI 10.1021/acschemneuro.4c00780</td>
@@ -458,7 +142,7 @@ see the audit appendix (<code>audits/5_146400001-146600000_audit.md</code>) for 
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GPR151</td>
+<td class="gene">GPR151</td>
 <td>Smoking-mediated effects (prior #1)</td>
 <td>GPR151 confirmed as one of five brain-expressed GPCRs in a large exome study (640,000 exomes); described as a habenular receptor involved in addictive behavior and differential food-intake response to nicotine</td>
 <td>PMID 34210852 / DOI 10.1126/science.abf8683</td>
@@ -466,63 +150,63 @@ see the audit appendix (<code>audits/5_146400001-146600000_audit.md</code>) for 
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GPR151</td>
+<td class="gene">GPR151</td>
 <td>Metabolic/hepatic pleiotropy</td>
 <td>A rare putative loss-of-function GPR151 variant is associated with lower risk of type 2 diabetes; Gpr151 is a fasting/glucagon-responsive hepatic gene that regulates hepatic gluconeogenesis in mice</td>
 <td>PMID 36456565 / DOI 10.1038/s41467-022-35069-9</td>
-<td><strong>CONTESTED</strong> — directly contradicted by PMID 35381001 (see next row); unrelated to lung/immune biology regardless</td>
+<td><span class="tag-warning">CONTESTED</span> — directly contradicted by PMID 35381001 (see next row); unrelated to lung/immune biology regardless</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GPR151</td>
+<td class="gene">GPR151</td>
 <td>Metabolic/hepatic pleiotropy (contradicting evidence)</td>
 <td>Complete human GPR151 loss-of-function is NOT associated with clinically significant differences in BMI, type 2 diabetes, or other metabolic traits in a large knockout biobank; Gpr151-/- mice show no body-weight difference on normal chow</td>
 <td>PMID 35381001 / DOI 10.1371/journal.pgen.1010093</td>
-<td><strong>CONTESTED</strong> — directly contradicts PMID 36456565 above; the two together should be read as unresolved, not as a positive metabolic-pleiotropy finding</td>
+<td><span class="tag-warning">CONTESTED</span> — directly contradicts PMID 36456565 above; the two together should be read as unresolved, not as a positive metabolic-pleiotropy finding</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GPR151</td>
+<td class="gene">GPR151</td>
 <td>Immune/inflammatory (neuroimmune, non-lung)</td>
 <td>Gpr151 knockout mice show altered behavioral (passive-coping/motivation) response to systemic LPS inflammatory challenge without change in peripheral immune activation; habenular GPR151 re-expression restores inflammation-induced amotivation in a sex-specific manner</td>
 <td>PMID 42620318 (bioRxiv preprint, DOI 10.64898/2026.08.02.742327)</td>
-<td>WEAKENED — non-peer-reviewed preprint with citation-verifier-flagged atypical PMID/DOI indexing; explicitly reports <strong>no</strong> peripheral-immune change, i.e. argues against, not for, an airway/peripheral-immune mechanism</td>
+<td><span class="tag-warning">WEAKENED</span> — non-peer-reviewed preprint with citation-verifier-flagged atypical PMID/DOI indexing; explicitly reports no peripheral-immune change, i.e. argues against, not for, an airway/peripheral-immune mechanism</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GPR151</td>
+<td class="gene">GPR151</td>
 <td>Immune/inflammatory (neuroimmune, non-lung)</td>
 <td>GPR151 in dorsal root ganglion sensory neurons is required for CSF1-dependent spinal microglial activation and neuropathic pain after nerve injury</td>
 <td>PMID 34244727 / DOI 10.1093/brain/awab245</td>
-<td>WEAKENED — genuine neuroimmune (microglial) mechanism, but central/peripheral nervous system, not airway</td>
+<td><span class="tag-warning">WEAKENED</span> — genuine neuroimmune (microglial) mechanism, but central/peripheral nervous system, not airway</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PPP2R2B</td>
+<td class="gene">PPP2R2B</td>
 <td>Neurodegenerative genetics (non-lung)</td>
 <td>Spinocerebellar ataxia type 12 (SCA12) is caused by a CAG/CTG repeat expansion in PPP2R2B; neuropathology shows cerebellar/cerebral cortical atrophy and Purkinje cell loss; the repeat likely alters PPP2R2B expression/splicing</td>
 <td>PMID 27748686 / DOI 10.1097/WCO.0000000000000385</td>
-<td>WEAKENED — non-lung; PPP2R2B's best-established human disease role, no reported pulmonary phenotype</td>
+<td><span class="tag-warning">WEAKENED</span> — non-lung; PPP2R2B's best-established human disease role, no reported pulmonary phenotype</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PPP2R2B</td>
+<td class="gene">PPP2R2B</td>
 <td>Molecular biology background (neuronal)</td>
 <td>CREB1, SP1, and TFAP4 regulate the PPP2R2B promoter/CAG-repeat activity in a neuronal expression context</td>
 <td>PMID 20533062 / DOI 10.1007/s00439-010-0843-2</td>
-<td>WEAKENED — regulatory mechanism, non-lung</td>
+<td><span class="tag-warning">WEAKENED</span> — regulatory mechanism, non-lung</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PPP2R2B</td>
+<td class="gene">PPP2R2B</td>
 <td>Immune/inflammatory (non-lung, autoimmune)</td>
 <td>PP2A-Bβ (encoded by PPP2R2B) regulates IL-2-deprivation-induced T-cell apoptosis; ~50% of systemic lupus erythematosus (SLE) patients fail to normally up-regulate it upon IL-2 deprivation, correlating with apoptosis-resistant, prolonged survival of autoreactive T cells</td>
 <td>PMID 21746932 / DOI 10.1073/pnas.1103915108</td>
-<td><strong>CONTESTED as COPD evidence</strong> — genuine, mechanistically detailed T-cell immune finding, but in SLE, never tested in airway immunity, neutrophils, macrophages, or COPD; porting an SLE T-cell mechanism to COPD is an unsupported disease-to-disease extrapolation per red-team-skeptic</td>
+<td><span class="tag-warning">CONTESTED</span> as COPD evidence — genuine, mechanistically detailed T-cell immune finding, but in SLE, never tested in airway immunity, neutrophils, macrophages, or COPD; porting an SLE T-cell mechanism to COPD is an unsupported disease-to-disease extrapolation per red-team-skeptic</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
 <p>Candidate genes resolved: TCERG1 (ENSG00000113649), PPP2R2B (ENSG00000156475), GPR151
 (ENSG00000173250). Disease/trait IDs: COPD = MONDO_0005002; FEV1 = EFO_0004314;
@@ -540,7 +224,7 @@ Genetic constraint: LoF-intolerant (obs/exp=0.235, upperBin6=0, most constrained
 <li><strong>PPP2R2B:</strong> No direct Open Targets modeled association with COPD, FEV1, or FEV1/FVC
 (count=0 for all three). Own broader disease-association profile includes
 neurodegenerative disease, spinocerebellar ataxia type 12 (its own known disease),
-schizophrenia, and a weak &quot;bronchial disorder&quot; hit far down the list
+schizophrenia, and a weak "bronchial disorder" hit far down the list
 (genetic_association only). <strong>Never scored by Open Targets' L2G model at this locus at
 all</strong> — zero colocalization support for any of the 7 credible sets anchored near the
 lead variant, despite being the MAGMA- and PoPS-prioritized gene. Genetic constraint:
@@ -620,5 +304,7 @@ lack of mechanistic literature explaining TCERG1's own colocalization signal, th
 recommendation is offered at <strong>LOW confidence</strong> for the study team's own weighing, not as
 a settled call.</p>
 
+        </div>
+    </div>
 </body>
 </html>

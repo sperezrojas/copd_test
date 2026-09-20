@@ -1,387 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>2_44800001-45050000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 2:44,800,001-45,050,000 (GRCh38; nearest gene SIX3)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-244800001-45050000-grch38-nearest-gene-six3">Evidence table — locus 2:44,800,001-45,050,000 (GRCh38; nearest gene SIX3)</h1>
-<p><strong>Lead variant:</strong> rs501964 (PIP=0.579, 2:44,911,802, intergenic)
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-244800001-45050000-grch38-nearest-gene-six3">Evidence table — locus 2:44,800,001-45,050,000 (GRCh38; nearest gene SIX3)</h1><div class="summary"><p><strong>Lead variant:</strong> rs501964 (PIP=0.579, 2:44,911,802, intergenic)
 <strong>Second credible-set variant:</strong> rs11692742 (PIP=0.367, 2:44,885,314, intergenic)
 Remaining credible-set variants (rs13014128, rs7568987 [intron of LINC01833], rs494904,
 rs13383034 [non-coding transcript exon], rs567897, rs1629802) each carry PIP&lt;0.03, are all
 intergenic/intronic/non-coding, and are rolled into the relevant gene's evidence below rather
 than searched individually (none are missense/splice).
 <strong>Internal pipeline candidate genes:</strong> nearest gene = SIX3; FLAMES/MAGMA/PoPS all
-prioritize CAMKMT; ABC = NA.</p>
-<p>Note on locus geometry (verified independently by two data sources — Ensembl REST via the
+prioritize CAMKMT; ABC = NA.</p><p>Note on locus geometry (verified independently by two data sources — Ensembl REST via the
 researcher, and Open Targets' own genomic-location field via the orchestrator): <strong>CAMKMT
 (chr2:44,361,947-44,772,592) lies physically outside the defined 2:44,800,001-45,050,000
 locus window</strong>, ending ~27.4 kb before the window start, despite being the gene unanimously
 prioritized by FLAMES/MAGMA/PoPS. Only <strong>SIX3</strong> (44,941,702-44,946,071) and <strong>SIX2</strong>
 (45,005,182-45,009,520) are protein-coding genes strictly inside the window; <strong>LINC01833</strong>
-(intronic host of low-PIP variant rs7568987) is a non-coding gene also inside the window.</p>
-<table>
+(intronic host of low-PIP variant rs7568987) is a non-coding gene also inside the window.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -394,15 +78,15 @@ prioritized by FLAMES/MAGMA/PoPS. Only <strong>SIX3</strong> (44,941,702-44,946,
 </thead>
 <tbody>
 <tr>
-<td>SIX3</td>
+<td class="gene">SIX3</td>
 <td>Structural/developmental (human genetics)</td>
 <td>SIX3 is the HPE2 gene at 2p21; loss-of-function homeodomain mutations cause holoprosencephaly (forebrain/craniofacial patterning defect)</td>
 <td>Wallis et al. 1999, Nat Genet 22(2):196-8, PMID 10369266, DOI 10.1038/9718</td>
-<td>VERIFIED (citation); part of WEAKENED overall SIX3 verdict — developmental biology has no established lung route</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED (citation); part of  overall SIX3 verdict — developmental biology has no established lung route</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SIX3</td>
+<td class="gene">SIX3</td>
 <td>Structural/developmental (expression)</td>
 <td>SIX3 maps to 2p21-p22; expression restricted to retina, lens, hypothalamus, and pituitary in mouse/human — no lung expression reported</td>
 <td>Leppert et al. 1999, Ophthalmic Genetics 20(1):7-21, PMID 10415461, DOI 10.1076/opge.20.1.7.2298</td>
@@ -410,7 +94,7 @@ prioritized by FLAMES/MAGMA/PoPS. Only <strong>SIX3</strong> (44,941,702-44,946,
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SIX3</td>
+<td class="gene">SIX3</td>
 <td>Structural/developmental (review)</td>
 <td>Review of holoprosencephaly-causing genes (SHH, ZIC2, SIX3, TGIF) and their role in forebrain/midface patterning</td>
 <td>Wallis &amp; Muenke 2000, Human Mutation 16(2):99-108, PMID 10923031, DOI 10.1002/1098-1004(200008)16:2&lt;99::AID-HUMU2&gt;3.0.CO;2-0</td>
@@ -418,15 +102,15 @@ prioritized by FLAMES/MAGMA/PoPS. Only <strong>SIX3</strong> (44,941,702-44,946,
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SIX3</td>
+<td class="gene">SIX3</td>
 <td>Statistical genetics (smoking-mediated pathway)</td>
 <td>Multi-trait GWAS (MTAG) combining alcohol use disorder (AUD) and smoking-status traits in the Million Veteran Program identified a colocalized signal explicitly named at SIX3 (with NCAM1 and near DRD2)</td>
 <td>Cheng et al. 2023, Transl Psychiatry 13(1):148, PMID 37147289, PMC10162964, DOI 10.1038/s41398-023-02409-2</td>
-<td>VERIFIED (citation) — but skeptic notes this is the SOLE independent published paper supporting the smoking-mediation hypothesis for SIX3; overall SIX3-smoking link rated WEAKENED, should be framed as best-supported hypothesis, not settled conclusion</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED (citation) — but skeptic notes this is the SOLE independent published paper supporting the smoking-mediation hypothesis for SIX3; overall SIX3-smoking link rated , should be framed as best-supported hypothesis, not settled conclusion</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SIX3</td>
+<td class="gene">SIX3</td>
 <td>Statistical genetics (background resource only)</td>
 <td>Foundational GSCAN multi-cohort GWAS of tobacco/alcohol traits (566 variants, 406 loci); cited as general background only — SIX3 is NOT named among the reported loci in this paper</td>
 <td>Liu et al. 2019 (GSCAN), Nat Genet 51(2):237-244, PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
@@ -434,7 +118,7 @@ prioritized by FLAMES/MAGMA/PoPS. Only <strong>SIX3</strong> (44,941,702-44,946,
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CAMKMT</td>
+<td class="gene">CAMKMT</td>
 <td>Statistical genetics (pleiotropy, unrelated trait)</td>
 <td>Anxiety-disorder factor-score GWAS found its strongest signal (rs1067327, P=2.86e-9) within CAMKMT on 2p21 — illustrates pleiotropy at this genomic region but no COPD/lung relevance</td>
 <td>Otowa et al. 2016, Mol Psychiatry 21(10):1391-9, PMID 26754954, PMC4940340, DOI 10.1038/mp.2015.197</td>
@@ -442,7 +126,7 @@ prioritized by FLAMES/MAGMA/PoPS. Only <strong>SIX3</strong> (44,941,702-44,946,
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CAMKMT</td>
+<td class="gene">CAMKMT</td>
 <td>Statistical genetics (cross-species, tangential)</td>
 <td>CAMKMT intronic SNPs associate with body-weight/chest-girth growth traits in Ujumqin sheep</td>
 <td>Ma et al. 2016, Animal Genetics 47(5):618-22, PMID 27435482, DOI 10.1111/age.12455</td>
@@ -450,7 +134,7 @@ prioritized by FLAMES/MAGMA/PoPS. Only <strong>SIX3</strong> (44,941,702-44,946,
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CAMKMT</td>
+<td class="gene">CAMKMT</td>
 <td>Structural/developmental (human deletion syndrome)</td>
 <td>Homozygous deletions spanning PREPL and C2orf34/CAMKMT (+/- SLC3A1) cause a syndrome of infantile hypotonia, growth failure, neuromuscular features, cleft palate, and genital abnormalities — no pulmonary/airway phenotype reported</td>
 <td>Bartholdi et al. 2013, Am J Med Genet A 161A(8):1853-9, PMID 23794250, DOI 10.1002/ajmg.a.35994</td>
@@ -458,7 +142,7 @@ prioritized by FLAMES/MAGMA/PoPS. Only <strong>SIX3</strong> (44,941,702-44,946,
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CAMKMT</td>
+<td class="gene">CAMKMT</td>
 <td>Immune/regulatory (indirect)</td>
 <td>CAMKMT is a direct transcriptional target repressed by the ZBTB24-DNMT3B complex; ZBTB24 loss-of-function causes ICF immunodeficiency syndrome (mechanistic-pathway-level link only, not direct CAMKMT immune evidence)</td>
 <td>Thompson et al. 2018, Nucleic Acids Research 46(19):10034-10051, PMID 30085123, PMC6212772, DOI 10.1093/nar/gky682</td>
@@ -466,7 +150,7 @@ prioritized by FLAMES/MAGMA/PoPS. Only <strong>SIX3</strong> (44,941,702-44,946,
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CAMKMT</td>
+<td class="gene">CAMKMT</td>
 <td>Molecular function (basic biochemistry)</td>
 <td>METTL21A (=CAMKMT) trimethylates a conserved lysine on HSP70/HSPA family chaperones (HSPA8/Hsc70), altering chaperone affinity for alpha-synuclein — basic biochemistry, no lung/COPD relevance</td>
 <td>Jakobsson et al. 2013, J Biol Chem 288(39):27752-63, PMID 23921388, PMC3784692, DOI 10.1074/jbc.M113.483248</td>
@@ -474,7 +158,7 @@ prioritized by FLAMES/MAGMA/PoPS. Only <strong>SIX3</strong> (44,941,702-44,946,
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CAMKMT</td>
+<td class="gene">CAMKMT</td>
 <td>Molecular function (basic biochemistry, tangential)</td>
 <td>Basic enzymology of the METTL21 methyltransferase family (METTL10/EF1A1 methylation in mammalian cells)</td>
 <td>Shimazu et al. 2014, PLoS ONE 9(8):e105394, PMID 25144183, PMC4140779, DOI 10.1371/journal.pone.0105394</td>
@@ -482,7 +166,7 @@ prioritized by FLAMES/MAGMA/PoPS. Only <strong>SIX3</strong> (44,941,702-44,946,
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CAMKMT</td>
+<td class="gene">CAMKMT</td>
 <td>Molecular function (basic biochemistry, tangential)</td>
 <td>Basic enzymology of a METTL21-like methyltransferase methylating eEF1A in yeast</td>
 <td>Jakobsson et al. 2015, PLoS ONE 10(6):e0131426, PMID 26115316, PMC4482628, DOI 10.1371/journal.pone.0131426</td>
@@ -490,7 +174,7 @@ prioritized by FLAMES/MAGMA/PoPS. Only <strong>SIX3</strong> (44,941,702-44,946,
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SIX2</td>
+<td class="gene">SIX2</td>
 <td>Structural/developmental (renal, not lung)</td>
 <td>SIX2 mutations are associated with renal hypodysplasia/CAKUT, though this specific study found no SIX2 variants in its own cohort of 125 CAKUT patients</td>
 <td>Faguer et al. 2012, Eur J Med Genet 55(12):688-9, PMID 22809486, DOI 10.1016/j.ejmg.2012.06.003</td>
@@ -498,13 +182,13 @@ prioritized by FLAMES/MAGMA/PoPS. Only <strong>SIX3</strong> (44,941,702-44,946,
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
 <p>Queried 2026-09-11 against MONDO_0005002 (chronic obstructive pulmonary disease) and
 EFO_0004314 (FEV1/forced expiratory volume).</p>
 <ul>
 <li><strong>SIX3</strong> (ENSG00000138083): L2G score for COPD = <strong>0.7145</strong> (highest-confidence tier;
-source study GCST90476027, &quot;Chronic airway obstruction&quot; PheCode 496). Overall COPD
+source study GCST90476027, "Chronic airway obstruction" PheCode 496). Overall COPD
 association score 0.2655 (genetic_association datatype 0.4344, literature 0.0471). Across
 the two highest-PIP credible-set variants (rs501964, rs11692742), Open Targets returns 19
 and 9 other-trait GWAS credible-set overlaps respectively; in every row with an L2G
@@ -575,5 +259,7 @@ linking rs501964/rs11692742 to SIX3 (or another gene) expression in lung or
 neural/brain-relevant tissue, and/or a dedicated COPD/spirometry GWAS analysis stratified or
 adjusted for smoking status at this specific locus.</p>
 
+        </div>
+    </div>
 </body>
 </html>

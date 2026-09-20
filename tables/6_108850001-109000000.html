@@ -1,378 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>6_108850001-109000000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 6:108,850,001-109,000,000 (GRCh38)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-6108850001-109000000-grch38">Evidence table — locus 6:108,850,001-109,000,000 (GRCh38)</h1>
-<p><strong>Lead variant:</strong> rs2798641 (6:108,946,847, intron_variant, ARMC2, PIP=0.625)
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-6108850001-109000000-grch38">Evidence table — locus 6:108,850,001-109,000,000 (GRCh38)</h1><div class="summary"><p><strong>Lead variant:</strong> rs2798641 (6:108,946,847, intron_variant, ARMC2, PIP=0.625)
 <strong>Credible set (ABF fine-mapping):</strong> rs2798641 (PIP=0.625), rs2806356 (PIP=0.290, 6:108,945,052, intron_variant, ARMC2), rs2768551 (PIP=0.058, 6:108,949,453, intron_variant, ARMC2) — all three credible-set variants sit in ARMC2 introns.
-<strong>Candidate genes evaluated:</strong> ARMC2 (nearest gene / all credible-set variants), FOXO3 (PoPS-prioritized), SESN1 (only other protein-coding gene physically overlapping the region; flagged for completeness, not a serious candidate).</p>
-<p>Only citations with a citation-verifier verdict of VERIFIED are included below. See
+<strong>Candidate genes evaluated:</strong> ARMC2 (nearest gene / all credible-set variants), FOXO3 (PoPS-prioritized), SESN1 (only other protein-coding gene physically overlapping the region; flagged for completeness, not a serious candidate).</p><p>Only citations with a citation-verifier verdict of VERIFIED are included below. See
 <code>audits/6_108850001-109000000_audit.md</code> for excluded citations (CLAIM_MISMATCH / NOT_FOUND)
-and the full red-team critique.</p>
-<table>
+and the full red-team critique.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -385,95 +69,95 @@ and the full red-team critique.</p>
 </thead>
 <tbody>
 <tr>
-<td>ARMC2</td>
+<td class="gene">ARMC2</td>
 <td>Structural/developmental biology</td>
 <td>Biallelic loss-of-function ARMC2 mutations cause severe asthenoteratozoospermia (MMAF — multiple morphological abnormalities of the flagella) via defective axonemal central-pair-complex assembly in the sperm flagellum, in humans and mice.</td>
 <td>Coutton C et al., Am J Hum Genet 2019. PMID 30686508 / DOI 10.1016/j.ajhg.2018.12.013</td>
-<td>WEAKENED (gene-level; see audit — establishes ARMC2 ciliary/flagellar biology restricted to sperm, recessive phenotype, not itself an airway/lung finding)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; see audit — establishes ARMC2 ciliary/flagellar biology restricted to sperm, recessive phenotype, not itself an airway/lung finding)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ARMC2</td>
+<td class="gene">ARMC2</td>
 <td>Structural/developmental biology</td>
-<td>ARMC2/PF27 is an obligate intraflagellar-transport (IFT) cargo adapter required for radial-spoke assembly in Chlamydomonas flagella; abstract itself describes human ARMC2 as &quot;a conserved armadillo repeat protein associated with male infertility and reduced lung function.&quot;</td>
+<td>ARMC2/PF27 is an obligate intraflagellar-transport (IFT) cargo adapter required for radial-spoke assembly in Chlamydomonas flagella; abstract itself describes human ARMC2 as "a conserved armadillo repeat protein associated with male infertility and reduced lung function."</td>
 <td>Lechtreck KF et al., eLife 2022. PMID 34982025 / DOI 10.7554/eLife.74993</td>
-<td>WEAKENED (gene-level; skeptic assesses the &quot;reduced lung function&quot; phrase as likely circular back-citation to Shrine 2019/Sakornsakolpat 2019, both CLAIM_MISMATCH here — not independent evidence; the flagellar-transport finding itself is a unicellular-algal model, not mammalian airway)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; skeptic assesses the "reduced lung function" phrase as likely circular back-citation to Shrine 2019/Sakornsakolpat 2019, both CLAIM_MISMATCH here — not independent evidence; the flagellar-transport finding itself is a unicellular-algal model, not mammalian airway)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ARMC2</td>
+<td class="gene">ARMC2</td>
 <td>Structural/developmental biology</td>
 <td>Review contextualizing ARMC2 as one of several substructure-specific IFT cargo adapters (radial spokes) in cilia/flagella assembly generally.</td>
 <td>Lechtreck K, J Cell Sci 2022 (review). PMID 36533425 / DOI 10.1242/jcs.260408</td>
-<td>WEAKENED (gene-level; general mechanistic background, not COPD/lung-disease specific)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; general mechanistic background, not COPD/lung-disease specific)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXO3</td>
+<td class="gene">FOXO3</td>
 <td>Locus/statistical genetics (candidate-gene, different variant)</td>
 <td>FOXO3A rs2253310 GG genotype associated with COPD (Padj=5.9e-7, OR=1.99) in a Russian case-control cohort (710 cases/655 controls); genotype-dependent variation in smoking index, vital capacity, FVC.</td>
 <td>Markelov VA et al., Vavilovskii Zhurnal Genetiki i Selektsii 2025. PMID 41164273 / DOI 10.18699/vjgb-25-90</td>
-<td>WEAKENED (gene-level; rs2253310 is a different variant, not in this locus's credible set — general FOXO3-COPD candidate-gene literature, not locus-specific evidence)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; rs2253310 is a different variant, not in this locus's credible set — general FOXO3-COPD candidate-gene literature, not locus-specific evidence)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXO3</td>
+<td class="gene">FOXO3</td>
 <td>Structural/developmental biology (smoke-exposure-dependent, mechanistic)</td>
 <td>FOXO3A decreased in COPD/cigarette-smoke-exposed human lung tissue and cells, inversely related to senescence markers (p53, p21, CCND1); azithromycin restores FOXO3A and reduces senescence.</td>
 <td>Chen Z et al., Int J Chron Obstruct Pulmon Dis 2025. PMID 41244262 / DOI 10.2147/COPD.S534997</td>
-<td>WEAKENED (gene-level; smoke-exposure-dependent mechanistic/expression finding, not tied to this locus's genetic signal)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; smoke-exposure-dependent mechanistic/expression finding, not tied to this locus's genetic signal)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXO3</td>
+<td class="gene">FOXO3</td>
 <td>Structural/developmental biology (smoke-exposure-dependent, mechanistic)</td>
 <td>Cigarette-smoke-induced circular RNA circFOXO3 (distinct from linear FOXO3 mRNA/protein) promotes autophagy-dependent senescence of alveolar type II cells via interaction with E2F1.</td>
 <td>Zhou X et al., Tobacco Induced Diseases 2026. PMID 41585093 / DOI 10.18332/tid/215393</td>
-<td>WEAKENED (gene-level; smoke-exposure-dependent, not genetic evidence for this locus)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; smoke-exposure-dependent, not genetic evidence for this locus)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXO3</td>
+<td class="gene">FOXO3</td>
 <td>Structural/developmental biology (smoke-exposure-dependent, mechanistic)</td>
 <td>FoxO3a acts downstream of an AMPK-Sirt1 axis in bronchial epithelial cell senescence (rat/cell COPD model; herbal-formula intervention).</td>
 <td>Cheng M et al., Scientific Reports 2025. PMID 40360552 / DOI 10.1038/s41598-025-00746-4</td>
-<td>WEAKENED (gene-level; pharmacology/mechanism study, not genetic evidence for this locus)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; pharmacology/mechanism study, not genetic evidence for this locus)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXO3</td>
+<td class="gene">FOXO3</td>
 <td>Structural/developmental biology (smoke/pollution-exposure-dependent, mechanistic)</td>
 <td>SIRT3-mediated FOXO3 deacetylation mitigates mitochondrial oxidative stress in a PM2.5-exacerbated COPD rat/cell model.</td>
 <td>Wang J et al., Phytomedicine 2025. PMID 40056638 / DOI 10.1016/j.phymed.2025.156568</td>
-<td>WEAKENED (gene-level; environmental-exposure model, not genetic evidence for this locus)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; environmental-exposure model, not genetic evidence for this locus)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXO3</td>
+<td class="gene">FOXO3</td>
 <td>Structural/developmental biology (review)</td>
-<td>Review positioning FOXO3 (alongside p53, NF-κB) downstream of SIRT1 in lung &quot;inflammaging&quot;/premature senescence relevant to COPD/emphysema pathogenesis.</td>
+<td>Review positioning FOXO3 (alongside p53, NF-κB) downstream of SIRT1 in lung "inflammaging"/premature senescence relevant to COPD/emphysema pathogenesis.</td>
 <td>Rahman I et al., Preventive Medicine 2011 (review). PMID 22178470 / DOI 10.1016/j.ypmed.2011.11.014</td>
-<td>WEAKENED (gene-level; background/mechanistic review, not locus-specific genetic evidence)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; background/mechanistic review, not locus-specific genetic evidence)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXO3</td>
+<td class="gene">FOXO3</td>
 <td>Immune/inflammatory (not lung/COPD-specific)</td>
 <td>AMBRA1-FOXO3-FOXP3 axis controls regulatory T-cell (Treg) differentiation/homeostasis in autoimmune disease models (multiple sclerosis, tumor models).</td>
 <td>Becher J et al., Developmental Cell 2018. PMID 30513302 / DOI 10.1016/j.devcel.2018.11.010</td>
-<td>WEAKENED (gene-level; general immunology, explicitly NOT lung/COPD-specific — supports biological plausibility only, per skeptic should not be presented without this caveat)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; general immunology, explicitly NOT lung/COPD-specific — supports biological plausibility only, per skeptic should not be presented without this caveat)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXO3</td>
+<td class="gene">FOXO3</td>
 <td>Immune/inflammatory (chemical-injury COPD-like model)</td>
-<td>FOXO3 identified among a hub-gene set (with SERPINA1, MMP9, CXCR2, IFNG, IL1RN) in PBMC transcriptomics of &quot;mustard lung&quot; (chemical warfare exposure, COPD-like phenotype) patients, implicating innate immunity/neutrophil activation/macrophage-differentiation pathways.</td>
+<td>FOXO3 identified among a hub-gene set (with SERPINA1, MMP9, CXCR2, IFNG, IL1RN) in PBMC transcriptomics of "mustard lung" (chemical warfare exposure, COPD-like phenotype) patients, implicating innate immunity/neutrophil activation/macrophage-differentiation pathways.</td>
 <td>Parvin S et al., International Immunopharmacology 2025. PMID 39946765 / DOI 10.1016/j.intimp.2025.114197</td>
-<td>WEAKENED (gene-level; chemical-injury model rather than idiopathic/smoking COPD; FOXO3 one of several hub genes in an unsupervised network analysis, not a focal/validated finding, per skeptic)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; chemical-injury model rather than idiopathic/smoking COPD; FOXO3 one of several hub genes in an unsupervised network analysis, not a focal/validated finding, per skeptic)</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-verified-literature">Open Targets summary (structured database lookup — not verified literature)</h2>
 <p><em>Queried directly via Open Targets Platform GraphQL API, 2026-09-11. This is a structured
 database lookup, not a verified literature citation; it did not go through
@@ -533,7 +217,7 @@ hallucinated future-dated paper — and must not be used. Without it, the surviv
 structural evidence (Coutton 2019, Lechtreck 2022 x2) establishes ARMC2 only as a
 ciliary/flagellar IFT-cargo-adapter gene in the sperm flagellum (humans/mice) and in
 Chlamydomonas flagella — not in mammalian airway epithelium. The skeptic further notes the
-&quot;associated with... reduced lung function&quot; phrase in the Lechtreck eLife abstract is likely a
+"associated with... reduced lung function" phrase in the Lechtreck eLife abstract is likely a
 circular back-citation to the same population GWAS papers (Shrine 2019, Sakornsakolpat 2019)
 that were themselves marked CLAIM_MISMATCH here (their abstracts don't explicitly name ARMC2
 or rs2798641), rather than independent corroboration. There is also zero eQTL/pQTL/sQTL
@@ -560,10 +244,12 @@ airway epithelium or lung tissue implicating ARMC2 (or ruling in/out CEP57L1, SE
 any genuine (non-fabricated) direct evidence of a respiratory/mucociliary phenotype in ARMC2
 loss-of-function models or MMAF patients; or a locus-specific fine-mapping/coloc study that
 directly adjudicates between ARMC2 and FOXO3 at 6q21. Until then, ARMC2 is the recommended
-pick on statistical/positional grounds, but this should be read as &quot;very likely the correct
-gene at this locus&quot; rather than &quot;mechanism understood&quot; — confidence is capped at MODERATE
+pick on statistical/positional grounds, but this should be read as "very likely the correct
+gene at this locus" rather than "mechanism understood" — confidence is capped at MODERATE
 rather than HIGH specifically because the mechanistic/functional-genomics support that would
 justify HIGH confidence did not survive citation verification.</p>
 
+        </div>
+    </div>
 </body>
 </html>

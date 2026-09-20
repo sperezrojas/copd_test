@@ -1,373 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>3_35500001-35750000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table: locus 3:35,500,001-35,750,000 (lead variant rs7612999; nearest/FLAMES/PoPS gene: ARPP21)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
 <h1 id="evidence-table-locus-335500001-35750000-lead-variant-rs7612999-nearestflamespops-gene-arpp21">Evidence table: locus 3:35,500,001-35,750,000 (lead variant rs7612999; nearest/FLAMES/PoPS gene: ARPP21)</h1>
 <h2 id="evidence-table">Evidence table</h2>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -380,79 +64,79 @@ code {
 </thead>
 <tbody>
 <tr>
-<td>ARPP21</td>
+<td class="gene">ARPP21</td>
 <td>Statistical genetics (cross-trait GWAS)</td>
-<td>Source study behind the Open Targets &quot;COPD or GERD (MTAG)&quot; evidence for this locus is a multi-ancestry (EUR/EAS/AFR) genome-wide cross-trait analysis of 20 lung-disease and 9 GI-disease GWAS pairs (not a COPD-only GWAS); COPD-GORD show genetic correlation rg=0.52; overall the 66 candidate pleiotropic genes across 14 trait pairs are enriched for immune/inflammatory pathways and GI (not lung) tissue. The paper's main text does NOT name ARPP21 or discuss chr3:35.6Mb/3p22.2 specifically (its three named novel loci are 17q21.1, 3p26.1, 8q21.3) — ARPP21/this locus may or may not appear in supplementary tables (unconfirmed).</td>
+<td>Source study behind the Open Targets "COPD or GERD (MTAG)" evidence for this locus is a multi-ancestry (EUR/EAS/AFR) genome-wide cross-trait analysis of 20 lung-disease and 9 GI-disease GWAS pairs (not a COPD-only GWAS); COPD-GORD show genetic correlation rg=0.52; overall the 66 candidate pleiotropic genes across 14 trait pairs are enriched for immune/inflammatory pathways and GI (not lung) tissue. The paper's main text does NOT name ARPP21 or discuss chr3:35.6Mb/3p22.2 specifically (its three named novel loci are 17q21.1, 3p26.1, 8q21.3) — ARPP21/this locus may or may not appear in supplementary tables (unconfirmed).</td>
 <td>You D et al., Nat Commun 2025. PMID 40155373. DOI 10.1038/s41467-025-58248-w</td>
-<td>WEAKENED — verified as accurately described, but the researcher's framing conflates &quot;locus appears in underlying MTAG summary statistics&quot; with &quot;paper specifically validates ARPP21.&quot; COPD-relevance of this locus rests on a database (Open Targets) evidence row, not confirmed literature discussion of ARPP21 itself.</td>
+<td><span class="tag-warning">WEAKENED</span> — verified as accurately described, but the researcher's framing conflates "locus appears in underlying MTAG summary statistics" with "paper specifically validates ARPP21." COPD-relevance of this locus rests on a database (Open Targets) evidence row, not confirmed literature discussion of ARPP21 itself.</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ARPP21</td>
+<td class="gene">ARPP21</td>
 <td>Structural/molecular biology (neurodevelopment)</td>
 <td>ARPP21 is an RNA-binding protein recognizing uridine-rich 3'UTR sequences (iCLIP); functionally antagonizes its own hosted intronic microRNA (miR-128) during mouse cerebral cortex neurodevelopment via eIF4F interaction; ARPP21 knockdown/miR-128 overexpression reduces dendritic complexity, ectopic ARPP21 increases it. Exclusively neurodevelopmental — no lung/airway biology described.</td>
 <td>Rehfeld F et al., Nat Commun 2018. PMID 29581509. DOI 10.1038/s41467-018-03681-3</td>
-<td>WEAKENED (as part of overall gene assessment) — accurately described but off-target for lung/COPD biology; underscores that ARPP21's best-characterized mechanism has no lung nexus.</td>
+<td><span class="tag-warning">WEAKENED</span> (as part of overall gene assessment) — accurately described but off-target for lung/COPD biology; underscores that ARPP21's best-characterized mechanism has no lung nexus.</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ARPP21</td>
+<td class="gene">ARPP21</td>
 <td>Structural/molecular biology (lung cancer cell line, NOT airway/alveolar structural biology)</td>
 <td>Mutant p53 (p53R175H) induces miR-128-2 by binding the ARPP21 promoter (inducing ARPP21 mRNA too) in NSCLC cell lines; miR-128-2 represses E2F5, de-represses p21(waf1), confers chemoresistance (cisplatin/doxorubicin/5-FU). A lung-cancer chemoresistance mechanism, not airway/alveolar/COPD-relevant structural biology.</td>
 <td>Donzelli S et al., Cell Death Differ 2011. PMID 22193543. DOI 10.1038/cdd.2011.190</td>
-<td>WEAKENED — accurately described but explicitly flagged by researcher and skeptic as off-target despite matching &quot;lung&quot; search terms (cancer biology, not COPD-relevant).</td>
+<td><span class="tag-warning">WEAKENED</span> — accurately described but explicitly flagged by researcher and skeptic as off-target despite matching "lung" search terms (cancer biology, not COPD-relevant).</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ARPP21</td>
+<td class="gene">ARPP21</td>
 <td>Structural/molecular biology (breast cancer, not lung-relevant)</td>
 <td>miR-128-2 (embedded in an ARPP21 intron at chr3p22.3) is co-downregulated with ARPP21 in breast cancer; acts in a TGF-β/SNAIL/miR-128 axis regulating stem-cell-like transformation of mammary epithelial cells.</td>
 <td>Qian P et al., Cancer Research 2012. PMID 23019226. DOI 10.1158/0008-5472.CAN-12-1507</td>
-<td>WEAKENED — accurately described; general molecular biology of the ARPP21/miR-128-2 locus across tissues, none lung-specific; supports skeptic's point that ARPP21's literature role is consistently as miR-128 host, raising the alternative hypothesis that MIR128-2 (not ARPP21 protein) could be the causal element.</td>
+<td><span class="tag-warning">WEAKENED</span> — accurately described; general molecular biology of the ARPP21/miR-128-2 locus across tissues, none lung-specific; supports skeptic's point that ARPP21's literature role is consistently as miR-128 host, raising the alternative hypothesis that MIR128-2 (not ARPP21 protein) could be the causal element.</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ARPP21</td>
+<td class="gene">ARPP21</td>
 <td>Structural/molecular biology (muscle development, not lung-specific)</td>
 <td>ARPP21 antagonizes miR-128 activity by competing for binding to the 3'UTR of Ppp1cc during myoblast differentiation (C2C12 cells), downstream of PERK/UPR signaling.</td>
 <td>Tan YY et al., Front Cell Dev Biol 2021. PMID 34124052. DOI 10.3389/fcell.2021.670435</td>
-<td>WEAKENED — accurately described; muscle-developmental, consistent with ARPP21's known skeletal-muscle expression but not informative for airway/alveolar biology.</td>
+<td><span class="tag-warning">WEAKENED</span> — accurately described; muscle-developmental, consistent with ARPP21's known skeletal-muscle expression but not informative for airway/alveolar biology.</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ARPP21</td>
+<td class="gene">ARPP21</td>
 <td>General mechanistic (obesity-COPD physiology; NOT locus-specific)</td>
-<td>Obesity impairs respiratory function generally (reduced FRC/ERV, altered chest-wall mechanics) yet is paradoxically associated with better survival/reduced dynamic hyperinflation in COPD (&quot;obesity paradox&quot;) via reduced operating lung volumes and higher IC/TLC ratios. Cited as general plausibility support for an adiposity-mediated pathway between this locus and COPD case-control status, NOT as locus-specific evidence.</td>
+<td>Obesity impairs respiratory function generally (reduced FRC/ERV, altered chest-wall mechanics) yet is paradoxically associated with better survival/reduced dynamic hyperinflation in COPD ("obesity paradox") via reduced operating lung volumes and higher IC/TLC ratios. Cited as general plausibility support for an adiposity-mediated pathway between this locus and COPD case-control status, NOT as locus-specific evidence.</td>
 <td>Guenette JA et al., Curr Opin Clin Nutr Metab Care 2010. PMID 20975350. DOI 10.1097/MCO.0b013e32833e3453</td>
-<td>WEAKENED as used — skeptic notes this describes a prognosis phenomenon (survival/hyperinflation in already-diagnosed COPD patients), not a diagnostic-misclassification phenomenon; using it to support &quot;adiposity could inflate/confound COPD case ascertainment in GWAS&quot; is a directional mismatch not fully reconciled by the researcher.</td>
+<td><span class="tag-warning">WEAKENED</span> as used — skeptic notes this describes a prognosis phenomenon (survival/hyperinflation in already-diagnosed COPD patients), not a diagnostic-misclassification phenomenon; using it to support "adiposity could inflate/confound COPD case ascertainment in GWAS" is a directional mismatch not fully reconciled by the researcher.</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ARPP21</td>
+<td class="gene">ARPP21</td>
 <td>General mechanistic (obesity-respiratory disease; NOT locus-specific)</td>
-<td>Narrative review of mechanical, metabolic, and systemic-inflammatory pathways linking obesity to respiratory disease (asthma, OSA, obesity hypoventilation syndrome, COPD), including the COPD &quot;obesity paradox.&quot;</td>
+<td>Narrative review of mechanical, metabolic, and systemic-inflammatory pathways linking obesity to respiratory disease (asthma, OSA, obesity hypoventilation syndrome, COPD), including the COPD "obesity paradox."</td>
 <td>Soliman AR et al., Diabetol Metab Syndr 2026 (epub). PMID 42116176. DOI 10.1186/s13098-026-02164-6</td>
-<td>WEAKENED as used — same directional-mismatch concern as above; citation itself verified genuine (unusual 2026 date/high PMID confirmed as real, not fabricated, by citation-verifier).</td>
+<td><span class="tag-warning">WEAKENED</span> as used — same directional-mismatch concern as above; citation itself verified genuine (unusual 2026 date/high PMID confirmed as real, not fabricated, by citation-verifier).</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ARPP21</td>
+<td class="gene">ARPP21</td>
 <td>General mechanistic (GERD-COPD comorbidity; NOT locus-specific)</td>
 <td>GERD is a common COPD comorbidity (prevalence 17-78%), potentially linked bidirectionally via pulmonary microaspiration, altered LES pressure/motility, COPD medications, and hyperinflation compromising the antireflux barrier; GERD independently predicts COPD exacerbations. Cited as general plausibility support for GERD-related comorbidity/misclassification as an alternative pathway.</td>
 <td>Lee AL, Goldstein RS, Int J COPD 2015. PMID 26392769. DOI 10.2147/COPD.S77562</td>
-<td>WEAKENED as used — skeptic notes the GERD-mediation strand overall is thinner than the adiposity strand, resting only on the trait label of one combined MTAG study plus general (non-locus-specific) reviews like this one.</td>
+<td><span class="tag-warning">WEAKENED</span> as used — skeptic notes the GERD-mediation strand overall is thinner than the adiposity strand, resting only on the trait label of one combined MTAG study plus general (non-locus-specific) reviews like this one.</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ARPP21</td>
+<td class="gene">ARPP21</td>
 <td>General mechanistic (asthma-COPD overlap comorbidities; NOT locus-specific)</td>
 <td>Reviews comorbidities (GERD, osteoporosis, cardiovascular disease, depression) in asthma-COPD overlap; relevant general context for case-definition entanglement with GERD.</td>
 <td>Maselli DJ, Hanania NA, Pulm Pharmacol Ther 2018. PMID 30172866. DOI 10.1016/j.pupt.2018.08.006</td>
-<td>WEAKENED as used — same general-mechanistic-only caveat as above.</td>
+<td><span class="tag-warning">WEAKENED</span> as used — same general-mechanistic-only caveat as above.</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Negative/null literature findings (reported per pipeline instructions — absence of data is itself informative):</strong></p>
 <ul>
 <li>No PubMed literature found linking ARPP21 or rs7612999 to COPD, FEV1/FVC, or spirometric traits (multiple search terms, zero hits) — consistent with the Open Targets structured lookup's zero FEV1/FEV1-FVC evidence rows for ARPP21.</li>
@@ -466,8 +150,8 @@ code {
 <ul>
 <li><strong>Genetic constraint (gnomAD):</strong> not synonymous- or missense-constrained (oe ~0.96-0.99, both credible intervals span 1). LoF: oe = 0.555 (90% CI 0.436-0.711); oeUpper (LOEUF-equivalent) = 0.711 — moderate but not top-tier LoF constraint (not in the most-constrained decile, LOEUF &lt; ~0.35).</li>
 <li><strong>L2G score for COPD (aggregate <code>associatedDiseases</code>, MONDO_0005002):</strong> overall score 0.329, driven entirely by ONE evidence row (datasource <code>gwas_credible_sets</code>, score 0.8899, literature PMID 40155373).</li>
-<li><strong>L2G at the lead variant (rs7612999, credible-set lead in 14 Open Targets studies, ARPP21 top gene in all, scores 0.82-0.90):</strong> only 1 of 14 is COPD-relevant — GCST90570623, &quot;Chronic obstructive pulmonary disease or gastroesophageal reflux disease (MTAG),&quot; L2G = 0.8899. The other 13 are ALL anthropometric/dietary/renal traits: waist circumference, waist-hip ratio (BMI-adjusted, 9 separate studies), abdominal adipose tissue, urinary sodium, fruit consumption, and FinnGen &quot;obesity related asthma.&quot;</li>
-<li><strong>Colocalization (COLOC_PIP_ECAVIAR) of the COPD/GERD-MTAG credible set:</strong> 21 colocalizing study-loci, virtually all anthropometric/dietary/renal traits at high posterior probability — WHR/BMI-adjusted-WHR h4 = 0.97-0.99 (9 studies), abdominal adiposity h4 = 0.97, FinnGen &quot;obesity related asthma&quot; h4 = 0.94, urinary sodium h4 = 0.92-0.94, fruit consumption h4 = 0.93-0.94. One discordant waist-circumference study shows h4 = 0.13. <strong>No molecular-QTL (eQTL/pQTL/sQTL, lung or otherwise) colocalization was returned at all</strong> for this credible set.</li>
+<li><strong>L2G at the lead variant (rs7612999, credible-set lead in 14 Open Targets studies, ARPP21 top gene in all, scores 0.82-0.90):</strong> only 1 of 14 is COPD-relevant — GCST90570623, "Chronic obstructive pulmonary disease or gastroesophageal reflux disease (MTAG)," L2G = 0.8899. The other 13 are ALL anthropometric/dietary/renal traits: waist circumference, waist-hip ratio (BMI-adjusted, 9 separate studies), abdominal adipose tissue, urinary sodium, fruit consumption, and FinnGen "obesity related asthma."</li>
+<li><strong>Colocalization (COLOC_PIP_ECAVIAR) of the COPD/GERD-MTAG credible set:</strong> 21 colocalizing study-loci, virtually all anthropometric/dietary/renal traits at high posterior probability — WHR/BMI-adjusted-WHR h4 = 0.97-0.99 (9 studies), abdominal adiposity h4 = 0.97, FinnGen "obesity related asthma" h4 = 0.94, urinary sodium h4 = 0.92-0.94, fruit consumption h4 = 0.93-0.94. One discordant waist-circumference study shows h4 = 0.13. <strong>No molecular-QTL (eQTL/pQTL/sQTL, lung or otherwise) colocalization was returned at all</strong> for this credible set.</li>
 <li><strong>Spirometry check:</strong> direct target-level lookup against FEV1 (EFO_0004314) returned zero association evidence rows for ARPP21.</li>
 <li><strong>Smoking/BMI check:</strong> direct target-level lookup against smoking initiation (EFO_0005670) and BMI (EFO_0004340) both returned zero aggregated evidence rows for ARPP21, despite the strong variant-level colocalization with WHR/waist-circumference GWAS above (an inconsistency between Open Targets' curated evidence-aggregation pipeline and its raw credible-set/L2G data, noted for transparency).</li>
 </ul>
@@ -475,13 +159,15 @@ code {
 <p><strong>Prioritized gene: ARPP21 — Confidence: LOW</strong></p>
 <p>ARPP21 is the only candidate gene at this locus by every prioritization method used (nearest gene, FLAMES, PoPS) and is independently confirmed as the only protein-coding gene in the 250kb window, so it is named here by default of being the sole nominee, not because the evidence affirmatively establishes it as a COPD-causal gene through a defined mechanism. Confidence is LOW (bordering on INSUFFICIENT) for the following reasons, all drawn from the evidence and Open Targets summary above:</p>
 <ol>
-<li><strong>The pipeline's own spirometry-concordance prior is contradicted, not just unmet.</strong> There is no FEV1/FEV1-FVC association for ARPP21 anywhere in Open Targets or PubMed (see negative findings above). Per the pipeline's stated prior #2, &quot;a COPD association without supporting pulmonary-function evidence warrants consideration of alternative pathways&quot; — this locus is close to a textbook example of that pattern.</li>
+<li><strong>The pipeline's own spirometry-concordance prior is contradicted, not just unmet.</strong> There is no FEV1/FEV1-FVC association for ARPP21 anywhere in Open Targets or PubMed (see negative findings above). Per the pipeline's stated prior #2, "a COPD association without supporting pulmonary-function evidence warrants consideration of alternative pathways" — this locus is close to a textbook example of that pattern.</li>
 <li><strong>The one piece of quantitative evidence linking this locus to COPD (L2G 0.8899, aggregate association 0.329) traces entirely to a single MTAG study combining COPD with GERD</strong> — not a COPD-only GWAS — and the citation-verifier independently confirmed that the underlying paper (PMID 40155373) does not name ARPP21 or this locus in its main text. The skeptic's WEAKENED verdict on this point stands: COPD-relevance here is a database pattern, not a confirmed, literature-discussed finding.</li>
 <li><strong>The strongest, most specific, locus-level genetic signal at this credible set is colocalization with adiposity/body-fat-distribution traits</strong> (waist-hip ratio, waist circumference, abdominal adiposity; h4 up to 0.99 across 9+ independent GWAS), not with any lung trait. No lung eQTL/pQTL/sQTL colocalizes here at all.</li>
 <li><strong>ARPP21's own best-characterized biology (RNA-binding protein antagonizing its hosted microRNA, miR-128, during neuronal dendritogenesis; secondary roles in muscle differentiation and several cancers) has no plausible direct mechanistic link to airway/alveolar structure, protease-antiprotease balance, or COPD-relevant immune programs</strong>, and Human Protein Atlas data show negligible lung/airway expression.</li>
-<li><strong>The red-team-skeptic raised a specific, unresolved alternative causal hypothesis that neither the researcher nor the skeptic could search further this session (WebSearch budget exhausted for both):</strong> the credible set could plausibly act on the hosted microRNA MIR128-2 (embedded in an ARPP21 intron) rather than on ARPP21 protein-coding function/dosage — a hypothesis consistent with the recurring &quot;ARPP21-as-miR-128-host&quot; theme across the verified structural-biology citations, and with the absence of any eQTL/pQTL colocalization for ARPP21 itself.</li>
+<li><strong>The red-team-skeptic raised a specific, unresolved alternative causal hypothesis that neither the researcher nor the skeptic could search further this session (WebSearch budget exhausted for both):</strong> the credible set could plausibly act on the hosted microRNA MIR128-2 (embedded in an ARPP21 intron) rather than on ARPP21 protein-coding function/dosage — a hypothesis consistent with the recurring "ARPP21-as-miR-128-host" theme across the verified structural-biology citations, and with the absence of any eQTL/pQTL colocalization for ARPP21 itself.</li>
 </ol>
 <p><strong>What would resolve this:</strong> (a) confirmation (or refutation) of whether PMID 40155373's supplementary data actually discusses ARPP21/this locus; (b) MIR128-2-specific QTL or functional data at this locus to adjudicate ARPP21-vs-miR-128-2 as the operative causal unit; (c) a COPD-only (non-MTAG) GWAS or fine-mapping study independently confirming this locus, ideally with spirometric trait concordance; (d) direct literature search (once available) on ARPP21 and waist-hip-ratio/adiposity GWAS, since the current strongest signal is a database pattern not yet corroborated by primary literature. Given all of the above, this is not a confident lung-biology call — it is the default nomination in a single-candidate-gene locus where the dominant, well-supported genetic signal points toward adiposity/body-composition biology (and possibly GERD-related comorbidity/misclassification) rather than direct pulmonary or smoking-neurobiology pathways. The study team should weigh this locus as a candidate confounded-by-obesity/GERD signal at least as strongly as a candidate direct-COPD-biology signal.</p>
 
+        </div>
+    </div>
 </body>
 </html>

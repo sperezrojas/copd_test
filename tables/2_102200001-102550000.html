@@ -1,390 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>2_102200001-102550000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 2:102200001-102550000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-2102200001-102550000-nearest-gene-il1rl1">Evidence table — locus 2:102200001-102550000 (nearest gene IL1RL1)</h1>
-<p>Lead variant: rs12712142 (2:102344124, intronic in IL1RL1, PIP=0.391). All credible-set
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-2102200001-102550000-nearest-gene-il1rl1">Evidence Table — Locus 2:102200001-102550000</h1><div class="summary"><p>Lead variant: rs12712142 (2:102344124, intronic in IL1RL1, PIP=0.391). All credible-set
 variants are intron/intergenic/upstream/5'UTR (no missense/splice variants); per pipeline
-scope, no variant-by-variant literature search beyond the lead variant was required.</p>
-<p>Candidate genes evaluated: IL1RL1 (nearest/FLAMES), MAP4K4 (MAGMA/PoPS), IL18R1 (ABC),
-IL18RAP and SLC9A4 (credible-set overlap).</p>
-<p><strong>Framing note:</strong> This locus (2q12.1, the IL1RL1/IL18R1/IL18RAP gene cluster) is one of the
+scope, no variant-by-variant literature search beyond the lead variant was required.</p><p>Candidate genes evaluated: IL1RL1 (nearest/FLAMES), MAP4K4 (MAGMA/PoPS), IL18R1 (ABC),
+IL18RAP and SLC9A4 (credible-set overlap).</p><p><strong>Framing note:</strong> This locus (2q12.1, the IL1RL1/IL18R1/IL18RAP gene cluster) is one of the
 most replicated asthma/Th2-allergic-disease loci in human genetics. This table explicitly
 carries an unresolved asthma/COPD-overlap (ACO) question throughout — see the Locus-level
 rows below and the Prioritized-gene section for full discussion. All citations below are
 VERIFIED (existence + claim correspondence confirmed against PubMed by citation-verifier).
 Skeptic verdicts (HOLDS / WEAKENED / CONTESTED) are the red-team-skeptic's judgments on
-whether the specific claim is fairly characterized, not on citation authenticity.</p>
-<p><strong>Search-coverage caveat (from red-team-skeptic, preserved here for transparency):</strong> the
+whether the specific claim is fairly characterized, not on citation authenticity.</p><p><strong>Search-coverage caveat (from red-team-skeptic, preserved here for transparency):</strong> the
 skeptic's WebSearch quota was exhausted before it could run independent contradiction-search
 queries for this locus; its critique below is based on internal analysis of the researcher's
 own verified findings, not on new literature. This locus's asthma-pleiotropy question is
 flagged by the skeptic as warranting an additional targeted search pass in a future review
-cycle.</p>
-<table>
+cycle.</p></div>
+
+
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -397,276 +81,276 @@ cycle.</p>
 </thead>
 <tbody>
 <tr>
-<td>Locus (2q12.1 cluster)</td>
+<td class="gene">Locus (2q12.1 cluster)</td>
 <td>Statistical genetics — cross-trait colocalization</td>
-<td>LDSC/HDL genetic correlation + PLACO + Bayesian colocalization between COPD and allergic-disease spectrum; 2q12.1 is one of three &quot;recurrent hotspots&quot; with strong colocalization (PP.H4&gt;=0.75) between COPD and allergy, naming IL18R1/IL1RL1/IL18RAP among 172 pleiotropic genes converging on the IL-1/IL-18/IL-33 axis, lung+immune tissue enrichment</td>
+<td>LDSC/HDL genetic correlation + PLACO + Bayesian colocalization between COPD and allergic-disease spectrum; 2q12.1 is one of three "recurrent hotspots" with strong colocalization (PP.H4&gt;=0.75) between COPD and allergy, naming IL18R1/IL1RL1/IL18RAP among 172 pleiotropic genes converging on the IL-1/IL-18/IL-33 axis, lung+immune tissue enrichment</td>
 <td>Bu &amp; Li 2025/2026, Int Arch Allergy Immunol, PMID 41379756 / DOI 10.1159/000549938</td>
-<td>WEAKENED (as evidence <em>for</em> COPD-specificity — this is the strongest evidence <em>against</em> locus-level COPD-specificity, i.e. it argues for shared/pleiotropic signal with allergic disease)</td>
+<td><span class="tag-warning">WEAKENED</span> (as evidence for COPD-specificity — this is the strongest evidence against locus-level COPD-specificity, i.e. it argues for shared/pleiotropic signal with allergic disease)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>Locus (2q12.1 cluster)</td>
+<td class="gene">Locus (2q12.1 cluster)</td>
 <td>Statistical genetics — COPD GWAS asthma-overlap sensitivity analysis</td>
-<td>COPD GWAS (UKB+ICGC, 82 loci) found 14 genome segments shared with asthma/pulmonary fibrosis (9 asthma, 5 fibrosis) via Bayesian segment-overlap; explicitly states novel loci &quot;not explained by cigarette smoking,&quot; similar effect sizes with/without self-reported asthmatics; did NOT exclude asthmatics from primary case definition</td>
+<td>COPD GWAS (UKB+ICGC, 82 loci) found 14 genome segments shared with asthma/pulmonary fibrosis (9 asthma, 5 fibrosis) via Bayesian segment-overlap; explicitly states novel loci "not explained by cigarette smoking," similar effect sizes with/without self-reported asthmatics; did NOT exclude asthmatics from primary case definition</td>
 <td>Sakornsakolpat et al. 2019, Nat Genet, PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
-<td>WEAKENED (whether 2q12 is among the 9 asthma-shared segments is unconfirmed by either researcher or verifier; general smoking/asthma-sensitivity claims apply at whole-study level, not confirmed locus-specifically)</td>
+<td><span class="tag-warning">WEAKENED</span> (whether 2q12 is among the 9 asthma-shared segments is unconfirmed by either researcher or verifier; general smoking/asthma-sensitivity claims apply at whole-study level, not confirmed locus-specifically)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>Locus (2q12.1 cluster)</td>
+<td class="gene">Locus (2q12.1 cluster)</td>
 <td>Statistical genetics — population-based lung function</td>
-<td>Population-based lung-function GWAS (400,102 European-ancestry) defines 279 FEV1/FEV1-FVC signals (139 new) that &quot;strongly predict COPD&quot; with generalizability across smokers/never-smokers</td>
+<td>Population-based lung-function GWAS (400,102 European-ancestry) defines 279 FEV1/FEV1-FVC signals (139 new) that "strongly predict COPD" with generalizability across smokers/never-smokers</td>
 <td>Shrine et al. 2019, Nat Genet, PMID 30804560 / DOI 10.1038/s41588-018-0321-7</td>
-<td>WEAKENED (no locus-specific FEV1/FEV1-FVC effect size for the 2q12/IL1RL1 signal was extracted; claim holds only at the 279-signal aggregate level)</td>
+<td><span class="tag-warning">WEAKENED</span> (no locus-specific FEV1/FEV1-FVC effect size for the 2q12/IL1RL1 signal was extracted; claim holds only at the 279-signal aggregate level)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>Locus (2q12.1 cluster)</td>
+<td class="gene">Locus (2q12.1 cluster)</td>
 <td>Immunology — classic asthma genetics review</td>
 <td>IL1RL1/IL-33 highlighted as central innate-immune pathway promoting Th2 differentiation in asthma/allergic disease pathogenesis</td>
 <td>Ober &amp; Yao 2011, Immunol Rev, PMID 21682736 / DOI 10.1111/j.1600-065X.2011.01029.x</td>
-<td>HOLDS (accurately characterized as COPD-independent asthma-genetics background, not COPD evidence)</td>
+<td><span class="tag-hold">HOLDS</span> (accurately characterized as COPD-independent asthma-genetics background, not COPD evidence)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>Locus (2q12.1 cluster)</td>
+<td class="gene">Locus (2q12.1 cluster)</td>
 <td>Immunology — asthma genetics review</td>
-<td>IL33/ST2 pathway concluded to be &quot;the most relevant factor&quot; shared across asthma GWAS studies</td>
+<td>IL33/ST2 pathway concluded to be "the most relevant factor" shared across asthma GWAS studies</td>
 <td>Wjst et al. 2013, Curr Opin Allergy Clin Immunol, PMID 23222155 / DOI 10.1097/ACI.0b013e32835c1674</td>
-<td>HOLDS (background asthma-genetics context)</td>
+<td><span class="tag-hold">HOLDS</span> (background asthma-genetics context)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL1RL1</td>
+<td class="gene">IL1RL1</td>
 <td>Statistical genetics — exome sequencing</td>
 <td>UK Biobank exome-sequencing study of asthma/allergy identifies IL1RL1/ST2 among top pharmacologically relevant IL-33-pathway genes</td>
 <td>Wjst 2022, Sci Rep, PMID 36470944 / DOI 10.1038/s41598-022-24960-6</td>
-<td>HOLDS (asthma-specific, not COPD evidence)</td>
+<td><span class="tag-hold">HOLDS</span> (asthma-specific, not COPD evidence)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL1RL1</td>
+<td class="gene">IL1RL1</td>
 <td>Structural/lung biology</td>
 <td>Spatially resolved single-cell/histology study of surgically excised distal COPD lung (38 COPD, 21 controls): increased IL-33 mRNA/turnover, upregulated total ST2/IL1RL1 mRNA; mast cells the major ST2-expressing population; COPD-specific ST2L/sST2 and alveolar-capillary endothelial changes</td>
 <td>Andersson et al. 2026, Am J Respir Crit Care Med, PMID 42085217 / DOI 10.1093/ajrccm/aamag079</td>
-<td>WEAKENED (observational human histology, pathway-level not locus-specific evidence; does not address whether the GWAS signal itself is COPD-driving vs asthma-pleiotropic)</td>
+<td><span class="tag-warning">WEAKENED</span> (observational human histology, pathway-level not locus-specific evidence; does not address whether the GWAS signal itself is COPD-driving vs asthma-pleiotropic)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL1RL1</td>
+<td class="gene">IL1RL1</td>
 <td>Structural/lung biology</td>
 <td>Oxidized IL-33 (IL-33ox) acts through ST2-INDEPENDENT RAGE/EGFR complex to impair epithelial wound closure and drive remodeling in COPD airway epithelium; pathogenic signature enriched in severe COPD</td>
 <td>Strickson et al. 2023, Eur Respir J, PMID 37442582 / DOI 10.1183/13993003.02210-2022</td>
-<td>WEAKENED (this pathway is explicitly ST2/IL1RL1-independent; if anything argues against IL1RL1 itself mediating the COPD-relevant IL-33 biology, even while supporting IL-33 pathway relevance generally)</td>
+<td><span class="tag-warning">WEAKENED</span> (this pathway is explicitly ST2/IL1RL1-independent; if anything argues against IL1RL1 itself mediating the COPD-relevant IL-33 biology, even while supporting IL-33 pathway relevance generally)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL1RL1</td>
+<td class="gene">IL1RL1</td>
 <td>Structural/lung biology</td>
 <td>Cigarette-smoke-induced airway/tissue remodeling (collagen deposition) mediated partly via smoke-induced IL-33 release from fibroblasts and IL-33/ST2 signaling; ST2-KO mice protected; elevated IL-33/ST2 and remodeling markers in COPD BALF/serum/tissue</td>
 <td>Huang et al. 2021, Thorax, PMID 33589512 / DOI 10.1136/thoraxjnl-2020-214712</td>
-<td>WEAKENED (mouse/observational pathway evidence, does not resolve locus-specific causal attribution vs asthma pleiotropy)</td>
+<td><span class="tag-warning">WEAKENED</span> (mouse/observational pathway evidence, does not resolve locus-specific causal attribution vs asthma pleiotropy)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL1RL1</td>
+<td class="gene">IL1RL1</td>
 <td>Immunology — review</td>
 <td>IL33/IL1RL1(ST2) among most highly replicated asthma-susceptibility loci; also non-Th2 targets (Th1, CD8 T cells, NK, neutrophils); anti-IL-33 antibody clinical efficacy in both asthma and COPD</td>
 <td>Cayrol &amp; Girard 2022, Cytokine, PMID 35640416 / DOI 10.1016/j.cyto.2022.155891</td>
-<td>HOLDS (accurately frames IL1RL1/IL-33 as pleiotropic across allergic and non-allergic inflammation, consistent with unresolved locus attribution)</td>
+<td><span class="tag-hold">HOLDS</span> (accurately frames IL1RL1/IL-33 as pleiotropic across allergic and non-allergic inflammation, consistent with unresolved locus attribution)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL1RL1</td>
+<td class="gene">IL1RL1</td>
 <td>Immunology — review</td>
 <td>Dual-functionality model: reduced IL-33 drives type-2 inflammation + neutrophil antibacterial defense; oxidized IL-33 via RAGE/EGFR drives steroid-resistant remodeling/mucus hypersecretion; discusses COPD endotype heterogeneity and anti-IL-33 infection risk</td>
 <td>Tancevski &amp; Sonnweber 2026, Respir Res, PMID 42260523 / DOI 10.1186/s12931-026-03763-7</td>
-<td>HOLDS (review appropriately frames immune complexity; does not itself overclaim locus-specificity)</td>
+<td><span class="tag-hold">HOLDS</span> (review appropriately frames immune complexity; does not itself overclaim locus-specificity)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL1RL1</td>
+<td class="gene">IL1RL1</td>
 <td>Clinical/therapeutic</td>
-<td>Phase 2b/3 trials (ALIENTO, ARNASA) of astegolimab (anti-ST2) in COPD patients with frequent exacerbations &quot;irrespective of baseline eosinophils&quot;; MIXED result — significant in ARNASA q4w arm, not significant in ALIENTO q4w arm</td>
+<td>Phase 2b/3 trials (ALIENTO, ARNASA) of astegolimab (anti-ST2) in COPD patients with frequent exacerbations "irrespective of baseline eosinophils"; MIXED result — significant in ARNASA q4w arm, not significant in ALIENTO q4w arm</td>
 <td>Papi et al. 2026, Lancet, PMID 42150581 / DOI 10.1016/S0140-6736(26)00637-9</td>
-<td>WEAKENED (mixed/largely null efficacy readout should not be read as validating a COPD-specific ST2-driven mechanism; consistent with a target with broad, non-COPD-specific immunomodulatory activity)</td>
+<td><span class="tag-warning">WEAKENED</span> (mixed/largely null efficacy readout should not be read as validating a COPD-specific ST2-driven mechanism; consistent with a target with broad, non-COPD-specific immunomodulatory activity)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL1RL1</td>
+<td class="gene">IL1RL1</td>
 <td>Clinical/therapeutic (supporting)</td>
 <td>Astegolimab safety data across asthma, atopic dermatitis, COPD, and severe COVID-19 pneumonia (&gt;580 patients)</td>
 <td>Kelsen et al. 2025, PMID 41163220 / DOI 10.1186/s12931-025-03360-0</td>
-<td>WEAKENED (underscores cross-indication, non-COPD-specific development program)</td>
+<td><span class="tag-warning">WEAKENED</span> (underscores cross-indication, non-COPD-specific development program)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL1RL1</td>
+<td class="gene">IL1RL1</td>
 <td>Clinical/therapeutic (supporting)</td>
 <td>Astegolimab Phase I safety/PK/immunogenicity in healthy participants and mild atopic asthma</td>
 <td>Zhang et al. 2025, PMID 41036707 / DOI 10.1111/cts.70338</td>
-<td>WEAKENED (asthma-focused, not COPD-specific)</td>
+<td><span class="tag-warning">WEAKENED</span> (asthma-focused, not COPD-specific)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL1RL1</td>
+<td class="gene">IL1RL1</td>
 <td>Immunology — mouse COPD/RV model</td>
 <td>Rhinovirus infection increases IL-33/ST2 signaling, driving CD11b+/CD11c+ macrophage and CD8+ T-cell accumulation, IFN-gamma/CXCL10, MMP12, emphysema progression; ST2 neutralization attenuates</td>
 <td>Gimenes et al. 2019, Clin Sci (Lond), PMID 30952808 / DOI 10.1042/CS20181088</td>
-<td>WEAKENED (mouse model, pathway-level not locus-specific; supports non-Th2 ST2 biology in COPD but does not address GWAS-signal attribution)</td>
+<td><span class="tag-warning">WEAKENED</span> (mouse model, pathway-level not locus-specific; supports non-Th2 ST2 biology in COPD but does not address GWAS-signal attribution)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL1RL1</td>
+<td class="gene">IL1RL1</td>
 <td>Immunology — mouse/human</td>
 <td>Microbiome (E. tarda)-triggered autoimmunity against lung epithelium/elastin in COPD exacerbation via IL-33-ST2 axis; abrogated in ST2-KO mice</td>
 <td>Hu et al. 2024, Immunology, PMID 39126327 / DOI 10.1111/imm.13848</td>
-<td>WEAKENED (mechanistic mouse/human pathway evidence, not locus-attribution evidence)</td>
+<td><span class="tag-warning">WEAKENED</span> (mechanistic mouse/human pathway evidence, not locus-attribution evidence)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL1RL1</td>
+<td class="gene">IL1RL1</td>
 <td>Immunology — review</td>
 <td>IL-33-ST2 pathway pro-inflammatory (type-2) role plus bacterial clearance/tissue repair functions across sepsis, asthma, COPD</td>
 <td>Zhou et al. 2023, J Transl Med, PMID 38082335 / DOI 10.1186/s12967-023-04782-4</td>
-<td>HOLDS (general review, appropriately non-specific)</td>
+<td><span class="tag-hold">HOLDS</span> (general review, appropriately non-specific)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL1RL1</td>
+<td class="gene">IL1RL1</td>
 <td>Clinical biomarker (observational)</td>
 <td>Soluble ST2 (sST2) predicts in-hospital mortality in severe AECOPD requiring mechanical ventilation</td>
 <td>Lv et al. 2026, Respir Investig, PMID 41713194 / DOI 10.1016/j.resinv.2026.101391</td>
-<td>HOLDS (labeled as observational biomarker evidence, not causal-genetic)</td>
+<td><span class="tag-hold">HOLDS</span> (labeled as observational biomarker evidence, not causal-genetic)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL1RL1</td>
+<td class="gene">IL1RL1</td>
 <td>Clinical biomarker (observational)</td>
 <td>Serum IL-33/ST2 inversely correlated with FEV1%pred (r=-0.561/-0.545) and FEV1/FVC in AECOPD</td>
 <td>Wei et al. 2025, Int J Chron Obstruct Pulmon Dis, PMID 40718362 / DOI 10.2147/COPD.S514152</td>
-<td>HOLDS (observational correlation, appropriately framed as such)</td>
+<td><span class="tag-hold">HOLDS</span> (observational correlation, appropriately framed as such)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL1RL1</td>
+<td class="gene">IL1RL1</td>
 <td>Clinical biomarker (observational)</td>
 <td>ST2 predicts mortality in acute hypercapnic respiratory failure, driven by AECOPD subgroup</td>
 <td>Jónsdóttir et al. 2019, Int J Chron Obstruct Pulmon Dis, PMID 31695358 / DOI 10.2147/COPD.S211448</td>
-<td>HOLDS (observational, appropriately framed)</td>
+<td><span class="tag-hold">HOLDS</span> (observational, appropriately framed)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL18R1</td>
+<td class="gene">IL18R1</td>
 <td>Statistical genetics — cross-trait colocalization</td>
 <td>IL18R1 named alongside IL1RL1/IL18RAP in the same colocalized (PP.H4&gt;=0.75) 2q12.1 COPD-allergy hotspot</td>
 <td>Bu &amp; Li 2025/2026, PMID 41379756 / DOI 10.1159/000549938</td>
-<td>WEAKENED (same asthma-pleiotropy caveat as for IL1RL1 — undercuts framing of IL18R1 as the &quot;cleaner,&quot; asthma-independent gene at this locus)</td>
+<td><span class="tag-warning">WEAKENED</span> (same asthma-pleiotropy caveat as for IL1RL1 — undercuts framing of IL18R1 as the "cleaner," asthma-independent gene at this locus)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL18R1</td>
+<td class="gene">IL18R1</td>
 <td>Structural/immunology — human COPD cohort</td>
 <td>ECLIPSE ex-smoker COPD cohort (148 discovery/176 replication): sputum IL-18R differential expression by GOLD stage/emphysema extent; IL-18R protein higher on alveolar macrophages in COPD (23.2%) vs ex-smoker (2%)/non-smoker (2.5%) controls</td>
 <td>Singh et al. 2011, Thorax, PMID 21441172 / DOI 10.1136/thx.2010.153767</td>
-<td>HOLDS (genuinely COPD-specific, disease-stage/cell-type-resolved human evidence; the strongest single piece of COPD-specific evidence at this locus, though still not locus-causal genetic evidence)</td>
+<td><span class="tag-hold">HOLDS</span> (genuinely COPD-specific, disease-stage/cell-type-resolved human evidence; the strongest single piece of COPD-specific evidence at this locus, though still not locus-causal genetic evidence)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL18R1</td>
+<td class="gene">IL18R1</td>
 <td>Immunology — mouse Th2/asthma model</td>
 <td>IL-18-transgenic mouse: IL-18 overexpression exacerbates ovalbumin-induced airway hyperresponsiveness via CD4+ T cells and IL-13 (Th2 axis)</td>
 <td>Sawada et al. 2013, PLoS One, PMID 23382928 / DOI 10.1371/journal.pone.0054623</td>
-<td>WEAKENED (directly cuts against any clean &quot;IL18R1 = non-Th2 gene&quot; framing; shows IL-18 axis is not Th2-exclusionary)</td>
+<td><span class="tag-warning">WEAKENED</span> (directly cuts against any clean "IL18R1 = non-Th2 gene" framing; shows IL-18 axis is not Th2-exclusionary)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL18R1</td>
+<td class="gene">IL18R1</td>
 <td>Immunology — review</td>
 <td>NLRP3-inflammasome-driven IL-1beta/IL-18 production drives macrophage/neutrophil migration and oxidative stress in COPD</td>
 <td>Guo et al. 2022, Int J Chron Obstruct Pulmon Dis, PMID 35855746 / DOI 10.2147/COPD.S366126</td>
-<td>HOLDS (general review, appropriately framed as innate/neutrophilic context)</td>
+<td><span class="tag-hold">HOLDS</span> (general review, appropriately framed as innate/neutrophilic context)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL18R1</td>
+<td class="gene">IL18R1</td>
 <td>Structural/immunology — mouse smoke+viral model</td>
 <td>Cigarette-smoke + influenza/RSV mouse model: IL-18 mRNA induction alongside IL-17/IL-1beta/IL-23a in smoke-exposed lungs</td>
 <td>Mebratu et al. 2016, Respir Res, PMID 27363862 / DOI 10.1186/s12931-016-0392-x</td>
-<td>HOLDS (mouse model, appropriately framed as smoking/infection-triggered innate-immune induction)</td>
+<td><span class="tag-hold">HOLDS</span> (mouse model, appropriately framed as smoking/infection-triggered innate-immune induction)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL18RAP</td>
+<td class="gene">IL18RAP</td>
 <td>Statistical genetics — cross-trait colocalization</td>
 <td>IL18RAP named in same colocalized 2q12.1 COPD-allergy hotspot</td>
 <td>Bu &amp; Li 2025/2026, PMID 41379756 / DOI 10.1159/000549938</td>
-<td>WEAKENED (same asthma-pleiotropy caveat)</td>
+<td><span class="tag-warning">WEAKENED</span> (same asthma-pleiotropy caveat)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>IL18RAP</td>
+<td class="gene">IL18RAP</td>
 <td>Statistical genetics/functional — non-lung</td>
 <td>IBD/celiac/UC risk SNP rs1465321 is an eQTL for IL18RAP via reduced T-bet binding (Th1/mucosal-autoimmune context, not lung/COPD tissue)</td>
 <td>Soderquest et al. 2017, PLoS Genet, PMID 28187197 / DOI 10.1371/journal.pgen.1006587</td>
-<td>HOLDS (accurately framed as non-lung, Th1/autoimmune functional context, not COPD evidence)</td>
+<td><span class="tag-hold">HOLDS</span> (accurately framed as non-lung, Th1/autoimmune functional context, not COPD evidence)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SLC9A4</td>
+<td class="gene">SLC9A4</td>
 <td>Structural — tissue distribution</td>
 <td>NHE4/SLC9A4 mRNA localizes to renal inner medulla, explicitly NOT to intestine; no lung/immune role documented</td>
 <td>Bookstein et al. 1997, Am J Physiol, PMID 9374634 / DOI 10.1152/ajpcell.1997.273.5.C1496</td>
-<td>HOLDS (accurately characterized as non-pulmonary physiology, supporting &quot;passenger gene&quot; conclusion)</td>
+<td><span class="tag-hold">HOLDS</span> (accurately characterized as non-pulmonary physiology, supporting "passenger gene" conclusion)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAP4K4</td>
+<td class="gene">MAP4K4</td>
 <td>Immunology — mouse sepsis/LPS model</td>
 <td>Map4k4 mediates macrophage TNF-alpha/IL-1beta production; siRNA silencing (incl. in lung macrophages) protects mice from LPS-induced lethality</td>
 <td>Aouadi et al. 2009, Nature, PMID 19407801 / DOI 10.1038/nature07774</td>
-<td>WEAKENED (systemic sepsis/LPS model, not COPD-specific; part of a &quot;speculative bridging&quot; pattern across unrelated disease contexts)</td>
+<td><span class="tag-warning">WEAKENED</span> (systemic sepsis/LPS model, not COPD-specific; part of a "speculative bridging" pattern across unrelated disease contexts)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAP4K4</td>
+<td class="gene">MAP4K4</td>
 <td>Immunology — mouse metabolic model</td>
 <td>T-cell-specific Map4k4/HGK knockout: TRAF2/IL-6 upregulation, Th17 differentiation, insulin resistance (adipose-tissue context)</td>
 <td>Chuang et al. 2014, Nat Commun, PMID 25098764 / DOI 10.1038/ncomms5602</td>
-<td>WEAKENED (adipose/metabolic context, not lung)</td>
+<td><span class="tag-warning">WEAKENED</span> (adipose/metabolic context, not lung)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAP4K4</td>
+<td class="gene">MAP4K4</td>
 <td>Structural/immunology — mouse air-pollution model</td>
 <td>CD4+ T-cell MAP4K4 deficiency worsens ozone-oxidized-black-carbon particulate-induced lung inflammation, increased macrophage/lymphocyte/neutrophil BALF counts and IL-17+ CD4+ T cells</td>
 <td>Jin et al. 2016, Environ Toxicol Pharmacol, PMID 27504712 / DOI 10.1016/j.etap.2016.08.006</td>
-<td>WEAKENED (most lung-relevant MAP4K4 finding, but an air-pollution-particulate model, explicitly not cigarette-smoke/COPD)</td>
+<td><span class="tag-warning">WEAKENED</span> (most lung-relevant MAP4K4 finding, but an air-pollution-particulate model, explicitly not cigarette-smoke/COPD)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAP4K4</td>
+<td class="gene">MAP4K4</td>
 <td>Structural — mouse acute lung injury model</td>
 <td>MAP4K4 regulates endothelial barrier/permeability; dual Abl/MAP4K4 inhibitor bosutinib reduced alveolar protein extravasation in LPS-induced acute lung injury</td>
 <td>Botros et al. 2020, J Cell Sci, PMID 32198280 / DOI 10.1242/jcs.240077</td>
-<td>WEAKENED (acute injury model, not chronic COPD)</td>
+<td><span class="tag-warning">WEAKENED</span> (acute injury model, not chronic COPD)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAP4K4</td>
+<td class="gene">MAP4K4</td>
 <td>Off-topic (documented exclusion)</td>
 <td>Cardiac-remodeling study identifying MAP4K4 as target of cardioprotective miR-30d — no lung/COPD relevance</td>
 <td>Li et al. 2020, Circ Res, PMID 33092465 / DOI 10.1161/CIRCRESAHA.120.317244</td>
-<td>HOLDS (correctly excluded as off-topic; included in table only for completeness/transparency)</td>
+<td><span class="tag-hold">HOLDS</span> (correctly excluded as off-topic; included in table only for completeness/transparency)</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary">Open Targets summary</h2>
 <p><strong>This is a structured database lookup (Open Targets Platform GraphQL API), not a verified
 literature citation. It did not go through citation-verifier or red-team-skeptic.</strong></p>
 <p>Disease queried: chronic obstructive pulmonary disease (MONDO_0005002).</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -677,37 +361,37 @@ literature citation. It did not go through citation-verifier or red-team-skeptic
 </thead>
 <tbody>
 <tr>
-<td>IL1RL1</td>
+<td class="gene">IL1RL1</td>
 <td>0.450 (literature 0.648, genetic_association 0.540, clinical 0.592)</td>
 <td>0.772, 0.465</td>
 <td>0.731 (0.513-1.063) — not constrained</td>
 </tr>
 <tr>
-<td>IL18R1</td>
+<td class="gene">IL18R1</td>
 <td>0.348 (literature 0.630, genetic_association 0.541)</td>
 <td>0.833 (highest at locus), 0.227</td>
 <td>0.795 (0.558-1.155) — not constrained</td>
 </tr>
 <tr>
-<td>IL18RAP</td>
+<td class="gene">IL18RAP</td>
 <td>0.025 (low)</td>
 <td>0.057</td>
 <td>0.637 (0.489-0.839) — genuinely constrained (CI excludes 1)</td>
 </tr>
 <tr>
-<td>SLC9A4</td>
+<td class="gene">SLC9A4</td>
 <td>0.023 (low, genetic_association only 0.038)</td>
 <td>0.063</td>
 <td>0.853 (0.688-1.063) — not constrained</td>
 </tr>
 <tr>
-<td>MAP4K4</td>
+<td class="gene">MAP4K4</td>
 <td>0.004 (very low, literature only)</td>
 <td>none (0 rows)</td>
 <td>0.229 (0.172-0.308) — strongly constrained, score=1 (near-maximal)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Both IL1RL1 and IL18R1 have a high-confidence L2G-type row (&gt;0.7) for COPD, consistent with
 this locus hosting two plausible, biologically related IL-1-superfamily receptor genes in
 tight LD. MAP4K4 — the MAGMA/PoPS-prioritized gene — has zero GWAS credible-set evidence for
@@ -738,7 +422,7 @@ histology/biomarker correlation) that the skeptic correctly notes does not bear 
 locus-specific causal attribution, plus mixed/largely null astegolimab trial data that should
 not be read as validating a COPD-specific mechanism, plus the field's oldest and strongest
 asthma-genetics pedigree (a point against COPD-specificity, not for it).</p>
-<p>Why confidence is LOW, not MODERATE or HIGH: (a) the &quot;neutrophilic IL18R1 vs Th2 IL1RL1&quot;
+<p>Why confidence is LOW, not MODERATE or HIGH: (a) the "neutrophilic IL18R1 vs Th2 IL1RL1"
 distinction that would most cleanly justify preferring IL18R1 is itself WEAKENED by the
 skeptic — Sawada et al. 2013 (filed under IL18R1) shows IL-18-axis signaling drives Th2/CD4/
 IL-13 airway hyperresponsiveness in an asthma model, and Cayrol &amp; Girard 2022 note ST2 is also
@@ -768,8 +452,10 @@ pathway similarity) rather than a gene with independent evidentiary support — 
 literature, while real, is drawn from sepsis/LPS, adipose/metabolic, air-pollution-particulate,
 and acute-lung-injury contexts, none of which is a chronic cigarette-smoke/COPD model.</p>
 <p>The study team should weigh this LOW-confidence call accordingly: this locus is best described
-currently as &quot;IL18R1 and IL1RL1 both plausible, genuinely tied pending further
-locus-resolution work,&quot; not as a resolved single-gene call.</p>
+currently as "IL18R1 and IL1RL1 both plausible, genuinely tied pending further
+locus-resolution work," not as a resolved single-gene call.</p>
 
+        </div>
+    </div>
 </body>
 </html>

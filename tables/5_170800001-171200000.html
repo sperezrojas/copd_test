@@ -1,380 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>5_170800001-171200000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 5:170,800,001-171,200,000 (nearest gene RANBP17)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-5170800001-171200000-nearest-gene-ranbp17">Evidence table — Locus 5:170,800,001-171,200,000 (nearest gene RANBP17)</h1>
-<p>Lead variant: rs6880972 (5:170,896,839, GRCh38, intron_variant in RANBP17, PIP=0.065). Credible set:
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-5170800001-171200000-nearest-gene-ranbp17">Evidence table — Locus 5:170,800,001-171,200,000 (nearest gene RANBP17)</h1><div class="summary"><p>Lead variant: rs6880972 (5:170,896,839, GRCh38, intron_variant in RANBP17, PIP=0.065). Credible set:
 278 variants, all intron_variant or upstream_gene_variant with MODIFIER impact — no
 missense/splice-donor/splice-acceptor variants at this locus, so no additional variant-level literature
 search was performed beyond the lead variant (per pipeline scope rules). Candidate genes: RANBP17
-(nearest gene, ABC-prioritized), FGF18 (MAGMA- and PoPS-prioritized).</p>
-<p>Only citations with a VERIFIED verdict from citation-verifier are included below. Citations verified
+(nearest gene, ABC-prioritized), FGF18 (MAGMA- and PoPS-prioritized).</p><p>Only citations with a VERIFIED verdict from citation-verifier are included below. Citations verified
 as existing but never used to support any claim (5 incidental cancer-signature mentions of RANBP17),
-and the one CLAIM_MISMATCH citation, are listed in the companion audit file, not here.</p>
-<table>
+and the one CLAIM_MISMATCH citation, are listed in the companion audit file, not here.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -387,39 +71,39 @@ and the one CLAIM_MISMATCH citation, are listed in the companion audit file, not
 </thead>
 <tbody>
 <tr>
-<td>RANBP17</td>
+<td class="gene">RANBP17</td>
 <td>Statistical genetics (context, not a direct claim)</td>
 <td>GSCAN consortium GWAS of tobacco/alcohol use identified 566 variants in 406 loci for smoking initiation/cessation/heaviness — cited as the plausible (but NOT confirmed) source of the smoking-trait signal class seen at this locus in Open Targets; this paper does not itself name RANBP17.</td>
 <td>Liu M et al. 2019, Nat Genet. PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
-<td>WEAKENED (see gene-level note below)</td>
+<td><span class="tag-warning">WEAKENED</span> (see gene-level note below)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RANBP17</td>
+<td class="gene">RANBP17</td>
 <td>Statistical genetics (context, not a direct claim)</td>
 <td>MVP + GSCAN meta-analysis (842,000 individuals) identified 99 loci for smoking initiation, 13 for smoking cessation — same caveat: does not itself name RANBP17.</td>
 <td>Xu K et al. 2020, Nat Commun. PMID 33082346, DOI 10.1038/s41467-020-18489-3</td>
-<td>WEAKENED (see gene-level note below)</td>
+<td><span class="tag-warning">WEAKENED</span> (see gene-level note below)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RANBP17</td>
+<td class="gene">RANBP17</td>
 <td>Structural/molecular biology (non-lung)</td>
 <td>RANBP17 is an importin-beta-family protein that interacts with the E12/E2A bHLH transcription factor and enhances E2A-mediated transactivation (incl. p21).</td>
 <td>Lee JH et al. 2010, J Cell Biochem. PMID 20503194, DOI 10.1002/jcb.22689</td>
-<td>Not lung/COPD-relevant; supports &quot;no pulmonary mechanistic link&quot; conclusion</td>
+<td>Not lung/COPD-relevant; supports "no pulmonary mechanistic link" conclusion</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RANBP17</td>
+<td class="gene">RANBP17</td>
 <td>Structural/molecular biology (non-lung)</td>
 <td>RANBP17 knockdown in mouse embryonic stem cells promotes endodermal differentiation.</td>
 <td>Sangel P et al. 2014, FEBS Open Bio. PMID 24490135, DOI 10.1016/j.fob.2014.01.001</td>
-<td>Not lung/COPD-relevant; supports &quot;no pulmonary mechanistic link&quot; conclusion</td>
+<td>Not lung/COPD-relevant; supports "no pulmonary mechanistic link" conclusion</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RANBP17</td>
+<td class="gene">RANBP17</td>
 <td>Structural/molecular biology (non-lung)</td>
 <td>RANBP17 is preferentially/strongly expressed in testis and functions in spermatogenesis-related nucleocytoplasmic transport.</td>
 <td>Bao J et al. 2010, Mol Cell Endocrinol. PMID 21184802, DOI 10.1016/j.mce.2010.12.021</td>
@@ -427,131 +111,131 @@ and the one CLAIM_MISMATCH citation, are listed in the companion audit file, not
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RANBP17</td>
+<td class="gene">RANBP17</td>
 <td>Structural/molecular biology (non-lung)</td>
 <td>RanBP17 expression decreases with donor age in induced human neurons; reduction impairs nucleocytoplasmic compartmentalization.</td>
 <td>Mertens J et al. 2015, Cell Stem Cell. PMID 26456686, DOI 10.1016/j.stem.2015.09.001</td>
-<td>Not lung/COPD-relevant; supports &quot;no pulmonary mechanistic link&quot; conclusion</td>
+<td>Not lung/COPD-relevant; supports "no pulmonary mechanistic link" conclusion</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RANBP17</td>
+<td class="gene">RANBP17</td>
 <td>Structural/molecular biology (non-lung)</td>
 <td>RANBP17 is reduced in DYT1 dystonia motor neurons; overexpression restores nucleocytoplasmic transport and rescues neurodevelopmental deficits.</td>
 <td>Akter M et al. 2024, J Neuroscience. PMID 38438257, DOI 10.1523/JNEUROSCI.1728-23.2024</td>
-<td>Not lung/COPD-relevant; supports &quot;no pulmonary mechanistic link&quot; conclusion</td>
+<td>Not lung/COPD-relevant; supports "no pulmonary mechanistic link" conclusion</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FGF18</td>
+<td class="gene">FGF18</td>
 <td>Structural/developmental lung biology</td>
 <td>Fgf18-/- mouse embryonic lungs show reduced alveolar space, thicker interstitial mesenchyme, and transiently reduced cell proliferation at the terminal saccular stage.</td>
 <td>Usui H et al. 2004, Biochem Biophys Res Commun. PMID 15336546, DOI 10.1016/j.bbrc.2004.07.198</td>
-<td>CONTESTED at gene level (see note below) — developmental/embryonic model, not adult COPD</td>
+<td><span class="tag-warning">CONTESTED</span> at gene level (see note below) — developmental/embryonic model, not adult COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FGF18</td>
+<td class="gene">FGF18</td>
 <td>Structural/developmental lung biology</td>
 <td>FGF18 rises 7-fold postnatally in rat lung paralleling elastin expression; recombinant FGF18 stimulates tropoelastin, lysyl oxidase, and fibulin-1/5 in lung myofibroblasts.</td>
 <td>Chailley-Heu B et al. 2004, Am J Physiol Lung Cell Mol Physiol. PMID 15447937, DOI 10.1152/ajplung.00096.2004</td>
-<td>CONTESTED at gene level — postnatal rat model, not adult COPD</td>
+<td><span class="tag-warning">CONTESTED</span> at gene level — postnatal rat model, not adult COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FGF18</td>
+<td class="gene">FGF18</td>
 <td>Structural/developmental lung biology</td>
 <td>FGF18 protein/transcript and elastin are both reduced in human congenital diaphragmatic hernia (CDH)-associated pulmonary hypoplasia and in sheep/rat CDH models.</td>
 <td>Boucherat O et al. 2007, Am J Respir Crit Care Med. PMID 17303798, DOI 10.1164/rccm.200601-050OC</td>
-<td>CONTESTED at gene level — human tissue, but congenital hypoplasia not adult COPD</td>
+<td><span class="tag-warning">CONTESTED</span> at gene level — human tissue, but congenital hypoplasia not adult COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FGF18</td>
+<td class="gene">FGF18</td>
 <td>Structural/developmental lung biology</td>
 <td>Transgenic lung-targeted FGF18 overexpression upregulates adrenomedullin, Wnt2, and angiogenesis genes and represses myofibroblast/fibrotic markers.</td>
 <td>Franco-Montoya ML et al. 2011, Physiol Genomics. PMID 21878612, DOI 10.1152/physiolgenomics.00034.2011</td>
-<td>CONTESTED at gene level — mouse transgenic model</td>
+<td><span class="tag-warning">CONTESTED</span> at gene level — mouse transgenic model</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FGF18</td>
+<td class="gene">FGF18</td>
 <td>Structural/developmental lung biology</td>
 <td>In human fetal lung fibroblasts, FGF18 promotes proliferation/migration via stage-specific FGFR2/FGFR3/FGFR4 usage and shifts differentiation from myofibroblast toward lipofibroblast markers.</td>
 <td>Belgacemi R et al. 2023, Front Cell Dev Biol. PMID 37701781, DOI 10.3389/fcell.2023.1220002</td>
-<td>CONTESTED at gene level — human fetal (not adult) lung fibroblasts</td>
+<td><span class="tag-warning">CONTESTED</span> at gene level — human fetal (not adult) lung fibroblasts</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FGF18</td>
+<td class="gene">FGF18</td>
 <td>Structural + immune</td>
 <td>FGF18 is decreased in hyperoxia-induced neonatal lung injury (a BPD model); exogenous FGF18 reduces oxidative stress and inflammation (via NF-κB pathway inhibition) in alveolar type II epithelial cells.</td>
 <td>Li XG et al. 2021, Eur Rev Med Pharmacol Sci. PMID 33629318, DOI 10.26355/eurrev_202102_24856</td>
-<td>CONTESTED at gene level — neonatal injury model, epithelial-intrinsic signaling only, not a COPD-relevant immune-cell program (no neutrophil/CD8+T/macrophage data)</td>
+<td><span class="tag-warning">CONTESTED</span> at gene level — neonatal injury model, epithelial-intrinsic signaling only, not a COPD-relevant immune-cell program (no neutrophil/CD8+T/macrophage data)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FGF18</td>
+<td class="gene">FGF18</td>
 <td>Structural/lung fibroblast biology (fibrotic, not obstructive, disease)</td>
 <td>FGF9 and FGF18 are present in remodeled idiopathic pulmonary fibrosis (IPF) lung tissue and modulate human lung fibroblast survival/migration/differentiation in vitro.</td>
 <td>Joannes A et al. 2016, Am J Physiol Lung Cell Mol Physiol. PMID 26773067, DOI 10.1152/ajplung.00185.2015</td>
-<td>CONTESTED at gene level — restrictive fibrotic disease context, not COPD/emphysema</td>
+<td><span class="tag-warning">CONTESTED</span> at gene level — restrictive fibrotic disease context, not COPD/emphysema</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FGF18</td>
+<td class="gene">FGF18</td>
 <td>Structural/developmental lung biology (rodent)</td>
 <td>Retinoic acid induces FGF18 downstream of VEGF signaling during alveolarization.</td>
 <td>Yun EJ et al. 2015, Am J Physiol Lung Cell Mol Physiol. PMID 26566904, DOI 10.1152/ajplung.00229.2015</td>
-<td>CONTESTED at gene level — rodent developmental model</td>
+<td><span class="tag-warning">CONTESTED</span> at gene level — rodent developmental model</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FGF18</td>
+<td class="gene">FGF18</td>
 <td>Structural/developmental lung biology (rodent)</td>
 <td>Hyperoxia decreases FGF18/FGFR3/FGFR4 expression in rat pups; nitric oxide donor partially restores FGF18/FGFR4 expression.</td>
 <td>Lopez E et al. 2006, Am J Respir Cell Mol Biol. PMID 16484688, DOI 10.1165/rcmb.2005-0254OC</td>
-<td>CONTESTED at gene level — neonatal rat injury model</td>
+<td><span class="tag-warning">CONTESTED</span> at gene level — neonatal rat injury model</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FGF18</td>
+<td class="gene">FGF18</td>
 <td>Structural/developmental lung biology (rodent)</td>
 <td>Pulmonary FGF-18 gene expression is downregulated during canalicular-saccular stages in nitrofen-induced hypoplastic lungs.</td>
 <td>Takahashi H et al. 2013, Pediatr Surg Int. PMID 23979401, DOI 10.1007/s00383-013-3387-4</td>
-<td>CONTESTED at gene level — rodent developmental hypoplasia model</td>
+<td><span class="tag-warning">CONTESTED</span> at gene level — rodent developmental hypoplasia model</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FGF18</td>
+<td class="gene">FGF18</td>
 <td>Structural/developmental lung biology (review)</td>
 <td>Review: Fgf18/Fgfr3 autocrine signaling operates in myofibroblasts (vs. Fgf10/Fgf1 in lipofibroblasts) during alveologenesis.</td>
 <td>Ruiz-Camp J &amp; Morty RE. 2015, Am J Physiol Lung Cell Mol Physiol. PMID 26342090, DOI 10.1152/ajplung.00298.2015</td>
-<td>CONTESTED at gene level — review of developmental biology</td>
+<td><span class="tag-warning">CONTESTED</span> at gene level — review of developmental biology</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FGF18</td>
+<td class="gene">FGF18</td>
 <td>Structural/developmental lung biology (rodent)</td>
 <td>FGF18 mRNA is more abundant in myofibroblasts than lipofibroblasts; FGF18 diminishes fibroblast proliferation while being chemotactic, consistent with a role in alveolar septation.</td>
 <td>McGowan SE &amp; McCoy DM. 2015, Am J Physiol Lung Cell Mol Physiol. PMID 26138642, DOI 10.1152/ajplung.00013.2015</td>
-<td>CONTESTED at gene level — mouse developmental model</td>
+<td><span class="tag-warning">CONTESTED</span> at gene level — mouse developmental model</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="gene-level-skeptic-notes-see-audits5_170800001-171200000_auditmd-for-full-verbatim-critique">Gene-level skeptic notes (see <code>audits/5_170800001-171200000_audit.md</code> for full verbatim critique)</h3>
 <ul>
 <li><strong>RANBP17 — WEAKENED.</strong> The red-team-skeptic found the researcher's negative findings (no lung/
 COPD/immune literature for RANBP17) well-supported, but weakened the gene's overall candidacy: the
-&quot;smoking-behavior-mediated&quot; hypothesis rests entirely on Open Targets' model-derived L2G score
+"smoking-behavior-mediated" hypothesis rests entirely on Open Targets' model-derived L2G score
 pattern (RANBP17 dominant at the lead variant across smoking/adiposity trait credible sets), not on
 any literature source that names RANBP17 as the causal gene in a smoking-behavior GWAS. Combined with
 RANBP17's LoF-tolerant constraint and dense LD neighborhood (NPM1, KCNIP1, TLX3 also physically
 present), the skeptic judged RANBP17's case for any COPD mechanism (direct or smoking-mediated) as
 weak and indirect.</li>
-<li><strong>FGF18 — CONTESTED.</strong> The skeptic judged the researcher's framing (&quot;FGF18 has much stronger
-mechanistic plausibility than RANBP17&quot;) as mildly overclaiming when applied to <em>this specific locus</em>.
+<li><strong>FGF18 — CONTESTED.</strong> The skeptic judged the researcher's framing ("FGF18 has much stronger
+mechanistic plausibility than RANBP17") as mildly overclaiming when applied to <em>this specific locus</em>.
 FGF18's mechanistic literature is genuine and repeatedly replicated, but (a) its gene body sits ~220 kb
 outside the strict credible-set window (a MAGMA/PoPS flanking-window artifact, not physical/fine-mapping
 support), (b) it is only a minor, never-top L2G gene at the actual lead variant rs6880972, (c) its best
@@ -571,7 +255,7 @@ locus-file candidate gene and was not independently researched in depth.</li>
 any independent contradiction search of its own; its critique above is based entirely on the
 researcher's findings and citation-verifier annotations, not on new independent literature checks.</li>
 </ul>
-<hr>
+<hr/>
 <h2 id="open-targets-summary-structured-database-lookup--not-verified-literature-citations">Open Targets summary (structured database lookup — NOT verified literature citations)</h2>
 <p>Source: Open Targets Platform GraphQL API, queried directly by the orchestrator. Did not go through
 citation-verifier or red-team-skeptic.</p>
@@ -612,13 +296,13 @@ variant.</li>
 only):</strong> NPM1 (COPD L2G 0.056), KCNIP1 (0 COPD evidence, secondary L2G gene ~0.06-0.09 for
 smoking/behavioral traits at the lead variant), TLX3 (0 COPD evidence, secondary L2G gene ~0.10-0.15
 for adiposity/CRP traits), GABRP (minor, BMI-related only, ~0.05).</p>
-<hr>
+<hr/>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>Gene: FGF18</strong>
 <strong>Confidence: LOW</strong></p>
 <p>This is a close call between two genes with independently different, non-overlapping weaknesses, and
 neither the researcher's evidence nor the red-team-skeptic's critique resolves it cleanly — the
-skeptic explicitly flagged this locus as more consistent with a &quot;broad, pleiotropic regulatory hotspot&quot;
+skeptic explicitly flagged this locus as more consistent with a "broad, pleiotropic regulatory hotspot"
 than a single well-resolved causal gene.</p>
 <p>I lean toward <strong>FGF18</strong> over RANBP17 for the following reasons, while explicitly acknowledging the
 skeptic's CONTESTED flag on it: FGF18 has repeatedly replicated, multi-species, multi-laboratory
@@ -655,5 +339,7 @@ specifically nominate RANBP17 as the credible-set gene at this locus, which coul
 abstracts alone. Given the low, closely-matched confidence, the study team should weigh both candidates
 and treat neither as settled.</p>
 
+        </div>
+    </div>
 </body>
 </html>

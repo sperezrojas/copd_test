@@ -1,383 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>5_156000001-157700000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 5:156,000,001-157,700,000 (nearest gene ADAM19)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-5156000001-157700000-nearest-gene-adam19">Evidence table — locus 5:156,000,001-157,700,000 (nearest gene ADAM19)</h1>
-<p>Region: 5:156,000,001-157,700,000 (GRCh38). Lead variant: rs4579242 (5:157,512,490, ADAM19
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-5156000001-157700000-nearest-gene-adam19">Evidence table — locus 5:156,000,001-157,700,000 (nearest gene ADAM19)</h1><div class="summary"><p>Region: 5:156,000,001-157,700,000 (GRCh38). Lead variant: rs4579242 (5:157,512,490, ADAM19
 intron, PIP=0.078). Credible set: 163 variants (unusually large; ~1.7 Mb span). Dedicated
 variant-level literature search was performed only for the lead variant (rs4579242) and the
 sole missense/splice credible-set variant (rs1422795, ADAM19, PIP=0.046); all other
 credible-set variants are rolled into gene-level evidence per pipeline scope rules.
 Candidate genes evaluated: ADAM19 (nearest gene, ABC-prioritized), TIMD4 (MAGMA-
 prioritized), SGCD (PoPS-prioritized), CYFIP2 and NIPAL4 (credible-set genes, PIP &lt;0.001
-each).</p>
-<p>Only citations with a citation-verifier verdict of VERIFIED are included below. See
+each).</p><p>Only citations with a citation-verifier verdict of VERIFIED are included below. See
 <code>audits/5_156000001-157700000_audit.md</code> for excluded citations and full CONTESTED/WEAKENED
-skeptic reasoning.</p>
-<table>
+skeptic reasoning.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -390,203 +74,203 @@ skeptic reasoning.</p>
 </thead>
 <tbody>
 <tr>
-<td>ADAM19</td>
+<td class="gene">ADAM19</td>
 <td>Statistical genetics (GWAS, spirometry)</td>
 <td>Original CHARGE Consortium meta-analysis; ADAM19 (rs2277027) one of 8 genome-wide-significant loci for FEV1/FVC (P=8.32e-10)</td>
 <td>Hancock et al. 2010, Nat Genet; PMID 20010835; DOI 10.1038/ng.500</td>
-<td>WEAKENED (strongest single piece of evidence for ADAM19 but &quot;convergent mechanistic&quot; framing built around it is overclaimed — see audit)</td>
+<td><span class="tag-warning">WEAKENED</span> (strongest single piece of evidence for ADAM19 but "convergent mechanistic" framing built around it is overclaimed — see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADAM19</td>
+<td class="gene">ADAM19</td>
 <td>Statistical genetics (COPD case-control)</td>
 <td>ADAM19 SNP (rs11744671) nominally (not genome-wide-significantly) replicated in COPD meta-analysis; main GWS hit for airflow obstruction in this paper was smoking-linked CHRNA5/3, not ADAM19</td>
 <td>Wilk et al. 2012, Am J Respir Crit Care Med; PMID 22837378; DOI 10.1164/rccm.201202-0366OC</td>
-<td>WEAKENED (nominal, not genome-wide-significant, association)</td>
+<td><span class="tag-warning">WEAKENED</span> (nominal, not genome-wide-significant, association)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADAM19</td>
+<td class="gene">ADAM19</td>
 <td>Statistical genetics (COPD case-control)</td>
 <td>5q33/ADAM19 locus associated with COPD susceptibility at 5% FDR (not genome-wide significance) across 4 cohorts (NETT/NAS, Norway, ECLIPSE, COPDGene), spirometry-first discovery design</td>
 <td>Castaldi et al. 2011, Am J Respir Cell Mol Biol; PMID 21659657; DOI 10.1165/rcmb.2011-0055OC</td>
-<td>WEAKENED (FDR-level, not GWS)</td>
+<td><span class="tag-warning">WEAKENED</span> (FDR-level, not GWS)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADAM19</td>
+<td class="gene">ADAM19</td>
 <td>Statistical genetics (fine-mapping / targeted sequencing)</td>
 <td>Targeted sequencing of ADAM19 in ~4000 CHARGE participants: conditioning on missense variant rs1422795 (this locus's credible-set missense variant) leaves one additional common variant (rs13155908) significant for FEV1/FVC; no rare-variant burden signal</td>
 <td>London et al. 2014, Circ Cardiovasc Genet; PMID 24951661; DOI 10.1161/CIRCGENETICS.113.000066</td>
-<td>HOLDS as fine-mapping evidence, but underscores that rs1422795 (PIP only 0.046) does not fully explain the signal</td>
+<td><span class="tag-hold">HOLDS</span> as fine-mapping evidence, but underscores that rs1422795 (PIP only 0.046) does not fully explain the signal</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADAM19</td>
+<td class="gene">ADAM19</td>
 <td>Statistical genetics (pediatric, pre-smoking)</td>
 <td>In 8-year-old children (pre-smoking exposure), ADAM19 rs2277027 associated with 1%-unit lower FEV1/FVC per allele (p=0.03)</td>
 <td>Panasevich et al. 2013, Acta Paediatr; PMID 23409998; DOI 10.1111/apa.12204</td>
-<td>WEAKENED (single modest, non-replicated pediatric cohort; used to argue against smoking-mediation but this is a weak inferential chain per critique)</td>
+<td><span class="tag-warning">WEAKENED</span> (single modest, non-replicated pediatric cohort; used to argue against smoking-mediation but this is a weak inferential chain per critique)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADAM19</td>
+<td class="gene">ADAM19</td>
 <td>Statistical genetics / structural (bioinformatic)</td>
 <td>Mouse-to-human translational mining flagged ADAM19 among COPD-associated genes; altered Adam19 transcript expression in cigarette-smoke-exposed mouse lung across multiple GEO datasets</td>
 <td>Vishweswaraiah et al. 2018, Respir Res; PMID 29871630; DOI 10.1186/s12931-018-0795-y</td>
-<td>WEAKENED (exploratory/bioinformatic, not a genetic-association study; smoke-exposure-conditional finding sits awkwardly with &quot;not smoking-mediated&quot; framing)</td>
+<td><span class="tag-warning">WEAKENED</span> (exploratory/bioinformatic, not a genetic-association study; smoke-exposure-conditional finding sits awkwardly with "not smoking-mediated" framing)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADAM19</td>
+<td class="gene">ADAM19</td>
 <td>Statistical genetics (review)</td>
 <td>Narrative review citing ADAM19 among replicated GWAS genes for lung volume/COPD risk</td>
 <td>Ranjan et al. 2019, J Genet; PMID 31544798</td>
-<td>HOLDS (background context only, no new primary data)</td>
+<td><span class="tag-hold">HOLDS</span> (background context only, no new primary data)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADAM19</td>
+<td class="gene">ADAM19</td>
 <td>Structural/developmental (non-pulmonary)</td>
 <td>Adam19/Meltrin-beta knockout mice show cardiac ventricular septal defect and immature valves via impaired endocardial-cushion EMT and aberrant neuregulin-1/ErbB4 shedding</td>
 <td>Kurohara et al. 2004, Dev Biol; PMID 14975714; DOI 10.1016/j.ydbio.2003.10.021</td>
-<td>WEAKENED (cardiac, not pulmonary, developmental biology — flagged as an overclaim when used analogically to argue for lung-structural mechanism)</td>
+<td><span class="tag-warning">WEAKENED</span> (cardiac, not pulmonary, developmental biology — flagged as an overclaim when used analogically to argue for lung-structural mechanism)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADAM19</td>
+<td class="gene">ADAM19</td>
 <td>Structural/immune (biochemical mechanism)</td>
 <td>ADAM17, not ADAM19/9/10, is the principal stimulated TNF-alpha sheddase; ADAM19 overexpression increases only constitutive (unstimulated), secondary TNF-alpha release</td>
 <td>Zheng et al. 2004, J Biol Chem; PMID 15292243; DOI 10.1074/jbc.M403193200</td>
-<td>HOLDS (correctly characterized as a secondary/minor contributory role, not primary)</td>
+<td><span class="tag-hold">HOLDS</span> (correctly characterized as a secondary/minor contributory role, not primary)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADAM19</td>
+<td class="gene">ADAM19</td>
 <td>Immunology (non-pulmonary)</td>
 <td>In human inflammatory-myopathy muscle biopsies, CD3+ T cells (not macrophages) express ADAM19; ADAM19 knockdown implicates it in T-cell TNF-alpha shedding</td>
 <td>Dehmel et al. 2007, Neurobiol Dis; PMID 17207628; DOI 10.1016/j.nbd.2006.11.008</td>
-<td>WEAKENED (muscle-disease tissue, not lung; analogical only)</td>
+<td><span class="tag-warning">WEAKENED</span> (muscle-disease tissue, not lung; analogical only)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADAM19</td>
+<td class="gene">ADAM19</td>
 <td>Immunology/structural (non-pulmonary)</td>
 <td>miR-874-3p/ADAM19 axis mediates macrophage activation and renal fibrosis after acute kidney injury (mouse model)</td>
 <td>Wang et al. 2021, Hypertension; PMID 33775119; DOI 10.1161/HYPERTENSIONAHA.120.16900</td>
-<td>WEAKENED (kidney, not lung; analogical only)</td>
+<td><span class="tag-warning">WEAKENED</span> (kidney, not lung; analogical only)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ADAM19</td>
+<td class="gene">ADAM19</td>
 <td>Immunology/structural (bioinformatic)</td>
 <td>ADAM19 is one of five hub genes in a miRNA-mRNA regulatory network for airway epithelial barrier injury in a COPD rat model and BEAS-2B bronchial epithelial cells</td>
 <td>Liu et al. 2025, J Inflamm Res; PMID 40933755; DOI 10.2147/JIR.S529587</td>
-<td>WEAKENED (exploratory network analysis with herbal-formula intervention design; no functional validation of ADAM19 itself; smoke-exposure-conditional)</td>
+<td><span class="tag-warning">WEAKENED</span> (exploratory network analysis with herbal-formula intervention design; no functional validation of ADAM19 itself; smoke-exposure-conditional)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TIMD4</td>
+<td class="gene">TIMD4</td>
 <td>Immunology (non-pulmonary; MAGMA-prioritized)</td>
 <td>TIM-4 is the first-identified phosphatidylserine receptor mediating macrophage efferocytosis, relevant to autoimmune/allergic disease</td>
 <td>Kim et al. 2020, Genes Genomics; PMID 32648232; DOI 10.1007/s13258-020-00969-x</td>
-<td>WEAKENED (general review; no lung/COPD data; zero COPD L2G evidence for TIMD4)</td>
+<td><span class="tag-warning">WEAKENED</span> (general review; no lung/COPD data; zero COPD L2G evidence for TIMD4)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TIMD4</td>
+<td class="gene">TIMD4</td>
 <td>Immunology (non-pulmonary, skin model)</td>
 <td>Aging reduces macrophage TIM-4 via elevated p38 MAPK activity, impairing efferocytosis/inflammation-resolution in a human dermal model; p38 inhibition restored TIM-4 and resolution in elderly volunteers</td>
 <td>De Maeyer et al. 2020, Nat Immunol; PMID 32251403; DOI 10.1038/s41590-020-0646-0</td>
-<td>WEAKENED (skin model, not lung; analogical)</td>
+<td><span class="tag-warning">WEAKENED</span> (skin model, not lung; analogical)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TIMD4</td>
+<td class="gene">TIMD4</td>
 <td>Immunology/structural (non-pulmonary, liver)</td>
 <td>Loss of TIM4-mediated efferocytosis in liver macrophages drives fibrosis in a steatohepatitis mouse model; TIM4 restoration reduces fibrosis</td>
 <td>Shi et al. 2025, Sci Transl Med; PMID 40929246; DOI 10.1126/scitranslmed.adv2106</td>
-<td>WEAKENED (liver, not lung; analogical)</td>
+<td><span class="tag-warning">WEAKENED</span> (liver, not lung; analogical)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TIMD4</td>
+<td class="gene">TIMD4</td>
 <td>Immunology (non-pulmonary, gut/lupus)</td>
 <td>Gut-microbiota-derived butyrate supports macrophage TIM-4; antibiotic-induced dysbiosis impairs TIM-4 and worsens a lupus mouse model</td>
 <td>Saavedra et al. 2024, Nat Metab; PMID 39122784; DOI 10.1038/s42255-024-01107-7</td>
-<td>WEAKENED (gut/autoimmune model, not lung; analogical)</td>
+<td><span class="tag-warning">WEAKENED</span> (gut/autoimmune model, not lung; analogical)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TIMD4</td>
+<td class="gene">TIMD4</td>
 <td>Immunology (non-pulmonary, bone)</td>
 <td>Tim4 deficiency reduces CD301b+ reparative macrophages and worsens periodontitis bone loss via p38 MAPK signaling</td>
 <td>Wang et al. 2024, Int J Oral Sci; PMID 38418808; DOI 10.1038/s41368-023-00270-z</td>
-<td>WEAKENED (bone/periodontal, not lung; analogical)</td>
+<td><span class="tag-warning">WEAKENED</span> (bone/periodontal, not lung; analogical)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TIMD4</td>
+<td class="gene">TIMD4</td>
 <td>Immunology (non-pulmonary, infection)</td>
 <td>TIM-4 facilitates Listeria monocytogenes cell-to-cell spread via efferocytosis of infected membrane protrusions</td>
 <td>Czuczman et al. 2014, Nature; PMID 24739967; DOI 10.1038/nature13168</td>
-<td>WEAKENED (infection model, not lung; analogical)</td>
+<td><span class="tag-warning">WEAKENED</span> (infection model, not lung; analogical)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SGCD</td>
+<td class="gene">SGCD</td>
 <td>Statistical genetics + structural (COPD subphenotype, lung tissue)</td>
 <td>In COPD-affected smokers (Lung Health Study), 5q33/SGCD locus shows suggestive (not genome-wide-significant, P 9.57e-8 to 4.6e-6) association with airway hyperresponsiveness; risk allele is a lung-tissue eQTL for SGCD (P=2.57e-9); SGCD protein immunolocalized to airway smooth muscle and vessels in human lung</td>
 <td>Hansel et al. 2015, Am J Respir Cell Mol Biol; PMID 25514360; DOI 10.1165/rcmb.2014-0198OC</td>
-<td>WEAKENED overall (suggestive, not GWS; narrow subphenotype; smoker-only cohort so smoking-mediation not excluded) but flagged as SGCD's strongest evidence and the only candidate-gene evidence at this locus with confirmed LUNG-tissue eQTL + airway-smooth-muscle protein localization — a genuine rival to ADAM19 on tissue-specificity grounds (see audit)</td>
+<td><span class="tag-warning">WEAKENED</span> overall (suggestive, not GWS; narrow subphenotype; smoker-only cohort so smoking-mediation not excluded) but flagged as SGCD's strongest evidence and the only candidate-gene evidence at this locus with confirmed LUNG-tissue eQTL + airway-smooth-muscle protein localization — a genuine rival to ADAM19 on tissue-specificity grounds (see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SGCD</td>
+<td class="gene">SGCD</td>
 <td>Structural (non-pulmonary, Mendelian disease)</td>
 <td>SGCD (delta-sarcoglycan) mutations cause LGMDR6 limb-girdle muscular dystrophy; sarcoglycan complex links cytoskeleton to extracellular matrix in striated-muscle sarcolemma</td>
 <td>Vainzof et al. 2021, Neuromuscul Disord; PMID 34404573; DOI 10.1016/j.nmd.2021.07.014</td>
-<td>HOLDS (confirms SGCD's canonical disease biology is muscular/cardiac, not pulmonary, except via the airway-smooth-muscle expression noted in Hansel 2015)</td>
+<td><span class="tag-hold">HOLDS</span> (confirms SGCD's canonical disease biology is muscular/cardiac, not pulmonary, except via the airway-smooth-muscle expression noted in Hansel 2015)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CYFIP2</td>
+<td class="gene">CYFIP2</td>
 <td>Statistical genetics (bioinformatic, exploratory)</td>
-<td>Machine-learning transcriptomic clustering flagged CYFIP2 among seven &quot;disease signature genes&quot; related to RNA m7G-methylation regulation in COPD</td>
+<td>Machine-learning transcriptomic clustering flagged CYFIP2 among seven "disease signature genes" related to RNA m7G-methylation regulation in COPD</td>
 <td>Zhu et al. 2025, Sci Rep; PMID 40113900; DOI 10.1038/s41598-025-93901-w</td>
-<td>WEAKENED (purely exploratory bioinformatic clustering, not genetic-association/functional evidence)</td>
+<td><span class="tag-warning">WEAKENED</span> (purely exploratory bioinformatic clustering, not genetic-association/functional evidence)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CYFIP2</td>
+<td class="gene">CYFIP2</td>
 <td>Neurodevelopmental disease biology (not respiratory)</td>
 <td>De novo CYFIP2 variants cause developmental and epileptic encephalopathy (DEE65) / West syndrome via disrupted WAVE-regulatory-complex actin dynamics</td>
 <td>Ma et al. 2024, Brain Dev; PMID 39603202; DOI 10.1016/j.braindev.2024.104302</td>
-<td>HOLDS (confirms CYFIP2's canonical disease biology is neurodevelopmental, no respiratory phenotype)</td>
+<td><span class="tag-hold">HOLDS</span> (confirms CYFIP2's canonical disease biology is neurodevelopmental, no respiratory phenotype)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>CYFIP2</td>
+<td class="gene">CYFIP2</td>
 <td>Neurodevelopmental disease biology (not respiratory)</td>
 <td>12 patients with de novo CYFIP2 variants presented with intellectual disability, seizures, and muscular hypotonia</td>
 <td>Zweier et al. 2019, Eur J Hum Genet; PMID 30664714; DOI 10.1038/s41431-018-0331-z</td>
-<td>HOLDS (same as above)</td>
+<td><span class="tag-hold">HOLDS</span> (same as above)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NIPAL4</td>
+<td class="gene">NIPAL4</td>
 <td>Skin-barrier biology (not respiratory)</td>
 <td>Nipal4 knockout mice show altered stratum corneum ceramide/lipid composition, consistent with NIPAL4's role in keratinocyte magnesium handling and skin-barrier formation; no lung phenotype assessed</td>
 <td>Yamaji et al. 2024, J Lipid Res; PMID 38692573; DOI 10.1016/j.jlr.2024.100550</td>
-<td>HOLDS (confirms NIPAL4's disease biology is epidermal/ichthyosis-related, not respiratory)</td>
+<td><span class="tag-hold">HOLDS</span> (confirms NIPAL4's disease biology is epidermal/ichthyosis-related, not respiratory)</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not reviewed by citation-verifier or red-team-skeptic)</h2>
-<p>Queried 2026-09-11 via Open Targets Platform GraphQL API against MONDO_0005002 (&quot;chronic
-obstructive pulmonary disease&quot;).</p>
-<table>
+<p>Queried 2026-09-11 via Open Targets Platform GraphQL API against MONDO_0005002 ("chronic
+obstructive pulmonary disease").</p>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -598,45 +282,45 @@ obstructive pulmonary disease&quot;).</p>
 </thead>
 <tbody>
 <tr>
-<td>ADAM19</td>
+<td class="gene">ADAM19</td>
 <td>0.413 (genetic_association 0.661, literature 0.354) — highest of all 5 candidates</td>
 <td>13 rows, scores 0.42-0.72 (top 0.718) — by far the most L2G evidence</td>
 <td>Lead variant rs4579242 (75 shared credible sets) shows eQTL colocalization for ADAM19 expression across esophagus, skin, testis, stomach, LCL, fat, muscle, colon, breast (no lung tissue in sampled data); shared GWAS credible sets with COPD in never-smokers/non-current-smokers (Kim 2020), FEV1/FEV1-FVC (Shrine 2019/2023, Hu 2025, Engstrom 2024); recurring pleiotropy with mean platelet volume GWAS</td>
 <td>lof score ~0 (oe=0.61, not highly constrained)</td>
 </tr>
 <tr>
-<td>TIMD4</td>
+<td class="gene">TIMD4</td>
 <td>0 (no association record)</td>
 <td>0 rows</td>
 <td>none identified</td>
 <td>lof score ~0 (oe=0.76, not constrained)</td>
 </tr>
 <tr>
-<td>SGCD</td>
+<td class="gene">SGCD</td>
 <td>0.003 (literature datatype only)</td>
 <td>0 rows</td>
 <td>none identified</td>
 <td>lof oe=0.50 (some LoF depletion despite low z-score)</td>
 </tr>
 <tr>
-<td>CYFIP2</td>
+<td class="gene">CYFIP2</td>
 <td>0.020 (literature datatype only)</td>
 <td>0 rows</td>
 <td>none identified</td>
 <td>highly constrained: lof score=1.0 (oe=0.20), missense score=6.9 (oe=0.52) — generic intolerance, not COPD-specific</td>
 </tr>
 <tr>
-<td>NIPAL4</td>
+<td class="gene">NIPAL4</td>
 <td>0.078 (genetic_association datatype only)</td>
 <td>2 rows, scores 0.17/0.16 — weak, well below ADAM19's range</td>
 <td>not further characterized</td>
 <td>lof score ~0 (oe=0.70, not constrained)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="prioritized-gene-synthesis">Prioritized-gene synthesis</h2>
 <p><strong>Prioritized gene: ADAM19. Confidence: MODERATE (downgraded from the researcher's initial
-&quot;clear best-supported&quot; framing after red-team critique).</strong></p>
+"clear best-supported" framing after red-team critique).</strong></p>
 <p>ADAM19 has the best-supported genetic-association case of the five candidates at this
 locus: it is a genome-wide-significant original CHARGE spirometric GWAS locus (Hancock et
 al. 2010, PMID 20010835), carries by far the highest Open Targets composite association
@@ -649,7 +333,7 @@ pathway artifact (prior #1), consistent with prior #2 (spirometric concordance).
 this table's confidence rating accounts for: (1) ADAM19's own COPD case-control evidence is
 nominal/FDR-level, not genome-wide-significant (Wilk 2012, Castaldi 2011) — the
 genome-wide-significant signal is for a spirometric trait, not disease status; (2) the
-&quot;convergent mechanistic evidence&quot; cited for ADAM19 (cardiac developmental biology from
+"convergent mechanistic evidence" cited for ADAM19 (cardiac developmental biology from
 Kurohara 2004; eQTL colocalization spanning esophagus/skin/testis/stomach/LCL/fat/muscle/
 colon/breast but explicitly NOT lung tissue in the sampled data; immune evidence from
 muscle, kidney, and exploratory bioinformatic/rat-model sources) is analogical and
@@ -693,5 +377,7 @@ biology (severe neurodevelopmental disease for CYFIP2; congenital ichthyosis for
 final determination — the SGCD tissue-specificity finding in particular warrants follow-up
 before this locus's causal gene is considered settled.</p>
 
+        </div>
+    </div>
 </body>
 </html>

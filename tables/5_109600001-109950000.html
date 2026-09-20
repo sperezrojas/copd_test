@@ -1,381 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>5_109600001-109950000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 5:109,600,001-109,950,000 (lead variant rs9326785)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-5109600001-109950000-lead-variant-rs9326785">Evidence table — locus 5:109,600,001-109,950,000 (lead variant rs9326785)</h1>
-<p>Candidate genes evaluated: MAN2A1 (nearest gene), FER (FLAMES-prioritized), TMEM232
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-5109600001-109950000-lead-variant-rs9326785">Evidence table — locus 5:109,600,001-109,950,000 (lead variant rs9326785)</h1><div class="summary"><p>Candidate genes evaluated: MAN2A1 (nearest gene), FER (FLAMES-prioritized), TMEM232
 (MAGMA+PoPS-prioritized), LINC01848 (overlaps 2nd/3rd-highest-PIP credible-set variants).
 All citations below carry verifier verdict VERIFIED (23/23 checked; 0 RETRACTED, 0
 NOT_FOUND, 0 CLAIM_MISMATCH — see <code>evidence_tables/_status/5_109600001-109950000/verified_citations.md</code>
-for the full per-citation verification record). The &quot;Skeptic verdict&quot; column reflects
+for the full per-citation verification record). The "Skeptic verdict" column reflects
 red-team-skeptic's critique of the <em>interpretation</em> of each verified citation (tissue/
 context match, paralog attribution, alternative-hypothesis competition), not a re-check
 of citation existence. Full critique text is preserved in
-<code>audits/5_109600001-109950000_audit.md</code>.</p>
-<table>
+<code>audits/5_109600001-109950000_audit.md</code>.</p></div>
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -388,55 +72,55 @@ of citation existence. Full critique text is preserved in
 </thead>
 <tbody>
 <tr>
-<td>MAN2A1</td>
+<td class="gene">MAN2A1</td>
 <td>Statgen (background, unconfirmed gene attribution)</td>
 <td>Largest multi-ancestry lung-function/COPD GWAS to date (580,869 participants, 1,020 signals, 559 genes); likely but <em>not confirmed</em> to name MAN2A1 or FER as the prioritized gene at this specific locus</td>
 <td>Shrine et al. 2023, PMID 36914875, DOI 10.1038/s41588-023-01314-0</td>
-<td>WEAKENED — cited as probable source but gene-specific attribution at this locus unconfirmed by researcher</td>
+<td><span class="tag-warning">WEAKENED</span> — cited as probable source but gene-specific attribution at this locus unconfirmed by researcher</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAN2A1</td>
+<td class="gene">MAN2A1</td>
 <td>Immune/structural (gut epithelium, mouse)</td>
 <td>Intestinal-epithelial-specific MAN2A1 deletion ameliorates DSS-induced colitis, with reduced neutrophil infiltration and reduced neutrophil-attracting chemokine expression</td>
 <td>PMID 29343654, DOI 10.1247/csf.17022</td>
-<td>WEAKENED — gut epithelium, not lung; mechanism (epithelial chemokine/neutrophil tuning) is conceptually parallel to COPD priors but not demonstrated in airway tissue</td>
+<td><span class="tag-warning">WEAKENED</span> — gut epithelium, not lung; mechanism (epithelial chemokine/neutrophil tuning) is conceptually parallel to COPD priors but not demonstrated in airway tissue</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAN2A1</td>
+<td class="gene">MAN2A1</td>
 <td>Immune (systemic autoimmunity, mouse)</td>
 <td>Germline MAN2A1-deficient mice develop spontaneous lupus-like systemic autoimmune disease (glomerulonephritis, autoantibodies, immune complexes)</td>
 <td>PMID 11158608, DOI 10.1073/pnas.98.3.1142</td>
-<td>WEAKENED — systemic autoimmune/lupus phenotype is a distinct inflammatory program from COPD's neutrophilic/innate axis, not in lung</td>
+<td><span class="tag-warning">WEAKENED</span> — systemic autoimmune/lupus phenotype is a distinct inflammatory program from COPD's neutrophilic/innate axis, not in lung</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAN2A1</td>
+<td class="gene">MAN2A1</td>
 <td>Immune (mechanism, mouse)</td>
 <td>MAN2A1-deficient autoimmune phenotype is nonhematopoietic in origin, driven by chronic innate-immune activation via N-glycan mannose-dependent lectin ligands</td>
 <td>PMID 17681821, DOI 10.1016/j.immuni.2007.06.008</td>
-<td>WEAKENED — same autoimmune-paradigm caveat as above</td>
+<td><span class="tag-warning">WEAKENED</span> — same autoimmune-paradigm caveat as above</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAN2A1</td>
+<td class="gene">MAN2A1</td>
 <td>Immune (tumor immunology)</td>
 <td>MAN2A1 loss/pharmacologic inhibition increases anti-tumor T-cell cytotoxicity/infiltration and synergizes with anti-PD-L1 in syngeneic lung-cancer and melanoma models</td>
 <td>PMID 32723834, DOI 10.1158/1078-0432.CCR-20-0778</td>
-<td>WEAKENED — cancer-immunology context, not COPD/airway inflammation despite lung-cancer model use</td>
+<td><span class="tag-warning">WEAKENED</span> — cancer-immunology context, not COPD/airway inflammation despite lung-cancer model use</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAN2A1 / FER (shared)</td>
+<td class="gene">MAN2A1 / FER (shared)</td>
 <td>Genomic context (somatic fusion, oncology biomarker)</td>
 <td>Recurrent somatic MAN2A1-FER fusion transcript characterized across HCC, prostate, and other epithelial cancers; fusion protein has ~4-fold higher kinase activity than wild-type FER, activates EGFR/BRAF/MEK/AKT, and is detectable as blood/serum cell-free RNA biomarker</td>
 <td>PMID 28245430 (DOI 10.1053/j.gastro.2016.12.036); PMID 25238935 (DOI 10.1016/j.ajpath.2014.06.025); PMID 31164957 (no DOI located); PMID 34417538 (DOI 10.1038/s41598-021-96528-9); PMID 38537933 (DOI 10.1016/j.ajpath.2024.02.017)</td>
-<td>WEAKENED — purely somatic-oncology biomarker literature reflecting physical gene adjacency; not germline mechanism evidence and should not be read as informing inherited COPD risk or as evidence the two genes function together constitutively</td>
+<td><span class="tag-warning">WEAKENED</span> — purely somatic-oncology biomarker literature reflecting physical gene adjacency; not germline mechanism evidence and should not be read as informing inherited COPD risk or as evidence the two genes function together constitutively</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MAN2A1</td>
+<td class="gene">MAN2A1</td>
 <td>Background/general enzymology (no disease-specific claim)</td>
 <td>General characterization of MAN2A1/alpha-mannosidase II enzymology (swainsonine toxicology; HEK293 glycoform engineering) — not lung- or COPD-specific</td>
 <td>PMID 25797317 (DOI 10.1016/j.toxicon.2015.03.008); PMID 33878161 (DOI 10.1093/jb/mvab051)</td>
@@ -444,107 +128,107 @@ of citation existence. Full critique text is preserved in
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FER</td>
+<td class="gene">FER</td>
 <td>Immune (macrophage TLR4/LPS, mouse — paralog caveat)</td>
 <td>Fps/Fes (FER's paralog, same kinase subfamily, distinct gene) restrains macrophage TLR4/NF-κB/TNF-α responses to LPS; paper additionally cites prior work that Fer-deficient mice show enhanced leukocyte recruitment to local LPS challenge</td>
 <td>PMID 16959897, DOI 10.1189/jlb.0506350</td>
-<td>WEAKENED — primary data is on paralog Fps/Fes, not FER itself; the FER-specific claim is a secondhand citation of prior work within this paper, not this paper's own data</td>
+<td><span class="tag-warning">WEAKENED</span> — primary data is on paralog Fps/Fes, not FER itself; the FER-specific claim is a secondhand citation of prior work within this paper, not this paper's own data</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FER</td>
+<td class="gene">FER</td>
 <td>Immune/structural (intestinal epithelium, mouse)</td>
 <td>Fer-kinase-inactive (FerDR) mice show exacerbated neutrophil infiltration and 2.5-fold increased epithelial barrier permeability after LPS challenge</td>
 <td>PMID 16009680, DOI 10.1136/gut.2004.061887</td>
-<td>WEAKENED — genuine FER in vivo data (not paralog), and mechanistically concordant with COPD's neutrophilic/epithelial-barrier priors, but tissue is gut, not lung</td>
+<td><span class="tag-warning">WEAKENED</span> — genuine FER in vivo data (not paralog), and mechanistically concordant with COPD's neutrophilic/epithelial-barrier priors, but tissue is gut, not lung</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FER</td>
+<td class="gene">FER</td>
 <td>Immune (review)</td>
 <td>Review covering Fer (with Tec/FAK/Fps/Syk/Src/TAM kinases) as a mediator of TLR signaling in innate immunity</td>
 <td>PMID 21709741, DOI 10.2174/15743620978816750</td>
-<td>WEAKENED — review-level synthesis, not primary data</td>
+<td><span class="tag-warning">WEAKENED</span> — review-level synthesis, not primary data</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FER</td>
+<td class="gene">FER</td>
 <td>Immune (mast cell FcεRI, in vitro, mouse)</td>
 <td>Fer-deficient mast cells show reduced sustained p38 MAPK activation, increased adhesion, decreased motility upon FcεRI/Kit activation; no major degranulation/leukotriene/cytokine defect</td>
 <td>PMID 12192036, DOI 10.1128/MCB.22.18.6363-6374.2002</td>
-<td>WEAKENED — genuine FER data but an allergic/Th2-type (IgE/mast-cell) paradigm, distinct from COPD's classically neutrophilic/innate/CD8 programs</td>
+<td><span class="tag-warning">WEAKENED</span> — genuine FER data but an allergic/Th2-type (IgE/mast-cell) paradigm, distinct from COPD's classically neutrophilic/innate/CD8 programs</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FER</td>
+<td class="gene">FER</td>
 <td>Immune (mast cell PECAM-1, in vitro, mouse)</td>
 <td>Fer/Fps phosphorylate PECAM-1 ITIMs to recruit Shp1/Shp2 and limit mast-cell activation; Fer/Fps-deficient mast cells show exaggerated degranulation at low antigen dose</td>
 <td>PMID 16731527, DOI 10.1074/jbc.M604252200</td>
-<td>WEAKENED — same allergic/mast-cell paradigm caveat; also partly paralog (Fps) data</td>
+<td><span class="tag-warning">WEAKENED</span> — same allergic/mast-cell paradigm caveat; also partly paralog (Fps) data</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FER</td>
+<td class="gene">FER</td>
 <td>Immune (mast cell FcεRI structural biology — FES, not FER)</td>
 <td>F-BAR/SH2-domain structural basis for <strong>FES</strong> (not FER) coupling to FcεRI signaling in mast cells</td>
 <td>PMID 19001085, DOI 10.1128/MCB.00904-08</td>
-<td>CONTESTED — explicitly a FES-paralog paper; would be a direct overclaim if counted as FER-specific evidence in synthesis, given FES and FER have materially different expression patterns</td>
+<td><span class="tag-warning">CONTESTED</span> — explicitly a FES-paralog paper; would be a direct overclaim if counted as FER-specific evidence in synthesis, given FES and FER have materially different expression patterns</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FER</td>
+<td class="gene">FER</td>
 <td>Immune (mast cell kinetics, in vitro)</td>
 <td>Fer kinase activity is induced with delayed kinetics (peak ~1 min) after mast-cell FcεRI engagement, alongside Lyn and Syk</td>
 <td>PMID 7559493, DOI 10.1074/jbc.270.40.23362</td>
-<td>WEAKENED — in vitro, allergic/mast-cell paradigm</td>
+<td><span class="tag-warning">WEAKENED</span> — in vitro, allergic/mast-cell paradigm</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMEM232</td>
+<td class="gene">TMEM232</td>
 <td>Statgen/immune (GWAS, Chinese Han)</td>
 <td>5q22.1 TMEM232/SLC25A46 locus (rs7701890, P=3.15×10⁻⁹, OR=1.24) identified as novel atopic dermatitis susceptibility locus</td>
 <td>PMID 21666691, DOI 10.1038/ng.851</td>
-<td>CONTESTED — replicated alternative Th2/allergic-disease association at a genomically ambiguous gene pair (TMEM232 vs. SLC25A46 not distinguished); no COPD signal exists for TMEM232 in Open Targets</td>
+<td><span class="tag-warning">CONTESTED</span> — replicated alternative Th2/allergic-disease association at a genomically ambiguous gene pair (TMEM232 vs. SLC25A46 not distinguished); no COPD signal exists for TMEM232 in Open Targets</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMEM232</td>
+<td class="gene">TMEM232</td>
 <td>Statgen/immune (GWAS, Japanese)</td>
 <td>TMEM232-SLC25A46 atopic dermatitis association replicated in Japanese cohort alongside FLG, C11orf30, TNFRSF6B-ZGPAT, OVOL1, ACTL9, KIF3A-IL13</td>
 <td>PMID 23042114, DOI 10.1038/ng.2438</td>
-<td>CONTESTED — same alternative-hypothesis reasoning as above</td>
+<td><span class="tag-warning">CONTESTED</span> — same alternative-hypothesis reasoning as above</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMEM232</td>
+<td class="gene">TMEM232</td>
 <td>Statgen/immune (GWAS interaction, Chinese Han)</td>
 <td>Epistatic interaction between PRKAG2 SNP and TMEM232-SLC25A46 SNP rs7701890 confers atopic dermatitis risk (combined P=2.22×10⁻¹⁵)</td>
 <td>PMID 25711310, DOI 10.1007/s00438-015-1014-x</td>
-<td>CONTESTED — same reasoning; further replication of the atopic/allergic (not COPD) association at this region</td>
+<td><span class="tag-warning">CONTESTED</span> — same reasoning; further replication of the atopic/allergic (not COPD) association at this region</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TMEM232</td>
+<td class="gene">TMEM232</td>
 <td>Statgen/immune (GWAS meta-analysis, European)</td>
 <td>Genome-wide-significant variant rs17513503 near TMEM232/SLC25A46 associated with grass sensitization (P=1.2×10⁻⁸) and allergic rhinitis (P=7.4×10⁻⁷)</td>
 <td>PMID 22036096, DOI 10.1016/j.jaci.2011.08.030</td>
-<td>CONTESTED — cross-ancestry-replicated (Chinese, Japanese, European) alternative atopic/allergic phenotype at this region, competing directly with any COPD-driver hypothesis for TMEM232</td>
+<td><span class="tag-warning">CONTESTED</span> — cross-ancestry-replicated (Chinese, Japanese, European) alternative atopic/allergic phenotype at this region, competing directly with any COPD-driver hypothesis for TMEM232</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINC01848</td>
+<td class="gene">LINC01848</td>
 <td>—</td>
 <td>No PubMed literature (GWAS, TWAS, MR, colocalization, or functional characterization) found under this gene symbol despite it carrying the 2nd- and 3rd-highest-PIP credible-set variants (rs1946607 PIP=0.32, rs10045731 PIP=0.04); GWAS Catalog/PheWAS web lookup could not be completed (search budget exhausted)</td>
 <td>none found</td>
-<td>WEAKENED — absence of literature is a genuine evidence gap, not evidence of absence; flagged by red-team-skeptic as needing dedicated follow-up given its disproportionate fine-mapping weight</td>
+<td><span class="tag-warning">WEAKENED</span> — absence of literature is a genuine evidence gap, not evidence of absence; flagged by red-team-skeptic as needing dedicated follow-up given its disproportionate fine-mapping weight</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
 <p>Disease queried: chronic obstructive pulmonary disease (MONDO_0005002). Full lookup notes
 in <code>evidence_tables/_status/5_109600001-109950000/opentargets.md</code>.</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -556,43 +240,43 @@ in <code>evidence_tables/_status/5_109600001-109950000/opentargets.md</code>.</p
 </thead>
 <tbody>
 <tr>
-<td>MAN2A1</td>
+<td class="gene">MAN2A1</td>
 <td>protein_coding</td>
 <td>0.4690 — but ranks only ~27th of 656 traits associated with this gene; several smoking/behavioral/psychiatric traits (schizophrenia 0.458, alcohol drinking 0.454, COVID-19 0.370, smoking initiation 0.342) score higher than COPD for this gene</td>
 <td>not resolved as a distinct field (see method note in opentargets.md)</td>
-<td>0.581 (0.453-0.752), bin 2/6 (&quot;medium&quot;/moderate constraint)</td>
+<td>0.581 (0.453-0.752), bin 2/6 ("medium"/moderate constraint)</td>
 </tr>
 <tr>
-<td>FER</td>
+<td class="gene">FER</td>
 <td>protein_coding</td>
 <td>0.6101 — highest of any gene at this locus with recorded COPD evidence</td>
 <td>not resolved as a distinct field</td>
-<td>0.562 (0.441-0.723), bin 1/6 (&quot;high&quot; constraint)</td>
+<td>0.562 (0.441-0.723), bin 1/6 ("high" constraint)</td>
 </tr>
 <tr>
-<td>TMEM232</td>
+<td class="gene">TMEM232</td>
 <td>protein_coding</td>
 <td>no data (no evidence record for COPD despite MAGMA/PoPS prioritization)</td>
 <td>no data</td>
-<td>1.058 (0.865-1.300), bin 4/6 (&quot;very low&quot;/LoF-tolerant)</td>
+<td>1.058 (0.865-1.300), bin 4/6 ("very low"/LoF-tolerant)</td>
 </tr>
 <tr>
-<td>LINC01848</td>
+<td class="gene">LINC01848</td>
 <td>lncRNA</td>
 <td>no data</td>
 <td>no data</td>
 <td>not applicable (lncRNA; gnomAD constraint metrics are computed for protein-coding genes only)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Method caveat: the Open Targets GraphQL schema dump could not be read directly this
 session (every category/type-dependency response exceeded the tool's own token ceiling
 and the orchestrator has no Bash/jq access to slice it); query shape was instead
 reverse-engineered via deliberately-invalid-argument error messages. This worked for
 constraint metrics and for the disease-level <code>evidences(ensemblIds:...)</code> endpoint, but a
 distinct molecular-QTL colocalization field was not located in the time available —
-absence of colocalization data here should be read as &quot;not obtained,&quot; not &quot;no
-colocalization exists.&quot;</p>
+absence of colocalization data here should be read as "not obtained," not "no
+colocalization exists."</p>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>FER — confidence LOW.</strong></p>
 <p>This is a close call between FER and MAN2A1, and the honest answer is that the verified
@@ -645,5 +329,7 @@ exact position to test the smoking-mediation hypothesis flagged for MAN2A1. Give
 number of open questions above, this recommendation should be treated as a starting
 point for the study team's own review, not a settled call.</p>
 
+        </div>
+    </div>
 </body>
 </html>

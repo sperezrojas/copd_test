@@ -1,380 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>3_25400001-25600000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 3:25,400,001-25,600,000 (RARB)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-325400001-25600000-rarb">Evidence table — locus 3:25,400,001-25,600,000 (RARB)</h1>
-<p><strong>Lead variant:</strong> rs1286664 (PIP=0.893, 3:25,487,789, intronic, RARB); secondary credible-set
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-325400001-25600000-rarb">Evidence table — locus 3:25,400,001-25,600,000 (RARB)</h1><div class="summary"><p><strong>Lead variant:</strong> rs1286664 (PIP=0.893, 3:25,487,789, intronic, RARB); secondary credible-set
 variant rs1529672 (PIP=0.078, 3:25,479,091, intronic, RARB). Both variants fall within RARB;
 no missense/splice-donor/splice-acceptor variant in the credible set requiring dedicated
 variant-level literature search. RARB is the sole candidate gene at this locus (nearest gene,
-FLAMES-prioritized, PoPS-prioritized; MAGMA and ABC gave no prioritization at this locus).</p>
-<p>Only citations with a VERIFIED verdict from citation-verifier are included below. See
+FLAMES-prioritized, PoPS-prioritized; MAGMA and ABC gave no prioritization at this locus).</p><p>Only citations with a VERIFIED verdict from citation-verifier are included below. See
 <code>audits/3_25400001-25600000_audit.md</code> for excluded/CLAIM_MISMATCH citations and the full
-red-team-skeptic critique.</p>
-<table>
+red-team-skeptic critique.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -387,143 +71,143 @@ red-team-skeptic critique.</p>
 </thead>
 <tbody>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Statistical genetics — GWAS (airflow obstruction)</td>
 <td>Top SNPs in ADAM19, RARB, PPAP2B, and ADAMTS19 were nominally replicated in an independent COPD case-control meta-analysis, flagging RARB as a spirometry/airflow-obstruction locus predating the current fine-mapped signal.</td>
 <td>Wilk JB et al., Am J Respir Crit Care Med 2012;186(7):622-32. PMID 22837378 / DOI 10.1164/rccm.201202-0366OC</td>
-<td>WEAKENED (gene-level; supports COPD–spirometry concordance per prior #2, but locus-level replication not RARB-specific enrichment)</td>
+<td><span class="tag-warning">WEAKENED</span> (gene-level; supports COPD–spirometry concordance per prior #2, but locus-level replication not RARB-specific enrichment)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Statistical genetics — GWAS (lung function)</td>
 <td>RARB identified as one of 16 new genome-wide-significant loci for FEV1/FEV1-FVC in ~48,201 individuals with follow-up in ~46,411 more.</td>
 <td>Soler Artigas M et al., Nat Genet 2011;43(11):1082-90. PMID 21946350 / DOI 10.1038/ng.941</td>
-<td>WEAKENED (direct, gene-named human genetic evidence supporting prior #2; independent of COPD case-control ascertainment)</td>
+<td><span class="tag-warning">WEAKENED</span> (direct, gene-named human genetic evidence supporting prior #2; independent of COPD case-control ascertainment)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Functional/developmental — mouse knockout</td>
 <td>RARB-knockout mice show premature/accelerated alveolar septation specifically during the perinatal period (~2x wild-type rate during septation only); pharmacologic RARB agonism impairs septation in newborn rats.</td>
 <td>Massaro GD et al., Physiol Genomics 2000;4(1):51-7. PMID 11074013 / DOI 10.1152/physiolgenomics.2000.4.1.51</td>
-<td>WEAKENED (single most gene-specific mechanistic anchor found, but direction of effect for a common regulatory variant in adult humans is not established from a developmental knockout phenotype)</td>
+<td><span class="tag-warning">WEAKENED</span> (single most gene-specific mechanistic anchor found, but direction of effect for a common regulatory variant in adult humans is not established from a developmental knockout phenotype)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Functional/developmental — mouse knockout (paralog context)</td>
 <td>RAR-alpha knockout mice show a distinct, non-perinatal-restricted role in alveolus formation, contextualizing RARB's perinatal-specific role relative to its paralog.</td>
 <td>Massaro GD, Massaro D, Chambon P, Am J Physiol Lung Cell Mol Physiol 2003;284(2):L431-3. PMID 12533315 / DOI 10.1152/ajplung.00245.2002</td>
-<td>WEAKENED (contextual paralog evidence only, not direct RARB evidence)</td>
+<td><span class="tag-warning">WEAKENED</span> (contextual paralog evidence only, not direct RARB evidence)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Functional/developmental — review (rodent RA-pathway)</td>
 <td>ATRA treatment increases septation in newborn rats, rescues glucocorticoid-blocked septation, and improves elastic recoil in elastase-induced-emphysema adult rats.</td>
 <td>Massaro D, Massaro GD, Novartis Found Symp 2001;234:229-36. PMID 11199098 / DOI 10.1002/0470868678.ch14</td>
-<td>WEAKENED (pathway-level RA biology, not RARB-isoform-specific)</td>
+<td><span class="tag-warning">WEAKENED</span> (pathway-level RA biology, not RARB-isoform-specific)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Functional/developmental — rodent</td>
 <td>ATRA treatment induces post-hoc alveolar septation in two independent rodent models of failed septation (dexamethasone-blocked neonatal rats; tight-skin adult mice).</td>
 <td>Massaro GD, Massaro D, Am J Physiol Lung Cell Mol Physiol 2000;278(5):L955-60. PMID 10781425 / DOI 10.1152/ajplung.2000.278.5.L955</td>
-<td>WEAKENED (pathway-level, not RARB-isoform-specific)</td>
+<td><span class="tag-warning">WEAKENED</span> (pathway-level, not RARB-isoform-specific)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Translational review — RA-pathway/COPD regeneration</td>
 <td>Reviews lung-regeneration strategies for COPD/emphysema including RA-pathway small-molecule agonists, noting rodent-model efficacy of ATRA and describing human trials of RAR-gamma agonist palovarotene.</td>
 <td>Hind M, Maden M, Br J Pharmacol 2011;163(1):106-15. PMID 21265829 / DOI 10.1111/j.1476-5381.2011.01246.x</td>
-<td>WEAKENED (narrative/translational context, not direct RARB evidence)</td>
+<td><span class="tag-warning">WEAKENED</span> (narrative/translational context, not direct RARB evidence)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Clinical/translational — RAR-gamma agonist (paralog)</td>
 <td>Palovarotene (a RAR-gamma-selective, not RAR-beta, agonist) developed for emphysema; favorable phase I tolerability/PK in emphysema patients, ongoing phase II trial.</td>
 <td>Hind M, Stinchcombe S, Curr Opin Investig Drugs 2009;10(11):1243-50. PMID 19876792</td>
-<td>WEAKENED (different RAR paralog than the locus candidate gene; contextual only)</td>
+<td><span class="tag-warning">WEAKENED</span> (different RAR paralog than the locus candidate gene; contextual only)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Human clinical — pharmacokinetic substudy</td>
 <td>In the FORTE trial (human emphysema patients), plasma ATRA levels correlated with changes in pulmonary diffusing capacity (DLCO) at 6 months.</td>
 <td>Muindi JR et al., J Clin Pharmacol 2008;48(1):96-107. PMID 18094222 / DOI 10.1177/0091270007309701</td>
-<td>WEAKENED (early human dose-response signal, not proof of RARB-mediated structural change)</td>
+<td><span class="tag-warning">WEAKENED</span> (early human dose-response signal, not proof of RARB-mediated structural change)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Human RCT — key negative translational trial</td>
 <td>FORTE trial: randomized, double-blind, placebo-controlled trial of ATRA (low/high dose) and 13-cis-retinoic acid in 148 moderate-to-severe emphysema patients. NO treatment arm showed overall improvement in pulmonary function, CT densitometry, or quality of life at 6 months, though dose-dependent DLCO/QoL/CT changes were observed in a high-dose ATRA subgroup correlating with plasma drug levels.</td>
 <td>Roth MD et al., Chest 2006;130(5):1334-45. PMID 17099008 / DOI 10.1378/chest.130.5.1334</td>
-<td>WEAKENED — central evidence tempering the rodent-based developmental prior; the &quot;restore RA signaling treats emphysema&quot; translational hypothesis failed its primary human endpoints</td>
+<td><span class="tag-warning">WEAKENED</span> — central evidence tempering the rodent-based developmental prior; the "restore RA signaling treats emphysema" translational hypothesis failed its primary human endpoints</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Functional — adult human/mouse lung organoids</td>
-<td>In adult mouse and human lung organoid cultures, ATRA unexpectedly DECREASED progenitor/organoid growth, while RA-pathway INHIBITION increased proliferation (via YAP/FGF signaling) while suppressing differentiation — inverting the simple &quot;RA promotes regeneration&quot; model in the adult (vs. developing) lung.</td>
+<td>In adult mouse and human lung organoid cultures, ATRA unexpectedly DECREASED progenitor/organoid growth, while RA-pathway INHIBITION increased proliferation (via YAP/FGF signaling) while suppressing differentiation — inverting the simple "RA promotes regeneration" model in the adult (vs. developing) lung.</td>
 <td>Ng-Blichfeldt JP et al., EBioMedicine 2018;36:461-474. PMID 30236449 / DOI 10.1016/j.ebiom.2018.09.002</td>
-<td>WEAKENED — key evidence of directional ambiguity/contradiction of the naive developmental-brake model when extrapolated to adult lung biology</td>
+<td><span class="tag-warning">WEAKENED</span> — key evidence of directional ambiguity/contradiction of the naive developmental-brake model when extrapolated to adult lung biology</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Functional — human tissue/endothelial cells (RAR-alpha-linked)</td>
 <td>RA stimulates angiogenesis in human lung microvascular endothelial cells (partly via a RAR-alpha agonist), and the RA-degrading enzyme CYP26A1 is elevated in human emphysema tissue.</td>
 <td>Ng-Blichfeldt JP et al., Thorax 2017;72(6):510-521. PMID 28087752 / DOI 10.1136/thoraxjnl-2016-208846</td>
-<td>WEAKENED (RAR-alpha-linked, not RARB-specific, but relevant human emphysema tissue biology)</td>
+<td><span class="tag-warning">WEAKENED</span> (RAR-alpha-linked, not RARB-specific, but relevant human emphysema tissue biology)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Statistical genetics — smoking-behavior GWAS context (non-finding)</td>
 <td>GSCAN-based polygenic-risk-score study of tobacco/alcohol consumption and substance use; does NOT mention RARB specifically — establishes the standard smoking-behavior GWAS reference framework against which locus overlap would need to be checked, but provides no RARB-specific evidence.</td>
 <td>Chang LH et al., Drug Alcohol Depend 2019;197:271-279. PMID 30875648 / DOI 10.1016/j.drugalcdep.2019.01.015</td>
-<td>WEAKENED (background/context only; does not resolve smoking-mediation question)</td>
+<td><span class="tag-warning">WEAKENED</span> (background/context only; does not resolve smoking-mediation question)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Epigenetic/somatic — smoking-associated methylation (lung)</td>
 <td>RARB hypermethylated in ~4% of cancer-free lung tissue samples in a smoking-relevant cohort.</td>
 <td>Salskov A et al., J Oncol 2011;2011:950140. PMID 21577262 / DOI 10.1155/2011/950140</td>
-<td>WEAKENED — somatic/epigenetic association in cancer-risk tissue, NOT a germline genetic association with smoking behavior; should not be conflated with inherited smoking-initiation genetics</td>
+<td><span class="tag-warning">WEAKENED</span> — somatic/epigenetic association in cancer-risk tissue, NOT a germline genetic association with smoking behavior; should not be conflated with inherited smoking-initiation genetics</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Epigenetic/somatic — smoking-associated methylation (lung cancer)</td>
 <td>RARB promoter methylated with increased frequency in lung cancer patient samples, studied in a smoking-related early-detection context.</td>
 <td>Ostrow KL et al., Clin Cancer Res 2010;16(13):3463-72. PMID 20592015 / DOI 10.1158/1078-0432.CCR-09-3304</td>
-<td>WEAKENED — same somatic/epigenetic caveat as above</td>
+<td><span class="tag-warning">WEAKENED</span> — same somatic/epigenetic caveat as above</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Epigenetic/somatic — smoking-associated methylation (NSCLC)</td>
 <td>RARB methylation is part of a chromosome-3p CpG island methylator phenotype associated with increased NSCLC risk in a smoking-relevant population.</td>
 <td>Liu Z et al., J Thorac Oncol 2010;5(6):790-7. PMID 20521346 / DOI 10.1097/jto.0b013e3181d862f5</td>
-<td>WEAKENED — same somatic/epigenetic caveat as above</td>
+<td><span class="tag-warning">WEAKENED</span> — same somatic/epigenetic caveat as above</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>RARB</td>
+<td class="gene">RARB</td>
 <td>Epigenetic/somatic — smoking-associated methylation (breast, non-lung)</td>
 <td>RARB promoter methylation examined in relation to lifetime active/secondhand smoke exposure in BREAST tumor tissue (not lung) — cited only as a mechanistic parallel, not lung-specific evidence.</td>
 <td>Callahan CL et al., Cancer Causes Control 2019;30(1):53-62. PMID 30617699 / DOI 10.1007/s10552-018-1102-4</td>
-<td>WEAKENED — non-lung tissue; mechanistic parallel only</td>
+<td><span class="tag-warning">WEAKENED</span> — non-lung tissue; mechanistic parallel only</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-scored-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not scored by citation-verifier or red-team-skeptic)</h2>
 <p>Source: Open Targets Platform GraphQL API, queried 2026-09-11.</p>
 <p><strong>RARB (ENSG00000077092):</strong></p>
@@ -536,10 +220,10 @@ target with any non-zero L2G prediction across all 16 credible sets/traits Open 
 has for this variant — no competing gene appears in the L2G output at this locus.
 Scores consistently 0.75–0.78 across three independent COPD GWAS (GCST90018587,
 GCST007692, GCST90399695), FEV1/FVC ratio GWAS (GCST90244094, L2G=0.778), peak
-expiratory flow (GCST007430, L2G=0.748), and a &quot;Pulmonary function (smoking
-interaction)&quot; study (GCST001784_2, L2G=0.776). Also present (same magnitude, likely
+expiratory flow (GCST007430, L2G=0.748), and a "Pulmonary function (smoking
+interaction)" study (GCST001784_2, L2G=0.776). Also present (same magnitude, likely
 pleiotropic) for heel bone mineral density and apolipoprotein A1 GWAS at the same
-variant. Interpretation: L2G here most likely reflects &quot;only one gene at this locus,&quot;
+variant. Interpretation: L2G here most likely reflects "only one gene at this locus,"
 not independent gene-vs-gene discrimination.</li>
 <li><strong>Colocalisation (COLOC_PIP_ECAVIAR) from the COPD credible set (GCST90018587):</strong>
 Strong colocalization (h4 0.97–0.9995) with multiple independent FEV1/FVC and PEF GWAS,
@@ -602,7 +286,7 @@ RARB) and is excluded from the evidence table above.</p>
 <p>No competing gene was identified at this locus by any source consulted (researcher,
 Open Targets, or red-team-skeptic, though the latter's dedicated alternative-gene search
 was not completed this session due to exhausted search budget — see audit for this
-disclosed gap), so there is no &quot;runner-up&quot; gene to name. What would most resolve the
+disclosed gap), so there is no "runner-up" gene to name. What would most resolve the
 remaining uncertainty and support upgrading to HIGH confidence: (a) direct eQTL/sQTL
 colocalization evidence (currently entirely absent) establishing which direction and in
 which tissue/cell type the credible-set variant shifts RARB expression or splicing; (b) a
@@ -611,5 +295,7 @@ confirm RARB's presence and effect direction among their reported loci; and (c) 
 check of whether this locus/variant appears in the GSCAN or equivalent smoking-behavior
 GWAS loci list, which remains genuinely unresolved by literature search to date.</p>
 
+        </div>
+    </div>
 </body>
 </html>

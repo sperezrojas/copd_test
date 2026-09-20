@@ -1,386 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>2_241500001-241850000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — locus 2:241,500,001-241,850,000 (nearest gene ATG4B)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-2241500001-241850000-nearest-gene-atg4b">Evidence table — locus 2:241,500,001-241,850,000 (nearest gene ATG4B)</h1>
-<p>Lead variant: rs62190299 (intronic in ATG4B, PIP=0.0464). Candidate genes from internal
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-2241500001-241850000-nearest-gene-atg4b">Evidence table — locus 2:241,500,001-241,850,000 (nearest gene ATG4B)</h1><div class="summary"><p>Lead variant: rs62190299 (intronic in ATG4B, PIP=0.0464). Candidate genes from internal
 pipeline: nearest gene ATG4B; MAGMA/PoPS-prioritized KIF1A; ABC-prioritized DTYMK.
 Credible-set genes also carrying meaningful PIP mass: D2HGDH, GAL3ST2, ING5. No
 missense/splice-donor/splice-acceptor variants are present in the credible set (all
 intronic/synonymous/3'UTR/up-down-stream, MODIFIER/LOW impact), so per pipeline scope no
 dedicated variant-by-variant literature search was performed beyond the lead variant and
-the synonymous variant rs11538896.</p>
-<p>All citations below carry a <strong>VERIFIED</strong> verdict from citation-verifier (existence,
+the synonymous variant rs11538896.</p><p>All citations below carry a <strong>VERIFIED</strong> verdict from citation-verifier (existence,
 non-retraction, and claim correspondence to the source paper all confirmed). The
-&quot;Skeptic verdict&quot; column reflects red-team-skeptic's judgment of the gene's <em>overall</em>
+"Skeptic verdict" column reflects red-team-skeptic's judgment of the gene's <em>overall</em>
 candidacy (HOLDS / WEAKENED / CONTESTED), not a re-litigation of whether the citation
 itself is real — a citation can be accurately characterized (VERIFIED) while still being
 weak or misapplied evidence for this locus, and the skeptic critique should be read
-alongside each row.</p>
-<table>
+alongside each row.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -393,224 +77,224 @@ alongside each row.</p>
 </thead>
 <tbody>
 <tr>
-<td>ATG4B</td>
+<td class="gene">ATG4B</td>
 <td>Functional — smoking-induced pulmonary autophagy</td>
 <td>Cigarette smoke extract induces autophagy in human pulmonary epithelial cells via Egr-1/E2F-4-mediated transcriptional induction of LC3B and Atg4B; Egr-1 knockdown inhibited Atg4B expression; Egr-1-knockout mice showed basal airspace enlargement and resistance to cigarette-smoke-induced autophagy, apoptosis, and emphysema</td>
 <td>PMID 18830406 / DOI 10.1371/journal.pone.0003316</td>
-<td>WEAKENED — mechanism is real but only Egr-1, not Atg4b, is genetically manipulated in vivo; no ATG4B genetic variant shown to modulate this pathway; OT's own L2G at the lead SNP favors BMI over COPD</td>
+<td><span class="tag-warning">WEAKENED</span> — mechanism is real but only Egr-1, not Atg4b, is genetically manipulated in vivo; no ATG4B genetic variant shown to modulate this pathway; OT's own L2G at the lead SNP favors BMI over COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATG4B</td>
+<td class="gene">ATG4B</td>
 <td>Molecular biology (general, not lung-specific)</td>
 <td>ATG4B controls the efficiency of autophagosome formation via processing/deconjugation of LC3-family proteins</td>
 <td>PMID 34562084 / DOI 10.1093/jmcb/mjab059</td>
-<td>WEAKENED (general mechanism only, no disease context)</td>
+<td><span class="tag-warning">WEAKENED</span> (general mechanism only, no disease context)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ATG4B</td>
+<td class="gene">ATG4B</td>
 <td>Molecular biology (mouse, no lung phenotype examined)</td>
 <td>Atg4b-hypomorphic mice show tissue-dependent metabolomic alterations, more accentuated in skeletal muscle/plasma; no lung phenotype examined</td>
 <td>PMID 34436422 / DOI 10.3390/metabo11080481</td>
-<td>WEAKENED (does not address lung)</td>
+<td><span class="tag-warning">WEAKENED</span> (does not address lung)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KIF1A</td>
+<td class="gene">KIF1A</td>
 <td>Functional (neuronal, no lung/immune relevance)</td>
 <td>iPSC-neuron study of KAND-causing KIF1A mutations distinguishing loss-of-function vs. hyperactive mutant effects on axonal transport and synaptogenesis</td>
 <td>PMID 42704317 / DOI 10.1083/jcb.202601034</td>
-<td>HOLDS as appropriately downweighted — KIF1A is not even physically within the locus (~675kb-1.1Mb outside the window)</td>
+<td><span class="tag-hold">HOLDS</span> as appropriately downweighted — KIF1A is not even physically within the locus (~675kb-1.1Mb outside the window)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>KIF1A</td>
+<td class="gene">KIF1A</td>
 <td>Functional (neuronal, Parkinson's-related, no lung/immune relevance)</td>
 <td>Mechanistic study of the RAB3A-MADD-KIF1A/1Bβ complex in synaptic vesicle precursor transport</td>
 <td>PMID 38512027 / DOI 10.1083/jcb.202307092</td>
-<td>HOLDS as appropriately downweighted</td>
+<td><span class="tag-hold">HOLDS</span> as appropriately downweighted</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>DTYMK</td>
+<td class="gene">DTYMK</td>
 <td>Functional (lung cancer, not COPD)</td>
 <td>DTYMK upregulated across multiple cancers including lung cancer, associated with poor prognosis; expression correlates with immune-cell infiltration (macrophages, dendritic cells, neutrophils, B/T cells) per TIMER database analysis cited in the review</td>
 <td>PMID 37358701 / DOI 10.1007/s12032-023-02086-7</td>
-<td>HOLDS — essentially ruled out for COPD; cancer-biology only</td>
+<td><span class="tag-hold">HOLDS</span> — essentially ruled out for COPD; cancer-biology only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>DTYMK</td>
+<td class="gene">DTYMK</td>
 <td>Functional (lung cancer cell biology, not COPD)</td>
 <td>Dtymk/DTYMK identified as a synthetic-lethal target in LKB1-mutant KRAS-driven lung cancer via nucleotide-metabolism deficiency</td>
 <td>PMID 23715154 / DOI 10.1158/2159-8290.CD-13-0015</td>
-<td>HOLDS — essentially ruled out for COPD</td>
+<td><span class="tag-hold">HOLDS</span> — essentially ruled out for COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>D2HGDH</td>
+<td class="gene">D2HGDH</td>
 <td>Functional (enzymology, no disease relevance)</td>
 <td>Biosensor/biochemistry study using recombinant D2HGDH enzyme for D-2-hydroxyglutarate detection</td>
 <td>PMID 35200327 / DOI 10.3390/bios12020066</td>
-<td>CONTESTED (gene overall) — no COPD relevance</td>
+<td><span class="tag-warning">CONTESTED</span> (gene overall) — no COPD relevance</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>D2HGDH</td>
+<td class="gene">D2HGDH</td>
 <td>Clinical genetics (negative finding)</td>
 <td>Case report sequencing D2HGDH (with L2HGDH and SLC25A1) in a 2-hydroxyglutaric-aciduria family found NO mutation in D2HGDH; causal mutation was in paralogous gene L2HGDH</td>
 <td>PMID 26829733 / DOI 10.3760/cma.j.issn.1003-9406.2016.01.012</td>
-<td>CONTESTED (gene overall) — not supportive of any COPD mechanism</td>
+<td><span class="tag-warning">CONTESTED</span> (gene overall) — not supportive of any COPD mechanism</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>D2HGDH</td>
+<td class="gene">D2HGDH</td>
 <td>Statistical-genetics precedent (asthma-COPD overlap; does NOT examine D2HGDH itself)</td>
 <td>Childhood asthma is strongly associated with adult COPD risk (OR 3.42) in smokers; established asthma GWAS loci (IL1RL1, IL13, GSDMB region, C11orf30-LRRC32 — none of which is D2HGDH) associate with childhood asthma in a COPD-enriched cohort (COPDGene)</td>
 <td>PMID 30373671 / DOI 10.1186/s12931-018-0890-0</td>
-<td>CONTESTED — verified accurate, but red-team-skeptic finds this citation used past its evidentiary scope: it supports the general asthma-COPD-overlap concept, not D2HGDH specifically, and should not be read as strengthening D2HGDH's individual case</td>
+<td><span class="tag-warning">CONTESTED</span> — verified accurate, but red-team-skeptic finds this citation used past its evidentiary scope: it supports the general asthma-COPD-overlap concept, not D2HGDH specifically, and should not be read as strengthening D2HGDH's individual case</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GAL3ST2</td>
+<td class="gene">GAL3ST2</td>
 <td>Functional — airway epithelial antiviral mechanism</td>
 <td>GAL3ST2 overexpression (CRISPR activation) sulfates cell-surface glycans, reduces sialic-acid availability, and broadly restricts infection by influenza viruses, respiroviruses, enteroviruses, and coronaviruses; effect confirmed in primary differentiated human airway epithelial cells via AAV delivery</td>
 <td>PMID 41774787 / DOI 10.1073/pnas.2503728123</td>
-<td>WEAKENED — mechanistically elegant and airway-specific, but never tested in a COPD cohort/tissue/model; direction of effect for the COPD-associated allele is unknown</td>
+<td><span class="tag-warning">WEAKENED</span> — mechanistically elegant and airway-specific, but never tested in a COPD cohort/tissue/model; direction of effect for the COPD-associated allele is unknown</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GAL3ST2</td>
+<td class="gene">GAL3ST2</td>
 <td>Molecular biology (general glycobiology, not disease-specific)</td>
 <td>Characterizes the 3-O-sulfated-galactose epitope generated by GAL3ST-2/GAL3ST-3 across human tissues using a novel antibody tool</td>
 <td>PMID 34083726 / DOI 10.1038/s42003-021-02199-7</td>
-<td>WEAKENED (general context only)</td>
+<td><span class="tag-warning">WEAKENED</span> (general context only)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GAL3ST2</td>
+<td class="gene">GAL3ST2</td>
 <td>Functional (other tissue — ovarian, not lung)</td>
 <td>Gal3ST2 sulfates mucin-type O-glycans and is decreased in malignant vs. benign ovarian tissue</td>
 <td>PMID 34555499 / DOI 10.1016/j.mcpro.2021.100150</td>
-<td>WEAKENED (tangential, non-lung tissue)</td>
+<td><span class="tag-warning">WEAKENED</span> (tangential, non-lung tissue)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GAL3ST2</td>
+<td class="gene">GAL3ST2</td>
 <td>Minor/tangential mention (marker-gene use only)</td>
 <td>GAL3ST2 used only as one of several qRT-PCR marker genes in an intestinal goblet-cell (LS174T) mucin-secretion assay; not substantively about GAL3ST2 biology</td>
 <td>PMID 36613400</td>
-<td>WEAKENED (minimal evidentiary content)</td>
+<td><span class="tag-warning">WEAKENED</span> (minimal evidentiary content)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>GAL3ST2</td>
+<td class="gene">GAL3ST2</td>
 <td>Minor/tangential mention (marker-gene use only)</td>
 <td>GAL3ST2 detected via qRT-PCR among mucus-related genes in an LS174T goblet-cell/fibroblast co-culture study</td>
 <td>PMID 30977971</td>
-<td>WEAKENED (minimal evidentiary content)</td>
+<td><span class="tag-warning">WEAKENED</span> (minimal evidentiary content)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ING5</td>
+<td class="gene">ING5</td>
 <td>Functional (lung cancer cell lines, not COPD)</td>
 <td>ING5 broadly regulates the lysine acetylome and promotes p300 autoacetylation/HAT activity in lung cancer cell lines</td>
 <td>PMID 29416718 / DOI 10.18632/oncotarget.22176</td>
-<td>HOLDS — essentially ruled out for COPD; cancer cell biology only</td>
+<td><span class="tag-hold">HOLDS</span> — essentially ruled out for COPD; cancer cell biology only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ING5</td>
+<td class="gene">ING5</td>
 <td>Functional (mostly about paralog ING2, not ING5)</td>
 <td>Review primarily concerning ING2 in the mSin3A/HDAC complex in NSCLC; ING5 mentioned only as a related family member</td>
 <td>PMID 31640185 / DOI 10.3390/cancers11101601</td>
-<td>HOLDS, but skeptic flags this citation as weaker than presented — it is substantively about paralog ING2, not ING5</td>
+<td><span class="tag-hold">HOLDS</span>, but skeptic flags this citation as weaker than presented — it is substantively about paralog ING2, not ING5</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDCD1 (edge-of-locus gene, ~100bp overlap only; no credible-set or prioritization-method support)</td>
+<td class="gene">PDCD1 (edge-of-locus gene, ~100bp overlap only; no credible-set or prioritization-method support)</td>
 <td>Immunology — general COPD CD8+ T-cell biology, not locus-specific</td>
 <td>COPD lung CD8+ T cells show higher PD-1 expression than controls (16.2% vs. 4.4%) and fail to upregulate CD107a upon ex vivo influenza infection, with decreased macrophage PD-L1 and increased IFN-γ</td>
 <td>PMID 26517304 / DOI 10.1164/rccm.201504-0782OC</td>
-<td>HOLDS as general context only — skeptic: zero locus-specific evidentiary weight given marginal/arbitrary physical overlap and no credible-set representation</td>
+<td><span class="tag-hold">HOLDS</span> as general context only — skeptic: zero locus-specific evidentiary weight given marginal/arbitrary physical overlap and no credible-set representation</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDCD1</td>
+<td class="gene">PDCD1</td>
 <td>Immunology (lung-cancer/COPD comorbidity model, not locus-specific)</td>
-<td>States COPD &quot;is associated with neutrophilic lung inflammation and CD8 T cell exhaustion&quot;; NTHi-induced COPD-like inflammation promotes PD-1 expression on CD8 lymphocytes in a Kras-driven lung cancer mouse model</td>
+<td>States COPD "is associated with neutrophilic lung inflammation and CD8 T cell exhaustion"; NTHi-induced COPD-like inflammation promotes PD-1 expression on CD8 lymphocytes in a Kras-driven lung cancer mouse model</td>
 <td>PMID 31316109 / DOI 10.1038/s41598-019-46759-8</td>
-<td>HOLDS as general context only</td>
+<td><span class="tag-hold">HOLDS</span> as general context only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDCD1</td>
+<td class="gene">PDCD1</td>
 <td>Immunology (lung-cancer/COPD comorbidity model, not locus-specific)</td>
 <td>LPS-mediated chronic inflammation (modeling COPD-associated P. aeruginosa exposure) promotes T-cell exhaustion and PD-1/PD-L1 upregulation in a tobacco-carcinogen lung cancer model</td>
 <td>PMID 33122306 / DOI 10.1158/0008-5472.CAN-20-1994</td>
-<td>HOLDS as general context only</td>
+<td><span class="tag-hold">HOLDS</span> as general context only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PDCD1</td>
+<td class="gene">PDCD1</td>
 <td>Immunology (lung-cancer-with-COPD model, herbal intervention, tangential)</td>
 <td>Mouse lung-cancer-with-COPD model examining PD-1/TIM-3 T-cell exhaustion in the context of an Astragalus membranaceus herbal intervention</td>
 <td>PMID 42417894 / DOI 10.1007/s12032-026-03334-2</td>
-<td>HOLDS as general/tangential context only</td>
+<td><span class="tag-hold">HOLDS</span> as general/tangential context only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>NEU4 (physically within locus, not flagged by any prioritization method)</td>
+<td class="gene">NEU4 (physically within locus, not flagged by any prioritization method)</td>
 <td>Functional (negative finding)</td>
-<td>Lung sialidase expression study in a bleomycin pulmonary-fibrosis mouse model found NEU1/NEU2/NEU3 dynamically regulated during lung inflammation/fibrosis, but explicitly reported &quot;little expression of NEU4 in murine lung tissue&quot;</td>
+<td>Lung sialidase expression study in a bleomycin pulmonary-fibrosis mouse model found NEU1/NEU2/NEU3 dynamically regulated during lung inflammation/fibrosis, but explicitly reported "little expression of NEU4 in murine lung tissue"</td>
 <td>PMID 36382835 / DOI 10.1080/01902148.2022.2144548</td>
-<td>HOLDS — evidence against, not for, a lung-relevant role for NEU4</td>
+<td><span class="tag-hold">HOLDS</span> — evidence against, not for, a lung-relevant role for NEU4</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>STK25 (marginal overlap with locus lower boundary, not flagged by any prioritization method)</td>
+<td class="gene">STK25 (marginal overlap with locus lower boundary, not flagged by any prioritization method)</td>
 <td>Functional (hepatic/metabolic, no lung/immune phenotype)</td>
 <td>STK25/MST3 inactivation protects against ectopic fat accumulation/lipotoxicity in liver, kidney, and skeletal muscle in obese mice</td>
 <td>PMID 40983918 / DOI 10.1186/s12916-025-04359-6</td>
-<td>HOLDS — essentially ruled out for COPD</td>
+<td><span class="tag-hold">HOLDS</span> — essentially ruled out for COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>STK25</td>
+<td class="gene">STK25</td>
 <td>Minor/tangential (non-human, non-disease)</td>
 <td>STK25 appeared incidentally in a chicken cold-adaptation runs-of-homozygosity study</td>
 <td>PMID 35453746</td>
-<td>HOLDS (minimal evidentiary content, non-human)</td>
+<td><span class="tag-hold">HOLDS</span> (minimal evidentiary content, non-human)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BOK (physically within locus, not flagged by any prioritization method)</td>
+<td class="gene">BOK (physically within locus, not flagged by any prioritization method)</td>
 <td>Functional (lung cancer cell biology, not COPD)</td>
 <td>BOK is downregulated in primary human lung cancer samples (correlating with worse survival) and regulates DNA-damage response/uridine metabolism in NSCLC cell lines</td>
 <td>PMID 41611842 / DOI 10.1038/s41418-026-01666-0</td>
-<td>HOLDS — essentially ruled out for COPD</td>
+<td><span class="tag-hold">HOLDS</span> — essentially ruled out for COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BOK</td>
+<td class="gene">BOK</td>
 <td>Functional (lung adenocarcinoma cell biology, not COPD)</td>
 <td>BCL-B promotes lung cancer invasiveness by direct inhibition of BOK</td>
 <td>PMID 39996719 / DOI 10.3390/cells14040246</td>
-<td>HOLDS — essentially ruled out for COPD</td>
+<td><span class="tag-hold">HOLDS</span> — essentially ruled out for COPD</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Note: THAP4 (physically within the locus, between BOK and ATG4B) has no dedicated
 functional literature indexed in PubMed (a literature search returned zero results) and
 is not flagged by any prioritization method; there is no citation to report for this
 gene.</p>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not reviewed by citation-verifier or red-team-skeptic)</h2>
 <p>Source: Open Targets Platform GraphQL API (queried directly by the orchestrator via MCP
-tools). Disease resolved to MONDO_0005002 (&quot;chronic obstructive pulmonary disease&quot;).
+tools). Disease resolved to MONDO_0005002 ("chronic obstructive pulmonary disease").
 Full detail is preserved in <code>evidence_tables/_status/2_241500001-241850000/opentargets.md</code>.</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -622,52 +306,52 @@ Full detail is preserved in <code>evidence_tables/_status/2_241500001-241850000/
 </thead>
 <tbody>
 <tr>
-<td>ATG4B</td>
+<td class="gene">ATG4B</td>
 <td>0.0114</td>
 <td>No (literature-only)</td>
 <td>0.624 (0.464-0.851) — some constraint</td>
 <td>Yes — BMI GWAS at the lead SNP (L2G=0.682)</td>
 </tr>
 <tr>
-<td>KIF1A</td>
+<td class="gene">KIF1A</td>
 <td>0.00296</td>
 <td>No (literature-only)</td>
 <td>0.236 (0.184-0.304) — strongly constrained</td>
 <td>Never top at this locus for any trait; not physically within the locus</td>
 </tr>
 <tr>
-<td>DTYMK</td>
+<td class="gene">DTYMK</td>
 <td>0 (no data)</td>
 <td>No</td>
 <td>0.967 (0.679-1.404) — not constrained</td>
 <td>Never top; consistently 2nd/3rd behind other genes</td>
 </tr>
 <tr>
-<td>D2HGDH</td>
+<td class="gene">D2HGDH</td>
 <td>0.314 (highest of all 6)</td>
 <td>Yes (0.517, gwas_credible_sets)</td>
 <td>0.667 (0.496-0.909) — some constraint</td>
 <td>Yes — dominant top gene (0.63-0.89) across ~50 asthma/allergic/eosinophil-trait credible sets</td>
 </tr>
 <tr>
-<td>GAL3ST2</td>
+<td class="gene">GAL3ST2</td>
 <td>0.0257</td>
 <td>Yes (0.042, gwas_credible_sets)</td>
 <td>1.309 (0.879-1.849) — not constrained, LOF-tolerant</td>
 <td>Secondary to D2HGDH in most credible sets; top in 1 atopic-dermatitis credible set (0.481)</td>
 </tr>
 <tr>
-<td>ING5</td>
+<td class="gene">ING5</td>
 <td>0 (no data)</td>
 <td>No</td>
 <td>0.412 (0.267-0.654) — constrained</td>
 <td>Yes — hemoglobin (0.706) and pulse pressure (0.366) GWAS credible sets (hematologic/cardiovascular traits)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Important caveat carried over from the structured lookup: Open Targets does not appear to
 index a COPD-specific GWAS credible set/L2G result at the exact variant positions queried
-in this locus. The COPD-specific &quot;genetic_association&quot; scores shown for D2HGDH and
+in this locus. The COPD-specific "genetic_association" scores shown for D2HGDH and
 GAL3ST2 reflect gwas_credible_sets-datasource evidence present somewhere in OT's COPD
 data that was not localized to a specific variant during this lookup — the L2G
 predictions actually inspected at these variants were uniformly for other traits (BMI,
@@ -713,7 +397,7 @@ any COPD-specific genetic or directional evidence.</p>
 <p>Because ATG4B, D2HGDH, GAL3ST2, and (to a lesser extent) ING5 all share meaningful
 credible-set PIP mass in overlapping LD at this locus, and none has gene-specific
 COPD colocalization/fine-mapping evidence that would break the tie, this pick should be
-read as &quot;best available single nomination under real ambiguity&quot; rather than a confident
+read as "best available single nomination under real ambiguity" rather than a confident
 call. What would resolve the tie: (1) a COPD- or FEV1/FEV1-FVC-specific
 colocalization/fine-mapping analysis (not just aggregate L2G/association scores) at this
 exact locus; (2) eQTL/sQTL data in COPD-relevant tissue (airway epithelium, lung
@@ -736,5 +420,7 @@ locus-specific evidentiary weight (no credible-set representation, no prioritiza
 method support, arbitrary physical overlap) and should not be weighed in this locus's
 gene call.</p>
 
+        </div>
+    </div>
 </body>
 </html>

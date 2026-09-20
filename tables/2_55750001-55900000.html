@@ -1,383 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>2_55750001-55900000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 2:55,750,001-55,900,000 (nearest/FLAMES gene: EFEMP1)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-255750001-55900000-nearestflames-gene-efemp1">Evidence table — Locus 2:55,750,001-55,900,000 (nearest/FLAMES gene: EFEMP1)</h1>
-<p><strong>Lead variant:</strong> rs75550771 (2:55,839,380, GRCh38, PIP=0.99997, intergenic/MODIFIER
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-255750001-55900000-nearestflames-gene-efemp1">Evidence table — Locus 2:55,750,001-55,900,000 (nearest/FLAMES gene: EFEMP1)</h1><div class="summary"><p><strong>Lead variant:</strong> rs75550771 (2:55,839,380, GRCh38, PIP=0.99997, intergenic/MODIFIER
 consequence). <strong>Candidate genes evaluated:</strong> EFEMP1 (nearest gene, FLAMES-prioritized, per
 locus input file); PNPT1 (Open Targets L2G runner-up at the same fine-mapped credible
 sets — not in the original locus candidate list, and lies ~117kb from the lead variant,
 entirely outside the stated locus window per Ensembl coordinates; see Prioritized-gene
-section and audit appendix for scope discussion).</p>
-<p>All rows below carry citation-verifier verdict VERIFIED (confirmed to exist, not
+section and audit appendix for scope discussion).</p><p>All rows below carry citation-verifier verdict VERIFIED (confirmed to exist, not
 retracted, claim matches the source). Red-team-skeptic overall gene-level verdicts:
 <strong>EFEMP1 = WEAKENED</strong>, <strong>PNPT1 = HOLDS</strong> (for the narrow, already-modest claim made about
 it). See <code>audits/2_55750001-55900000_audit.md</code> for full reasoning, caveats, and the
-skeptic's search-budget disclosure.</p>
-<table>
+skeptic's search-budget disclosure.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -390,167 +74,167 @@ skeptic's search-budget disclosure.</p>
 </thead>
 <tbody>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Statistical genetics (GWAS, FVC)</td>
 <td>GWAS meta-analysis (52,253 + 32,917 follow-up, European ancestry) identified EFEMP1 among six new genome-wide-significant loci for FVC (forced vital capacity, a lung-volume trait); EFEMP1 transcript detected in human lung tissue.</td>
 <td>Loth et al. 2014, Nat Genet. PMID 24929828; DOI 10.1038/ng.3011</td>
-<td>WEAKENED — FVC is a volume trait, not the obstruction-specific FEV1/FEV1FVC; see critique pt.1</td>
+<td><span class="tag-warning">WEAKENED</span> — FVC is a volume trait, not the obstruction-specific FEV1/FEV1FVC; see critique pt.1</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Statistical genetics (GWAS, CT-emphysema, smoker-stratified)</td>
 <td>SCAPIS GWAS of CT-emphysema (25,639 individuals, 51% never-smokers): EFEMP1/MIR217HG/PNPT1 locus associated with emphysema specifically in smokers, null in never-smokers; this locus was a replication of a known lung-function signal, not a novel finding in this paper.</td>
 <td>Nyberg et al. 2026, Respir Res. PMID 42634071; DOI 10.1186/s12931-026-03853-6</td>
-<td>WEAKENED — smoke-conditional signal, mechanistically suggestive but not established; see critique pt.2</td>
+<td><span class="tag-warning">WEAKENED</span> — smoke-conditional signal, mechanistically suggestive but not established; see critique pt.2</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Statistical genetics (multivariate GWAS-SEM, composite phenotype)</td>
-<td>Multivariate genomic-SEM GWAS combining 4 pulmonary traits, lifetime smoking index, PM2.5, and arterial oxygen tension (&quot;mvLung&quot;) prioritized EFEMP1 among 2,156 loci; pathway enrichment for ECM/cell-adhesion/epithelial-barrier annotations. Authors caution the composite phenotype (which includes a smoking-index input) does not represent direct genetic effects on pulmonary function alone.</td>
+<td>Multivariate genomic-SEM GWAS combining 4 pulmonary traits, lifetime smoking index, PM2.5, and arterial oxygen tension ("mvLung") prioritized EFEMP1 among 2,156 loci; pathway enrichment for ECM/cell-adhesion/epithelial-barrier annotations. Authors caution the composite phenotype (which includes a smoking-index input) does not represent direct genetic effects on pulmonary function alone.</td>
 <td>Chen et al. 2026, Sci Rep. PMID 42477076; DOI 10.1038/s41598-026-61988-4</td>
-<td>WEAKENED — composite phenotype confounds interpretation per authors' own caveat</td>
+<td><span class="tag-warning">WEAKENED</span> — composite phenotype confounds interpretation per authors' own caveat</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Statistical genetics (GWAS, hernia)</td>
 <td>GWAS of 62,637 UK Biobank participants identified EFEMP1 as one of five loci shared across multiple hernia phenotypes, clustering functionally in connective-tissue/elastic-fibre pathways; corroborates Open Targets colocalization of this locus's signal with hernia traits.</td>
 <td>Ahmed et al. 2022, PLoS ONE. PMID 36584111; DOI 10.1371/journal.pone.0272261</td>
-<td>HOLDS as stated (non-pulmonary corroborating trait)</td>
+<td><span class="tag-hold">HOLDS</span> as stated (non-pulmonary corroborating trait)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Structural biology (review)</td>
 <td>Fibulin-3/EFEMP1 is a secreted ECM glycoprotein highly expressed in elastic-fibre-rich tissues; interacts with TIMP-3 (a protease-antiprotease-balance regulator); GWAS associations span developmental/anthropometric and connective-tissue phenotypes.</td>
 <td>Livingstone et al. 2020, Biomolecules. PMID 32911658; DOI 10.3390/biom10091294</td>
-<td>HOLDS as stated</td>
+<td><span class="tag-hold">HOLDS</span> as stated</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Structural biology (mouse KO)</td>
 <td>Efemp1-knockout mice show early-onset aging phenotypes, multiple large hernias, and marked reduction of elastic fibers in fascia connective tissue.</td>
 <td>McLaughlin et al. 2007, Hum Mol Genet. PMID 17872905; DOI 10.1093/hmg/ddm264</td>
-<td>HOLDS as stated (non-pulmonary tissue)</td>
+<td><span class="tag-hold">HOLDS</span> as stated (non-pulmonary tissue)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Structural biology (mouse KO)</td>
 <td>Fibulin-3-deficient mice develop pelvic organ prolapse with progressive elastic-fiber disruption and significantly increased vaginal MMP-2/9 activity — protease-antiprotease imbalance in a non-lung connective tissue.</td>
 <td>Rahn et al. 2009, Am J Pathol. PMID 19095964; DOI 10.2353/ajpath.2009.080212</td>
-<td>HOLDS as stated (non-pulmonary tissue, mechanistic analogy only)</td>
+<td><span class="tag-hold">HOLDS</span> as stated (non-pulmonary tissue, mechanistic analogy only)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Human Mendelian disease</td>
 <td>Biallelic EFEMP1 loss-of-function variants identified as a novel cause of cutis laxa with multiple herniations.</td>
 <td>Verlee et al. 2021, Genes. PMID 33807164; DOI 10.3390/genes12040510</td>
-<td>HOLDS as stated</td>
+<td><span class="tag-hold">HOLDS</span> as stated</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Human Mendelian disease</td>
 <td>Biallelic EFEMP1 LoF variants in one human patient produced recurrent abdominal/thoracic herniae, myopia, joint hypermobility, scoliosis, thin skin; fibroblasts showed markedly reduced EFEMP1 transcript.</td>
 <td>Driver et al. 2019, Eur J Hum Genet. PMID 31792352; DOI 10.1038/s41431-019-0546-7</td>
-<td>HOLDS as stated</td>
+<td><span class="tag-hold">HOLDS</span> as stated</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Human pathology (direct lung evidence)</td>
 <td>Three new cases with biallelic/monoallelic EFEMP1 variants; autopsy of one adult (heterozygous EFEMP1 splice variant) showed extensive diaphragmatic herniation, bowel diverticula, AND pulmonary emphysema — the single direct human pathological link between EFEMP1 dysfunction and emphysema in this evidence set.</td>
 <td>Mol et al. 2024, Eur J Hum Genet. PMID 39367272; DOI 10.1038/s41431-024-01692-x</td>
-<td>WEAKENED — n=1, emphysema co-occurs with systemic connective-tissue disease in this patient rather than being isolable; see critique pt.4</td>
+<td><span class="tag-warning">WEAKENED</span> — n=1, emphysema co-occurs with systemic connective-tissue disease in this patient rather than being isolable; see critique pt.4</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Structural biology (non-lung analogy)</td>
 <td>EFEMP1 required for normal elastic-fiber organization and tissue mechanics in extrahepatic bile duct; Efemp1-heterozygous mice show ~50% reduction in elastin fiber organization and altered tissue-stretch mechanics.</td>
 <td>Gupta et al. 2024, JHEP Rep. PMID 39717503; DOI 10.1016/j.jhepr.2024.101215</td>
-<td>HOLDS as stated (non-lung analogy only)</td>
+<td><span class="tag-hold">HOLDS</span> as stated (non-lung analogy only)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Tissue expression</td>
-<td>All five fibulins, including fibulin-3 (EFEMP1), are expressed in &quot;various regions of the lungs.&quot;</td>
+<td>All five fibulins, including fibulin-3 (EFEMP1), are expressed in "various regions of the lungs."</td>
 <td>Kobayashi et al. 2007, J Biol Chem. PMID 17324935; DOI 10.1074/jbc.M611029200</td>
-<td>HOLDS as stated</td>
+<td><span class="tag-hold">HOLDS</span> as stated</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Structural biology (protease substrate)</td>
 <td>Fibulin-3 is a substrate for multiple matrix metalloproteinases (MMP-1,-2,-3,-7,-9,-12), with MMP-7 and MMP-12 the most potent; MMP-12 (macrophage metalloelastase) is the classic mediator of cigarette-smoke-induced emphysema.</td>
 <td>Djokic et al. 2013, J Biol Chem. PMID 23782690; DOI 10.1074/jbc.M112.439158</td>
-<td>HOLDS as stated — mechanistically plausible link, not demonstrated in lung tissue; see critique pt.2</td>
+<td><span class="tag-hold">HOLDS</span> as stated — mechanistically plausible link, not demonstrated in lung tissue; see critique pt.2</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Structural biology (direction-of-effect caveat)</td>
-<td>Efemp1-knockout mice are PROTECTED from cigarette-smoke- and high-fat-diet-induced sub-retinal-pigment-epithelium deposit formation — in this tissue, loss of Efemp1 was protective against a smoke-induced pathology, cutting against a simple &quot;less EFEMP1 -&gt; more smoke damage&quot; narrative (different tissue/disease).</td>
+<td>Efemp1-knockout mice are PROTECTED from cigarette-smoke- and high-fat-diet-induced sub-retinal-pigment-epithelium deposit formation — in this tissue, loss of Efemp1 was protective against a smoke-induced pathology, cutting against a simple "less EFEMP1 -&gt; more smoke damage" narrative (different tissue/disease).</td>
 <td>Stanton et al. 2017, Invest Ophthalmol Vis Sci. PMID 28264101; DOI 10.1167/iovs.16-20955</td>
-<td>WEAKENED / genuine tension retained in audit trail — see critique pt.3</td>
+<td><span class="tag-warning">WEAKENED</span> / genuine tension retained in audit trail — see critique pt.3</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Immune/inflammatory (contested, tangential)</td>
 <td>Single case report: EFEMP1-amyloid deposits in gut co-localizing with T-cell-predominant lymphocytic vasculitis; authors speculate an immune response against EFEMP1 deposits as foreign material. Non-pulmonary, single case.</td>
 <td>Ichimata et al. 2024, Pathol Int. PMID 38240415; DOI 10.1111/pin.13405</td>
-<td>CONTESTED by researcher's own judgment — nonspecific, non-pulmonary, not evidence of a lung immune mechanism</td>
+<td><span class="tag-warning">CONTESTED</span> by researcher's own judgment — nonspecific, non-pulmonary, not evidence of a lung immune mechanism</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Tangential (smoking-trait correlate)</td>
-<td>EFEMP1 one of 16 loci for deep-learning-derived &quot;abdominal age,&quot; itself correlated with smoking among many environmental factors — non-specific, not meaningful smoking-mechanism evidence.</td>
+<td>EFEMP1 one of 16 loci for deep-learning-derived "abdominal age," itself correlated with smoking among many environmental factors — non-specific, not meaningful smoking-mechanism evidence.</td>
 <td>Le Goallec et al. 2022, Nat Commun. PMID 35418184; DOI 10.1038/s41467-022-29525-9</td>
-<td>HOLDS as stated (weak/tangential)</td>
+<td><span class="tag-hold">HOLDS</span> as stated (weak/tangential)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>EFEMP1</td>
+<td class="gene">EFEMP1</td>
 <td>Oncology (smoking-independence note)</td>
 <td>EFEMP1 (FBLN-3) promoter hypermethylation associated with NSCLC progression/staging, explicitly NOT associated with smoking status in that study.</td>
 <td>Wang et al. 2009, Lung Cancer. PMID 19913326; DOI 10.1016/j.lungcan.2009.10.009</td>
-<td>HOLDS as stated (tangential, oncology)</td>
+<td><span class="tag-hold">HOLDS</span> as stated (tangential, oncology)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PNPT1</td>
+<td class="gene">PNPT1</td>
 <td>Human Mendelian disease (non-pulmonary)</td>
 <td>Homozygous PNPT1 variant causes a severe perinatal Leigh-syndrome-like combined oxidative-phosphorylation-deficiency phenotype (brain atrophy, hypotonia, sensorineural deafness, hypertrophic cardiomyopathy); no reported pulmonary/airway phenotype.</td>
 <td>Reigada et al. 2023, Endocr Metab Immune Disord Drug Targets. PMID 37861028; DOI 10.2174/0118715303274239231005105248</td>
-<td>HOLDS as stated</td>
+<td><span class="tag-hold">HOLDS</span> as stated</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PNPT1</td>
+<td class="gene">PNPT1</td>
 <td>Immune/innate mechanism (speculative, non-pulmonary)</td>
 <td>PNPT1 (PNPase) restricts mitochondrial dsRNA accumulation/cytoplasmic escape; hypomorphic PNPT1 patients show mt-dsRNA accumulation and interferon-stimulated-gene upregulation via MDA5-driven type I interferon signaling. Genuine mechanism, but studied only in rare monogenic disease, not COPD/lung.</td>
 <td>Dhir et al. 2018, Nature. PMID 30046113; DOI 10.1038/s41586-018-0363-0</td>
-<td>HOLDS as stated — explicitly flagged hypothesis-generating only</td>
+<td><span class="tag-hold">HOLDS</span> as stated — explicitly flagged hypothesis-generating only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>PNPT1</td>
+<td class="gene">PNPT1</td>
 <td>Immune/innate mechanism (speculative, cancer cell line)</td>
 <td>In triple-negative breast cancer cells, PNPT1 knockdown triggers mitochondrial dsRNA release and MDA5-dependent type I interferon induction, reinforcing the PNPT1-mtdsRNA-MDA5-IFN-I axis in a non-pulmonary, non-COPD context.</td>
 <td>Montano et al. 2025, FASEB J. PMID 40353728; DOI 10.1096/fj.202500628R</td>
-<td>HOLDS as stated — explicitly flagged hypothesis-generating only</td>
+<td><span class="tag-hold">HOLDS</span> as stated — explicitly flagged hypothesis-generating only</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation">Open Targets summary (structured database lookup — NOT a verified literature citation)</h2>
 <p>This section is a structured database lookup via the Open Targets Platform GraphQL API. It
 did not go through citation-verifier or red-team-skeptic and must not be treated as
@@ -636,5 +320,7 @@ finding (not just database L2G), (2) fine-mapping/eQTL work in lung tissue at rs
 that directly distinguishes EFEMP1 from neighboring genes, and (3) an independent
 contradiction-search pass (not completed this run due to search-budget exhaustion).</p>
 
+        </div>
+    </div>
 </body>
 </html>

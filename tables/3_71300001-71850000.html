@@ -1,378 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>3_71300001-71850000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 3:71,300,001-71,850,000 (nearest/FLAMES/MAGMA/PoPS gene: FOXP1)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-371300001-71850000-nearestflamesmagmapops-gene-foxp1">Evidence table — Locus 3:71,300,001-71,850,000 (nearest/FLAMES/MAGMA/PoPS gene: FOXP1)</h1>
-<p>Lead variant: rs6796042 (3:71,480,969, GRCh38, intron_variant, PIP=0.360). Entire 21-variant
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-371300001-71850000-nearestflamesmagmapops-gene-foxp1">Evidence table — Locus 3:71,300,001-71,850,000 (nearest/FLAMES/MAGMA/PoPS gene: FOXP1)</h1><div class="summary"><p>Lead variant: rs6796042 (3:71,480,969, GRCh38, intron_variant, PIP=0.360). Entire 21-variant
 credible set is intronic to FOXP1 (all MODIFIER impact); no missense/splice variants and no
-positional competitor gene at this locus.</p>
-<p>Only citations with a VERIFIED (or VERIFIED-with-caveat, e.g. preprint/partial) verdict from
+positional competitor gene at this locus.</p><p>Only citations with a VERIFIED (or VERIFIED-with-caveat, e.g. preprint/partial) verdict from
 citation-verifier are included below. The one CLAIM_MISMATCH citation is excluded from the
-table and documented in the audit appendix (<code>audits/3_71300001-71850000_audit.md</code>).</p>
-<table>
+table and documented in the audit appendix (<code>audits/3_71300001-71850000_audit.md</code>).</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -385,39 +69,39 @@ table and documented in the audit appendix (<code>audits/3_71300001-71850000_aud
 </thead>
 <tbody>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Statistical genetics (GWAS)</td>
 <td>SpiroMeta/UK Biobank lung-function GWAS (~400,102 individuals) identifies 279 signals for FEV1/FEV1-FVC/FVC/PEF; FOXP1 explicitly named among 107 putative causal genes; combined genetic risk score predicts COPD across ancestries and generalizes across smokers/never-smokers.</td>
 <td>Shrine et al. 2019, Nat Genet. PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
-<td>HOLDS (gene-level lung-function relevance) but WEAKENED as direct evidence for this specific credible-set signal — no LD/conditional check vs. rs6796042 performed</td>
+<td><span class="tag-warning">WEAKENED</span>HOLDS (gene-level lung-function relevance) but  as direct evidence for this specific credible-set signal — no LD/conditional check vs. rs6796042 performed</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Statistical genetics (GWAS + functional)</td>
 <td>&gt;100 variants across the FOXP1 gene body associated with lung function in ~400,000-person GWAS data; sentinel FEV1 variant rs1499894 and sentinel FVC variant rs35480566 (DIFFERENT variants from this locus's lead rs6796042, same gene); alleles raising FoxP1 mRNA associated with higher FEV1/FVC and lower IPF odds; FoxP1 knockdown in lung epithelial cells increased MMP1/2/3 and IL-6/IL-8 and reduced viability after cigarette-smoke exposure.</td>
 <td>Andreas et al. 2022, Respir Res. PMID 36221131, DOI 10.1186/s12931-022-02213-4</td>
-<td>WEAKENED as proof of mechanism at THIS credible set — different sentinel variants than rs6796042, no LD check performed; otherwise the strongest gene-specific mechanistic paper found</td>
+<td><span class="tag-warning">WEAKENED</span> as proof of mechanism at THIS credible set — different sentinel variants than rs6796042, no LD check performed; otherwise the strongest gene-specific mechanistic paper found</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Mechanistic (preprint, NOT peer-reviewed)</td>
 <td>FBXO24 identified as the E3 ligase controlling FoxP1 protein ubiquitination/stability in lung epithelial cells; FBXO24 knockdown reverses unfolded-protein-response (UPR)/cell death from FoxP1 loss; Fbxo24-KO mice show elevated FoxP1 and reduced UPR after short-term cigarette-smoke exposure.</td>
 <td>Maloy et al. 2025, bioRxiv preprint. PMID 40501863, DOI 10.1101/2025.05.23.653845</td>
-<td>WEAKENED — non-peer-reviewed preprint; mechanism is about FBXO24 (a different gene), only indirectly about FoxP1; should not be treated as confirmatory</td>
+<td><span class="tag-warning">WEAKENED</span> — non-peer-reviewed preprint; mechanism is about FBXO24 (a different gene), only indirectly about FoxP1; should not be treated as confirmatory</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Expression / disease-state validation</td>
 <td>In COPDGene (136 discovery/149 validation), FOXP1 was among differentially-expressed PBMC genes (with TCF7, ASAH1) validated in an independent cohort as associated with COPD/emphysema, in immune/inflammatory/sphingolipid pathways.</td>
 <td>Bahr et al. 2013, Am J Respir Cell Mol Biol. PMID 23590301, DOI 10.1165/rcmb.2012-0230OC</td>
-<td>WEAKENED as causal evidence — correlative disease-state PBMC expression, vulnerable to reverse causation/smoking-exposure confounding, not germline-variant evidence</td>
+<td><span class="tag-warning">WEAKENED</span> as causal evidence — correlative disease-state PBMC expression, vulnerable to reverse causation/smoking-exposure confounding, not germline-variant evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Structural/developmental lung biology</td>
 <td>Foxp1/Foxp4 act cooperatively in developing/postnatal lung secretory epithelium to restrict goblet-cell lineage commitment (repressing Agr2); loss causes ectopic goblet-cell differentiation and failure of airway epithelial regeneration after injury.</td>
 <td>Li et al. 2012, Development. PMID 22675208, DOI 10.1242/dev.079699</td>
@@ -425,7 +109,7 @@ table and documented in the audit appendix (<code>audits/3_71300001-71850000_aud
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Structural biology (adult, non-Th2 mechanism)</td>
 <td>Adult-onset loss of Foxp1/Foxp4 in airway epithelium induces a non-Th2, non-eosinophilic asthma-like airway hyperresponsiveness phenotype via ectopic epithelial neuropeptide Y (NPY) driving smooth-muscle contraction, independent of classical eosinophilic inflammation.</td>
 <td>Li et al. 2016, J Clin Invest. PMID 27088802, DOI 10.1172/JCI81389</td>
@@ -433,79 +117,79 @@ table and documented in the audit appendix (<code>audits/3_71300001-71850000_aud
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Structural biology (indirect/tangential)</td>
 <td>ENCODE bioinformatic motif analysis (in a paper primarily about HTR4) flagged Foxp1 among transcription factors whose regulatory motifs overlap key HTR4 lung-function SNPs.</td>
 <td>Hodge et al. 2013, Respir Res. PMID 23890215, DOI 10.1186/1465-9921-14-77</td>
-<td>WEAKENED — incidental/indirect mention only, not primary FOXP1 functional data</td>
+<td><span class="tag-warning">WEAKENED</span> — incidental/indirect mention only, not primary FOXP1 functional data</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Alternative mechanism (cardiovascular, non-lung)</td>
 <td>Review: Foxp1 loss causes pathological cardiac remodeling, worse atherosclerosis, cardiac defects/embryonic death in mice; Foxp1 activation promotes cardiomyocyte growth with anti-inflammatory/anti-atherosclerotic effects.</td>
 <td>Liu et al. 2022, Heart Failure Reviews. PMID 32648149, DOI 10.1007/s10741-020-09992-2</td>
-<td>CONTESTED (as alternative explanation for locus pleiotropy) — this locus colocalizes more strongly with heart failure (h4=0.98) than with FEV1/FVC (h4=0.39/0.27); raises real possibility of shared cardiopulmonary or purely cardiac mechanism</td>
+<td><span class="tag-warning">CONTESTED</span> (as alternative explanation for locus pleiotropy) — this locus colocalizes more strongly with heart failure (h4=0.98) than with FEV1/FVC (h4=0.39/0.27); raises real possibility of shared cardiopulmonary or purely cardiac mechanism</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Alternative mechanism (cardiovascular, non-lung)</td>
 <td>Cardiomyocyte-specific Foxp1 deletion promotes post-injury heart regeneration via Usp20-HIF1a-Hand1 metabolic-transition pathway.</td>
 <td>Wang et al. 2025, Advanced Science. PMID 39899693, DOI 10.1002/advs.202412124</td>
-<td>CONTESTED (as alternative explanation for locus pleiotropy) — same rationale as above</td>
+<td><span class="tag-warning">CONTESTED</span> (as alternative explanation for locus pleiotropy) — same rationale as above</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Alternative mechanism (neurodevelopmental, non-lung)</td>
 <td>FOXP1 syndrome: neurodevelopmental disorder from de novo FOXP1 loss-of-function mutations/deletions; intellectual disability, language deficits, ASD, hypotonia, cardiac/urogenital defects. Documents FOXP1's dosage-sensitivity/haploinsufficiency.</td>
 <td>Lozano et al. 2021, J Neurodev Disord. PMID 33892622, DOI 10.1186/s11689-021-09358-1</td>
-<td>CONTESTED (as alternative explanation for ADHD colocalization, h4=0.74) — but note this reflects RARE coding LoF variants, mechanistically distinct from the common noncoding intronic variants in this credible set</td>
+<td><span class="tag-warning">CONTESTED</span> (as alternative explanation for ADHD colocalization, h4=0.74) — but note this reflects RARE coding LoF variants, mechanistically distinct from the common noncoding intronic variants in this credible set</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Immunology (CD8+ T-cell quiescence)</td>
 <td>Foxp1 required cell-intrinsically to maintain naive CD8+ T-cell quiescence (represses IL-7Ralpha, antagonizes Foxo1, dampens MEK/Erk signaling); Foxp1-deficient naive CD8+ T cells spontaneously acquire an effector phenotype.</td>
 <td>Feng et al. 2011, Nat Immunol. PMID 21532575, DOI 10.1038/ni.2034 (companion News &amp; Views: Skon &amp; Jameson 2011, PMID 21587312, DOI 10.1038/ni.2040)</td>
-<td>WEAKENED as COPD-specific evidence — well-established, foundational immune biology but not disease-specific; relevant background given locus eQTL activity in CD8/naive T-cell subsets</td>
+<td><span class="tag-warning">WEAKENED</span> as COPD-specific evidence — well-established, foundational immune biology but not disease-specific; relevant background given locus eQTL activity in CD8/naive T-cell subsets</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Immunology (B-cell development)</td>
 <td>FOXP1 physiologically downregulated during transition from resting follicular to germinal-center (GC) B cells (opposite BCL6); forced FOXP1 expression disrupts GC formation and impairs IgG1 class switching.</td>
 <td>Sagardoy et al. 2013, Blood. PMID 23580662, DOI 10.1182/blood-2012-10-462846</td>
-<td>WEAKENED as COPD-specific evidence — primarily lymphoma-biology context, not airway/lung disease</td>
+<td><span class="tag-warning">WEAKENED</span> as COPD-specific evidence — primarily lymphoma-biology context, not airway/lung disease</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Immunology (B-cell class-switching)</td>
 <td>FOXP1 (with ARID1A) is a direct miR-221/222 target in B cells regulating class-switch recombination to IgE/IgG1; miR-221/222-deficient mice show defective IgE production in an allergic-airway-challenge model.</td>
 <td>Wigton et al. 2021, J Exp Med. PMID 34586363, DOI 10.1084/jem.20201422</td>
-<td>WEAKENED as COPD-specific evidence — tangentially relevant to asthma-COPD-overlap humoral immunity, not COPD-specific</td>
+<td><span class="tag-warning">WEAKENED</span> as COPD-specific evidence — tangentially relevant to asthma-COPD-overlap humoral immunity, not COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Immunology (Th17-adjacent, correlative)</td>
 <td>Runx1 transcriptionally activates Foxp1 (with Foxo1, Klf2) in CD4+ T cells for peripheral quiescence; Runx1 loss (independently causes autoimmune lung disease in mice per cited prior work) reduces Foxp1 and increases IL-17A/RORgammat (Th17).</td>
 <td>Wong et al. 2015, Mol Immunol. PMID 26350416, DOI 10.1016/j.molimm.2015.08.012</td>
-<td>WEAKENED — FOXP1 is downstream/correlative here, not shown to directly drive the Th17 phenotype</td>
+<td><span class="tag-warning">WEAKENED</span> — FOXP1 is downstream/correlative here, not shown to directly drive the Th17 phenotype</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Immunology (allergen-response, PBMC)</td>
 <td>House-dust-mite allergen stimulation of PBMCs significantly upregulated FOXP1 (with GATA3, STAT4, TSLP) in ASTHMATICS vs healthy subjects; NOT reported as COPD-specific (LPS-induced COPD PBMC changes involved a different gene set: SOX6, STAT4, IL1RL1).</td>
 <td>Pniewska et al. 2015, Int Arch Allergy Immunol. PMID 25634111, DOI 10.1159/000370067</td>
-<td>WEAKENED for COPD / cuts toward an asthma-skewed interpretation rather than classic neutrophilic COPD biology</td>
+<td><span class="tag-warning">WEAKENED</span> for COPD / cuts toward an asthma-skewed interpretation rather than classic neutrophilic COPD biology</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Structural/immune (general context, not FOXP1-specific)</td>
 <td>EWAS of induced sputum in biomass-smoke-exposed COPD patients found top differentially methylated genes enriched for lung-remodeling/immune-system/mucus-production GO categories; FOXP1 not specifically named as an individual hit gene.</td>
 <td>Garcia-Carmona et al. 2025, Epigenomics. PMID 40696941, DOI 10.1080/17501911.2025.2535966</td>
@@ -513,7 +197,7 @@ table and documented in the audit appendix (<code>audits/3_71300001-71850000_aud
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Absence-of-evidence documentation (non-pulmonary)</td>
 <td>FOXP1 activates NUSAP1 to induce M2 tumor-associated-macrophage polarization in hepatocellular carcinoma (non-pulmonary). Cited only to document that FOXP1-macrophage literature exists but is not lung/COPD-specific.</td>
 <td>Wang et al. 2026, Front Genet. PMID 42703452, DOI 10.3389/fgene.2026.1817333</td>
@@ -521,7 +205,7 @@ table and documented in the audit appendix (<code>audits/3_71300001-71850000_aud
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Absence-of-evidence documentation (non-pulmonary)</td>
 <td>Endothelial Foxp1 overexpression inhibits endothelial-to-mesenchymal transition via Notch suppression in valvular calcification/chronic kidney disease (non-pulmonary). Cited only to document absence of lung-specific FOXP1-macrophage/endothelial literature.</td>
 <td>Wang et al. 2026, Biochem Pharmacol. PMID 41839241, DOI 10.1016/j.bcp.2026.117901</td>
@@ -529,15 +213,15 @@ table and documented in the audit appendix (<code>audits/3_71300001-71850000_aud
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>FOXP1</td>
+<td class="gene">FOXP1</td>
 <td>Smoking-behavior GWAS (background, gap)</td>
 <td>Smoking initiation/cessation/heaviness and alcohol-use GWAS (406 loci) identifies genes predominantly in nicotinic/dopaminergic/glutamatergic neurotransmission; FOXP1 not named in abstract; could not confirm from metadata whether this FOXP1 locus is among the 406 loci without supplementary tables.</td>
 <td>Liu et al. 2019, Nat Genet. PMID 30643251, DOI 10.1038/s41588-018-0307-5</td>
-<td>WEAKENED support for &quot;not smoking-mediated&quot; — conclusion rests on absence of a hit, key supplementary data unchecked</td>
+<td><span class="tag-warning">WEAKENED</span> support for "not smoking-mediated" — conclusion rests on absence of a hit, key supplementary data unchecked</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; not reviewed by citation-verifier or red-team-skeptic)</h2>
 <p><strong>FOXP1 (ENSG00000114861)</strong> — only candidate gene queried (sole candidate at this locus):</p>
 <ul>
@@ -580,22 +264,22 @@ eQTL study loci).</li>
 FLAMES, MAGMA, and PoPS all independently converge on it, the entire 21-variant credible set
 (including the lead variant rs6796042, PIP=0.36) is intronic within FOXP1 itself, and Open
 Targets L2G returns FOXP1 as the sole candidate gene across every disease/trait tested at
-this variant. There is no positional competitor gene to weigh against it, so the &quot;which
-gene&quot; question is essentially answered — this is a one-gene locus.</p>
+this variant. There is no positional competitor gene to weigh against it, so the "which
+gene" question is essentially answered — this is a one-gene locus.</p>
 <p>What is NOT well-resolved, and keeps confidence at MODERATE rather than HIGH, is the causal
 <em>mechanism</em> and its COPD-specificity. The structured Open Targets colocalization data at this
 exact variant shows only weak-to-moderate concordance with FEV1 (h4=0.39) and FVC (h4=0.27) —
-below the conventional h4&gt;0.8 &quot;confident colocalization&quot; bar — while showing strong
+below the conventional h4&gt;0.8 "confident colocalization" bar — while showing strong
 colocalization (h4 0.74-0.98) with several traits that are not COPD (asthma/COPD-overlap,
 Crohn's disease, heart failure, multiple sclerosis, ADHD, multiple skin cancers). The
-red-team-skeptic explicitly marked &quot;this locus's phenotypic effect is lung/COPD-specific&quot; as
+red-team-skeptic explicitly marked "this locus's phenotypic effect is lung/COPD-specific" as
 CONTESTED on this basis, and I agree that conclusion is not resolved by the current evidence.
 The strongest gene-specific mechanistic literature (Andreas et al. 2022, PMID 36221131, tying
 FOXP1 lung-function variants to protease/MMP and IL-6/IL-8 dysregulation) uses different
 sentinel variants (rs1499894, rs35480566) than this locus's lead rs6796042, and no LD or
-conditional analysis links them — so this evidence supports &quot;FOXP1-the-gene is
-lung-function-relevant somewhere in its body&quot; more than it supports &quot;this specific credible
-set acts through pulmonary biology.&quot; The developmental biology (Li et al. 2012, 2016) showing
+conditional analysis links them — so this evidence supports "FOXP1-the-gene is
+lung-function-relevant somewhere in its body" more than it supports "this specific credible
+set acts through pulmonary biology." The developmental biology (Li et al. 2012, 2016) showing
 FOXP1/FOXP4 control airway secretory-cell fate and a non-Th2 airway-hyperresponsiveness
 phenotype is compelling as a plausible mechanism class (epithelial/goblet-cell/smooth-muscle),
 and is consistent with the locus's strong asthma/COPD-overlap colocalization, but does not by
@@ -603,9 +287,9 @@ itself establish that this is what's happening at this GWAS signal specifically.
 evidence (CD8+ T-cell quiescence, B-cell germinal-center/class-switch regulation) is real and
 well-replicated but broad and not COPD-specific. Direction of effect (which allele of
 rs6796042 raises vs. lowers FOXP1 expression, and whether that direction matches the
-&quot;more FoxP1 -&gt; better lung function&quot; pattern in Andreas et al.) was not established in this
+"more FoxP1 -&gt; better lung function" pattern in Andreas et al.) was not established in this
 review and is a concrete, resolvable gap.</p>
-<p>No runner-up gene exists at this locus (this is not a &quot;tied paralogs&quot; situation) — the
+<p>No runner-up gene exists at this locus (this is not a "tied paralogs" situation) — the
 uncertainty here is entirely about mechanism/specificity, not gene identity. What would
 resolve it: (1) an LD check confirming or ruling out whether rs6796042 is in strong LD with
 Andreas et al.'s sentinel FEV1/FVC variants; (2) a direction-of-effect analysis linking the
@@ -616,5 +300,7 @@ out smoking-mediation rather than relying on absence-of-a-hit; (4) confirmation 
 FOXP1 is explicitly named in Sakornsakolpat et al. 2019's COPD-loci gene list (currently
 CLAIM_MISMATCH/unresolved) via its supplementary tables.</p>
 
+        </div>
+    </div>
 </body>
 </html>

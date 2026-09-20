@@ -1,386 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>6_34450001-34950000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPD locus evidence table — 6:34,450,001-34,950,000 (GRCh38)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="copd-locus-evidence-table--634450001-34950000-grch38">COPD locus evidence table — 6:34,450,001-34,950,000 (GRCh38)</h1>
-<p><strong>Nearest gene:</strong> ILRUN. <strong>Lead variant:</strong> rs6907508 (PIP=0.210, intronic to ILRUN).
-<strong>Other prioritized genes (internal pipeline):</strong> MAGMA → SNRPC; PoPS → &quot;C6orf106&quot; (confirmed
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="copd-locus-evidence-table--634450001-34950000-grch38">COPD locus evidence table — 6:34,450,001-34,950,000 (GRCh38)</h1><div class="summary"><p><strong>Nearest gene:</strong> ILRUN. <strong>Lead variant:</strong> rs6907508 (PIP=0.210, intronic to ILRUN).
+<strong>Other prioritized genes (internal pipeline):</strong> MAGMA → SNRPC; PoPS → "C6orf106" (confirmed
 by Ensembl ID resolution to be the <em>same gene</em> as ILRUN, not a distinct candidate); ABC →
 SNRPC. <strong>Credible-set genes:</strong> ILRUN, BLTP3A, SNRPC (46 credible-set variants total, all
 intronic/intergenic/non-coding except one synonymous variant in BLTP3A and one 3'UTR
 variant in ILRUN — no missense/splice-donor/splice-acceptor variants in the credible set).
 <strong>Additional genes found by the researcher enumerating all protein-coding genes physically
 in the region</strong> (not flagged by any of the four prioritization methods, no credible-set
-variant annotated to any of them): SPDEF, PACSIN1, ANKS1A, TAF11.</p>
-<p>Evidence table includes only citations with verdict <strong>VERIFIED</strong>. Genes the red-team-skeptic
+variant annotated to any of them): SPDEF, PACSIN1, ANKS1A, TAF11.</p><p>Evidence table includes only citations with verdict <strong>VERIFIED</strong>. Genes the red-team-skeptic
 marked <strong>CONTESTED</strong> (PACSIN1, TAF11) are excluded from this table entirely — see the audit
 file for their citations and the skeptic's reasoning. All other genes carry a <strong>WEAKENED</strong>
 skeptic verdict (see per-row notes and the Prioritized gene section below for why none of
-the evidence at this locus reaches an unqualified/unweakened verdict).</p>
-<table>
+the evidence at this locus reaches an unqualified/unweakened verdict).</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -393,205 +77,205 @@ the evidence at this locus reaches an unqualified/unweakened verdict).</p>
 </thead>
 <tbody>
 <tr>
-<td>ILRUN</td>
+<td class="gene">ILRUN</td>
 <td>Statistical genetics (unrelated trait)</td>
 <td>Colocalization in a frailty GWAS (FinnGen+UKB) supported C6orf106 (ILRUN) as a causal gene for frailty risk — used only as precedent that GWAS signal at this exact gene can be real, not as COPD evidence</td>
 <td>Mak JKL et al. 2025, Nature Aging, PMID 40764432, DOI 10.1038/s43587-025-00925-y</td>
-<td>WEAKENED — trait is frailty, not COPD/lung; skeptic: &quot;shows the locus can have real eQTL-mediated effects somewhere, not that it does so in lung&quot;</td>
+<td><span class="tag-warning">WEAKENED</span> — trait is frailty, not COPD/lung; skeptic: "shows the locus can have real eQTL-mediated effects somewhere, not that it does so in lung"</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ILRUN / SNRPC</td>
+<td class="gene">ILRUN / SNRPC</td>
 <td>Statistical genetics (unrelated trait, ambiguous gene attribution)</td>
-<td>A novel variant (rs205262) at the &quot;SNRPC/C6orf106 locus&quot; is associated with BMI/thinness/extreme-obesity; original authors could not assign the signal between the two genes</td>
+<td>A novel variant (rs205262) at the "SNRPC/C6orf106 locus" is associated with BMI/thinness/extreme-obesity; original authors could not assign the signal between the two genes</td>
 <td>Riveros-McKay F et al. 2019, PLoS Genetics, PMID 30677029, DOI 10.1371/journal.pgen.1007603</td>
-<td>WEAKENED — adiposity trait, not lung/COPD; gene attribution itself ambiguous in the source paper</td>
+<td><span class="tag-warning">WEAKENED</span> — adiposity trait, not lung/COPD; gene attribution itself ambiguous in the source paper</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ILRUN</td>
+<td class="gene">ILRUN</td>
 <td>Structural (oncology/EMT, non-lung-disease context)</td>
 <td>C6orf106 is highly expressed in NSCLC tumor tissue and promotes an EMT-like invasive phenotype (↑vimentin, ↓E-cadherin/P120ctn) in lung cancer cell lines</td>
 <td>Zhang X et al. 2015, Tumour Biology, PMID 25736925, DOI 10.1007/s13277-015-3274-9</td>
-<td>WEAKENED — malignant/EMT context, not COPD-relevant structural biology</td>
+<td><span class="tag-warning">WEAKENED</span> — malignant/EMT context, not COPD-relevant structural biology</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ILRUN</td>
+<td class="gene">ILRUN</td>
 <td>Structural (oncology, non-lung)</td>
 <td>C6orf106 accelerates pancreatic cancer invasion/proliferation via ERK signaling; also reported highly expressed in lung and breast cancer</td>
 <td>Li X et al. 2018, Molecular and Cellular Biochemistry, PMID 30311108, DOI 10.1007/s11010-018-3455-0</td>
-<td>WEAKENED — non-lung oncogenic mechanism</td>
+<td><span class="tag-warning">WEAKENED</span> — non-lung oncogenic mechanism</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ILRUN</td>
+<td class="gene">ILRUN</td>
 <td>Structural (oncology, non-lung)</td>
 <td>C6orf106 promotes malignant progression of breast cancer</td>
 <td>Jiang G et al. 2015, Tumour Biology, PMID 25953261, DOI 10.1007/s13277-015-3500-5</td>
-<td>WEAKENED — non-lung oncology, background biology only</td>
+<td><span class="tag-warning">WEAKENED</span> — non-lung oncology, background biology only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ILRUN</td>
+<td class="gene">ILRUN</td>
 <td>Immune/inflammatory (non-lung cell systems)</td>
 <td>C6orf106/ILRUN suppresses IFN-α/β and TNF-α production by binding IRF3 and reducing nuclear p300/CBP coactivator levels, without altering IRF3 activation/translocation</td>
 <td>Ambrose RL et al. 2018, J Biol Chem, PMID 29802199, DOI 10.1074/jbc.RA117.001491</td>
-<td>WEAKENED — established in non-lung cell lines; skeptic: &quot;risks readers inferring lung relevance that isn't there&quot;</td>
+<td><span class="tag-warning">WEAKENED</span> — established in non-lung cell lines; skeptic: "risks readers inferring lung relevance that isn't there"</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ILRUN</td>
+<td class="gene">ILRUN</td>
 <td>Immune/inflammatory (non-lung cell systems)</td>
 <td>UBA-like and NBR1-like domains of ILRUN are both required for its inhibitory effect on type-I IFN/TNF-α transcription; gene disease-associated with virus infection, coronary artery disease, obesity, cancer</td>
 <td>Ambrose RL et al. 2020, Heliyon, PMID 32518853, DOI 10.1016/j.heliyon.2020.e04115</td>
-<td>WEAKENED — mechanism domain, non-lung system</td>
+<td><span class="tag-warning">WEAKENED</span> — mechanism domain, non-lung system</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ILRUN</td>
+<td class="gene">ILRUN</td>
 <td>Immune/antiviral (non-airway epithelium: Caco-2/Vero)</td>
 <td>ILRUN knockdown upregulates ACE2/TMPRSS2/CTSL and increases SARS-CoV-2 replication; overexpression suppresses replication</td>
 <td>Tribolet L et al. 2021, J Virology, PMID 33963054, DOI 10.1128/JVI.00327-21</td>
-<td>WEAKENED — intestinal/kidney cell lines, not airway epithelium</td>
+<td><span class="tag-warning">WEAKENED</span> — intestinal/kidney cell lines, not airway epithelium</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BLTP3A</td>
+<td class="gene">BLTP3A</td>
 <td>Structural (general cell biology, no lung tissue tested)</td>
 <td>SHIP164 (=UHRF1BP1L=BLTP3A) is a lipid-transfer protein on early-endocytic vesicle clusters (mannose-6-phosphate-receptor-positive); its loss disrupts retrograde endosome-to-Golgi trafficking</td>
 <td>Hanna MG et al. 2022, J Cell Biology, PMID 35499567, DOI 10.1083/jcb.202111018</td>
-<td>WEAKENED — generic organelle-trafficking biology, no lung relevance shown</td>
+<td><span class="tag-warning">WEAKENED</span> — generic organelle-trafficking biology, no lung relevance shown</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BLTP3A</td>
+<td class="gene">BLTP3A</td>
 <td>Structural (comparative structural biology, no disease relevance)</td>
 <td>Places UHRF1BP1L/SHIP164 (BLTP3A) within the RBG/BLTP lipid-transfer-bridge protein superfamily</td>
 <td>Levine TP 2022, Contact, PMID 36571082, DOI 10.1177/25152564221134328</td>
-<td>WEAKENED — background structural classification only</td>
+<td><span class="tag-warning">WEAKENED</span> — background structural classification only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>BLTP3A</td>
+<td class="gene">BLTP3A</td>
 <td>Neuroscience (different tissue/disease — reframed by skeptic)</td>
 <td>UHRF1BP1L identified among five functionally-validated Parkinson's-disease candidate genes (RNAi knockdown modulates mitochondrial dynamics in human neuronal cultures)</td>
 <td>Jansen IE et al. 2017, Genome Biology, PMID 28137300, DOI 10.1186/s13059-017-1147-9</td>
-<td>WEAKENED, reframed — skeptic notes this neuronal-tissue biology, rather than being irrelevant, is mildly <em>consistent with</em> a smoking-behavior-mediated (neurobiological) rather than pulmonary-structural pathway for BLTP3A's GWAS signal</td>
+<td><span class="tag-warning">WEAKENED</span>, reframed — skeptic notes this neuronal-tissue biology, rather than being irrelevant, is mildly consistent with a smoking-behavior-mediated (neurobiological) rather than pulmonary-structural pathway for BLTP3A's GWAS signal</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SNRPC</td>
+<td class="gene">SNRPC</td>
 <td>Disambiguation of a shared-locus GWAS hit</td>
 <td>See Riveros-McKay et al. 2019 row above (PMID 30677029) — same citation, ambiguous SNRPC-vs-ILRUN attribution by original authors</td>
 <td>Riveros-McKay F et al. 2019, PLoS Genetics, PMID 30677029</td>
-<td>WEAKENED — most consistent with a proximity/statistical-overlap (MAGMA/ABC) artifact per both researcher and skeptic</td>
+<td><span class="tag-warning">WEAKENED</span> — most consistent with a proximity/statistical-overlap (MAGMA/ABC) artifact per both researcher and skeptic</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SPDEF</td>
+<td class="gene">SPDEF</td>
 <td>Statistical/transcriptomic (not a genetic-association study)</td>
 <td>Whole-transcriptome analysis of PM2.5-exposed human nasal airway epithelium identifies SPDEF (with FOXA3) as a key transcriptional driver of the induced mucus-secretory metaplasia program</td>
 <td>Montgomery MT et al. 2020, Am J Respir Cell Mol Biol, PMID 32275839, DOI 10.1165/rcmb.2019-0454OC</td>
-<td>WEAKENED — mechanistic/transcriptomic, not a genetic-association or coloc study; no orthogonal genetic evidence links this exact locus signal to SPDEF</td>
+<td><span class="tag-warning">WEAKENED</span> — mechanistic/transcriptomic, not a genetic-association or coloc study; no orthogonal genetic evidence links this exact locus signal to SPDEF</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SPDEF</td>
+<td class="gene">SPDEF</td>
 <td>Statistical genetics (non-human, weak/indirect)</td>
 <td>A gene (CLPSL2) in strong linkage with SPDEF found in a livestock respiratory-disease-susceptibility selection-signature analysis in Chinese indigenous pigs</td>
 <td>Xu Z et al. 2019, Asian-Australas J Anim Sci, PMID 30744329, DOI 10.5713/ajas.18.0658</td>
-<td>WEAKENED — non-human, indirect</td>
+<td><span class="tag-warning">WEAKENED</span> — non-human, indirect</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SPDEF</td>
+<td class="gene">SPDEF</td>
 <td>Structural (foundational mechanism)</td>
 <td>SPDEF interacts with TTF-1(NKX2-1); transgenic SPDEF overexpression in mouse respiratory epithelium is sufficient to cause goblet-cell hyperplasia/mucin induction in vivo, downstream of IL-13/STAT6 signaling</td>
 <td>Park KS et al. 2007, J Clin Invest, PMID 17347682, DOI 10.1172/JCI29176</td>
-<td>WEAKENED/bordering CONTESTED as a locus-specific claim — mechanism is strong and causal in mouse models, but no prioritization method (nearest/MAGMA/PoPS/ABC) or credible-set variant implicates SPDEF at this locus; skeptic: ABC's failure to link any locus variant to SPDEF is affirmative evidence against a regulatory link, not just absence of search</td>
+<td><span class="tag-warning">WEAKENED</span>/bordering CONTESTED as a locus-specific claim — mechanism is strong and causal in mouse models, but no prioritization method (nearest/MAGMA/PoPS/ABC) or credible-set variant implicates SPDEF at this locus; skeptic: ABC's failure to link any locus variant to SPDEF is affirmative evidence against a regulatory link, not just absence of search</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SPDEF</td>
+<td class="gene">SPDEF</td>
 <td>Structural (review)</td>
 <td>Reviews SPDEF (with FoxA2, TTF-1, GABA-A receptor) as a coordinated transcriptional driver of goblet-cell transdifferentiation in chronic airway disease including COPD</td>
 <td>Curran DR &amp; Cohn L 2009, Am J Respir Cell Mol Biol, PMID 19520914, DOI 10.1165/rcmb.2009-0151TR</td>
-<td>WEAKENED/bordering CONTESTED — see Park 2007 row; same locus-specificity gap applies</td>
+<td><span class="tag-warning">WEAKENED</span>/bordering CONTESTED — see Park 2007 row; same locus-specificity gap applies</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SPDEF</td>
+<td class="gene">SPDEF</td>
 <td>Structural (review)</td>
 <td>Reviews SPDEF (with STAT6, FOXA2) as a principal transcription factor linked to goblet-cell formation and MUC5AC overexpression in asthma and COPD</td>
 <td>Turner J &amp; Jones CE 2009, Biochem Soc Trans, PMID 19614611, DOI 10.1042/BST0370877</td>
-<td>WEAKENED/bordering CONTESTED — same locus-specificity gap</td>
+<td><span class="tag-warning">WEAKENED</span>/bordering CONTESTED — same locus-specificity gap</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SPDEF</td>
+<td class="gene">SPDEF</td>
 <td>Structural (genetic-variant mechanism, but variant is in TP53, not this locus)</td>
 <td>A common p53 Pro72Arg polymorphism differentially activates the SPDEF promoter, driving mucous-cell metaplasia in primary human airway epithelial cultures and mice; smoking noted as a covariate/exposure</td>
 <td>Chand HS et al. 2014, Nature Communications, PMID 25429397, DOI 10.1038/ncomms6567</td>
-<td>WEAKENED/bordering CONTESTED — genetic driver is a TP53 variant, unrelated to this GWAS locus</td>
+<td><span class="tag-warning">WEAKENED</span>/bordering CONTESTED — genetic driver is a TP53 variant, unrelated to this GWAS locus</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SPDEF</td>
+<td class="gene">SPDEF</td>
 <td>Structural + immune (cigarette-smoke COPD mouse model)</td>
 <td>In a cigarette-smoke-exposed murine COPD model, Muc5b-knockout mice show decreased SPDEF/STAT6 expression, reduced goblet-cell differentiation, and increased macrophage-driven inflammatory cytokines (TNF-α, IL-6)</td>
 <td>Huang X et al. 2022, Respiratory Research, PMID 35042537, DOI 10.1186/s12931-021-01920-8</td>
-<td>WEAKENED/bordering CONTESTED — strongest smoking-exposure/COPD-model mechanistic evidence at the whole locus, but still no locus-specific genetic link to SPDEF</td>
+<td><span class="tag-warning">WEAKENED</span>/bordering CONTESTED — strongest smoking-exposure/COPD-model mechanistic evidence at the whole locus, but still no locus-specific genetic link to SPDEF</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SPDEF</td>
+<td class="gene">SPDEF</td>
 <td>Structural + immune</td>
 <td>Describes an IL-4/IL-13-STAT6-SPDEF axis antagonizing FOXA2-mediated mucus homeostasis in COPD/CF airway cells; a GLP1R agonist suppresses this axis</td>
 <td>Choi W et al. 2020, Mucosal Immunology, PMID 32034274, DOI 10.1038/s41385-020-0262-1</td>
-<td>WEAKENED/bordering CONTESTED — same locus-specificity gap</td>
+<td><span class="tag-warning">WEAKENED</span>/bordering CONTESTED — same locus-specificity gap</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>SPDEF</td>
+<td class="gene">SPDEF</td>
 <td>Structural (review)</td>
 <td>Reviews SPDEF alongside CLCA1/MUC5AC/STAT6 in mucus-hypersecretory airway disease including COPD</td>
 <td>Liu CL &amp; Shi GP 2019, World Allergy Organization Journal, PMID 31871532, DOI 10.1016/j.waojou.2019.100077</td>
-<td>WEAKENED/bordering CONTESTED — same locus-specificity gap</td>
+<td><span class="tag-warning">WEAKENED</span>/bordering CONTESTED — same locus-specificity gap</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ANKS1A</td>
+<td class="gene">ANKS1A</td>
 <td>Statistical genetics/immune (unrelated disease pairing)</td>
 <td>ANKS1A identified among six pleiotropic genes shared between SLE and IBD via cross-trait/colocalization analysis in East Asian cohorts</td>
 <td>Mo X et al. 2026, Inflammatory Bowel Diseases, PMID 41309137, DOI 10.1093/ibd/izaf297</td>
-<td>WEAKENED — skeptic: &quot;functionally equivalent to no evidence&quot; for COPD; unrelated autoimmune disease pairing</td>
+<td><span class="tag-warning">WEAKENED</span> — skeptic: "functionally equivalent to no evidence" for COPD; unrelated autoimmune disease pairing</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ANKS1A</td>
+<td class="gene">ANKS1A</td>
 <td>Neuroscience/vascular (non-lung)</td>
 <td>ANKS1A is a cofactor for LRP1-mediated receptor trafficking/cerebrovascular amyloid-beta clearance in brain endothelial cells (author correction)</td>
 <td>Lee J et al. 2024, Nature Communications (Author Correction), PMID 38594263, DOI 10.1038/s41467-024-47249-w</td>
-<td>WEAKENED — no lung relevance</td>
+<td><span class="tag-warning">WEAKENED</span> — no lung relevance</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ANKS1A</td>
+<td class="gene">ANKS1A</td>
 <td>Cardiovascular (non-lung)</td>
 <td>Epigenome-wide association study in mice implicates Anks1a in cardiac hypertrophy; in vitro validation confirms Anks1a attenuates isoproterenol-induced cardiac hypertrophy</td>
 <td>Lahue C et al. 2025, Epigenetics, PMID 40624825, DOI 10.1080/15592294.2025.2524411</td>
-<td>WEAKENED — no lung relevance</td>
+<td><span class="tag-warning">WEAKENED</span> — no lung relevance</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-literature-citation-not-verified-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a literature citation; not verified by citation-verifier or red-team-skeptic)</h2>
 <p>Scores below are Open Targets' <code>evidences</code> field, datasource <code>gwas_credible_sets</code>
 (L2G-style credible-set gene-assignment score), queried per gene against COPD
-(MONDO_0005002), FEV1/&quot;forced expiratory volume&quot; (EFO_0004314), and smoking initiation
+(MONDO_0005002), FEV1/"forced expiratory volume" (EFO_0004314), and smoking initiation
 (EFO_0005670).</p>
-<table>
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Gene</th>
@@ -603,28 +287,28 @@ the evidence at this locus reaches an unqualified/unweakened verdict).</p>
 </thead>
 <tbody>
 <tr>
-<td>ILRUN</td>
+<td class="gene">ILRUN</td>
 <td>0 (0 rows) — no COPD-specific credible-set evidence despite being the nearest gene to the lead variant</td>
 <td>0.596 (20 rows) — strongest FEV1 signal of the three original candidates</td>
 <td>0 (0 rows)</td>
 <td>1.00 — highly constrained/dosage-sensitive</td>
 </tr>
 <tr>
-<td>SNRPC</td>
+<td class="gene">SNRPC</td>
 <td>0.055 (1 row) — weak</td>
 <td>0.286 (12 rows) — moderate, weakest of the three</td>
 <td>0.252 (2 rows) — weak-moderate</td>
 <td>0.355 — moderate, imprecise (small gene, wide CI)</td>
 </tr>
 <tr>
-<td>BLTP3A</td>
+<td class="gene">BLTP3A</td>
 <td>0.417 (1 row) — strongest direct COPD score of the three</td>
 <td>0.695 (20 rows) — highest FEV1 score of the three</td>
 <td>0.480 (2 rows) — nontrivial, raises smoking-mediation concern per prior #1</td>
 <td>~0 — LOF-tolerant, not dosage-sensitive</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>SPDEF, PACSIN1, ANKS1A, and TAF11 were not in the original candidate list supplied to the
 Open Targets step and were not queried against this database; their Open Targets profile
 is unknown, not zero.</p>
@@ -667,7 +351,7 @@ MAGMA/ABC proximity artifact, per both the researcher and the skeptic.</li>
 (a well-established causal driver of goblet-cell hyperplasia/mucus metaplasia, including
 in a cigarette-smoke COPD mouse model) but was not flagged by any of the four
 prioritization methods and has no credible-set variant annotated to it — the skeptic
-rates its attachment to this specific GWAS signal as an unsupported &quot;candidate gene&quot;
+rates its attachment to this specific GWAS signal as an unsupported "candidate gene"
 leap (WEAKENED/bordering CONTESTED), noting that ABC — a method purpose-built to detect
 exactly this kind of long-range regulatory link — pointed to SNRPC, not SPDEF. SPDEF is
 therefore not selected as the top pick despite its mechanistic appeal.</li>
@@ -693,5 +377,7 @@ region contacts the SPDEF promoter, to adjudicate the skeptic's rejection of SPD
 locus-specific candidate. This remains the study team's call to make; ILRUN is offered
 here as the best-supported single pick, not a settled answer.</p>
 
+        </div>
+    </div>
 </body>
 </html>

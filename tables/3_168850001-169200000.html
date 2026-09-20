@@ -1,380 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>3_168850001-169200000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — 3:168850001-169200000</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-3168850001-169200000-lead-variant-rs879394-nearest-gene-mecom">Evidence table — locus 3:168850001-169200000 (lead variant rs879394, nearest gene MECOM)</h1>
-<p>Candidate genes evaluated: <strong>MECOM</strong> (nearest gene; also FLAMES/MAGMA/PoPS prioritized) and
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-3168850001-169200000-lead-variant-rs879394-nearest-gene-mecom">Evidence Table — Locus 3:168850001-169200000</h1><div class="summary"><p>Candidate genes evaluated: <strong>MECOM</strong> (nearest gene; also FLAMES/MAGMA/PoPS prioritized) and
 <strong>LINC01997</strong> (lncRNA whose introns are the nearest-transcript annotation for most
-non-lead credible-set variants, evaluated as a candidate gene per pipeline scope rules).</p>
-<p>Only citations with verifier verdict VERIFIED are included below (one citation's claim was
+non-lead credible-set variants, evaluated as a candidate gene per pipeline scope rules).</p><p>Only citations with verifier verdict VERIFIED are included below (one citation's claim was
 narrowed to the sub-claim that was actually verified — see note). See
 <code>audits/3_168850001-169200000_audit.md</code> for excluded citations (CLAIM_MISMATCH) and the
 full red-team-skeptic critique, including the CONTESTED call on LINC01997 and the WEAKENED
-call on MECOM, preserved verbatim.</p>
-<table>
+call on MECOM, preserved verbatim.</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -387,31 +71,31 @@ call on MECOM, preserved verbatim.</p>
 </thead>
 <tbody>
 <tr>
-<td>MECOM</td>
+<td class="gene">MECOM</td>
 <td>Statistical genetics (lung function GWAS, discovery)</td>
 <td>Original discovery GWAS (~48,201 individuals European ancestry, follow-up ~46,411) identified MECOM (alias EVI1) as one of 16 novel loci genome-wide significant for FEV1 and FEV1/FVC.</td>
 <td>Soler Artigas M, et al. Nat Genet 2011. PMID 21946350; DOI 10.1038/ng.941</td>
-<td>WEAKENED (see critique — core statgen claim verified, but do not read as an established COPD-specific mechanism)</td>
+<td><span class="tag-warning">WEAKENED</span> (see critique — core statgen claim verified, but do not read as an established COPD-specific mechanism)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MECOM</td>
+<td class="gene">MECOM</td>
 <td>Statistical genetics (targeted rare-variant sequencing, COPD case-control)</td>
 <td>Targeted pooled sequencing of 26 known lung-function GWAS loci in 300 COPD cases/300 smoking controls (replicated in ~4,249 COPD cases/11,916 smoking controls, UK Biobank) found suggestive evidence for a combined effect of rare variants on COPD risk in sliding windows within MECOM (also TNXB, and upstream of HHIP).</td>
 <td>Artigas MS, Wain LV, Shrine N, McKeever TM, et al. PLoS ONE 2017. PMID 28114305; DOI 10.1371/journal.pone.0170222</td>
-<td>WEAKENED (verified, but &quot;suggestive,&quot; not definitive, rare-variant signal)</td>
+<td><span class="tag-warning">WEAKENED</span> (verified, but "suggestive," not definitive, rare-variant signal)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MECOM</td>
+<td class="gene">MECOM</td>
 <td>Molecular biology (general TF function; <strong>different locus, 7q22.3, NOT this credible set</strong>)</td>
 <td>At a platelet-volume/platelet-function GWAS signal on chromosome 7q22.3 (rs342293, unrelated to the 3q26.2 locus under review), the risk allele differentially binds the transcription factor EVI1 (MECOM) and affects PIK3CG expression in platelets and macrophages — general evidence MECOM/EVI1 is a functional transcriptional regulator in blood/macrophage biology.</td>
 <td>Paul DS, Nisbet JP, Yang TP, et al. PLoS Genetics 2011. PMID 21738486; DOI 10.1371/journal.pgen.1002139</td>
-<td>WEAKENED / caution flagged — skeptic explicitly warns this must NOT be used as locus-specific mechanistic evidence for 3q26.2</td>
+<td><span class="tag-warning">WEAKENED</span> / caution flagged — skeptic explicitly warns this must NOT be used as locus-specific mechanistic evidence for 3q26.2</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MECOM</td>
+<td class="gene">MECOM</td>
 <td>Clinical genetics (monogenic syndrome; not COPD)</td>
 <td>Heterozygous coding MECOM mutations cause a rare monogenic bone-marrow-failure/amegakaryocytic-thrombocytopenia syndrome in humans (variable radioulnar synostosis, B-cell deficiency, cardiac/renal malformations) — establishes MECOM as a dosage-sensitive gene essential for hematopoietic stem cell function. No lung phenotype reported.</td>
 <td>Germeshausen M, Ancliff P, Estrada J, et al. Blood Advances 2018. PMID 29540340; DOI 10.1182/bloodadvances.2018016501</td>
@@ -419,7 +103,7 @@ call on MECOM, preserved verbatim.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MECOM</td>
+<td class="gene">MECOM</td>
 <td>Developmental biology (mouse model; not lung-specific)</td>
 <td>Evi1 (Mecom) hypomorphic mice show embryonic hematopoietic and cardiac developmental phenotypes and perinatal lethality from congenital heart defects. (Note: an additional claim that the paper's abstract discusses EVI1 overexpression in lung cancer was checked and found NOT supported by the abstract — that sub-claim is dropped; see audit appendix.)</td>
 <td>Bard-Chapeau EA, Szumska D, Jacob B, et al. PLoS ONE 2014. PMID 24586749; DOI 10.1371/journal.pone.0089397</td>
@@ -427,7 +111,7 @@ call on MECOM, preserved verbatim.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MECOM</td>
+<td class="gene">MECOM</td>
 <td>Hematology background (leukemia biology; not COPD-relevant)</td>
 <td>RUNX1-EVI1 fusion drives dysplastic hematopoiesis and acute megakaryoblastic leukemia in a mouse model — background literature on MECOM/EVI1's role in megakaryocytic/myeloid leukemia.</td>
 <td>Nakamura et al. Leukemia Research 2018. PMID 30278283; DOI 10.1016/j.leukres.2018.09.015</td>
@@ -435,7 +119,7 @@ call on MECOM, preserved verbatim.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>MECOM</td>
+<td class="gene">MECOM</td>
 <td>Hematology background (leukemia biology; not COPD-relevant)</td>
 <td>Review of retinoic-acid signaling and MECOM/EVI1-driven acute myeloid leukemia stem cells.</td>
 <td>Nguyen et al. (review). Cell Cycle 2020. PMID 32900260; DOI 10.1080/15384101.2020.1810402</td>
@@ -443,15 +127,15 @@ call on MECOM, preserved verbatim.</p>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>LINC01997</td>
+<td class="gene">LINC01997</td>
 <td>Literature search (negative finding)</td>
-<td>A PubMed search for the bare term &quot;LINC01997&quot; returns zero results (independently reconfirmed by citation-verifier). No functional, mechanistic, or disease-association literature exists for this lncRNA in the peer-reviewed or preprint literature.</td>
-<td>PubMed search, &quot;LINC01997&quot; — 0 results (no PMID; negative literature finding, not a citation)</td>
-<td>CONTESTED as candidate gene (see critique — de-prioritized on convergent structural grounds despite absence of a rebutting citation)</td>
+<td>A PubMed search for the bare term "LINC01997" returns zero results (independently reconfirmed by citation-verifier). No functional, mechanistic, or disease-association literature exists for this lncRNA in the peer-reviewed or preprint literature.</td>
+<td>PubMed search, "LINC01997" — 0 results (no PMID; negative literature finding, not a citation)</td>
+<td><span class="tag-warning">CONTESTED</span> as candidate gene (see critique — de-prioritized on convergent structural grounds despite absence of a rebutting citation)</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Note on completeness: Shrine et al. 2019 (Nat Genet, PMID 30804560), a major lung-function/COPD
 GWAS meta-analysis, and Higbee et al. 2024 (ERJ, PMID 38097206), a PRISm GWAS that does in fact
 name a MECOM-nearest novel signal (rs7652391) per the citation-verifier's abstract check, are
@@ -475,9 +159,9 @@ GWAS (L2G ~0.39-0.63 across ~15 independent study/trait combinations). No other 
 including LINC01997, was ever returned as an L2G candidate at this variant.</li>
 <li>Colocalization (COLOC_PIP_ECAVIAR): the COPD credible set colocalizes strongly (H4&gt;0.9)
 with FEV1, peak expiratory flow, and FEV1/FVC ratio GWAS across ~10 independent cohorts,
-including FEV1/FVC &quot;in never smokers&quot; (H4=0.99) — the pulmonary-function signal is not
+including FEV1/FVC "in never smokers" (H4=0.99) — the pulmonary-function signal is not
 obviously smoking-dependent. Weaker/partial colocalization with nonatopic asthma (H4=0.34),
-a &quot;respiratory diseases&quot; composite (H4=0.54), and sleep apnoea (H4=0.59). The SAME credible
+a "respiratory diseases" composite (H4=0.54), and sleep apnoea (H4=0.59). The SAME credible
 set also colocalizes with several non-respiratory traits: educational attainment/occupational
 prestige (H4=0.87-0.98), height (H4=0.93), mean platelet volume (H4=0.85), whole-brain
 diffusion imaging (H4=0.95), glaucoma (H4=0.91), and serum creatinine (H4=0.76-0.95) —
@@ -517,7 +201,7 @@ a live alternative hypothesis that this is a generic developmental/organ-growth 
 than a COPD-specific one; (c) a CLAIM_MISMATCH-flagged finding (Higbee et al. 2024, PRISm
 GWAS) turned out, on verifier re-check, to actually name a MECOM-nearest novel signal
 (rs7652391) — but PRISm is a restrictive/mixed spirometric pattern, and its co-occurrence
-with the obstructive COPD signal is a complicating factor for a &quot;COPD-specific&quot; narrative,
+with the obstructive COPD signal is a complicating factor for a "COPD-specific" narrative,
 not simply more confirmatory evidence (excluded from the main table per the CLAIM_MISMATCH
 rule, but noted here as a caveat, not fabricated as a table row); and (d) <strong>no molecular-QTL
 (eQTL/pQTL/sQTL) evidence anywhere links the credible-set variants to MECOM expression,
@@ -545,5 +229,7 @@ variant — which the current data cannot distinguish. The study team should wei
 confidence call accordingly and treat it as a starting hypothesis for functional follow-up,
 not a settled conclusion.</p>
 
+        </div>
+    </div>
 </body>
 </html>

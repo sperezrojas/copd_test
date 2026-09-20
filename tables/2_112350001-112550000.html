@@ -1,372 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>2_112350001-112550000.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence table — Locus 2:112,350,001-112,550,000 (nearest/ABC gene: TTL; PoPS gene: ANAPC1; POLR1B added on reopening)</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="evidence-table--locus-2112350001-112550000-nearestabc-gene-ttl-pops-gene-anapc1-polr1b-added-on-reopening">Evidence table — Locus 2:112,350,001-112,550,000 (nearest/ABC gene: TTL; PoPS gene: ANAPC1; POLR1B added on reopening)</h1>
-<p><strong>REOPENING NOTE:</strong> This locus's review was originally completed with two candidate
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1 id="evidence-table--locus-2112350001-112550000-nearestabc-gene-ttl-pops-gene-anapc1-polr1b-added-on-reopening">Evidence table — Locus 2:112,350,001-112,550,000 (nearest/ABC gene: TTL; PoPS gene: ANAPC1; POLR1B added on reopening)</h1><div class="summary"><p><strong>REOPENING NOTE:</strong> This locus's review was originally completed with two candidate
 genes, TTL and ANAPC1. The study team subsequently discovered a genome-build error in
 the MAGMA/PoPS gene-location merge file used to generate candidate-gene lists; a
 corrected re-merge surfaced <strong>POLR1B</strong> (RNA polymerase I subunit B) as a candidate at
@@ -374,19 +57,20 @@ this locus that was never evaluated in the original review. This is a targeted,
 additive reopening: all original TTL/ANAPC1 evidence below is unchanged and preserved
 verbatim from the original review; POLR1B evidence has been added following the same
 pipeline (Open Targets lookup, dedicated researcher dispatch, citation verification,
-red-team critique).</p>
-<p>Lead/only credible-set variant: rs3811038 (2:112,482,606, GRCh38; PIP=0.779;
+red-team critique).</p><p>Lead/only credible-set variant: rs3811038 (2:112,482,606, GRCh38; PIP=0.779;
 intron_variant, MODIFIER impact, gene=TTL). No missense/splice-donor/splice-acceptor
 variant is present in the credible set, so no dedicated per-variant literature search
 was required beyond gene-level evidence gathering — this applies to all three
-candidate genes, including POLR1B.</p>
-<p>All rows below use only citations with a VERIFIED verdict from citation-verifier (see
+candidate genes, including POLR1B.</p><p>All rows below use only citations with a VERIFIED verdict from citation-verifier (see
 <code>evidence_tables/_status/2_112350001-112550000/verified_citations.md</code> for full verdict
 text, including the POLR1B addendum). All 15 original citations plus all 10 new POLR1B
 citations (25 total) were VERIFIED; none were excluded for retraction/not-found/
 mismatch (see the audit file for the two genes — ANAPC1 and POLR1B — marked CONTESTED
-by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p>
-<table>
+by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p></div>
+
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
 <th>Candidate gene</th>
@@ -399,39 +83,39 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 </thead>
 <tbody>
 <tr>
-<td>TTL</td>
+<td class="gene">TTL</td>
 <td>Statistical genetics (locus-level; Open Targets structured lookup, not a citation)</td>
-<td>At lead variant rs3811038, L2G assigns TTL (score 0.861) as the gene for the COPD/&quot;Chronic airway obstruction&quot; GWAS credible set (GCST90476027); TTL is the only L2G-assigned gene across all 12 disease/trait credible sets at this variant</td>
+<td>At lead variant rs3811038, L2G assigns TTL (score 0.861) as the gene for the COPD/"Chronic airway obstruction" GWAS credible set (GCST90476027); TTL is the only L2G-assigned gene across all 12 disease/trait credible sets at this variant</td>
 <td>Open Targets Platform (structured DB; see Open Targets summary section below — not a literature citation)</td>
-<td>WEAKENED (locus-level inference well-supported by DB but not yet corroborated by gene-specific literature; see below)</td>
+<td><span class="tag-warning">WEAKENED</span> (locus-level inference well-supported by DB but not yet corroborated by gene-specific literature; see below)</td>
 <td>n/a (DB lookup)</td>
 </tr>
 <tr>
-<td>TTL</td>
+<td class="gene">TTL</td>
 <td>Statistical genetics (colocalization; Open Targets structured lookup)</td>
 <td>The COPD credible set at this variant colocalizes (h4~0.999) with 14 smoking/behavioral/socioeconomic trait credible sets (smoking initiation, tobacco use disorder, past tobacco smoking, lifetime smoking index, age of smoking initiation, alcohol consumption, externalizing behaviour, educational attainment) and with zero spirometric-trait credible sets</td>
 <td>Open Targets Platform (structured DB; not a literature citation)</td>
-<td>WEAKENED (pattern is internally consistent and supports prior #1, but no literature source independently names TTL in a smoking-GWAS locus table)</td>
+<td><span class="tag-warning">WEAKENED</span> (pattern is internally consistent and supports prior #1, but no literature source independently names TTL in a smoking-GWAS locus table)</td>
 <td>n/a (DB lookup)</td>
 </tr>
 <tr>
-<td>TTL</td>
+<td class="gene">TTL</td>
 <td>Statistical genetics (large smoking/alcohol GWAS, context)</td>
 <td>Multi-ancestry (3.4M individuals) GWAS/fine-mapping/TWAS of tobacco and alcohol use traits (smoking initiation, cigarettes/day, cessation, age of initiation, drinks/week); the type of study most likely underlying this locus's behavioral-trait colocalization signal. TTL/this exact locus was NOT confirmed by the researcher or citation-verifier to be explicitly named among the paper's reported loci from abstract/accessible full text</td>
 <td>Saunders GRB et al., Nature 2022. PMID 36477530, DOI 10.1038/s41586-022-05477-4</td>
-<td>VERIFIED (citation); WEAKENED (locus-specificity to TTL unconfirmed)</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED (citation);  (locus-specificity to TTL unconfirmed)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TTL</td>
+<td class="gene">TTL</td>
 <td>Statistical genetics (GSCAN exome-chip fine-mapping, context)</td>
 <td>GSCAN-consortium exome-chip fine-mapping paper for smoking/alcohol-use phenotypes (cigarettes/day, pack-years, smoking initiation, age of initiation, drinks/week). TTL/this exact locus was NOT confirmed to be named in this paper</td>
 <td>Brazel DM et al., Biological Psychiatry 2018/2019. PMID 30679032, DOI 10.1016/j.biopsych.2018.11.024</td>
-<td>VERIFIED (citation); WEAKENED (locus-specificity to TTL unconfirmed)</td>
+<td><span class="tag-warning">WEAKENED</span>VERIFIED (citation);  (locus-specificity to TTL unconfirmed)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TTL</td>
+<td class="gene">TTL</td>
 <td>Mechanistic/smoking-exposure context (weak, indirect)</td>
 <td>Tubulin tyrosine ligase (TTL) expression correlated with survival specifically in smoker (not never-smoker) bladder cancer patients, in an integrative metabolomics/TCGA analysis</td>
 <td>Amara CS et al., Cancer Epidemiology, Biomarkers &amp; Prevention 2019. PMID 30642841, DOI 10.1158/1055-9965.EPI-18-0936</td>
@@ -439,7 +123,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TTL</td>
+<td class="gene">TTL</td>
 <td>Structural/developmental (neurobiology, not lung)</td>
 <td>TTL-null mice die perinatally from disorganized neuronal networks (cortico-thalamic loop disruption) and abnormal neurite outgrowth; no lung/airway phenotype reported or apparently assessed</td>
 <td>Erck C et al., PNAS 2005. PMID 15899979, DOI 10.1073/pnas.0409626102</td>
@@ -447,7 +131,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TTL</td>
+<td class="gene">TTL</td>
 <td>Structural/mechanistic (neurobiology, not lung)</td>
 <td>TTL incorporates L-Dopa into alpha-tubulin causing synaptic instability in cultured neurons (Parkinson's disease therapy context)</td>
 <td>Zorgniotti A et al., NPJ Parkinson's Disease 2025. PMID 41107317, DOI 10.1038/s41531-025-01143-4</td>
@@ -455,7 +139,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TTL</td>
+<td class="gene">TTL</td>
 <td>Structural/mechanistic (neurobiology, not lung)</td>
 <td>TTL-deficient mice used as a tool to study tyrosinated-microtubule biology in neurite branching</td>
 <td>Barnat M et al., Molecular and Cellular Neuroscience 2016. PMID 26773468, DOI 10.1016/j.mcn.2016.01.001</td>
@@ -463,7 +147,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TTL</td>
+<td class="gene">TTL</td>
 <td>Structural (ciliary pathway, indirect — NOT TTL itself)</td>
 <td>Tyrosination/detyrosination status of axonemal microtubules segregates anterograde/retrograde intraflagellar transport trains in a Chlamydomonas ciliary model; study is of the detyrosinase VashL, not TTL</td>
 <td>Chhatre A et al., Nature Communications 2025. PMID 39865093, DOI 10.1038/s41467-025-56098-0</td>
@@ -471,7 +155,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TTL</td>
+<td class="gene">TTL</td>
 <td>Structural (ciliary pathway, indirect — NOT TTL itself)</td>
 <td>Glycylation/polyglutamylation (not tyrosination/TTL) nanopatterns regulate ciliary beating mechanics in Chlamydomonas</td>
 <td>Alvarez Viar G et al., Current Biology 2024. PMID 39270640, DOI 10.1016/j.cub.2024.08.021</td>
@@ -479,7 +163,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TTL</td>
+<td class="gene">TTL</td>
 <td>Structural (review, background only)</td>
 <td>General review of tubulin post-translational modifications (including tyrosination) in cilia/flagella structure/function; no TTL-specific data</td>
 <td>Konno A, Setou M, Ikegami K. International Review of Cell and Molecular Biology 2012. PMID 22364873, DOI 10.1016/B978-0-12-394305-7.00003-3</td>
@@ -487,7 +171,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>TTL (paralog caution — TTLL1, NOT TTL)</td>
+<td class="gene">TTL (paralog caution — TTLL1, NOT TTL)</td>
 <td>Structural (paralog, explicitly NOT TTL evidence)</td>
 <td>TTLL1 (tubulin tyrosine ligase-LIKE 1, a distinct paralog)-null mice show a primary-ciliary-dyskinesia-like phenotype (chronic rhinosinusitis/otitis media from respiratory ciliary dysfunction) and flagellar defects; no human PCD mutations linked to the TTLL1 ortholog at time of publication</td>
 <td>Vogel P et al., Veterinary Pathology 2010. PMID 20442420, DOI 10.1177/0300985810363485</td>
@@ -495,23 +179,23 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ANAPC1</td>
+<td class="gene">ANAPC1</td>
 <td>Statistical genetics (locus-level; Open Targets structured lookup)</td>
 <td>ANAPC1 never receives an L2G score at rs3811038 across any of 12 disease/trait credible sets (all assigned to TTL instead); COPD does not appear in ANAPC1's top-25 Open Targets associated diseases (score &lt;0.073, rank &gt;50 of 474)</td>
 <td>Open Targets Platform (structured DB; not a literature citation)</td>
-<td>CONTESTED (negative evidence, plus coordinate discrepancy below)</td>
+<td><span class="tag-warning">CONTESTED</span> (negative evidence, plus coordinate discrepancy below)</td>
 <td>n/a (DB lookup)</td>
 </tr>
 <tr>
-<td>ANAPC1</td>
+<td class="gene">ANAPC1</td>
 <td>Structural/positional (data-quality flag)</td>
 <td>ANAPC1's Ensembl GRCh38 coordinates (2:111,611,639-111,884,690) do not physically overlap the stated locus window (2:112,350,001-112,550,000) — a gap of ~465 kb — despite the locus input file's stated PoPS selection criterion requiring physical overlap</td>
 <td>Ensembl REST API (region query) + Open Targets <code>genomicLocation</code> field, independently cross-checked by both the researcher and the orchestrator</td>
-<td>CONTESTED (calls ANAPC1's basic eligibility as a candidate at this locus into question, independent of any literature)</td>
+<td><span class="tag-warning">CONTESTED</span> (calls ANAPC1's basic eligibility as a candidate at this locus into question, independent of any literature)</td>
 <td>2026-09-11 (orchestrator direct verification)</td>
 </tr>
 <tr>
-<td>ANAPC1</td>
+<td class="gene">ANAPC1</td>
 <td>Pharmacogenomic (lung cancer, not COPD)</td>
 <td>ANAPC1 rs3814026 C&gt;T associated with paclitaxel-cisplatin chemotherapy response/survival in advanced non-small-cell lung cancer patients — a treatment-response pharmacogenomic association, not a COPD/airway-disease risk association, and unrelated to the COPD credible-set variant</td>
 <td>Hong MJ et al., Oncotarget 2016. PMID 26893365, DOI 10.18632/oncotarget.7433</td>
@@ -519,7 +203,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ANAPC1</td>
+<td class="gene">ANAPC1</td>
 <td>Immune (generic, not COPD-specific)</td>
 <td>HIV-1 Vpr protein degrades APC1/ANAPC1 in CD4+ T cells and macrophages as part of HIV's cell-cycle-arrest strategy</td>
 <td>Barbosa JAF et al., Journal of Virology 2021. PMID 34011540, DOI 10.1128/JVI.00971-20</td>
@@ -527,7 +211,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ANAPC1</td>
+<td class="gene">ANAPC1</td>
 <td>Immune (generic, not COPD-specific)</td>
 <td>Altered APC/C-related gene expression (including CDH1 coactivator) associated with impaired T-lymphocyte proliferation in Alzheimer's disease/MCI patients</td>
 <td>Monllor P et al., Cellular and Molecular Neurobiology 2026. PMID 41986739, DOI 10.1007/s10571-026-01725-7</td>
@@ -535,47 +219,47 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ANAPC1</td>
+<td class="gene">ANAPC1</td>
 <td>Immune (correlative bioinformatics, generic, not COPD-specific)</td>
-<td>ANAPC1 identified as one of four &quot;hub genes&quot; (alongside PI3, EEF1A1, PSMD2) whose blood expression differs between ARDS and control samples and correlates with immune-cell infiltration signatures; PSMD2 (not ANAPC1) was the most differentially expressed; purely correlative bioinformatics, no functional validation, and ARDS is a distinct acute lung-injury process from COPD</td>
+<td>ANAPC1 identified as one of four "hub genes" (alongside PI3, EEF1A1, PSMD2) whose blood expression differs between ARDS and control samples and correlates with immune-cell infiltration signatures; PSMD2 (not ANAPC1) was the most differentially expressed; purely correlative bioinformatics, no functional validation, and ARDS is a distinct acute lung-injury process from COPD</td>
 <td>Tu X et al., Current Medicinal Chemistry 2026. PMID 41568478, DOI 10.2174/0109298673407035251122102639</td>
 <td>VERIFIED; explicitly weak/exploratory and not COPD-specific</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>ANAPC1</td>
+<td class="gene">ANAPC1</td>
 <td>Immune (correlative bioinformatics, generic, not COPD-specific)</td>
-<td>ANAPC1 among several down-regulated genes in one comparison group of a COVID-19 &quot;retesting-positive&quot; blood-transcriptome bioinformatics study; purely exploratory, ANAPC1 not identified as a hub gene</td>
+<td>ANAPC1 among several down-regulated genes in one comparison group of a COVID-19 "retesting-positive" blood-transcriptome bioinformatics study; purely exploratory, ANAPC1 not identified as a hub gene</td>
 <td>Fang KY et al., Journal of Clinical Laboratory Analysis 2022. PMID 35657140, DOI 10.1002/jcla.24495</td>
 <td>VERIFIED; noted only for completeness, not weighted as meaningful evidence</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>POLR1B</td>
+<td class="gene">POLR1B</td>
 <td>Statistical genetics (locus-level; Open Targets structured lookup)</td>
 <td>POLR1B never receives an L2G score at rs3811038 across any of 33 credible sets tested there (12 GWAS + 21 molecular-QTL); every GWAS credible set assigns L2G to TTL instead. Chronic obstructive pulmonary disease does not appear anywhere in POLR1B's full 223-disease Open Targets association list (a stronger negative finding than a low rank)</td>
 <td>Open Targets Platform (structured DB; not a literature citation)</td>
-<td>CONTESTED (unanimous negative fine-mapping evidence, plus marginal/boundary-only physical overlap below)</td>
+<td><span class="tag-warning">CONTESTED</span> (unanimous negative fine-mapping evidence, plus marginal/boundary-only physical overlap below)</td>
 <td>n/a (DB lookup)</td>
 </tr>
 <tr>
-<td>POLR1B</td>
+<td class="gene">POLR1B</td>
 <td>Structural/positional (data-quality flag)</td>
 <td>POLR1B's GRCh38 coordinates (2:112,541,915-112,579,818) physically overlap the stated locus window (2:112,350,001-112,550,000) only at their extreme 5' end (~8,085 bp of a ~38 kb gene); ~38 kb of the gene body extends outside the window. POLR1B is not the nearest gene to the lead credible-set variant (~59.3 kb away vs. TTL, which contains it and is immediately, tandemly adjacent to POLR1B, ~176 bp apart)</td>
 <td>Ensembl REST <code>lookup/symbol</code> API + Open Targets <code>genomicLocation</code> field, independently cross-checked by both the researcher and the orchestrator (both sources agree exactly)</td>
-<td>CONTESTED (physical overlap is real but a boundary/tandem-adjacency artifact, not evidence of an independent signal)</td>
+<td><span class="tag-warning">CONTESTED</span> (physical overlap is real but a boundary/tandem-adjacency artifact, not evidence of an independent signal)</td>
 <td>2026-09-11 (orchestrator direct verification)</td>
 </tr>
 <tr>
-<td>POLR1B</td>
+<td class="gene">POLR1B</td>
 <td>Statistical genetics (Mendelian disease gene, not COPD)</td>
 <td>No PubMed literature was found linking POLR1B to COPD, spirometry/FEV1/FEV1-FVC, TWAS, colocalization, Mendelian randomization, or smoking-behavior GWAS of any kind (targeted searches each returned zero results)</td>
 <td>Absence-of-evidence search (no citation to report)</td>
-<td>CONTESTED/negative finding; consistent with Open Targets L2G data above</td>
+<td><span class="tag-warning">CONTESTED</span>/negative finding; consistent with Open Targets L2G data above</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>POLR1B</td>
+<td class="gene">POLR1B</td>
 <td>Statistical/structural (established Mendelian disease-gene discovery)</td>
 <td>Original identification of POLR1B as the fourth Treacher Collins syndrome (TCS)-causing gene (TCS4) via exome sequencing plus zebrafish polr1b knockdown reproducing a craniofacial phenotype via altered ribosomal gene expression, p53-dependent neuroepithelial apoptosis, and impaired neural-crest-cell derivative formation</td>
 <td>Sanchez E, Laplace-Builhé B, Mau-Them FT, et al., Genetics in Medicine 2020. PMID 31649276, DOI 10.1038/s41436-019-0669-9</td>
@@ -583,7 +267,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>POLR1B</td>
+<td class="gene">POLR1B</td>
 <td>Statistical (Mendelian genotype-phenotype)</td>
 <td>Recurrent POLR1B pathogenic variant (c.3007C&gt;T; p.Arg1003Cys) associated with atresia of the external auditory canal and microtia in TCS4, reinforcing POLR1B's craniofacial/otologic (not pulmonary) disease association</td>
 <td>Enomoto Y, Tsurusaki Y, Tominaga M, et al., Molecular Syndromology 2021. PMID 34012383, DOI 10.1159/000513224</td>
@@ -591,7 +275,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>POLR1B</td>
+<td class="gene">POLR1B</td>
 <td>Statistical (systematic review)</td>
 <td>Systematic review of TCOF1/POLR1D/POLR1C/POLR1B genotype-phenotype correlations in TCS, confirming POLR1B as one of four established TCS-causing genes with a variant hotspot in exon 15; no mention of a pulmonary/lower-airway phenotype</td>
 <td>Ulhaq ZS, Nurputra DK, Soraya GV, et al., Clinical Genetics 2022. PMID 36203321, DOI 10.1111/cge.14243</td>
@@ -599,7 +283,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>POLR1B</td>
+<td class="gene">POLR1B</td>
 <td>Structural (general TCS review, background)</td>
 <td>General review of TCS genetics/phenotype/management confirming the four-gene TCS etiology (TCOF1, POLR1C, POLR1D, POLR1B) and the craniofacial/otologic/orofacial phenotype spectrum</td>
 <td>Marszałek-Kruk BA, Wójcicki P, Dowgierd K, Śmigiel R, Genes 2021. PMID 34573374, DOI 10.3390/genes12091392</td>
@@ -607,7 +291,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>POLR1B</td>
+<td class="gene">POLR1B</td>
 <td>Structural (upper-airway respiratory phenotype of TCS, mechanistically distinct from COPD)</td>
 <td>High prevalence (44%) of polysomnography-confirmed obstructive sleep apnea in adult TCS patients, mechanistically linked to craniofacial/anthropometric anatomy (upper-airway), not intrinsic lung parenchymal or small-airway disease</td>
 <td>Fidélis-da-Silva LV, Kiemle-Trindade SH, Marzano-Rodrigues MN, et al., Sleep Science 2023. PMID 37425978, DOI 10.1055/s-0043-1770802</td>
@@ -615,7 +299,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>POLR1B</td>
+<td class="gene">POLR1B</td>
 <td>Structural (upper-airway respiratory phenotype of TCS, case report)</td>
 <td>Case report of severe obstructive sleep apnea management (CPAP plus bilateral hypoglossal nerve stimulation) in a TCS patient — an upper-airway/craniofacial mechanical problem</td>
 <td>Wong ACL, Jones A, Stone A, MacKay SG, Journal of Clinical Sleep Medicine 2023. PMID 36038987, DOI 10.5664/jcsm.10274</td>
@@ -623,7 +307,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>POLR1B</td>
+<td class="gene">POLR1B</td>
 <td>Structural (upper-airway respiratory phenotype of TCS, surgical)</td>
 <td>Mandibular distraction surgery relieves upper-airway obstruction/tracheostomy dependence in infants with severe mandibular hypoplasia, including TCS patients</td>
 <td>Brevi B, Bergonzani M, Zito F, Varazzani A, Sesenna E, Oral and Maxillofacial Surgery 2020. PMID 33128656, DOI 10.1007/s10006-020-00916-w</td>
@@ -631,7 +315,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>POLR1B</td>
+<td class="gene">POLR1B</td>
 <td>Structural (upper-airway respiratory phenotype of TCS, surgical)</td>
 <td>Mandibular distraction relieves obstructive sleep apnea/airway obstruction in TCS and Pierre Robin sequence patients via correction of micrognathia — a purely mechanical upper-airway problem</td>
 <td>Rachmiel A, Emodi O, Rachmiel D, Aizenbud D, International Journal of Oral and Maxillofacial Surgery 2014. PMID 25052572, DOI 10.1016/j.ijom.2014.06.013</td>
@@ -639,7 +323,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>POLR1B</td>
+<td class="gene">POLR1B</td>
 <td>Structural (ribosomopathy tissue-specificity, general, not lung)</td>
 <td>Ribosomopathies (including TCS) produce tissue-specific phenotypes, but the tissues documented (hematopoietic/bone marrow in Diamond-Blackfan anemia, craniofacial skeleton in TCS) do not include lung/airway; no pulmonary ribosomopathy phenotype is described</td>
 <td>Orgebin E, Lamoureux F, Isidor B, Charrier C, Ory B, Lézot F, Baud'huin M, Cells 2020. PMID 32932838, DOI 10.3390/cells9092080</td>
@@ -647,7 +331,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>POLR1B</td>
+<td class="gene">POLR1B</td>
 <td>Structural (ribosomopathy tissue-specificity model, general, not lung)</td>
 <td>An independent ribosome-biogenesis zebrafish model (Nol9) shows tissue-restricted defects (hematopoietic, pancreatic, hepatic, intestinal) with no lung/airway phenotype</td>
 <td>Bielczyk-Maczyńska E, Lam Hung L, Ferreira L, et al., PLoS Genetics 2015. PMID 26624285, DOI 10.1371/journal.pgen.1005677</td>
@@ -655,7 +339,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 <tr>
-<td>POLR1B</td>
+<td class="gene">POLR1B</td>
 <td>Immune/inflammatory</td>
 <td>No PubMed literature found connecting POLR1B to any immune-cell-specific biology, inflammatory program, or COPD-relevant immune pathway (targeted searches returned zero relevant hits)</td>
 <td>Absence-of-evidence search (no citation to report)</td>
@@ -663,7 +347,7 @@ by red-team-skeptic, which are gene-level verdicts, not citation exclusions).</p
 <td>2026-09-11</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
 <p><strong>TTL (ENSG00000114999):</strong></p>
 <ul>
@@ -673,7 +357,7 @@ upperBin=1 (moderately LoF-constrained). Missense oe=0.775, constraint score 1.7
 initiation (score 0.435); nicotine dependence, substance abuse, ADHD tied 3rd (0.321
 each); COPD ranked 6th (score 0.319, genetic_association sub-score 0.523).</li>
 <li>L2G at lead variant rs3811038: TTL scores ~0.86-0.87 across all 12 GWAS disease/trait
-credible sets present at this variant, including COPD/&quot;Chronic airway obstruction&quot;
+credible sets present at this variant, including COPD/"Chronic airway obstruction"
 (GCST90476027, L2G=0.861).</li>
 <li>Colocalization: COPD credible set colocalizes (h4~0.999) with 14 smoking/behavioral/
 socioeconomic-trait credible sets; zero colocalization with any spirometric trait, and
@@ -707,7 +391,7 @@ NOT physically overlap the stated locus window (2:112,350,001-112,550,000) — i
 ~465 kb centromeric of the window's start. This confirms (not merely repeats) the
 researcher's and red-team-skeptic's independently raised concern that ANAPC1's
 inclusion as a PoPS-prioritized candidate may not satisfy the locus file's own stated
-&quot;PoPS score &gt;0 and physically overlapped with the locus&quot; selection criterion.</li>
+"PoPS score &gt;0 and physically overlapped with the locus" selection criterion.</li>
 </ul>
 <p><strong>POLR1B (ENSG00000125630) — added on reopening:</strong></p>
 <ul>
@@ -719,12 +403,12 @@ constraint score 0.981 (neutral, as expected).</li>
 <li>Disease association (aggregate, full 223-disease list scanned in its entirety, not
 just top-25): dominant hit by far is Treacher Collins syndrome 4 (score 0.751,
 genetic_association 0.822) — POLR1B's established Mendelian craniofacial-dysostosis
-disease role. Further down: &quot;Chronic Obstructive Asthma&quot; (an asthma-COPD overlap
+disease role. Further down: "Chronic Obstructive Asthma" (an asthma-COPD overlap
 phenotype, EFO_0009759, score 0.190, genetic_association subscore 0.312 — traced to a
 single <code>gwas_credible_sets</code> evidence entry whose variant/study fields both resolved
 to null in the Open Targets evidence API, so its source locus could not be
 identified; given POLR1B's zero L2G at rs3811038, this almost certainly reflects a
-different, unidentified locus, not this one). &quot;Lower respiratory tract disorder&quot;
+different, unidentified locus, not this one). "Lower respiratory tract disorder"
 scores 0.107. Modest literature-only (non-genetic) lung-cancer/carcinoma scores also
 appear. <strong>Chronic obstructive pulmonary disease (COPD) itself does NOT appear
 anywhere in POLR1B's full 223-disease list at all</strong> — a stronger negative finding
@@ -782,13 +466,13 @@ apnea from micrognathia) is exclusively upper-airway/mechanical, anatomically an
 mechanistically distinct from COPD's lower-airway/parenchymal pathophysiology; and no
 immune/inflammatory or lung-ribosomopathy literature was found for it at all.
 Red-team-skeptic marked POLR1B CONTESTED and explicitly concluded that its
-&quot;candidacy is a window/merge artifact rather than independent statistical-genetic
-evidence,&quot; driven by its tandem physical adjacency to TTL (~176 bp apart) rather than
+"candidacy is a window/merge artifact rather than independent statistical-genetic
+evidence," driven by its tandem physical adjacency to TTL (~176 bp apart) rather than
 any evidence of its own. The skeptic explicitly assessed and rejected the possibility
-that POLR1B's addition creates a tie or lowers confidence to INSUFFICIENT: &quot;the
+that POLR1B's addition creates a tie or lowers confidence to INSUFFICIENT: "the
 weaknesses are wildly asymmetric — TTL's problem is which pathway (smoking vs. lung)
 explains a real, strong signal, while POLR1B's problem is that it has no signal to
-explain.&quot;</li>
+explain."</li>
 </ul>
 <p>This synthesis agrees with red-team-skeptic's assessment on both alternative
 candidates: this is not a close call between TTL and either ANAPC1 or POLR1B.</p>
@@ -840,5 +524,7 @@ recommendation remains TTL, held with LOW confidence and an explicit caveat that
 locus may be primarily a smoking/nicotine-behavior locus rather than a lung-biology
 locus.</p>
 
+        </div>
+    </div>
 </body>
 </html>
