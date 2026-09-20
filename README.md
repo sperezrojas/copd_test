@@ -1,3 +1,3 @@
 # copd_test
 
-<a href="index.html">Click here to visit my about page!</a>
+[Visit the Live Website]("https://sperezrojas.github.io/copd_test/")
