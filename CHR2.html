@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chromosome 17</title>
+    <title>Chromosome 2</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
   <div class="sidebar-section">
     <div class="sidebar-title">Chromosomes</div>
     <a class="nav-link" href="CHR1.html">CHR1</a>
-    <a class="nav-link" href="CHR2.html">CHR2</a>
+    <a class="nav-link active" href="CHR2.html">CHR2</a>
     <a class="nav-link" href="CHR3.html">CHR3</a>
     <a class="nav-link" href="CHR4.html">CHR4</a>
     <a class="nav-link" href="CHR5.html">CHR5</a>
@@ -37,7 +37,7 @@
     <a class="nav-link" href="CHR14.html">CHR14</a>
     <a class="nav-link" href="CHR15.html">CHR15</a>
     <a class="nav-link" href="CHR16.html">CHR16</a>
-    <a class="nav-link active" href="CHR17.html">CHR17</a>
+    <a class="nav-link" href="CHR17.html">CHR17</a>
     <a class="nav-link" href="CHR18.html">CHR18</a>
     <a class="nav-link" href="CHR19.html">CHR19</a>
     <a class="nav-link" href="CHR20.html">CHR20</a>
@@ -48,7 +48,7 @@
 
     <div id="main-content">
         <div id="display-area" class="content-card">
-            <h1>Chromosome 17</h1>
+            <h1>Chromosome 2</h1>
 
             <div class="controls">
 
@@ -68,7 +68,7 @@
             </div>
 
             <div class="image-container">
-                <img id="plotImage" src="" alt="Regional Association plot for Chromosome 17" style="display: none;" onerror="handleImageError()">
+                <img id="plotImage" src="" alt="Regional Association plot for Chromosome 2" style="display: none;" onerror="handleImageError()">
                 <div id="placeholder" class="placeholder-text">
                     Select a locus to view.
                 </div>
@@ -110,12 +110,30 @@
 <script>
     // Configuration of plots available for each item
     const dataset = {
-        "chr17": [
-            { id: 1, name: "17:32000001-32150000", filename: "plots/chr17-32000001-32150000.png" },
-            { id: 2, name: "17:34500001-34650000", filename: "plots/chr17-34500001-34650000.png" },
-            { id: 3, name: "17:39150001-40150000", filename: "plots/chr17-39150001-40150000.png" },
-            { id: 4, name: "17:45850001-46100000", filename: "plots/chr17-45850001-46100000.png" },
-            { id: 5, name: "17:49200001-49450000", filename: "plots/chr17-49200001-49450000.png" }
+        "chr2": [
+            { id: 1, name: "2:300001-550000", filename: "plots/chr2-300001-550000.png" },
+            { id: 2, name: "2:550001-750000", filename: "plots/chr2-550001-750000.png" },
+            { id: 3, name: "2:4700001-5000000", filename: "plots/chr2-4700001-5000000.png" },
+            { id: 4, name: "2:22150001-22600000", filename: "plots/chr2-22150001-22600000.png" },
+            { id: 5, name: "2:23050001-23500000", filename: "plots/chr2-23050001-23500000.png" },
+            { id: 6, name: "2:43600001-43800000", filename: "plots/chr2-43600001-43800000.png" },
+            { id: 7, name: "2:44800001-45050000", filename: "plots/chr2-44800001-45050000.png" },
+            { id: 8, name: "2:55750001-55900000", filename: "plots/chr2-55750001-55900000.png" },
+            { id: 9, name: "2:61850001-62250000", filename: "plots/chr2-61850001-62250000.png" },
+            { id: 10, name: "2:75900001-76300000", filename: "plots/chr2-75900001-76300000.png" },
+            { id: 11, name: "2:102200001-102550000", filename: "plots/chr2-102200001-102550000.png" },
+            { id: 12, name: "2:103100001-104150000", filename: "plots/chr2-103100001-104150000.png" },
+            { id: 13, name: "2:105200001-105450000", filename: "plots/chr2-105200001-105450000.png" },
+            { id: 14, name: "2:106850001-107100000", filename: "plots/chr2-106850001-107100000.png" },
+            { id: 15, name: "2:112350001-112550000", filename: "plots/chr2-112350001-112550000.png" },
+            { id: 16, name: "2:143550001-143800000", filename: "plots/chr2-143550001-143800000.png" },
+            { id: 17, name: "2:144500001-145750000", filename: "plots/chr2-144500001-145750000.png" },
+            { id: 18, name: "2:147650001-148100000", filename: "plots/chr2-147650001-148100000.png" },
+            { id: 19, name: "2:166000001-166250000", filename: "plots/chr2-166000001-166250000.png" },
+            { id: 20, name: "2:173000001-173300000", filename: "plots/chr2-173000001-173300000.png" },
+            { id: 21, name: "2:200150001-200450000", filename: "plots/chr2-200150001-200450000.png" },
+            { id: 22, name: "2:228450001-228800000", filename: "plots/chr2-228450001-228800000.png" },
+            { id: 23, name: "2:241500001-241850000", filename: "plots/chr2-241500001-241850000.png" },
         ]
     };
 
@@ -138,7 +156,7 @@
 
     // Populate plot dropdown based on selected item
     function updatePlotOptions() {
-        const plots = dataset["chr17"] || [];
+        const plots = dataset["chr2"] || [];
         
         plotSelect.innerHTML = '';
         plots.forEach((plot, index) => {
@@ -154,14 +172,14 @@
     // Load and display the current selected plot image
     function displayPlot() {
         const plotIndex = parseInt(plotSelect.value, 10);
-        const plots = dataset["chr17"] || [];
+        const plots = dataset["chr2"] || [];
 
         if (plots && plots[plotIndex]) {
             const currentPlot = plots[plotIndex];
             const plotFileKey = currentPlot.filename
                 .replace(/^plots\//, '')
                 .replace(/\.png$/, '')
-                .replace('chr17-', ''); // Remove "chr1" prefix if present
+                .replace('chr2-', ''); // Remove "chr1" prefix if present
             plotImage.src = currentPlot.filename;
             plotImage.style.display = 'block';
             placeholder.style.display = 'none';
@@ -212,12 +230,12 @@
      */
     function getEvidenceTablePath(plotFileKey) {
     // e.g. "LOC001" → "files/LOC001_evidence_table.html"
-    return `tables/17_${plotFileKey}.html`;
+    return `tables/2_${plotFileKey}.html`;
     }
 
     function getAuditReportPath(plotFileKey) {
     // e.g. "LOC001" → "files/LOC001_audit_report.html"
-    return `audits/17_${plotFileKey}_audit_report.html`;
+    return `audits/2_${plotFileKey}_audit_report.html`;
     }
 
     /**
