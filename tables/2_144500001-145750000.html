@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Table — Locus 2:144500001-145700000 (nearest gene ZEB2)</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="sidebar">
+        <div class="sidebar-header">
+            🧬 Agentic Gene Prioritization<br>Dashboard
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Overview</div>
+            <a class="nav-link" href="../index.html">🏠 Home</a>
+            <a class="nav-link" href="../methods.html">🔬 Methods</a>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Chromosomes</div>
+            <a class="nav-link" href="../CHR1.html">CHR1</a>
+            <a class="nav-link active" href="../CHR2.html">CHR2</a>
+            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link" href="../CHR5.html">CHR5</a>
+            <a class="nav-link" href="../CHR6.html">CHR6</a>
+            <a class="nav-link" href="../CHR7.html">CHR7</a>
+            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link" href="../CHR9.html">CHR9</a>
+            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link" href="../CHR11.html">CHR11</a>
+            <a class="nav-link" href="../CHR12.html">CHR12</a>
+            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link" href="../CHR15.html">CHR15</a>
+            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link" href="../CHR17.html">CHR17</a>
+            <a class="nav-link" href="../CHR18.html">CHR18</a>
+            <a class="nav-link" href="../CHR19.html">CHR19</a>
+            <a class="nav-link" href="../CHR20.html">CHR20</a>
+            <a class="nav-link" href="../CHR21.html">CHR21</a>
+            <a class="nav-link" href="../CHR22.html">CHR22</a>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="content-card">
+            
+
+<h1> Evidence Table — Locus 2:144,500,001-145,750,000 (nearest gene ZEB2)</h1>
+
+<div class="summary">
+    
+    <p>Lead variant: rs10204857 (PIP=0.063, intergenic). 164-variant ABF fine-mapped credible set,
+spanning &gt;1.2 Mb, clustering into three physically distinct sub-regions (see Open Targets
+and researcher checkpoint for detail). Candidate genes: ZEB2 (nearest/FLAMES/PoPS-prioritized,
+the only protein-coding gene anywhere in or near this window), GTDC1 (MAGMA-prioritized;
+HGNC-renamed <strong>QTMAN</strong>), and three lncRNAs directly intersected by credible-set variant
+clusters (LINC01412, TEX41, LINC01966). No ABC-prioritized gene reported.</p>
+
+<p>Only citations with citation-verifier verdict <strong>VERIFIED</strong> appear below. Six citations
+received a <strong>CLAIM_MISMATCH</strong> verdict and are excluded from this table — see
+<code>audits/2_144500001-145700000_audit.md</code> for the full list and reasoning. TEX41 was marked
+<strong>CONTESTED</strong> by the red-team-skeptic; its rows below are still the verified citations that
+exist for it, but every one of them is flagged CONTESTED in the Skeptic verdict column
+because none is COPD- or lung-relevant (see audit file for full reasoning).</p></div>
+
+
+<div class="evidence-table-wrapper"><table class="evidence-table">
+<thead>
+<tr>
+<th>Candidate gene</th>
+<th>Evidence type</th>
+<th>Claim</th>
+<th>Source (PMID/DOI)</th>
+<th>Skeptic verdict</th>
+<th>Verified date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="gene">ZEB2</td>
+<td>Statistical genetics (COPD GWAS candidate-gene naming)</td>
+<td>82-locus COPD GWAS meta-analysis explicitly names "ZEB2 at 2q22.3" as a high-ranking candidate gene</td>
+<td>PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
+<td><span class="tag-warning">WEAKENED</span> — real, gene-specific support, but itself likely a nearest-gene-based annotation in the source paper, not independent fine-mapping/coloc evidence</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td class="gene">ZEB2</td>
+<td>Statistical genetics (credible-set variant, alternative-phenotype GWAS)</td>
+<td>rs10496964 (within this locus's credible set, intronic to LINC01412, ~100kb downstream of ZEB2) associated with genetic generalized/absence epilepsy, OR[T]=0.68, p=9.1×10⁻⁹; source paper explicitly names ZEB2 at 2q22.3 as candidate gene</td>
+<td>PMID 22949513 / DOI 10.1093/hmg/dds373</td>
+<td><span class="tag-warning">WEAKENED</span> / flagged by skeptic as under-weighted alternative-hypothesis evidence — a verified neurological-phenotype hit at this exact locus raises (not lowers) the possibility this signal acts via ZEB2's neurodevelopmental biology rather than pulmonary structural biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td class="gene">ZEB2</td>
+<td>Structural/developmental lung biology</td>
+<td>ZEB2 (with Smad/p38 MAPK/NF-κB signaling) mediates N-cadherin upregulation during TWEAK+TGF-β1-induced EMT in human bronchial epithelial cells (BEAS-2B); disease context discussed is asthma/airway remodeling, not COPD specifically</td>
+<td>PMID 25890309 / DOI 10.1186/s12931-015-0207-5</td>
+<td><span class="tag-warning">WEAKENED</span> — positionally disconnected from the credible set's top-PIP cluster (~830kb-1Mb away); asthma, not COPD, context</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td class="gene">ZEB2</td>
+<td>Structural + immune (disease-matched mechanistic)</td>
+<td>miR-200b is downregulated in lungs of a COPD/emphysema mouse model; ZEB2 is a direct, luciferase-validated miR-200b target; ZEB2 overexpression blocks miR-200b's protective anti-senescence/anti-inflammatory effect</td>
+<td>PMID 32070140 / DOI 10.1080/21691401.2020.1725029</td>
+<td><span class="tag-warning">WEAKENED</span> — best disease-matched mechanistic evidence at this locus, but a single study, not corroborated elsewhere; does not resolve the credible-set/gene-body distance problem</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td class="gene">ZEB2</td>
+<td>Immunology/inflammation (nonspecific)</td>
+<td>ZEB1/ZEB2 broadly expressed across myeloid (dendritic cell, macrophage, monocyte) and lymphoid (B, T, NK) immune lineages, regulating differentiation/maintenance/function transcriptional networks</td>
+<td>PMID 30956067 / DOI 10.1016/j.it.2019.03.001</td>
+<td><span class="tag-warning">WEAKENED</span> — explicitly nonspecific to COPD, general immunology review</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td class="gene">ZEB2</td>
+<td>Immunology/inflammation (nonspecific)</td>
+<td>Zeb2 required for differentiation/maintenance of a long-lived effector (KLRG1+) invariant NKT cell population (murine), by preventing apoptosis; dispensable for thymic iNKT development</td>
+<td>PMID 37903859 / DOI 10.1038/s42003-023-05421-w</td>
+<td><span class="tag-warning">WEAKENED</span> — nonspecific to COPD, murine model</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td class="gene">ZEB2</td>
+<td>Immunology/inflammation (tangential)</td>
+<td>Zeb2 listed among genes downregulated in NK cell progenitors upon Tcf1 loss (murine)</td>
+<td>PMID 34917097 / DOI 10.3389/fimmu.2021.791220</td>
+<td><span class="tag-warning">WEAKENED</span> — tangential mention, not a primary Zeb2 study, nonspecific to COPD</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td class="gene">ZEB2</td>
+<td>Statistical genetics (locus-class background, non-gene-specific)</td>
+<td>General background establishing this genomic neighborhood as a well-replicated class of tobacco/alcohol-use GWAS loci (406 loci for stages of tobacco use) — no SNP-specific claim tying this locus/ZEB2 to smoking</td>
+<td>PMID 30643251 / DOI 10.1038/s41588-018-0307-5</td>
+<td><span class="tag-warning">WEAKENED</span> — establishes locus-class only, not a gene-specific or SNP-specific finding</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td class="gene">GTDC1 (HGNC-renamed QTMAN)</td>
+<td>Structural (molecular function, no disease framing)</td>
+<td>GTDC1/QTMAN encodes the queuosine-tRNA mannosyltransferase, characterized biochemically; no tissue-specific or disease role reported for this enzyme</td>
+<td>PMID 40899493 / DOI 10.1002/anie.202508499</td>
+<td><span class="tag-warning">WEAKENED</span> — pure background biochemistry; gene lies 31-390kb outside the locus boundary, is not overlapped by any credible-set variant, and is LoF-tolerant (opposite of ZEB2's constraint profile)</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td class="gene">TEX41</td>
+<td>Statistical genetics (eQTL, off-credible-set, non-COPD phenotype)</td>
+<td>rs4662380 (near but NOT itself within this locus's credible set) is associated with KIT D816V+ mastocytosis risk and is an eQTL for TEX41 expression, p=2.55×10⁻⁶</td>
+<td>PMID 33421400 / DOI 10.1016/j.ajhg.2020.12.007</td>
+<td><span class="tag-warning">CONTESTED</span> — demonstrates local genetic control of TEX41 expression, but the variant is not in this locus's credible set and the disease context (mastocytosis) is COPD-irrelevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td class="gene">TEX41</td>
+<td>Structural (lung-cancer-metastasis biology, not airway/COPD biology)</td>
+<td>TEX41 promotes lung adenocarcinoma cell migration/invasion/autophagy via Runx2 upregulation in bone-metastasis xenograft/cell-line models</td>
+<td>PMID 36915748</td>
+<td><span class="tag-warning">CONTESTED</span> — lung-tissue-of-origin cancer/metastasis biology, not COPD/airway structural biology</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td class="gene">TEX41</td>
+<td>Immunology (non-COPD tumor-immune microenvironment)</td>
+<td>TEX41 expression correlates positively with several tumor-infiltrating immune cell types (M1 macrophages, Tregs, plasma cells, mast cells, CD8+ T cells, dendritic cells, Tfh cells) and negatively with others (M2 macrophages, resting NK cells, M0 macrophages) in melanoma tissue</td>
+<td>PMID 34795805 / DOI 10.1155/2021/2409820</td>
+<td><span class="tag-warning">CONTESTED</span> — melanoma tumor-microenvironment correlation; despite superficial overlap in immune-cell vocabulary with COPD-relevant programs, this does not transfer to COPD airway inflammation</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td class="gene">TEX41</td>
+<td>Structural (oncology, non-pulmonary)</td>
+<td>TEX41 implicated in hepatocellular carcinoma proliferation/migration/invasion</td>
+<td>PMID 40530148 / DOI 10.21037/tcr-2025-812</td>
+<td><span class="tag-warning">CONTESTED</span> — non-pulmonary oncology, not COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td class="gene">TEX41</td>
+<td>Structural (oncology, non-pulmonary)</td>
+<td>WTAP-dependent m6A methylation of TEX41 promotes renal cell carcinoma progression</td>
+<td>PMID 39433619 / DOI 10.1038/s41598-024-76326-9</td>
+<td><span class="tag-warning">CONTESTED</span> — non-pulmonary oncology, not COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td class="gene">TEX41</td>
+<td>Structural (oncology, non-pulmonary)</td>
+<td>TEX41 promotes proliferation/migration of cutaneous squamous cell carcinoma cells</td>
+<td>PMID 38279424 / DOI 10.14715/cmb/2023.69.14.42</td>
+<td><span class="tag-warning">CONTESTED</span> — non-pulmonary oncology, not COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td class="gene">TEX41</td>
+<td>Structural (oncology, non-pulmonary)</td>
+<td>IRF4-activated TEX41 promotes malignant behaviors of melanoma cells</td>
+<td>PMID 34915882 / DOI 10.1186/s12885-021-09039-1</td>
+<td><span class="tag-warning">CONTESTED</span> — non-pulmonary oncology, not COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td class="gene">TEX41</td>
+<td>Structural (oncology, non-pulmonary, pediatric)</td>
+<td>TEX41 is upregulated in pediatric B-cell acute lymphoblastic leukemia and necessary for leukemic cell growth</td>
+<td>PMID 34233751 / DOI 10.1186/s40364-021-00307-7</td>
+<td><span class="tag-warning">CONTESTED</span> — non-pulmonary oncology, not COPD-relevant</td>
+<td>2026-09-11</td>
+</tr>
+</tbody>
+</table></div>
+<p>LINC01412 and LINC01966 have no VERIFIED (or any) dedicated literature citations and
+therefore have no rows in this table; see the audit file and Prioritized-gene section below
+for how they were handled.</p>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
+<p>Queried via the Open Targets Platform GraphQL API on 2026-09-11 for disease term
+MONDO_0005002 (chronic obstructive pulmonary disease). Locus-to-gene (L2G) and
+colocalization data could NOT be resolved for this locus's own credible set — this internal
+GWAS is not an Open Targets-indexed study, so no L2G/coloc evidence is available from this
+source for any gene at this locus; this limitation is reported explicitly rather than
+omitted.</p>
+<ul>
+<li><strong>ZEB2</strong> (ENSG00000169554, protein_coding): gnomAD genetic constraint — lof score=1,
+oe=0.058 (oeLower 0.031, oeUpper 0.114), most-constrained bin (upperBin6=0); mis
+score=5.64, oe=0.612; syn score=1.25, oe=0.904. Strongly LoF-intolerant, consistent with
+established ZEB2 haploinsufficiency (Mowat-Wilson syndrome, OT's top disease association
+for ZEB2 overall, score 0.83). Overall aggregated COPD association score in Open Targets:
+0.023 (driven entirely by a literature datatype score of 0.192; no genetic_association
+datatype contribution). COPD does not rank in ZEB2's top 25 disease associations overall.</li>
+<li><strong>GTDC1 / QTMAN</strong> (ENSG00000121964, protein_coding): Open Targets' own approvedSymbol
+("QTMAN") and approvedName ("queuosine-tRNA mannosyltransferase") confirm the HGNC rename.
+gnomAD constraint — lof score≈0 (~9.5×10⁻⁸), oe=1.028 (oeLower 0.722, oeUpper 1.492),
+least-constrained bin (upperBin6=5); mis score=0.59, oe=0.898; syn score=0.07, oe=0.987.
+Tolerant of LoF, unlike ZEB2. Overall COPD association score: 0.021 (genetic_association
+datatype score 0.034, no literature contribution).</li>
+<li><strong>LINC01412</strong> (ENSG00000232606, lncRNA): no data available — zero disease associations
+of any kind in Open Targets (count=0). No constraint data (lncRNAs are not scored for
+gnomAD constraint).</li>
+<li><strong>TEX41</strong> (ENSG00000226674, lncRNA): overall COPD association score 0.006 (literature
+datatype score 0.049 only — very weak). No constraint data (lncRNA).</li>
+<li><strong>LINC01966</strong> (ENSG00000268580, lncRNA): no data available — zero disease associations of
+any kind in Open Targets (count=0). No constraint data (lncRNA).</li>
+</ul>
+<h2 id="prioritized-gene">Prioritized gene</h2>
+<p><strong>ZEB2 — Confidence: MODERATE</strong></p>
+<p>ZEB2 is the best-supported candidate gene at this locus, but the case is genuinely mixed
+and should not be overstated. In favor: ZEB2 is the sole protein-coding gene anywhere in or
+near this &gt;1.2 Mb window (all other candidates are lncRNAs identified only by incidental
+credible-set variant overlap, or — for GTDC1/QTMAN — a gene sitting entirely outside the
+locus boundary); it is prioritized by three of four internal methods (nearest gene, FLAMES,
+PoPS); it is explicitly named "ZEB2 at 2q22.3" as a candidate gene in a prior, verified
+82-locus COPD GWAS (PMID 30804561); it has verified, disease-matched mechanistic evidence
+directly in a COPD/emphysema model (the miR-200b/ZEB2/senescence-inflammation axis, PMID
+32070140) plus verified EMT/airway-remodeling biology in bronchial epithelial cells (PMID
+25890309, albeit an asthma-context study); and it is strongly constrained against
+loss-of-function (gnomAD oe=0.058), consistent with a dosage-sensitive disease mechanism.</p>
+<p>Against overconfidence: the credible set's single highest-PIP cluster (including the lead
+variant rs10204857) sits ~830 kb-1 Mb from ZEB2's gene body, and no eQTL or colocalization
+evidence was found anywhere in this review tying that cluster — or any other part of the
+credible set — to ZEB2 expression specifically; this remains substantially a nearest-gene/
+sole-protein-coding-gene inference rather than a fine-mapping-resolved one. Four of the five
+citations originally built around a "smoking-initiation" narrative for the top-PIP cluster
+were downgraded to CLAIM_MISMATCH by the citation-verifier (see audit file), including one
+genuine misattribution — so that narrative is now substantially unsupported by verified
+literature, not just weakened. Separately, a verified epilepsy GWAS hit (PMID 22949513,
+rs10496964, within this credible set, also naming ZEB2) is flagged by the red-team-skeptic
+as under-weighted evidence for an alternative, neurodevelopmental/neurobehavioral mechanism
+(consistent with ZEB2's known role in Mowat-Wilson syndrome) rather than a pulmonary-
+structural one — this tension between disease-matched pulmonary mechanistic evidence and a
+verified CNS-phenotype hit at the same locus is genuinely unresolved. No FEV1/FEV1-FVC-
+specific association was found for this locus at all, which is a real evidentiary gap per
+this pipeline's prior favoring spirometric concordance. The red-team-skeptic was also
+unable to run any independent search for this locus (WebSearch budget exhausted before any
+query completed), so this critique reflects re-analysis of existing findings only, not an
+independently corroborated absence of contradicting literature.</p>
+<p>Runner-up consideration: <strong>TEX41</strong> was evaluated because a large sub-cluster of the credible
+set (~20 variants) sits in its introns, including the locus's one directly-COPD-attributed
+variant (rs13428413) — but that attribution failed citation verification (CLAIM_MISMATCH),
+a second TEX41 credible-set-variant disease attribution was a genuine misattribution
+(CLAIM_MISMATCH), and TEX41's only verified literature is entirely non-pulmonary oncology
+plus one off-credible-set eQTL in a disease-irrelevant context (mastocytosis). The
+red-team-skeptic marked TEX41 <strong>CONTESTED</strong>. It is not a credible runner-up on current
+evidence. GTDC1/QTMAN, LINC01412, and LINC01966 all have negligible-to-zero
+disease-relevant evidence and are not viable alternatives (weakened, not contested — no
+affirmative evidence exists on either side for these three).</p>
+<p>What would resolve the remaining uncertainty: (1) an eQTL or colocalization study directly
+linking the credible set's top-PIP cluster (~145.35-145.42 Mb) to ZEB2 expression in lung
+or relevant tissue; (2) a direct FEV1/FEV1-FVC spirometry GWAS hit at this locus, to
+establish pulmonary-function concordance; (3) resolution of whether the Cosentino et al.
+2023 and Sakornsakolpat et al. 2019 supplementary tables actually list this locus's specific
+credible-set variants (neither this pipeline's researcher nor its red-team-skeptic had tool
+access to check supplementary materials); (4) smoking-adjusted COPD GWAS results at this
+locus, to formally test whether the association attenuates after conditioning on smoking
+behavior — directly bearing on this pipeline's smoking-mediated-signal prior. Given these
+open items, MODERATE (not HIGH) confidence is assigned: ZEB2 is the clear best pick among
+the candidates evaluated, but the mechanism (pulmonary-structural vs. smoking/neurobehavioral-
+mediated) and the physical link between the top signal and the gene remain unresolved.</p>
+
+        </div>
+    </div>
+</body>
+</html>
