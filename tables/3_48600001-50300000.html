@@ -20,9 +20,9 @@
 
         <div class="sidebar-section">
             <div class="sidebar-title">Chromosomes</div>
-            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR1.html">CHR1</a>
             <a class="nav-link" href="../CHR2.html">CHR2</a>
-            <a class="nav-link" href="../CHR3.html">CHR3</a>
+            <a class="nav-link active" href="../CHR3.html">CHR3</a>
             <a class="nav-link" href="../CHR4.html">CHR4</a>
             <a class="nav-link" href="../CHR5.html">CHR5</a>
             <a class="nav-link" href="../CHR6.html">CHR6</a>
@@ -52,11 +52,15 @@
 <h1 id="evidence-table-locus-348600001-50300000-nearest-gene-bsn">Evidence table: locus 3:48,600,001-50,300,000 (nearest gene BSN)</h1><div class="summary"><p>Lead variant: rs1873625 (3:49,629,531, intronic in BSN, PIP=0.145). Candidate genes from
 internal pipeline: nearest/MAGMA = BSN; PoPS = DAG1; ABC = GPX1. Credible set additionally
 spans MST1 (missense rs3197999, PIP=0.054), APEH, RNF123, RHOA, NICN1, AMT, BSN-DT, and one
-intergenic variant. Full locus detail: <code>loci/3_48600001-50300000.md</code>.</p><p>All rows below carry verdict VERIFIED from citation-verifier (existence, non-retraction,
+intergenic variant. Full locus detail: <code>loci/3_48600001-50300000.md</code>.</p>
+
+<p>All rows below carry verdict VERIFIED from citation-verifier (existence, non-retraction,
 and claim-correspondence confirmed against abstracts/full text on 2026-09-11) unless noted.
 The "Skeptic verdict" column reflects the red-team-skeptic's per-gene overall judgment
-(WEAKENED / CONTESTED / SUPPORTED), not a per-citation verdict — see
-<code>audits/3_48600001-50300000_audit.md</code> for the skeptic's full per-gene reasoning.</p></div>
+(WEAKENED / CONTESTED / SUPPORTED), not a per-citation verdict.
+
+<!-- see
+<code>audits/3_48600001-50300000_audit.md</code> for the skeptic's full per-gene reasoning.</p> --> </div>
 
 
 <div class="evidence-table-wrapper"><table class="evidence-table">
@@ -276,7 +280,7 @@ The "Skeptic verdict" column reflects the red-team-skeptic's per-gene overall ju
 <td>Structural (oxidative stress, brain not lung)</td>
 <td>APEH activity inhibited by lipid peroxidation products; e-cigarette vapor exposure decreases APEH activity in mouse brain</td>
 <td>Tyler et al. 2021, PMID 34508712 / DOI 10.1016/j.cbi.2021.109639</td>
-<td>SUPPORTED (as "thin/no evidence") — not independently re-searched by skeptic; tissue mismatch (brain, not lung)</td>
+<td><span class="tag">SUPPORTED</span> (as "thin/no evidence") — not independently re-searched by skeptic; tissue mismatch (brain, not lung)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -284,7 +288,7 @@ The "Skeptic verdict" column reflects the red-team-skeptic's per-gene overall ju
 <td>Negative/tangential</td>
 <td>APEH activity evaluated as PD biomarker in peripheral blood; no COPD/lung relevance found</td>
 <td>Di Costanzo et al. 2025, PMID 41436906 / DOI 10.1007/s12035-025-05624-8</td>
-<td>SUPPORTED (as "thin/no evidence")</td>
+<td><span class="tag">SUPPORTED</span> (as "thin/no evidence")</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -381,6 +385,8 @@ The "Skeptic verdict" column reflects the red-team-skeptic's per-gene overall ju
 as a possible GPX1-COPD association study but received verdict <strong>CLAIM_MISMATCH</strong> from
 citation-verifier (the paper's own conclusion credits GSTP1/CAT/NQO1/SOD3, not GPX1, with
 the COPD association) — excluded from this table; see audit appendix.</p>
+
+
 <h2 id="gwas-catalog-cross-trait-associations-structured-database-lookup-not-verified-literature--context-only">GWAS Catalog cross-trait associations (structured database lookup, NOT verified literature — context only)</h2>
 <p>During research, the researcher subagent looked up individual credible-set variants against
 the EBI GWAS Catalog REST API via WebFetch. This is a <strong>structured database lookup, like the

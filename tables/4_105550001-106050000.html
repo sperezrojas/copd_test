@@ -20,10 +20,10 @@
 
         <div class="sidebar-section">
             <div class="sidebar-title">Chromosomes</div>
-            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR1.html">CHR1</a>
             <a class="nav-link" href="../CHR2.html">CHR2</a>
             <a class="nav-link" href="../CHR3.html">CHR3</a>
-            <a class="nav-link" href="../CHR4.html">CHR4</a>
+            <a class="nav-link active" href="../CHR4.html">CHR4</a>
             <a class="nav-link" href="../CHR5.html">CHR5</a>
             <a class="nav-link" href="../CHR6.html">CHR6</a>
             <a class="nav-link" href="../CHR7.html">CHR7</a>
@@ -49,7 +49,10 @@
         <div class="content-card">
             
 
-<h1 id="evidence-table--locus-4105550001-106050000-nearest-gene-npnt">Evidence table — Locus 4:105,550,001-106,050,000 (nearest gene: NPNT)</h1><div class="summary"><p><strong>Lead variant:</strong> rs34712979 (4:105,897,896, GRCh38; PIP = 0.99884 in ABF fine-mapping)
+<h1>Evidence Table — Locus 4:105550001-106050000</h1>
+
+<div class="summary">
+    <p><strong>Lead variant:</strong> rs34712979 (4:105,897,896, GRCh38; PIP = 0.99884 in ABF fine-mapping)
 <strong>Credible-set annotation:</strong> splice_region_variant, splice_polypyrimidine_tract_variant,
 intron_variant (in NPNT); VEP impact = LOW
 <strong>Candidate genes considered:</strong> NPNT (nearest gene; sole pipeline-nominated candidate — no
@@ -79,7 +82,7 @@ Reservations are noted per-row where they apply most directly.</p></div>
 <td>GWAS locus discovery (statgen)</td>
 <td>CHARGE Consortium GWAS meta-analysis (~20,890 European-ancestry participants) identified the "INTS12-GSTCD-NPNT" 4q24 locus as genome-wide significant for FEV1; original signal did not distinguish which of the three genes was causal.</td>
 <td>Hancock et al. 2010, Nat Genet. PMID 20010835, DOI 10.1038/ng.500</td>
-<td>VERIFIED (citation); locus-level only, does not itself distinguish NPNT from neighbors</td>
+<td><span class="tag">Verified</span> (citation); locus-level only, does not itself distinguish NPNT from neighbors</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -87,7 +90,7 @@ Reservations are noted per-row where they apply most directly.</p></div>
 <td>GWAS replication + smoking-independence (statgen)</td>
 <td>In ~50,000 UK Biobank/UK BiLEVE participants, an independent genome-wide-significant signal at NPNT (distinct from the original INTS12/GSTCD signal) was associated with FEV1 extremes; NPNT/other FEV1 loci were also associated with COPD "including in individuals with no history of smoking," and NPNT was genetically distinguishable from smoking-behavior loci (NCAM1, TEX41/PABPC1P2) in the same dataset.</td>
 <td>Wain et al. 2015, Lancet Respir Med. PMID 26423011, DOI 10.1016/S2213-2600(15)00283-0</td>
-<td>VERIFIED (citation); supports direct-pulmonary- over smoking-mediated interpretation (prior #1)</td>
+<td><span class="tag">Verified</span> (citation); supports direct-pulmonary- over smoking-mediated interpretation (prior #1)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -95,7 +98,7 @@ Reservations are noted per-row where they apply most directly.</p></div>
 <td>GWAS replication, multi-ancestry (statgen)</td>
 <td>Large multi-ancestry lung-function GWAS (400,102 individuals, 279 signals for FEV1/FEV1-FVC) found NPNT protein levels linked via a sentinel pQTL to the lung-function credible set (alongside ECM1, THBS4, C1QTNF5, SCARF2).</td>
 <td>Shrine et al. 2019, Nat Genet. PMID 30804560, DOI 10.1038/s41588-018-0321-7</td>
-<td>VERIFIED (citation), with nuance — the verified quote supports a pQTL link to the credible set, not a verbatim "NPNT/4q24 is one of the 279 named signals" statement; read narrowly</td>
+<td><span class="tag">Verified</span> (citation), with nuance — the verified quote supports a pQTL link to the credible set, not a verbatim "NPNT/4q24 is one of the 279 named signals" statement; read narrowly</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -103,7 +106,7 @@ Reservations are noted per-row where they apply most directly.</p></div>
 <td>sQTL / colocalization / functional splicing (statgen + structural)</td>
 <td>rs34712979 (the exact credible-set variant at this locus) is associated with alternative NPNT splice-junction use (GTEx lung sQTL + LTRC RNA-seq); this sQTL colocalizes with COPD case-control and spirometric-lung-function GWAS signals at 94% posterior probability. Long-read (ONT) sequencing found 13 NPNT isoforms (6 protein-coding); rs34712979 creates a cryptic splice acceptor site.</td>
 <td>Saferali et al. 2020 (medRxiv preprint). PMID 33173926, DOI 10.1101/2020.10.20.20203927</td>
-<td><span class="tag-warning">WEAKENED</span>VERIFIED (citation);  as sole proof of causality — colocalization is not proof of mechanism, and this is a preprint later refined by #5 below (same group)</td>
+<td><span class="tag">Verified</span> (citation); <span class="tag-warning">WEAKENED</span> as sole proof of causality — colocalization is not proof of mechanism, and this is a preprint later refined by #5 below (same group)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -111,7 +114,7 @@ Reservations are noted per-row where they apply most directly.</p></div>
 <td>sQTL / colocalization / functional splicing, published + refined (statgen + structural)</td>
 <td>Peer-reviewed refinement of the above: of four splicing changes from the rs34712979-A cryptic splice acceptor, only the cassette-exon-3 change was associated with COPD phenotypes; the COPD risk allele shifts isoform usage toward the exon-3-including "isoform A"; AlphaFold modeling indicates exon 3 inclusion disrupts an EGF-like domain in NPNT.</td>
 <td>Saferali et al. 2025, Eur Respir J. PMID 39978861, DOI 10.1183/13993003.01407-2024</td>
-<td><span class="tag-warning">WEAKENED</span>VERIFIED (citation);  — this is the single strongest mechanistic paper for this locus, but it is the same research group's own preprint-to-publication pipeline (not independent replication), and the structural claim rests on computational (AlphaFold) modeling, not wet-lab validation</td>
+<td><span class="tag">Verified</span> (citation); <span class="tag-warning">WEAKENED</span> — this is the single strongest mechanistic paper for this locus, but it is the same research group's own preprint-to-publication pipeline (not independent replication), and the structural claim rests on computational (AlphaFold) modeling, not wet-lab validation</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -119,7 +122,7 @@ Reservations are noted per-row where they apply most directly.</p></div>
 <td>TWAS / colocalization, contrasting result (statgen)</td>
 <td>A TWAS/multi-variant colocalization study of severe COPD and quantitative emphysema did NOT identify NPNT among its five colocalization-confirmed genes (PSMA4, EGLN2, WNT3, DCBLD1, LILRA3).</td>
 <td>Sakornsakolpat et al. 2018, Respir Res. PMID 29566699, DOI 10.1186/s12931-018-0744-9</td>
-<td>VERIFIED (citation); genuine, only partially explained discordant data point — flagged by red-team-skeptic as a live discrepancy, not fully resolved by methodological differences alone</td>
+<td><span class="tag">Verified</span> (citation); genuine, only partially explained discordant data point — flagged by red-team-skeptic as a live discrepancy, not fully resolved by methodological differences alone</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -127,7 +130,7 @@ Reservations are noted per-row where they apply most directly.</p></div>
 <td>Structural/developmental biology + innate immune (macrophage)</td>
 <td>Postnatal Npnt-knockout mice with LPS-induced acute lung injury showed thickened alveolar septa and increased BALF macrophages during injury-resolution phase; NPNT-deficient BALF was more chemotactic for macrophages in vitro (no in vivo chemokine differences by genotype).</td>
 <td>Wilson et al. 2022, PLoS One. PMID 35552565, DOI 10.1371/journal.pone.0268398</td>
-<td>VERIFIED (citation); acute-injury model only, not chronic COPD — macrophage-specific, no CD8+/Th17/neutrophil evidence found for NPNT</td>
+<td><span class="tag">Verified</span> (citation); acute-injury model only, not chronic COPD — macrophage-specific, no CD8+/Th17/neutrophil evidence found for NPNT</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -135,7 +138,7 @@ Reservations are noted per-row where they apply most directly.</p></div>
 <td>Developmental biology</td>
 <td>Integrin alpha8 (NPNT's receptor) is required for lung branching morphogenesis/alveolarization; alpha8-deficient explants show reduced growth/branching and enlarged endbuds; postnatal alpha8-deficient lungs show reduced alveolar surface area/septal length at P4/P7, rescued by increased septation by P90.</td>
 <td>Cremona et al. 2020, Front Physiol. PMID 33408636, DOI 10.3389/fphys.2020.530635</td>
-<td>VERIFIED (citation); studies the receptor (ITGA8), not NPNT directly — supportive but indirect</td>
+<td><span class="tag">Verified</span> (citation); studies the receptor (ITGA8), not NPNT directly — supportive but indirect</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -143,7 +146,7 @@ Reservations are noted per-row where they apply most directly.</p></div>
 <td>Structural biology, non-COPD disease context (IPF)</td>
 <td>NPNT expression reduced in IPF patient lung tissue, correlates with lung-function decline; NPNT deficiency exacerbates bleomycin-induced alveolar epithelial senescence and worsens fibrosis via loss of ITGA3-mediated YAP1 signaling; NPNT overexpression/escin improves lung function and reduces fibrosis in mice.</td>
 <td>Guo et al. 2025, Adv Sci. PMID 40444575, DOI 10.1002/advs.202501956</td>
-<td>VERIFIED (citation); IPF-specific, not COPD — Open Targets shows this pulmonary-fibrosis association is literature-only with no genetic-association support; directional tension with COPD isoform-shift mechanism (see audit)</td>
+<td><span class="tag">Verified</span> (citation); IPF-specific, not COPD — Open Targets shows this pulmonary-fibrosis association is literature-only with no genetic-association support; directional tension with COPD isoform-shift mechanism (see audit)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -151,7 +154,7 @@ Reservations are noted per-row where they apply most directly.</p></div>
 <td>Structural biology, non-COPD disease context (silicosis)</td>
 <td>Serum NPNT elevated in silicosis patients vs healthy controls, proposed as a fibrosis-progression biomarker, in context of silica-induced macrophage/Th-cell-mediated inflammation/fibrosis.</td>
 <td>Lee et al. 2019, Int J Mol Sci (review). PMID 31130697, DOI 10.3390/ijms20102581</td>
-<td>VERIFIED (citation); occupational fibrotic lung disease, not COPD; correlative biomarker evidence only</td>
+<td><span class="tag">Verified</span> (citation); occupational fibrotic lung disease, not COPD; correlative biomarker evidence only</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -159,7 +162,7 @@ Reservations are noted per-row where they apply most directly.</p></div>
 <td>Structural biology, non-COPD disease context (SSc-ILD)</td>
 <td>scRNA-seq of bleomycin-induced systemic sclerosis mouse lung fibrosis model identifies an NPNT-positive peri-alveolar fibroblast subpopulation (vs PI16-positive) with increased ECM gene expression after bleomycin.</td>
 <td>Maekawa et al. 2024, Biochem Biophys Res Commun. PMID 39608052, DOI 10.1016/j.bbrc.2024.151017</td>
-<td>VERIFIED (citation); systemic-sclerosis-ILD fibrosis model, not COPD</td>
+<td><span class="tag">Verified</span> (citation); systemic-sclerosis-ILD fibrosis model, not COPD</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -167,7 +170,7 @@ Reservations are noted per-row where they apply most directly.</p></div>
 <td>eQTL (statgen)</td>
 <td>Lung eQTL data: 4q24 FEV1 GWAS-associated SNPs act as an eQTL for INTS12 (not GSTCD) in multiple tissues.</td>
 <td>Obeidat et al. 2013, PLoS One. PMID 24058608, DOI 10.1371/journal.pone.0074630</td>
-<td>VERIFIED (citation); concerns the original, broader 4q24 signal, not rs34712979 specifically</td>
+<td><span class="tag">Verified</span> (citation); concerns the original, broader 4q24 signal, not rs34712979 specifically</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -175,7 +178,7 @@ Reservations are noted per-row where they apply most directly.</p></div>
 <td>Functional follow-up (structural)</td>
 <td>INTS12 regulates protein-synthesis-pathway genes in airway/lung cells; 4q24 lung-function polymorphisms correlate with INTS12, not GSTCD, expression.</td>
 <td>Kheirallah et al. 2017, BMC Genomics. PMID 28335732, DOI 10.1186/s12864-017-3628-3</td>
-<td>VERIFIED (citation); concerns the original, broader 4q24 signal, not rs34712979 specifically</td>
+<td><span class="tag">Verified</span> (citation); concerns the original, broader 4q24 signal, not rs34712979 specifically</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
