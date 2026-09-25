@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COPD GWAS locus evidence table — 16:51,950,001-52,250,000 (nearest gene TOX3)</title>
+    <title>Evidence Table — Locus 16:51950001-52250000</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
 
         <div class="sidebar-section">
             <div class="sidebar-title">Chromosomes</div>
-            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR1.html">CHR1</a>
             <a class="nav-link" href="../CHR2.html">CHR2</a>
             <a class="nav-link" href="../CHR3.html">CHR3</a>
             <a class="nav-link" href="../CHR4.html">CHR4</a>
@@ -35,7 +35,7 @@
             <a class="nav-link" href="../CHR13.html">CHR13</a>
             <a class="nav-link" href="../CHR14.html">CHR14</a>
             <a class="nav-link" href="../CHR15.html">CHR15</a>
-            <a class="nav-link" href="../CHR16.html">CHR16</a>
+            <a class="nav-link active" href="../CHR16.html">CHR16</a>
             <a class="nav-link" href="../CHR17.html">CHR17</a>
             <a class="nav-link" href="../CHR18.html">CHR18</a>
             <a class="nav-link" href="../CHR19.html">CHR19</a>
@@ -49,10 +49,16 @@
         <div class="content-card">
             
 
-<h1 id="copd-gwas-locus-evidence-table--1651950001-52250000-nearest-gene-tox3">COPD GWAS locus evidence table — 16:51,950,001-52,250,000 (nearest gene TOX3)</h1><div class="summary"><p><strong>Lead variant:</strong> rs17201148 (16:52,095,190, GRCh38), intronic in LINC02180, PIP=0.139 (the
+<h1>Evidence Table - Locus 16:51950001-52250000</h1>
+
+<div class="summary">
+    
+    <p><strong>Lead variant:</strong> rs17201148 (16:52,095,190, GRCh38), intronic in LINC02180, PIP=0.139 (the
 single highest-PIP variant in a diffuse ~50-variant credible set; no variant exceeds
 PIP~0.14). <strong>Candidate genes:</strong> TOX3 (nearest gene), C16orf97 (MAGMA- and PoPS-prioritized;
-resolves to LINC02911), LINC02180, LINC00919 (both credible-set genes).</p><p><strong>Key structural caveat (applies to the whole table below):</strong> C16orf97 resolves to LINC02911
+resolves to LINC02911), LINC02180, LINC00919 (both credible-set genes).</p>
+
+<p><strong>Key structural caveat (applies to the whole table below):</strong> C16orf97 resolves to LINC02911
 (NCBI Gene ID 388276), whose coordinates (chr16:52,005,486-52,078,516) sit essentially entirely
 inside the Ensembl gene body annotated as "LINC00919" (ENSG00000260268,
 chr16:52,005,425-52,085,177) -- confirmed by direct Ensembl REST coordinate lookup (structured
@@ -63,12 +69,13 @@ independent converging lines of evidence. Separately, TOX3's own gene body
 (chr16:52,436,415-52,547,801) does not physically overlap this locus at all -- it starts ~186
 kb beyond the locus's 3' boundary; TOX3 is included here only as the nearest gene by distance,
 and any TOX3-mediated mechanism at this locus would require long-range regulation, which is
-unconfirmed by any colocalization/eQTL evidence found in this review. Full detail and reasoning
+unconfirmed by any colocalization/eQTL evidence found in this review. 
+ <!--Full detail and reasoning
 for both points is in <code>evidence_tables/_status/16_51950001-52250000/critique.md</code> and
-<code>researcher.md</code>.</p></div>
+<code>researcher.md</code>.-->
+</p></div>
 
 
-<h2 id="evidence-table">Evidence table</h2>
 <div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
@@ -155,6 +162,7 @@ for both points is in <code>evidence_tables/_status/16_51950001-52250000/critiqu
 </tr>
 </tbody>
 </table></div>
+
 <h3 id="excluded-from-this-table-see-audit-appendix-for-full-reasoning">Excluded from this table (see audit appendix for full reasoning)</h3>
 <ul>
 <li>PMID 30643258 (Karlsson Linnér et al. 2019, Nat Genet) -- the single most load-bearing
@@ -165,8 +173,9 @@ though a follow-up structured-database re-check (GWAS Catalog REST API) strongly
 the underlying numeric claim. See audit appendix for full detail -- this is the single most
 important evidentiary judgment call at this locus.</li>
 </ul>
-<h2 id="open-targets-summary-structured-database-lookup----not-a-verified-literature-citation">Open Targets summary (structured database lookup -- not a verified literature citation;</h2>
-<p>did not go through citation-verifier or red-team-skeptic)</p>
+
+<h2 id="open-targets-summary-structured-database-lookup----not-a-verified-literature-citation">Open Targets summary (structured database lookup -- not a verified literature citation; 
+    did not go through citation-verifier or red-team-skeptic)</h2>
 <div class="evidence-table-wrapper"><table class="evidence-table">
 <thead>
 <tr>
@@ -203,7 +212,10 @@ important evidentiary judgment call at this locus.</li>
 </tr>
 </tbody>
 </table></div>
-<p>Full detail: <code>evidence_tables/_status/16_51950001-52250000/opentargets.md</code>.</p>
+
+<!--<p>Full detail: <code>evidence_tables/_status/16_51950001-52250000/opentargets.md</code>.</p>-->
+
+
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>Prioritized gene: LINC02180. Confidence: LOW.</strong></p>
 <p>This call is close and should be read as a tentative positional pick, not a confident

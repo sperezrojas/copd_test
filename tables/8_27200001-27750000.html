@@ -20,14 +20,14 @@
 
         <div class="sidebar-section">
             <div class="sidebar-title">Chromosomes</div>
-            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR1.html">CHR1</a>
             <a class="nav-link" href="../CHR2.html">CHR2</a>
             <a class="nav-link" href="../CHR3.html">CHR3</a>
             <a class="nav-link" href="../CHR4.html">CHR4</a>
             <a class="nav-link" href="../CHR5.html">CHR5</a>
             <a class="nav-link" href="../CHR6.html">CHR6</a>
             <a class="nav-link" href="../CHR7.html">CHR7</a>
-            <a class="nav-link" href="../CHR8.html">CHR8</a>
+            <a class="nav-link active" href="../CHR8.html">CHR8</a>
             <a class="nav-link" href="../CHR9.html">CHR9</a>
             <a class="nav-link" href="../CHR10.html">CHR10</a>
             <a class="nav-link" href="../CHR11.html">CHR11</a>
@@ -49,7 +49,9 @@
         <div class="content-card">
             
 
-<h1 id="evidence-table--locus-827200001-27750000-nearest-gene-clu-lead-variant-rs73229093">Evidence Table — Locus 8:27200001-27750000</h1><div class="summary"><p>Candidate genes evaluated: CLU (nearest, PoPS), CCDC25 (MAGMA), GULOP (credible-set-overlapping
+<h1>Evidence Table — Locus 8:27200001-27750000</h1>
+
+<div class="summary"><p>Candidate genes evaluated: CLU (nearest, PoPS), CCDC25 (MAGMA), GULOP (credible-set-overlapping
 pseudogene), plus CHRNA2 and EPHX2 (physically in the region, not flagged by any of the
 internal pipeline's four prioritization methods, but researched per standard practice since no
 method other than nearest/PoPS flagged a gene here). PTK2B, TRIM35, STMN4, and SCARA3 were also
@@ -281,14 +283,13 @@ biology asserted but not sourced) so it has no table row.</p></div>
 <td>Statistical genetics (lung-tissue TWAS, lung cancer not COPD)</td>
 <td>Large lung-tissue TWAS (~1,038 samples) names IREB2 (15q25) and AQP3 (9p13.3) as top hits; does NOT name CLU, EPHX2, CCDC25, or CHRNA2 among significant expression-level findings</td>
 <td>PMID 31696517 / (Int J Cancer 2020;146(7):1862-1878)</td>
-<td>VERIFIED negative finding — no expression-level (TWAS) support found for any of the four candidate genes at this locus (different phenotype: lung cancer)</td>
+<td><span class="tag">Verified</span>  negative finding — no expression-level (TWAS) support found for any of the four candidate genes at this locus (different phenotype: lung cancer)</td>
 <td>2020-04-01</td>
 </tr>
 </tbody>
 </table></div>
 <hr/>
-<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did">Open Targets summary (structured database lookup — NOT a verified literature citation; did</h2>
-<h2 id="not-go-through-citation-verifier-or-red-team-skeptic">not go through citation-verifier or red-team-skeptic)</h2>
+<h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did">Open Targets summary (structured database lookup — NOT a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
 <ul>
 <li><strong>CLU</strong> (ENSG00000120885): gnomAD LoF o/e 0.516 (not strongly constrained). COPD association
 score 0.109 (genetic_association sub-score 0.153). L2G at lead variant rs73229093: 0.137 for
@@ -325,6 +326,7 @@ credible sets are overwhelmingly smoking-behavior/nicotine-dependence/substance-
 psychiatric traits, plus COPD-diagnosis-based phenotypes (COPD, chronic airway obstruction,
 chronic bronchitis, COPD medication use), plus monocyte count and atherosclerosis.</li>
 </ul>
+
 <hr/>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>Gene: CHRNA2</strong>
@@ -348,6 +350,7 @@ spirometric traits, consistent with prior #1 (smoking-mediated effects must be a
 weighed against lung-intrinsic biology, not assumed away) and consistent with the complete
 absence of any FEV1/FEV1-FVC credible set at this locus (prior #2's expected concordance
 signal is simply missing here).</p>
+
 <p>This call should be read as <strong>a smoking-behavior-mediated mechanism, not a lung-intrinsic one</strong>
 — CHRNA2's own established biology is a CNS/neuronal nicotinic-receptor subunit implicated in
 nicotine reward/dependence, not a lung-expressed or airway-structural gene; no evidence found
@@ -366,6 +369,7 @@ single strongest statistical signal at this locus is for a non-pulmonary trait (
 count, L2G 0.69 — the highest score for any gene/trait pair examined), raising an unaddressed
 alternative hypothesis (comorbid cardiovascular/monocyte biology rather than airway-intrinsic
 mechanism).</p>
+
 <p><strong>Runner-up 2: EPHX2</strong> (not flagged by any of the four internal pipeline methods). This gene
 has the mechanistically strongest evidence in the entire locus — two independent in vivo
 Ephx2-knockout mouse studies plus a pharmacological inhibitor study, all concordant, directly
@@ -377,6 +381,7 @@ EPHX2 protein function matters for smoke-induced lung damage in mice, not that c
 regulatory variation at this human locus acts through EPHX2. It was also not flagged by any of
 the four internal pipeline prioritization methods, an absence that itself, per red-team-
 skeptic, warrants caution before promoting EPHX2 as a synthesis override.</p>
+
 <p><strong>What would resolve this three-way tie:</strong> a locus-specific eQTL or GWAS-colocalization study
 (in lung tissue for CLU/EPHX2, or in brain/neuronal tissue for CHRNA2) directly linking the
 credible-set variants (rs73229093 and correlated variants) to expression of a specific gene;

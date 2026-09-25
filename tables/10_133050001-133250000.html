@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evidence table — locus 10:133,050,001-133,250,000 (GRCh38)</title>
+    <title>Evidence Table — Locus 10:133050001-133250000</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
 
         <div class="sidebar-section">
             <div class="sidebar-title">Chromosomes</div>
-            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR1.html">CHR1</a>
             <a class="nav-link" href="../CHR2.html">CHR2</a>
             <a class="nav-link" href="../CHR3.html">CHR3</a>
             <a class="nav-link" href="../CHR4.html">CHR4</a>
@@ -29,7 +29,7 @@
             <a class="nav-link" href="../CHR7.html">CHR7</a>
             <a class="nav-link" href="../CHR8.html">CHR8</a>
             <a class="nav-link" href="../CHR9.html">CHR9</a>
-            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link active" href="../CHR10.html">CHR10</a>
             <a class="nav-link" href="../CHR11.html">CHR11</a>
             <a class="nav-link" href="../CHR12.html">CHR12</a>
             <a class="nav-link" href="../CHR13.html">CHR13</a>
@@ -49,21 +49,28 @@
         <div class="content-card">
             
 
-<h1 id="evidence-table--locus-10133050001-133250000-grch38">Evidence table — locus 10:133,050,001-133,250,000 (GRCh38)</h1><div class="summary"><p><strong>Lead variant:</strong> rs2748432 (10:133,125,086, intron_variant in ADGRA1, PIP=0.462). Second-highest
+<h1>Evidence Table — Locus 10:133050001-133250000</h1>
+
+<div class="summary"><p><strong>Lead variant:</strong> rs2748432 (10:133,125,086, intron_variant in ADGRA1, PIP=0.462). Second-highest
 credible-set variant: rs761777 (PIP=0.117, intron_variant, ADGRA1). Candidate genes from internal
 pipeline: nearest = ADGRA1; PoPS = TCERG1L; ABC = KNDC1; FLAMES/MAGMA = NA. The researcher
 additionally identified VENTX and UTF1 via its own gene-region lookup (neither flagged by any
 prioritization method, neither has an assigned credible-set variant). RPL5P28 (pseudogene),
 ADGRA1-AS1 (antisense lncRNA), and MIR202/MIR202HG (microRNA/host gene) are also physically present
 in the region but have no dedicated literature and are not treated as independent candidates (see
-audit appendix).</p><p><strong>Positional note:</strong> ADGRA1 and KNDC1 both physically overlap the analyzed region. TCERG1L, despite
+audit appendix).</p>
+<p><strong>Positional note:</strong> ADGRA1 and KNDC1 both physically overlap the analyzed region. TCERG1L, despite
 being PoPS-prioritized, sits ~1.74 Mb outside/telomeric of the region entirely (confirmed by direct
 Open Targets genomic-coordinate lookup). No credible-set variant is missense, splice-donor, or
 splice-acceptor — all are intronic/upstream/downstream/non-coding, so per pipeline scope no
-dedicated per-variant literature search beyond the lead variant was required.</p><p>Pipeline stages completed: Open Targets structured lookup -&gt; researcher -&gt; citation-verifier (14
+dedicated per-variant literature search beyond the lead variant was required.</p>
+
+<!--<p>Pipeline stages completed: Open Targets structured lookup -&gt; researcher -&gt; citation-verifier (14
 citations checked: 11 VERIFIED, 1 NOT_FOUND, 2 CLAIM_MISMATCH) -&gt; red-team-skeptic -&gt; this synthesis.
 Full stage-by-stage checkpoints are preserved in <code>evidence_tables/_status/10_133050001-133250000/</code>
-(opentargets.md, researcher.md, verified_citations.md, critique.md).</p><p>Only VERIFIED citations appear in the table below. The excluded citations and the full skeptic
+(opentargets.md, researcher.md, verified_citations.md, critique.md).</p> -->
+
+<p>Only VERIFIED citations appear in the table below. The excluded citations and the full skeptic
 critique are preserved in <code>audits/10_133050001-133250000_audit.md</code>.</p></div>
 
 
@@ -164,6 +171,7 @@ critique are preserved in <code>audits/10_133050001-133250000_audit.md</code>.</
 </tr>
 </tbody>
 </table></div>
+
 <p><strong>Locus-level context (not gene-specific, not in table above):</strong> Saunders GRB et al., "Genetic
 diversity fuels gene discovery for tobacco and alcohol use," Nature 2022 (PMID 36477530, DOI
 10.1038/s41586-022-05477-4, VERIFIED — multi-ancestry, 3.4M-individual GSCAN follow-up GWAS of
@@ -177,6 +185,7 @@ this locus (motivated by Open Targets' database-level colocalization between thi
 GWAS traits and smoking-initiation credible sets) currently rests entirely on that structured
 database signal, not on any verified literature. See Open Targets summary and Prioritized-gene
 sections below.</p>
+
 <p><strong>Gene note on VENTX (WEAKENED — not a competing candidate):</strong> VENTX has the single most
 mechanistically COPD-relevant paper found at this locus (macrophage terminal differentiation and
 proinflammatory activation, directly on Prior #3) but carries <strong>zero fine-mapping support</strong> — no
@@ -186,9 +195,12 @@ support at any credible-set variant... should be reported to synthesis-lead as a
 non-candidate (interesting gene, wrong locus-evidence), not as a live alternative to ADGRA1/KNDC1."
 This table preserves that distinction rather than letting VENTX's biology imply locus-level support
 it does not have.</p>
+
 <hr/>
+
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-pass-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — NOT a verified literature citation; did not pass through citation-verifier or red-team-skeptic)</h2>
-<p>Full detail in <code>evidence_tables/_status/10_133050001-133250000/opentargets.md</code>. Queried against
+<p> <!--Full detail in <code>evidence_tables/_status/10_133050001-133250000/opentargets.md</code>. -->
+     Queried against
 chronic obstructive pulmonary disease (MONDO_0005002) and via the lead/second-highest-PIP
 credible-set variants (rs2748432, rs761777) and one KNDC1-upstream credible-set variant.</p>
 <div class="evidence-table-wrapper"><table class="evidence-table">
@@ -239,6 +251,7 @@ index is necessarily incomplete relative to this pipeline's own internal COPD GW
 were not separately queried against Open Targets (they were identified by the researcher's own
 region lookup, not flagged by any prioritization method, and — per the researcher's coordinate
 lookup — lie outside the credible-set-implicated portion of the locus).</p>
+
 <hr/>
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>ADGRA1 — Confidence: LOW.</strong></p>

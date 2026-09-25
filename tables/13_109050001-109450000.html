@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evidence Table — 13:109050001-109450000</title>
+    <title>Evidence Table — Locus 13:109050001-109450000</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
 
         <div class="sidebar-section">
             <div class="sidebar-title">Chromosomes</div>
-            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR1.html">CHR1</a>
             <a class="nav-link" href="../CHR2.html">CHR2</a>
             <a class="nav-link" href="../CHR3.html">CHR3</a>
             <a class="nav-link" href="../CHR4.html">CHR4</a>
@@ -32,7 +32,7 @@
             <a class="nav-link" href="../CHR10.html">CHR10</a>
             <a class="nav-link" href="../CHR11.html">CHR11</a>
             <a class="nav-link" href="../CHR12.html">CHR12</a>
-            <a class="nav-link" href="../CHR13.html">CHR13</a>
+            <a class="nav-link active" href="../CHR13.html">CHR13</a>
             <a class="nav-link" href="../CHR14.html">CHR14</a>
             <a class="nav-link" href="../CHR15.html">CHR15</a>
             <a class="nav-link" href="../CHR16.html">CHR16</a>
@@ -49,18 +49,25 @@
         <div class="content-card">
             
 
-<h1 id="evidence-table--locus-13109050001-109450000-nearest-gene-myo16">Evidence Table — Locus 13:109050001-109450000</h1><div class="summary"><p>Lead variant: rs9521268 (13:109266735, PIP=0.266). Credible set is almost
+<h1>Evidence Table — Locus 13:109050001-109450000</h1>
+
+
+<div class="summary"><p>Lead variant: rs9521268 (13:109266735, PIP=0.266). Credible set is almost
 entirely intronic/intergenic/non-coding-transcript variants; no missense or
 splice-donor/acceptor variant is present, so no dedicated variant-level
 literature search beyond the lead variant was performed (per pipeline scope
-rules). A direct PubMed search for rs9521268 returned zero indexed results.</p><p>Candidate genes evaluated: <strong>MYO16</strong> (nearest gene; also FLAMES-, MAGMA-, and
+rules). A direct PubMed search for rs9521268 returned zero indexed results.</p>
+
+<p>Candidate genes evaluated: <strong>MYO16</strong> (nearest gene; also FLAMES-, MAGMA-, and
 PoPS-prioritized; sole protein-coding gene overlapping/flanking this locus
 per an independent Ensembl gene-region check), <strong>LINC00370</strong> (lncRNA tagged
 only by very-low-PIP credible-set variants), and <strong>MYO16-AS1</strong> (an antisense
 lncRNA overlapping MYO16 that surfaced during the Open Targets structured
 lookup as a cis-eQTL/colocalization candidate at the lead variant's credible
 set — not in the locus input file's official candidate list, given a brief
-look per pipeline instructions).</p><p>Only citations with verifier verdict VERIFIED are included below. Citations
+look per pipeline instructions).</p>
+
+<p>Only citations with verifier verdict VERIFIED are included below. Citations
 with CLAIM_MISMATCH, RETRACTED, or NOT_FOUND verdicts, and genes marked
 CONTESTED/WEAKENED by red-team-skeptic, are documented with full reasoning in
 the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</p></div>
@@ -84,7 +91,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>Statistical genetics — lung-function GWAS (locus-level only)</td>
 <td>Large UK Biobank + SpiroMeta lung-function GWAS (279 signals genome-wide; fine-mapping/eQTL-pQTL annotation of 107 putative causal genes; enrichment of cytoskeleton/ciliogenesis and elastic-fiber/TGF-beta pathway genes among prioritized genes generally). This paper establishes locus-level significance for the 13q33-34 region; it does <strong>not</strong> itself name MYO16 in the accessible body text/abstract — the gene-level assignment to MYO16 comes from downstream fine-mapping/L2G tools, not from this paper's own stated results.</td>
 <td>PMID 30804560 / DOI 10.1038/s41588-018-0321-7</td>
-<td>VERIFIED (locus-level claims only); red-team-skeptic: citation should not be read as gene-specific evidence for MYO16 — see audit</td>
+<td><span class="tag">Verified</span> (locus-level claims only); red-team-skeptic: citation should not be read as gene-specific evidence for MYO16 — see audit</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -92,7 +99,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>Statistical genetics — COPD case-control GWAS (background)</td>
 <td>Companion COPD case-control GWAS (UK Biobank + International COPD Genetics Consortium, 35,735 cases/222,076 controls) identified 82 COPD risk loci genome-wide with cell-type/phenotype heterogeneity. Whether MYO16/13q33 is specifically among the 82 named loci could not be confirmed from the abstract.</td>
 <td>PMID 30804561 / DOI 10.1038/s41588-018-0342-2</td>
-<td>VERIFIED (82-loci claim only; gene-specific membership unconfirmed)</td>
+<td><span class="tag">Verified</span> (82-loci claim only; gene-specific membership unconfirmed)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -100,7 +107,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>Bioinformatic/ML COPD-asthma biomarker screen (weak, hypothesis-generating)</td>
 <td>WGCNA + LASSO/random-forest screen of COPD/asthma microarray data selected MYO16 as one of 5 machine-learning-selected candidate genes (alongside CHML, POLR3B, ZNF101, ZNF143); MYO16 itself was not individually validated (the paper's validated diagnostic biomarker was ZNF143).</td>
 <td>PMID 41137279 / DOI 10.1097/MD.0000000000045317</td>
-<td>VERIFIED (claim); red-team-skeptic: weak, non-specific, hypothesis-generating only — should not be read as mechanistic evidence, and risks pseudo-replication with the row below (same study-design class)</td>
+<td><span class="tag">Verified</span> (claim); red-team-skeptic: weak, non-specific, hypothesis-generating only — should not be read as mechanistic evidence, and risks pseudo-replication with the row below (same study-design class)</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -108,7 +115,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>ceRNA/PPI network screen in male smokers with COPD (weak, hypothesis-generating)</td>
 <td>RNA-seq of PBMCs from male smokers with stable COPD vs. controls identified MYO16 as one of seven "core genes" (MYO16, MYL4, SCN4A, NRCAM, HMCN1, MYOM2, IQSEC3) in a differentially-expressed circRNA/mRNA PPI network; gene-set-level (not MYO16-specific) pathway enrichment implicated IL-18/IL-5/NLRP3 inflammasome and Th1/Th2/Th17 differentiation pathways.</td>
 <td>PMID 38933922 / DOI 10.3389/fgene.2024.1376721</td>
-<td>VERIFIED (claim); red-team-skeptic: weak, non-specific, hypothesis-generating only — circumstantial network-connectivity evidence, not a validated causal/mechanistic immune role for MYO16; pseudo-replication risk with row above</td>
+<td><span class="tag">Verified</span> (claim); red-team-skeptic: weak, non-specific, hypothesis-generating only — circumstantial network-connectivity evidence, not a validated causal/mechanistic immune role for MYO16; pseudo-replication risk with row above</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -116,7 +123,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>Core biology — cytoskeletal/neural (non-pulmonary)</td>
 <td>MYO16 (myosin XVI) is a vertebrate-specific unconventional myosin expressed predominantly in neural tissue; functions as a signal-transduction element linking cell-signaling pathways (PI3K/WAVE-complex) to actin cytoskeleton reorganization; dysregulation linked to neurological/neuropsychiatric disorders.</td>
 <td>PMID 32824179 / DOI 10.3390/cells9081903</td>
-<td>VERIFIED</td>
+<td><span class="tag">Verified</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -124,7 +131,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>Core biology — cytoskeletal/neural (non-pulmonary)</td>
 <td>Two principal MYO16 isoforms (Myo16a cytoplasmic tailless; Myo16b full-length, nuclear-localized), both with N-terminal ankyrin-repeat domain binding protein phosphatase 1 (PP1) catalytic subunit; impaired MYO16 expression implicated in autism, schizophrenia, bipolar disorder; highest neural expression in late embryonic/early postnatal period (neuronal migration/dendritic elaboration).</td>
 <td>PMID 32451869 / DOI 10.1007/978-3-030-38062-5_18</td>
-<td>VERIFIED</td>
+<td><span class="tag">Verified</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -132,7 +139,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>Core biology — cytoskeletal/neural, functional (non-pulmonary)</td>
 <td>Mouse Myo16 knockout/knockdown regulates F-actin turnover in Purkinje-cell dendritic spines via the WAVE regulatory complex/Arp2/3 pathway and is required for normal presynaptic vesicle numbers in cerebellum; MYO16 shows genetic association with autism spectrum disorder.</td>
 <td>PMID 31474830 / DOI 10.3389/fncel.2019.00330</td>
-<td>VERIFIED</td>
+<td><span class="tag">Verified</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -140,7 +147,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>Core biology — epigenetic/neuropsychiatric (non-pulmonary)</td>
 <td>MYO16 gene-body 5-hydroxymethylcytosine (5hmC) changes are associated with altered MYO16 expression in prefrontal cortex of depressed suicide completers vs. controls.</td>
 <td>PMID 28485726 / DOI 10.1038/tp.2017.93</td>
-<td>VERIFIED</td>
+<td><span class="tag">Verified</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -148,7 +155,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>Core biology — cell cycle, general (non-tissue-specific)</td>
 <td>Myo16 mRNA/protein abundance is cell-cycle regulated in Rat2 fibroblasts (peaks late G1/S phase); Myo16 depletion alters cell-cycle distribution and causes cell death; Myo16 protein is downregulated in response to DNA replication stress.</td>
 <td>PMID 23596177 / DOI 10.1002/cm.21109</td>
-<td>VERIFIED</td>
+<td><span class="tag">Verified</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -156,7 +163,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>Core biology — original discovery, neural (non-pulmonary)</td>
 <td>Original cloning/characterization of class XVI myosins (myr 8a/8b, rat MYO16 orthologs), expressed principally in developing brain (migrating cerebellar granule neurons, astrocytes); defines ankyrin-repeat/PP1-binding structural features.</td>
 <td>PMID 11588169 / DOI 10.1523/JNEUROSCI.21-20-07954.2001</td>
-<td>VERIFIED</td>
+<td><span class="tag">Verified</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -164,7 +171,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>Lung-tissue functional mechanism (oncology context, not COPD)</td>
 <td>MYO16-AS1 (antisense lncRNA overlapping MYO16) is expressed mainly in lung tissue and is notably downregulated in lung adenocarcinoma (LUAD); competitively binds IGF2BP3 protein, reducing HK2 mRNA stability, inhibiting glycolytic reprogramming and LUAD cell invasion/migration.</td>
 <td>PMID 38041756 / DOI 10.1007/s11010-023-04887-w</td>
-<td>VERIFIED</td>
+<td><span class="tag">Verified</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -172,7 +179,7 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>Lung-tissue dysregulation (chronic lung disease context, not COPD)</td>
 <td>MYO16-AS1 is one of six significant lncRNAs in WGCNA modules most negatively correlated with idiopathic pulmonary fibrosis (IPF) phenotype in a whole-transcriptome lung-tissue study; co-expressed mRNAs are enriched in inflammatory-response pathways.</td>
 <td>PMID 40782499 / DOI 10.1016/j.clinsp.2025.100732</td>
-<td>VERIFIED</td>
+<td><span class="tag">Verified</span></td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -180,11 +187,12 @@ the companion audit file: <code>audits/13_109050001-109450000_audit.md</code>.</
 <td>Off-topic biology (included for completeness; no lung/COPD relevance found)</td>
 <td>LINC00370 modulates a miR-222-3p/RGS4 axis in adipose-derived stem cell osteogenic differentiation, protecting against osteoporosis progression in a rat ovariectomy model. No lung, airway, immune, or COPD-relevant biology reported.</td>
 <td>PMID 34450404 / DOI 10.1016/j.archger.2021.104505</td>
-<td>VERIFIED (as NOT lung/COPD relevant)</td>
+<td><span class="tag">Verified</span> (as NOT lung/COPD relevant)</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
 </table></div>
+
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-did-not-go-through-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; did not go through citation-verifier or red-team-skeptic)</h2>
 <ul>
 <li><strong>MYO16 (ENSG00000041515):</strong> COPD disease-association score in Open Targets
@@ -215,8 +223,9 @@ over MYO16 at this locus. No gnomAD constraint data (lncRNA biotype).</li>
 gnomAD constraint data (lncRNA biotype).</li>
 <li>No smoking-behavior (nicotine initiation/dependence/cessation) GWAS
 colocalization was identified at this locus in this structured lookup.
-Full detail: <code>evidence_tables/_status/13_109050001-109450000/opentargets.md</code>.</li>
+<!-- Full detail: <code>evidence_tables/_status/13_109050001-109450000/opentargets.md</code>. --></li>
 </ul>
+
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>MYO16 — confidence: LOW.</strong></p>
 <p>This call is close, and the evidence explicitly does not cleanly resolve

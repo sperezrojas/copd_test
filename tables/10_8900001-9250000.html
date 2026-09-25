@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COPD GWAS Locus Evidence Table — 10:8,900,001-9,250,000 (GATA3)</title>
+    <title>Evidence Table — Locus 10:8900001-9250000</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
 
         <div class="sidebar-section">
             <div class="sidebar-title">Chromosomes</div>
-            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR1.html">CHR1</a>
             <a class="nav-link" href="../CHR2.html">CHR2</a>
             <a class="nav-link" href="../CHR3.html">CHR3</a>
             <a class="nav-link" href="../CHR4.html">CHR4</a>
@@ -29,7 +29,7 @@
             <a class="nav-link" href="../CHR7.html">CHR7</a>
             <a class="nav-link" href="../CHR8.html">CHR8</a>
             <a class="nav-link" href="../CHR9.html">CHR9</a>
-            <a class="nav-link" href="../CHR10.html">CHR10</a>
+            <a class="nav-link active" href="../CHR10.html">CHR10</a>
             <a class="nav-link" href="../CHR11.html">CHR11</a>
             <a class="nav-link" href="../CHR12.html">CHR12</a>
             <a class="nav-link" href="../CHR13.html">CHR13</a>
@@ -49,16 +49,21 @@
         <div class="content-card">
             
 
-<h1 id="copd-gwas-locus-evidence-table--108900001-9250000-gata3">COPD GWAS Locus Evidence Table — 10:8,900,001-9,250,000 (GATA3)</h1><div class="summary"><p><strong>Lead variant:</strong> rs12413578 (10:9,007,290, GRCh38; PIP=0.99707404; intron_variant/non_coding_transcript_variant,
+<h1>Evidence Table — Locus 10:8900001-9250000</h1>
+
+<div class="summary"><p><strong>Lead variant:</strong> rs12413578 (10:9,007,290, GRCh38; PIP=0.99707404; intron_variant/non_coding_transcript_variant,
 impact=MODIFIER, gene=- per VEP/credible-set annotation).
 <strong>Candidate genes evaluated:</strong> GATA3 (nearest gene per internal pipeline; FLAMES/MAGMA/PoPS/ABC all NA for this
 locus). The researcher independently confirmed via Ensembl REST API that no protein-coding gene lies within the
 stated locus interval (10:8,900,001-9,250,000) — only lncRNAs and LINC02676 — and that GATA3's own gene body
 (chr10:8,045,315-8,075,198, GRCh38) sits ~930 kb upstream of/outside the interval, with the lead variant located
 within a long-range GATA3 enhancer region. GATA3 was therefore the only plausible protein-coding candidate
-searched.</p><p>All citations below carry a VERIFIED verdict from citation-verifier (one is VERIFIED with a partial/conditional
-caveat, noted in its row). See <code>evidence_tables/_status/10_8900001-9250000/verified_citations.md</code> for the full
-verification report and <code>audits/10_8900001-9250000_audit.md</code> for excluded/contested material.</p></div>
+searched.</p>
+
+<p>All citations below carry a VERIFIED verdict from citation-verifier (one is VERIFIED with a partial/conditional
+caveat, noted in its row). See  <!-- <code>evidence_tables/_status/10_8900001-9250000/verified_citations.md</code> for the full
+verification report and --> <code>audits/10_8900001-9250000_audit.md</code> for excluded/contested material.</p>
+</div>
 
 
 <h2 id="evidence-table">Evidence table</h2>
@@ -119,7 +124,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 <td>Statistical genetics (lung-function/COPD GWAS, general reference)</td>
 <td>Largest multi-ancestry lung-function GWAS to date (588,452 participants), 1,020 signals, 559 putative causal genes, 8 smoking-driven signals excluded. Cited as general background; GATA3's specific inclusion among the 559 prioritized genes could NOT be confirmed by researcher or citation-verifier from accessible text.</td>
 <td>Shrine et al. 2023, Nat Genet. PMID 36914875, DOI 10.1038/s41588-023-01314-0</td>
-<td>VERIFIED (partial) — paper legitimate, but does not clearly support GATA3 specifically; weakest citation in the table</td>
+<td><span class="tag">Verified</span> (partial) — paper legitimate, but does not clearly support GATA3 specifically; weakest citation in the table</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -300,6 +305,7 @@ verification report and <code>audits/10_8900001-9250000_audit.md</code> for excl
 </tr>
 </tbody>
 </table></div>
+
 <h2 id="notes-on-evidence-weight-and-confound-handling">Notes on evidence weight and confound handling</h2>
 <ul>
 <li><strong>Smoking-mediation check:</strong> No PubMed evidence was found linking GATA3 or this locus to smoking-behavior
@@ -317,6 +323,7 @@ spirometry-confirmed (GOLD-defined) versus self-report/ICD-code-defined — whic
 much of this signal could reflect misclassified/comorbid asthma — was not resolved by either the researcher
 or the skeptic and is flagged as an open question for the study team.</li>
 </ul>
+
 <h2 id="open-targets-summary">Open Targets summary</h2>
 <p><em>Structured database lookup only — this section did NOT go through citation-verifier or red-team-skeptic. It
 reflects <code>mcp__open-targets__*</code> GraphQL queries run directly by the orchestrator on 2026-09-11, not a
@@ -346,15 +353,18 @@ family-level assignment rather than a confirmed GATA3-specific approved drug.</l
 additional annotated role in IL33-driven alternatively-activated macrophage differentiation.</li>
 </ul>
 <p>Full structured-lookup detail: <code>evidence_tables/_status/10_8900001-9250000/opentargets.md</code>.</p>
+
 <h2 id="prioritized-gene">Prioritized gene</h2>
 <p><strong>Prioritized gene: GATA3 — Confidence: LOW</strong></p>
 <p>GATA3 is named here because it is the only plausible protein-coding candidate physically/regulatorily
 associated with this locus — no competing gene exists in the interval, and a long-range enhancer 930kb from
 GATA3's gene body is the most parsimonious explanation for the credible set's location. But this is a
 recommendation by elimination, not by direct COPD-specific support, and confidence must be scored accordingly.</p>
+
 <p>The evidence assembled is, on balance, a well-replicated <strong>asthma/allergic-Th2 locus</strong> whose COPD GWAS
 association most likely reflects shared genetic liability with asthma and/or comorbid-asthma
 (ACOS/misclassification) contamination of COPD case-control cohorts, rather than COPD-intrinsic biology:</p>
+
 <ul>
 <li>Open Targets shows negligible aggregate COPD association for GATA3 versus a much stronger asthma signal,
 and the only locus-specific L2G score at this exact variant names GATA3 for allergic asthma (0.615), not

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evidence table — Locus 14:46,700,001-47,000,000 (GRCh38)</title>
+    <title>Evidence Table — Locus 14:46700001-47000000</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
 
         <div class="sidebar-section">
             <div class="sidebar-title">Chromosomes</div>
-            <a class="nav-link active" href="../CHR1.html">CHR1</a>
+            <a class="nav-link" href="../CHR1.html">CHR1</a>
             <a class="nav-link" href="../CHR2.html">CHR2</a>
             <a class="nav-link" href="../CHR3.html">CHR3</a>
             <a class="nav-link" href="../CHR4.html">CHR4</a>
@@ -33,7 +33,7 @@
             <a class="nav-link" href="../CHR11.html">CHR11</a>
             <a class="nav-link" href="../CHR12.html">CHR12</a>
             <a class="nav-link" href="../CHR13.html">CHR13</a>
-            <a class="nav-link" href="../CHR14.html">CHR14</a>
+            <a class="nav-link active" href="../CHR14.html">CHR14</a>
             <a class="nav-link" href="../CHR15.html">CHR15</a>
             <a class="nav-link" href="../CHR16.html">CHR16</a>
             <a class="nav-link" href="../CHR17.html">CHR17</a>
@@ -49,8 +49,16 @@
         <div class="content-card">
             
 
-<h1 id="evidence-table--locus-1446700001-47000000-grch38">Evidence table — Locus 14:46,700,001-47,000,000 (GRCh38)</h1><div class="summary"><p><strong>Lead variant:</strong> rs12889080 (PIP=0.086, intergenic, 14:46,822,678)
-<strong>Candidate genes (internal pipeline):</strong> MDGA2 (nearest gene; FLAMES-prioritized). No MAGMA/PoPS/ABC prioritized genes. MDGA2 is a ~430 kb gene that spans essentially the entire locus window (~14:46,691,000-47,036,000); all gene-annotated credible-set variants (intron_variant, 3_prime_UTR_variant, downstream_gene_variant; all impact=MODIFIER) map to MDGA2, and no other protein-coding gene overlaps the credible set. No missense/splice-donor/splice-acceptor variants are present in the credible set.</p><p>Only citations with a citation-verifier verdict of VERIFIED are included below. Excluded (CLAIM_MISMATCH / NOT_FOUND) citations and the full red-team critique are preserved in the audit trail: <code>audits/14_46700001-47000000_audit.md</code>.</p></div>
+<h1>Evidence Table — Locus 14:46700001-47000000</h1>
+
+<div class="summary"><p><strong>Lead variant:</strong> rs12889080 (PIP=0.086, intergenic, 14:46,822,678)
+<strong>Candidate genes (internal pipeline):</strong> MDGA2 (nearest gene; FLAMES-prioritized). No MAGMA/PoPS/ABC prioritized genes. 
+MDGA2 is a ~430 kb gene that spans essentially the entire locus window (~14:46,691,000-47,036,000); all gene-annotated credible-set variants
+ (intron_variant, 3_prime_UTR_variant, downstream_gene_variant; all impact=MODIFIER) map to MDGA2, and no other protein-coding gene overlaps 
+ the credible set. No missense/splice-donor/splice-acceptor variants are present in the credible set.</p>
+ 
+ <p>Only citations with a citation-verifier verdict of VERIFIED are included below. Excluded (CLAIM_MISMATCH / NOT_FOUND) citations and the
+     full red-team critique are preserved in the audit trail: <code>audits/14_46700001-47000000_audit.md</code>.</p></div>
 
 
 <div class="evidence-table-wrapper"><table class="evidence-table">
@@ -78,7 +86,7 @@
 <td>Statistical genetics — GWAS in a distinct lung disease</td>
 <td>An MDGA2 intronic SNP (rs7144383, 14q21.3) reached genome-wide significance in an idiopathic pulmonary fibrosis (IPF — not COPD) GWAS discovery+stage-2 meta-analysis, but <strong>failed to replicate</strong> in the independent stage-3 cohort (unlike TOLLIP and MUC5B, which did replicate).</td>
 <td>Noth et al. 2013, <em>Lancet Respir Med</em>, PMID 24429156, DOI 10.1016/S2213-2600(13)70045-6</td>
-<td>VERIFIED (failed-replication finding confirmed as reported); red-team notes this is evidentially weak on two counts — non-replication, and IPF is mechanistically distinct fibrotic disease, not COPD/emphysema.</td>
+<td><span class="tag">Verified</span>(failed-replication finding confirmed as reported); red-team notes this is evidentially weak on two counts — non-replication, and IPF is mechanistically distinct fibrotic disease, not COPD/emphysema.</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -86,7 +94,7 @@
 <td>Statistical genetics — GWAS in an unrelated chronic-pain trait</td>
 <td>Large multi-ancestry fibromyalgia GWAS gene-prioritization implicated MDGA2 among "diverse genes with neural roles" (with DCC, DRD2/NCAM1, CELF4); fibromyalgia heritability was exclusively enriched in brain tissues/neural cell types.</td>
 <td>Kerrebijn et al. 2026, <em>Nat Med</em>, PMID 42521817, DOI 10.1038/s41591-026-04492-6</td>
-<td>VERIFIED; not lung-relevant — underscores MDGA2's dominant, reproducible CNS/neural biology rather than any pulmonary role.</td>
+<td><span class="tag">Verified</span>; not lung-relevant — underscores MDGA2's dominant, reproducible CNS/neural biology rather than any pulmonary role.</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -94,7 +102,7 @@
 <td>Statistical genetics — mQTL, unrelated cancer trait</td>
 <td>A novel MDGA2 methylation-QTL region was newly associated with colorectal cancer risk, not previously reported in prior CRC meta-GWAS.</td>
 <td>Mesa-Eguiagaray et al. 2025, <em>Br J Cancer</em>, PMID 40506516, DOI 10.1038/s41416-025-03064-8</td>
-<td>VERIFIED; not lung/COPD-relevant.</td>
+<td><span class="tag">Verified</span>; not lung/COPD-relevant.</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -102,7 +110,7 @@
 <td>Statistical genetics — rare-variant burden, metabolomic trait</td>
 <td>Rare-variant burden analysis (ARIC cohort, n=1,456) found MDGA2 significantly associated with a serum carnitine-pathway metabolite (cis-4-decenoylcarnitine level).</td>
 <td>Yazdani et al. 2016, <em>Genet Epidemiol</em>, PMID 27256581, DOI 10.1002/gepi.21980</td>
-<td>VERIFIED; unrelated to lung/COPD biology, illustrates broad pleiotropic/multi-trait footprint of this large gene.</td>
+<td><span class="tag">Verified</span>; unrelated to lung/COPD biology, illustrates broad pleiotropic/multi-trait footprint of this large gene.</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -110,7 +118,7 @@
 <td>Mechanistic/functional — cancer biology, not lung</td>
 <td>MDGA2 promoter is commonly hypermethylated/silenced in gastric cancer (62.4% of 218 tumors); functions as a tumor suppressor via DMAP1 stabilization activating p53/p21 signaling.</td>
 <td>Wang et al. 2015, <em>Gut</em>, PMID 26206665, DOI 10.1136/gutjnl-2015-309276</td>
-<td>VERIFIED; not lung/COPD-relevant.</td>
+<td><span class="tag">Verified</span>; not lung/COPD-relevant.</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -118,7 +126,7 @@
 <td>Immunology/autoimmune genetics (prior #3 relevant)</td>
 <td>MAMDC1 (=MDGA2) intronic SNPs rs961616 (p=0.001, OR=1.29) and rs2297926 (p=0.003, OR=1.35) were associated with systemic lupus erythematosus (SLE) susceptibility in Finnish/UK/Swedish cohorts; MAMDC1 mRNA was upregulated by TNF-alpha and IFN-gamma in THP-1 monocytes (2.5x and 2.4x induction).</td>
 <td>Hellquist et al. 2009, <em>PLoS One</em>, PMID 19997561, DOI 10.1371/journal.pone.0008037</td>
-<td>VERIFIED but modest effect sizes from a single family/case-control study; red-team notes no evidence links this to any COPD-relevant airway inflammatory program (neutrophilic, CD8+ T-cell, Th1, Th17/Tc17, macrophage) or to lung tissue/cell-type specificity — this is a generic systemic-autoimmunity signal only.</td>
+<td><span class="tag">Verified</span> but modest effect sizes from a single family/case-control study; red-team notes no evidence links this to any COPD-relevant airway inflammatory program (neutrophilic, CD8+ T-cell, Th1, Th17/Tc17, macrophage) or to lung tissue/cell-type specificity — this is a generic systemic-autoimmunity signal only.</td>
 <td>2026-09-11</td>
 </tr>
 <tr>
@@ -126,11 +134,12 @@
 <td>Human genetics — rare disease, CNS phenotype</td>
 <td>Seven distinct homozygous loss-of-function MDGA2 variants in 9 individuals from 7 consanguineous families cause autosomal-recessive developmental and epileptic encephalopathy.</td>
 <td>Morsy et al. 2026, <em>Am J Hum Genet</em>, PMID 41570816, DOI 10.1016/j.ajhg.2025.12.015</td>
-<td>VERIFIED; confirms MDGA2 is a genuine dosage-sensitive human disease gene (consistent with its strong gnomAD LoF constraint, see Open Targets summary below), but for a CNS/epilepsy phenotype, not a lung phenotype.</td>
+<td><span class="tag">Verified</span>; confirms MDGA2 is a genuine dosage-sensitive human disease gene (consistent with its strong gnomAD LoF constraint, see Open Targets summary below), but for a CNS/epilepsy phenotype, not a lung phenotype.</td>
 <td>2026-09-11</td>
 </tr>
 </tbody>
 </table></div>
+
 <h2 id="open-targets-summary-structured-database-lookup--not-a-verified-literature-citation-not-reviewed-by-citation-verifier-or-red-team-skeptic">Open Targets summary (structured database lookup — not a verified literature citation; not reviewed by citation-verifier or red-team-skeptic)</h2>
 <p><strong>MDGA2 (ENSG00000139915):</strong></p>
 <ul>
